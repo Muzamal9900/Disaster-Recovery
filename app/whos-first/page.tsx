@@ -307,7 +307,7 @@ export default function WhosFirstPage() {
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">4</span>
-                    <p>We manage your insurance claim for maximum coverage</p>
+                    <p>We assist with your insurance claim for maximum coverage</p>
                   </div>
                 </div>
               </div>

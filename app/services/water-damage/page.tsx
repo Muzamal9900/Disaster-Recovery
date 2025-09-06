@@ -99,7 +99,7 @@ export default function WaterDamageRestorationPage() {
     },
     {
       question: "Will insurance cover water damage restoration?",
-      answer: "Most homeowner's insurance policies cover sudden and accidental water damage. We work directly with all major insurance companies, providing detailed documentation per IICRC standards to support your claim. Our team handles the entire claims process for you."
+      answer: "Most homeowner's insurance policies cover sudden and accidental water damage. We work directly with all major insurance companies, providing detailed documentation per IICRC standards to support your claim. Our team assists you throughout the entire claims process."
     },
     {
       question: "What equipment is used for water damage restoration?",
@@ -660,7 +660,7 @@ export default function WaterDamageRestorationPage() {
                 We Work With All Major Insurance Companies
               </h3>
               <p className="text-gray-300 mb-6">
-                Our team handles the entire claims process, providing detailed documentation that meets IICRC S500 standards and insurance requirements. We ensure you receive maximum coverage for your restoration needs.
+                Our team assists you throughout the claims process, providing detailed documentation that meets IICRC S500 standards and insurance requirements. We help ensure you receive maximum coverage for your restoration needs.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start r6-list-item">

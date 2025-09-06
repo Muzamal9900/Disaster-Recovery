@@ -14,7 +14,7 @@ export default function InsuranceClaimsFAQsPage() {
   const faqs = [
   {
     "question": "How does direct insurance billing work?",
-    "answer": "Our contractors invoice your insurance company directly. You pay nothing upfront except your excess. We handle all documentation, photos, and reports required for your claim."
+    "answer": "Our contractors invoice your insurance company directly. You pay nothing upfront except your excess. We assist with all documentation, photos, and reports required for your claim."
   },
   {
     "question": "What if my claim is denied?",

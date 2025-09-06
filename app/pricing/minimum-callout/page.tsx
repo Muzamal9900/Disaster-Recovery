@@ -282,7 +282,7 @@ export default function MinimumCalloutPage() {
                   <span className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">2</span>
                   <div>
                     <p className="font-bold">Complete Documentation</p>
-                    <p className="text-gray-600">We handle all insurance paperwork and photos</p>
+                    <p className="text-gray-600">We assist with insurance paperwork and documentation</p>
                   </div>
                 </div>
                 <div className="flex items-start">

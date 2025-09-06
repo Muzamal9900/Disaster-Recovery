@@ -146,7 +146,7 @@ export default function EmergencyServicesPage() {
     },
     {
       title: 'Direct Insurance Billing',
-      description: 'We handle all insurance paperwork and claims'
+      description: 'We assist you with insurance documentation and claims'
     },
     {
       title: 'Industrial Equipment',

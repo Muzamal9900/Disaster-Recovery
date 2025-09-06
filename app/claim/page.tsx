@@ -645,7 +645,7 @@ export default function OnlineClaimPage() {
                     <li>• Schedule and conduct property inspection</li>
                     <li>• Perform emergency make-safe works</li>
                     <li>• Document all damage thoroughly</li>
-                    <li>• Liaise directly with insurance company</li>
+                    <li>• Assist you in liaising with your insurance carrier</li>
                     <li>• Coordinate all re-attendances and additional work</li>
                     <li>• Provide complete claim documentation</li>
                   </ul>

@@ -217,10 +217,10 @@ export default function InsuranceCalculator() {
 
                 <div className="bg-green-600 rounded-lg p-6 text-center">
                   <h4 className="text-xl font-bold text-white mb-2">
-                    We Handle All Insurance Paperwork
+                    We Assist With Insurance Documentation
                   </h4>
                   <p className="text-white/90 mb-4">
-                    Our team manages your entire claim process from start to finish
+                    Our team helps you navigate the claim process from start to finish
                   </p>
                   <button className="bg-white text-green-600 px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform inline-flex items-center gap-2">
                     Get Free Assessment

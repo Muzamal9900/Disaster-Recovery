@@ -458,7 +458,7 @@ export default function FireDamageRestorationPage() {
               We Work With All Major Insurance Companies
             </h2>
             <p className="text-center text-gray-700 mb-8">
-              Our team handles the entire insurance claim process, ensuring you receive maximum coverage for your fire damage restoration.
+              Our team assists you throughout the insurance claim process, helping ensure you receive maximum coverage for your fire damage restoration.
             </p>
             <div className="grid md:grid-cols-4 gap-4">
               {['Documentation', 'Claim Filing', 'Adjuster Meeting', 'Direct Billing'].map((service) => (
