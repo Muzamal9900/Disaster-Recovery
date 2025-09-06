@@ -88,6 +88,18 @@ export default function WorkflowDemonstration() {
       title: 'Contractor Handles All Work',
       description: 'Inspection, make-safe, documentation, insurance liaison - all by contractor',
       status: 'pending'
+    },
+    {
+      id: 'service-completion',
+      title: 'Service Completion',
+      description: 'Contractor completes all work and submits final documentation',
+      status: 'pending'
+    },
+    {
+      id: 'funds-release',
+      title: 'Payment Released',
+      description: 'Platform releases payment to contractor after successful completion',
+      status: 'pending'
     }
   ]);
 
@@ -146,6 +158,7 @@ export default function WorkflowDemonstration() {
         setTicketId(result.claimId);
         updateStepStatus(0, 'completed', { claimId: result.claimId, fee: '$2,750 paid' });
         updateStepStatus(1, 'completed', { paymentStatus: 'Success' });
+        updateStepStatus(2, 'in-progress');
         
         // Start monitoring the claim
         monitorTicketProgress(result.claimId);
@@ -184,37 +197,51 @@ export default function WorkflowDemonstration() {
 
   // Update workflow based on ticket status
   const updateWorkflowFromTicket = (ticket: any) => {
-    if (ticket.workflow.crmConnected && workflowSteps[1].status !== 'completed') {
-      updateStepStatus(1, 'completed', { connectedAt: new Date().toISOString() });
-      updateStepStatus(2, 'in-progress');
+    if (ticket.workflow.crmConnected && workflowSteps[2].status !== 'completed') {
+      updateStepStatus(2, 'completed', { connectedAt: new Date().toISOString() });
+      updateStepStatus(3, 'in-progress');
     }
     
-    if (ticket.workflow.contractorAssigned && workflowSteps[2].status !== 'completed') {
-      updateStepStatus(2, 'completed', { 
+    if (ticket.workflow.contractorAssigned && workflowSteps[3].status !== 'completed') {
+      updateStepStatus(3, 'completed', { 
         contractorId: ticket.contractorId,
         contractorName: ticket.contractorName 
       });
-      updateStepStatus(3, 'completed');
-      updateStepStatus(4, 'in-progress');
-    }
-    
-    if (ticket.workflow.jobAccepted && workflowSteps[4].status !== 'completed') {
-      updateStepStatus(4, 'completed', { acceptedAt: ticket.jobAcceptedAt });
+      updateStepStatus(4, 'completed');
       updateStepStatus(5, 'in-progress');
     }
     
-    if (ticket.workflow.claimsSubmitted && workflowSteps[5].status !== 'completed') {
-      updateStepStatus(5, 'completed', { claimId: ticket.claimId });
+    if (ticket.workflow.jobAccepted && workflowSteps[5].status !== 'completed') {
+      updateStepStatus(5, 'completed', { acceptedAt: ticket.jobAcceptedAt });
       updateStepStatus(6, 'in-progress');
     }
     
-    if (ticket.workflow.kpisTracked && workflowSteps[6].status !== 'completed') {
-      updateStepStatus(6, 'completed', { kpis: ticket.kpis });
+    if (ticket.workflow.contractorContacted && workflowSteps[6].status !== 'completed') {
+      updateStepStatus(6, 'completed', { contactedAt: ticket.contactedAt });
       updateStepStatus(7, 'in-progress');
     }
     
-    if (ticket.workflow.fundsReleased && workflowSteps[7].status !== 'completed') {
-      updateStepStatus(7, 'completed', { releasedAt: new Date().toISOString() });
+    if (ticket.workflow.serviceStarted && workflowSteps[7].status !== 'completed') {
+      updateStepStatus(7, 'completed', { 
+        startedAt: ticket.serviceStartedAt,
+        serviceDetails: ticket.serviceDetails
+      });
+      updateStepStatus(8, 'in-progress');
+    }
+    
+    if (ticket.workflow.serviceCompleted && workflowSteps[8].status !== 'completed') {
+      updateStepStatus(8, 'completed', { 
+        completedAt: ticket.serviceCompletedAt,
+        finalReport: ticket.serviceDetails?.finalReportSubmitted
+      });
+      updateStepStatus(9, 'in-progress');
+    }
+    
+    if (ticket.workflow.fundsReleased && workflowSteps[9].status !== 'completed') {
+      updateStepStatus(9, 'completed', { 
+        releasedAt: ticket.fundsReleasedAt,
+        contractorAmount: ticket.payment?.contractorAmount
+      });
     }
   };
 
@@ -358,9 +385,10 @@ export default function WorkflowDemonstration() {
             </CardHeader>
             <CardContent>
               <Tabs defaultValue="customer">
-                <TabsList className="grid w-full grid-cols-3">
+                <TabsList className="grid w-full grid-cols-4">
                   <TabsTrigger value="customer">Customer</TabsTrigger>
                   <TabsTrigger value="contractor">Contractor</TabsTrigger>
+                  <TabsTrigger value="service">Service</TabsTrigger>
                   <TabsTrigger value="kpis">KPIs</TabsTrigger>
                 </TabsList>
                 
@@ -448,6 +476,75 @@ export default function WorkflowDemonstration() {
                       <AlertCircle className="h-4 w-4" />
                       <AlertDescription>
                         Contractor assignment pending...
+                      </AlertDescription>
+                    </Alert>
+                  )}
+                </TabsContent>
+                
+                <TabsContent value="service" className="space-y-4">
+                  {ticketData.serviceDetails ? (
+                    <>
+                      <div>
+                        <h4 className="font-medium mb-2 flex items-center gap-2">
+                          <Activity className="h-4 w-4" />
+                          Service Progress
+                        </h4>
+                        <div className="space-y-2">
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm">Inspection:</span>
+                            <Badge variant={ticketData.serviceDetails.inspectionCompleted ? "success" : "secondary"}>
+                              {ticketData.serviceDetails.inspectionCompleted ? "Complete" : "Pending"}
+                            </Badge>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm">Make-Safe:</span>
+                            <Badge variant={ticketData.serviceDetails.makeSafeCompleted ? "success" : "secondary"}>
+                              {ticketData.serviceDetails.makeSafeCompleted ? "Complete" : "Pending"}
+                            </Badge>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm">Documentation:</span>
+                            <Badge variant={ticketData.serviceDetails.documentationCompleted ? "success" : "secondary"}>
+                              {ticketData.serviceDetails.documentationCompleted ? "Complete" : "In Progress"}
+                            </Badge>
+                          </div>
+                          {ticketData.insurance.hasInsurance && (
+                            <div className="flex justify-between items-center">
+                              <span className="text-sm">Insurance Liaison:</span>
+                              <Badge variant={ticketData.serviceDetails.insuranceLiaisonCompleted ? "success" : "secondary"}>
+                                {ticketData.serviceDetails.insuranceLiaisonCompleted ? "Complete" : "In Progress"}
+                              </Badge>
+                            </div>
+                          )}
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm">Final Report:</span>
+                            <Badge variant={ticketData.serviceDetails.finalReportSubmitted ? "success" : "secondary"}>
+                              {ticketData.serviceDetails.finalReportSubmitted ? "Submitted" : "Pending"}
+                            </Badge>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {ticketData.payment && (
+                        <div>
+                          <h4 className="font-medium mb-2 flex items-center gap-2">
+                            <DollarSign className="h-4 w-4" />
+                            Payment Details
+                          </h4>
+                          <div className="space-y-1 text-sm">
+                            <div>Platform Fee: ${ticketData.payment.platformFeeDeducted}</div>
+                            <div>Contractor Amount: ${ticketData.payment.contractorAmount}</div>
+                            <div>Payment Method: {ticketData.payment.paymentMethod}</div>
+                            <div>Status: <Badge variant="success">Paid</Badge></div>
+                          </div>
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <Alert>
+                      <Clock className="h-4 w-4" />
+                      <AlertDescription>
+                        Service delivery pending contractor assignment...
                       </AlertDescription>
                     </Alert>
                   )}

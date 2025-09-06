@@ -79,6 +79,9 @@ export async function POST(request: NextRequest) {
         jobAccepted: false,
         claimsSubmitted: false,
         kpisTracked: false,
+        contractorContacted: false,
+        serviceStarted: false,
+        serviceCompleted: false,
         fundsReleased: false,
       },
     };
@@ -259,5 +262,82 @@ async function trackKPIs(ticketId: string) {
     customerSatisfaction: null, // To be collected
   };
   
+  tickets.set(ticketId, ticket);
+  
+  // Continue with contractor contact
+  setTimeout(() => contractorContactsClient(ticketId), 2000);
+}
+
+// Contractor Contacts Client (Mock)
+async function contractorContactsClient(ticketId: string) {
+  const ticket = tickets.get(ticketId);
+  if (!ticket) return;
+  
+  ticket.workflow.contractorContacted = true;
+  ticket.contactedAt = new Date().toISOString();
+  ticket.status = 'CONTRACTOR_ASSIGNED';
+  tickets.set(ticketId, ticket);
+  
+  // Contractor begins service delivery
+  setTimeout(() => contractorBeginsService(ticketId), 3000);
+}
+
+// Contractor Begins Service (Mock)
+async function contractorBeginsService(ticketId: string) {
+  const ticket = tickets.get(ticketId);
+  if (!ticket) return;
+  
+  ticket.workflow.serviceStarted = true;
+  ticket.serviceStartedAt = new Date().toISOString();
+  ticket.status = 'IN_PROGRESS';
+  ticket.serviceDetails = {
+    inspectionCompleted: true,
+    makeSafeCompleted: true,
+    documentationStarted: true,
+    insuranceLiaisonStarted: ticket.insurance.hasInsurance
+  };
+  tickets.set(ticketId, ticket);
+  
+  // Service completion
+  setTimeout(() => contractorCompletesService(ticketId), 4000);
+}
+
+// Contractor Completes Service (Mock)
+async function contractorCompletesService(ticketId: string) {
+  const ticket = tickets.get(ticketId);
+  if (!ticket) return;
+  
+  ticket.workflow.serviceCompleted = true;
+  ticket.serviceCompletedAt = new Date().toISOString();
+  ticket.status = 'COMPLETED';
+  ticket.serviceDetails = {
+    ...ticket.serviceDetails,
+    inspectionCompleted: true,
+    makeSafeCompleted: true,
+    documentationCompleted: true,
+    insuranceLiaisonCompleted: ticket.insurance.hasInsurance,
+    finalReportSubmitted: true
+  };
+  tickets.set(ticketId, ticket);
+  
+  // Release funds
+  setTimeout(() => releaseFunds(ticketId), 2000);
+}
+
+// Release Funds (Mock)
+async function releaseFunds(ticketId: string) {
+  const ticket = tickets.get(ticketId);
+  if (!ticket) return;
+  
+  ticket.workflow.fundsReleased = true;
+  ticket.fundsReleasedAt = new Date().toISOString();
+  ticket.status = 'FUNDS_RELEASED';
+  ticket.payment = {
+    contractorPaid: true,
+    platformFeeDeducted: 2750,
+    contractorAmount: ticket.metrics.leadValue - 275, // 10% platform fee
+    paymentDate: new Date().toISOString(),
+    paymentMethod: 'Direct Deposit'
+  };
   tickets.set(ticketId, ticket);
 }
