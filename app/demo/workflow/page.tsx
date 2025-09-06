@@ -272,7 +272,7 @@ export default function WorkflowDemonstration() {
       <div className="mb-8">
         <h1 className="text-4xl font-bold mb-2">End-to-End Workflow Demonstration</h1>
         <p className="text-gray-600">
-          Experience the complete journey from customer ticket to contractor payment
+          Experience the complete journey from customer claim to contractor payment
         </p>
       </div>
 
