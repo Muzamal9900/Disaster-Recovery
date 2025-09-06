@@ -57,6 +57,11 @@ function ContractorApplicationContent() {
     }
   }, []);
   
+  // Scroll to top when step changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentStep]);
+  
   // Auto-demo functionality with enhanced timing
   const runAutoDemo = async () => {
     setIsDemoRunning(true);

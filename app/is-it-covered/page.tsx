@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, AlertCircle, CheckCircle, XCircle, AlertTriangle, FileText, Camera, Clock, Shield, TrendingUp, TrendingDown, Phone } from 'lucide-react';
 import { InsuranceDecoder } from '../../lib/insurance-decoder';
@@ -10,6 +10,11 @@ export default function CoverageChecker() {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [result, setResult] = useState<any>(null);
   const [selectedScenario, setSelectedScenario] = useState<string>('');
+  
+  // Scroll to top when step changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [step]);
 
   const scenarios = [
     { id: 'water-burst-pipe', label: 'Burst Pipe Water Damage', icon: '💧' },

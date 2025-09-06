@@ -85,6 +85,11 @@ export default function SchedulePage() {
   const [selectedDate, setSelectedDate] = useState('');
   const [availableSlots, setAvailableSlots] = useState<TimeSlot[]>(timeSlots);
   
+  // Scroll to top when step changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentStep]);
+  
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
