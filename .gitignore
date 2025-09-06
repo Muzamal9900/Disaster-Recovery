@@ -89,3 +89,10 @@ temp-image-creator/
 .env.vercel
 
 .vercel
+
+# MVP Cleanup
+_archive/
+*.bak
+.env*
+!.env.example
+!.env.training.example

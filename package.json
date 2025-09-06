@@ -48,6 +48,8 @@
     "test:ci": "jest --ci --coverage --watchAll=false",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
+    "lint:fix": "next lint --fix || exit 0",
+    "build:mvp": "next build",
     "test:e2e:debug": "playwright test --debug",
     "generate:images": "node scripts/generate-images.js",
     "generate:images:hero": "node scripts/generate-images.js hero",

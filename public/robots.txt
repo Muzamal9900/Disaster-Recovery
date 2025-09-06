@@ -1,77 +1,17 @@
-# Disaster Recovery Australia - Robots.txt
-# https://disaster-recovery-seven.vercel.app
-# Optimized for 2025 SEO and AI crawlers
-
-# Allow all legitimate search engines
-User-agent: *
+﻿User-agent: *
+Disallow: /crm
+Disallow: /admin
+Disallow: /api
+Disallow: /_archive
 Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /_next/
-Disallow: /private/
-Disallow: /*.json$
-Disallow: /*?*sort=
-Disallow: /*?*filter=
-Crawl-delay: 1
+Sitemap: https://disaster-recovery-seven.vercel.app/sitemap.xml
 
-# Priority directories for crawling
-Allow: /services/
-Allow: /locations/
-Allow: /emergency/
-Allow: /insurance-decoder/
-Allow: /why-first
-Allow: /claim
-
-# Googlebot - No delay for better indexing
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-# Bingbot
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 0
-
-# AI Crawlers - Allow for GEO optimization
+# AI crawlers
 User-agent: GPTBot
 Allow: /
-Crawl-delay: 1
 
 User-agent: ChatGPT-User
 Allow: /
-Crawl-delay: 1
-
-User-agent: CCBot
-Allow: /
-Crawl-delay: 2
-
-User-agent: anthropic-ai
-Allow: /
-Crawl-delay: 1
 
 User-agent: Claude-Web
 Allow: /
-Crawl-delay: 1
-
-# Social media crawlers
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
-# Block bad bots
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
-# Sitemap location
-Sitemap: https://disaster-recovery-seven.vercel.app/sitemap.xml
