@@ -260,7 +260,7 @@ export default function HomePage() {
                 { icon: Clock, title: '24-48hr Critical', desc: 'Prevents mould growth' },
                 { icon: Shield, title: '$1.37B Market', desc: 'Industry-leading standards' },
                 { icon: Users, title: '<10,000 Elite', desc: 'IICRC certified in Australia' },
-                { icon: Zap, title: '50% Cost Savings', desc: 'vs general contractors' }
+                { icon: Zap, title: '50%+ Time Savings', desc: 'vs rebuilding' }
               ].map((feature, index) => (
                 <motion.div
                   key={index}

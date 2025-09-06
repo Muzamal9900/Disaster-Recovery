@@ -59,9 +59,9 @@ export default function WhyFirstPage() {
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "Economic Impact",
-      stat: "50% cost reduction",
-      description: "Professional intervention saves 20-50% on recovery costs while preventing secondary damage."
+      title: "Time Efficiency",
+      stat: "50%+ time saved",
+      description: "Professional restoration saves 50%+ time compared to rebuilding, getting you back to normal faster."
     }
   ];
 
