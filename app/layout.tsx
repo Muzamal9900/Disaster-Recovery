@@ -239,7 +239,7 @@ export default function RootLayout({
           </div>
           <MobileFAB />
           <MobileEmergencyCTA />
-          {/* <LiveChat /> - Removed to prevent duplicate chat bot */}
+          {/* <LiveChat /> - Reserved for future version */}
           {/* <AudioSystemSimple /> - Removed as not functioning properly */}
         </Providers>
         <Script

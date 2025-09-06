@@ -7,7 +7,6 @@ import {
   Shield, 
   CheckCircle,
   AlertTriangle,
-  Phone,
   Users,
   Building,
   Droplets,
@@ -29,7 +28,6 @@ export default function BrisbaneLocationPage() {
         "name": "Disaster Recovery Brisbane",
         "description": "24/7 IICRC-certified disaster restoration services in Brisbane and South East Queensland. Specialist flood damage, cyclone recovery, storm damage restoration across Brisbane CBD, Northside, Southside, Gold Coast, Sunshine Coast.",
         "url": "https://disaster-recovery-seven.vercel.app/locations/brisbane",
-        "telephone": "1300-DISASTER",
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
@@ -272,13 +270,13 @@ export default function BrisbaneLocationPage() {
                   Brisbane Flood Emergency
                 </motion.a>
                 <motion.a
-                  href="tel:1300DISASTER"
+                  href="/claim"
                   className="bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors inline-flex items-center justify-center gap-2"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Phone className="w-5 h-5" />
-                  1300-DISASTER
+                  <Shield className="w-5 h-5" />
+                  Submit Online Claim
                 </motion.a>
               </div>
 
@@ -550,7 +548,7 @@ export default function BrisbaneLocationPage() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Phone className="w-5 h-5" />
+                  <Shield className="w-5 h-5" />
                   Get Brisbane Flood Help
                 </motion.a>
                 <motion.a

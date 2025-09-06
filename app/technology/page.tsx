@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 export default function TechnologyPage() {
   const technologies = [
     {
-      title: 'AI Damage Detection',
-      description: 'Revolutionary artificial intelligence that instantly identifies and assesses damage patterns with 99.9% accuracy.',
+      title: 'Advanced Damage Detection',
+      description: 'Revolutionary technology that instantly identifies and assesses damage patterns with 99.9% accuracy.',
       icon: Brain,
       features: [
         'Real-time damage assessment',
@@ -24,7 +24,7 @@ export default function TechnologyPage() {
         'Automated documentation',
         'Insurance-ready reporting'
       ],
-      link: '/technology/ai',
+      link: '/technology/detection',
       colour: 'from-purple-500 to-indigo-600',
       stats: { accuracy: '99.9%', speed: '60x faster', coverage: '100%' }
     },

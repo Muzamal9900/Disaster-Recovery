@@ -329,7 +329,7 @@ export default function CleanClaimsPartnershipPage() {
               Combined Technology Stack
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              World-class restoration technology meets AI-powered distribution
+              World-class restoration technology meets intelligent distribution
             </p>
           </div>
 

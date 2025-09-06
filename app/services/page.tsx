@@ -17,7 +17,6 @@ import {
   CubeIcon,
   SparklesIcon,
   ArrowRightIcon,
-  PhoneIcon,
   DocumentCheckIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline';
@@ -65,7 +64,7 @@ export default function UltraModernServicesPage() {
       id: 'water-damage',
       title: 'Water Damage Restoration',
       subtitle: 'Advanced Hydro Extraction Technology',
-      description: 'Cutting-edge water damage restoration using molecular drying technology and AI-powered moisture mapping.',
+      description: 'Cutting-edge water damage restoration using molecular drying technology and advanced moisture mapping.',
       icon: HomeIcon,
       gradient: 'from-blue-600 via-cyan-500 to-teal-400',
       features: [
@@ -258,11 +257,11 @@ export default function UltraModernServicesPage() {
               ))}
             </nav>
             <Link
-              href="/contact"
+              href="/claim"
               className="neon-button bg-gradient-to-r from-red-600 to-blue-600 px-6 py-2 rounded-full text-white font-bold hover:shadow-lg hover:shadow-red-500/50 transition-all flex items-center gap-2"
             >
-              <PhoneIcon className="w-5 h-5" />
-              Emergency
+              <ShieldCheckIcon className="w-5 h-5" />
+              Emergency Claim
             </Link>
           </div>
         </div>
@@ -507,7 +506,7 @@ export default function UltraModernServicesPage() {
               <span className="gradient-text">Assistance?</span>
             </h2>
             <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-              Our certified restoration experts are standing by 24/7 to respond to your emergency
+              Our certified restoration experts provide immediate online response for your emergency
             </p>
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -515,11 +514,11 @@ export default function UltraModernServicesPage() {
               className="inline-block"
             >
               <Link
-                href="/contact"
+                href="/claim"
                 className="flex items-center gap-4 bg-gradient-to-r from-red-600 to-blue-600 px-12 py-6 rounded-full font-bold text-2xl text-white shadow-2xl hover:shadow-red-500/25 transition-all"
               >
-                <PhoneIcon className="w-8 h-8" />
-                Call Get Help Now
+                <ShieldCheckIcon className="w-8 h-8" />
+                Start Online Claim Now
                 <motion.div
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 1, repeat: Infinity }}

@@ -7,7 +7,6 @@ import {
   Shield, 
   CheckCircle,
   AlertTriangle,
-  Phone,
   Wind,
   Home,
   Heart,
@@ -596,17 +595,17 @@ export default function BushfireDamageRestorationPage() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Phone className="w-5 h-5" />
+                  <Shield className="w-5 h-5" />
                   Start Bushfire Recovery
                 </motion.a>
                 <motion.a
-                  href="tel:1300DISASTER"
+                  href="/claim"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors inline-flex items-center justify-center gap-2"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <AlertTriangle className="w-5 h-5" />
-                  1300-DISASTER
+                  Submit Online Claim
                 </motion.a>
               </div>
 

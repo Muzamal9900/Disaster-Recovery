@@ -7,7 +7,6 @@ import {
   Shield, 
   CheckCircle,
   AlertTriangle,
-  Phone,
   Users,
   Building,
   Droplets,
@@ -29,7 +28,6 @@ export default function SydneyLocationPage() {
         "name": "Disaster Recovery Sydney",
         "description": "24/7 IICRC-certified disaster restoration services in Sydney. Water damage, fire damage, mould remediation across all Sydney suburbs including CBD, North Shore, Eastern Suburbs, Western Sydney.",
         "url": "https://disaster-recovery-seven.vercel.app/locations/sydney",
-        "telephone": "1300-DISASTER",
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
@@ -316,13 +314,13 @@ export default function SydneyLocationPage() {
                   Sydney Emergency Response
                 </motion.a>
                 <motion.a
-                  href="tel:1300DISASTER"
+                  href="/claim"
                   className="bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors inline-flex items-center justify-center gap-2"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Phone className="w-5 h-5" />
-                  1300-DISASTER
+                  <Shield className="w-5 h-5" />
+                  Submit Online Claim
                 </motion.a>
               </div>
             </div>
@@ -563,7 +561,7 @@ export default function SydneyLocationPage() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Phone className="w-5 h-5" />
+                  <AlertTriangle className="w-5 h-5" />
                   Get Sydney Emergency Help
                 </motion.a>
                 <motion.a

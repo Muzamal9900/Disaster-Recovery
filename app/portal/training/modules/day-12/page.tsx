@@ -951,7 +951,7 @@ export default function Day12Module() {
                     <li>Damage assessment from photos</li>
                     <li>Automated estimating assistance</li>
                     <li>Predictive drying times</li>
-                    <li>Customer service chatbots</li>
+                    <li>Customer service automation</li>
                   </ul>
                 </div>
 

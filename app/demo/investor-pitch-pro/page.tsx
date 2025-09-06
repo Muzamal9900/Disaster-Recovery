@@ -108,7 +108,7 @@ const professionalSlides = [
     background: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
     animation: "slideRight",
     duration: 10000,
-    narration: "Our solution is revolutionary yet simple. We've built a completely self-running platform that uses artificial intelligence to instantly match insurance claims with qualified contractors. No call centers, no admin overhead, just direct connections that work 24/7. We're not a restoration company - we're the distribution infrastructure that makes the entire industry efficient.",
+    narration: "Our solution is revolutionary yet simple. We've built a completely self-running platform that instantly matches insurance claims with qualified contractors. No call centers, no admin overhead, just direct connections that work 24/7. We're not a restoration company - we're the distribution infrastructure that makes the entire industry efficient.",
     speakerNotes: "Emphasize automation and scale. Make clear we're a tech platform, not a service provider. This is Uber for disaster recovery."
   },
   {
