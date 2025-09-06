@@ -82,7 +82,7 @@ export default function FixedHomePage() {
                 transition={{ delay: 0.1 }}
                 className="text-xl text-gray-600 mb-8"
               >
-                Connect with 115,000+ certified contractors instantly.
+                Connect with <10,000 IICRC certified contractors instantly.
                 100% online. No phone calls. Help in minutes.
               </motion.p>
 
@@ -200,7 +200,7 @@ export default function FixedHomePage() {
               {[
                 { icon: Clock, title: '60min Response', desc: 'Guaranteed arrival' },
                 { icon: Shield, title: 'Insurance Direct', desc: 'We handle claims' },
-                { icon: Users, title: '115,000+ Pros', desc: 'Certified network' },
+                { icon: Users, title: '<10,000 Elite', desc: 'IICRC certified' },
                 { icon: Zap, title: '100% Digital', desc: 'No phone needed' }
               ].map((feature, index) => (
                 <motion.div

@@ -191,7 +191,7 @@ export default function HomePage() {
             </h2>
             <div className="grid md:grid-cols-4 gap-8 text-center">
               {[
-                { value: '115,000+', label: 'Certified Contractors' },
+                { value: '<10,000', label: 'IICRC Certified Contractors' },
                 { value: '24/7', label: 'Digital Availability' },
                 { value: '60min', label: 'Response Time' },
                 { value: '100%', label: 'Online Platform' }

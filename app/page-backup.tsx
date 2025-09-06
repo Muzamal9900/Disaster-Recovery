@@ -42,7 +42,7 @@ export default function CleanLandingPage() {
     },
     {
       title: "Certified Network",
-      description: "115,000+ vetted and certified restoration professionals",
+      description: "<10,000 IICRC certified restoration professionals in Australia",
       icon: Users,
       color: "from-purple-500 to-pink-500"
     },
@@ -219,7 +219,7 @@ export default function CleanLandingPage() {
               className="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl mx-auto"
             >
               Australia's largest emergency restoration network. 
-              115,000+ certified contractors ready to help, with insurance approval guaranteed.
+              <10,000 IICRC certified contractors ready to help, with insurance approval guaranteed.
             </motion.p>
 
             {/* CTA Buttons */}

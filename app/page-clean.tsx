@@ -80,7 +80,7 @@ export default function CleanHomePage() {
               transition={{ delay: 0.1 }}
               className="text-xl text-gray-600 mb-8"
             >
-              Connect instantly with 115,000+ certified contractors.
+              Connect instantly with <10,000 IICRC certified contractors.
               100% online. No phone calls needed. Get help in minutes.
             </motion.p>
 
@@ -213,7 +213,7 @@ export default function CleanHomePage() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold">115,000+</div>
+              <div className="text-4xl font-bold"><10,000</div>
               <div className="text-blue-100">Certified Contractors</div>
             </div>
             <div>

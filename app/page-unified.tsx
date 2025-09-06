@@ -63,7 +63,7 @@ export default function UnifiedHomePage() {
                 transition={{ duration: ANIMATION.normal / 1000, delay: 0.1 }}
                 className="text-xl text-gray-600 mb-8"
               >
-                Connect instantly with 115,000+ certified contractors.
+                Connect instantly with <10,000 IICRC certified contractors.
                 100% online. Zero phone calls. Help in minutes.
               </motion.p>
 
@@ -120,7 +120,7 @@ export default function UnifiedHomePage() {
               {[
                 { icon: Zap, title: 'Instant Response', desc: '60-minute arrival guarantee' },
                 { icon: Shield, title: 'Insurance Approved', desc: 'Direct billing, no hassle' },
-                { icon: Users, title: 'Certified Network', desc: '115,000+ professionals' },
+                { icon: Users, title: 'Certified Network', desc: '<10,000 IICRC professionals' },
                 { icon: CheckCircle, title: '100% Digital', desc: 'No phone calls needed' }
               ].map((feature, index) => (
                 <motion.div
@@ -182,7 +182,7 @@ export default function UnifiedHomePage() {
           <div className="container mx-auto px-6">
             <div className="grid md:grid-cols-4 gap-8 text-center">
               {[
-                { value: '115,000+', label: 'Contractors' },
+                { value: '<10,000', label: 'IICRC Contractors' },
                 { value: '24/7', label: 'Availability' },
                 { value: '60min', label: 'Response' },
                 { value: '100%', label: 'Digital' }
