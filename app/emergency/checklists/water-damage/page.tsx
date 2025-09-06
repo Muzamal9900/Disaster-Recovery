@@ -26,12 +26,12 @@ export default function WaterDamageChecklistPage() {
   ];
 
   const firstHourActions = [
+    { id: 'contact-restoration', text: 'Contact certified restoration professionals (24-48 hour window critical)', critical: true },
     { id: 'remove-water', text: 'Start removing standing water (if safe)', critical: false },
     { id: 'move-items', text: 'Move furniture and valuables to dry areas', critical: false },
     { id: 'lift-carpets', text: 'Lift carpets and rugs off floor', critical: false },
     { id: 'open-windows', text: 'Open windows for ventilation (weather permitting)', critical: false },
-    { id: 'document-items', text: 'List and photograph all damaged items', critical: false },
-    { id: 'contact-restoration', text: 'Contact professional restoration service', critical: false }
+    { id: 'document-items', text: 'List and photograph all damaged items', critical: false }
   ];
 
   const first24Hours = [
@@ -105,6 +105,22 @@ export default function WaterDamageChecklistPage() {
             <p className="font-bold">
               DANGER: Never enter flooded areas with active electricity. Call 000 if life-threatening.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Professional First Response Notice */}
+      <section className="bg-blue-50 border-b-2 border-blue-200 py-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-start gap-4">
+            <Shield className="w-6 h-6 text-blue-600 mt-1" />
+            <div>
+              <p className="text-sm text-blue-900">
+                <span className="font-bold">Why Professional Response Matters:</span> Studies show professional restoration 
+                within 24-48 hours prevents permanent mould growth, reduces recovery costs by 50%, and protects against 
+                hidden toxins. Certified technicians use industrial equipment unavailable to general contractors.
+              </p>
+            </div>
           </div>
         </div>
       </section>

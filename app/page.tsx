@@ -42,6 +42,7 @@ export default function HomePage() {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 hero-title"
               >
+                <span className="text-7xl md:text-8xl font-black text-blue-600 block mb-4 tracking-tight animate-pulse" style={{ animationDuration: '3s' }}>WHO'S FIRST</span>
                 Australia's #1 Digital Disaster
                 <span className="block gradient-text">Recovery Platform</span>
               </motion.h1>
@@ -52,8 +53,8 @@ export default function HomePage() {
                 transition={{ delay: 0.1 }}
                 className="text-xl text-gray-600 mb-8"
               >
-                Connect with 115,000+ certified contractors instantly.
-                100% online. No phone calls. Help in minutes.
+                Connect with Australia's elite IICRC-certified restoration specialists.
+                24-48 hour response prevents 50% of secondary damage. 100% online.
               </motion.p>
 
               {/* Digital Contact Options */}
@@ -108,6 +109,33 @@ export default function HomePage() {
                   <Zap className="ml-2 h-5 w-5" />
                 </Button>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Credibility Banner */}
+        <section className="py-8 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
+          <div className="container mx-auto px-6">
+            <div className="flex flex-wrap justify-center items-center gap-8 text-center">
+              <div>
+                <div className="text-2xl font-bold">4,000+</div>
+                <div className="text-sm opacity-90">Lives saved annually</div>
+              </div>
+              <div className="hidden md:block w-px h-12 bg-white/30" />
+              <div>
+                <div className="text-2xl font-bold">688</div>
+                <div className="text-sm opacity-90">Mesothelioma deaths prevented</div>
+              </div>
+              <div className="hidden md:block w-px h-12 bg-white/30" />
+              <div>
+                <div className="text-2xl font-bold">40%</div>
+                <div className="text-sm opacity-90">Increase in disasters since 2019</div>
+              </div>
+              <div className="hidden md:block w-px h-12 bg-white/30" />
+              <div>
+                <div className="text-2xl font-bold">3.7%</div>
+                <div className="text-sm opacity-90">Master Technician elite status</div>
+              </div>
             </div>
           </div>
         </section>
@@ -229,10 +257,10 @@ export default function HomePage() {
             </h2>
             <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {[
-                { icon: Clock, title: '60min Response', desc: 'Guaranteed arrival time' },
-                { icon: Shield, title: 'Insurance Direct', desc: 'We handle all claims' },
-                { icon: Users, title: '115,000+ Pros', desc: 'Certified network' },
-                { icon: Zap, title: '100% Digital', desc: 'No phone calls needed' }
+                { icon: Clock, title: '24-48hr Critical', desc: 'Prevents mould growth' },
+                { icon: Shield, title: '$1.37B Market', desc: 'Industry-leading standards' },
+                { icon: Users, title: '<10,000 Elite', desc: 'IICRC certified in Australia' },
+                { icon: Zap, title: '50% Cost Savings', desc: 'vs general contractors' }
               ].map((feature, index) => (
                 <motion.div
                   key={index}

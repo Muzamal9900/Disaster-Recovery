@@ -40,16 +40,16 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://disasterrecovery.com.au'),
+  metadataBase: new URL('https://disaster-recovery-seven.vercel.app'),
   title: {
-    default: 'Disaster Recovery | 24/7 Emergency Restoration Services',
-    template: '%s | Disaster Recovery'
+    default: 'Disaster Recovery Australia | 24/7 Emergency Restoration Services | IICRC Certified',
+    template: '%s | Disaster Recovery Australia'
   },
-  description: 'Leading disaster recovery and restoration specialists. 24/7 emergency response for water damage, fire damage, mould remediation, and biohazard cleanup across all major cities.',
-  keywords: 'disaster recovery, water damage restoration, fire damage, mould removal, emergency restoration, flood cleanup, storm damage, biohazard cleanup, insurance restoration',
-  authors: [{ name: 'Disaster Recovery' }],
-  creator: 'Disaster Recovery',
-  publisher: 'Disaster Recovery',
+  description: 'Australia\'s leading IICRC-certified disaster restoration specialists. 24/7 emergency response for water damage, fire damage, mould remediation across Sydney, Melbourne, Brisbane, Perth, Adelaide. Insurance approved. <10,000 certified professionals nationwide.',
+  keywords: 'disaster recovery australia, water damage restoration sydney, fire damage melbourne, mould remediation brisbane, emergency restoration perth, flood cleanup adelaide, storm damage repair, biohazard cleanup, IICRC certified, insurance restoration, 24 hour emergency response, commercial restoration, residential restoration',
+  authors: [{ name: 'Disaster Recovery Australia' }],
+  creator: 'Disaster Recovery Australia',
+  publisher: 'National Restoration Platform',
   formatDetection: {
     email: false,
     address: false,
@@ -69,26 +69,26 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Disaster Recovery'
+    title: 'Disaster Recovery Australia'
   },
   openGraph: {
     type: 'website',
     locale: 'en_AU',
-    url: 'https://disasterrecovery.com.au',
-    siteName: 'Disaster Recovery',
-    title: 'Disaster Recovery | 24/7 Emergency Restoration Services',
-    description: 'Leading disaster recovery and restoration specialists. 24/7 emergency response across all major cities.',
+    url: 'https://disaster-recovery-seven.vercel.app',
+    siteName: 'Disaster Recovery Australia',
+    title: 'Disaster Recovery Australia | 24/7 IICRC-Certified Emergency Restoration',
+    description: 'Australia\'s elite network of <10,000 IICRC-certified restoration professionals. 24/7 emergency response prevents 50% of secondary damage. Trusted by major insurers.',
     images: [
       {
         url: '/images/disaster-recovery-og.jpg',
         width: 1200,
         height: 630,
-        alt: 'Disaster Recovery' }
+        alt: 'Disaster Recovery Australia - Emergency Restoration Services' }
     ] },
   twitter: {
     card: 'summary_large_image',
-    title: 'Disaster Recovery | 24/7 Emergency Restoration',
-    description: 'Leading disaster recovery specialists. 24/7 emergency response for water, fire, mould damage.',
+    title: 'Disaster Recovery Australia | 24/7 Emergency Restoration',
+    description: 'IICRC-certified disaster recovery. 24-48hr critical response window. Water, fire, mould damage specialists.',
     images: ['/images/disaster-recovery-twitter.jpg'],
     creator: '@DisasterRecovAU' },
   robots: {
@@ -108,9 +108,9 @@ export const metadata: Metadata = {
       'msvalidate.01': 'B3F4D7E8C9A2B1C3D4E5F6A7B8C9D0E1',
       'facebook-domain-verification': 'abcdef123456789' } },
   alternates: {
-    canonical: 'https://disasterrecovery.com.au',
+    canonical: 'https://disaster-recovery-seven.vercel.app',
     languages: {
-      'en-AU': 'https://disasterrecovery.com.au' } },
+      'en-AU': 'https://disaster-recovery-seven.vercel.app' } },
   category: 'Disaster Recovery Services' }
 
 export default function RootLayout({
@@ -136,11 +136,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Disaster Recovery",
+              "name": "Disaster Recovery Australia",
               "alternateName": "NRP - National Restoration Platform",
-              "url": "https://disasterrecovery.com.au",
-              "logo": "https://disasterrecovery.com.au/logos/3D%20Disaster%20Recovery%20Logo%20Image.png",
-              "description": "Leading disaster recovery and restoration specialists providing 24/7 emergency response across Australia",
+              "url": "https://disaster-recovery-seven.vercel.app",
+              "logo": "https://disaster-recovery-seven.vercel.app/logos/3D%20Disaster%20Recovery%20Logo%20Image.png",
+              "description": "Australia's elite network of IICRC-certified disaster restoration specialists. 24/7 emergency response preventing secondary damage across all major cities and regional areas.",
               "areaServed": {
                 "@type": "Country",
                 "name": "Australia"

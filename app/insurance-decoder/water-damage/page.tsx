@@ -45,6 +45,16 @@ export default function WaterDamageInsurancePage() {
   const claimSteps = [
     {
       step: 1,
+      title: 'Call Certified Restoration Professionals',
+      actions: [
+        'Contact IICRC-certified technicians immediately',
+        'Professional assessment strengthens insurance claims',
+        'Industrial equipment prevents secondary damage',
+        'Documentation meets insurance standards'
+      ]
+    },
+    {
+      step: 2,
       title: 'Document Everything',
       actions: [
         'Take photos/videos before any cleanup',
@@ -54,7 +64,7 @@ export default function WaterDamageInsurancePage() {
       ]
     },
     {
-      step: 2,
+      step: 3,
       title: 'Notify Insurance',
       actions: [
         'Call within 24-48 hours',
@@ -64,27 +74,27 @@ export default function WaterDamageInsurancePage() {
       ]
     },
     {
-      step: 3,
+      step: 4,
       title: 'Mitigate Damage',
       actions: [
         'Stop the water source',
-        'Remove standing water',
+        'Professional water extraction critical',
         'Move items to dry area',
         'Keep all receipts'
       ]
     },
     {
-      step: 4,
+      step: 5,
       title: 'Meet Adjuster',
       actions: [
         'Be present for inspection',
         'Show all damage areas',
-        'Provide documentation',
+        'Provide professional restoration reports',
         'Get written assessment'
       ]
     },
     {
-      step: 5,
+      step: 6,
       title: 'Review Settlement',
       actions: [
         'Understand the offer',
