@@ -1,47 +1,77 @@
 # Disaster Recovery Australia - Robots.txt
-# https://disasterrecovery.com.au
+# https://disaster-recovery-seven.vercel.app
+# Optimized for 2025 SEO and AI crawlers
 
-# Allow all search engines
+# Allow all legitimate search engines
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
-Disallow: /partner-portal/
-Disallow: /contractor/onboarding/
-Disallow: /contractor/dashboard/
 Disallow: /_next/
-Disallow: /static/private/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+Crawl-delay: 1
 
-# Allow specific important directories
+# Priority directories for crawling
 Allow: /services/
 Allow: /locations/
-Allow: /knowledge/
 Allow: /emergency/
-Allow: /cost/
-Allow: /insurance/
+Allow: /insurance-decoder/
+Allow: /why-first
+Allow: /claim
 
-# Googlebot specific
+# Googlebot - No delay for better indexing
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
 
-# Bingbot specific
+# Bingbot
 User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# AI Crawlers - Allow for GEO optimization
+User-agent: GPTBot
 Allow: /
 Crawl-delay: 1
 
-# Important pages to prioritize
-Allow: /services/water-damage
-Allow: /services/fire-damage
-Allow: /services/mold-remediation
-Allow: /services/emergency-response
-Allow: /services/biohazard-cleanup
-Allow: /services/storm-damage
-Allow: /services/commercial
-Allow: /services/structural-drying
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 1
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 1
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 1
+
+# Social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
 
 # Sitemap location
-Sitemap: https://disasterrecovery.com.au/sitemap.xml
-Sitemap: https://disasterrecovery.com.au/sitemap-locations.xml
-Sitemap: https://disasterrecovery.com.au/sitemap-services.xml
-Sitemap: https://disasterrecovery.com.au/sitemap-knowledge.xml
+Sitemap: https://disaster-recovery-seven.vercel.app/sitemap.xml
