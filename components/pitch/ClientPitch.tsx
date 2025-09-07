@@ -17,7 +17,7 @@ import Link from 'next/link';
 
 export default function ClientPitch() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoUrl = "https://youtube.com/embed/hKwPx8JAInk";
+  const videoUrl = "https://www.youtube.com/embed/hKwPx8JAInk";
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-slate-900 to-gray-900">
@@ -26,7 +26,7 @@ export default function ClientPitch() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Link 
             href="/pitch" 
-            className="flex items-center gap-2 text-gray-100 hover:text-white transition-colors"
+            className="flex items-center gap-2 text-white/90 hover:text-white transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             <span>Back to Pitch Selection</span>
@@ -53,7 +53,7 @@ export default function ClientPitch() {
                 Our Priority.
               </span>
             </h1>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+            <p className="text-xl max-w-3xl mx-auto" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
               When disaster strikes, every minute counts. Discover how we're revolutionizing 
               disaster recovery with 2-hour response times and real-time tracking.
             </p>
@@ -68,11 +68,12 @@ export default function ClientPitch() {
             style={{ aspectRatio: '16/9' }}
           >
             <iframe
-              src={`${videoUrl}?autoplay=0&controls=1&rel=0&modestbranding=1`}
+              src={`${videoUrl}?autoplay=0&controls=1&rel=0&modestbranding=1&enablejsapi=1`}
               title="Disaster Recovery Client Presentation"
               className="absolute inset-0 w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
               allowFullScreen
+              frameBorder="0"
             />
           </motion.div>
 
@@ -86,7 +87,7 @@ export default function ClientPitch() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/20">
               <Clock className="w-10 h-10 text-blue-400 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">2-Hour Response</h3>
-              <p className="text-gray-200 text-sm">
+              <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                 Guaranteed contractor contact within 2 hours of your claim
               </p>
             </div>
@@ -94,7 +95,7 @@ export default function ClientPitch() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
               <Shield className="w-10 h-10 text-cyan-400 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Insurance Direct</h3>
-              <p className="text-gray-200 text-sm">
+              <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                 We work directly with your insurance company for faster approvals
               </p>
             </div>
@@ -102,7 +103,7 @@ export default function ClientPitch() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-500/20">
               <CheckCircle2 className="w-10 h-10 text-green-400 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Verified Contractors</h3>
-              <p className="text-gray-200 text-sm">
+              <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                 All contractors are licensed, insured, and quality-verified
               </p>
             </div>
@@ -110,7 +111,7 @@ export default function ClientPitch() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20">
               <Phone className="w-10 h-10 text-purple-400 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>
-              <p className="text-gray-200 text-sm">
+              <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                 Real-time tracking and support throughout your recovery
               </p>
             </div>
@@ -126,7 +127,7 @@ export default function ClientPitch() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Don't Wait for Disaster to Strike
             </h2>
-            <p className="text-gray-100 mb-8">
+            <p className="mb-8" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
               Join thousands of homeowners and businesses who trust us with their recovery needs
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -146,13 +147,13 @@ export default function ClientPitch() {
             transition={{ delay: 1.2, duration: 0.6 }}
             className="mt-16 text-center"
           >
-            <p className="text-gray-200 mb-4">Trusted by:</p>
+            <p className="mb-4" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Trusted by:</p>
             <div className="flex flex-wrap justify-center gap-8 items-center">
-              <div className="text-gray-300">Major Insurance Partners</div>
-              <div className="text-gray-300">•</div>
-              <div className="text-gray-300">3,450+ Families Helped</div>
-              <div className="text-gray-300">•</div>
-              <div className="text-gray-300">National Coverage</div>
+              <div style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Major Insurance Partners</div>
+              <div style={{ color: 'rgba(255, 255, 255, 0.7)' }}>•</div>
+              <div style={{ color: 'rgba(255, 255, 255, 0.7)' }}>3,450+ Families Helped</div>
+              <div style={{ color: 'rgba(255, 255, 255, 0.7)' }}>•</div>
+              <div style={{ color: 'rgba(255, 255, 255, 0.7)' }}>National Coverage</div>
             </div>
           </motion.div>
         </div>
