@@ -183,6 +183,12 @@ export default function WorkflowDemonstration() {
 
   // Simulate workflow progression client-side (since serverless doesn't persist state)
   const monitorTicketProgress = async (id: string) => {
+    // Track KPI timestamps for payment releases
+    const jobAcceptedTime = Date.now() + 10000; // When contractor accepts (step 6)
+    const clientContactTime = Date.now() + 12000; // When contractor contacts client (step 7)
+    const contactDelayMinutes = Math.floor((clientContactTime - jobAcceptedTime) / 60000); // Should be under 60 mins
+    const kpi1Fine = contactDelayMinutes > 60 ? (contactDelayMinutes - 60) * 2 : 0; // $2/min after 60 mins
+    
     // Simulate workflow progression with realistic timing
     const workflowSteps = [
       { delay: 2000, stepIndex: 2, completed: true }, // CRM Connection
@@ -190,13 +196,13 @@ export default function WorkflowDemonstration() {
       { delay: 5000, stepIndex: 4, completed: true, contractor: true }, // Contractor Matching
       { delay: 7000, stepIndex: 5, completed: true }, // Contractor Notification
       { delay: 10000, stepIndex: 6, completed: true }, // Contractor Accepts
-      { delay: 12000, stepIndex: 7, completed: true }, // Client Contact
-      { delay: 15000, stepIndex: 8, completed: true, serviceStarted: true }, // Service Delivery
-      { delay: 18000, stepIndex: 9, completed: true, serviceCompleted: true }, // Service Completion
+      { delay: 12000, stepIndex: 7, completed: true, kpi1: true }, // Client Contact - KPI 1: $550 release
+      { delay: 15000, stepIndex: 8, completed: true, serviceStarted: true, kpi2: true }, // Service Delivery - KPI 2: $550 release
+      { delay: 18000, stepIndex: 9, completed: true, serviceCompleted: true, kpi3: true }, // Service Completion - KPI 3: Remaining funds
       { delay: 20000, stepIndex: 10, completed: true, fundsReleased: true }, // Funds Release
     ];
     
-    workflowSteps.forEach(({ delay, stepIndex, completed, cleanClaims, contractor, serviceStarted, serviceCompleted, fundsReleased }) => {
+    workflowSteps.forEach(({ delay, stepIndex, completed, cleanClaims, contractor, serviceStarted, serviceCompleted, fundsReleased, kpi1, kpi2, kpi3 }) => {
       setTimeout(() => {
         if (completed) {
           updateStepStatus(stepIndex, 'completed', {
@@ -209,18 +215,36 @@ export default function WorkflowDemonstration() {
               contractorName: 'Premium Restoration Services',
               contractorId: `CTR-${Math.random().toString(36).substr(2, 9).toUpperCase()}`
             }),
-            ...(serviceStarted && {
+            ...(kpi1 && {
+              kpi: 'KPI 01: Client Contact',
+              timeToContact: '58 minutes',
+              fine: '$0',
+              payment: '$550 released'
+            }),
+            ...(kpi2 && {
+              kpi: 'KPI 02: Initial Onsite Report',
+              reportCompleted: 'Yes',
+              payment: '$550 released'
+            }),
+            ...(kpi3 && {
+              kpi: 'KPI 03: Initial Make Safe',
+              makeSafeCompleted: 'Yes',
+              remainingPayment: '$1,100 released',
+              totalFines: '$0'
+            }),
+            ...(serviceStarted && !kpi2 && {
               inspection: 'Started',
               makeSafe: 'In Progress'
             }),
-            ...(serviceCompleted && {
+            ...(serviceCompleted && !kpi3 && {
               inspection: 'Complete',
               makeSafe: 'Complete',
               documentation: 'Complete'
             }),
             ...(fundsReleased && {
               amount: '$2,200',
-              status: 'Released'
+              status: 'Released',
+              breakdown: 'KPI 1: $550 | KPI 2: $550 | KPI 3: $1,100'
             })
           });
           
@@ -491,6 +515,77 @@ export default function WorkflowDemonstration() {
                         <span className="text-gray-600">Status:</span>
                         <Badge variant="success" className="text-xs">ACCEPTED</Badge>
                       </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* KPI Payment Tracking (Contractor View Only) */}
+                {currentStep >= 6 && ticketData?.contractor && (
+                  <div className="p-3 bg-purple-50 rounded-lg border border-purple-200">
+                    <h4 className="font-semibold text-sm mb-2 text-purple-900 flex items-center gap-2">
+                      <Shield className="h-4 w-4" />
+                      KPI Payment Tracking
+                    </h4>
+                    <div className="space-y-2 text-xs">
+                      {/* KPI 1 */}
+                      <div className={`p-2 rounded ${currentStep >= 7 ? 'bg-green-100' : 'bg-gray-100'}`}>
+                        <div className="font-medium text-gray-900">KPI 01: Client Contact (60 min)</div>
+                        {currentStep >= 7 && (
+                          <>
+                            <div className="text-green-700">✓ Contacted in 58 minutes</div>
+                            <div className="text-green-800 font-semibold">$550 released instantly</div>
+                          </>
+                        )}
+                        {currentStep < 7 && <div className="text-gray-500">Pending...</div>}
+                      </div>
+                      
+                      {/* KPI 2 */}
+                      <div className={`p-2 rounded ${currentStep >= 8 ? 'bg-green-100' : 'bg-gray-100'}`}>
+                        <div className="font-medium text-gray-900">KPI 02: Initial Onsite Report</div>
+                        {currentStep >= 8 && (
+                          <>
+                            <div className="text-green-700">✓ Report submitted in Clean Claims</div>
+                            <div className="text-green-800 font-semibold">$550 released instantly</div>
+                          </>
+                        )}
+                        {currentStep < 8 && <div className="text-gray-500">Pending...</div>}
+                      </div>
+                      
+                      {/* KPI 3 */}
+                      <div className={`p-2 rounded ${currentStep >= 9 ? 'bg-green-100' : 'bg-gray-100'}`}>
+                        <div className="font-medium text-gray-900">KPI 03: Initial Make Safe</div>
+                        {currentStep >= 9 && (
+                          <>
+                            <div className="text-green-700">✓ Make safe completed</div>
+                            <div className="text-green-800 font-semibold">$1,100 released (no fines)</div>
+                          </>
+                        )}
+                        {currentStep < 9 && <div className="text-gray-500">Pending...</div>}
+                      </div>
+                      
+                      {/* Payment Summary */}
+                      {currentStep >= 10 && (
+                        <div className="mt-2 p-2 bg-purple-100 rounded border-t-2 border-purple-300">
+                          <div className="font-semibold text-purple-900">Payment Summary</div>
+                          <div className="mt-1 space-y-1">
+                            <div className="flex justify-between">
+                              <span>Total Contract:</span>
+                              <span className="font-medium">$2,200</span>
+                            </div>
+                            <div className="flex justify-between text-red-600">
+                              <span>Fines Applied:</span>
+                              <span className="font-medium">-$0</span>
+                            </div>
+                            <div className="flex justify-between font-bold text-purple-900 pt-1 border-t">
+                              <span>Total Released:</span>
+                              <span>$2,200</span>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    <div className="mt-2 text-xs text-purple-700 italic">
+                      * Contractor-only information
                     </div>
                   </div>
                 )}
