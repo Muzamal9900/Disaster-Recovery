@@ -55,7 +55,7 @@ export default function PitchDeckPowerful() {
       id: 1,
       title: "The Night Everything Changed",
       subtitle: "Our WHY - The Birth of a Mission",
-      videoUrl: "https://youtube.com/embed/PLACEHOLDER_VIDEO_1",
+      videoUrl: "https://youtube.com/embed/5i5mKCmvv38",
       duration: 45,
       content: (
         <div className="space-y-8">
@@ -111,7 +111,7 @@ export default function PitchDeckPowerful() {
       id: 2,
       title: "The Broken System",
       subtitle: "Why We Couldn't Look Away",
-      videoUrl: "https://youtube.com/embed/PLACEHOLDER_VIDEO_2",
+      videoUrl: "https://youtube.com/embed/5i5mKCmvv38",
       duration: 40,
       content: (
         <div className="space-y-8">
@@ -180,7 +180,7 @@ export default function PitchDeckPowerful() {
       id: 3,
       title: "Our Demons & Failures",
       subtitle: "The Truth Nobody Tells Investors",
-      videoUrl: "https://youtube.com/embed/PLACEHOLDER_VIDEO_3",
+      videoUrl: "https://youtube.com/embed/5i5mKCmvv38",
       duration: 50,
       content: (
         <div className="space-y-8">
@@ -266,7 +266,7 @@ export default function PitchDeckPowerful() {
       id: 4,
       title: "The Turning Point",
       subtitle: "When Everything Clicked",
-      videoUrl: "https://youtube.com/embed/PLACEHOLDER_VIDEO_4",
+      videoUrl: "https://youtube.com/embed/5i5mKCmvv38",
       duration: 45,
       content: (
         <div className="space-y-8">
@@ -362,7 +362,7 @@ export default function PitchDeckPowerful() {
       id: 5,
       title: "The Delusional Dream",
       subtitle: "What Everyone Said Was Impossible",
-      videoUrl: "https://youtube.com/embed/PLACEHOLDER_VIDEO_5",
+      videoUrl: "https://youtube.com/embed/5i5mKCmvv38",
       duration: 40,
       content: (
         <div className="space-y-8">
@@ -463,7 +463,7 @@ export default function PitchDeckPowerful() {
       id: 6,
       title: "The Breakthrough",
       subtitle: "When Medicine Met the Market",
-      videoUrl: "https://youtube.com/embed/PLACEHOLDER_VIDEO_6",
+      videoUrl: "https://youtube.com/embed/5i5mKCmvv38",
       duration: 45,
       content: (
         <div className="space-y-8">
@@ -587,7 +587,7 @@ export default function PitchDeckPowerful() {
       id: 7,
       title: "The HOW",
       subtitle: "Our Unique Process That Changes Everything",
-      videoUrl: "https://youtube.com/embed/PLACEHOLDER_VIDEO_7",
+      videoUrl: "https://youtube.com/embed/5i5mKCmvv38",
       duration: 40,
       content: (
         <div className="space-y-8">
@@ -684,7 +684,7 @@ export default function PitchDeckPowerful() {
       id: 8,
       title: "The WHAT",
       subtitle: "Tangible Proof of Purpose",
-      videoUrl: "https://youtube.com/embed/PLACEHOLDER_VIDEO_8",
+      videoUrl: "https://youtube.com/embed/5i5mKCmvv38",
       duration: 35,
       content: (
         <div className="space-y-8">
@@ -799,7 +799,7 @@ export default function PitchDeckPowerful() {
       id: 9,
       title: "The Investment",
       subtitle: "Your Role in This Revolution",
-      videoUrl: "https://youtube.com/embed/PLACEHOLDER_VIDEO_9",
+      videoUrl: "https://youtube.com/embed/5i5mKCmvv38",
       duration: 40,
       content: (
         <div className="space-y-8">
@@ -918,7 +918,7 @@ export default function PitchDeckPowerful() {
       id: 10,
       title: "The Greater Purpose",
       subtitle: "This Win Isn't Just Ours - It's Everyone's",
-      videoUrl: "https://youtube.com/embed/PLACEHOLDER_VIDEO_10",
+      videoUrl: "https://youtube.com/embed/5i5mKCmvv38",
       duration: 50,
       content: (
         <div className="space-y-8">
