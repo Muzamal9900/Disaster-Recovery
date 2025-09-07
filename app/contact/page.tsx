@@ -197,9 +197,9 @@ export default function ModernContactPage() {
                     <div className={iconClassName}>
                       {info.icon}
                     </div>
-                    <h3 className="text-sm text-gray-400 mb-1">{info.title}</h3>
+                    <h3 className="text-sm text-gray-700 mb-1">{info.title}</h3>
                     <p className="text-xl font-bold mb-1">{info.value}</p>
-                    <p className="text-xs text-gray-500">{info.subtext}</p>
+                    <p className="text-xs text-gray-700">{info.subtext}</p>
                   </div>
                 </motion.div>
               );
@@ -226,7 +226,7 @@ export default function ModernContactPage() {
                         Emergency Contact Form
                       </span>
                     </h2>
-                    <p className="text-gray-400">Fill out the form below for immediate assistance</p>
+                    <p className="text-gray-700">Fill out the form below for immediate assistance</p>
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -386,7 +386,7 @@ export default function ModernContactPage() {
                     </motion.button>
 
                     {/* Trust Indicators */}
-                    <div className="flex items-center justify-center gap-6 text-xs text-gray-500">
+                    <div className="flex items-center justify-center gap-6 text-xs text-gray-700">
                       <div className="flex items-center gap-1">
                         <ShieldCheckIcon className="w-4 h-4" />
                         SSL Secured

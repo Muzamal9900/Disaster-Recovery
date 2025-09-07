@@ -173,7 +173,7 @@ export default function LeadCaptureForm() {
     <Card className="p-8 max-w-4xl mx-auto">
       <div className="mb-6 text-center">
         <h2 className="text-3xl font-bold mb-2">Get Immediate Restoration Help</h2>
-        <p className="text-gray-600">Complete this form for priority emergency response</p>
+        <p className="text-gray-800">Complete this form for priority emergency response</p>
         <div className="flex items-center justify-center gap-4 mt-4">
           <div className="flex items-center gap-2 text-sm">
             <Shield className="h-4 w-4 text-green-600" />
@@ -628,7 +628,7 @@ export default function LeadCaptureForm() {
               </>
             )}
           </Button>
-          <p className="text-sm text-gray-600 text-center">
+          <p className="text-sm text-gray-800 text-center">
             Use our 24/7 online chat support for immediate assistance
           </p>
         </div>
