@@ -146,7 +146,7 @@ export default function WorkflowDemonstration() {
     updateStepStatus(0, 'in-progress');
     
     try {
-      const response = await fetch('/api/claims/submit', {
+      const response = await fetch('/api/demo/workflow', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(demoCustomerData)
@@ -155,8 +155,9 @@ export default function WorkflowDemonstration() {
       const result = await response.json();
       
       if (result.success) {
-        setTicketId(result.claimId);
-        updateStepStatus(0, 'completed', { claimId: result.claimId, fee: '$2,750 paid' });
+        setTicketId(result.ticketId);
+        setTicketData(result.workflow);
+        updateStepStatus(0, 'completed', { claimId: result.ticketId, fee: '$2,750 paid' });
         updateStepStatus(1, 'completed', { paymentStatus: 'Success' });
         
         // Small delay before starting CRM step
@@ -164,8 +165,8 @@ export default function WorkflowDemonstration() {
           updateStepStatus(2, 'in-progress');
         }, 1000);
         
-        // Start monitoring the claim
-        monitorTicketProgress(result.claimId);
+        // Start monitoring the workflow
+        monitorTicketProgress(result.ticketId);
       }
     } catch (error) {
       console.error('Demo error:', error);
@@ -181,19 +182,19 @@ export default function WorkflowDemonstration() {
     
     const interval = setInterval(async () => {
       try {
-        const response = await fetch(`/api/tickets/create?id=${id}`);
+        const response = await fetch(`/api/demo/workflow?id=${id}`);
         const data = await response.json();
         
         if (data.success) {
-          console.log('Ticket status update:', data.ticket?.workflow);
-          setTicketData(data.ticket);
-          updateWorkflowFromTicket(data.ticket);
+          console.log('Workflow status update:', data.workflow);
+          setTicketData(data.workflow);
+          updateWorkflowFromDemo(data.workflow);
         }
         
         checkCount++;
-        if (checkCount >= maxChecks || data.ticket?.workflow?.fundsReleased) {
+        if (checkCount >= maxChecks || data.workflow?.status === 'COMPLETED') {
           clearInterval(interval);
-          console.log('Monitoring stopped. Final status:', data.ticket?.workflow);
+          console.log('Monitoring stopped. Final status:', data.workflow);
         }
       } catch (error) {
         console.error('Monitoring error:', error);
@@ -201,7 +202,49 @@ export default function WorkflowDemonstration() {
     }, 1500); // Check every 1.5 seconds for faster updates
   };
 
-  // Update workflow based on ticket status
+  // Update workflow based on demo workflow data
+  const updateWorkflowFromDemo = (workflow: any) => {
+    if (!workflow || !workflow.steps) return;
+    
+    // Update each step based on workflow data
+    workflow.steps.forEach((step: any, index: number) => {
+      if (step.completed && workflowSteps[index]?.status !== 'completed') {
+        updateStepStatus(index, 'completed', { 
+          timestamp: new Date(step.timestamp).toLocaleTimeString(),
+          ...getStepDetails(workflow, index)
+        });
+        
+        // Set next step as in-progress if not last step
+        if (index < workflowSteps.length - 1 && !workflow.steps[index + 1]?.completed) {
+          updateStepStatus(index + 1, 'in-progress');
+        }
+      }
+    });
+  };
+  
+  // Get additional details for specific steps
+  const getStepDetails = (workflow: any, stepIndex: number) => {
+    switch(stepIndex) {
+      case 3: // Contractor matching
+        return workflow.contractor ? {
+          contractorId: workflow.contractor.id,
+          contractorName: workflow.contractor.name
+        } : {};
+      case 5: // Contractor accepts
+        return { acceptedAt: workflow.contractor?.acceptedAt };
+      case 6: // Client contact
+        return { contactedAt: workflow.contractor?.contactedAt };
+      case 9: // Funds release
+        return { 
+          contractorAmount: workflow.payment?.contractorAmount,
+          releasedAt: workflow.payment?.releasedAt
+        };
+      default:
+        return {};
+    }
+  };
+
+  // Keep old function for compatibility but redirect to new one
   const updateWorkflowFromTicket = (ticket: any) => {
     // Step 2: CRM Connection
     if (ticket.workflow.crmConnected && workflowSteps[2].status !== 'completed') {
@@ -462,17 +505,17 @@ export default function WorkflowDemonstration() {
                 )}
 
                 {/* Contractor Assignment */}
-                {currentStep >= 4 && ticketData?.contractorId && (
+                {currentStep >= 4 && ticketData?.contractor && (
                   <div className="p-3 bg-orange-50 rounded-lg">
                     <h4 className="font-semibold text-sm mb-2 text-orange-900">Contractor Assigned</h4>
                     <div className="space-y-1 text-xs">
                       <div className="flex justify-between">
                         <span className="text-gray-600">Company:</span>
-                        <span className="font-medium">{ticketData.contractorName}</span>
+                        <span className="font-medium">{ticketData.contractor.name}</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">ID:</span>
-                        <span className="font-medium">{ticketData.contractorId}</span>
+                        <span className="font-medium">{ticketData.contractor.id}</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Status:</span>
