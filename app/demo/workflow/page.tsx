@@ -175,132 +175,90 @@ export default function WorkflowDemonstration() {
     }
   };
 
-  // Monitor ticket progress
+  // Simulate workflow progression client-side (since serverless doesn't persist state)
   const monitorTicketProgress = async (id: string) => {
-    let checkCount = 0;
-    const maxChecks = 50; // Increased to allow full workflow completion
+    // Simulate workflow progression with realistic timing
+    const workflowSteps = [
+      { delay: 2000, stepIndex: 2, completed: true }, // CRM Connection
+      { delay: 4000, stepIndex: 3, completed: true, contractor: true }, // Contractor Matching
+      { delay: 6000, stepIndex: 4, completed: true }, // Contractor Notification
+      { delay: 9000, stepIndex: 5, completed: true }, // Contractor Accepts
+      { delay: 11000, stepIndex: 6, completed: true }, // Client Contact
+      { delay: 14000, stepIndex: 7, completed: true, serviceStarted: true }, // Service Delivery
+      { delay: 17000, stepIndex: 8, completed: true, serviceCompleted: true }, // Service Completion
+      { delay: 19000, stepIndex: 9, completed: true, fundsReleased: true }, // Funds Release
+    ];
     
-    const interval = setInterval(async () => {
-      try {
-        const response = await fetch(`/api/demo/workflow?id=${id}`);
-        const data = await response.json();
-        
-        if (data.success) {
-          console.log('Workflow status update:', data.workflow);
-          setTicketData(data.workflow);
-          updateWorkflowFromDemo(data.workflow);
+    workflowSteps.forEach(({ delay, stepIndex, completed, contractor, serviceStarted, serviceCompleted, fundsReleased }) => {
+      setTimeout(() => {
+        if (completed) {
+          updateStepStatus(stepIndex, 'completed', {
+            timestamp: new Date().toLocaleTimeString(),
+            ...(contractor && {
+              contractorName: 'Premium Restoration Services',
+              contractorId: `CTR-${Math.random().toString(36).substr(2, 9).toUpperCase()}`
+            }),
+            ...(serviceStarted && {
+              inspection: 'Started',
+              makeSafe: 'In Progress'
+            }),
+            ...(serviceCompleted && {
+              inspection: 'Complete',
+              makeSafe: 'Complete',
+              documentation: 'Complete'
+            }),
+            ...(fundsReleased && {
+              amount: '$2,475',
+              status: 'Released'
+            })
+          });
+          
+          // Update next step as in-progress if not the last step
+          if (stepIndex < 9) {
+            updateStepStatus(stepIndex + 1, 'in-progress');
+          }
+          
+          // Update ticket data for visual forms
+          setTicketData(prev => ({
+            ...prev,
+            currentStep: stepIndex,
+            ...(contractor && {
+              contractor: {
+                id: `CTR-${Math.random().toString(36).substr(2, 9).toUpperCase()}`,
+                name: 'Premium Restoration Services',
+                phone: '1300 RESTORE'
+              }
+            }),
+            ...(serviceStarted && {
+              serviceDetails: {
+                inspectionCompleted: false,
+                makeSafeCompleted: false,
+                documentationStarted: true
+              }
+            }),
+            ...(serviceCompleted && {
+              serviceDetails: {
+                inspectionCompleted: true,
+                makeSafeCompleted: true,
+                documentationCompleted: true,
+                finalReportSubmitted: true
+              }
+            }),
+            ...(fundsReleased && {
+              status: 'COMPLETED',
+              payment: {
+                ...prev?.payment,
+                releasedAt: new Date().toISOString(),
+                contractorAmount: 2475
+              }
+            })
+          }));
         }
-        
-        checkCount++;
-        if (checkCount >= maxChecks || data.workflow?.status === 'COMPLETED') {
-          clearInterval(interval);
-          console.log('Monitoring stopped. Final status:', data.workflow);
-        }
-      } catch (error) {
-        console.error('Monitoring error:', error);
-      }
-    }, 1500); // Check every 1.5 seconds for faster updates
-  };
-
-  // Update workflow based on demo workflow data
-  const updateWorkflowFromDemo = (workflow: any) => {
-    if (!workflow || !workflow.steps) return;
-    
-    // Update each step based on workflow data
-    workflow.steps.forEach((step: any, index: number) => {
-      if (step.completed && workflowSteps[index]?.status !== 'completed') {
-        updateStepStatus(index, 'completed', { 
-          timestamp: new Date(step.timestamp).toLocaleTimeString(),
-          ...getStepDetails(workflow, index)
-        });
-        
-        // Set next step as in-progress if not last step
-        if (index < workflowSteps.length - 1 && !workflow.steps[index + 1]?.completed) {
-          updateStepStatus(index + 1, 'in-progress');
-        }
-      }
+      }, delay);
     });
   };
-  
-  // Get additional details for specific steps
-  const getStepDetails = (workflow: any, stepIndex: number) => {
-    switch(stepIndex) {
-      case 3: // Contractor matching
-        return workflow.contractor ? {
-          contractorId: workflow.contractor.id,
-          contractorName: workflow.contractor.name
-        } : {};
-      case 5: // Contractor accepts
-        return { acceptedAt: workflow.contractor?.acceptedAt };
-      case 6: // Client contact
-        return { contactedAt: workflow.contractor?.contactedAt };
-      case 9: // Funds release
-        return { 
-          contractorAmount: workflow.payment?.contractorAmount,
-          releasedAt: workflow.payment?.releasedAt
-        };
-      default:
-        return {};
-    }
-  };
 
-  // Keep old function for compatibility but redirect to new one
-  const updateWorkflowFromTicket = (ticket: any) => {
-    // Step 2: CRM Connection
-    if (ticket.workflow.crmConnected && workflowSteps[2].status !== 'completed') {
-      updateStepStatus(2, 'completed', { connectedAt: new Date().toISOString() });
-      updateStepStatus(3, 'in-progress');
-    }
-    
-    // Step 3: Contractor Matching
-    if (ticket.workflow.contractorAssigned && workflowSteps[3].status !== 'completed') {
-      updateStepStatus(3, 'completed', { 
-        contractorId: ticket.contractorId,
-        contractorName: ticket.contractorName 
-      });
-      updateStepStatus(4, 'in-progress');
-    }
-    
-    // Step 4: Contractor Notified
-    if (ticket.workflow.contractorNotified && workflowSteps[4].status !== 'completed') {
-      updateStepStatus(4, 'completed', { notifiedAt: ticket.contractorNotifiedAt });
-      updateStepStatus(5, 'in-progress');
-    }
-    
-    // Step 5: Job Acceptance
-    if (ticket.workflow.jobAccepted && workflowSteps[5].status !== 'completed') {
-      updateStepStatus(5, 'completed', { acceptedAt: ticket.jobAcceptedAt });
-      updateStepStatus(6, 'in-progress');
-    }
-    
-    if (ticket.workflow.contractorContacted && workflowSteps[6].status !== 'completed') {
-      updateStepStatus(6, 'completed', { contactedAt: ticket.contactedAt });
-      updateStepStatus(7, 'in-progress');
-    }
-    
-    if (ticket.workflow.serviceStarted && workflowSteps[7].status !== 'completed') {
-      updateStepStatus(7, 'completed', { 
-        startedAt: ticket.serviceStartedAt,
-        serviceDetails: ticket.serviceDetails
-      });
-      updateStepStatus(8, 'in-progress');
-    }
-    
-    if (ticket.workflow.serviceCompleted && workflowSteps[8].status !== 'completed') {
-      updateStepStatus(8, 'completed', { 
-        completedAt: ticket.serviceCompletedAt,
-        finalReport: ticket.serviceDetails?.finalReportSubmitted
-      });
-      updateStepStatus(9, 'in-progress');
-    }
-    
-    if (ticket.workflow.fundsReleased && workflowSteps[9].status !== 'completed') {
-      updateStepStatus(9, 'completed', { 
-        releasedAt: ticket.fundsReleasedAt,
-        contractorAmount: ticket.payment?.contractorAmount
-      });
-    }
-  };
+
 
   // Update step status
   const updateStepStatus = (stepIndex: number, status: WorkflowStep['status'], details?: any) => {
