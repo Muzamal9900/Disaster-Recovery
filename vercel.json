@@ -48,5 +48,26 @@
   "regions": ["syd1"],
   "github": {
     "silent": true
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/pitch-deck/presentation",
+      "destination": "/pitch/investor"
+    },
+    {
+      "source": "/pitch-deck",
+      "destination": "/pitch"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    }
+  ]
 }
