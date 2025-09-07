@@ -76,9 +76,8 @@ export async function POST(request: NextRequest) {
       workflow: {
         crmConnected: false,
         contractorAssigned: false,
+        contractorNotified: false,
         jobAccepted: false,
-        claimsSubmitted: false,
-        kpisTracked: false,
         contractorContacted: false,
         serviceStarted: false,
         serviceCompleted: false,
@@ -192,79 +191,71 @@ function calculateLeadValue(data: any): number {
 // CRM Integration (Mock)
 async function connectToCRM(ticketId: string) {
   const ticket = tickets.get(ticketId);
-  if (!ticket) return;
+  if (!ticket) {
+    console.error('Ticket not found for CRM connection:', ticketId);
+    return;
+  }
   
   // Update workflow status
   ticket.workflow.crmConnected = true;
+  ticket.crmConnectedAt = new Date().toISOString();
   tickets.set(ticketId, ticket);
+  console.log('CRM connected for ticket:', ticketId);
   
-  // Trigger contractor matching after 3 seconds
-  setTimeout(() => findContractor(ticketId), 3000);
+  // Trigger contractor matching after 2 seconds
+  setTimeout(() => findContractor(ticketId), 2000);
 }
 
 // Contractor Matching (Mock)
 async function findContractor(ticketId: string) {
   const ticket = tickets.get(ticketId);
-  if (!ticket) return;
+  if (!ticket) {
+    console.error('Ticket not found for contractor matching:', ticketId);
+    return;
+  }
   
   // Mock contractor assignment
   ticket.contractorId = `CTR-${Math.random().toString(36).substr(2, 9).toUpperCase()}`;
   ticket.contractorName = 'Premium Restoration Services';
   ticket.contractorPhone = '1300 RESTORE';
   ticket.workflow.contractorAssigned = true;
+  ticket.contractorAssignedAt = new Date().toISOString();
   
   tickets.set(ticketId, ticket);
+  console.log('Contractor assigned for ticket:', ticketId);
   
-  // Simulate contractor accepting job after 5 seconds
-  setTimeout(() => acceptJob(ticketId), 5000);
+  // Simulate contractor notification after 2 seconds
+  setTimeout(() => notifyContractor(ticketId), 2000);
+}
+
+// Contractor Notification (Mock)
+async function notifyContractor(ticketId: string) {
+  const ticket = tickets.get(ticketId);
+  if (!ticket) return;
+  
+  ticket.workflow.contractorNotified = true;
+  ticket.contractorNotifiedAt = new Date().toISOString();
+  tickets.set(ticketId, ticket);
+  console.log('Contractor notified for ticket:', ticketId);
+  
+  // Simulate contractor accepting job after 3 seconds
+  setTimeout(() => acceptJob(ticketId), 3000);
 }
 
 // Job Acceptance (Mock)
 async function acceptJob(ticketId: string) {
   const ticket = tickets.get(ticketId);
-  if (!ticket) return;
+  if (!ticket) {
+    console.error('Ticket not found for job acceptance:', ticketId);
+    return;
+  }
   
   ticket.workflow.jobAccepted = true;
   ticket.jobAcceptedAt = new Date().toISOString();
   tickets.set(ticketId, ticket);
+  console.log('Job accepted for ticket:', ticketId);
   
-  // Start clean claims process
-  setTimeout(() => submitCleanClaim(ticketId), 2000);
-}
-
-// Clean Claims Submission (Mock)
-async function submitCleanClaim(ticketId: string) {
-  const ticket = tickets.get(ticketId);
-  if (!ticket) return;
-  
-  if (ticket.insurance.hasInsurance) {
-    ticket.claimId = `CLAIM-${Date.now()}`;
-    ticket.workflow.claimsSubmitted = true;
-    ticket.claimStatus = 'SUBMITTED';
-    tickets.set(ticketId, ticket);
-    
-    // Track KPIs
-    setTimeout(() => trackKPIs(ticketId), 1000);
-  }
-}
-
-// KPI Tracking (Mock)
-async function trackKPIs(ticketId: string) {
-  const ticket = tickets.get(ticketId);
-  if (!ticket) return;
-  
-  ticket.workflow.kpisTracked = true;
-  ticket.kpis = {
-    responseTime: '28 minutes',
-    assignmentTime: '5 minutes',
-    acceptanceTime: '3 minutes',
-    claimSubmissionTime: '10 minutes',
-    customerSatisfaction: null, // To be collected
-  };
-  
-  tickets.set(ticketId, ticket);
-  
-  // Continue with contractor contact
+  // Contractor contacts client after 2 seconds
   setTimeout(() => contractorContactsClient(ticketId), 2000);
 }
 

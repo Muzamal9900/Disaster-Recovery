@@ -158,7 +158,11 @@ export default function WorkflowDemonstration() {
         setTicketId(result.claimId);
         updateStepStatus(0, 'completed', { claimId: result.claimId, fee: '$2,750 paid' });
         updateStepStatus(1, 'completed', { paymentStatus: 'Success' });
-        updateStepStatus(2, 'in-progress');
+        
+        // Small delay before starting CRM step
+        setTimeout(() => {
+          updateStepStatus(2, 'in-progress');
+        }, 1000);
         
         // Start monitoring the claim
         monitorTicketProgress(result.claimId);
@@ -173,7 +177,7 @@ export default function WorkflowDemonstration() {
   // Monitor ticket progress
   const monitorTicketProgress = async (id: string) => {
     let checkCount = 0;
-    const maxChecks = 20;
+    const maxChecks = 50; // Increased to allow full workflow completion
     
     const interval = setInterval(async () => {
       try {
@@ -181,6 +185,7 @@ export default function WorkflowDemonstration() {
         const data = await response.json();
         
         if (data.success) {
+          console.log('Ticket status update:', data.ticket?.workflow);
           setTicketData(data.ticket);
           updateWorkflowFromTicket(data.ticket);
         }
@@ -188,11 +193,12 @@ export default function WorkflowDemonstration() {
         checkCount++;
         if (checkCount >= maxChecks || data.ticket?.workflow?.fundsReleased) {
           clearInterval(interval);
+          console.log('Monitoring stopped. Final status:', data.ticket?.workflow);
         }
       } catch (error) {
         console.error('Monitoring error:', error);
       }
-    }, 2000); // Check every 2 seconds
+    }, 1500); // Check every 1.5 seconds for faster updates
   };
 
   // Update workflow based on ticket status
@@ -212,9 +218,14 @@ export default function WorkflowDemonstration() {
       updateStepStatus(4, 'in-progress');
     }
     
+    // Step 4: Contractor Notified
+    if (ticket.workflow.contractorNotified && workflowSteps[4].status !== 'completed') {
+      updateStepStatus(4, 'completed', { notifiedAt: ticket.contractorNotifiedAt });
+      updateStepStatus(5, 'in-progress');
+    }
+    
     // Step 5: Job Acceptance
     if (ticket.workflow.jobAccepted && workflowSteps[5].status !== 'completed') {
-      updateStepStatus(4, 'completed');
       updateStepStatus(5, 'completed', { acceptedAt: ticket.jobAcceptedAt });
       updateStepStatus(6, 'in-progress');
     }
