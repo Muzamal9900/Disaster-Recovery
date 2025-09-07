@@ -511,11 +511,11 @@ export default function WorkflowDemonstration() {
                     <div className="space-y-1 text-xs">
                       <div className="flex justify-between">
                         <span className="text-gray-600">Company:</span>
-                        <span className="font-medium">{ticketData.contractor.name}</span>
+                        <span className="font-medium">{ticketData.contractor?.name}</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">ID:</span>
-                        <span className="font-medium">{ticketData.contractor.id}</span>
+                        <span className="font-medium">{ticketData.contractor?.id}</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Status:</span>
@@ -604,9 +604,9 @@ export default function WorkflowDemonstration() {
                       Customer Information
                     </h4>
                     <div className="space-y-1 text-sm">
-                      <div>Name: {ticketData.customer.fullName}</div>
-                      <div>Phone: {ticketData.customer.phone}</div>
-                      <div>Email: {ticketData.customer.email}</div>
+                      <div>Name: {ticketData.customer?.fullName}</div>
+                      <div>Phone: {ticketData.customer?.phone}</div>
+                      <div>Email: {ticketData.customer?.email}</div>
                     </div>
                   </div>
                   
@@ -616,10 +616,10 @@ export default function WorkflowDemonstration() {
                       Property Details
                     </h4>
                     <div className="space-y-1 text-sm">
-                      <div>Address: {ticketData.property.address}</div>
-                      <div>Suburb: {ticketData.property.suburb}, {ticketData.property.state}</div>
-                      <div>Type: {ticketData.property.type}</div>
-                      <div>Value: ${parseInt(ticketData.property.value).toLocaleString()}</div>
+                      <div>Address: {ticketData.property?.address}</div>
+                      <div>Suburb: {ticketData.property?.suburb}, {ticketData.property?.state}</div>
+                      <div>Type: {ticketData.property?.type}</div>
+                      <div>Value: ${parseInt(ticketData.property?.value || '0').toLocaleString()}</div>
                     </div>
                   </div>
                   
@@ -629,9 +629,9 @@ export default function WorkflowDemonstration() {
                       Damage Information
                     </h4>
                     <div className="space-y-1 text-sm">
-                      <div>Types: {ticketData.damage.types.join(', ')}</div>
-                      <div>Urgency: <Badge variant="destructive">{ticketData.damage.urgencyLevel}</Badge></div>
-                      <div>Area: {ticketData.damage.areaAffected}</div>
+                      <div>Types: {ticketData.damage?.types?.join(', ')}</div>
+                      <div>Urgency: <Badge variant="destructive">{ticketData.damage?.urgencyLevel}</Badge></div>
+                      <div>Area: {ticketData.damage?.areaAffected}</div>
                     </div>
                   </div>
                 </TabsContent>
@@ -652,7 +652,7 @@ export default function WorkflowDemonstration() {
                         </div>
                       </div>
                       
-                      {ticketData.workflow.jobAccepted && (
+                      {ticketData.workflow?.jobAccepted && (
                         <div>
                           <h4 className="font-medium mb-2">Job Status</h4>
                           <div className="space-y-1 text-sm">
@@ -671,7 +671,7 @@ export default function WorkflowDemonstration() {
                           <div className="space-y-1 text-sm">
                             <div>Claim ID: {ticketData.claimId}</div>
                             <div>Status: {ticketData.claimStatus}</div>
-                            <div>Insurer: {ticketData.insurance.company}</div>
+                            <div>Insurer: {ticketData.insurance?.company}</div>
                           </div>
                         </div>
                       )}
@@ -697,20 +697,20 @@ export default function WorkflowDemonstration() {
                         <div className="space-y-2">
                           <div className="flex justify-between items-center">
                             <span className="text-sm">Inspection:</span>
-                            <Badge variant={ticketData.serviceDetails.inspectionCompleted ? "success" : "secondary"}>
-                              {ticketData.serviceDetails.inspectionCompleted ? "Complete" : "Pending"}
+                            <Badge variant={ticketData.serviceDetails?.inspectionCompleted ? "success" : "secondary"}>
+                              {ticketData.serviceDetails?.inspectionCompleted ? "Complete" : "Pending"}
                             </Badge>
                           </div>
                           <div className="flex justify-between items-center">
                             <span className="text-sm">Make-Safe:</span>
-                            <Badge variant={ticketData.serviceDetails.makeSafeCompleted ? "success" : "secondary"}>
-                              {ticketData.serviceDetails.makeSafeCompleted ? "Complete" : "Pending"}
+                            <Badge variant={ticketData.serviceDetails?.makeSafeCompleted ? "success" : "secondary"}>
+                              {ticketData.serviceDetails?.makeSafeCompleted ? "Complete" : "Pending"}
                             </Badge>
                           </div>
                           <div className="flex justify-between items-center">
                             <span className="text-sm">Documentation:</span>
-                            <Badge variant={ticketData.serviceDetails.documentationCompleted ? "success" : "secondary"}>
-                              {ticketData.serviceDetails.documentationCompleted ? "Complete" : "In Progress"}
+                            <Badge variant={ticketData.serviceDetails?.documentationCompleted ? "success" : "secondary"}>
+                              {ticketData.serviceDetails?.documentationCompleted ? "Complete" : "In Progress"}
                             </Badge>
                           </div>
                           {ticketData.insurance.hasInsurance && (
