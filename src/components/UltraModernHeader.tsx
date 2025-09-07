@@ -263,50 +263,50 @@ const navItems: NavItem[] = [
     ]
   },
   { 
-    label: 'Pitch Deck', 
-    href: '/pitch-deck',
+    label: 'Pitch Decks', 
+    href: '/pitch',
     dropdown: [
       { 
-        label: 'Interactive Presentation', 
-        href: '/pitch-deck/presentation',
-        description: 'AI-narrated pitch presentation', 
-        icon: '🎬' 
+        label: 'Investor Pitch', 
+        href: '/pitch/investor',
+        description: 'For VCs & angel investors', 
+        icon: '📈' 
       },
       { 
-        label: 'Form Demonstration', 
+        label: 'Client Pitch', 
+        href: '/pitch/client',
+        description: 'For homeowners & businesses', 
+        icon: '🏠' 
+      },
+      { 
+        label: 'Contractor Pitch', 
+        href: '/pitch/contractor',
+        description: 'Join our network',
+        icon: '🔨'
+      },
+      { 
+        label: 'Form Demo', 
         href: '/demo/forms',
-        description: 'Live form filling demo', 
-        icon: '📋' 
+        description: 'Live form filling demo',
+        icon: '📋'
       },
       { 
-        label: 'Investor Overview', 
-        href: '/pitch-deck/investor',
-        description: 'Full investor pitch deck',
-        icon: '📈'
+        label: 'Workflow Demo', 
+        href: '/demo/workflow',
+        description: '11-step workflow demo',
+        icon: '⚡'
       },
       { 
-        label: 'Business Model', 
-        href: '/pitch-deck/business-model',
-        description: 'Platform economics and strategy',
-        icon: '💡'
+        label: 'Government Funding', 
+        href: '/government-funding',
+        description: 'Grants and support programs',
+        icon: '🏛️'
       },
       { 
-        label: 'Market Analysis', 
-        href: '/pitch-deck/market',
-        description: '$1B market opportunity',
-        icon: '🌏'
-      },
-      { 
-        label: 'Technology', 
-        href: '/pitch-deck/technology',
-        description: 'HRM AI and platform architecture',
-        icon: '🤖'
-      },
-      { 
-        label: 'Financials', 
-        href: '/pitch-deck/financials',
-        description: 'Projections and unit economics',
-        icon: '💵'
+        label: 'Why First', 
+        href: '/why-first',
+        description: 'Our mission and vision',
+        icon: '❤️'
       }
     ]
   },
