@@ -131,7 +131,7 @@ export default function PitchDeckPresentation() {
           <div className="space-y-6">
             {[
               "AI provides instant, accurate damage assessments in under 100ms",
-              "Automated insurance approval with 95% success rate",
+              "Complete documentation and progress tracking for insurance claims",
               "Intelligent job matching connecting contractors instantly", 
               "Complete ecosystem with network effects and data moat"
             ].map((point, index) => (

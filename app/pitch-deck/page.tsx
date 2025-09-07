@@ -194,7 +194,7 @@ export default function PitchDeckPage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-600 mt-1">✓</span>
-                <span>Automated insurance approval with 95% success rate</span>
+                <span>Comprehensive documentation for insurance claims support</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-600 mt-1">✓</span>
