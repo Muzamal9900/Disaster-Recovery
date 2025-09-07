@@ -205,7 +205,7 @@ export default function PitchDeckPresentation() {
                 <Brain className="h-10 w-10 text-blue-400" />
                 <h3 className="text-2xl font-bold text-white">Layer 1: HRM AI Brain</h3>
               </div>
-              <p className="text-gray-300">27M parameter neural network providing instant claim assessment, contractor matching, and predictive analytics</p>
+              <p className="text-gray-300">AI-powered system for claim assessment, contractor matching, and analytics</p>
             </motion.div>
             
             <motion.div 
@@ -218,7 +218,7 @@ export default function PitchDeckPresentation() {
                 <Zap className="h-10 w-10 text-green-400" />
                 <h3 className="text-2xl font-bold text-white">Layer 2: Instant Orchestration</h3>
               </div>
-              <p className="text-gray-300">Automated workflow engine managing claim-to-completion in under 60 seconds initial response</p>
+              <p className="text-gray-300">Automated workflow engine targeting rapid initial response times</p>
             </motion.div>
             
             <motion.div 
@@ -231,7 +231,7 @@ export default function PitchDeckPresentation() {
                 <Shield className="h-10 w-10 text-purple-400" />
                 <h3 className="text-2xl font-bold text-white">Layer 3: KPI-Driven Payments</h3>
               </div>
-              <p className="text-gray-300">Smart contract-style instant payments based on performance milestones</p>
+              <p className="text-gray-300">KPI-driven payment releases based on performance milestones</p>
             </motion.div>
           </div>
         </div>
@@ -326,8 +326,8 @@ export default function PitchDeckPresentation() {
       content: (
         <div className="space-y-8">
           <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold text-white mb-2">Exponential Growth Trajectory</h2>
-            <p className="text-xl text-gray-300">From 0 to $10M ARR in 12 months</p>
+            <h2 className="text-4xl font-bold text-white mb-2">Growth Trajectory</h2>
+            <p className="text-xl text-gray-300">Building towards sustainable growth</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
@@ -339,7 +339,7 @@ export default function PitchDeckPresentation() {
             >
               <DollarSign className="h-8 w-8 text-green-400 mx-auto mb-2" />
               <div className="text-3xl font-bold text-white">$500K</div>
-              <div className="text-sm text-gray-400">MRR Achieved</div>
+              <div className="text-sm text-gray-400">MRR Target</div>
             </motion.div>
             
             <motion.div 
@@ -350,7 +350,7 @@ export default function PitchDeckPresentation() {
             >
               <Users className="h-8 w-8 text-blue-400 mx-auto mb-2" />
               <div className="text-3xl font-bold text-white">150+</div>
-              <div className="text-sm text-gray-400">Active Contractors</div>
+              <div className="text-sm text-gray-400">Target Contractors</div>
             </motion.div>
             
             <motion.div 
@@ -360,8 +360,8 @@ export default function PitchDeckPresentation() {
               className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center"
             >
               <TrendingUp className="h-8 w-8 text-purple-400 mx-auto mb-2" />
-              <div className="text-3xl font-bold text-white">45%</div>
-              <div className="text-sm text-gray-400">Month-on-Month</div>
+              <div className="text-3xl font-bold text-white">25%+</div>
+              <div className="text-sm text-gray-400">Growth Target</div>
             </motion.div>
             
             <motion.div 
@@ -544,7 +544,7 @@ export default function PitchDeckPresentation() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-300">Expected Exit</span>
-                    <span className="text-xl font-bold text-purple-400">10x in 3 years</span>
+                    <span className="text-xl font-bold text-purple-400">5-10x target</span>
                   </div>
                 </div>
               </div>
@@ -568,9 +568,95 @@ export default function PitchDeckPresentation() {
     },
     {
       id: 8,
+      title: "Government Funding Opportunities",
+      subtitle: "Strategic Public Sector Alignment",
+      videoUrl: "https://youtube.com/embed/PLACEHOLDER_VIDEO_8",
+      duration: 35,
+      content: (
+        <div className="space-y-8">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold text-white mb-2">Government Support & Grants</h2>
+            <p className="text-xl text-gray-300">Exploring strategic funding partnerships</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-white">Available Programs</h3>
+              
+              <div className="space-y-4">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  <h4 className="text-white font-semibold mb-2">Disaster Recovery Grants</h4>
+                  <p className="text-gray-400 text-sm">Federal and state programs for disaster resilience</p>
+                  <p className="text-green-400 text-sm mt-2">Potential: $1-5M</p>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  <h4 className="text-white font-semibold mb-2">Innovation & Technology Grants</h4>
+                  <p className="text-gray-400 text-sm">R&D tax incentives and AI development support</p>
+                  <p className="text-green-400 text-sm mt-2">Potential: $500K-2M</p>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  <h4 className="text-white font-semibold mb-2">Regional Development</h4>
+                  <p className="text-gray-400 text-sm">Support for services in underserved areas</p>
+                  <p className="text-green-400 text-sm mt-2">Potential: $250K-1M</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-white">Strategic Alignment</h3>
+              
+              <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl p-6">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-400 mt-1" />
+                    <div>
+                      <p className="text-white font-semibold">National Resilience</p>
+                      <p className="text-gray-400 text-sm">Supporting government disaster response objectives</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-400 mt-1" />
+                    <div>
+                      <p className="text-white font-semibold">Job Creation</p>
+                      <p className="text-gray-400 text-sm">Empowering contractor network nationwide</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-400 mt-1" />
+                    <div>
+                      <p className="text-white font-semibold">Community Support</p>
+                      <p className="text-gray-400 text-sm">Faster recovery for affected communities</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-400 mt-1" />
+                    <div>
+                      <p className="text-white font-semibold">Data & Insights</p>
+                      <p className="text-gray-400 text-sm">Valuable disaster recovery data for policy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-orange-500/20 rounded-xl p-4 border border-orange-500/30">
+                <h4 className="text-white font-semibold mb-2">Active Exploration</h4>
+                <p className="text-gray-300 text-sm">Currently engaging with government agencies to identify partnership opportunities and grant programs aligned with our mission.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    {
+      id: 9,
       title: "The Team",
       subtitle: "Industry Veterans & AI Experts",
-      videoUrl: "https://youtube.com/embed/PLACEHOLDER_VIDEO_8",
+      videoUrl: "https://youtube.com/embed/PLACEHOLDER_VIDEO_9",
       duration: 30,
       content: (
         <div className="space-y-8">
@@ -657,10 +743,10 @@ export default function PitchDeckPresentation() {
       )
     },
     {
-      id: 9,
+      id: 10,
       title: "Next Steps",
       subtitle: "Join Us in Transforming an Industry",
-      videoUrl: "https://youtube.com/embed/PLACEHOLDER_VIDEO_9",
+      videoUrl: "https://youtube.com/embed/PLACEHOLDER_VIDEO_10",
       duration: 25,
       content: (
         <div className="space-y-8">
