@@ -805,9 +805,9 @@ export default function WorkflowDemonstration() {
                       Financial Metrics
                     </h4>
                     <div className="space-y-1 text-sm">
-                      <div>Lead Score: {ticketData.metrics.leadScore}/100</div>
-                      <div>Lead Value: ${ticketData.metrics.leadValue}</div>
-                      <div>Budget: ${parseInt(ticketData.metrics.budget || '0').toLocaleString()}</div>
+                      <div>Lead Score: {ticketData.metrics?.leadScore || 0}/100</div>
+                      <div>Lead Value: ${ticketData.metrics?.leadValue || 0}</div>
+                      <div>Budget: ${parseInt(ticketData.metrics?.budget || '0').toLocaleString()}</div>
                     </div>
                   </div>
                 </TabsContent>
