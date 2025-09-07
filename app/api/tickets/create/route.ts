@@ -325,8 +325,9 @@ async function releaseFunds(ticketId: string) {
   ticket.status = 'FUNDS_RELEASED';
   ticket.payment = {
     contractorPaid: true,
-    platformFeeDeducted: 2750,
-    contractorAmount: ticket.metrics.leadValue - 275, // 10% platform fee
+    totalAmount: 2750,
+    platformFee: 550, // $550 for marketing and advertising
+    contractorAmount: 2200, // $2,200 to contractor
     paymentDate: new Date().toISOString(),
     paymentMethod: 'Direct Deposit'
   };

@@ -60,6 +60,12 @@ export default function WorkflowDemonstration() {
       status: 'pending'
     },
     {
+      id: 'clean-claims',
+      title: 'Clean Claims Connection',
+      description: 'Documentation synced to Clean Claims for reporting and compliance',
+      status: 'pending'
+    },
+    {
       id: 'contractor-matching',
       title: 'Find Local NRP Contractor',
       description: 'System matches claim to certified contractor based on location and services',
@@ -98,7 +104,7 @@ export default function WorkflowDemonstration() {
     {
       id: 'funds-release',
       title: 'Payment Released',
-      description: 'Platform releases payment to contractor after successful completion',
+      description: '$2,200 released to contractor ($550 retained for marketing)',
       status: 'pending'
     }
   ]);
@@ -180,20 +186,25 @@ export default function WorkflowDemonstration() {
     // Simulate workflow progression with realistic timing
     const workflowSteps = [
       { delay: 2000, stepIndex: 2, completed: true }, // CRM Connection
-      { delay: 4000, stepIndex: 3, completed: true, contractor: true }, // Contractor Matching
-      { delay: 6000, stepIndex: 4, completed: true }, // Contractor Notification
-      { delay: 9000, stepIndex: 5, completed: true }, // Contractor Accepts
-      { delay: 11000, stepIndex: 6, completed: true }, // Client Contact
-      { delay: 14000, stepIndex: 7, completed: true, serviceStarted: true }, // Service Delivery
-      { delay: 17000, stepIndex: 8, completed: true, serviceCompleted: true }, // Service Completion
-      { delay: 19000, stepIndex: 9, completed: true, fundsReleased: true }, // Funds Release
+      { delay: 3000, stepIndex: 3, completed: true, cleanClaims: true }, // Clean Claims
+      { delay: 5000, stepIndex: 4, completed: true, contractor: true }, // Contractor Matching
+      { delay: 7000, stepIndex: 5, completed: true }, // Contractor Notification
+      { delay: 10000, stepIndex: 6, completed: true }, // Contractor Accepts
+      { delay: 12000, stepIndex: 7, completed: true }, // Client Contact
+      { delay: 15000, stepIndex: 8, completed: true, serviceStarted: true }, // Service Delivery
+      { delay: 18000, stepIndex: 9, completed: true, serviceCompleted: true }, // Service Completion
+      { delay: 20000, stepIndex: 10, completed: true, fundsReleased: true }, // Funds Release
     ];
     
-    workflowSteps.forEach(({ delay, stepIndex, completed, contractor, serviceStarted, serviceCompleted, fundsReleased }) => {
+    workflowSteps.forEach(({ delay, stepIndex, completed, cleanClaims, contractor, serviceStarted, serviceCompleted, fundsReleased }) => {
       setTimeout(() => {
         if (completed) {
           updateStepStatus(stepIndex, 'completed', {
             timestamp: new Date().toLocaleTimeString(),
+            ...(cleanClaims && {
+              reportId: `CLN-${Math.random().toString(36).substr(2, 9).toUpperCase()}`,
+              status: 'Synced'
+            }),
             ...(contractor && {
               contractorName: 'Premium Restoration Services',
               contractorId: `CTR-${Math.random().toString(36).substr(2, 9).toUpperCase()}`
@@ -208,13 +219,13 @@ export default function WorkflowDemonstration() {
               documentation: 'Complete'
             }),
             ...(fundsReleased && {
-              amount: '$2,475',
+              amount: '$2,200',
               status: 'Released'
             })
           });
           
           // Update next step as in-progress if not the last step
-          if (stepIndex < 9) {
+          if (stepIndex < 10) {
             updateStepStatus(stepIndex + 1, 'in-progress');
           }
           
@@ -249,7 +260,8 @@ export default function WorkflowDemonstration() {
               payment: {
                 ...prev?.payment,
                 releasedAt: new Date().toISOString(),
-                contractorAmount: 2475
+                contractorAmount: 2200,
+                platformFee: 550
               }
             })
           }));

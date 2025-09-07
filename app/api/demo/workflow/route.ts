@@ -62,7 +62,9 @@ export async function POST(request: NextRequest) {
       },
       contractor: null,
       payment: {
-        platformFee: 2750,
+        totalAmount: 2750,
+        platformFee: 550,
+        contractorAmount: 2200,
         status: 'PAID'
       }
     };
@@ -158,7 +160,7 @@ function progressWorkflow(ticketId: string, stepIndex: number) {
       break;
     case 9: // Funds release
       workflow.payment.releasedAt = Date.now();
-      workflow.payment.contractorAmount = 2475; // After platform fee
+      workflow.payment.contractorAmount = 2200; // After $550 platform fee
       workflow.status = 'COMPLETED';
       break;
   }
