@@ -14,7 +14,7 @@ cli/
 context7/
 context7-upstash/
 debug-screenshots/
-demo/
+# demo/  # Commented out - we need demo/workflow for the workflow demonstration
 docker/
 docs/
 generated/
