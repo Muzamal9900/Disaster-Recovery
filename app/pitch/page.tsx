@@ -93,7 +93,7 @@ export default function PitchSelection() {
                 Pitch Experience
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
               Select the presentation tailored to your needs and discover how Disaster Recovery Pro
               is revolutionizing the industry for everyone involved.
             </p>
@@ -134,8 +134,8 @@ export default function PitchSelection() {
 
                     {/* Content */}
                     <h3 className="text-2xl font-bold mb-2">{pitch.title}</h3>
-                    <p className="text-sm text-gray-400 mb-4">{pitch.subtitle}</p>
-                    <p className="text-gray-300 mb-6">{pitch.description}</p>
+                    <p className="text-sm text-gray-200 mb-4">{pitch.subtitle}</p>
+                    <p className="text-gray-100 mb-6">{pitch.description}</p>
 
                     {/* Features */}
                     <ul className="space-y-2 mb-6">
@@ -145,7 +145,7 @@ export default function PitchSelection() {
                             w-1.5 h-1.5 rounded-full bg-gradient-to-r ${pitch.color} 
                             mt-2 flex-shrink-0
                           `} />
-                          <span className="text-sm text-gray-300">{feature}</span>
+                          <span className="text-sm text-gray-100">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -182,7 +182,7 @@ export default function PitchSelection() {
             transition={{ delay: 0.8 }}
             className="text-center mt-16"
           >
-            <p className="text-gray-400">
+            <p className="text-gray-200">
               Each presentation is specifically crafted for its audience. 
               Choose the one that best fits your role in the disaster recovery ecosystem.
             </p>

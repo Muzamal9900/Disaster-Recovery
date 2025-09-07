@@ -26,7 +26,7 @@ export default function ClientPitch() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Link 
             href="/pitch" 
-            className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+            className="flex items-center gap-2 text-gray-100 hover:text-white transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             <span>Back to Pitch Selection</span>
@@ -53,7 +53,7 @@ export default function ClientPitch() {
                 Our Priority.
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
               When disaster strikes, every minute counts. Discover how we're revolutionizing 
               disaster recovery with 2-hour response times and real-time tracking.
             </p>
@@ -86,7 +86,7 @@ export default function ClientPitch() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/20">
               <Clock className="w-10 h-10 text-blue-400 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">2-Hour Response</h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-200 text-sm">
                 Guaranteed contractor contact within 2 hours of your claim
               </p>
             </div>
@@ -94,7 +94,7 @@ export default function ClientPitch() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
               <Shield className="w-10 h-10 text-cyan-400 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Insurance Direct</h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-200 text-sm">
                 We work directly with your insurance company for faster approvals
               </p>
             </div>
@@ -102,7 +102,7 @@ export default function ClientPitch() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-500/20">
               <CheckCircle2 className="w-10 h-10 text-green-400 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Verified Contractors</h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-200 text-sm">
                 All contractors are licensed, insured, and quality-verified
               </p>
             </div>
@@ -110,7 +110,7 @@ export default function ClientPitch() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20">
               <Phone className="w-10 h-10 text-purple-400 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-200 text-sm">
                 Real-time tracking and support throughout your recovery
               </p>
             </div>
@@ -126,7 +126,7 @@ export default function ClientPitch() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Don't Wait for Disaster to Strike
             </h2>
-            <p className="text-gray-300 mb-8">
+            <p className="text-gray-100 mb-8">
               Join thousands of homeowners and businesses who trust us with their recovery needs
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -146,13 +146,13 @@ export default function ClientPitch() {
             transition={{ delay: 1.2, duration: 0.6 }}
             className="mt-16 text-center"
           >
-            <p className="text-gray-400 mb-4">Trusted by:</p>
+            <p className="text-gray-200 mb-4">Trusted by:</p>
             <div className="flex flex-wrap justify-center gap-8 items-center">
-              <div className="text-gray-500">Major Insurance Partners</div>
-              <div className="text-gray-500">•</div>
-              <div className="text-gray-500">3,450+ Families Helped</div>
-              <div className="text-gray-500">•</div>
-              <div className="text-gray-500">National Coverage</div>
+              <div className="text-gray-300">Major Insurance Partners</div>
+              <div className="text-gray-300">•</div>
+              <div className="text-gray-300">3,450+ Families Helped</div>
+              <div className="text-gray-300">•</div>
+              <div className="text-gray-300">National Coverage</div>
             </div>
           </motion.div>
         </div>

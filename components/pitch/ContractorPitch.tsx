@@ -29,7 +29,7 @@ export default function ContractorPitch() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Link 
             href="/pitch" 
-            className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+            className="flex items-center gap-2 text-gray-100 hover:text-white transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             <span>Back to Pitch Selection</span>
@@ -56,7 +56,7 @@ export default function ContractorPitch() {
                 Not 90 Days.
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
               Join Australia's fastest-growing contractor network. Instant KPI-based payments, 
               quality leads, and Clean Claims integration that actually works.
             </p>
@@ -93,17 +93,17 @@ export default function ContractorPitch() {
               <div className="text-center">
                 <div className="text-4xl font-bold text-green-400 mb-2">$550</div>
                 <div className="text-white font-semibold mb-1">KPI 01: First Contact</div>
-                <div className="text-gray-400 text-sm">Released instantly when you contact within 60 mins</div>
+                <div className="text-gray-200 text-sm">Released instantly when you contact within 60 mins</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-emerald-400 mb-2">$550</div>
                 <div className="text-white font-semibold mb-1">KPI 02: Initial Report</div>
-                <div className="text-gray-400 text-sm">Released when report filed in Clean Claims</div>
+                <div className="text-gray-200 text-sm">Released when report filed in Clean Claims</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">$1,100</div>
                 <div className="text-white font-semibold mb-1">KPI 03: Make Safe</div>
-                <div className="text-gray-400 text-sm">Released upon initial make safe completion</div>
+                <div className="text-gray-200 text-sm">Released upon initial make safe completion</div>
               </div>
             </div>
             <div className="text-center mt-6">
@@ -123,7 +123,7 @@ export default function ContractorPitch() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-500/20">
               <DollarSign className="w-10 h-10 text-green-400 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">No More Waiting</h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-200 text-sm">
                 Get paid within 24 hours, not 90 days
               </p>
             </div>
@@ -131,7 +131,7 @@ export default function ContractorPitch() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-emerald-500/20">
               <Users className="w-10 h-10 text-emerald-400 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Quality Leads</h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-200 text-sm">
                 Pre-qualified insurance claims, not tire kickers
               </p>
             </div>
@@ -139,7 +139,7 @@ export default function ContractorPitch() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
               <FileCheck className="w-10 h-10 text-cyan-400 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Clean Claims</h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-200 text-sm">
                 34% better approval rates with our system
               </p>
             </div>
@@ -147,7 +147,7 @@ export default function ContractorPitch() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20">
               <TrendingUp className="w-10 h-10 text-purple-400 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Grow Your Business</h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-200 text-sm">
                 Focus on work, not chasing payments
               </p>
             </div>
@@ -162,21 +162,21 @@ export default function ContractorPitch() {
           >
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-gray-600">
               <h3 className="text-xl font-bold text-white mb-2">Lead Generation</h3>
-              <div className="text-3xl font-bold text-green-400 mb-4">$550<span className="text-lg text-gray-400">/lead</span></div>
-              <p className="text-gray-400">Qualified insurance claims delivered directly to you</p>
+              <div className="text-3xl font-bold text-green-400 mb-4">$550<span className="text-lg text-gray-200">/lead</span></div>
+              <p className="text-gray-200">Qualified insurance claims delivered directly to you</p>
             </div>
 
             <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl p-6 border border-green-500/50">
               <div className="bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded inline-block mb-2">MOST POPULAR</div>
               <h3 className="text-xl font-bold text-white mb-2">Professional Platform</h3>
-              <div className="text-3xl font-bold text-green-400 mb-4">$299<span className="text-lg text-gray-400">/month</span></div>
-              <p className="text-gray-400">Full platform access with Clean Claims integration</p>
+              <div className="text-3xl font-bold text-green-400 mb-4">$299<span className="text-lg text-gray-200">/month</span></div>
+              <p className="text-gray-200">Full platform access with Clean Claims integration</p>
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-gray-600">
               <h3 className="text-xl font-bold text-white mb-2">Enterprise</h3>
-              <div className="text-3xl font-bold text-green-400 mb-4">$999<span className="text-lg text-gray-400">/month</span></div>
-              <p className="text-gray-400">Priority leads, dedicated support, custom integrations</p>
+              <div className="text-3xl font-bold text-green-400 mb-4">$999<span className="text-lg text-gray-200">/month</span></div>
+              <p className="text-gray-200">Priority leads, dedicated support, custom integrations</p>
             </div>
           </motion.div>
 
@@ -190,7 +190,7 @@ export default function ContractorPitch() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Join 127+ Contractors Already Getting Paid Faster
             </h2>
-            <p className="text-gray-300 mb-8">
+            <p className="text-gray-100 mb-8">
               Stop waiting 90 days for payment. Start getting paid in 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -213,19 +213,19 @@ export default function ContractorPitch() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div>
                 <div className="text-3xl font-bold text-green-400">127+</div>
-                <div className="text-gray-400">Active Contractors</div>
+                <div className="text-gray-200">Active Contractors</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-emerald-400">3,450</div>
-                <div className="text-gray-400">Leads Delivered</div>
+                <div className="text-gray-200">Leads Delivered</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-cyan-400">24hrs</div>
-                <div className="text-gray-400">Average Payment Time</div>
+                <div className="text-gray-200">Average Payment Time</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-purple-400">34%</div>
-                <div className="text-gray-400">Better Approval Rate</div>
+                <div className="text-gray-200">Better Approval Rate</div>
               </div>
             </div>
           </motion.div>
