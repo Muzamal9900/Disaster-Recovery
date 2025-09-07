@@ -197,21 +197,24 @@ export default function WorkflowDemonstration() {
 
   // Update workflow based on ticket status
   const updateWorkflowFromTicket = (ticket: any) => {
+    // Step 2: CRM Connection
     if (ticket.workflow.crmConnected && workflowSteps[2].status !== 'completed') {
       updateStepStatus(2, 'completed', { connectedAt: new Date().toISOString() });
       updateStepStatus(3, 'in-progress');
     }
     
+    // Step 3: Contractor Matching
     if (ticket.workflow.contractorAssigned && workflowSteps[3].status !== 'completed') {
       updateStepStatus(3, 'completed', { 
         contractorId: ticket.contractorId,
         contractorName: ticket.contractorName 
       });
-      updateStepStatus(4, 'completed');
-      updateStepStatus(5, 'in-progress');
+      updateStepStatus(4, 'in-progress');
     }
     
+    // Step 5: Job Acceptance
     if (ticket.workflow.jobAccepted && workflowSteps[5].status !== 'completed') {
+      updateStepStatus(4, 'completed');
       updateStepStatus(5, 'completed', { acceptedAt: ticket.jobAcceptedAt });
       updateStepStatus(6, 'in-progress');
     }
@@ -323,9 +326,157 @@ export default function WorkflowDemonstration() {
         </CardContent>
       </Card>
 
-      {/* Workflow Steps */}
-      <div className="grid lg:grid-cols-2 gap-6 mb-6">
-        <Card>
+      {/* Workflow Steps and Form Display */}
+      <div className="grid lg:grid-cols-3 gap-6 mb-6">
+        {/* Form Display */}
+        <Card className="lg:col-span-1">
+          <CardHeader>
+            <CardTitle>Live Form Data</CardTitle>
+            <CardDescription>
+              Actual data being processed
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            {currentStep >= 0 && (
+              <div className="space-y-4">
+                {/* Customer Information */}
+                <div className="p-3 bg-blue-50 rounded-lg">
+                  <h4 className="font-semibold text-sm mb-2 text-blue-900">Customer Details</h4>
+                  <div className="space-y-1 text-xs">
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Name:</span>
+                      <span className="font-medium">{currentStep >= 0 ? demoCustomerData.fullName : '...'}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Phone:</span>
+                      <span className="font-medium">{currentStep >= 0 ? demoCustomerData.phone : '...'}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Email:</span>
+                      <span className="font-medium text-xs">{currentStep >= 0 ? demoCustomerData.email : '...'}</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Property Information */}
+                {currentStep >= 0 && (
+                  <div className="p-3 bg-green-50 rounded-lg">
+                    <h4 className="font-semibold text-sm mb-2 text-green-900">Property Info</h4>
+                    <div className="space-y-1 text-xs">
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Address:</span>
+                        <span className="font-medium">{demoCustomerData.propertyAddress}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Suburb:</span>
+                        <span className="font-medium">{demoCustomerData.suburb}, {demoCustomerData.state}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Type:</span>
+                        <span className="font-medium capitalize">{demoCustomerData.propertyType}</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Damage Details */}
+                {currentStep >= 0 && (
+                  <div className="p-3 bg-red-50 rounded-lg">
+                    <h4 className="font-semibold text-sm mb-2 text-red-900">Damage Details</h4>
+                    <div className="space-y-1 text-xs">
+                      <div>
+                        <span className="text-gray-600">Type:</span>
+                        <div className="mt-1">
+                          {demoCustomerData.damageTypes.map((type, i) => (
+                            <Badge key={i} variant="destructive" className="mr-1 text-xs">
+                              {type}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <span className="text-gray-600">Description:</span>
+                        <p className="mt-1 text-xs text-gray-700">{demoCustomerData.damageDescription}</p>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Urgency:</span>
+                        <Badge variant="destructive" className="text-xs">
+                          {demoCustomerData.urgencyLevel.toUpperCase()}
+                        </Badge>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Insurance Information */}
+                {currentStep >= 1 && (
+                  <div className="p-3 bg-purple-50 rounded-lg">
+                    <h4 className="font-semibold text-sm mb-2 text-purple-900">Insurance</h4>
+                    <div className="space-y-1 text-xs">
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Company:</span>
+                        <span className="font-medium">{demoCustomerData.insuranceCompany}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Claim #:</span>
+                        <span className="font-medium">{demoCustomerData.insuranceClaimNumber}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Excess:</span>
+                        <span className="font-medium">${demoCustomerData.excessAmount}</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Payment Status */}
+                {currentStep >= 1 && (
+                  <div className="p-3 bg-green-100 rounded-lg">
+                    <h4 className="font-semibold text-sm mb-2 text-green-900">Payment Status</h4>
+                    <div className="space-y-1 text-xs">
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Platform Fee:</span>
+                        <span className="font-bold text-green-700">${demoCustomerData.paymentAmount}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Status:</span>
+                        <Badge variant="success" className="text-xs">PAID</Badge>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Method:</span>
+                        <span className="font-medium">Credit Card</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Contractor Assignment */}
+                {currentStep >= 4 && ticketData?.contractorId && (
+                  <div className="p-3 bg-orange-50 rounded-lg">
+                    <h4 className="font-semibold text-sm mb-2 text-orange-900">Contractor Assigned</h4>
+                    <div className="space-y-1 text-xs">
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Company:</span>
+                        <span className="font-medium">{ticketData.contractorName}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">ID:</span>
+                        <span className="font-medium">{ticketData.contractorId}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Status:</span>
+                        <Badge variant="success" className="text-xs">ACCEPTED</Badge>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+          </CardContent>
+        </Card>
+
+        {/* Workflow Progress */}
+        <Card className="lg:col-span-2">
           <CardHeader>
             <CardTitle>Workflow Progress</CardTitle>
           </CardHeader>
