@@ -83,7 +83,7 @@ export default function MinimumCalloutPage() {
                 <strong>Important:</strong> Most insurance policies cover our callout fee in full.
                 We bill your insurance directly - you pay nothing upfront.
               </p>
-              <Button size="lg" className="bg-green-600 hover:bg-green-700">
+              <Button size="lg" className="bg-green-600 hover:bg-green-800">
                 <MessageSquare className="mr-2 h-5 w-5" />
                 Call Online Form Available 24/7 - Insurance Covered
               </Button>
@@ -252,7 +252,7 @@ export default function MinimumCalloutPage() {
                 Every hour of delay increases damage exponentially. 
                 Our $2,200 callout fee is a fraction of the cost of delayed action.
               </p>
-              <Button size="lg" className="bg-green-600 hover:bg-green-700">
+              <Button size="lg" className="bg-green-600 hover:bg-green-800">
                 <MessageSquare className="mr-2 h-5 w-5" />
                 Protect Your Property - Submit Form Now
               </Button>
@@ -293,7 +293,7 @@ export default function MinimumCalloutPage() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">✓</span>
+                  <span className="bg-green-700 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">✓</span>
                   <div>
                     <p className="font-bold">You Pay Nothing</p>
                     <p className="text-gray-600">Only your standard excess applies (if any)</p>

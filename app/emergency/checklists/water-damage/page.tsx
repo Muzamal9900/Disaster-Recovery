@@ -275,7 +275,7 @@ export default function WaterDamageChecklistPage() {
             </Link>
             <Link
               href="/insurance-decoder"
-              className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-flex items-center justify-center gap-2"
+              className="bg-green-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-800 transition-colors inline-flex items-center justify-center gap-2"
             >
               <Shield className="w-5 h-5" />
               Understand Your Coverage

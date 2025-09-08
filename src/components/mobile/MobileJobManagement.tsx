@@ -129,7 +129,7 @@ export default function MobileJobManagement() {
   const statusColors = {
     assigned: 'bg-gray-100 text-gray-700',
     in_route: 'bg-blue-100 text-blue-700',
-    on_site: 'bg-purple-100 text-purple-700',
+    on_site: 'bg-purple-700 text-white',
     in_progress: 'bg-orange-100 text-orange-700',
     completed: 'bg-green-100 text-green-700'
   };

@@ -328,7 +328,7 @@ export default function CampaignManagementTools() {
     scheduled: 'bg-blue-100 text-blue-800',
     active: 'bg-green-100 text-green-800',
     paused: 'bg-yellow-100 text-yellow-800',
-    completed: 'bg-purple-100 text-purple-800',
+    completed: 'bg-purple-700 text-white',
     cancelled: 'bg-red-100 text-red-800'
   };
 
@@ -731,7 +731,7 @@ export default function CampaignManagementTools() {
                 )}
               </div>
               <div className="flex space-x-2 ml-4">
-                <button className="px-3 py-2 bg-green-600 text-white text-sm rounded-lg hover:bg-green-700 transition-colours">
+                <button className="px-3 py-2 bg-green-700 text-white text-sm rounded-lg hover:bg-green-800 transition-colours">
                   Approve
                 </button>
                 <button className="px-3 py-2 bg-red-600 text-white text-sm rounded-lg hover:bg-red-700 transition-colours">

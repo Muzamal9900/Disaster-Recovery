@@ -328,7 +328,7 @@ function ContractorApplicationContent() {
                   >
                     <div className={`
                       w-12 h-12 rounded-full flex items-center justify-center transition-all
-                      ${isCompleted ? 'bg-green-600 text-white' : 
+                      ${isCompleted ? 'bg-green-700 text-white' : 
                         isCurrent ? 'bg-blue-600 text-white ring-4 ring-blue-600/30' : 
                         'bg-slate-700 text-slate-400'}
                     `}>

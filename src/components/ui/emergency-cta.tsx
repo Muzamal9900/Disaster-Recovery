@@ -46,7 +46,7 @@ export function LocationCTA({ city, service }: { city?: string; service?: string
 
   return (
     <Link href="/get-help">
-      <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white">
+      <Button size="lg" className="bg-green-600 hover:bg-green-800 text-white">
         <MapPin className="mr-2 h-5 w-5" />
         {text}
         <ArrowRight className="ml-2 h-5 w-5" />

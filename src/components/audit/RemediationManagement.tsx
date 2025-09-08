@@ -237,7 +237,7 @@ const RemediationManagement: React.FC<RemediationManagementProps> = ({
       case 'in_progress': return 'bg-blue-100 text-blue-800';
       case 'completed': return 'bg-green-100 text-green-800';
       case 'verified':
-      case 'closed': return 'bg-purple-100 text-purple-800';
+      case 'closed': return 'bg-purple-700 text-white';
       case 'blocked': return 'bg-red-100 text-red-800';
       case 'cancelled': return 'bg-gray-100 text-gray-800';
       default: return 'bg-gray-100 text-gray-800';
@@ -300,7 +300,7 @@ const RemediationManagement: React.FC<RemediationManagementProps> = ({
               {plan.status.replace('_', ' ')}
             </span>
             {plan.verificationRequired && (
-              <span className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-purple-100 text-purple-800">
+              <span className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-purple-700 text-white">
                 Verification Required
               </span>
             )}
@@ -378,7 +378,7 @@ const RemediationManagement: React.FC<RemediationManagementProps> = ({
         <div className="flex items-center justify-between mt-6 pt-6 border-t border-gray-200">
           <div className="flex items-center space-x-2">
             {plan.status === 'pending_approval' && userRole === 'admin' && (
-              <button className="flex items-center px-3 py-1.5 text-sm bg-green-600 text-white rounded hover:bg-green-700">
+              <button className="flex items-center px-3 py-1.5 text-sm bg-green-700 text-white rounded hover:bg-green-800">
                 <Check className="w-4 h-4 mr-1" />
                 Approve
               </button>

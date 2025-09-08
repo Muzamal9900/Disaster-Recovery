@@ -14,7 +14,7 @@ export default function NABInsuranceInsurancePage() {
           <Shield className="h-16 w-16 text-emerald-600 mb-6" />
           <h1 className="text-4xl font-bold mb-4">NAB Insurance Insurance Claims</h1>
           <p className="text-xl mb-8">Preferred Provider • Direct Billing • No Upfront Costs</p>
-          <Button size="lg" className="bg-green-600 hover:bg-green-700">
+          <Button size="lg" className="bg-green-600 hover:bg-green-800">
             <MessageSquare className="mr-2" /> Start Your Claim
           </Button>
         </div>

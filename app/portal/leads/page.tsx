@@ -180,7 +180,7 @@ export default function LeadManagement() {
                 <Download className="h-4 w-4 mr-2" />
                 Export
               </Button>
-              <Button className="bg-green-600 hover:bg-green-700">
+              <Button className="bg-green-600 hover:bg-green-800">
                 <MapPin className="h-4 w-4 mr-2" />
                 Update Availability
               </Button>
@@ -323,7 +323,7 @@ export default function LeadManagement() {
                     </div>
 
                     <div className="flex items-center gap-2">
-                      <Button className="bg-green-600 hover:bg-green-700">
+                      <Button className="bg-green-600 hover:bg-green-800">
                         <CheckCircle className="h-4 w-4 mr-2" />
                         Accept Lead
                       </Button>

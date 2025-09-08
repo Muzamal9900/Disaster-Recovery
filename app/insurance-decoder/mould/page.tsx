@@ -176,7 +176,7 @@ export default function MouldInsurancePage() {
           <div className="grid md:grid-cols-3 gap-6">
             {/* Typically Covered */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="bg-green-600 text-white p-4">
+              <div className="bg-green-700 text-white p-4">
                 <CheckCircle className="w-8 h-8 mb-2" />
                 <h3 className="text-xl font-bold">May Be Covered</h3>
               </div>

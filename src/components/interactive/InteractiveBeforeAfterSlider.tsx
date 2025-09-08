@@ -162,7 +162,7 @@ function BeforeAfterSliderCard({ caseData }: { caseData: BeforeAfterCase }) {
           
           <div className="absolute top-4 right-4">
             <motion.div 
-              className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold"
+              className="bg-green-700 text-white px-3 py-1 rounded-full text-sm font-bold"
               animate={{
                 opacity: sliderPosition < 80 ? 1 : 0.3 }}
             >

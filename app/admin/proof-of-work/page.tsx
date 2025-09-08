@@ -625,7 +625,7 @@ function ClaimReviewModal({
           </button>
           <button
             onClick={() => onUpdateStatus(claim.id, 'VERIFIED', verificationNotes)}
-            className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
+            className="flex items-center gap-2 px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800"
           >
             <CheckCircle className="w-4 h-4" />
             Approve

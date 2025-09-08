@@ -416,7 +416,7 @@ const TechnicianSyncManager: React.FC = () => {
                       {technician.specialtyFlags.map((flag) => (
                         <span
                           key={flag.type}
-                          className="px-2 py-1 text-xs bg-purple-100 text-purple-700 rounded-full"
+                          className="px-2 py-1 text-xs bg-purple-700 text-white rounded-full"
                         >
                           {flag.label}
                         </span>
@@ -540,7 +540,7 @@ const TechnicianSyncManager: React.FC = () => {
                   {selectedTechnician.specialtyFlags.map((flag) => (
                     <span
                       key={flag.type}
-                      className="px-2 py-1 text-xs bg-purple-100 text-purple-700 rounded-full"
+                      className="px-2 py-1 text-xs bg-purple-700 text-white rounded-full"
                     >
                       {flag.label}
                     </span>

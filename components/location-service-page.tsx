@@ -223,7 +223,7 @@ export default function LocationServicePageComponent({ data }: LocationServicePa
                   <p className="text-sm text-gray-600">We work directly with all major insurers</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">
                     <Zap className="w-8 h-8" />
                   </div>
                   <h3 className="font-semibold mb-2">Fast Processing</h3>

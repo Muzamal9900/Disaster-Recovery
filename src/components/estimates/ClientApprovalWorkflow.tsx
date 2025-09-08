@@ -621,7 +621,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                 disabled={!signature || !verificationCode}
                 className={`px-6 py-3 rounded ${
                   signature && verificationCode
-                    ? 'bg-green-600 text-white hover:bg-green-700' 
+                    ? 'bg-green-700 text-white hover:bg-green-800' 
                     : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                 }`}
               >

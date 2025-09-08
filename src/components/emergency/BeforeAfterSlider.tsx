@@ -175,7 +175,7 @@ export default function BeforeAfterSlider() {
                 
                 {/* After Label */}
                 <div className="absolute top-4 right-4 z-20">
-                  <div className="bg-green-600 text-white px-6 py-3 rounded-lg font-bold text-lg shadow-xl">
+                  <div className="bg-green-700 text-white px-6 py-3 rounded-lg font-bold text-lg shadow-xl">
                     {currentCase.afterTitle}
                   </div>
                   <div className="mt-2 bg-black/80 text-white px-4 py-2 rounded text-right">

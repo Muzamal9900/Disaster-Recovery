@@ -453,7 +453,7 @@ const TransparencyBillingDashboard: React.FC = () => {
             </button>
             <button
               onClick={exportPDF}
-              className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center space-x-2"
+              className="px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 flex items-center space-x-2"
             >
               <Download className="h-4 w-4" />
               <span>Export PDF</span>

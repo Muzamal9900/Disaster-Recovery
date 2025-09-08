@@ -358,7 +358,7 @@ export default function WhyIndependentProfessionalsPage() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0">3</span>
+                  <span className="bg-green-700 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0">3</span>
                   <div>
                     <p className="font-bold">Years 5+: Independence Phase</p>
                     <p className="text-gray-600">Start own business to provide quality service</p>

@@ -59,7 +59,7 @@ export default function MobileFAB() {
       icon: MapPin,
       label: 'Service Areas',
       href: '/services',
-      color: 'bg-green-600 hover:bg-green-700'
+      color: 'bg-green-600 hover:bg-green-800'
     },
     {
       icon: HelpCircle,

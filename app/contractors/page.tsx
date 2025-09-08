@@ -280,7 +280,7 @@ export default function ContractorsPage() {
               
               <Card className="p-6">
                 <div className="flex items-start">
-                  <span className="bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="bg-green-700 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
                     4
                   </span>
                   <div>

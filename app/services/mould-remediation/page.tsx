@@ -118,7 +118,7 @@ export default function MouldRemediationPage() {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button size="lg" className="bg-green-600 hover:bg-green-700">
+                    <Button size="lg" className="bg-green-600 hover:bg-green-800">
                       <MessageSquare className="mr-2 h-5 w-5" />
                       Get Mould Inspection
                     </Button>
@@ -131,7 +131,7 @@ export default function MouldRemediationPage() {
                       </DialogDescription>
                     </DialogHeader>
                     <div className="space-y-4 pt-4">
-                      <a href="#contact-form" className="flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700">
+                      <a href="#contact-form" className="flex items-center justify-center gap-2 bg-green-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-800">
                         <MessageSquare className="h-5 w-5" />
                         Use Our Online Form'
                       </a>
@@ -182,7 +182,7 @@ export default function MouldRemediationPage() {
                 priority
                 loading="eager"
               />
-              <div className="absolute -bottom-4 -right-4 bg-green-600 text-white p-4 rounded-lg shadow-lg">
+              <div className="absolute -bottom-4 -right-4 bg-green-700 text-white p-4 rounded-lg shadow-lg">
                 <p className="font-bold text-lg">Air Quality</p>
                 <p className="text-2xl font-bold">Testing Included</p>
               </div>
@@ -418,7 +418,7 @@ export default function MouldRemediationPage() {
               ].map((item) => (
                 <div key={item.step} className="flex gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">
+                    <div className="w-12 h-12 bg-green-700 text-white rounded-full flex items-center justify-center font-bold">
                       {item.step}
                     </div>
                   </div>

@@ -487,7 +487,7 @@ export default function WhyMouldReturnsPage() {
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-600 mb-1">{professionalVsCowboy.professional.cost}</div>
                 <div className="text-sm text-green-700 mb-2">Professional Investment</div>
-                <Badge className="bg-green-600 text-white">{professionalVsCowboy.professional.guarantee}</Badge>
+                <Badge className="bg-green-700 text-white">{professionalVsCowboy.professional.guarantee}</Badge>
               </div>
             </Card>
 

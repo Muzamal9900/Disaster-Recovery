@@ -861,7 +861,7 @@ export default function BookServicePage() {
                   type="button"
                   onClick={handleSubmit}
                   disabled={isProcessing}
-                  className="ml-auto px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colours flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="ml-auto px-8 py-3 bg-green-700 text-white rounded-lg hover:bg-green-800 transition-colours flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isProcessing ? (
                     <>

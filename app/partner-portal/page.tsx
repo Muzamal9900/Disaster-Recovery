@@ -233,7 +233,7 @@ export default function PartnerPortal() {
                           </div>
                           <Button
                             size="sm"
-                            className="bg-green-600 hover:bg-green-700"
+                            className="bg-green-600 hover:bg-green-800"
                             onClick={() => acceptLead(lead.id)}
                           >
                             Accept Lead

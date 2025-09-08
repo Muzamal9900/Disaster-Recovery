@@ -54,7 +54,7 @@ export default function MouldChecklistPage() {
 
   const mouldTypes = [
     { name: 'Black Mould (Stachybotrys)', danger: 'HIGH', color: 'bg-black text-white' },
-    { name: 'Green Mould (Aspergillus)', danger: 'MEDIUM', color: 'bg-green-600 text-white' },
+    { name: 'Green Mould (Aspergillus)', danger: 'MEDIUM', color: 'bg-green-700 text-white' },
     { name: 'White Mould (Penicillium)', danger: 'MEDIUM', color: 'bg-gray-300 text-black' },
     { name: 'Yellow Mould (Aureobasidium)', danger: 'LOW', color: 'bg-yellow-400 text-black' }
   ];
@@ -293,7 +293,7 @@ export default function MouldChecklistPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/whos-first"
-              className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-flex items-center justify-center gap-2"
+              className="bg-green-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-800 transition-colors inline-flex items-center justify-center gap-2"
             >
               <Phone className="w-5 h-5" />
               Find Mould Specialists

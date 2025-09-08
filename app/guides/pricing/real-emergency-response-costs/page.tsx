@@ -272,7 +272,7 @@ export default function RealEmergencyResponseCostsPage() {
                   ${comprehensiveService.price.toLocaleString()}
                 </div>
                 <h3 className="text-2xl font-semibold text-green-900">{comprehensiveService.title}</h3>
-                <Badge className="mt-2 bg-green-600 text-white">
+                <Badge className="mt-2 bg-green-700 text-white">
                   {comprehensiveService.guarantee}
                 </Badge>
               </div>
@@ -505,7 +505,7 @@ export default function RealEmergencyResponseCostsPage() {
                   ${realWorldComparison.transparentApproach.totalCost.toLocaleString()}
                 </div>
                 <div className="text-sm text-green-700 mb-2">Final Total</div>
-                <Badge className="bg-green-600 text-white">
+                <Badge className="bg-green-700 text-white">
                   {realWorldComparison.transparentApproach.surprises}
                 </Badge>
               </div>

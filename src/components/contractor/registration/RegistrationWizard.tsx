@@ -271,7 +271,7 @@ export function RegistrationWizard() {
             <Button
               onClick={handleSubmit}
               disabled={isSubmitting || completedSteps.length < REGISTRATION_STEPS.length - 1}
-              className="bg-green-600 hover:bg-green-700"
+              className="bg-green-600 hover:bg-green-800"
             >
               {isSubmitting ? 'Submitting...' : 'Submit Application'}
             </Button>

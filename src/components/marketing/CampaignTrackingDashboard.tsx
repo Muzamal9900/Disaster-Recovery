@@ -384,7 +384,7 @@ export default function CampaignTrackingDashboard() {
     scheduled: 'bg-blue-100 text-blue-800',
     active: 'bg-green-100 text-green-800',
     paused: 'bg-yellow-100 text-yellow-800',
-    completed: 'bg-purple-100 text-purple-800',
+    completed: 'bg-purple-700 text-white',
     cancelled: 'bg-red-100 text-red-800'
   };
 
@@ -656,7 +656,7 @@ export default function CampaignTrackingDashboard() {
                 <h4 className="font-medium text-gray-900">{contractor.contractorName}</h4>
                 <div className="flex items-center space-x-2 mt-1">
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                    contractor.tier === 'platinum' ? 'bg-purple-100 text-purple-800' :
+                    contractor.tier === 'platinum' ? 'bg-purple-700 text-white' :
                     contractor.tier === 'gold' ? 'bg-yellow-100 text-yellow-800' :
                     contractor.tier === 'silver' ? 'bg-gray-100 text-gray-800' :
                     'bg-orange-100 text-orange-800'

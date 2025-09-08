@@ -787,7 +787,7 @@ export default function AffiliateSignup() {
           {currentStep === steps.length ? (
             <button
               onClick={handleSubmit}
-              className="flex items-center px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colours"
+              className="flex items-center px-6 py-3 bg-green-700 text-white rounded-lg font-medium hover:bg-green-800 transition-colours"
             >
               Submit Application
               <CheckCircle className="w-5 h-5 ml-2" />"

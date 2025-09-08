@@ -431,7 +431,7 @@ export default function InsuranceDecoderHub() {
             <div className="flex flex-wrap gap-4 justify-center">
               <a
                 href="tel:1800000000"
-                className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg transition-all hover:scale-105"
+                className="bg-green-500 hover:bg-green-800 text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg transition-all hover:scale-105"
               >
                 Call: 1800 000 000
               </a>

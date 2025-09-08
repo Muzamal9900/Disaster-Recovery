@@ -609,7 +609,7 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
           <button
             onClick={handleSubmit}
             disabled={isSubmitting}
-            className="px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colours flex items-center"
+            className="px-6 py-3 bg-green-700 text-white rounded-lg font-medium hover:bg-green-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colours flex items-center"
           >
             {isSubmitting ? (
               <>

@@ -393,7 +393,7 @@ export function ApplicationReview() {
             <Button
               onClick={handleReviewSubmit}
               className={
-                reviewAction === 'approve' ? 'bg-green-600 hover:bg-green-700' :
+                reviewAction === 'approve' ? 'bg-green-600 hover:bg-green-800' :
                 reviewAction === 'reject' ? 'bg-red-600 hover:bg-red-700' :
                 ''
               }

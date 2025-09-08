@@ -483,7 +483,7 @@ const AvailabilityCalendar: React.FC = () => {
                         <div className={`text-xs px-1 py-0.5 rounded ${
                           summary.status === 'available' ? 'bg-green-100 text-green-700' :
                           summary.status === 'vacation' ? 'bg-blue-100 text-blue-700' :
-                          summary.status === 'training' ? 'bg-purple-100 text-purple-700' :
+                          summary.status === 'training' ? 'bg-purple-700 text-white' :
                           summary.status === 'blackout' ? 'bg-red-100 text-red-700' :
                           'bg-gray-100 text-gray-700'
                         }`}>

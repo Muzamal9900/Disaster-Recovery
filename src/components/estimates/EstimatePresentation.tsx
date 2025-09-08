@@ -117,7 +117,7 @@ const EstimatePresentation: React.FC<EstimatePresentationProps> = ({
               <>
                 <button
                   onClick={onApprove}
-                  className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 flex items-center"
+                  className="px-4 py-2 bg-green-700 text-white rounded hover:bg-green-800 flex items-center"
                 >
                   <Check className="h-4 w-4 mr-2" />
                   Approve Estimate

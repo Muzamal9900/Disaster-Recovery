@@ -187,7 +187,7 @@ export default function EmergencyChecklistsPage() {
             </Link>
             <Link
               href="/insurance-decoder"
-              className="bg-green-600 text-white py-4 px-6 rounded-lg hover:bg-green-700 transition-colors"
+              className="bg-green-700 text-white py-4 px-6 rounded-lg hover:bg-green-800 transition-colors"
             >
               Understand Your Insurance
             </Link>

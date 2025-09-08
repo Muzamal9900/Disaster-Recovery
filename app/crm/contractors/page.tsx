@@ -128,7 +128,7 @@ export default function ContractorsPage() {
   const getTierBadge = (tier: string) => {
     const styles = {
       foundation: 'bg-blue-100 text-blue-800',
-      professional: 'bg-purple-100 text-purple-800',
+      professional: 'bg-purple-700 text-white',
       enterprise: 'bg-orange-100 text-orange-800',
       franchise: 'bg-red-100 text-red-800'
     };

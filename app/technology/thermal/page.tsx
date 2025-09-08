@@ -176,7 +176,7 @@ export default function ThermalImagingPage() {
                       <div className="flex items-center gap-2 mb-2">
                         <h3 className="text-xl font-semibold text-gray-900">{app.title}</h3>
                         {isSpecialized && (
-                          <Badge className="bg-purple-100 text-purple-800 text-xs">
+                          <Badge className="bg-purple-700 text-white text-xs">
                             Specialist
                           </Badge>
                         )}

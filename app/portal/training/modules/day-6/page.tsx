@@ -555,7 +555,7 @@ export default function Day6CustomerService() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <Badge className="bg-purple-100 text-purple-800">
+              <Badge className="bg-purple-700 text-white">
                 <Heart className="h-3 w-3 mr-1" />
                 Soft Skills Focus
               </Badge>

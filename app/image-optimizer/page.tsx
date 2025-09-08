@@ -164,7 +164,7 @@ export default function ImageOptimizerPage() {
               <h2 className="text-xl font-semibold">Results</h2>
               <button
                 onClick={downloadAll}
-                className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700"
+                className="bg-green-700 text-white px-4 py-2 rounded-md hover:bg-green-800"
               >
                 Download All
               </button>

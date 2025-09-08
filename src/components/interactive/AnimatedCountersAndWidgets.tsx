@@ -387,7 +387,7 @@ export default function AnimatedCountersAndWidgets() {
         transition={{ duration: 0.8 }}
       >
         <motion.div
-          className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full mb-6"
+          className="inline-flex items-center bg-purple-700 text-white px-4 py-2 rounded-full mb-6"
           whileHover={{ scale: 1.05 }}
         >
           <TrendingUp className="h-4 w-4 mr-2" />

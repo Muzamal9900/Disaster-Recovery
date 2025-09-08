@@ -119,7 +119,7 @@ export function NeonGlowButton({
         ghost: 'text-purple-400 hover:bg-purple-500/10'
       },
       green: {
-        solid: 'bg-green-600 text-white border-green-500 shadow-green-500/50',
+        solid: 'bg-green-700 text-white border-green-500 shadow-green-500/50',
         outline: 'border-green-500 text-emerald-600 hover:bg-green-500/10',
         ghost: 'text-emerald-600 hover:bg-green-500/10'
       },

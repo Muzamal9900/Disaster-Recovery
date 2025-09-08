@@ -300,7 +300,7 @@ const EstimateLineItemCalculator: React.FC<LineItemCalculatorProps> = ({
     const colours = {
       emergency_services: 'bg-red-100 text-red-800',
       labour: 'bg-blue-100 text-blue-800',
-      equipment: 'bg-purple-100 text-purple-800',
+      equipment: 'bg-purple-700 text-white',
       materials: 'bg-green-100 text-green-800',
       disposal: 'bg-gray-100 text-gray-800',
       cleaning: 'bg-yellow-100 text-yellow-800',
@@ -398,7 +398,7 @@ const EstimateLineItemCalculator: React.FC<LineItemCalculatorProps> = ({
                       <div className="flex items-center space-x-2">
                         <button
                           onClick={() => setEditingItem(null)}
-                          className="px-3 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+                          className="px-3 py-2 bg-green-700 text-white rounded hover:bg-green-800"
                         >
                           <Save className="h-4 w-4" />
                         </button>

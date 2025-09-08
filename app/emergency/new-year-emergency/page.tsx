@@ -158,7 +158,7 @@ export default function NewYearEmergencyServicePage() {
                 Our $1500 december 31st - january 1st surcharge is a fraction 
                 of the cost of waiting until regular hours.
               </p>
-              <Button size="lg" className="bg-green-600 hover:bg-green-700">
+              <Button size="lg" className="bg-green-600 hover:bg-green-800">
                 <MessageSquare className="mr-2 h-5 w-5" />
                 Submit Form Now - Save $15,000+ in Damage
               </Button>

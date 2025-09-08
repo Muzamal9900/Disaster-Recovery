@@ -138,7 +138,7 @@ export function SubscriptionManager() {
 
   const getTierColor = (tier: string) => {
     switch (tier) {
-      case 'ENTERPRISE': return 'bg-purple-100 text-purple-800';
+      case 'ENTERPRISE': return 'bg-purple-700 text-white';
       case 'PROFESSIONAL': return 'bg-blue-100 text-blue-800';
       case 'BASIC': return 'bg-gray-100 text-gray-800';
       default: return 'bg-gray-100 text-gray-800';

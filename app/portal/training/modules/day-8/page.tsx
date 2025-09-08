@@ -530,7 +530,7 @@ export default function Day8MouldRemediation() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <Badge className="bg-purple-100 text-purple-800">
+              <Badge className="bg-purple-700 text-white">
                 <Microscope className="h-3 w-3 mr-1" />
                 Specialist Training
               </Badge>
@@ -754,7 +754,7 @@ export default function Day8MouldRemediation() {
                     <div className="space-y-3">
                       {modules[1].content.setup.steps.map((step) => (
                         <div key={step.step} className="flex items-start gap-3">
-                          <div className="flex-shrink-0 w-8 h-8 bg-purple-100 text-purple-800 rounded-full flex items-center justify-center font-semibold">
+                          <div className="flex-shrink-0 w-8 h-8 bg-purple-700 text-white rounded-full flex items-center justify-center font-semibold">
                             {step.step}
                           </div>
                           <div>

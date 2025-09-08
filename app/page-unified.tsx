@@ -217,7 +217,7 @@ export default function UnifiedHomePage() {
                 Start Live Chat
                 <MessageCircle className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 text-lg">
+              <Button size="lg" className="bg-green-600 hover:bg-green-800 text-white px-8 py-6 text-lg">
                 Submit Claim
                 <Globe className="ml-2 h-5 w-5" />
               </Button>

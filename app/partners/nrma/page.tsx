@@ -273,7 +273,7 @@ export default function NRMAPartnershipPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.a
                   href="/claim"
-                  className="bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition-colors inline-flex items-center justify-center gap-2"
+                  className="bg-green-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-800 transition-colors inline-flex items-center justify-center gap-2"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -552,7 +552,7 @@ export default function NRMAPartnershipPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.a
                   href="/claim"
-                  className="bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition-colors inline-flex items-center justify-center gap-2"
+                  className="bg-green-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-800 transition-colors inline-flex items-center justify-center gap-2"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

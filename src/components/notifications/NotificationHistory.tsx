@@ -223,7 +223,7 @@ export function NotificationHistory() {
       case 'system':
         return 'bg-gray-100 text-gray-800';
       default:
-        return 'bg-purple-100 text-purple-800';
+        return 'bg-purple-700 text-white';
     }
   };
 

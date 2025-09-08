@@ -22,7 +22,7 @@ export default function ResidentialHomePage() {
               <span className="bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-bold mr-3">
                 RESIDENTIAL
               </span>
-              <span className="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+              <span className="bg-green-700 text-white px-4 py-2 rounded-full text-sm font-bold">
                 95% INSURANCE COVERED
               </span>
             </div>

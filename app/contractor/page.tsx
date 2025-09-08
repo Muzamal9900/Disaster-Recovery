@@ -138,7 +138,7 @@ export default function ContractorPortalLanding() {
                     </div>
                     <Link
                       href="/contractor/login"
-                      className="mt-4 w-full inline-flex items-center justify-center px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colours"
+                      className="mt-4 w-full inline-flex items-center justify-center px-4 py-2 bg-green-700 text-white rounded hover:bg-green-800 transition-colours"
                     >
                       Try Demo
                       <ArrowRight className="h-4 w-4 ml-2" />

@@ -536,7 +536,7 @@ export default function CommissionTracking() {
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                         transaction.type === 'sale' ? 'bg-green-100 text-green-800' :
                         transaction.type === 'lead' ? 'bg-blue-100 text-blue-800' :
-                        'bg-purple-100 text-purple-800'
+                        'bg-purple-700 text-white'
                       }`}>
                         {transaction.type.toUpperCase()}
                       </span>

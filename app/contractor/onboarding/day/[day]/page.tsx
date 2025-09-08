@@ -235,7 +235,7 @@ export default function DayTrainingPage() {
               <div className="flex items-center space-x-2">
                 <Headphones className="w-4 h-4" />
                 <span>Podcast Episodes</span>
-                <span className="bg-purple-100 text-purple-600 px-2 py-0.5 rounded-full text-xs">
+                <span className="bg-purple-600 text-white px-2 py-0.5 rounded-full text-xs">
                   AI Generated
                 </span>
               </div>
@@ -594,7 +594,7 @@ export default function DayTrainingPage() {
                   </div>
                   <button
                     onClick={() => router.push('/contractor/onboarding')}
-                    className="mt-3 w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition"
+                    className="mt-3 w-full bg-green-700 text-white py-2 rounded-lg hover:bg-green-800 transition"
                   >
                     Continue to Next Day
                   </button>

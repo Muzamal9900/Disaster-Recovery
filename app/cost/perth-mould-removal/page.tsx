@@ -14,7 +14,7 @@ export default function PerthmouldremovalCostPage() {
           <DollarSign className="h-16 w-16 text-green-300 mb-6" />
           <h1 className="text-4xl font-bold mb-4">Perth Mould removal Cost</h1>
           <p className="text-xl mb-8">Transparent Pricing • Insurance Coverage • Free Quotes</p>
-          <Button size="lg" className="bg-green-600 hover:bg-green-700">
+          <Button size="lg" className="bg-green-600 hover:bg-green-800">
             <Calculator className="mr-2" /> Get Free Quote
           </Button>
         </div>

@@ -432,7 +432,7 @@ export default function InvoiceShockEpidemicPage() {
               Know the warning signs, understand your rights, and choose contractors committed to transparent pricing standards.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/guides/pricing/professional-response-pricing-breakdown" className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colours">
+              <Link href="/guides/pricing/professional-response-pricing-breakdown" className="bg-green-600 hover:bg-green-800 text-white font-semibold py-3 px-6 rounded-lg transition-colours">
                 See Transparent Pricing Guide
               </Link>
               <Link href="/guides/insurance/section-54-contractor-rights" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colours">

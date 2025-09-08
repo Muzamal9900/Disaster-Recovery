@@ -185,7 +185,7 @@ export default function StormDamageInsurancePage() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Covered Events */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="bg-green-600 text-white p-6">
+              <div className="bg-green-700 text-white p-6">
                 <CheckCircle className="w-10 h-10 mb-3" />
                 <h3 className="text-xl font-bold">{stormTypes.covered.title}</h3>
               </div>

@@ -455,7 +455,7 @@ export default function UltraModernHeader() {
                 >
                   <Link
                     href={item.href}
-                    className="relative px-5 py-2.5 text-sm font-medium text-gray-100 hover:text-white transition-all duration-300 rounded-full group"
+                    className="relative px-5 py-2.5 text-sm font-medium text-white hover:text-white transition-all duration-300 rounded-full group"
                     aria-haspopup={item.dropdown ? "true" : undefined}
                     aria-expanded={item.dropdown ? activeDropdown === item.label : undefined}
                     id={`nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
@@ -494,7 +494,7 @@ export default function UltraModernHeader() {
                       <div 
                         className="w-72 rounded-2xl overflow-hidden"
                         style={{
-                          background: 'rgba(0, 0, 0, 0.98)',
+                          background: 'rgba(20, 20, 30, 0.98)',
                           backdropFilter: 'blur(20px)',
                           border: '1px solid rgba(99, 91, 255, 0.3)',
                           boxShadow: '0 20px 50px rgba(0, 0, 0, 0.8)' }}
@@ -530,14 +530,14 @@ export default function UltraModernHeader() {
                                 <div className="text-white font-medium text-sm">
                                   {subItem.label}
                                 </div>
-                                <div className="text-gray-500 text-xs mt-0.5">
+                                <div className="text-gray-300 text-xs mt-0.5">
                                   {subItem.description}
                                 </div>
                               </div>
                               
                               {/* Arrow */}
                               <svg 
-                                className="w-4 h-4 text-gray-500 group-hover:text-purple-400 transition-all transform group-hover:translate-x-1"
+                                className="w-4 h-4 text-gray-300 group-hover:text-purple-400 transition-all transform group-hover:translate-x-1"
                                 fill="none" 
                                 stroke="currentColor" 
                                 viewBox="0 0 24 24"
@@ -554,7 +554,7 @@ export default function UltraModernHeader() {
                                 <div
                                   className="absolute left-full top-0 pl-2 w-80 transition-all duration-300"
                                 style={{
-                                  background: 'rgba(0, 0, 0, 0.98)',
+                                  background: 'rgba(20, 20, 30, 0.98)',
                                   backdropFilter: 'blur(20px)',
                                   border: '1px solid rgba(99, 91, 255, 0.3)',
                                   borderRadius: '16px',
@@ -569,7 +569,7 @@ export default function UltraModernHeader() {
                                       <Link
                                         key={formItem.label}
                                         href={formItem.href}
-                                        className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-all rounded-lg"
+                                        className="block px-3 py-2 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-all rounded-lg"
                                       >
                                         {formItem.label}
                                       </Link>
@@ -650,7 +650,7 @@ export default function UltraModernHeader() {
             mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
           }`}
           style={{
-            background: 'rgba(10, 10, 10, 0.95)',
+            background: 'rgba(20, 20, 30, 0.95)',
             backdropFilter: 'blur(20px)',
             borderTop: '1px solid rgba(99, 91, 255, 0.1)' }}
         >
@@ -659,7 +659,7 @@ export default function UltraModernHeader() {
               <div key={item.label}>
                 <Link
                   href={item.href}
-                  className="block px-4 py-3 rounded-xl text-gray-300 hover:text-white transition-all"
+                  className="block px-4 py-3 rounded-xl text-white hover:text-white transition-all"
                   onClick={() => setMobileMenuOpen(false)}
                   style={{
                     background: 'rgba(255, 255, 255, 0.03)' }}
@@ -673,7 +673,7 @@ export default function UltraModernHeader() {
                       <div key={subItem.label}>
                         <Link
                           href={subItem.href}
-                          className="flex items-center gap-3 px-4 py-2 text-sm text-gray-400 hover:text-white transition-colors"
+                          className="flex items-center gap-3 px-4 py-2 text-sm text-white/70 hover:text-white transition-colors"
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           <span>{subItem.icon}</span>
@@ -687,7 +687,7 @@ export default function UltraModernHeader() {
                               <Link
                                 key={formItem.label}
                                 href={formItem.href}
-                                className="block px-3 py-1 text-xs text-gray-500 hover:text-gray-300 transition-colors"
+                                className="block px-3 py-1 text-xs text-white/60 hover:text-white/80 transition-colors"
                                 onClick={() => setMobileMenuOpen(false)}
                               >
                                 {formItem.label}

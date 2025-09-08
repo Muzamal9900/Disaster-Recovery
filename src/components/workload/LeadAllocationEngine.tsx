@@ -576,7 +576,7 @@ const LeadAllocationEngine: React.FC<LeadAllocationEngineProps> = ({
           <button className="text-sm text-green-600 hover:text-green-700">
             View Audit Log
           </button>
-          <button className="flex items-center px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700 text-sm">
+          <button className="flex items-center px-3 py-1 bg-green-700 text-white rounded hover:bg-green-800 text-sm">
             <Download className="w-4 h-4 mr-1" />
             Export Report
           </button>

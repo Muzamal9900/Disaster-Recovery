@@ -46,7 +46,7 @@ const severityColors = {
   minor: 'bg-yellow-100 text-yellow-800',
   moderate: 'bg-orange-100 text-orange-800',
   severe: 'bg-red-100 text-red-800',
-  catastrophic: 'bg-purple-100 text-purple-800'
+  catastrophic: 'bg-purple-700 text-white'
 };
 
 export default function EventsGalleryPage() {
@@ -614,7 +614,7 @@ export default function EventsGalleryPage() {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="p-2 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-colours"
+                      className="p-2 bg-green-700 text-white rounded-xl hover:bg-green-800 transition-colours"
                     >
                       <Share2 className="w-4 h-4" />
                     </motion.button>

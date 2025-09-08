@@ -155,7 +155,7 @@ export default function EquipmentSpecificationPage({ params }: EquipmentPageProp
 
                 {/* Quick Actions */}
                 <div className="p-4 border-t space-y-2">
-                  <Button className="w-full bg-green-600 hover:bg-green-700">
+                  <Button className="w-full bg-green-600 hover:bg-green-800">
                     <MessageSquare className="mr-2 h-4 w-4" />
                     Request Quote
                   </Button>

@@ -738,7 +738,7 @@ export default function OnlineClaimPage() {
                   </Button>
                   <Button 
                     onClick={handleSubmit} 
-                    className="bg-green-600 hover:bg-green-700"
+                    className="bg-green-600 hover:bg-green-800"
                     disabled={submitting}
                   >
                     {submitting ? 'Processing Payment...' : `Pay $${PLATFORM_FEE.toFixed(2)} & Submit Claim`}

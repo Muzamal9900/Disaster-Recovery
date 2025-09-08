@@ -507,7 +507,7 @@ export default function CoverageChecker() {
                 <div className="flex flex-wrap gap-4">
                   <a
                     href="tel:1800000000"
-                    className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-bold text-center hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
+                    className="flex-1 bg-green-700 text-white px-6 py-3 rounded-lg font-bold text-center hover:bg-green-800 transition-colors flex items-center justify-center gap-2"
                   >
                     <Phone className="w-5 h-5" />
                     Get Expert Help Now

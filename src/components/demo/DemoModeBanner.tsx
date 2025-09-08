@@ -125,7 +125,7 @@ export default function DemoModeBanner() {
               onClick={startInvestorPitchDemo}
               className="w-full flex items-center gap-3 px-4 py-3 hover:bg-blue-50 rounded-lg transition group"
             >
-              <div className="p-2 bg-purple-100 text-purple-600 rounded-lg group-hover:bg-purple-600 group-hover:text-white transition">
+              <div className="p-2 bg-purple-600 text-white rounded-lg group-hover:bg-purple-600 group-hover:text-white transition">
                 <Rocket className="h-5 w-5" />
               </div>
               <div className="text-left">

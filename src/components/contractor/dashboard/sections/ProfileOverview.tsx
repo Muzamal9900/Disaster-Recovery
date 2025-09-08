@@ -226,7 +226,7 @@ export function ProfileOverview({ profile, onUpdate }: ProfileOverviewProps) {
               className={`px-4 py-2 rounded ${
                 twoFactorEnabled
                   ? 'bg-red-600 text-white hover:bg-red-700'
-                  : 'bg-green-600 text-white hover:bg-green-700'
+                  : 'bg-green-700 text-white hover:bg-green-800'
               }`}
             >
               {twoFactorEnabled ? 'Disable' : 'Enable'}

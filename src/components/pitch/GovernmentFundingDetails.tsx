@@ -185,7 +185,7 @@ export default function GovernmentFundingDetails() {
                       <div className="space-y-2">
                         <div className="flex justify-between">
                           <span className="text-gray-300">National Recognition:</span>
-                          <Badge className="bg-green-600 text-white">Active</Badge>
+                          <Badge className="bg-green-700 text-white">Active</Badge>
                         </div>
                         <div className="flex justify-between">
                           <span className="text-gray-300">Queensland Providers:</span>

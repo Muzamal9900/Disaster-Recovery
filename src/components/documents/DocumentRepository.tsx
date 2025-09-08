@@ -271,7 +271,7 @@ const DocumentRepository: React.FC<DocumentRepositoryProps> = ({
       expired: { colour: 'bg-red-100 text-red-800', label: 'Expired' },
       expiring_soon: { colour: 'bg-yellow-100 text-yellow-800', label: 'Expiring Soon' },
       pending_signature: { colour: 'bg-blue-100 text-blue-800', label: 'Pending Signature' },
-      signed: { colour: 'bg-purple-100 text-purple-800', label: 'Signed' },
+      signed: { colour: 'bg-purple-700 text-white', label: 'Signed' },
       archived: { colour: 'bg-gray-100 text-gray-800', label: 'Archived' },
       rejected: { colour: 'bg-red-100 text-red-800', label: 'Rejected' },
       draft: { colour: 'bg-orange-100 text-orange-800', label: 'Draft' }

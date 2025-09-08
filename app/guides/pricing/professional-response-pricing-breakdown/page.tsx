@@ -86,7 +86,7 @@ export default function ProfessionalResponsePricingBreakdownPage() {
               
               <div className="bg-slate-800/50 border border-green-500/30 rounded-lg p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">1</div>
+                  <div className="bg-green-700 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">1</div>
                   <h3 className="font-semibold text-green-300">Emergency Callout</h3>
                 </div>
                 <ul className="space-y-2 text-slate-300 text-sm">
@@ -100,7 +100,7 @@ export default function ProfessionalResponsePricingBreakdownPage() {
 
               <div className="bg-slate-800/50 border border-green-500/30 rounded-lg p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">2</div>
+                  <div className="bg-green-700 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">2</div>
                   <h3 className="font-semibold text-green-300">Administrative Processing</h3>
                 </div>
                 <ul className="space-y-2 text-slate-300 text-sm">
@@ -114,7 +114,7 @@ export default function ProfessionalResponsePricingBreakdownPage() {
 
               <div className="bg-slate-800/50 border border-green-500/30 rounded-lg p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">3</div>
+                  <div className="bg-green-700 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">3</div>
                   <h3 className="font-semibold text-green-300">Professional Inspection</h3>
                 </div>
                 <ul className="space-y-2 text-slate-300 text-sm">
@@ -128,7 +128,7 @@ export default function ProfessionalResponsePricingBreakdownPage() {
 
               <div className="bg-slate-800/50 border border-green-500/30 rounded-lg p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">4</div>
+                  <div className="bg-green-700 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">4</div>
                   <h3 className="font-semibold text-green-300">Detection Equipment</h3>
                 </div>
                 <ul className="space-y-2 text-slate-300 text-sm">
@@ -142,7 +142,7 @@ export default function ProfessionalResponsePricingBreakdownPage() {
 
               <div className="bg-slate-800/50 border border-green-500/30 rounded-lg p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">5</div>
+                  <div className="bg-green-700 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">5</div>
                   <h3 className="font-semibold text-green-300">Make Safe Procedures</h3>
                 </div>
                 <ul className="space-y-2 text-slate-300 text-sm">
@@ -156,7 +156,7 @@ export default function ProfessionalResponsePricingBreakdownPage() {
 
               <div className="bg-slate-800/50 border border-green-500/30 rounded-lg p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">6</div>
+                  <div className="bg-green-700 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">6</div>
                   <h3 className="font-semibold text-green-300">Transparent Scope</h3>
                 </div>
                 <ul className="space-y-2 text-slate-300 text-sm">
@@ -170,7 +170,7 @@ export default function ProfessionalResponsePricingBreakdownPage() {
 
               <div className="bg-slate-800/50 border border-green-500/30 rounded-lg p-6 md:col-span-2 lg:col-span-3">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">7</div>
+                  <div className="bg-green-700 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">7</div>
                   <h3 className="font-semibold text-green-300">Detailed Professional Report</h3>
                 </div>
                 <div className="grid md:grid-cols-3 gap-4">
@@ -598,7 +598,7 @@ export default function ProfessionalResponsePricingBreakdownPage() {
               The NRP framework puts policy holders back in control. Choose your contractor, understand your costs, and work directly with professionals who answer to you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/guides/professional/nrp-best-practices-guide" className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colours">
+              <Link href="/guides/professional/nrp-best-practices-guide" className="bg-green-600 hover:bg-green-800 text-white font-semibold py-3 px-6 rounded-lg transition-colours">
                 Verify Professional Standards
               </Link>
               <Link href="/guides/insurance/section-54-contractor-rights" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colours">
