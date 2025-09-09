@@ -355,7 +355,7 @@ export default function UltraModernServicesPage() {
                           className="text-center"
                         >
                           <div className="text-2xl font-bold gradient-text">{stat.value}</div>
-                          <div className="text-xs text-gray-500">{stat.label}</div>
+                          <div className="text-xs text-gray-400">{stat.label}</div>
                         </motion.div>
                       ))}
                     </div>
