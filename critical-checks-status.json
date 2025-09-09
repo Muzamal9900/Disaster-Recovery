@@ -1,11 +1,12 @@
 {
-  "timestamp": "2025-09-06T19:56:48.947Z",
-  "status": "PASSED",
+  "timestamp": "2025-09-09T12:24:04.502Z",
+  "status": "FAILED",
   "results": {
     "crmAccess": "PASSED",
     "commercialPage": "PASSED",
-    "investmentPitch": "PASSED",
+    "investmentPitch": "FAILED",
     "criticalPages": "PASSED",
     "noSyntaxErrors": "PASSED"
-  }
+  },
+  "issueCount": 1
 }
