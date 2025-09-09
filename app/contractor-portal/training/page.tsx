@@ -114,7 +114,15 @@ export default function ContractorPortalTrainingPage() {
           {/* Course List */}
           <div className="lg:col-span-2">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h2 className="text-2xl font-semibold text-white mb-6">My Courses</h2>
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-2xl font-semibold text-white">My Courses</h2>
+                <button 
+                  onClick={() => window.location.href = '/contractor-portal/training/courses'}
+                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-semibold"
+                >
+                  Browse All Courses →
+                </button>
+              </div>
               <div className="space-y-4">
                 {courses.map((course) => (
                   <div key={course.id} className="p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
@@ -156,7 +164,10 @@ export default function ContractorPortalTrainingPage() {
                           Download Certificate
                         </button>
                       ) : (
-                        <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm flex items-center gap-2">
+                        <button 
+                          onClick={() => window.location.href = '/contractor-portal/training/courses'}
+                          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm flex items-center gap-2"
+                        >
                           <PlayCircle className="w-4 h-4" />
                           {course.status === 'not-started' ? 'Start Course' : 'Continue Learning'}
                         </button>
