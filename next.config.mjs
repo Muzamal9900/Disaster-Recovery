@@ -3,13 +3,10 @@ const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
   
-  // FORCE DEPLOYMENT - CACHE CLEAR
+  // FORCE DEPLOYMENT - CACHE CLEAR  
   generateBuildId: async () => {
-    return 'build-2025-09-09-INCLUDE-ALL-PAGES-' + Date.now()
+    return 'build-force-all-pages-' + Date.now()
   },
-  
-  // Force static generation of dynamic routes
-  generateStaticParams: true,
   
   // Disable type checking during build
   typescript: {
