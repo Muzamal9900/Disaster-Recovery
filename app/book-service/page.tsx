@@ -162,7 +162,8 @@ export default function BookServicePage() {
     window.scrollTo(0, 0);
   };
 
-  const handleSubmit = async () => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     if (!validateStep(5)) return;
 
     setIsProcessing(true);
@@ -227,28 +228,44 @@ export default function BookServicePage() {
       </div>
 
       {/* Progress Bar */}
-      <div className="bg-white border-b">
+      <div className="bg-white border-b" role="navigation" aria-label="Form progress">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             {[1, 2, 3, 4, 5].map((step) => (
               <div key={step} className="flex-1">
                 <div className="flex items-center">
                   <div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold transition-colours ${
+                    className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold transition-all duration-300 ${
                       step < currentStep
-                        ? 'bg-green-500 text-white'
+                        ? 'bg-green-500 text-white ring-2 ring-green-200'
                         : step === currentStep
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-200 text-gray-200'
+                        ? 'bg-blue-600 text-white ring-4 ring-blue-200 scale-110'
+                        : 'bg-gray-200 text-gray-400'
                     }`}
+                    role="progressbar"
+                    aria-valuenow={step}
+                    aria-valuemin={1}
+                    aria-valuemax={5}
+                    aria-label={`Step ${step}: ${
+                      step === 1 ? 'Service Details' :
+                      step === 2 ? 'Property Info' :
+                      step === 3 ? 'Contact' :
+                      step === 4 ? 'Insurance' :
+                      'Payment'
+                    } ${step < currentStep ? '(Completed)' : step === currentStep ? '(Current)' : '(Not started)'}`}
                   >
                     {step < currentStep ? <CheckCircle className="h-6 w-6" /> : step}
                   </div>
                   {step < 5 && (
-                    <div className={`flex-1 h-1 mx-2 ${step < currentStep ? 'bg-green-500' : 'bg-gray-200'}`} />
+                    <div className={`flex-1 h-2 mx-2 rounded-full transition-all duration-500 ${
+                      step < currentStep ? 'bg-green-500' : 'bg-gray-200'
+                    }`} />
                   )}
                 </div>
-                <p className="text-xs mt-1 text-gray-200">
+                <p className={`text-xs mt-1 font-medium ${
+                  step === currentStep ? 'text-blue-600' : 
+                  step < currentStep ? 'text-green-600' : 'text-gray-400'
+                }`}>
                   {step === 1 && 'Service Details'}
                   {step === 2 && 'Property Info'}
                   {step === 3 && 'Contact'}
@@ -257,6 +274,9 @@ export default function BookServicePage() {
                 </p>
               </div>
             ))}
+          </div>
+          <div className="mt-2 text-center text-sm text-gray-300">
+            Step {currentStep} of 5
           </div>
         </div>
       </div>
@@ -282,7 +302,7 @@ export default function BookServicePage() {
           </div>
 
           {/* Form Steps */}
-          <div className="bg-white rounded-xl shadow-lg p-8">
+          <form onSubmit={handleFormSubmit} className="bg-white rounded-xl shadow-lg p-8">
             {/* Step 1: Service Details */}
             {currentStep === 1 && (
               <div className="space-y-6">
@@ -553,7 +573,13 @@ export default function BookServicePage() {
                       className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 ${
                         errors.lastName ? 'border-red-300' : 'border-gray-300'
                       }`}
+                      placeholder="Enter your last name"
+                      aria-required="true"
+                      aria-invalid={!!errors.lastName}
                     />
+                    {!errors.lastName && (
+                      <p className="mt-1 text-xs text-gray-300">As it appears on your insurance documents</p>
+                    )}
                     {errors.lastName && <p className="mt-1 text-sm text-red-600">{errors.lastName}</p>}
                   </div>
                 </div>
@@ -858,8 +884,7 @@ export default function BookServicePage() {
                 </button>
               ) : (
                 <button
-                  type="button"
-                  onClick={handleSubmit}
+                  type="submit"
                   disabled={isProcessing}
                   className="ml-auto px-8 py-3 bg-green-700 text-white rounded-lg hover:bg-green-800 transition-colours flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
@@ -877,7 +902,7 @@ export default function BookServicePage() {
                 </button>
               )}
             </div>
-          </div>
+          </form>
 
           {/* Trust Badges */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-200">
