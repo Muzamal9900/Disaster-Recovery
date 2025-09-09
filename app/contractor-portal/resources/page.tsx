@@ -1,6 +1,6 @@
 'use client';
 
-import { FileText, Download, Video, Book, Shield, Tool, HelpCircle, Award } from 'lucide-react';
+import { FileText, Download, Video, Book, Shield, Wrench, HelpCircle, Award } from 'lucide-react';
 
 export default function ContractorPortalResourcesPage() {
   const resources = [
@@ -28,7 +28,7 @@ export default function ContractorPortalResourcesPage() {
     },
     {
       category: 'Equipment Guides',
-      icon: Tool,
+      icon: Wrench,
       color: 'bg-green-600',
       items: [
         { title: 'Dehumidifier Operation Manual', type: 'PDF', size: '3.2 MB' },
