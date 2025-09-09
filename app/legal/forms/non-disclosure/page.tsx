@@ -1,4 +1,4 @@
-import LegalFormLayout from '../../../components/legal/LegalFormLayout';
+import LegalFormLayout from '../../../../src/components/legal/LegalFormLayout';
 
 export default function NonDisclosurePage() {
   const sections = [
