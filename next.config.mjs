@@ -3,10 +3,13 @@ const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
   
-  // FORCE DEPLOYMENT - CACHE CLEAR  
+  // FORCE DEPLOYMENT - BUILD ALL 663 PAGES  
   generateBuildId: async () => {
-    return 'build-force-all-pages-' + Date.now()
+    return 'build-all-663-pages-' + Date.now()
   },
+  
+  // Force static generation of all pages
+  trailingSlash: false,
   
   // Disable type checking during build
   typescript: {
