@@ -1,7 +1,7 @@
 {
   "framework": "nextjs",
   "installCommand": "npm install --force --legacy-peer-deps",
-  "buildCommand": "npx prisma generate && npx next build",
+  "buildCommand": "npx next build",
   "outputDirectory": ".next",
   "public": true,
   "env": {

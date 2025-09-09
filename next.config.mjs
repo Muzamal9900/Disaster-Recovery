@@ -5,7 +5,7 @@ const nextConfig = {
   
   // FORCE DEPLOYMENT - CACHE CLEAR
   generateBuildId: async () => {
-    return 'build-2025-01-30-FORCE-DEPLOY-001'
+    return 'build-2025-09-09-FIX-404-PAGES-' + Date.now()
   },
   
   // Disable type checking during build
