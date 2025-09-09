@@ -87,7 +87,7 @@ export default function ClientPortalClaimsPage() {
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-200 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search claims by ID, property, or type..."
@@ -134,14 +134,14 @@ export default function ClientPortalClaimsPage() {
                     </span>
                   </div>
                   <div className="space-y-1 text-gray-300">
-                    <p><span className="text-gray-400">Property:</span> {claim.property}</p>
-                    <p><span className="text-gray-400">Type:</span> {claim.type}</p>
-                    <p><span className="text-gray-400">Date Filed:</span> {claim.date}</p>
+                    <p><span className="text-gray-200">Property:</span> {claim.property}</p>
+                    <p><span className="text-gray-200">Type:</span> {claim.type}</p>
+                    <p><span className="text-gray-200">Date Filed:</span> {claim.date}</p>
                   </div>
                 </div>
                 <div className="text-right">
                   <p className="text-2xl font-bold text-white mb-1">{claim.amount}</p>
-                  <p className="text-sm text-gray-400">Last updated {claim.lastUpdate}</p>
+                  <p className="text-sm text-gray-200">Last updated {claim.lastUpdate}</p>
                   <button className="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm">
                     View Details
                   </button>
@@ -153,7 +153,7 @@ export default function ClientPortalClaimsPage() {
 
         {filteredClaims.length === 0 && (
           <div className="text-center py-12">
-            <FileText className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <FileText className="w-16 h-16 text-gray-200 mx-auto mb-4" />
             <p className="text-gray-300 text-lg">No claims found matching your criteria</p>
           </div>
         )}

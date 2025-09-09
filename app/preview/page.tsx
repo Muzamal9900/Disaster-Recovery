@@ -51,12 +51,12 @@ export default function PreviewPage() {
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Before - Old Design */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gray-500 mb-4">❌ Before (Old Design)</h3>
+            <h3 className="text-xl font-bold text-gray-300 mb-4">❌ Before (Old Design)</h3>
             
             {/* Old Card Style */}
             <Card className="p-6 border-2 border-gray-300 bg-gray-50">
               <h4 className="text-lg font-semibold mb-2">Water Damage Service</h4>
-              <p className="text-gray-600 mb-4">Basic service description without visual hierarchy.</p>
+              <p className="text-gray-200 mb-4">Basic service description without visual hierarchy.</p>
               <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
                 Get Help Now
               </button>
@@ -99,7 +99,7 @@ export default function PreviewPage() {
                     <Shield className="w-6 h-6 text-blue-600" />
                   </div>
                 </div>
-                <p className="text-gray-600 leading-relaxed mb-4">
+                <p className="text-gray-200 leading-relaxed mb-4">
                   Premium service with advanced moisture detection, structural drying, and insurance assistance.
                 </p>
                 <button className="group flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
@@ -151,7 +151,7 @@ export default function PreviewPage() {
           <h3 className="text-2xl font-bold mb-6">Premium Button System</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h4 className="text-sm font-semibold text-gray-500 mb-3">OLD BUTTONS</h4>
+              <h4 className="text-sm font-semibold text-gray-300 mb-3">OLD BUTTONS</h4>
               <div className="space-y-3">
                 <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 w-full">
                   Emergency (Too Aggressive)
@@ -192,22 +192,22 @@ export default function PreviewPage() {
             <div className="text-center">
               <div className="w-full h-24 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl mb-2 shadow-lg" />
               <p className="text-sm font-semibold">Primary Ocean</p>
-              <p className="text-xs text-gray-500">#0284C7</p>
+              <p className="text-xs text-gray-300">#0284C7</p>
             </div>
             <div className="text-center">
               <div className="w-full h-24 bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl mb-2 shadow-lg" />
               <p className="text-sm font-semibold">Accent Emerald</p>
-              <p className="text-xs text-gray-500">#059669</p>
+              <p className="text-xs text-gray-300">#059669</p>
             </div>
             <div className="text-center">
               <div className="w-full h-24 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl mb-2 shadow-lg" />
               <p className="text-sm font-semibold">Neutral Gray</p>
-              <p className="text-xs text-gray-500">#F5F5F5</p>
+              <p className="text-xs text-gray-300">#F5F5F5</p>
             </div>
             <div className="text-center">
               <div className="w-full h-24 bg-gradient-to-br from-red-600 to-red-500 rounded-xl mb-2 shadow-lg" />
               <p className="text-sm font-semibold">Emergency Red</p>
-              <p className="text-xs text-gray-500">#DC2626</p>
+              <p className="text-xs text-gray-300">#DC2626</p>
             </div>
           </div>
         </div>
@@ -217,17 +217,17 @@ export default function PreviewPage() {
           <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg text-center">
             <TrendingUp className="w-12 h-12 text-green-600 mx-auto mb-3" />
             <h4 className="text-3xl font-bold text-gray-900 mb-1">+250%</h4>
-            <p className="text-gray-600">Visual Appeal</p>
+            <p className="text-gray-200">Visual Appeal</p>
           </div>
           <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg text-center">
             <Users className="w-12 h-12 text-blue-600 mx-auto mb-3" />
             <h4 className="text-3xl font-bold text-gray-900 mb-1">10/10</h4>
-            <p className="text-gray-600">Professional Score</p>
+            <p className="text-gray-200">Professional Score</p>
           </div>
           <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg text-center">
             <Award className="w-12 h-12 text-purple-600 mx-auto mb-3" />
             <h4 className="text-3xl font-bold text-gray-900 mb-1">Premium</h4>
-            <p className="text-gray-600">Design Quality</p>
+            <p className="text-gray-200">Design Quality</p>
           </div>
         </div>
       </section>

@@ -479,7 +479,7 @@ export default function CommercialPropertyPage() {
                   className={`px-4 py-2 rounded-lg font-semibold transition-all ${
                     selectedBusinessType === key
                       ? 'bg-blue-600 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-blue-50 border border-gray-200'
+                      : 'bg-white text-gray-200 hover:bg-blue-50 border border-gray-200'
                   }`}
                 >
                   {businessTypes[key as keyof typeof businessTypes].name}
@@ -499,7 +499,7 @@ export default function CommercialPropertyPage() {
                   <h3 className="text-2xl font-bold mb-4">
                     {businessTypes[selectedBusinessType as keyof typeof businessTypes].name}
                   </h3>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-gray-200 mb-6">
                     {businessTypes[selectedBusinessType as keyof typeof businessTypes].description}
                   </p>
                   
@@ -509,7 +509,7 @@ export default function CommercialPropertyPage() {
                       {businessTypes[selectedBusinessType as keyof typeof businessTypes].criticalConcerns.map((concern, idx) => (
                         <li key={idx} className="flex items-start gap-2">
                           <AlertCircle className="w-5 h-5 text-orange-500 mt-0.5" />
-                          <span className="text-gray-700">{concern}</span>
+                          <span className="text-gray-200">{concern}</span>
                         </li>
                       ))}
                     </ul>
@@ -518,12 +518,12 @@ export default function CommercialPropertyPage() {
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-white rounded-lg p-4 border border-gray-200">
                       <Clock className="w-6 h-6 text-red-600 mb-2" />
-                      <p className="text-sm font-semibold text-gray-600">Avg Downtime</p>
+                      <p className="text-sm font-semibold text-gray-200">Avg Downtime</p>
                       <p className="font-bold">{businessTypes[selectedBusinessType as keyof typeof businessTypes].averageDowntime}</p>
                     </div>
                     <div className="bg-white rounded-lg p-4 border border-gray-200">
                       <DollarSign className="w-6 h-6 text-green-600 mb-2" />
-                      <p className="text-sm font-semibold text-gray-600">Revenue Impact</p>
+                      <p className="text-sm font-semibold text-gray-200">Revenue Impact</p>
                       <p className="font-bold text-sm">{businessTypes[selectedBusinessType as keyof typeof businessTypes].revenueImpact}</p>
                     </div>
                   </div>
@@ -539,7 +539,7 @@ export default function CommercialPropertyPage() {
                       {businessTypes[selectedBusinessType as keyof typeof businessTypes].insuranceNeeds.map((need, idx) => (
                         <li key={idx} className="flex items-start gap-2">
                           <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
-                          <span className="text-gray-700 text-sm">{need}</span>
+                          <span className="text-gray-200 text-sm">{need}</span>
                         </li>
                       ))}
                     </ul>
@@ -588,7 +588,7 @@ export default function CommercialPropertyPage() {
                   <h3 className="font-bold text-lg mb-3">{priority.title}</h3>
                   <ul className="space-y-1">
                     {priority.actions.map((action, idx) => (
-                      <li key={idx} className="text-sm text-gray-600 flex items-start gap-1">
+                      <li key={idx} className="text-sm text-gray-200 flex items-start gap-1">
                         <span className="text-red-500 mt-0.5">•</span>
                         {action}
                       </li>
@@ -625,7 +625,7 @@ export default function CommercialPropertyPage() {
                   className="bg-gradient-to-br from-gray-50 to-white rounded-lg p-6 border border-gray-200"
                 >
                   <h3 className="font-bold text-lg mb-3 text-gray-900">{factor.factor}</h3>
-                  <p className="text-sm text-gray-600 mb-3">{factor.description}</p>
+                  <p className="text-sm text-gray-200 mb-3">{factor.description}</p>
                   <div className="space-y-2 text-sm">
                     <div className="bg-blue-50 p-2 rounded">
                       <span className="font-semibold text-blue-900">Calculation:</span>
@@ -681,8 +681,8 @@ export default function CommercialPropertyPage() {
                           {insurance.importance}
                         </span>
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600">{insurance.includes}</td>
-                      <td className="px-6 py-4 text-sm text-gray-600">{insurance.considerations}</td>
+                      <td className="px-6 py-4 text-sm text-gray-200">{insurance.includes}</td>
+                      <td className="px-6 py-4 text-sm text-gray-200">{insurance.considerations}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -734,7 +734,7 @@ export default function CommercialPropertyPage() {
                       {phase.tasks.map((task, idx) => (
                         <div key={idx} className="flex items-center gap-2">
                           <CheckCircle className="w-4 h-4 text-green-500" />
-                          <span className="text-sm text-gray-600">{task}</span>
+                          <span className="text-sm text-gray-200">{task}</span>
                         </div>
                       ))}
                     </div>
@@ -772,7 +772,7 @@ export default function CommercialPropertyPage() {
                   <h3 className="font-bold text-lg mb-3">{cost.category}</h3>
                   <ul className="space-y-2 mb-4">
                     {cost.items.map((item, idx) => (
-                      <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
+                      <li key={idx} className="text-sm text-gray-200 flex items-start gap-2">
                         <span className="text-green-500 mt-0.5">•</span>
                         {item}
                       </li>
@@ -825,7 +825,7 @@ export default function CommercialPropertyPage() {
                     />
                   </button>
                   {expandedFAQ === index && (
-                    <div className="px-6 pb-4 text-gray-600 border-t border-gray-100">
+                    <div className="px-6 pb-4 text-gray-200 border-t border-gray-100">
                       <p className="pt-4">{faq.answer}</p>
                     </div>
                   )}
@@ -856,7 +856,7 @@ export default function CommercialPropertyPage() {
               >
                 <TrendingUp className="w-10 h-10 text-blue-600 mb-3" />
                 <h3 className="font-bold mb-2">Business Continuity</h3>
-                <p className="text-gray-600 text-sm">Planning guide for disaster preparedness</p>
+                <p className="text-gray-200 text-sm">Planning guide for disaster preparedness</p>
               </Link>
               
               <Link
@@ -865,7 +865,7 @@ export default function CommercialPropertyPage() {
               >
                 <BarChart className="w-10 h-10 text-green-600 mb-3" />
                 <h3 className="font-bold mb-2">BI Insurance Guide</h3>
-                <p className="text-gray-600 text-sm">Understanding business interruption coverage</p>
+                <p className="text-gray-200 text-sm">Understanding business interruption coverage</p>
               </Link>
               
               <Link
@@ -874,7 +874,7 @@ export default function CommercialPropertyPage() {
               >
                 <Droplets className="w-10 h-10 text-orange-600 mb-3" />
                 <h3 className="font-bold mb-2">Water Damage</h3>
-                <p className="text-gray-600 text-sm">Commercial water damage specifics</p>
+                <p className="text-gray-200 text-sm">Commercial water damage specifics</p>
               </Link>
               
               <Link
@@ -883,7 +883,7 @@ export default function CommercialPropertyPage() {
               >
                 <Phone className="w-10 h-10 text-red-600 mb-3" />
                 <h3 className="font-bold mb-2">Emergency Contacts</h3>
-                <p className="text-gray-600 text-sm">24/7 commercial restoration services</p>
+                <p className="text-gray-200 text-sm">24/7 commercial restoration services</p>
               </Link>
             </div>
           </motion.div>

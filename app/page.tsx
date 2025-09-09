@@ -51,7 +51,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-xl text-gray-600 mb-8"
+                className="text-xl text-gray-200 mb-8"
               >
                 Connect with Australia's elite IICRC-certified restoration specialists.
                 24-48 hour response prevents 50% of secondary damage. 100% online.
@@ -68,7 +68,7 @@ export default function HomePage() {
                   <CardContent className="p-6 text-center relative">
                     <Globe className="h-10 w-10 text-green-600 mx-auto mb-3 floating" style={{ animationDelay: '0.5s' }} />
                     <h3 className="font-semibold mb-1">Online Claim</h3>
-                    <p className="text-sm text-gray-600">2-minute form</p>
+                    <p className="text-sm text-gray-200">2-minute form</p>
                     <p className="text-xs text-green-600 mt-2">Quick & Easy</p>
                   </CardContent>
                 </Card>
@@ -77,7 +77,7 @@ export default function HomePage() {
                   <CardContent className="p-6 text-center relative">
                     <Mail className="h-10 w-10 text-purple-600 mx-auto mb-3 floating" style={{ animationDelay: '1s' }} />
                     <h3 className="font-semibold mb-1">Email Support</h3>
-                    <p className="text-sm text-gray-600">Detailed help</p>
+                    <p className="text-sm text-gray-200">Detailed help</p>
                     <p className="text-xs text-green-600 mt-2">&lt; 1hr response</p>
                   </CardContent>
                 </Card>
@@ -170,7 +170,7 @@ export default function HomePage() {
                   )}
                   <div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-sm text-gray-600 mb-3">{service.desc}</p>
+                  <p className="text-sm text-gray-200 mb-3">{service.desc}</p>
                   <button 
                     className="text-blue-600 font-semibold hover:text-blue-700"
                     onClick={() => window.location.href = '/services'}
@@ -220,7 +220,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <h3 className="text-xl font-semibold mb-4 text-blue-600">Residential</h3>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-gray-200">
                   <li>• Single homes to 80+ floor high-rises</li>
                   <li>• Granny flats to luxury penthouses</li>
                   <li>• Strata & body corporate</li>
@@ -229,7 +229,7 @@ export default function HomePage() {
               </div>
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <h3 className="text-xl font-semibold mb-4 text-green-600">Commercial</h3>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-gray-200">
                   <li>• Corner shops to mega malls</li>
                   <li>• Offices to corporate towers</li>
                   <li>• Hotels, restaurants, cafes</li>
@@ -238,7 +238,7 @@ export default function HomePage() {
               </div>
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <h3 className="text-xl font-semibold mb-4 text-purple-600">Industrial</h3>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-gray-200">
                   <li>• Warehouses to factories</li>
                   <li>• Data centers & clean rooms</li>
                   <li>• Mining sites & oil rigs</li>
@@ -272,7 +272,7 @@ export default function HomePage() {
                 >
                   <feature.icon className="h-12 w-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.desc}</p>
+                  <p className="text-gray-200">{feature.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -304,7 +304,7 @@ export default function HomePage() {
                     {item.step}
                   </div>
                   <h3 className="font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-600">{item.desc}</p>
+                  <p className="text-sm text-gray-200">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -322,7 +322,7 @@ export default function HomePage() {
                 <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
               ))}
             </div>
-            <p className="text-center text-lg text-gray-600 mb-12">
+            <p className="text-center text-lg text-gray-200 mb-12">
               4.9/5 from 10,000+ verified reviews
             </p>
 
@@ -354,10 +354,10 @@ export default function HomePage() {
                         <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <p className="text-gray-700 mb-4 italic">"{testimonial.quote}"</p>
+                    <p className="text-gray-200 mb-4 italic">"{testimonial.quote}"</p>
                     <div className="border-t pt-4">
                       <p className="font-semibold">{testimonial.author}</p>
-                      <p className="text-sm text-gray-600">{testimonial.location}</p>
+                      <p className="text-sm text-gray-200">{testimonial.location}</p>
                       <p className="text-xs text-blue-600 mt-1">{testimonial.service}</p>
                     </div>
                   </CardContent>

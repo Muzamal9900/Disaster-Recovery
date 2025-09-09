@@ -77,15 +77,15 @@ export default function CommunicationModule() {
             
             <li key="0" className="flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Multi-Channel Communication</span>
+              <span className="text-gray-200">Multi-Channel Communication</span>
             </li>
             <li key="1" className="flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Automated Notifications</span>
+              <span className="text-gray-200">Automated Notifications</span>
             </li>
             <li key="2" className="flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Insurance Company Interface</span>
+              <span className="text-gray-200">Insurance Company Interface</span>
             </li>
           </ul>
         </CardContent>
@@ -144,7 +144,7 @@ export default function CommunicationModule() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="prose prose-gray max-w-none">
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">
                   Communication Channels:
 • SMS Alerts - Instant lead notifications
 • Email Updates - Detailed job information
@@ -204,7 +204,7 @@ export default function CommunicationModule() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="prose prose-gray max-w-none">
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">
                   Notification Triggers:
 • New lead in territory → SMS + Push notification
 • Lead acceptance deadline → Reminder alert
@@ -264,7 +264,7 @@ export default function CommunicationModule() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="prose prose-gray max-w-none">
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">
                   Insurer Communication:
 • Real-time claim status updates
 • Photo and document uploads

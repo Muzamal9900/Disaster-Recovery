@@ -306,7 +306,7 @@ const RoleBasedAccessControl: React.FC<RoleBasedAccessControlProps> = ({
       case 'limited': return 'text-yellow-600 bg-yellow-50';
       case 'read_only': return 'text-blue-600 bg-blue-50';
       case 'none': return 'text-red-600 bg-red-50';
-      default: return 'text-gray-600 bg-gray-50';
+      default: return 'text-gray-200 bg-gray-50';
     }
   };
 
@@ -330,7 +330,7 @@ const RoleBasedAccessControl: React.FC<RoleBasedAccessControlProps> = ({
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="text-xl font-semibold text-gray-900">User Permissions</h2>
-                <p className="text-sm text-gray-600 mt-1">{selectedUser.userName} - {selectedUser.email}</p>
+                <p className="text-sm text-gray-200 mt-1">{selectedUser.userName} - {selectedUser.email}</p>
               </div>
               <button 
                 onClick={() => {
@@ -339,14 +339,14 @@ const RoleBasedAccessControl: React.FC<RoleBasedAccessControlProps> = ({
                 }}
                 className="p-2 hover:bg-gray-100 rounded-lg"
               >
-                <X className="w-5 h-5 text-gray-400" />
+                <X className="w-5 h-5 text-gray-200" />
               </button>
             </div>
           </div>
           
           <div className="p-6 space-y-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-200 mb-2">
                 User Role
               </label>
               <select
@@ -364,7 +364,7 @@ const RoleBasedAccessControl: React.FC<RoleBasedAccessControlProps> = ({
             </div>
 
             <div>
-              <h3 className="text-sm font-medium text-gray-700 mb-3">Permissions</h3>
+              <h3 className="text-sm font-medium text-gray-200 mb-3">Permissions</h3>
               <div className="space-y-3">
                 {Object.entries(selectedUser.permissions).map(([key, value]) => (
                   <div key={key} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
@@ -380,7 +380,7 @@ const RoleBasedAccessControl: React.FC<RoleBasedAccessControlProps> = ({
                         disabled={currentUserRole !== 'admin' && currentUserRole !== 'compliance_manager'}
                         className="mr-3"
                       />
-                      <span className="text-sm text-gray-700">
+                      <span className="text-sm text-gray-200">
                         {key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                       </span>
                     </label>
@@ -395,16 +395,16 @@ const RoleBasedAccessControl: React.FC<RoleBasedAccessControlProps> = ({
             </div>
 
             <div>
-              <h3 className="text-sm font-medium text-gray-700 mb-3">Access Information</h3>
+              <h3 className="text-sm font-medium text-gray-200 mb-3">Access Information</h3>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <p className="text-gray-600">Access Level:</p>
+                  <p className="text-gray-200">Access Level:</p>
                   <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium mt-1 ${getAccessLevelColor(selectedUser.accessLevel)}`}>
                     {selectedUser.accessLevel.replace('_', ' ').toUpperCase()}
                   </span>
                 </div>
                 <div>
-                  <p className="text-gray-600">Status:</p>
+                  <p className="text-gray-200">Status:</p>
                   <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium mt-1 ${
                     selectedUser.status === 'active' ? 'bg-green-100 text-green-800' :
                     selectedUser.status === 'suspended' ? 'bg-red-100 text-red-800' :
@@ -414,12 +414,12 @@ const RoleBasedAccessControl: React.FC<RoleBasedAccessControlProps> = ({
                   </span>
                 </div>
                 <div>
-                  <p className="text-gray-600">Last Active:</p>
+                  <p className="text-gray-200">Last Active:</p>
                   <p className="font-medium">{new Date(selectedUser.lastActive).toLocaleString()}</p>
                 </div>
                 {selectedUser.contractorName && (
                   <div>
-                    <p className="text-gray-600">Organisation:</p>
+                    <p className="text-gray-200">Organisation:</p>
                     <p className="font-medium">{selectedUser.contractorName}</p>
                   </div>
                 )}
@@ -463,12 +463,12 @@ const RoleBasedAccessControl: React.FC<RoleBasedAccessControlProps> = ({
         <table className="w-full">
           <thead>
             <tr className="border-b border-gray-200">
-              <th className="text-left py-3 px-4 font-medium text-gray-700">Permission</th>
-              <th className="text-center py-3 px-4 font-medium text-gray-700">Admin</th>
-              <th className="text-center py-3 px-4 font-medium text-gray-700">Compliance Manager</th>
-              <th className="text-center py-3 px-4 font-medium text-gray-700">Auditor</th>
-              <th className="text-center py-3 px-4 font-medium text-gray-700">Contractor</th>
-              <th className="text-center py-3 px-4 font-medium text-gray-700">Viewer</th>
+              <th className="text-left py-3 px-4 font-medium text-gray-200">Permission</th>
+              <th className="text-center py-3 px-4 font-medium text-gray-200">Admin</th>
+              <th className="text-center py-3 px-4 font-medium text-gray-200">Compliance Manager</th>
+              <th className="text-center py-3 px-4 font-medium text-gray-200">Auditor</th>
+              <th className="text-center py-3 px-4 font-medium text-gray-200">Contractor</th>
+              <th className="text-center py-3 px-4 font-medium text-gray-200">Viewer</th>
             </tr>
           </thead>
           <tbody>
@@ -559,7 +559,7 @@ const RoleBasedAccessControl: React.FC<RoleBasedAccessControlProps> = ({
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Access Control Management</h1>
-          <p className="text-gray-600 mt-1">Manage user roles and permissions</p>
+          <p className="text-gray-200 mt-1">Manage user roles and permissions</p>
         </div>
         {(currentUserRole === 'admin' || currentUserRole === 'compliance_manager') && (
           <button 
@@ -577,7 +577,7 @@ const RoleBasedAccessControl: React.FC<RoleBasedAccessControlProps> = ({
           <h3 className="text-lg font-semibold text-gray-900">User Access List</h3>
           <div className="flex items-center space-x-4">
             <div className="relative">
-              <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-200" />
               <input
                 type="text"
                 placeholder="Search users..."
@@ -605,12 +605,12 @@ const RoleBasedAccessControl: React.FC<RoleBasedAccessControlProps> = ({
           <table className="w-full">
             <thead>
               <tr className="border-b border-gray-200">
-                <th className="text-left py-3 px-4 font-medium text-gray-700">User</th>
-                <th className="text-left py-3 px-4 font-medium text-gray-700">Role</th>
-                <th className="text-left py-3 px-4 font-medium text-gray-700">Access Level</th>
-                <th className="text-left py-3 px-4 font-medium text-gray-700">Status</th>
-                <th className="text-left py-3 px-4 font-medium text-gray-700">Last Active</th>
-                <th className="text-left py-3 px-4 font-medium text-gray-700">Actions</th>
+                <th className="text-left py-3 px-4 font-medium text-gray-200">User</th>
+                <th className="text-left py-3 px-4 font-medium text-gray-200">Role</th>
+                <th className="text-left py-3 px-4 font-medium text-gray-200">Access Level</th>
+                <th className="text-left py-3 px-4 font-medium text-gray-200">Status</th>
+                <th className="text-left py-3 px-4 font-medium text-gray-200">Last Active</th>
+                <th className="text-left py-3 px-4 font-medium text-gray-200">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -619,9 +619,9 @@ const RoleBasedAccessControl: React.FC<RoleBasedAccessControlProps> = ({
                   <td className="py-3 px-4">
                     <div>
                       <p className="font-medium text-gray-900">{user.userName}</p>
-                      <p className="text-sm text-gray-600">{user.email}</p>
+                      <p className="text-sm text-gray-200">{user.email}</p>
                       {user.contractorName && (
-                        <p className="text-xs text-gray-500">{user.contractorName}</p>
+                        <p className="text-xs text-gray-300">{user.contractorName}</p>
                       )}
                     </div>
                   </td>
@@ -649,7 +649,7 @@ const RoleBasedAccessControl: React.FC<RoleBasedAccessControlProps> = ({
                       {user.status}
                     </span>
                   </td>
-                  <td className="py-3 px-4 text-sm text-gray-600">
+                  <td className="py-3 px-4 text-sm text-gray-200">
                     {new Date(user.lastActive).toLocaleDateString()}
                   </td>
                   <td className="py-3 px-4">

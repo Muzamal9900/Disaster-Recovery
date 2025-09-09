@@ -226,7 +226,7 @@ export default function EmergencyServicesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Emergency Response Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Specialised teams for every type of disaster emergency
             </p>
           </div>
@@ -241,7 +241,7 @@ export default function EmergencyServicesPage() {
                   <h3 className="text-xl font-bold mb-3">{type.title}</h3>
                   <ul className="space-y-2">
                     {type.situations.map((situation, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-200">
                         <CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0" />
                         <span>{situation}</span>
                       </li>
@@ -266,7 +266,7 @@ export default function EmergencyServicesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Emergency Response Protocol</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Our systematic approach ensures rapid, effective disaster response
             </p>
           </div>
@@ -286,7 +286,7 @@ export default function EmergencyServicesPage() {
                   <div className="flex-grow pb-8">
                     <Card className="p-4 hover:shadow-lg transition-shadow">
                       <h3 className="font-bold text-lg mb-1">{step.action}</h3>
-                      <p className="text-gray-600">{step.details}</p>
+                      <p className="text-gray-200">{step.details}</p>
                     </Card>
                   </div>
                 </div>
@@ -301,7 +301,7 @@ export default function EmergencyServicesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Why We\'re Queensland\'s #1 Emergency Response</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Unmatched capabilities for disaster emergencies
             </p>
           </div>
@@ -309,26 +309,26 @@ export default function EmergencyServicesPage() {
             {emergencyFeatures.map((feature, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold mb-2 text-red-900">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <p className="text-gray-200">{feature.description}</p>
               </div>
             ))}
           </div>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-4xl font-bold text-red-600">15+</div>
-              <div className="text-sm text-gray-600 mt-1">Years Experience</div>
+              <div className="text-sm text-gray-200 mt-1">Years Experience</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-red-600">10,000+</div>
-              <div className="text-sm text-gray-600 mt-1">Emergencies Handled</div>
+              <div className="text-sm text-gray-200 mt-1">Emergencies Handled</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-red-600">24/7</div>
-              <div className="text-sm text-gray-600 mt-1">Always Available</div>
+              <div className="text-sm text-gray-200 mt-1">Always Available</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-red-600">30min</div>
-              <div className="text-sm text-gray-600 mt-1">Metro Response</div>
+              <div className="text-sm text-gray-200 mt-1">Metro Response</div>
             </div>
           </div>
         </div>
@@ -340,7 +340,7 @@ export default function EmergencyServicesPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">Emergency Action Checklist</h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-200">
                 What to do when disaster strikes
               </p>
             </div>
@@ -411,7 +411,7 @@ export default function EmergencyServicesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Statewide Emergency Coverage</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Rapid response teams strategically located across Queensland
             </p>
           </div>
@@ -497,7 +497,7 @@ export default function EmergencyServicesPage() {
               <p className="text-lg font-semibold text-red-900">
                 Emergency Response Available 24/7 in All Areas
               </p>
-              <p className="text-gray-600 mt-2">
+              <p className="text-gray-200 mt-2">
                 Mobile emergency units deployed for remote and rural emergencies
               </p>
             </div>
@@ -514,7 +514,7 @@ export default function EmergencyServicesPage() {
               {faqs.map((faq, index) => (
                 <Card key={index} className="p-6">
                   <h3 className="text-xl font-bold mb-3 text-red-900">{faq.question}</h3>
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-200 leading-relaxed">{faq.answer}</p>
                 </Card>
               ))}
             </div>

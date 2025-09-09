@@ -167,11 +167,11 @@ export function HelpCenter() {
                       channel.available ? 'bg-blue-100' : 'bg-gray-100'
                     }`}>
                       <channel.icon className={`h-6 w-6 ${
-                        channel.available ? 'text-blue-600' : 'text-gray-500'
+                        channel.available ? 'text-blue-600' : 'text-gray-300'
                       }`} />
                     </div>
                     <h3 className="font-semibold mb-1">{channel.title}</h3>
-                    <p className="text-sm text-gray-600 mb-2">
+                    <p className="text-sm text-gray-200 mb-2">
                       {channel.description}
                     </p>
                     <Badge variant={channel.available ? 'default' : 'secondary'} className="text-xs">
@@ -224,15 +224,15 @@ export function HelpCenter() {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm">Last Chat</span>
-                    <span className="text-sm text-gray-500">2 days ago</span>
+                    <span className="text-sm text-gray-300">2 days ago</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm">Articles Read</span>
-                    <span className="text-sm text-gray-500">12 this month</span>
+                    <span className="text-sm text-gray-300">12 this month</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm">Feedback Submitted</span>
-                    <span className="text-sm text-gray-500">3 items</span>
+                    <span className="text-sm text-gray-300">3 items</span>
                   </div>
                 </div>
               </CardContent>
@@ -255,7 +255,7 @@ export function HelpCenter() {
                       className="w-full text-left p-2 hover:bg-gray-50 rounded-lg transition-colours"
                     >
                       <p className="text-sm font-medium">{article.title}</p>
-                      <p className="text-xs text-gray-500">{article.views} views</p>
+                      <p className="text-xs text-gray-300">{article.views} views</p>
                     </button>
                   ))}
                 </div>
@@ -339,25 +339,25 @@ export function HelpCenter() {
                   <p className="text-2xl font-bold text-green-600">
                     {mockMetrics.responseTime.average} min
                   </p>
-                  <p className="text-sm text-gray-500">Avg Response Time</p>
+                  <p className="text-sm text-gray-300">Avg Response Time</p>
                 </div>
                 <div className="text-center">
                   <p className="text-2xl font-bold text-blue-600">
                     {mockMetrics.satisfaction.average}/5
                   </p>
-                  <p className="text-sm text-gray-500">Satisfaction Score</p>
+                  <p className="text-sm text-gray-300">Satisfaction Score</p>
                 </div>
                 <div className="text-center">
                   <p className="text-2xl font-bold text-purple-600">
                     {mockMetrics.responseTime.compliance}%
                   </p>
-                  <p className="text-sm text-gray-500">SLA Compliance</p>
+                  <p className="text-sm text-gray-300">SLA Compliance</p>
                 </div>
                 <div className="text-center">
                   <p className="text-2xl font-bold text-blue-700">
                     {mockMetrics.knowledge.helpfulPercentage}%
                   </p>
-                  <p className="text-sm text-gray-500">Articles Helpful</p>
+                  <p className="text-sm text-gray-300">Articles Helpful</p>
                 </div>
               </div>
             </CardContent>

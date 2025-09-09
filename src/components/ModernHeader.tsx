@@ -102,7 +102,7 @@ export default function UltraModernHeader() {
                   <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                     Disaster Pro
                   </div>
-                  <div className="text-[10px] text-gray-400 uppercase tracking-widest">
+                  <div className="text-[10px] text-gray-200 uppercase tracking-widest">
                     Next-Gen Recovery
                   </div>
                 </div>
@@ -227,7 +227,7 @@ export default function UltraModernHeader() {
                         <Link
                           key={subItem.label}
                           href={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-400 hover:text-white transition-colours"
+                          className="block px-4 py-2 text-sm text-gray-200 hover:text-white transition-colours"
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {subItem.label}

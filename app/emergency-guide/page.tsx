@@ -146,7 +146,7 @@ export default function EmergencyGuidePage() {
               <div key={index} className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors">
                 <h3 className="text-white font-semibold mb-1">{contact.service}</h3>
                 <p className="text-2xl font-bold text-blue-400 mb-1">{contact.number}</p>
-                <p className="text-gray-400 text-sm">{contact.description}</p>
+                <p className="text-gray-200 text-sm">{contact.description}</p>
               </div>
             ))}
           </div>

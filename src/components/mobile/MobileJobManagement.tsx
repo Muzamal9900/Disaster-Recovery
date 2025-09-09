@@ -123,11 +123,11 @@ export default function MobileJobManagement() {
     fire_damage: 'bg-red-100 text-red-700 border-red-200',
     mould: 'bg-green-100 text-green-700 border-green-200',
     biohazard: 'bg-yellow-100 text-yellow-700 border-yellow-200',
-    other: 'bg-gray-100 text-gray-700 border-gray-200'
+    other: 'bg-gray-100 text-gray-200 border-gray-200'
   };
 
   const statusColors = {
-    assigned: 'bg-gray-100 text-gray-700',
+    assigned: 'bg-gray-100 text-gray-200',
     in_route: 'bg-blue-100 text-blue-700',
     on_site: 'bg-purple-700 text-white',
     in_progress: 'bg-orange-100 text-orange-700',
@@ -135,7 +135,7 @@ export default function MobileJobManagement() {
   };
 
   const priorityColors = {
-    routine: 'bg-gray-100 text-gray-700',
+    routine: 'bg-gray-100 text-gray-200',
     urgent: 'bg-orange-100 text-orange-700',
     emergency: 'bg-red-100 text-red-700'
   };
@@ -152,7 +152,7 @@ export default function MobileJobManagement() {
           </div>
           <div>
             <p className="font-semibold text-gray-900">{job.jobNumber}</p>
-            <p className="text-sm text-gray-500">{job.client.name}</p>
+            <p className="text-sm text-gray-300">{job.client.name}</p>
           </div>
         </div>
         <div className="flex flex-col items-end space-y-1">
@@ -166,19 +166,19 @@ export default function MobileJobManagement() {
       </div>
 
       <div className="space-y-2 text-sm">
-        <div className="flex items-center text-gray-600">
+        <div className="flex items-center text-gray-200">
           <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
           <span className="truncate">{job.location.address}</span>
         </div>
         
         <div className="flex items-center justify-between">
-          <div className="flex items-center text-gray-600">
+          <div className="flex items-center text-gray-200">
             <Clock className="w-4 h-4 mr-2" />
             <span>{new Date(job.scheduledDate).toLocaleTimeString('en-AU', { hour: '2-digit', minute: '2-digit' })}</span>
           </div>
           
           {job.location.distance && (
-            <div className="flex items-center text-gray-600">
+            <div className="flex items-center text-gray-200">
               <Navigation className="w-4 h-4 mr-1" />
               <span>{job.location.distance} km</span>
             </div>
@@ -215,14 +215,14 @@ export default function MobileJobManagement() {
                 className={`flex flex-col items-center p-2 rounded-lg transition-all ${
                   jobStatus === item.status
                     ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    : 'bg-gray-100 text-gray-200 hover:bg-gray-200'
                 }`}
               >
                 {item.icon}
                 <span className="text-xs mt-1">{item.label}</span>
               </button>
               {index < statusFlow.length - 1 && (
-                <ChevronRight className="w-4 h-4 text-gray-400" />
+                <ChevronRight className="w-4 h-4 text-gray-200" />
               )}
             </React.Fragment>
           ))}
@@ -242,20 +242,20 @@ export default function MobileJobManagement() {
 
       <div className="grid grid-cols-2 gap-3">
         <div className="aspect-square bg-gray-100 rounded-lg flex flex-col items-center justify-center border-2 border-dashed border-gray-300">
-          <Camera className="w-8 h-8 text-gray-400 mb-2" />
-          <span className="text-sm text-gray-500">Before</span>
+          <Camera className="w-8 h-8 text-gray-200 mb-2" />
+          <span className="text-sm text-gray-300">Before</span>
         </div>
         <div className="aspect-square bg-gray-100 rounded-lg flex flex-col items-center justify-center border-2 border-dashed border-gray-300">
-          <Camera className="w-8 h-8 text-gray-400 mb-2" />
-          <span className="text-sm text-gray-500">During</span>
+          <Camera className="w-8 h-8 text-gray-200 mb-2" />
+          <span className="text-sm text-gray-300">During</span>
         </div>
         <div className="aspect-square bg-gray-100 rounded-lg flex flex-col items-center justify-center border-2 border-dashed border-gray-300">
-          <Camera className="w-8 h-8 text-gray-400 mb-2" />
-          <span className="text-sm text-gray-500">After</span>
+          <Camera className="w-8 h-8 text-gray-200 mb-2" />
+          <span className="text-sm text-gray-300">After</span>
         </div>
         <div className="aspect-square bg-gray-100 rounded-lg flex flex-col items-center justify-center border-2 border-dashed border-gray-300">
-          <Camera className="w-8 h-8 text-gray-400 mb-2" />
-          <span className="text-sm text-gray-500">Damage</span>
+          <Camera className="w-8 h-8 text-gray-200 mb-2" />
+          <span className="text-sm text-gray-300">Damage</span>
         </div>
       </div>
 
@@ -280,13 +280,13 @@ export default function MobileJobManagement() {
         {['Assessment Form', 'Client Agreement', 'Insurance Claim', 'Completion Report'].map((doc) => (
           <div key={doc} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
             <div className="flex items-center space-x-3">
-              <FileText className="w-5 h-5 text-gray-600" />
+              <FileText className="w-5 h-5 text-gray-200" />
               <div>
                 <p className="text-sm font-medium text-gray-900">{doc}</p>
-                <p className="text-xs text-gray-500">PDF • 245 KB</p>
+                <p className="text-xs text-gray-300">PDF • 245 KB</p>
               </div>
             </div>
-            <button className="p-1.5 text-gray-600 hover:text-blue-600">
+            <button className="p-1.5 text-gray-200 hover:text-blue-600">
               <Download className="w-4 h-4" />
             </button>
           </div>
@@ -301,13 +301,13 @@ export default function MobileJobManagement() {
       
       <div className="space-y-3 mb-4">
         <div className="p-3 bg-gray-50 rounded-lg">
-          <p className="text-sm text-gray-700">Initial assessment: Burst pipe in kitchen caused extensive water damage to flooring and lower cabinets.</p>
-          <p className="text-xs text-gray-500 mt-1">Added 2 hours ago</p>
+          <p className="text-sm text-gray-200">Initial assessment: Burst pipe in kitchen caused extensive water damage to flooring and lower cabinets.</p>
+          <p className="text-xs text-gray-300 mt-1">Added 2 hours ago</p>
         </div>
         
         <div className="p-3 bg-gray-50 rounded-lg">
-          <p className="text-sm text-gray-700">Client requested priority attention to kitchen area for insurance purposes.</p>
-          <p className="text-xs text-gray-500 mt-1">Added 1 hour ago</p>
+          <p className="text-sm text-gray-200">Client requested priority attention to kitchen area for insurance purposes.</p>
+          <p className="text-xs text-gray-300 mt-1">Added 1 hour ago</p>
         </div>
       </div>
 
@@ -329,25 +329,25 @@ export default function MobileJobManagement() {
       <div className="flex justify-between items-center mb-8">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Mobile Job Management</h1>
-          <p className="text-gray-600 mt-2">Field technician job tracking and management</p>
+          <p className="text-gray-200 mt-2">Field technician job tracking and management</p>
         </div>
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
             {isOffline ? (
               <>
-                <WifiOff className="w-5 h-5 text-gray-400" />
-                <span className="text-sm text-gray-500">Offline Mode</span>
+                <WifiOff className="w-5 h-5 text-gray-200" />
+                <span className="text-sm text-gray-300">Offline Mode</span>
               </>
             ) : (
               <>
                 <Wifi className="w-5 h-5 text-green-500" />
-                <span className="text-sm text-gray-700">Online</span>
+                <span className="text-sm text-gray-200">Online</span>
               </>
             )}
           </div>
           <button
             onClick={() => setIsOffline(!isOffline)}
-            className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200"
+            className="px-4 py-2 bg-gray-100 text-gray-200 rounded-lg hover:bg-gray-200"
           >
             Toggle Network
           </button>
@@ -392,11 +392,11 @@ export default function MobileJobManagement() {
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h3 className="font-semibold text-gray-900">{selectedJob.jobNumber}</h3>
-                    <p className="text-sm text-gray-500">{selectedJob.client.name}</p>
+                    <p className="text-sm text-gray-300">{selectedJob.client.name}</p>
                   </div>
                   <button
                     onClick={() => setSelectedJob(null)}
-                    className="text-gray-400 hover:text-gray-600"
+                    className="text-gray-200 hover:text-gray-200"
                   >
                     <XCircle className="w-5 h-5" />
                   </button>
@@ -404,7 +404,7 @@ export default function MobileJobManagement() {
 
                 <div className="space-y-3">
                   <div className="flex items-start space-x-3">
-                    <MapPin className="w-5 h-5 text-gray-400 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-gray-200 mt-0.5" />
                     <div className="flex-1">
                       <p className="text-sm text-gray-900">{selectedJob.location.address}</p>
                       <button className="text-xs text-blue-600 hover:text-blue-700 mt-1">
@@ -414,7 +414,7 @@ export default function MobileJobManagement() {
                   </div>
 
                   <div className="flex items-center space-x-3">
-                    <MessageSquare className="w-5 h-5 text-gray-400" />
+                    <MessageSquare className="w-5 h-5 text-gray-200" />
                     <div className="flex-1">
                       <p className="text-sm text-gray-900">{selectedJob.client.phone}</p>
                       <button className="text-xs text-blue-600 hover:text-blue-700 mt-1">
@@ -424,7 +424,7 @@ export default function MobileJobManagement() {
                   </div>
 
                   <div className="flex items-center space-x-3">
-                    <Calendar className="w-5 h-5 text-gray-400" />
+                    <Calendar className="w-5 h-5 text-gray-200" />
                     <p className="text-sm text-gray-900">
                       {new Date(selectedJob.scheduledDate).toLocaleDateString('en-AU')} at{' '}
                       {new Date(selectedJob.scheduledDate).toLocaleTimeString('en-AU', { hour: '2-digit', minute: '2-digit' })}
@@ -432,7 +432,7 @@ export default function MobileJobManagement() {
                   </div>
 
                   <div className="flex items-center space-x-3">
-                    <Clock className="w-5 h-5 text-gray-400" />
+                    <Clock className="w-5 h-5 text-gray-200" />
                     <p className="text-sm text-gray-900">
                       Estimated duration: {selectedJob.estimatedDuration} hours
                     </p>
@@ -447,8 +447,8 @@ export default function MobileJobManagement() {
             </div>
           ) : (
             <div className="bg-gray-50 rounded-lg p-8 text-center">
-              <Briefcase className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-              <p className="text-gray-600">Select a job to view details</p>
+              <Briefcase className="w-12 h-12 text-gray-200 mx-auto mb-4" />
+              <p className="text-gray-200">Select a job to view details</p>
             </div>
           )}
         </div>

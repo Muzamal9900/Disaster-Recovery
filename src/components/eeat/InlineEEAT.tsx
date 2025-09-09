@@ -58,7 +58,7 @@ export function InlineEEAT() {
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-gray-50 rounded-lg p-6">
               <h4 className="font-bold text-lg mb-2">Michael Chen</h4>
-              <p className="text-sm text-gray-600 mb-3">Chief Technical Officer • 15+ years</p>
+              <p className="text-sm text-gray-200 mb-3">Chief Technical Officer • 15+ years</p>
               <p className="text-sm mb-4">Leading technical operations with experience in projects from residential to 80-floor complexes internationally.</p>
               <div className="flex flex-wrap gap-2">
                 <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">IICRC Water Damage</span>
@@ -68,7 +68,7 @@ export function InlineEEAT() {
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
               <h4 className="font-bold text-lg mb-2">Sarah Mitchell</h4>
-              <p className="text-sm text-gray-600 mb-3">Head of Operations • 12+ years</p>
+              <p className="text-sm text-gray-200 mb-3">Head of Operations • 12+ years</p>
               <p className="text-sm mb-4">Overseeing 115,000+ contractor network with quality control systems ensuring consistent service nationwide.</p>
               <div className="flex flex-wrap gap-2">
                 <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">PMP Certified</span>
@@ -78,7 +78,7 @@ export function InlineEEAT() {
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
               <h4 className="font-bold text-lg mb-2">David Thompson</h4>
-              <p className="text-sm text-gray-600 mb-3">Compliance Director • 18+ years</p>
+              <p className="text-sm text-gray-200 mb-3">Compliance Director • 18+ years</p>
               <p className="text-sm mb-4">Ensuring all work meets Australian building codes and insurance requirements with comprehensive compliance.</p>
               <div className="flex flex-wrap gap-2">
                 <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Building Codes</span>
@@ -98,7 +98,7 @@ export function InlineEEAT() {
             <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow">
               <div className="flex text-yellow-400">⭐⭐⭐⭐⭐</div>
               <span className="font-semibold">4.9/5</span>
-              <span className="text-gray-500">from 2,847 verified reviews</span>
+              <span className="text-gray-300">from 2,847 verified reviews</span>
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -110,8 +110,8 @@ export function InlineEEAT() {
               <p className="italic mb-4">"Team arrived within 45 minutes at 2AM. They saved my home from extensive water damage and handled everything with insurance."</p>
               <div className="text-sm">
                 <p className="font-semibold">Sarah Johnson</p>
-                <p className="text-gray-600">Sydney, NSW • Water Damage</p>
-                <p className="text-xs text-gray-500 mt-1">NRMA Insurance • Response: 45 min</p>
+                <p className="text-gray-200">Sydney, NSW • Water Damage</p>
+                <p className="text-xs text-gray-300 mt-1">NRMA Insurance • Response: 45 min</p>
               </div>
             </div>
             <div className="bg-white rounded-lg p-6 shadow">
@@ -122,8 +122,8 @@ export function InlineEEAT() {
               <p className="italic mb-4">"After our kitchen fire, they restored not just our home but our peace of mind. Insurance approved everything immediately."</p>
               <div className="text-sm">
                 <p className="font-semibold">Michael Chen</p>
-                <p className="text-gray-600">Melbourne, VIC • Fire Damage</p>
-                <p className="text-xs text-gray-500 mt-1">Allianz • Response: 1 hour</p>
+                <p className="text-gray-200">Melbourne, VIC • Fire Damage</p>
+                <p className="text-xs text-gray-300 mt-1">Allianz • Response: 1 hour</p>
               </div>
             </div>
             <div className="bg-white rounded-lg p-6 shadow">
@@ -134,8 +134,8 @@ export function InlineEEAT() {
               <p className="italic mb-4">"Handled our 50,000 sq ft shopping center flood with military precision. Back in business in record time."</p>
               <div className="text-sm">
                 <p className="font-semibold">Brisbane Mall Mgmt</p>
-                <p className="text-gray-600">Brisbane, QLD • Commercial</p>
-                <p className="text-xs text-gray-500 mt-1">QBE • Response: 30 min</p>
+                <p className="text-gray-200">Brisbane, QLD • Commercial</p>
+                <p className="text-xs text-gray-300 mt-1">QBE • Response: 30 min</p>
               </div>
             </div>
           </div>
@@ -156,7 +156,7 @@ export function InlineEEAT() {
               </span>
             ))}
           </div>
-          <p className="text-center text-sm text-gray-500 mt-4">
+          <p className="text-center text-sm text-gray-300 mt-4">
             Direct billing available • Claims processed within 24 hours
           </p>
         </div>

@@ -201,7 +201,7 @@ const ComplianceMonitoringDashboard: React.FC<ComplianceMonitoringDashboardProps
       case 'warning': return 'text-yellow-600 bg-yellow-50';
       case 'pending_review': return 'text-blue-600 bg-blue-50';
       case 'expired': return 'text-red-600 bg-red-50';
-      default: return 'text-gray-600 bg-gray-50';
+      default: return 'text-gray-200 bg-gray-50';
     }
   };
 
@@ -222,7 +222,7 @@ const ComplianceMonitoringDashboard: React.FC<ComplianceMonitoringDashboardProps
       case 'high': return 'text-blue-700 bg-orange-100';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
       case 'low': return 'text-blue-600 bg-blue-100';
-      default: return 'text-gray-600 bg-gray-100';
+      default: return 'text-gray-200 bg-gray-100';
     }
   };
 
@@ -285,7 +285,7 @@ const ComplianceMonitoringDashboard: React.FC<ComplianceMonitoringDashboardProps
                 <p className={`text-3xl font-bold ${getScoreColor(dashboard.overallScore)}`}>
                   {dashboard.overallScore.toFixed(1)}%
                 </p>
-                <p className="text-xs text-gray-600">Compliance</p>
+                <p className="text-xs text-gray-200">Compliance</p>
               </div>
             </div>
           </div>
@@ -302,7 +302,7 @@ const ComplianceMonitoringDashboard: React.FC<ComplianceMonitoringDashboardProps
               <span className={trend > 0 ? 'text-green-600' : 'text-red-600'}>
                 {Math.abs(trend).toFixed(1)}%
               </span>
-              <span className="text-gray-600">from last period</span>
+              <span className="text-gray-200">from last period</span>
             </>
           )}
         </div>
@@ -311,14 +311,14 @@ const ComplianceMonitoringDashboard: React.FC<ComplianceMonitoringDashboardProps
           <div className="grid grid-cols-2 gap-4">
             <div className="text-center">
               <p className="text-2xl font-bold text-gray-900">{dashboard.riskScore}</p>
-              <p className="text-sm text-gray-600">Risk Score</p>
+              <p className="text-sm text-gray-200">Risk Score</p>
               <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium mt-1 ${getRiskLevelLabel(dashboard.riskScore).colour}`}>
                 {getRiskLevelLabel(dashboard.riskScore).label}
               </div>
             </div>
             <div className="text-center">
               <p className="text-2xl font-bold text-gray-900">{dashboard.alerts.length}</p>
-              <p className="text-sm text-gray-600">Active Alerts</p>
+              <p className="text-sm text-gray-200">Active Alerts</p>
               <div className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium mt-1 bg-yellow-50 text-yellow-800">
                 Requires Attention
               </div>
@@ -369,17 +369,17 @@ const ComplianceMonitoringDashboard: React.FC<ComplianceMonitoringDashboardProps
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">{indicator.name}</h4>
-                      <p className="text-sm text-gray-600">{indicator.description}</p>
+                      <p className="text-sm text-gray-200">{indicator.description}</p>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
                     <div>
-                      <p className="text-xs text-gray-600">Category</p>
+                      <p className="text-xs text-gray-200">Category</p>
                       <p className="text-sm font-medium capitalize">{indicator.category.replace('_', ' ')}</p>
                     </div>
                     <div>
-                      <p className="text-xs text-gray-600">Current Value</p>
+                      <p className="text-xs text-gray-200">Current Value</p>
                       <p className="text-sm font-medium">
                         {indicator.type === 'percentage' 
                           ? `${indicator.currentValue}%` 
@@ -387,13 +387,13 @@ const ComplianceMonitoringDashboard: React.FC<ComplianceMonitoringDashboardProps
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs text-gray-600">Next Check</p>
+                      <p className="text-xs text-gray-200">Next Check</p>
                       <p className="text-sm font-medium">
                         {new Date(indicator.nextCheckDue).toLocaleDateString()}
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs text-gray-600">Priority</p>
+                      <p className="text-xs text-gray-200">Priority</p>
                       <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(indicator.priority)}`}>
                         {indicator.priority}
                       </span>
@@ -403,7 +403,7 @@ const ComplianceMonitoringDashboard: React.FC<ComplianceMonitoringDashboardProps
                   {indicator.threshold && indicator.type === 'percentage' && (
                     <div className="mt-3">
                       <div className="flex items-center justify-between text-xs mb-1">
-                        <span className="text-gray-600">Progress</span>
+                        <span className="text-gray-200">Progress</span>
                         <span className="font-medium">
                           {indicator.currentValue}% / {indicator.targetValue}%
                         </span>
@@ -431,7 +431,7 @@ const ComplianceMonitoringDashboard: React.FC<ComplianceMonitoringDashboardProps
                       Evidence
                     </button>
                   )}
-                  <button className="p-1.5 text-gray-600 hover:bg-gray-100 rounded">
+                  <button className="p-1.5 text-gray-200 hover:bg-gray-100 rounded">
                     <ChevronRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -452,7 +452,7 @@ const ComplianceMonitoringDashboard: React.FC<ComplianceMonitoringDashboardProps
           <h3 className="text-lg font-semibold text-gray-900">Active Alerts</h3>
           <button
             onClick={() => setShowAlerts(false)}
-            className="text-gray-400 hover:text-gray-600"
+            className="text-gray-200 hover:text-gray-200"
           >
             ×
           </button>
@@ -461,7 +461,7 @@ const ComplianceMonitoringDashboard: React.FC<ComplianceMonitoringDashboardProps
         {dashboard.alerts.length === 0 ? (
           <div className="text-center py-8">
             <CheckCircle className="w-12 h-12 text-green-500 mx-auto mb-3" />
-            <p className="text-gray-600">No active compliance alerts</p>
+            <p className="text-gray-200">No active compliance alerts</p>
           </div>
         ) : (
           <div className="space-y-3">
@@ -492,13 +492,13 @@ const ComplianceMonitoringDashboard: React.FC<ComplianceMonitoringDashboardProps
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">{alert.title}</h4>
-                      <p className="text-sm text-gray-600 mt-1">{alert.description}</p>
+                      <p className="text-sm text-gray-200 mt-1">{alert.description}</p>
                       {alert.relatedEntity && (
-                        <p className="text-xs text-gray-500 mt-2">
+                        <p className="text-xs text-gray-300 mt-2">
                           Related: {alert.relatedEntity.name}
                         </p>
                       )}
-                      <p className="text-xs text-gray-500 mt-1">
+                      <p className="text-xs text-gray-300 mt-1">
                         {new Date(alert.createdAt).toLocaleString()}
                       </p>
                     </div>
@@ -543,7 +543,7 @@ const ComplianceMonitoringDashboard: React.FC<ComplianceMonitoringDashboardProps
 
         <div className="space-y-6">
           <div>
-            <h4 className="text-sm font-medium text-gray-700 mb-4">Compliance Score Trend</h4>
+            <h4 className="text-sm font-medium text-gray-200 mb-4">Compliance Score Trend</h4>
             <div className="relative h-48 flex items-end justify-between">
               {dashboard.trends.map((trend, index) => (
                 <div key={index} className="flex flex-col items-center flex-1">
@@ -554,7 +554,7 @@ const ComplianceMonitoringDashboard: React.FC<ComplianceMonitoringDashboardProps
                       minHeight: '4px'
                     }}
                   ></div>
-                  <p className="text-xs text-gray-600 mt-2 rotate-45 origin-left">
+                  <p className="text-xs text-gray-200 mt-2 rotate-45 origin-left">
                     {new Date(trend.date).toLocaleDateString('en-US', { month: 'short' })}
                   </p>
                 </div>
@@ -567,25 +567,25 @@ const ComplianceMonitoringDashboard: React.FC<ComplianceMonitoringDashboardProps
               <p className="text-2xl font-bold text-green-600">
                 {dashboard.trends.reduce((sum, t) => sum + t.auditsPassed, 0)}
               </p>
-              <p className="text-sm text-gray-600">Audits Passed</p>
+              <p className="text-sm text-gray-200">Audits Passed</p>
             </div>
             <div className="text-center">
               <p className="text-2xl font-bold text-red-600">
                 {dashboard.trends.reduce((sum, t) => sum + t.auditsFailed, 0)}
               </p>
-              <p className="text-sm text-gray-600">Audits Failed</p>
+              <p className="text-sm text-gray-200">Audits Failed</p>
             </div>
             <div className="text-center">
               <p className="text-2xl font-bold text-blue-700">
                 {dashboard.trends.reduce((sum, t) => sum + t.findingsOpened, 0)}
               </p>
-              <p className="text-sm text-gray-600">Findings Opened</p>
+              <p className="text-sm text-gray-200">Findings Opened</p>
             </div>
             <div className="text-center">
               <p className="text-2xl font-bold text-blue-600">
                 {dashboard.trends.reduce((sum, t) => sum + t.findingsClosed, 0)}
               </p>
-              <p className="text-sm text-gray-600">Findings Closed</p>
+              <p className="text-sm text-gray-200">Findings Closed</p>
             </div>
           </div>
         </div>
@@ -616,7 +616,7 @@ const ComplianceMonitoringDashboard: React.FC<ComplianceMonitoringDashboardProps
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Compliance Monitoring</h1>
-          <p className="text-gray-600 mt-1">Real-time compliance status and indicators</p>
+          <p className="text-gray-200 mt-1">Real-time compliance status and indicators</p>
         </div>
         <div className="flex items-center space-x-2">
           <button className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">

@@ -326,25 +326,25 @@ CONFIDENTIAL - NOT FOR DISTRIBUTION
           <div className="flex items-center gap-4">
             <Link 
               href="/demo"
-              className="text-gray-400 hover:text-white transition flex items-center gap-2"
+              className="text-gray-200 hover:text-white transition flex items-center gap-2"
             >
               <ChevronLeft className="h-5 w-5" />
               Back to Demos
             </Link>
-            <div className="h-6 w-px bg-gray-600" />
+            <div className="h-6 w-px bg-gray-800" />
             <h1 className="text-xl font-semibold text-white">Investor Pitch Deck - Series A</h1>
           </div>
           <div className="flex items-center gap-3">
             <button
               onClick={handleDownload}
-              className="p-2 text-gray-400 hover:text-white transition"
+              className="p-2 text-gray-200 hover:text-white transition"
               title="Download Deck"
             >
               <Download className="h-5 w-5" />
             </button>
             <button
               onClick={handleFullscreen}
-              className="p-2 text-gray-400 hover:text-white transition"
+              className="p-2 text-gray-200 hover:text-white transition"
               title="Fullscreen"
             >
               <Maximize className="h-5 w-5" />
@@ -382,7 +382,7 @@ CONFIDENTIAL - NOT FOR DISTRIBUTION
           <div className="max-w-7xl mx-auto">
             {/* Progress Bar */}
             <div className="mb-4">
-              <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
+              <div className="flex items-center justify-between text-sm text-gray-200 mb-2">
                 <span>Slide {currentSlide + 1} of {slides.length}</span>
                 <span>{slide.title}</span>
               </div>
@@ -435,7 +435,7 @@ CONFIDENTIAL - NOT FOR DISTRIBUTION
                     <Volume2 className="h-5 w-5" />
                   )}
                 </button>
-                <span className="text-sm text-gray-400">
+                <span className="text-sm text-gray-200">
                   {isPlaying ? 'Auto-playing' : 'Paused'}
                   {!isMuted && ' with narration'}
                 </span>
@@ -450,7 +450,7 @@ CONFIDENTIAL - NOT FOR DISTRIBUTION
                     className={`w-2 h-2 rounded-full transition ${
                       index === currentSlide 
                         ? 'bg-white w-8' 
-                        : 'bg-gray-600 hover:bg-gray-500'
+                        : 'bg-gray-800 hover:bg-gray-900'
                     }`}
                     aria-label={`Go to slide ${index + 1}`}
                   />

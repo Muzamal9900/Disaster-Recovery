@@ -230,7 +230,7 @@ export default function LegalDocumentsPage() {
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-200 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search documents..."
@@ -307,7 +307,7 @@ export default function LegalDocumentsPage() {
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{doc.title}</h3>
               <p className="text-gray-300 text-sm mb-4">{doc.description}</p>
-              <div className="space-y-2 text-sm text-gray-400 mb-4">
+              <div className="space-y-2 text-sm text-gray-200 mb-4">
                 <div className="flex justify-between">
                   <span>Version:</span>
                   <span className="text-white">{doc.version}</span>

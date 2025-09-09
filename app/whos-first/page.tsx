@@ -144,7 +144,7 @@ export default function WhosFirstPage() {
             >
               <Clock className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Critical Timing</h3>
-              <p className="text-gray-700">
+              <p className="text-gray-200">
                 The first 24 hours determine claim success. Wrong first call = missed documentation, increased damage, denied claims.
               </p>
             </motion.div>
@@ -154,7 +154,7 @@ export default function WhosFirstPage() {
             >
               <Shield className="w-12 h-12 text-green-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Complete Protection</h3>
-              <p className="text-gray-700">
+              <p className="text-gray-200">
                 We see the whole picture: immediate safety, insurance requirements, long-term prevention. Others see only their piece.
               </p>
             </motion.div>
@@ -164,7 +164,7 @@ export default function WhosFirstPage() {
             >
               <CheckCircle className="w-12 h-12 text-purple-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Right Sequence</h3>
-              <p className="text-gray-700">
+              <p className="text-gray-200">
                 We orchestrate all services in the correct order. No rework, no conflicts, no delays. Maximum claim value.
               </p>
             </motion.div>
@@ -200,11 +200,11 @@ export default function WhosFirstPage() {
                   <div className="p-6">
                     <div className="mb-4">
                       <p className="text-green-600 font-bold text-lg mb-2">✓ {scenario.answer}</p>
-                      <p className="text-gray-700">{scenario.why}</p>
+                      <p className="text-gray-200">{scenario.why}</p>
                     </div>
                     <div className="pt-4 border-t">
                       <p className="text-red-600 font-semibold mb-1">⚠ Common Mistake:</p>
-                      <p className="text-gray-600 text-sm">{scenario.mistakes}</p>
+                      <p className="text-gray-200 text-sm">{scenario.mistakes}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -234,7 +234,7 @@ export default function WhosFirstPage() {
                     />
                   ))}
                 </div>
-                <p className="text-sm text-gray-600 text-center">
+                <p className="text-sm text-gray-200 text-center">
                   Step {quizStep + 1} of {quizQuestions.length}
                 </p>
               </div>
@@ -285,7 +285,7 @@ export default function WhosFirstPage() {
               <div className="text-center mb-8">
                 <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Your Personalized First-Call Plan</h3>
-                <p className="text-gray-700">Based on your specific situation</p>
+                <p className="text-gray-200">Based on your specific situation</p>
               </div>
               
               <div className="bg-white rounded-lg p-6 mb-6">
@@ -324,7 +324,7 @@ export default function WhosFirstPage() {
                 </motion.a>
                 <button
                   onClick={resetQuiz}
-                  className="bg-gray-600 text-white px-8 py-3 rounded-lg font-bold shadow-lg hover:bg-gray-700"
+                  className="bg-gray-800 text-white px-8 py-3 rounded-lg font-bold shadow-lg hover:bg-gray-900"
                 >
                   Start Over
                 </button>

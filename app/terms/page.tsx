@@ -12,10 +12,10 @@ export default function TermsOfService() {
         
         <div className="bg-white rounded-lg shadow-lg p-8 space-y-6">
           <section>
-            <p className="text-sm text-gray-600 mb-6">Effective Date: {new Date().toLocaleDateString('en-AU')}</p>
+            <p className="text-sm text-gray-200 mb-6">Effective Date: {new Date().toLocaleDateString('en-AU')}</p>
             
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Agreement to Terms</h2>
-            <p className="text-gray-700">
+            <p className="text-gray-200">
               By accessing or using Disaster Recovery's services, you agree to be bound by these Terms of Service. 
               If you disagree with any part of these terms, you may not access our services.
             </p>
@@ -23,7 +23,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Emergency Services</h2>
-            <div className="space-y-3 text-gray-700">
+            <div className="space-y-3 text-gray-200">
               <p>Our emergency disaster recovery services include:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>24/7 emergency response for water, fire, and storm damage</li>
@@ -41,7 +41,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. Service Areas</h2>
-            <div className="space-y-3 text-gray-700">
+            <div className="space-y-3 text-gray-200">
               <p>We provide services nationwide, including:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>All major metropolitan areas</li>
@@ -56,7 +56,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Lead Distribution System</h2>
-            <div className="space-y-3 text-gray-700">
+            <div className="space-y-3 text-gray-200">
               <h3 className="text-lg font-semibold mt-4">For Customers:</h3>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Your service request may be assigned to a qualified partner in your area</li>
@@ -78,7 +78,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Pricing and Payment</h2>
-            <div className="space-y-3 text-gray-700">
+            <div className="space-y-3 text-gray-200">
               <p>Service pricing:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Emergency call-out fees may apply</li>
@@ -92,7 +92,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Insurance Claims</h2>
-            <div className="space-y-3 text-gray-700">
+            <div className="space-y-3 text-gray-200">
               <p>We assist with insurance claims by:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Documenting all damage with photos and reports</li>
@@ -108,7 +108,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Warranties and Guarantees</h2>
-            <div className="space-y-3 text-gray-700">
+            <div className="space-y-3 text-gray-200">
               <ul className="list-disc pl-6 space-y-2">
                 <li>All work guaranteed for 12 months</li>
                 <li>IICRC certified technicians</li>
@@ -121,7 +121,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Limitations of Liability</h2>
-            <div className="space-y-3 text-gray-700">
+            <div className="space-y-3 text-gray-200">
               <p>Disaster Recovery's liability is limited to:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>The cost of re-performing the service</li>
@@ -134,7 +134,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Intellectual Property</h2>
-            <p className="text-gray-700">
+            <p className="text-gray-200">
               All content on this website, including text, graphics, logos, and software, is the property of 
               Disaster Recovery and protected by Australian copyright laws.
             </p>
@@ -142,7 +142,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Dispute Resolution</h2>
-            <div className="space-y-3 text-gray-700">
+            <div className="space-y-3 text-gray-200">
               <p>Any disputes will be resolved through:</p>
               <ol className="list-decimal pl-6 space-y-2">
                 <li>Direct negotiation between parties</li>
@@ -155,7 +155,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Changes to Terms</h2>
-            <p className="text-gray-700">
+            <p className="text-gray-200">
               We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting to this website. 
               Continued use of our services constitutes acceptance of modified terms.
             </p>
@@ -163,7 +163,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">12. Contact Information</h2>
-            <div className="bg-gray-50 p-4 rounded-lg text-gray-700">
+            <div className="bg-gray-50 p-4 rounded-lg text-gray-200">
               <p className="font-semibold">Disaster Recovery</p>
               <p>Email: legal@disasterrecovery.com.au</p>
               <p>email: Online Form Available 24/7</p>
@@ -173,7 +173,7 @@ export default function TermsOfService() {
           </section>
 
           <section className="pt-6 border-t border-gray-200">
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-gray-200">
               These Terms of Service are governed by the laws of Australia.
               By using our services, you consent to the exclusive jurisdiction of Australian courts.
             </p>

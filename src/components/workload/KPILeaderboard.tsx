@@ -138,7 +138,7 @@ const KPILeaderboard: React.FC<KPILeaderboardProps> = ({
       case 'down':
         return <TrendingDown className="w-4 h-4 text-red-600" />;
       default:
-        return <Minus className="w-4 h-4 text-gray-600" />;
+        return <Minus className="w-4 h-4 text-gray-200" />;
     }
   };
 
@@ -147,11 +147,11 @@ const KPILeaderboard: React.FC<KPILeaderboardProps> = ({
       case 1:
         return <Trophy className="w-5 h-5 text-blue-600" />;
       case 2:
-        return <Medal className="w-5 h-5 text-gray-400" />;
+        return <Medal className="w-5 h-5 text-gray-200" />;
       case 3:
         return <Medal className="w-5 h-5 text-blue-700" />;
       default:
-        return <span className="w-5 h-5 flex items-center justify-center text-sm font-bold text-gray-600">{rank}</span>;
+        return <span className="w-5 h-5 flex items-center justify-center text-sm font-bold text-gray-200">{rank}</span>;
     }
   };
 
@@ -198,7 +198,7 @@ const KPILeaderboard: React.FC<KPILeaderboardProps> = ({
           </div>
           <div>
             <h3 className="text-lg font-semibold text-gray-900">Performance Leaderboard</h3>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-gray-200">
               {overlappingArea ? `Area: ${overlappingArea}` : 'All Contractors'}
             </p>
           </div>
@@ -224,25 +224,25 @@ const KPILeaderboard: React.FC<KPILeaderboardProps> = ({
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className="text-center">
           <p className="text-2xl font-bold text-gray-900">{contractors.length}</p>
-          <p className="text-sm text-gray-600">Total Contractors</p>
+          <p className="text-sm text-gray-200">Total Contractors</p>
         </div>
         <div className="text-center">
           <p className="text-2xl font-bold text-green-600">
             {contractors.filter(c => c.availability === 'available').length}
           </p>
-          <p className="text-sm text-gray-600">Available</p>
+          <p className="text-sm text-gray-200">Available</p>
         </div>
         <div className="text-center">
           <p className="text-2xl font-bold text-blue-600">
             {contractors.reduce((sum, c) => sum + c.leadStatistics.currentMonthLeads, 0)}
           </p>
-          <p className="text-sm text-gray-600">Total Leads</p>
+          <p className="text-sm text-gray-200">Total Leads</p>
         </div>
         <div className="text-center">
           <p className="text-2xl font-bold text-purple-600">
             {(contractors.reduce((sum, c) => sum + c.kpiScore.overallScore, 0) / contractors.length).toFixed(1)}%
           </p>
-          <p className="text-sm text-gray-600">Avg KPI Score</p>
+          <p className="text-sm text-gray-200">Avg KPI Score</p>
         </div>
       </div>
     </div>
@@ -250,7 +250,7 @@ const KPILeaderboard: React.FC<KPILeaderboardProps> = ({
 
   const MetricSelector = () => (
     <div className="bg-white rounded-lg border border-gray-200 p-4">
-      <h4 className="text-sm font-medium text-gray-700 mb-3">Sort By Metric</h4>
+      <h4 className="text-sm font-medium text-gray-200 mb-3">Sort By Metric</h4>
       
       <div className="flex flex-wrap gap-2">
         {[
@@ -266,7 +266,7 @@ const KPILeaderboard: React.FC<KPILeaderboardProps> = ({
             className={`flex items-center px-3 py-2 rounded-lg text-sm transition-colours ${
               selectedMetric === metric.key
                 ? 'bg-blue-100 text-blue-700 border border-blue-300'
-                : 'bg-gray-50 text-gray-700 border border-gray-200 hover:bg-gray-100'
+                : 'bg-gray-50 text-gray-200 border border-gray-200 hover:bg-gray-100'
             }`}
           >
             {metric.icon}
@@ -283,12 +283,12 @@ const KPILeaderboard: React.FC<KPILeaderboardProps> = ({
             onChange={(e) => setShowPrediction(e.target.checked)}
             className="mr-2"
           />
-          <span className="text-sm text-gray-700">Show Assignment Prediction</span>
+          <span className="text-sm text-gray-200">Show Assignment Prediction</span>
         </label>
         
         <button
           onClick={() => setSortOrder(prev => prev === 'desc' ? 'asc' : 'desc')}
-          className="flex items-center text-sm text-gray-600 hover:text-gray-900"
+          className="flex items-center text-sm text-gray-200 hover:text-gray-900"
         >
           {sortOrder === 'desc' ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
           {sortOrder === 'desc' ? 'Highest First' : 'Lowest First'}
@@ -331,7 +331,7 @@ const KPILeaderboard: React.FC<KPILeaderboardProps> = ({
                 )}
               </div>
               
-              <div className="flex items-center space-x-4 mt-2 text-sm text-gray-600">
+              <div className="flex items-center space-x-4 mt-2 text-sm text-gray-200">
                 <span className="flex items-center">
                   <Activity className="w-3 h-3 mr-1" />
                   {contractor.leadStatistics.currentMonthLeads} leads
@@ -370,7 +370,7 @@ const KPILeaderboard: React.FC<KPILeaderboardProps> = ({
               </p>
               {getTrendIcon(contractor.kpiScore.trend)}
             </div>
-            <p className="text-xs text-gray-600 capitalize">
+            <p className="text-xs text-gray-200 capitalize">
               {selectedMetric.replace(/([A-Z])/g, ' $1').trim()}
             </p>
           </div>
@@ -380,26 +380,26 @@ const KPILeaderboard: React.FC<KPILeaderboardProps> = ({
           <div className="mt-4 pt-4 border-t border-gray-200">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
               <div>
-                <p className="text-gray-600">Jobs Completed</p>
+                <p className="text-gray-200">Jobs Completed</p>
                 <p className="font-semibold">{performance.metrics.jobsCompleted}</p>
               </div>
               <div>
-                <p className="text-gray-600">Avg Response</p>
+                <p className="text-gray-200">Avg Response</p>
                 <p className="font-semibold">{performance.metrics.averageResponseTime} min</p>
               </div>
               <div>
-                <p className="text-gray-600">Customer Rating</p>
+                <p className="text-gray-200">Customer Rating</p>
                 <p className="font-semibold">{performance.metrics.customerRating.toFixed(1)} ⭐</p>
               </div>
               <div>
-                <p className="text-gray-600">Compliance</p>
+                <p className="text-gray-200">Compliance</p>
                 <p className="font-semibold">{performance.metrics.complianceRate.toFixed(0)}%</p>
               </div>
             </div>
             
             {performance.improvements.length > 0 && (
               <div className="mt-3">
-                <p className="text-xs text-gray-600 mb-1">Recent Improvements:</p>
+                <p className="text-xs text-gray-200 mb-1">Recent Improvements:</p>
                 <div className="space-y-1">
                   {performance.improvements.map((improvement, index) => (
                     <div key={index} className="flex items-center text-xs text-green-700">
@@ -412,11 +412,11 @@ const KPILeaderboard: React.FC<KPILeaderboardProps> = ({
             )}
             
             <div className="mt-3 flex justify-between">
-              <span className="text-xs text-gray-600">
+              <span className="text-xs text-gray-200">
                 Share: {contractor.leadStatistics.leadSharePercentage}% of area leads
               </span>
               <span className={`text-xs font-medium ${
-                contractor.kpiScore.bonusMultiplier > 1 ? 'text-green-600' : 'text-gray-600'
+                contractor.kpiScore.bonusMultiplier > 1 ? 'text-green-600' : 'text-gray-200'
               }`}>
                 {contractor.kpiScore.bonusMultiplier > 1 
                   ? `+${((contractor.kpiScore.bonusMultiplier - 1) * 100).toFixed(0)}% bonus`
@@ -444,11 +444,11 @@ const KPILeaderboard: React.FC<KPILeaderboardProps> = ({
               </span>
             </div>
             <p className="font-medium text-gray-900">{contractor.companyName}</p>
-            <p className="text-sm text-gray-600 mt-1">
+            <p className="text-sm text-gray-200 mt-1">
               {contractor.leadStatistics.currentMonthLeads} leads this month
             </p>
             <div className="mt-2 flex items-center justify-between">
-              <span className="text-xs text-gray-600">
+              <span className="text-xs text-gray-200">
                 {contractor.leadStatistics.acceptanceRate}% accept rate
               </span>
               {getTrendIcon(contractor.kpiScore.trend)}
@@ -495,7 +495,7 @@ const KPILeaderboard: React.FC<KPILeaderboardProps> = ({
         <div className="text-center py-12 bg-white rounded-lg border border-gray-200">
           <Trophy className="w-16 h-16 text-gray-300 mx-auto mb-4" />
           <h3 className="text-lg font-medium text-gray-900 mb-2">No Contractors Available</h3>
-          <p className="text-gray-600">No contractors found for the selected criteria</p>
+          <p className="text-gray-200">No contractors found for the selected criteria</p>
         </div>
       )}
     </div>

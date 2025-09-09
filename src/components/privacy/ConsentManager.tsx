@@ -282,7 +282,7 @@ export function ConsentManager({ userId, userType, onConsentUpdate }: ConsentMan
                               <Badge variant="outline" className="text-xs">Required</Badge>
                             )}
                           </div>
-                          <p className="text-sm text-gray-600 mt-1">
+                          <p className="text-sm text-gray-200 mt-1">
                             {consentType.description}
                           </p>
                         </div>
@@ -290,10 +290,10 @@ export function ConsentManager({ userId, userType, onConsentUpdate }: ConsentMan
                       
                       {isExpanded && (
                         <div className="mt-3 ml-8 space-y-2">
-                          <p className="text-sm font-medium text-gray-700">This consent covers:</p>
+                          <p className="text-sm font-medium text-gray-200">This consent covers:</p>
                           <ul className="space-y-1">
                             {consentType.details.map((detail, index) => (
-                              <li key={index} className="text-sm text-gray-600 flex items-start gap-2">
+                              <li key={index} className="text-sm text-gray-200 flex items-start gap-2">
                                 <CheckCircle className="h-3 w-3 text-green-500 mt-0.5 flex-shrink-0" />
                                 {detail}
                               </li>
@@ -301,7 +301,7 @@ export function ConsentManager({ userId, userType, onConsentUpdate }: ConsentMan
                           </ul>
                           {consent && (
                             <div className="mt-3 pt-3 border-t">
-                              <p className="text-xs text-gray-500">
+                              <p className="text-xs text-gray-300">
                                 Consented on: {new Date(consent.grantedAt!).toLocaleDateString()}
                                 {consent.expiresAt && (
                                   <> • Expires: {new Date(consent.expiresAt).toLocaleDateString()}</>
@@ -351,28 +351,28 @@ export function ConsentManager({ userId, userType, onConsentUpdate }: ConsentMan
                 <CheckCircle className="h-4 w-4 text-green-500 mt-0.5" />
                 <div>
                   <p className="font-medium">Right to Access</p>
-                  <p className="text-gray-600">Request a copy of your personal data</p>
+                  <p className="text-gray-200">Request a copy of your personal data</p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-500 mt-0.5" />
                 <div>
                   <p className="font-medium">Right to Rectification</p>
-                  <p className="text-gray-600">Correct inaccurate personal data</p>
+                  <p className="text-gray-200">Correct inaccurate personal data</p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-500 mt-0.5" />
                 <div>
                   <p className="font-medium">Right to Erasure</p>
-                  <p className="text-gray-600">Request deletion of your data</p>
+                  <p className="text-gray-200">Request deletion of your data</p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-500 mt-0.5" />
                 <div>
                   <p className="font-medium">Right to Data Portability</p>
-                  <p className="text-gray-600">Transfer your data to another service</p>
+                  <p className="text-gray-200">Transfer your data to another service</p>
                 </div>
               </div>
             </div>
@@ -388,15 +388,15 @@ export function ConsentManager({ userId, userType, onConsentUpdate }: ConsentMan
 
           {/* Compliance Badges */}
           <div className="mt-6 flex items-center gap-4">
-            <div className="flex items-center gap-2 text-sm text-gray-600">
+            <div className="flex items-center gap-2 text-sm text-gray-200">
               <Shield className="h-4 w-4" />
               <span>OAIC Compliant</span>
             </div>
-            <div className="flex items-center gap-2 text-sm text-gray-600">
+            <div className="flex items-center gap-2 text-sm text-gray-200">
               <Shield className="h-4 w-4" />
               <span>GDPR Ready</span>
             </div>
-            <div className="flex items-center gap-2 text-sm text-gray-600">
+            <div className="flex items-center gap-2 text-sm text-gray-200">
               <Lock className="h-4 w-4" />
               <span>AES-256 Encrypted</span>
             </div>
@@ -429,7 +429,7 @@ export function ConsentManager({ userId, userType, onConsentUpdate }: ConsentMan
                       {consentType.icon}
                       <div>
                         <p className="font-medium">{consentType.name}</p>
-                        <p className="text-sm text-gray-600">{consentType.description}</p>
+                        <p className="text-sm text-gray-200">{consentType.description}</p>
                       </div>
                     </div>
                     <Switch

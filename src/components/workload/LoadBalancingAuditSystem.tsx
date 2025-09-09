@@ -376,7 +376,7 @@ const LoadBalancingAuditSystem: React.FC = () => {
       case 'high': return 'text-blue-700 bg-orange-100';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
       case 'low': return 'text-blue-600 bg-blue-100';
-      default: return 'text-gray-600 bg-gray-100';
+      default: return 'text-gray-200 bg-gray-100';
     }
   };
 
@@ -409,7 +409,7 @@ const LoadBalancingAuditSystem: React.FC = () => {
             </div>
             <div>
               <h2 className="text-xl font-semibold">Load Balancing & Audit System</h2>
-              <p className="text-sm text-gray-500">Fair distribution monitoring and complete allocation history</p>
+              <p className="text-sm text-gray-300">Fair distribution monitoring and complete allocation history</p>
             </div>
           </div>
           <div className="flex items-center space-x-2">
@@ -419,7 +419,7 @@ const LoadBalancingAuditSystem: React.FC = () => {
               className={`px-4 py-2 rounded-lg flex items-center space-x-2 ${
                 systemHealth?.redistributionNeeded
                   ? 'bg-blue-700 text-white hover:bg-orange-700'
-                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  : 'bg-gray-300 text-gray-300 cursor-not-allowed'
               }`}
             >
               <Activity className="h-4 w-4" />
@@ -427,7 +427,7 @@ const LoadBalancingAuditSystem: React.FC = () => {
             </button>
             <button
               onClick={exportAuditLogs}
-              className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 flex items-center space-x-2"
+              className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 flex items-center space-x-2"
             >
               <Download className="h-4 w-4" />
               <span>Export</span>
@@ -441,7 +441,7 @@ const LoadBalancingAuditSystem: React.FC = () => {
             <div className="bg-gray-50 rounded-lg p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-xs text-gray-500">Fairness Score</p>
+                  <p className="text-xs text-gray-300">Fairness Score</p>
                   <p className="text-2xl font-semibold">{systemHealth.fairnessScore}%</p>
                 </div>
                 <Scale className="h-8 w-8 text-indigo-500" />
@@ -450,7 +450,7 @@ const LoadBalancingAuditSystem: React.FC = () => {
             <div className="bg-gray-50 rounded-lg p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-xs text-gray-500">Efficiency</p>
+                  <p className="text-xs text-gray-300">Efficiency</p>
                   <p className="text-2xl font-semibold">{systemHealth.efficiencyScore}%</p>
                 </div>
                 <TrendingUp className="h-8 w-8 text-green-500" />
@@ -459,7 +459,7 @@ const LoadBalancingAuditSystem: React.FC = () => {
             <div className="bg-gray-50 rounded-lg p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-xs text-gray-500">Avg Response</p>
+                  <p className="text-xs text-gray-300">Avg Response</p>
                   <p className="text-2xl font-semibold">{systemHealth.responseTimeAvg}m</p>
                 </div>
                 <Clock className="h-8 w-8 text-blue-500" />
@@ -468,7 +468,7 @@ const LoadBalancingAuditSystem: React.FC = () => {
             <div className="bg-gray-50 rounded-lg p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-xs text-gray-500">Accept Rate</p>
+                  <p className="text-xs text-gray-300">Accept Rate</p>
                   <p className="text-2xl font-semibold">{systemHealth.acceptanceRate}%</p>
                 </div>
                 <CheckCircle className="h-8 w-8 text-green-500" />
@@ -543,15 +543,15 @@ const LoadBalancingAuditSystem: React.FC = () => {
               <label className="text-sm font-medium">Weight Distribution</label>
               <div className="space-y-2 mt-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-600">Fairness</span>
+                  <span className="text-sm text-gray-200">Fairness</span>
                   <span className="text-sm font-medium">{Math.round(loadBalancingConfig.fairnessWeight * 100)}%</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-600">Performance</span>
+                  <span className="text-sm text-gray-200">Performance</span>
                   <span className="text-sm font-medium">{Math.round(loadBalancingConfig.performanceWeight * 100)}%</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-600">Proximity</span>
+                  <span className="text-sm text-gray-200">Proximity</span>
                   <span className="text-sm font-medium">{Math.round(loadBalancingConfig.proximityWeight * 100)}%</span>
                 </div>
               </div>
@@ -596,14 +596,14 @@ const LoadBalancingAuditSystem: React.FC = () => {
                     <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
                       {metric.status.replace('_', ' ')}
                     </span>
-                    <span className="text-sm text-gray-600">
+                    <span className="text-sm text-gray-200">
                       {metric.currentLoad}/{metric.maxCapacity} active jobs
                     </span>
                   </div>
                 </div>
                 <div className="text-right">
                   <p className="text-2xl font-semibold">{metric.utilizationRate}%</p>
-                  <p className="text-xs text-gray-500">Utilization</p>
+                  <p className="text-xs text-gray-300">Utilization</p>
                 </div>
               </div>
 
@@ -629,19 +629,19 @@ const LoadBalancingAuditSystem: React.FC = () => {
               {/* Metrics */}
               <div className="grid grid-cols-4 gap-4 mt-3">
                 <div>
-                  <p className="text-xs text-gray-500">Weekly Leads</p>
+                  <p className="text-xs text-gray-300">Weekly Leads</p>
                   <p className="text-sm font-medium">{metric.weeklyLeads}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500">Monthly Leads</p>
+                  <p className="text-xs text-gray-300">Monthly Leads</p>
                   <p className="text-sm font-medium">{metric.monthlyLeads}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500">Lead Share</p>
+                  <p className="text-xs text-gray-300">Lead Share</p>
                   <p className="text-sm font-medium">{metric.sharePercentage}%</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500">Deviation</p>
+                  <p className="text-xs text-gray-300">Deviation</p>
                   <p className={`text-sm font-medium ${
                     Math.abs(metric.deviation) > 10 ? 'text-red-600' :
                     Math.abs(metric.deviation) > 5 ? 'text-yellow-600' :
@@ -679,7 +679,7 @@ const LoadBalancingAuditSystem: React.FC = () => {
                     </span>
                     <p className="text-sm font-medium">{alert.message}</p>
                     {alert.contractor && (
-                      <span className="text-sm text-gray-500">({alert.contractor})</span>
+                      <span className="text-sm text-gray-300">({alert.contractor})</span>
                     )}
                   </div>
                   <button
@@ -707,12 +707,12 @@ const LoadBalancingAuditSystem: React.FC = () => {
       <div className="bg-white rounded-lg shadow-sm p-6">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold flex items-center">
-            <FileText className="h-5 w-5 mr-2 text-gray-600" />
+            <FileText className="h-5 w-5 mr-2 text-gray-200" />
             Allocation Audit Trail
           </h3>
           <div className="flex items-center space-x-2">
             <div className="relative">
-              <Search className="h-4 w-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              <Search className="h-4 w-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-200" />
               <input
                 type="text"
                 placeholder="Search logs..."
@@ -739,14 +739,14 @@ const LoadBalancingAuditSystem: React.FC = () => {
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
-                <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Time</th>
-                <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Event</th>
-                <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Lead</th>
-                <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Contractor</th>
-                <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Method</th>
-                <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Score</th>
-                <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Duration</th>
-                <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
+                <th className="px-4 py-2 text-left text-xs font-medium text-gray-300 uppercase">Time</th>
+                <th className="px-4 py-2 text-left text-xs font-medium text-gray-300 uppercase">Event</th>
+                <th className="px-4 py-2 text-left text-xs font-medium text-gray-300 uppercase">Lead</th>
+                <th className="px-4 py-2 text-left text-xs font-medium text-gray-300 uppercase">Contractor</th>
+                <th className="px-4 py-2 text-left text-xs font-medium text-gray-300 uppercase">Method</th>
+                <th className="px-4 py-2 text-left text-xs font-medium text-gray-300 uppercase">Score</th>
+                <th className="px-4 py-2 text-left text-xs font-medium text-gray-300 uppercase">Duration</th>
+                <th className="px-4 py-2 text-left text-xs font-medium text-gray-300 uppercase">Actions</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -767,11 +767,11 @@ const LoadBalancingAuditSystem: React.FC = () => {
                     </td>
                     <td className="px-4 py-2 text-sm text-gray-900">{log.leadId}</td>
                     <td className="px-4 py-2 text-sm text-gray-900">{log.contractorName}</td>
-                    <td className="px-4 py-2 text-sm text-gray-600 capitalize">{log.method.replace('_', ' ')}</td>
+                    <td className="px-4 py-2 text-sm text-gray-200 capitalize">{log.method.replace('_', ' ')}</td>
                     <td className="px-4 py-2">
                       <span className="text-sm font-medium">{log.score || '-'}</span>
                     </td>
-                    <td className="px-4 py-2 text-sm text-gray-600">{log.duration}ms</td>
+                    <td className="px-4 py-2 text-sm text-gray-200">{log.duration}ms</td>
                     <td className="px-4 py-2">
                       <button
                         onClick={() => setSelectedLog(log)}
@@ -793,7 +793,7 @@ const LoadBalancingAuditSystem: React.FC = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-6 max-w-md w-full">
             <h3 className="text-lg font-semibold mb-4">Confirm Load Rebalancing</h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-200 mb-6">
               This will redistribute leads among contractors to achieve better fairness. 
               Current fairness score: {systemHealth?.fairnessScore}%
             </p>
@@ -823,49 +823,49 @@ const LoadBalancingAuditSystem: React.FC = () => {
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-sm text-gray-500">Event ID</p>
+                  <p className="text-sm text-gray-300">Event ID</p>
                   <p className="font-medium">{selectedLog.id}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Timestamp</p>
+                  <p className="text-sm text-gray-300">Timestamp</p>
                   <p className="font-medium">{new Date(selectedLog.timestamp).toLocaleString()}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Event Type</p>
+                  <p className="text-sm text-gray-300">Event Type</p>
                   <p className="font-medium capitalize">{selectedLog.eventType.replace('_', ' ')}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Lead ID</p>
+                  <p className="text-sm text-gray-300">Lead ID</p>
                   <p className="font-medium">{selectedLog.leadId}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Contractor</p>
+                  <p className="text-sm text-gray-300">Contractor</p>
                   <p className="font-medium">{selectedLog.contractorName}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Allocation Method</p>
+                  <p className="text-sm text-gray-300">Allocation Method</p>
                   <p className="font-medium capitalize">{selectedLog.method.replace('_', ' ')}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Score</p>
+                  <p className="text-sm text-gray-300">Score</p>
                   <p className="font-medium">{selectedLog.score || 'N/A'}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Duration</p>
+                  <p className="text-sm text-gray-300">Duration</p>
                   <p className="font-medium">{selectedLog.duration}ms</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Success</p>
+                  <p className="text-sm text-gray-300">Success</p>
                   <p className="font-medium">{selectedLog.success ? 'Yes' : 'No'}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">User</p>
+                  <p className="text-sm text-gray-300">User</p>
                   <p className="font-medium">{selectedLog.userId}</p>
                 </div>
               </div>
               {Object.keys(selectedLog.details).length > 0 && (
                 <div>
-                  <p className="text-sm text-gray-500 mb-2">Additional Details</p>
+                  <p className="text-sm text-gray-300 mb-2">Additional Details</p>
                   <pre className="bg-gray-50 p-3 rounded text-xs">
                     {JSON.stringify(selectedLog.details, null, 2)}
                   </pre>
@@ -875,7 +875,7 @@ const LoadBalancingAuditSystem: React.FC = () => {
             <div className="mt-6 flex justify-end">
               <button
                 onClick={() => setSelectedLog(null)}
-                className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700"
+                className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900"
               >
                 Close
               </button>

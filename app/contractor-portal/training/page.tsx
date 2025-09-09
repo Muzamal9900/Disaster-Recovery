@@ -129,8 +129,8 @@ export default function ContractorPortalTrainingPage() {
                     <div className="flex justify-between items-start mb-3">
                       <div className="flex-1">
                         <h3 className="text-white font-semibold mb-1">{course.title}</h3>
-                        <p className="text-gray-400 text-sm mb-2">{course.description}</p>
-                        <div className="flex items-center gap-4 text-sm text-gray-400">
+                        <p className="text-gray-200 text-sm mb-2">{course.description}</p>
+                        <div className="flex items-center gap-4 text-sm text-gray-200">
                           <span className="flex items-center gap-1">
                             <BookOpen className="w-4 h-4" />
                             {course.category}
@@ -188,7 +188,7 @@ export default function ContractorPortalTrainingPage() {
                 {upcomingWebinars.map((webinar, index) => (
                   <div key={index} className="p-3 bg-white/5 rounded-lg">
                     <p className="text-white font-medium text-sm mb-1">{webinar.title}</p>
-                    <p className="text-gray-400 text-xs">{webinar.date} • {webinar.time}</p>
+                    <p className="text-gray-200 text-xs">{webinar.date} • {webinar.time}</p>
                     <button className="mt-2 text-blue-400 hover:text-blue-300 text-sm">Register →</button>
                   </div>
                 ))}
@@ -207,9 +207,9 @@ export default function ContractorPortalTrainingPage() {
                     }`}
                   >
                     <achievement.icon className={`w-8 h-8 mx-auto mb-2 ${
-                      achievement.earned ? 'text-yellow-400' : 'text-gray-500'
+                      achievement.earned ? 'text-yellow-400' : 'text-gray-300'
                     }`} />
-                    <p className={`text-xs ${achievement.earned ? 'text-white' : 'text-gray-400'}`}>
+                    <p className={`text-xs ${achievement.earned ? 'text-white' : 'text-gray-200'}`}>
                       {achievement.title}
                     </p>
                   </div>

@@ -489,7 +489,7 @@ const WeightedAllocationEngine: React.FC = () => {
       case 'high': return 'text-red-600 bg-red-100';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
       case 'low': return 'text-green-600 bg-green-100';
-      default: return 'text-gray-600 bg-gray-100';
+      default: return 'text-gray-200 bg-gray-100';
     }
   };
 
@@ -504,7 +504,7 @@ const WeightedAllocationEngine: React.FC = () => {
             </div>
             <div>
               <h2 className="text-xl font-semibold">Weighted Allocation Engine</h2>
-              <p className="text-sm text-gray-500">Transparent, fair lead distribution with configurable weights</p>
+              <p className="text-sm text-gray-300">Transparent, fair lead distribution with configurable weights</p>
             </div>
           </div>
           <div className="flex items-center space-x-2">
@@ -538,19 +538,19 @@ const WeightedAllocationEngine: React.FC = () => {
         {currentLead && (
           <div className="bg-gray-50 rounded-lg p-4 grid grid-cols-4 gap-4">
             <div>
-              <p className="text-xs text-gray-500">Lead ID</p>
+              <p className="text-xs text-gray-300">Lead ID</p>
               <p className="text-sm font-medium">{currentLead.id}</p>
             </div>
             <div>
-              <p className="text-xs text-gray-500">Service Type</p>
+              <p className="text-xs text-gray-300">Service Type</p>
               <p className="text-sm font-medium capitalize">{currentLead.jobDetails.serviceType.replace('_', ' ')}</p>
             </div>
             <div>
-              <p className="text-xs text-gray-500">Priority</p>
+              <p className="text-xs text-gray-300">Priority</p>
               <p className="text-sm font-medium capitalize">{currentLead.priority}</p>
             </div>
             <div>
-              <p className="text-xs text-gray-500">Est. Value</p>
+              <p className="text-xs text-gray-300">Est. Value</p>
               <p className="text-sm font-medium">${currentLead.estimatedValue?.toLocaleString() || 'N/A'}</p>
             </div>
           </div>
@@ -560,7 +560,7 @@ const WeightedAllocationEngine: React.FC = () => {
       {/* Allocation Weights Configuration */}
       <div className="bg-white rounded-lg shadow-sm p-6">
         <h3 className="text-lg font-semibold mb-4 flex items-center">
-          <Settings className="h-5 w-5 mr-2 text-gray-600" />
+          <Settings className="h-5 w-5 mr-2 text-gray-200" />
           Allocation Weight Configuration
         </h3>
 
@@ -580,7 +580,7 @@ const WeightedAllocationEngine: React.FC = () => {
                   </span>
                 </div>
               </div>
-              <p className="text-sm text-gray-600 mb-3">{weight.description}</p>
+              <p className="text-sm text-gray-200 mb-3">{weight.description}</p>
               {weight.adjustable && (
                 <div className="flex items-center space-x-4">
                   <input
@@ -636,7 +636,7 @@ const WeightedAllocationEngine: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-medium">{ec.companyName}</p>
-                    <div className="flex items-center space-x-3 mt-1 text-sm text-gray-600">
+                    <div className="flex items-center space-x-3 mt-1 text-sm text-gray-200">
                       <span>KPI: {ec.kpiScore}</span>
                       <span>Distance: {ec.distance} mi</span>
                       <span>Capacity: {100 - ec.capacity}% available</span>
@@ -646,7 +646,7 @@ const WeightedAllocationEngine: React.FC = () => {
                 </div>
                 <div className="text-right">
                   <p className="text-3xl font-bold text-purple-600">{ec.score.finalScore}</p>
-                  <p className="text-sm text-gray-500">Weighted Score</p>
+                  <p className="text-sm text-gray-300">Weighted Score</p>
                 </div>
               </div>
 
@@ -654,7 +654,7 @@ const WeightedAllocationEngine: React.FC = () => {
               <div className="mt-3 pt-3 border-t grid grid-cols-5 gap-2">
                 {allocationWeights.map((weight) => (
                   <div key={weight.factor} className="text-center">
-                    <p className="text-xs text-gray-500">{weight.factor}</p>
+                    <p className="text-xs text-gray-300">{weight.factor}</p>
                     <p className="text-sm font-medium">
                       {Math.round(
                         weight.factor === 'KPI Score' ? ec.kpiScore * weight.weight :
@@ -685,23 +685,23 @@ const WeightedAllocationEngine: React.FC = () => {
               <h4 className="font-medium mb-3">Allocation Decision</h4>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Winner:</span>
+                  <span className="text-gray-200">Winner:</span>
                   <span className="font-medium">{transparencyReport.winner}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Runner-up:</span>
+                  <span className="text-gray-200">Runner-up:</span>
                   <span className="font-medium">{transparencyReport.runnerUp}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Margin:</span>
+                  <span className="text-gray-200">Margin:</span>
                   <span className="font-medium">{transparencyReport.marginOfVictory} points</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Method:</span>
+                  <span className="text-gray-200">Method:</span>
                   <span className="font-medium capitalize">{transparencyReport.method}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Confidence:</span>
+                  <span className="text-gray-200">Confidence:</span>
                   <span className="font-medium">{Math.round(transparencyReport.confidence * 100)}%</span>
                 </div>
               </div>
@@ -711,11 +711,11 @@ const WeightedAllocationEngine: React.FC = () => {
               <h4 className="font-medium mb-3">Fairness Metrics</h4>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Fairness Score:</span>
+                  <span className="text-gray-200">Fairness Score:</span>
                   <span className="font-medium">{Math.round(transparencyReport.fairnessScore)}%</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Timestamp:</span>
+                  <span className="text-gray-200">Timestamp:</span>
                   <span className="font-medium text-xs">
                     {new Date(transparencyReport.timestamp).toLocaleString()}
                   </span>
@@ -731,20 +731,20 @@ const WeightedAllocationEngine: React.FC = () => {
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr>
-                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Factor</th>
-                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Weight</th>
-                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Winner Score</th>
-                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Runner-up Score</th>
-                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Contribution</th>
+                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-300 uppercase">Factor</th>
+                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-300 uppercase">Weight</th>
+                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-300 uppercase">Winner Score</th>
+                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-300 uppercase">Runner-up Score</th>
+                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-300 uppercase">Contribution</th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {transparencyReport.factorsAnalyzed.map((factor) => (
                     <tr key={factor.factor}>
                       <td className="px-4 py-2 text-sm font-medium text-gray-900">{factor.factor}</td>
-                      <td className="px-4 py-2 text-sm text-gray-500">{Math.round(factor.weight * 100)}%</td>
+                      <td className="px-4 py-2 text-sm text-gray-300">{Math.round(factor.weight * 100)}%</td>
                       <td className="px-4 py-2 text-sm text-gray-900">{factor.winner.score}</td>
-                      <td className="px-4 py-2 text-sm text-gray-500">{factor.runnerUp.score}</td>
+                      <td className="px-4 py-2 text-sm text-gray-300">{factor.runnerUp.score}</td>
                       <td className="px-4 py-2 text-sm font-medium text-purple-600">+{factor.contribution}</td>
                     </tr>
                   ))}
@@ -785,7 +785,7 @@ const WeightedAllocationEngine: React.FC = () => {
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm text-gray-500">Avg Score</p>
+                  <p className="text-sm text-gray-300">Avg Score</p>
                   <p className="font-medium">{Math.round(result.averageScore)}</p>
                 </div>
               </div>

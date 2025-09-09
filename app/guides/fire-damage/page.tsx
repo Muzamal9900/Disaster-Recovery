@@ -395,12 +395,12 @@ export default function FireDamageGuidePage() {
                   }`}
                 >
                   <div className={`inline-flex p-3 rounded-full mb-4 ${
-                    step.critical ? 'bg-red-100 text-red-600' : 'bg-gray-100 text-gray-600'
+                    step.critical ? 'bg-red-100 text-red-600' : 'bg-gray-100 text-gray-200'
                   }`}>
                     {step.icon}
                   </div>
                   <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
-                  <p className="text-gray-600 text-sm mb-2">{step.description}</p>
+                  <p className="text-gray-200 text-sm mb-2">{step.description}</p>
                   <span className={`text-xs font-semibold px-2 py-1 rounded ${
                     step.critical ? 'bg-red-200 text-red-800' : 'bg-gray-200 text-gray-800'
                   }`}>
@@ -435,7 +435,7 @@ export default function FireDamageGuidePage() {
                   className={`px-6 py-3 rounded-lg font-semibold transition-all ${
                     selectedClass === key
                       ? 'bg-orange-600 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-orange-50'
+                      : 'bg-white text-gray-200 hover:bg-orange-50'
                   }`}
                 >
                   {fireClasses[key as keyof typeof fireClasses].title}
@@ -455,7 +455,7 @@ export default function FireDamageGuidePage() {
                   <h3 className="text-2xl font-bold mb-4">
                     {fireClasses[selectedClass as keyof typeof fireClasses].title}
                   </h3>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-gray-200 mb-6">
                     {fireClasses[selectedClass as keyof typeof fireClasses].description}
                   </p>
                   <div className="space-y-3">
@@ -490,7 +490,7 @@ export default function FireDamageGuidePage() {
                     {fireClasses[selectedClass as keyof typeof fireClasses].indicators.map((indicator, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <CheckCircle className="w-5 h-5 text-orange-600 mt-0.5" />
-                        <span className="text-gray-700">{indicator}</span>
+                        <span className="text-gray-200">{indicator}</span>
                       </li>
                     ))}
                   </ul>
@@ -511,7 +511,7 @@ export default function FireDamageGuidePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3">
-              <Wind className="w-8 h-8 text-gray-600" />
+              <Wind className="w-8 h-8 text-gray-200" />
               Understanding Smoke Damage Types
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -598,7 +598,7 @@ export default function FireDamageGuidePage() {
                         {phase.activities.map((activity, idx) => (
                           <div key={idx} className="flex items-center gap-2">
                             <CheckCircle className="w-4 h-4 text-green-600" />
-                            <span className="text-gray-700">{activity}</span>
+                            <span className="text-gray-200">{activity}</span>
                           </div>
                         ))}
                       </div>
@@ -655,7 +655,7 @@ export default function FireDamageGuidePage() {
                           {item.typically}
                         </span>
                       </td>
-                      <td className="px-6 py-4 text-gray-600">{item.notes}</td>
+                      <td className="px-6 py-4 text-gray-200">{item.notes}</td>
                       <td className="px-6 py-4 text-sm text-orange-600">{item.watch}</td>
                     </tr>
                   ))}
@@ -698,7 +698,7 @@ export default function FireDamageGuidePage() {
               >
                 <Home className="w-12 h-12 text-blue-600 mb-4" />
                 <h3 className="text-xl font-bold mb-3">Residential</h3>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-gray-200">
                   <li>• Family safety first priority</li>
                   <li>• Temporary accommodation needs</li>
                   <li>• Personal belongings salvage</li>
@@ -722,7 +722,7 @@ export default function FireDamageGuidePage() {
               >
                 <Building className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold mb-3">Commercial</h3>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-gray-200">
                   <li>• Business continuity planning</li>
                   <li>• Revenue loss mitigation</li>
                   <li>• Employee communication</li>
@@ -746,7 +746,7 @@ export default function FireDamageGuidePage() {
               >
                 <Factory className="w-12 h-12 text-purple-600 mb-4" />
                 <h3 className="text-xl font-bold mb-3">Industrial</h3>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-gray-200">
                   <li>• Equipment damage assessment</li>
                   <li>• Hazardous material handling</li>
                   <li>• Production line restoration</li>
@@ -800,7 +800,7 @@ export default function FireDamageGuidePage() {
                     />
                   </button>
                   {expandedFAQ === index && (
-                    <div className="px-6 pb-4 text-gray-600">
+                    <div className="px-6 pb-4 text-gray-200">
                       {faq.answer}
                     </div>
                   )}
@@ -829,9 +829,9 @@ export default function FireDamageGuidePage() {
                 href="/guides/smoke-damage"
                 className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
               >
-                <Wind className="w-10 h-10 text-gray-600 mb-3" />
+                <Wind className="w-10 h-10 text-gray-200 mb-3" />
                 <h3 className="font-bold mb-2">Smoke Damage Guide</h3>
-                <p className="text-gray-600 text-sm">Deep dive into smoke damage types and restoration</p>
+                <p className="text-gray-200 text-sm">Deep dive into smoke damage types and restoration</p>
               </Link>
               
               <Link
@@ -840,7 +840,7 @@ export default function FireDamageGuidePage() {
               >
                 <Droplets className="w-10 h-10 text-blue-600 mb-3" />
                 <h3 className="font-bold mb-2">Water Damage Guide</h3>
-                <p className="text-gray-600 text-sm">Secondary water damage from firefighting efforts</p>
+                <p className="text-gray-200 text-sm">Secondary water damage from firefighting efforts</p>
               </Link>
               
               <Link
@@ -849,7 +849,7 @@ export default function FireDamageGuidePage() {
               >
                 <FileText className="w-10 h-10 text-orange-600 mb-3" />
                 <h3 className="font-bold mb-2">Fire Damage Checklist</h3>
-                <p className="text-gray-600 text-sm">Step-by-step emergency response checklist</p>
+                <p className="text-gray-200 text-sm">Step-by-step emergency response checklist</p>
               </Link>
               
               <Link
@@ -858,7 +858,7 @@ export default function FireDamageGuidePage() {
               >
                 <MapPin className="w-10 h-10 text-red-600 mb-3" />
                 <h3 className="font-bold mb-2">Local Services</h3>
-                <p className="text-gray-600 text-sm">Find fire damage restoration in your area</p>
+                <p className="text-gray-200 text-sm">Find fire damage restoration in your area</p>
               </Link>
             </div>
           </motion.div>

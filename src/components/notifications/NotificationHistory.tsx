@@ -195,7 +195,7 @@ export function NotificationHistory() {
       case 'sent':
         return <Clock className="h-4 w-4 text-blue-600" />;
       default:
-        return <AlertCircle className="h-4 w-4 text-gray-500" />;
+        return <AlertCircle className="h-4 w-4 text-gray-300" />;
     }
   };
 
@@ -259,7 +259,7 @@ export function NotificationHistory() {
             <Clock className="h-6 w-6" />
             Notification History
           </h2>
-          <p className="text-gray-600 mt-1">
+          <p className="text-gray-200 mt-1">
             Track and analyse all sent notifications
           </p>
         </div>
@@ -283,7 +283,7 @@ export function NotificationHistory() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold">{analytics.totalSent.toLocaleString()}</p>
-            <p className="text-xs text-gray-500 mt-1">Last 30 days</p>
+            <p className="text-xs text-gray-300 mt-1">Last 30 days</p>
           </CardContent>
         </Card>
 
@@ -293,7 +293,7 @@ export function NotificationHistory() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold">{analytics.deliveryRate}%</p>
-            <p className="text-xs text-gray-500 mt-1">
+            <p className="text-xs text-gray-300 mt-1">
               {analytics.totalDelivered} delivered
             </p>
           </CardContent>
@@ -305,7 +305,7 @@ export function NotificationHistory() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold">{analytics.readRate}%</p>
-            <p className="text-xs text-gray-500 mt-1">
+            <p className="text-xs text-gray-300 mt-1">
               Avg. {Math.floor(analytics.averageReadTime / 60)}m to read
             </p>
           </CardContent>
@@ -317,7 +317,7 @@ export function NotificationHistory() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold text-red-600">{analytics.totalFailed}</p>
-            <p className="text-xs text-gray-500 mt-1">
+            <p className="text-xs text-gray-300 mt-1">
               {((analytics.totalFailed / analytics.totalSent) * 100).toFixed(1)}% failure rate
             </p>
           </CardContent>
@@ -339,7 +339,7 @@ export function NotificationHistory() {
                 <div className="flex flex-wrap gap-2">
                   <div className="flex-1 min-w-[200px]">
                     <div className="relative">
-                      <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+                      <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-200" />
                       <Input
                         placeholder="Search notifications..."
                         value={searchQuery}
@@ -489,7 +489,7 @@ export function NotificationHistory() {
               {/* Pagination */}
               {totalPages > 1 && (
                 <div className="flex items-center justify-between mt-4">
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-200">
                     Showing {(currentPage - 1) * itemsPerPage + 1} to{' '}
                     {Math.min(currentPage * itemsPerPage, filteredHistory.length)} of{' '}
                     {filteredHistory.length} notifications

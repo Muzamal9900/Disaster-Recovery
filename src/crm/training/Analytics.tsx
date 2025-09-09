@@ -77,15 +77,15 @@ export default function AnalyticsModule() {
             
             <li key="0" className="flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Performance Analytics</span>
+              <span className="text-gray-200">Performance Analytics</span>
             </li>
             <li key="1" className="flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Predictive Analytics</span>
+              <span className="text-gray-200">Predictive Analytics</span>
             </li>
             <li key="2" className="flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Competitive Intelligence</span>
+              <span className="text-gray-200">Competitive Intelligence</span>
             </li>
           </ul>
         </CardContent>
@@ -144,7 +144,7 @@ export default function AnalyticsModule() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="prose prose-gray max-w-none">
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">
                   Key Analytics Areas:
 • Revenue Analytics - Track income by service, territory, insurer
 • Lead Analytics - Sources, conversion rates, response times
@@ -204,7 +204,7 @@ export default function AnalyticsModule() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="prose prose-gray max-w-none">
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">
                   Forecasting Capabilities:
 • Disaster event predictions based on weather data
 • Lead volume forecasting by territory
@@ -264,7 +264,7 @@ export default function AnalyticsModule() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="prose prose-gray max-w-none">
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">
                   Market Insights:
 • Territory competitor analysis
 • Pricing benchmarking

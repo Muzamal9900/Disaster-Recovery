@@ -144,7 +144,7 @@ const DocumentExpiryTracker: React.FC<DocumentExpiryTrackerProps> = ({
       case 'high': return 'text-blue-700 bg-orange-50 border-orange-200';
       case 'medium': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
       case 'low': return 'text-blue-600 bg-blue-50 border-blue-200';
-      default: return 'text-gray-600 bg-gray-50 border-gray-200';
+      default: return 'text-gray-200 bg-gray-50 border-gray-200';
     }
   };
 
@@ -166,7 +166,7 @@ const DocumentExpiryTracker: React.FC<DocumentExpiryTrackerProps> = ({
       case 'warning': return 'text-yellow-600 bg-yellow-50';
       case 'non_compliant':
       case 'incomplete': return 'text-red-600 bg-red-50';
-      default: return 'text-gray-600 bg-gray-50';
+      default: return 'text-gray-200 bg-gray-50';
     }
   };
 
@@ -194,7 +194,7 @@ const DocumentExpiryTracker: React.FC<DocumentExpiryTrackerProps> = ({
 
         <div className="mb-6">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm text-gray-600">Overall Completion</span>
+            <span className="text-sm text-gray-200">Overall Completion</span>
             <span className="text-sm font-medium text-gray-900">
               {complianceStatus?.completionRate.toFixed(1)}%
             </span>
@@ -229,7 +229,7 @@ const DocumentExpiryTracker: React.FC<DocumentExpiryTrackerProps> = ({
                     <h4 className="font-medium text-gray-900 capitalize">
                       {category.category.replace('_', ' ')}
                     </h4>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-200">
                       {category.approved}/{category.required} completed
                     </p>
                   </div>
@@ -250,19 +250,19 @@ const DocumentExpiryTracker: React.FC<DocumentExpiryTrackerProps> = ({
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div className="text-center">
                       <p className="text-2xl font-bold text-gray-900">{category.required}</p>
-                      <p className="text-sm text-gray-600">Required</p>
+                      <p className="text-sm text-gray-200">Required</p>
                     </div>
                     <div className="text-center">
                       <p className="text-2xl font-bold text-blue-600">{category.submitted}</p>
-                      <p className="text-sm text-gray-600">Submitted</p>
+                      <p className="text-sm text-gray-200">Submitted</p>
                     </div>
                     <div className="text-center">
                       <p className="text-2xl font-bold text-green-600">{category.approved}</p>
-                      <p className="text-sm text-gray-600">Approved</p>
+                      <p className="text-sm text-gray-200">Approved</p>
                     </div>
                     <div className="text-center">
                       <p className="text-2xl font-bold text-red-600">{category.expired}</p>
-                      <p className="text-sm text-gray-600">Expired</p>
+                      <p className="text-sm text-gray-200">Expired</p>
                     </div>
                   </div>
                 </div>
@@ -339,7 +339,7 @@ const DocumentExpiryTracker: React.FC<DocumentExpiryTrackerProps> = ({
         <div className="text-center py-8">
           <CheckCircle className="w-12 h-12 text-green-500 mx-auto mb-3" />
           <h4 className="text-lg font-medium text-gray-900 mb-2">All documents are up to date</h4>
-          <p className="text-gray-600">No expiration alerts for the selected timeframe</p>
+          <p className="text-gray-200">No expiration alerts for the selected timeframe</p>
         </div>
       ) : (
         <div className="space-y-4">
@@ -368,7 +368,7 @@ const DocumentExpiryTracker: React.FC<DocumentExpiryTrackerProps> = ({
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">{alert.title}</h4>
-                    <p className="text-sm text-gray-600 capitalize">
+                    <p className="text-sm text-gray-200 capitalize">
                       {alert.category.replace('_', ' ')} • {alert.notificationsSent} reminders sent
                     </p>
                   </div>
@@ -380,7 +380,7 @@ const DocumentExpiryTracker: React.FC<DocumentExpiryTrackerProps> = ({
 
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4 text-sm">
-                  <div className="flex items-center text-gray-600">
+                  <div className="flex items-center text-gray-200">
                     <Calendar className="w-4 h-4 mr-1" />
                     Expires: {new Date(alert.expiryDate).toLocaleDateString()}
                   </div>
@@ -432,7 +432,7 @@ const DocumentExpiryTracker: React.FC<DocumentExpiryTrackerProps> = ({
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Document Expiry Tracking</h1>
-          <p className="text-gray-600 mt-1">Monitor compliance status and upcoming document expirations</p>
+          <p className="text-gray-200 mt-1">Monitor compliance status and upcoming document expirations</p>
         </div>
         <button className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colours">
           <RefreshCw className="w-4 h-4 mr-2" />

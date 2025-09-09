@@ -570,7 +570,7 @@ export default function IndustrialPropertyPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3">
-              <Factory className="w-8 h-8 text-gray-600" />
+              <Factory className="w-8 h-8 text-gray-200" />
               Industrial Facility Types
             </h2>
             
@@ -582,7 +582,7 @@ export default function IndustrialPropertyPage() {
                   className={`px-4 py-2 rounded-lg font-semibold transition-all text-sm ${
                     selectedIndustryType === key
                       ? 'bg-gray-800 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
+                      : 'bg-white text-gray-200 hover:bg-gray-100 border border-gray-300'
                   }`}
                 >
                   {industryTypes[key as keyof typeof industryTypes].name}
@@ -602,20 +602,20 @@ export default function IndustrialPropertyPage() {
                   <h3 className="text-2xl font-bold mb-4">
                     {industryTypes[selectedIndustryType as keyof typeof industryTypes].name}
                   </h3>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-gray-200 mb-6">
                     {industryTypes[selectedIndustryType as keyof typeof industryTypes].description}
                   </p>
                   
                   <div className="mb-6">
                     <h4 className="font-semibold mb-3 flex items-center gap-2">
-                      <Settings className="w-5 h-5 text-gray-600" />
+                      <Settings className="w-5 h-5 text-gray-200" />
                       Critical Assets
                     </h4>
                     <ul className="space-y-2">
                       {industryTypes[selectedIndustryType as keyof typeof industryTypes].criticalAssets.map((asset, idx) => (
                         <li key={idx} className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5" />
-                          <span className="text-gray-700">{asset}</span>
+                          <span className="text-gray-200">{asset}</span>
                         </li>
                       ))}
                     </ul>
@@ -624,12 +624,12 @@ export default function IndustrialPropertyPage() {
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-red-50 rounded-lg p-4 border border-red-200">
                       <Clock className="w-6 h-6 text-red-600 mb-2" />
-                      <p className="text-sm font-semibold text-gray-600">Typical Downtime</p>
+                      <p className="text-sm font-semibold text-gray-200">Typical Downtime</p>
                       <p className="font-bold text-red-700">{industryTypes[selectedIndustryType as keyof typeof industryTypes].averageDowntime}</p>
                     </div>
                     <div className="bg-orange-50 rounded-lg p-4 border border-orange-200">
                       <DollarSign className="w-6 h-6 text-orange-600 mb-2" />
-                      <p className="text-sm font-semibold text-gray-600">Production Loss</p>
+                      <p className="text-sm font-semibold text-gray-200">Production Loss</p>
                       <p className="font-bold text-orange-700 text-sm">{industryTypes[selectedIndustryType as keyof typeof industryTypes].productionLoss}</p>
                     </div>
                   </div>
@@ -645,7 +645,7 @@ export default function IndustrialPropertyPage() {
                       {industryTypes[selectedIndustryType as keyof typeof industryTypes].complianceRequirements.map((requirement, idx) => (
                         <li key={idx} className="flex items-start gap-2">
                           <Info className="w-4 h-4 text-yellow-600 mt-0.5" />
-                          <span className="text-gray-700 text-sm">{requirement}</span>
+                          <span className="text-gray-200 text-sm">{requirement}</span>
                         </li>
                       ))}
                     </ul>
@@ -690,7 +690,7 @@ export default function IndustrialPropertyPage() {
                       <h4 className="font-semibold text-sm mb-2 text-red-700">Associated Risks</h4>
                       <ul className="space-y-1">
                         {hazard.risks.map((risk, idx) => (
-                          <li key={idx} className="text-sm text-gray-600 flex items-start gap-1">
+                          <li key={idx} className="text-sm text-gray-200 flex items-start gap-1">
                             <span className="text-red-500 mt-0.5">•</span>
                             {risk}
                           </li>
@@ -701,7 +701,7 @@ export default function IndustrialPropertyPage() {
                       <h4 className="font-semibold text-sm mb-2 text-green-700">Response Protocol</h4>
                       <ul className="space-y-1">
                         {hazard.response.map((action, idx) => (
-                          <li key={idx} className="text-sm text-gray-600 flex items-start gap-1">
+                          <li key={idx} className="text-sm text-gray-200 flex items-start gap-1">
                             <span className="text-green-500 mt-0.5">•</span>
                             {action}
                           </li>
@@ -740,10 +740,10 @@ export default function IndustrialPropertyPage() {
                   className="bg-gradient-to-br from-blue-50 to-white rounded-lg p-6 border border-blue-200"
                 >
                   <h3 className="font-bold text-lg mb-2">{regulation.agency}</h3>
-                  <p className="text-sm text-gray-600 mb-3">{regulation.focus}</p>
+                  <p className="text-sm text-gray-200 mb-3">{regulation.focus}</p>
                   <ul className="space-y-1 mb-4">
                     {regulation.requirements.map((req, idx) => (
-                      <li key={idx} className="text-xs text-gray-600 flex items-start gap-1">
+                      <li key={idx} className="text-xs text-gray-200 flex items-start gap-1">
                         <CheckCircle className="w-3 h-3 text-blue-500 mt-0.5" />
                         {req}
                       </li>
@@ -785,12 +785,12 @@ export default function IndustrialPropertyPage() {
                   className="bg-white rounded-lg shadow-lg p-6"
                 >
                   <h3 className="font-bold text-lg mb-2 text-orange-700">{challenge.challenge}</h3>
-                  <p className="text-sm text-gray-600 mb-4">{challenge.description}</p>
+                  <p className="text-sm text-gray-200 mb-4">{challenge.description}</p>
                   <div className="bg-green-50 rounded-lg p-4">
                     <h4 className="font-semibold text-sm mb-2 text-green-700">Solutions:</h4>
                     <ul className="space-y-1">
                       {challenge.solutions.map((solution, idx) => (
-                        <li key={idx} className="text-xs text-gray-600 flex items-start gap-1">
+                        <li key={idx} className="text-xs text-gray-200 flex items-start gap-1">
                           <ChevronRight className="w-3 h-3 text-green-600 mt-0.5" />
                           {solution}
                         </li>
@@ -831,8 +831,8 @@ export default function IndustrialPropertyPage() {
                   {insuranceConsiderations.map((insurance, index) => (
                     <tr key={index} className="hover:bg-gray-50">
                       <td className="px-6 py-4 font-semibold">{insurance.coverage}</td>
-                      <td className="px-6 py-4 text-sm text-gray-600">{insurance.specifics}</td>
-                      <td className="px-6 py-4 text-sm text-gray-600">{insurance.limits}</td>
+                      <td className="px-6 py-4 text-sm text-gray-200">{insurance.specifics}</td>
+                      <td className="px-6 py-4 text-sm text-gray-200">{insurance.limits}</td>
                       <td className="px-6 py-4 text-sm text-orange-600">{insurance.gaps}</td>
                     </tr>
                   ))}
@@ -881,7 +881,7 @@ export default function IndustrialPropertyPage() {
                   </div>
                   <ul className="space-y-2">
                     {cost.factors.map((factor, idx) => (
-                      <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
+                      <li key={idx} className="text-sm text-gray-200 flex items-start gap-2">
                         <DollarSign className="w-4 h-4 text-green-500 mt-0.5" />
                         {factor}
                       </li>
@@ -922,7 +922,7 @@ export default function IndustrialPropertyPage() {
                     {component.elements.map((element, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-green-600 mt-0.5" />
-                        <span className="text-sm text-gray-700">{element}</span>
+                        <span className="text-sm text-gray-200">{element}</span>
                       </li>
                     ))}
                   </ul>
@@ -968,7 +968,7 @@ export default function IndustrialPropertyPage() {
                     />
                   </button>
                   {expandedSection === index && (
-                    <div className="px-6 pb-4 text-gray-600 border-t border-gray-100">
+                    <div className="px-6 pb-4 text-gray-200 border-t border-gray-100">
                       <p className="pt-4">{faq.answer}</p>
                     </div>
                   )}
@@ -999,7 +999,7 @@ export default function IndustrialPropertyPage() {
               >
                 <AlertOctagon className="w-10 h-10 text-red-600 mb-3" />
                 <h3 className="font-bold mb-2">Emergency Response</h3>
-                <p className="text-gray-600 text-sm">Industrial emergency protocols</p>
+                <p className="text-gray-200 text-sm">Industrial emergency protocols</p>
               </Link>
               
               <Link
@@ -1008,7 +1008,7 @@ export default function IndustrialPropertyPage() {
               >
                 <AlertTriangle className="w-10 h-10 text-yellow-600 mb-3" />
                 <h3 className="font-bold mb-2">Hazmat Guide</h3>
-                <p className="text-gray-600 text-sm">Hazardous material handling</p>
+                <p className="text-gray-200 text-sm">Hazardous material handling</p>
               </Link>
               
               <Link
@@ -1017,7 +1017,7 @@ export default function IndustrialPropertyPage() {
               >
                 <Shield className="w-10 h-10 text-blue-600 mb-3" />
                 <h3 className="font-bold mb-2">Insurance Analysis</h3>
-                <p className="text-gray-600 text-sm">Industrial coverage assessment</p>
+                <p className="text-gray-200 text-sm">Industrial coverage assessment</p>
               </Link>
               
               <Link
@@ -1026,7 +1026,7 @@ export default function IndustrialPropertyPage() {
               >
                 <Phone className="w-10 h-10 text-green-600 mb-3" />
                 <h3 className="font-bold mb-2">24/7 Response</h3>
-                <p className="text-gray-600 text-sm">Industrial emergency contacts</p>
+                <p className="text-gray-200 text-sm">Industrial emergency contacts</p>
               </Link>
             </div>
           </motion.div>

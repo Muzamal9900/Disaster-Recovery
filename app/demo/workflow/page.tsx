@@ -322,7 +322,7 @@ export default function WorkflowDemonstration() {
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-4xl font-bold mb-2">End-to-End Workflow Demonstration</h1>
-        <p className="text-gray-600">
+        <p className="text-gray-200">
           Experience the complete journey from customer claim to contractor payment
         </p>
       </div>
@@ -392,15 +392,15 @@ export default function WorkflowDemonstration() {
                   <h4 className="font-semibold text-sm mb-2 text-blue-900">Customer Details</h4>
                   <div className="space-y-1 text-xs">
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Name:</span>
+                      <span className="text-gray-200">Name:</span>
                       <span className="font-medium">{currentStep >= 0 ? demoCustomerData.fullName : '...'}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Phone:</span>
+                      <span className="text-gray-200">Phone:</span>
                       <span className="font-medium">{currentStep >= 0 ? demoCustomerData.phone : '...'}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Email:</span>
+                      <span className="text-gray-200">Email:</span>
                       <span className="font-medium text-xs">{currentStep >= 0 ? demoCustomerData.email : '...'}</span>
                     </div>
                   </div>
@@ -412,15 +412,15 @@ export default function WorkflowDemonstration() {
                     <h4 className="font-semibold text-sm mb-2 text-green-900">Property Info</h4>
                     <div className="space-y-1 text-xs">
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Address:</span>
+                        <span className="text-gray-200">Address:</span>
                         <span className="font-medium">{demoCustomerData.propertyAddress}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Suburb:</span>
+                        <span className="text-gray-200">Suburb:</span>
                         <span className="font-medium">{demoCustomerData.suburb}, {demoCustomerData.state}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Type:</span>
+                        <span className="text-gray-200">Type:</span>
                         <span className="font-medium capitalize">{demoCustomerData.propertyType}</span>
                       </div>
                     </div>
@@ -433,7 +433,7 @@ export default function WorkflowDemonstration() {
                     <h4 className="font-semibold text-sm mb-2 text-red-900">Damage Details</h4>
                     <div className="space-y-1 text-xs">
                       <div>
-                        <span className="text-gray-600">Type:</span>
+                        <span className="text-gray-200">Type:</span>
                         <div className="mt-1">
                           {demoCustomerData.damageTypes.map((type, i) => (
                             <Badge key={i} variant="destructive" className="mr-1 text-xs">
@@ -443,11 +443,11 @@ export default function WorkflowDemonstration() {
                         </div>
                       </div>
                       <div>
-                        <span className="text-gray-600">Description:</span>
-                        <p className="mt-1 text-xs text-gray-700">{demoCustomerData.damageDescription}</p>
+                        <span className="text-gray-200">Description:</span>
+                        <p className="mt-1 text-xs text-gray-200">{demoCustomerData.damageDescription}</p>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Urgency:</span>
+                        <span className="text-gray-200">Urgency:</span>
                         <Badge variant="destructive" className="text-xs">
                           {demoCustomerData.urgencyLevel.toUpperCase()}
                         </Badge>
@@ -462,15 +462,15 @@ export default function WorkflowDemonstration() {
                     <h4 className="font-semibold text-sm mb-2 text-purple-900">Insurance</h4>
                     <div className="space-y-1 text-xs">
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Company:</span>
+                        <span className="text-gray-200">Company:</span>
                         <span className="font-medium">{demoCustomerData.insuranceCompany}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Claim #:</span>
+                        <span className="text-gray-200">Claim #:</span>
                         <span className="font-medium">{demoCustomerData.insuranceClaimNumber}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Excess:</span>
+                        <span className="text-gray-200">Excess:</span>
                         <span className="font-medium">${demoCustomerData.excessAmount}</span>
                       </div>
                     </div>
@@ -483,15 +483,15 @@ export default function WorkflowDemonstration() {
                     <h4 className="font-semibold text-sm mb-2 text-green-900">Payment Status</h4>
                     <div className="space-y-1 text-xs">
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Platform Fee:</span>
+                        <span className="text-gray-200">Platform Fee:</span>
                         <span className="font-bold text-green-700">${demoCustomerData.paymentAmount}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Status:</span>
+                        <span className="text-gray-200">Status:</span>
                         <Badge variant="success" className="text-xs">PAID</Badge>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Method:</span>
+                        <span className="text-gray-200">Method:</span>
                         <span className="font-medium">Credit Card</span>
                       </div>
                     </div>
@@ -504,15 +504,15 @@ export default function WorkflowDemonstration() {
                     <h4 className="font-semibold text-sm mb-2 text-orange-900">Contractor Assigned</h4>
                     <div className="space-y-1 text-xs">
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Company:</span>
+                        <span className="text-gray-200">Company:</span>
                         <span className="font-medium">{ticketData.contractor?.name}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">ID:</span>
+                        <span className="text-gray-200">ID:</span>
                         <span className="font-medium">{ticketData.contractor?.id}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Status:</span>
+                        <span className="text-gray-200">Status:</span>
                         <Badge variant="success" className="text-xs">ACCEPTED</Badge>
                       </div>
                     </div>
@@ -536,7 +536,7 @@ export default function WorkflowDemonstration() {
                             <div className="text-green-800 font-semibold">$550 released instantly</div>
                           </>
                         )}
-                        {currentStep < 7 && <div className="text-gray-500">Pending...</div>}
+                        {currentStep < 7 && <div className="text-gray-300">Pending...</div>}
                       </div>
                       
                       {/* KPI 2 */}
@@ -548,7 +548,7 @@ export default function WorkflowDemonstration() {
                             <div className="text-green-800 font-semibold">$550 released instantly</div>
                           </>
                         )}
-                        {currentStep < 8 && <div className="text-gray-500">Pending...</div>}
+                        {currentStep < 8 && <div className="text-gray-300">Pending...</div>}
                       </div>
                       
                       {/* KPI 3 */}
@@ -560,7 +560,7 @@ export default function WorkflowDemonstration() {
                             <div className="text-green-800 font-semibold">$1,100 released (no fines)</div>
                           </>
                         )}
-                        {currentStep < 9 && <div className="text-gray-500">Pending...</div>}
+                        {currentStep < 9 && <div className="text-gray-300">Pending...</div>}
                       </div>
                       
                       {/* Payment Summary */}
@@ -609,7 +609,7 @@ export default function WorkflowDemonstration() {
                     ) : step.status === 'in-progress' ? (
                       <Loader2 className="h-5 w-5 text-blue-600 animate-spin" />
                     ) : (
-                      <Clock className="h-5 w-5 text-gray-400" />
+                      <Clock className="h-5 w-5 text-gray-200" />
                     )}
                   </div>
                   <div className="flex-1">
@@ -617,7 +617,7 @@ export default function WorkflowDemonstration() {
                       <h4 className={`font-medium ${
                         step.status === 'completed' ? 'text-green-700' :
                         step.status === 'in-progress' ? 'text-blue-700' :
-                        'text-gray-500'
+                        'text-gray-300'
                       }`}>
                         {step.title}
                       </h4>
@@ -627,7 +627,7 @@ export default function WorkflowDemonstration() {
                         </Badge>
                       )}
                     </div>
-                    <p className="text-sm text-gray-600 mt-1">
+                    <p className="text-sm text-gray-200 mt-1">
                       {step.description}
                     </p>
                     {step.details && (

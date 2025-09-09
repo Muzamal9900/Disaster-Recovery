@@ -250,19 +250,19 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
               <h3 className="font-semibold mb-2">Estimate #{estimate.estimateNumber}</h3>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <span className="text-gray-600">Total Amount:</span>
+                  <span className="text-gray-200">Total Amount:</span>
                   <span className="ml-2 font-bold">${estimate.totals.total.toLocaleString('en-AU', { minimumFractionDigits: 2 })}</span>
                 </div>
                 <div>
-                  <span className="text-gray-600">Valid Until:</span>
+                  <span className="text-gray-200">Valid Until:</span>
                   <span className="ml-2">{new Date(estimate.validUntil).toLocaleDateString('en-AU')}</span>
                 </div>
                 <div>
-                  <span className="text-gray-600">Work Duration:</span>
+                  <span className="text-gray-200">Work Duration:</span>
                   <span className="ml-2">{estimate.scope.timeline.estimatedDuration} days</span>
                 </div>
                 <div>
-                  <span className="text-gray-600">Phases:</span>
+                  <span className="text-gray-200">Phases:</span>
                   <span className="ml-2">{estimate.scope.phases.length} phases</span>
                 </div>
               </div>
@@ -270,10 +270,10 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
 
             <div className="space-y-4">
               <div className="flex items-start p-4 bg-gray-50 rounded">
-                <FileText className="h-5 w-5 mr-3 text-gray-600 mt-0.5" />
+                <FileText className="h-5 w-5 mr-3 text-gray-200 mt-0.5" />
                 <div className="flex-1">
                   <h4 className="font-semibold mb-1">Detailed Breakdown Available</h4>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-200">
                     View the complete estimate with line-by-line breakdown, scope of work, and price comparisons.
                   </p>
                   <button className="mt-2 text-blue-600 text-sm font-medium hover:underline">
@@ -286,7 +286,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                 <AlertCircle className="h-5 w-5 mr-3 text-yellow-600 mt-0.5" />
                 <div className="flex-1">
                   <h4 className="font-semibold mb-1">Important Notice</h4>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-200">
                     This is an ESTIMATE only and not a fixed price quote. Final costs may vary based on actual conditions encountered during work.
                   </p>
                 </div>
@@ -310,7 +310,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
             <h2 className="text-2xl font-bold">Provide Your Feedback</h2>
             
             <div>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-200 mb-4">
                 Please review the estimate and let us know your decision.
               </p>
               
@@ -327,7 +327,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                   <ThumbsUp className="h-5 w-5 mr-3 text-green-600" />
                   <div>
                     <p className="font-semibold">Approve Estimate</p>
-                    <p className="text-sm text-gray-600">I agree with the estimate and want to proceed</p>
+                    <p className="text-sm text-gray-200">I agree with the estimate and want to proceed</p>
                   </div>
                 </label>
 
@@ -343,7 +343,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                   <RefreshCw className="h-5 w-5 mr-3 text-yellow-600" />
                   <div>
                     <p className="font-semibold">Request Revision</p>
-                    <p className="text-sm text-gray-600">I need some changes to the estimate</p>
+                    <p className="text-sm text-gray-200">I need some changes to the estimate</p>
                   </div>
                 </label>
 
@@ -359,14 +359,14 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                   <ThumbsDown className="h-5 w-5 mr-3 text-red-600" />
                   <div>
                     <p className="font-semibold">Decline Estimate</p>
-                    <p className="text-sm text-gray-600">I do not wish to proceed with this estimate</p>
+                    <p className="text-sm text-gray-200">I do not wish to proceed with this estimate</p>
                   </div>
                 </label>
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-200 mb-2">
                 Comments (Optional)
               </label>
               <textarea
@@ -390,7 +390,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                 className={`px-6 py-3 rounded ${
                   approvalDecision 
                     ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                    : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    : 'bg-gray-300 text-gray-300 cursor-not-allowed'
                 }`}
               >
                 Continue
@@ -405,7 +405,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
             <h2 className="text-2xl font-bold">Legal Consent & Acknowledgments</h2>
             
             <div className="bg-gray-50 p-4 rounded">
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 Please review and accept the following terms and conditions to proceed with your {approvalDecision} decision.
               </p>
             </div>
@@ -420,7 +420,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                 />
                 <div>
                   <p className="font-semibold">Terms and Conditions</p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-200">
                     I have read and accept the terms and conditions of service
                   </p>
                 </div>
@@ -435,7 +435,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                 />
                 <div>
                   <p className="font-semibold">Privacy Policy</p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-200">
                     I acknowledge the privacy policy and consent to data processing
                   </p>
                 </div>
@@ -450,7 +450,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                 />
                 <div>
                   <p className="font-semibold">Scope of Work</p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-200">
                     I understand and accept the scope of work as outlined in the estimate
                   </p>
                 </div>
@@ -465,7 +465,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                 />
                 <div>
                   <p className="font-semibold">Estimate Disclaimer</p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-200">
                     I understand this is an estimate only and actual costs may vary
                   </p>
                 </div>
@@ -480,7 +480,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                 />
                 <div>
                   <p className="font-semibold">Variation Clause</p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-200">
                     I understand that variations may be required and will be communicated
                   </p>
                 </div>
@@ -495,7 +495,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                 />
                 <div>
                   <p className="font-semibold">Consumer Rights</p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-200">
                     I acknowledge my rights under Australian Consumer Law
                   </p>
                 </div>
@@ -515,7 +515,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                 className={`px-6 py-3 rounded ${
                   allConsentsGiven()
                     ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                    : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    : 'bg-gray-300 text-gray-300 cursor-not-allowed'
                 }`}
               >
                 Continue to Signature
@@ -542,7 +542,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-200 mb-2">
                 Sign Below
               </label>
               <div className="border-2 border-gray-300 rounded">
@@ -560,7 +560,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
               <div className="mt-2 flex justify-between">
                 <button
                   onClick={clearSignature}
-                  className="text-sm text-gray-600 hover:text-gray-900"
+                  className="text-sm text-gray-200 hover:text-gray-900"
                 >
                   Clear Signature
                 </button>
@@ -574,7 +574,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-200 mb-2">
                 Verification
               </label>
               <div className="flex space-x-3">
@@ -591,14 +591,14 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                   disabled={sentCode}
                   className={`px-4 py-2 rounded ${
                     sentCode 
-                      ? 'bg-gray-300 text-gray-500' 
+                      ? 'bg-gray-300 text-gray-300' 
                       : 'bg-blue-600 text-white hover:bg-blue-700'
                   }`}
                 >
                   {sentCode ? 'Code Sent' : 'Send Code'}
                 </button>
               </div>
-              <p className="mt-1 text-xs text-gray-500">
+              <p className="mt-1 text-xs text-gray-300">
                 A verification code will be sent to your registered email/phone
               </p>
             </div>
@@ -622,7 +622,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                 className={`px-6 py-3 rounded ${
                   signature && verificationCode
                     ? 'bg-green-700 text-white hover:bg-green-800' 
-                    : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    : 'bg-gray-300 text-gray-300 cursor-not-allowed'
                 }`}
               >
                 Submit {approvalDecision === 'approve' ? 'Approval' : approvalDecision === 'reject' ? 'Rejection' : 'Revision Request'}
@@ -656,7 +656,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                  approvalDecision === 'reject' ? 'Estimate Declined' :
                  'Revision Requested'}
               </h2>
-              <p className="text-gray-600">
+              <p className="text-gray-200">
                 {approvalDecision === 'approve' 
                   ? 'Thank you for approving the estimate. We will begin work as scheduled.'
                   : approvalDecision === 'reject'
@@ -683,7 +683,7 @@ const ClientApprovalWorkflow: React.FC<ClientApprovalWorkflowProps> = ({
                   </li>
                 </ul>
               ) : (
-                <p className="text-gray-600">
+                <p className="text-gray-200">
                   A team member will contact you within 24 hours to discuss your feedback.
                 </p>
               )}

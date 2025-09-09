@@ -319,7 +319,7 @@ export function EmailTemplates() {
             <Mail className="h-6 w-6" />
             Email Templates
           </h2>
-          <p className="text-gray-600 mt-1">
+          <p className="text-gray-200 mt-1">
             Manage and customize email notification templates
           </p>
         </div>
@@ -354,14 +354,14 @@ export function EmailTemplates() {
                       <div className="flex items-start justify-between">
                         <div>
                           <p className="font-medium text-sm">{template.name}</p>
-                          <p className="text-xs text-gray-500 mt-1">
+                          <p className="text-xs text-gray-300 mt-1">
                             {template.description}
                           </p>
                         </div>
                         {template.isActive ? (
                           <CheckCircle className="h-4 w-4 text-green-500" />
                         ) : (
-                          <AlertCircle className="h-4 w-4 text-gray-400" />
+                          <AlertCircle className="h-4 w-4 text-gray-200" />
                         )}
                       </div>
                       <div className="flex items-center gap-2 mt-2">
@@ -485,7 +485,7 @@ export function EmailTemplates() {
                           rows={3}
                           maxLength={160}
                         />
-                        <p className="text-xs text-gray-500 mt-1">
+                        <p className="text-xs text-gray-300 mt-1">
                           {selectedTemplate.smsTemplate?.length || 0}/160 characters
                         </p>
                       </div>
@@ -532,7 +532,7 @@ export function EmailTemplates() {
                       <CardContent>
                         <div className="border rounded-lg p-4 bg-white">
                           <div className="mb-4 pb-4 border-b">
-                            <p className="text-sm text-gray-600">Subject:</p>
+                            <p className="text-sm text-gray-200">Subject:</p>
                             <p className="font-medium">
                               {processTemplate(selectedTemplate.subject || '', testData)}
                             </p>

@@ -551,7 +551,7 @@ export default function Day6CustomerService() {
                 <h1 className="text-2xl font-bold text-gray-900">
                   Day 6: Customer Service Excellence
                 </h1>
-                <p className="text-sm text-gray-600">Compassion and professionalism</p>
+                <p className="text-sm text-gray-200">Compassion and professionalism</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -575,7 +575,7 @@ export default function Day6CustomerService() {
             <CardContent className="p-4">
               <h3 className="font-semibold mb-2">Customer Excellence</h3>
               <Progress value={50} className="mb-2" />
-              <p className="text-xs text-gray-600">3 of 6 modules completed</p>
+              <p className="text-xs text-gray-200">3 of 6 modules completed</p>
             </CardContent>
           </Card>
 
@@ -597,10 +597,10 @@ export default function Day6CustomerService() {
                     ) : (
                       <div className="h-4 w-4 rounded-full border-2 border-gray-300" />
                     )}
-                    <span className="text-xs text-gray-600">Module {module.id}</span>
+                    <span className="text-xs text-gray-200">Module {module.id}</span>
                   </div>
                   <h4 className="text-sm font-medium">{module.title}</h4>
-                  <p className="text-xs text-gray-600 mt-1">{module.duration}</p>
+                  <p className="text-xs text-gray-200 mt-1">{module.duration}</p>
                 </CardContent>
               </Card>
             ))}
@@ -713,7 +713,7 @@ export default function Day6CustomerService() {
                                 <div className="bg-gray-50 p-3 rounded-lg mb-2">
                                   <p className="text-sm italic">"{step.script}"</p>
                                 </div>
-                                <p className="text-xs text-gray-600">
+                                <p className="text-xs text-gray-200">
                                   <strong>Purpose:</strong> {step.purpose}
                                 </p>
                               </div>
@@ -850,9 +850,9 @@ export default function Day6CustomerService() {
                             <div className="flex items-center justify-between">
                               <div>
                                 <p className="font-medium">{item.situation}</p>
-                                <p className="text-sm text-gray-600 mt-1">{item.action}</p>
+                                <p className="text-sm text-gray-200 mt-1">{item.action}</p>
                               </div>
-                              <Shield className="h-5 w-5 text-gray-400" />
+                              <Shield className="h-5 w-5 text-gray-200" />
                             </div>
                           </CardContent>
                         </Card>
@@ -957,7 +957,7 @@ export default function Day6CustomerService() {
                     <CardTitle className="text-base">{scenario.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-gray-600 mb-3">{scenario.situation}</p>
+                    <p className="text-sm text-gray-200 mb-3">{scenario.situation}</p>
                     
                     <div className="grid grid-cols-2 gap-4">
                       <div>

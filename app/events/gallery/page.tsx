@@ -187,7 +187,7 @@ export default function EventsGalleryPage() {
                     {stat.value}
                   </motion.div>
                 </div>
-                <div className="text-gray-700 font-semibold text-sm md:text-base group-hover:text-gray-900 transition-colours">
+                <div className="text-gray-200 font-semibold text-sm md:text-base group-hover:text-gray-900 transition-colours">
                   {stat.label}
                 </div>
               </motion.div>
@@ -280,7 +280,7 @@ export default function EventsGalleryPage() {
                               className={`p-2 rounded-full backdrop-blur-sm transition-colours ${
                                 isFavorite 
                                   ? 'bg-red-500 text-white' 
-                                  : 'bg-white/80 text-gray-600 hover:bg-white'
+                                  : 'bg-white/80 text-gray-200 hover:bg-white'
                               }`}
                             >
                               <Heart className={`w-4 h-4 ${isFavorite ? 'fill-current' : ''}`} />
@@ -289,14 +289,14 @@ export default function EventsGalleryPage() {
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
                               onClick={() => setSelectedImage(event.images[0]?.url || '')}
-                              className="p-2 rounded-full bg-white/80 text-gray-600 hover:bg-white backdrop-blur-sm transition-colours"
+                              className="p-2 rounded-full bg-white/80 text-gray-200 hover:bg-white backdrop-blur-sm transition-colours"
                             >
                               <ZoomIn className="w-4 h-4" />
                             </motion.button>
                             <motion.button
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
-                              className="p-2 rounded-full bg-white/80 text-gray-600 hover:bg-white backdrop-blur-sm transition-colours"
+                              className="p-2 rounded-full bg-white/80 text-gray-200 hover:bg-white backdrop-blur-sm transition-colours"
                             >
                               <Share2 className="w-4 h-4" />
                             </motion.button>
@@ -315,7 +315,7 @@ export default function EventsGalleryPage() {
                               {event.title}
                             </CardTitle>
                             <div className="p-2 bg-gray-100 rounded-xl group-hover:bg-blue-100 transition-colours">
-                              <IconComponent className="h-5 w-5 text-gray-600 group-hover:text-blue-600 transition-colours" />
+                              <IconComponent className="h-5 w-5 text-gray-200 group-hover:text-blue-600 transition-colours" />
                             </div>
                           </div>
                           
@@ -324,7 +324,7 @@ export default function EventsGalleryPage() {
                               initial={{ opacity: 0, x: -10 }}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: index * 0.1 + 0.5 }}
-                              className="flex items-center text-sm text-gray-600"
+                              className="flex items-center text-sm text-gray-200"
                             >
                               <div className="p-1 bg-blue-100 rounded mr-2">
                                 <Calendar className="h-3 w-3 text-blue-600" />
@@ -335,7 +335,7 @@ export default function EventsGalleryPage() {
                               initial={{ opacity: 0, x: -10 }}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: index * 0.1 + 0.6 }}
-                              className="flex items-center text-sm text-gray-600"
+                              className="flex items-center text-sm text-gray-200"
                             >
                               <div className="p-1 bg-green-100 rounded mr-2">
                                 <MapPin className="h-3 w-3 text-green-600" />
@@ -350,7 +350,7 @@ export default function EventsGalleryPage() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: index * 0.1 + 0.7 }}
-                            className="text-gray-700 text-sm mb-4 line-clamp-3 leading-relaxed"
+                            className="text-gray-200 text-sm mb-4 line-clamp-3 leading-relaxed"
                           >
                             {event.description}
                           </motion.p>
@@ -369,7 +369,7 @@ export default function EventsGalleryPage() {
                                 className="bg-gradient-to-br from-blue-50 to-indigo-50 p-3 rounded-xl text-center border border-blue-100"
                               >
                                 <div className="font-bold text-lg text-blue-600">{stat.value}</div>
-                                <div className="text-xs text-gray-600 font-medium">{stat.label}</div>
+                                <div className="text-xs text-gray-200 font-medium">{stat.label}</div>
                               </motion.div>
                             ))}
                           </motion.div>
@@ -447,7 +447,7 @@ export default function EventsGalleryPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Before & After Gallery</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-200 max-w-2xl mx-auto">
               See the dramatic transformations our team achieves in disaster recovery situations
             </p>
           </div>
@@ -492,8 +492,8 @@ export default function EventsGalleryPage() {
                       </div>
                     </div>
                     <CardContent className="p-4">
-                      <p className="text-sm text-gray-700 font-medium">{ba.description}</p>
-                      <p className="text-xs text-gray-500 mt-2">{event.location}</p>
+                      <p className="text-sm text-gray-200 font-medium">{ba.description}</p>
+                      <p className="text-xs text-gray-300 mt-2">{event.location}</p>
                     </CardContent>
                   </Card>
                 </div>
@@ -508,7 +508,7 @@ export default function EventsGalleryPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Client Testimonials</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-200 max-w-2xl mx-auto">
               Hear from the families and businesses we've helped recover from disasters
             </p>
           </div>
@@ -526,13 +526,13 @@ export default function EventsGalleryPage() {
                         ))}
                       </div>
                     </div>
-                    <blockquote className="text-gray-700 italic mb-4">
+                    <blockquote className="text-gray-200 italic mb-4">
                       "{event.testimonial?.quote}"
                     </blockquote>
                     <div className="border-t pt-4">
                       <p className="font-semibold text-gray-900">{event.testimonial?.author}</p>
-                      <p className="text-sm text-gray-600">{event.testimonial?.role}</p>
-                      <p className="text-xs text-gray-500 mt-1">{event.location}</p>
+                      <p className="text-sm text-gray-200">{event.testimonial?.role}</p>
+                      <p className="text-xs text-gray-300 mt-1">{event.location}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -592,7 +592,7 @@ export default function EventsGalleryPage() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setSelectedImage(null)}
-                  className="absolute top-4 right-4 p-2 bg-white/90 rounded-full text-gray-700 hover:bg-white transition-colours"
+                  className="absolute top-4 right-4 p-2 bg-white/90 rounded-full text-gray-200 hover:bg-white transition-colours"
                 >
                   <ChevronRight className="w-6 h-6 rotate-45" />
                 </motion.button>
@@ -601,7 +601,7 @@ export default function EventsGalleryPage() {
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="font-semibold text-gray-900">High Resolution View</h3>
-                    <p className="text-sm text-gray-600">Click outside to close</p>
+                    <p className="text-sm text-gray-200">Click outside to close</p>
                   </div>
                   <div className="flex gap-2">
                     <motion.button
@@ -656,7 +656,7 @@ function EventCard({ event }: { event: DisasterEvent }) {
       <CardHeader>
         <div className="flex items-start justify-between">
           <CardTitle className="text-xl">{event.title}</CardTitle>
-          <IconComponent className="h-6 w-6 text-gray-400" />
+          <IconComponent className="h-6 w-6 text-gray-200" />
         </div>
         <CardDescription>
           <div className="flex items-center text-sm mt-2">
@@ -671,7 +671,7 @@ function EventCard({ event }: { event: DisasterEvent }) {
       </CardHeader>
 
       <CardContent>
-        <p className="text-gray-600 text-sm mb-4">
+        <p className="text-gray-200 text-sm mb-4">
           {event.description}
         </p>
         <Link href={`/events/${event.id}`}>

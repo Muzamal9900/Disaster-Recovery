@@ -197,9 +197,9 @@ export default function ModernContactPage() {
                     <div className={iconClassName}>
                       {info.icon}
                     </div>
-                    <h3 className="text-sm text-gray-700 mb-1">{info.title}</h3>
+                    <h3 className="text-sm text-gray-200 mb-1">{info.title}</h3>
                     <p className="text-xl font-bold mb-1">{info.value}</p>
-                    <p className="text-xs text-gray-700">{info.subtext}</p>
+                    <p className="text-xs text-gray-200">{info.subtext}</p>
                   </div>
                 </motion.div>
               );
@@ -226,7 +226,7 @@ export default function ModernContactPage() {
                         Emergency Contact Form
                       </span>
                     </h2>
-                    <p className="text-gray-700">Fill out the form below for immediate assistance</p>
+                    <p className="text-gray-200">Fill out the form below for immediate assistance</p>
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -246,7 +246,7 @@ export default function ModernContactPage() {
                           onChange={(e) => handleChange('name', e.target.value)}
                           onFocus={() => setActiveField('name')}
                           onBlur={() => setActiveField(null)}
-                          className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-xl focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all text-white placeholder-gray-500"
+                          className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-xl focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all text-white placeholder-gray-400"
                           placeholder="John Smith"
                         />
                         {activeField === 'name' && (
@@ -275,7 +275,7 @@ export default function ModernContactPage() {
                           onChange={(e) => handleChange('email', e.target.value)}
                           onFocus={() => setActiveField('email')}
                           onBlur={() => setActiveField(null)}
-                          className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-xl focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all text-white placeholder-gray-500"
+                          className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-xl focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all text-white placeholder-gray-400"
                           placeholder="john@example.com"
                         />
                       </motion.div>
@@ -350,7 +350,7 @@ export default function ModernContactPage() {
                         rows={5}
                         value={formData.message}
                         onChange={(e) => handleChange('message', e.target.value)}
-                        className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-xl focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all text-white placeholder-gray-500 resize-none"
+                        className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-xl focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all text-white placeholder-gray-400 resize-none"
                         placeholder="Please describe the damage or emergency situation..."
                       />
                     </motion.div>
@@ -386,7 +386,7 @@ export default function ModernContactPage() {
                     </motion.button>
 
                     {/* Trust Indicators */}
-                    <div className="flex items-center justify-center gap-6 text-xs text-gray-700">
+                    <div className="flex items-center justify-center gap-6 text-xs text-gray-200">
                       <div className="flex items-center gap-1">
                         <ShieldCheckIcon className="w-4 h-4" />
                         SSL Secured
@@ -474,7 +474,7 @@ export default function ModernContactPage() {
                         message: ''
                       });
                     }}
-                    className="mt-8 px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-xl transition-colours"
+                    className="mt-8 px-6 py-3 bg-gray-800 hover:bg-gray-900 rounded-xl transition-colours"
                   >
                     Submit Another Request
                   </motion.button>

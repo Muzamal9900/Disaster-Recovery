@@ -304,7 +304,7 @@ export default function NRMAPartnershipPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               NRMA Policyholder Benefits
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-center text-gray-200 mb-12 max-w-3xl mx-auto">
               Exclusive advantages for NRMA Insurance customers
             </p>
 
@@ -324,7 +324,7 @@ export default function NRMAPartnershipPage() {
                     </div>
                   </div>
                   <h3 className="text-xl font-bold mb-2">{benefit.benefit}</h3>
-                  <p className="text-gray-700 mb-2">{benefit.description}</p>
+                  <p className="text-gray-200 mb-2">{benefit.description}</p>
                   <p className="text-green-600 font-semibold text-sm">{benefit.detail}</p>
                 </motion.div>
               ))}
@@ -338,7 +338,7 @@ export default function NRMAPartnershipPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               NRMA Insurance Covered Services
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Comprehensive restoration coverage for all disaster types
             </p>
 
@@ -358,7 +358,7 @@ export default function NRMAPartnershipPage() {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">{service.service}</h3>
-                      <p className="text-gray-700 mb-2">{service.coverage}</p>
+                      <p className="text-gray-200 mb-2">{service.coverage}</p>
                       <p className="text-blue-600 font-semibold">{service.response}</p>
                     </div>
                   </div>
@@ -368,7 +368,7 @@ export default function NRMAPartnershipPage() {
 
             <div className="mt-12 p-6 bg-green-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3 text-green-900">Additional Coverage</h3>
-              <p className="text-gray-700">
+              <p className="text-gray-200">
                 NRMA policies also cover temporary accommodation, contents restoration, debris removal, 
                 and additional living expenses. We coordinate all aspects of your claim to ensure 
                 maximum coverage utilisation.
@@ -383,7 +383,7 @@ export default function NRMAPartnershipPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Simple NRMA Claims Process
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               From emergency to restoration in 4 simple steps
             </p>
 
@@ -401,14 +401,14 @@ export default function NRMAPartnershipPage() {
                     {step.step}
                   </div>
                   <h3 className="text-lg font-bold mb-2">{step.title}</h3>
-                  <p className="text-gray-700 mb-1">{step.description}</p>
+                  <p className="text-gray-200 mb-1">{step.description}</p>
                   <p className="text-sm text-green-600 font-semibold">{step.detail}</p>
                 </motion.div>
               ))}
             </div>
 
             <div className="mt-12 text-center">
-              <p className="text-lg text-gray-700">
+              <p className="text-lg text-gray-200">
                 No claim number needed for emergencies • We handle NRMA coordination
               </p>
             </div>
@@ -421,7 +421,7 @@ export default function NRMAPartnershipPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               NRMA Partnership Coverage Areas
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Comprehensive coverage across NSW & ACT
             </p>
 
@@ -436,7 +436,7 @@ export default function NRMAPartnershipPage() {
                   viewport={{ once: true }}
                 >
                   <h3 className="text-xl font-bold mb-3">{area.region}</h3>
-                  <p className="text-gray-700 mb-2 text-sm">{area.suburbs}</p>
+                  <p className="text-gray-200 mb-2 text-sm">{area.suburbs}</p>
                   <p className="text-blue-600 font-semibold mb-1">{area.response}</p>
                   <p className="text-green-600 text-sm">{area.teams}</p>
                 </motion.div>
@@ -462,7 +462,7 @@ export default function NRMAPartnershipPage() {
                         <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
                         <div>
                           <span className="font-semibold">{item.reason}</span>
-                          <p className="text-gray-600 text-sm">{item.detail}</p>
+                          <p className="text-gray-200 text-sm">{item.detail}</p>
                         </div>
                       </li>
                     ))}
@@ -476,28 +476,28 @@ export default function NRMAPartnershipPage() {
                       <Clock className="w-5 h-5 text-blue-600 mt-0.5" />
                       <div>
                         <span className="font-semibold">60-Minute Response</span>
-                        <p className="text-gray-600 text-sm">Guaranteed metro emergency response</p>
+                        <p className="text-gray-200 text-sm">Guaranteed metro emergency response</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <Shield className="w-5 h-5 text-blue-600 mt-0.5" />
                       <div>
                         <span className="font-semibold">Lifetime Warranty</span>
-                        <p className="text-gray-600 text-sm">All workmanship guaranteed</p>
+                        <p className="text-gray-200 text-sm">All workmanship guaranteed</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <FileText className="w-5 h-5 text-blue-600 mt-0.5" />
                       <div>
                         <span className="font-semibold">Direct Billing</span>
-                        <p className="text-gray-600 text-sm">No out-of-pocket expenses</p>
+                        <p className="text-gray-200 text-sm">No out-of-pocket expenses</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <Award className="w-5 h-5 text-blue-600 mt-0.5" />
                       <div>
                         <span className="font-semibold">IICRC Certified</span>
-                        <p className="text-gray-600 text-sm">Industry-leading standards</p>
+                        <p className="text-gray-200 text-sm">Industry-leading standards</p>
                       </div>
                     </li>
                   </ul>
@@ -506,7 +506,7 @@ export default function NRMAPartnershipPage() {
 
               <div className="mt-12 p-6 bg-blue-50 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">NRMA Quality Assurance</h3>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-200 mb-4">
                   As an approved NRMA partner, we undergo regular quality audits, maintain comprehensive 
                   insurance coverage, and adhere to strict service level agreements. This ensures every 
                   NRMA policyholder receives the highest standard of restoration services.

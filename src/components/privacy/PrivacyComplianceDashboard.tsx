@@ -137,7 +137,7 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
             <Shield className="h-6 w-6" />
             Privacy & Compliance Centre
           </h1>
-          <p className="text-gray-600 mt-1">
+          <p className="text-gray-200 mt-1">
             Manage data protection, privacy rights, and regulatory compliance
           </p>
         </div>
@@ -164,12 +164,12 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
         <CardContent className="pt-6">
           <div className="flex justify-between items-start">
             <div className="flex-1">
-              <p className="text-sm text-gray-600">Overall Compliance Score</p>
+              <p className="text-sm text-gray-200">Overall Compliance Score</p>
               <div className="flex items-baseline gap-3 mt-2">
                 <span className={`text-5xl font-bold ${getComplianceColor(complianceScore)}`}>
                   {complianceScore}%
                 </span>
-                <span className="flex items-center text-sm text-gray-500">
+                <span className="flex items-center text-sm text-gray-300">
                   <TrendingUp className="h-4 w-4 text-green-500 mr-1" />
                   +3% from last month
                 </span>
@@ -177,21 +177,21 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
               <Progress value={complianceScore} className="mt-4 h-3" />
               <div className="grid grid-cols-4 gap-4 mt-6">
                 <div>
-                  <p className="text-xs text-gray-500">Data Protection</p>
+                  <p className="text-xs text-gray-300">Data Protection</p>
                   <div className="flex items-center gap-2 mt-1">
                     <Lock className="h-4 w-4 text-green-500" />
                     <span className="font-semibold">AES-256</span>
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500">Consent Rate</p>
+                  <p className="text-xs text-gray-300">Consent Rate</p>
                   <div className="flex items-center gap-2 mt-1">
                     <UserCheck className="h-4 w-4 text-green-500" />
                     <span className="font-semibold">{metrics.consentCompliance}%</span>
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500">Active Incidents</p>
+                  <p className="text-xs text-gray-300">Active Incidents</p>
                   <div className="flex items-center gap-2 mt-1">
                     {metrics.activeBreaches > 0 ? (
                       <ShieldAlert className="h-4 w-4 text-red-500" />
@@ -202,7 +202,7 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500">Next Audit</p>
+                  <p className="text-xs text-gray-300">Next Audit</p>
                   <div className="flex items-center gap-2 mt-1">
                     <Activity className="h-4 w-4 text-blue-500" />
                     <span className="font-semibold">
@@ -256,7 +256,7 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-xs text-gray-600 mb-3">{framework.description}</p>
+              <p className="text-xs text-gray-200 mb-3">{framework.description}</p>
               <div className="space-y-2">
                 <div className="flex justify-between items-center">
                   <span className="text-sm">Score</span>
@@ -265,7 +265,7 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
                   </span>
                 </div>
                 <Progress value={framework.score} className="h-2" />
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-gray-300">
                   Last assessed: {framework.lastAssessed}
                 </p>
               </div>
@@ -312,7 +312,7 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
                       <CheckCircle className="h-5 w-5 text-green-500" />
                       <div>
                         <p className="font-medium">Data Encryption</p>
-                        <p className="text-xs text-gray-500">AES-256 at rest, TLS in transit</p>
+                        <p className="text-xs text-gray-300">AES-256 at rest, TLS in transit</p>
                       </div>
                     </div>
                     <Badge className="bg-green-100 text-green-800">Active</Badge>
@@ -323,7 +323,7 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
                       <CheckCircle className="h-5 w-5 text-green-500" />
                       <div>
                         <p className="font-medium">Access Controls</p>
-                        <p className="text-xs text-gray-500">Role-based, MFA enabled</p>
+                        <p className="text-xs text-gray-300">Role-based, MFA enabled</p>
                       </div>
                     </div>
                     <Badge className="bg-green-100 text-green-800">Active</Badge>
@@ -334,7 +334,7 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
                       <CheckCircle className="h-5 w-5 text-green-500" />
                       <div>
                         <p className="font-medium">Audit Logging</p>
-                        <p className="text-xs text-gray-500">All access logged and monitored</p>
+                        <p className="text-xs text-gray-300">All access logged and monitored</p>
                       </div>
                     </div>
                     <Badge className="bg-green-100 text-green-800">Active</Badge>
@@ -345,7 +345,7 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
                       <AlertTriangle className="h-5 w-5 text-blue-600" />
                       <div>
                         <p className="font-medium">Penetration Testing</p>
-                        <p className="text-xs text-gray-500">Due in 45 days</p>
+                        <p className="text-xs text-gray-300">Due in 45 days</p>
                       </div>
                     </div>
                     <Badge className="bg-yellow-100 text-yellow-800">Scheduled</Badge>
@@ -362,27 +362,27 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Total Users</span>
+                    <span className="text-sm text-gray-200">Total Users</span>
                     <span className="font-semibold">{metrics.totalUsers.toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Consent Compliance</span>
+                    <span className="text-sm text-gray-200">Consent Compliance</span>
                     <span className="font-semibold">{metrics.consentCompliance}%</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Data Retention Compliance</span>
+                    <span className="text-sm text-gray-200">Data Retention Compliance</span>
                     <span className="font-semibold">98%</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Third-Party Agreements</span>
+                    <span className="text-sm text-gray-200">Third-Party Agreements</span>
                     <span className="font-semibold">12 Active</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Cross-Border Transfers</span>
+                    <span className="text-sm text-gray-200">Cross-Border Transfers</span>
                     <span className="font-semibold">EU, US Compliant</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Last Security Audit</span>
+                    <span className="text-sm text-gray-200">Last Security Audit</span>
                     <span className="font-semibold">
                       {new Date(metrics.lastAudit).toLocaleDateString()}
                     </span>
@@ -427,8 +427,8 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
                   <div className="flex justify-between items-start">
                     <div>
                       <p className="font-medium">Data Export Request</p>
-                      <p className="text-sm text-gray-600">User ID: USR-2024-001 exported personal data</p>
-                      <p className="text-xs text-gray-500 mt-1">2 hours ago • IP: 203.45.67.89</p>
+                      <p className="text-sm text-gray-200">User ID: USR-2024-001 exported personal data</p>
+                      <p className="text-xs text-gray-300 mt-1">2 hours ago • IP: 203.45.67.89</p>
                     </div>
                     <Badge>Data Access</Badge>
                   </div>
@@ -438,8 +438,8 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
                   <div className="flex justify-between items-start">
                     <div>
                       <p className="font-medium">Consent Updated</p>
-                      <p className="text-sm text-gray-600">Marketing consent withdrawn by user</p>
-                      <p className="text-xs text-gray-500 mt-1">5 hours ago • IP: 203.45.67.89</p>
+                      <p className="text-sm text-gray-200">Marketing consent withdrawn by user</p>
+                      <p className="text-xs text-gray-300 mt-1">5 hours ago • IP: 203.45.67.89</p>
                     </div>
                     <Badge>Privacy</Badge>
                   </div>
@@ -449,8 +449,8 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
                   <div className="flex justify-between items-start">
                     <div>
                       <p className="font-medium">Admin Access</p>
-                      <p className="text-sm text-gray-600">Admin viewed contractor personal data</p>
-                      <p className="text-xs text-gray-500 mt-1">1 day ago • IP: 10.0.0.5</p>
+                      <p className="text-sm text-gray-200">Admin viewed contractor personal data</p>
+                      <p className="text-xs text-gray-300 mt-1">1 day ago • IP: 10.0.0.5</p>
                     </div>
                     <Badge variant="outline">Admin</Badge>
                   </div>
@@ -485,15 +485,15 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
                     </div>
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between">
-                        <span className="text-gray-600">At Rest</span>
+                        <span className="text-gray-200">At Rest</span>
                         <span className="font-medium">AES-256-GCM</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">In Transit</span>
+                        <span className="text-gray-200">In Transit</span>
                         <span className="font-medium">TLS 1.3</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Key Rotation</span>
+                        <span className="text-gray-200">Key Rotation</span>
                         <span className="font-medium">90 days</span>
                       </div>
                     </div>
@@ -509,15 +509,15 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
                     </div>
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between">
-                        <span className="text-gray-600">MFA Required</span>
+                        <span className="text-gray-200">MFA Required</span>
                         <span className="font-medium">Yes</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Session Timeout</span>
+                        <span className="text-gray-200">Session Timeout</span>
                         <span className="font-medium">30 minutes</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Password Policy</span>
+                        <span className="text-gray-200">Password Policy</span>
                         <span className="font-medium">Strong</span>
                       </div>
                     </div>
@@ -533,15 +533,15 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
                     </div>
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Personal Data</span>
+                        <span className="text-gray-200">Personal Data</span>
                         <span className="font-medium">7 years</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Audit Logs</span>
+                        <span className="text-gray-200">Audit Logs</span>
                         <span className="font-medium">7 years</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Backups</span>
+                        <span className="text-gray-200">Backups</span>
                         <span className="font-medium">90 days</span>
                       </div>
                     </div>
@@ -557,15 +557,15 @@ export function PrivacyComplianceDashboard({ userId, userRole }: PrivacyComplian
                     </div>
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between">
-                        <span className="text-gray-600">SIEM Integration</span>
+                        <span className="text-gray-200">SIEM Integration</span>
                         <span className="font-medium">Connected</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Alerts Configured</span>
+                        <span className="text-gray-200">Alerts Configured</span>
                         <span className="font-medium">45 rules</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Last Scan</span>
+                        <span className="text-gray-200">Last Scan</span>
                         <span className="font-medium">2 hours ago</span>
                       </div>
                     </div>

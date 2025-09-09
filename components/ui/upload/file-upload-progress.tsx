@@ -278,7 +278,7 @@ export const FileUploadProgress: React.FC<FileUploadProgressProps> = ({
         )}
       >
         <input {...getInputProps()} />
-        <Cloud className="w-12 h-12 mx-auto mb-4 text-gray-400" />
+        <Cloud className="w-12 h-12 mx-auto mb-4 text-gray-200" />
         {isDragActive ? (
           <p className="text-lg font-medium">Drop files here...</p>
         ) : (
@@ -286,7 +286,7 @@ export const FileUploadProgress: React.FC<FileUploadProgressProps> = ({
             <p className="text-lg font-medium mb-2">
               Drag & drop files here, or click to select
             </p>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-300">
               Maximum {maxFiles} files, up to {formatSize(maxSize)} each
             </p>
           </div>
@@ -356,7 +356,7 @@ export const FileUploadProgress: React.FC<FileUploadProgressProps> = ({
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="font-medium truncate">{file.name}</p>
-                  <div className="flex items-center gap-4 text-sm text-gray-500">
+                  <div className="flex items-center gap-4 text-sm text-gray-300">
                     <span>{formatSize(file.size)}</span>
                     {file.status === 'uploading' && file.speed && (
                       <>
@@ -437,7 +437,7 @@ export const FileUploadProgress: React.FC<FileUploadProgressProps> = ({
             {(file.status === 'uploading' || file.status === 'paused') && (
               <div className="space-y-2">
                 <Progress value={file.progress} className="h-2" />
-                <div className="flex justify-between text-xs text-gray-500">
+                <div className="flex justify-between text-xs text-gray-300">
                   <span>{formatSize(file.uploadedSize)} / {formatSize(file.size)}</span>
                   <span>{file.progress}%</span>
                 </div>

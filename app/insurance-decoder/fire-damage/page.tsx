@@ -198,7 +198,7 @@ export default function FireDamageInsurancePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Understanding Your Fire Coverage
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-200">
               Most policies include three types of fire damage coverage
             </p>
           </div>
@@ -223,7 +223,7 @@ export default function FireDamageInsurancePage() {
                     {coverage.items.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">{item}</span>
+                        <span className="text-gray-200">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -259,7 +259,7 @@ export default function FireDamageInsurancePage() {
                   {exclusion.items.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <AlertCircle className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700 text-sm">{item}</span>
+                      <span className="text-gray-200 text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -306,7 +306,7 @@ export default function FireDamageInsurancePage() {
                       {phase.actions.map((action, idx) => (
                         <li key={idx} className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-700">{action}</span>
+                          <span className="text-gray-200">{action}</span>
                         </li>
                       ))}
                     </ul>
@@ -337,14 +337,14 @@ export default function FireDamageInsurancePage() {
               >
                 <Calculator className="w-10 h-10 text-orange-600 mb-4" />
                 <h3 className="text-xl font-bold mb-2">{settlement.type}</h3>
-                <p className="text-gray-600 mb-4">{settlement.description}</p>
+                <p className="text-gray-200 mb-4">{settlement.description}</p>
                 
                 <div className="space-y-3">
                   <div>
                     <span className="font-semibold text-green-700">Pros:</span>
                     <ul className="mt-1 space-y-1">
                       {settlement.pros.map((pro, idx) => (
-                        <li key={idx} className="text-sm text-gray-600">• {pro}</li>
+                        <li key={idx} className="text-sm text-gray-200">• {pro}</li>
                       ))}
                     </ul>
                   </div>
@@ -353,14 +353,14 @@ export default function FireDamageInsurancePage() {
                     <span className="font-semibold text-red-700">Cons:</span>
                     <ul className="mt-1 space-y-1">
                       {settlement.cons.map((con, idx) => (
-                        <li key={idx} className="text-sm text-gray-600">• {con}</li>
+                        <li key={idx} className="text-sm text-gray-200">• {con}</li>
                       ))}
                     </ul>
                   </div>
                   
                   <div className="pt-3 border-t">
-                    <span className="text-xs font-semibold text-gray-500">BEST FOR:</span>
-                    <p className="text-sm text-gray-700 mt-1">{settlement.bestFor}</p>
+                    <span className="text-xs font-semibold text-gray-300">BEST FOR:</span>
+                    <p className="text-sm text-gray-200 mt-1">{settlement.bestFor}</p>
                   </div>
                 </div>
               </motion.div>
@@ -380,7 +380,7 @@ export default function FireDamageInsurancePage() {
             <div className="bg-white rounded-xl shadow-lg p-6">
               <FileText className="w-10 h-10 text-orange-600 mb-4" />
               <h3 className="text-xl font-bold mb-4">Essential Documentation</h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-gray-200">
                 <li>• Fire department report</li>
                 <li>• Pre-loss photos of property</li>
                 <li>• Complete inventory with values</li>
@@ -393,7 +393,7 @@ export default function FireDamageInsurancePage() {
             <div className="bg-white rounded-xl shadow-lg p-6">
               <AlertCircle className="w-10 h-10 text-orange-600 mb-4" />
               <h3 className="text-xl font-bold mb-4">Critical Do Not List</h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-gray-200">
                 <li>• Do not throw away damaged items</li>
                 <li>• Do not sign quick settlements</li>
                 <li>• Do not forget hidden damage</li>

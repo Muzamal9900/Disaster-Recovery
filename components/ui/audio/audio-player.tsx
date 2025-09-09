@@ -256,7 +256,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
             disabled={!audioRef.current || isLoading}
             className="w-full"
           />
-          <div className="flex justify-between text-xs text-gray-500">
+          <div className="flex justify-between text-xs text-gray-300">
             <span>{formatTime(currentTime)}</span>
             <span>{formatTime(duration)}</span>
           </div>
@@ -306,7 +306,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
 
       {/* Language indicator */}
       {language !== 'en' && (
-        <div className="mt-2 text-xs text-gray-500">
+        <div className="mt-2 text-xs text-gray-300">
           Language: {language.toUpperCase()}
         </div>
       )}

@@ -447,7 +447,7 @@ export default function MouldRemediationGuidePage() {
                   className={`px-4 py-2 rounded-lg font-semibold transition-all text-sm ${
                     selectedMouldType === key
                       ? 'bg-teal-600 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-teal-50 border border-gray-200'
+                      : 'bg-white text-gray-200 hover:bg-teal-50 border border-gray-200'
                   }`}
                 >
                   {mouldTypes[key as keyof typeof mouldTypes].name}
@@ -470,19 +470,19 @@ export default function MouldRemediationGuidePage() {
                   <div className="space-y-3">
                     <div>
                       <span className="font-semibold">Appearance:</span>
-                      <p className="text-gray-700">{mouldTypes[selectedMouldType as keyof typeof mouldTypes].color}</p>
+                      <p className="text-gray-200">{mouldTypes[selectedMouldType as keyof typeof mouldTypes].color}</p>
                     </div>
                     <div>
                       <span className="font-semibold">Common Locations:</span>
-                      <p className="text-gray-700">{mouldTypes[selectedMouldType as keyof typeof mouldTypes].commonLocations}</p>
+                      <p className="text-gray-200">{mouldTypes[selectedMouldType as keyof typeof mouldTypes].commonLocations}</p>
                     </div>
                     <div>
                       <span className="font-semibold">Growth Conditions:</span>
-                      <p className="text-gray-700">{mouldTypes[selectedMouldType as keyof typeof mouldTypes].growthConditions}</p>
+                      <p className="text-gray-200">{mouldTypes[selectedMouldType as keyof typeof mouldTypes].growthConditions}</p>
                     </div>
                     <div>
                       <span className="font-semibold">Identification Tips:</span>
-                      <p className="text-gray-700">{mouldTypes[selectedMouldType as keyof typeof mouldTypes].identificationTips}</p>
+                      <p className="text-gray-200">{mouldTypes[selectedMouldType as keyof typeof mouldTypes].identificationTips}</p>
                     </div>
                   </div>
                 </div>
@@ -571,14 +571,14 @@ export default function MouldRemediationGuidePage() {
                   </div>
                   <ul className="space-y-2 mb-4">
                     {category.symptoms.map((symptom, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-gray-700">
+                      <li key={idx} className="flex items-center gap-2 text-gray-200">
                         <CheckCircle className="w-4 h-4 text-red-500" />
                         <span className="text-sm">{symptom}</span>
                       </li>
                     ))}
                   </ul>
                   <div className="pt-4 border-t border-gray-200">
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-200">
                       <span className="font-semibold">At Risk:</span> {category.atRisk}
                     </p>
                   </div>
@@ -628,11 +628,11 @@ export default function MouldRemediationGuidePage() {
                 >
                   <h3 className="text-xl font-bold mb-2">{level.level}</h3>
                   <p className="text-2xl font-bold mb-2 text-gray-800">{level.area}</p>
-                  <p className="text-sm text-gray-600 mb-3">{level.description}</p>
+                  <p className="text-sm text-gray-200 mb-3">{level.description}</p>
                   <div className="space-y-2 text-sm">
                     <p><span className="font-semibold">Action:</span> {level.action}</p>
                     <p><span className="font-semibold">PPE:</span> {level.ppe}</p>
-                    <p className="text-gray-600 italic">{level.examples}</p>
+                    <p className="text-gray-200 italic">{level.examples}</p>
                   </div>
                 </motion.div>
               ))}
@@ -688,7 +688,7 @@ export default function MouldRemediationGuidePage() {
                         {stage.activities.map((activity, idx) => (
                           <div key={idx} className="flex items-center gap-2">
                             <CheckCircle className="w-4 h-4 text-green-600" />
-                            <span className="text-sm text-gray-700">{activity}</span>
+                            <span className="text-sm text-gray-200">{activity}</span>
                           </div>
                         ))}
                       </div>
@@ -734,7 +734,7 @@ export default function MouldRemediationGuidePage() {
                     {strategy.strategies.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-gray-700">{item}</span>
+                        <span className="text-sm text-gray-200">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -787,7 +787,7 @@ export default function MouldRemediationGuidePage() {
                   }`}>
                     {aspect.coverage}
                   </span>
-                  <p className="text-gray-600 text-sm mb-3">{aspect.details}</p>
+                  <p className="text-gray-200 text-sm mb-3">{aspect.details}</p>
                   <div className="pt-3 border-t border-gray-200">
                     <p className="text-sm font-semibold text-blue-600">
                       💡 {aspect.tip}
@@ -832,7 +832,7 @@ export default function MouldRemediationGuidePage() {
               >
                 <Home className="w-12 h-12 text-blue-600 mb-4" />
                 <h3 className="text-xl font-bold mb-3">Residential Properties</h3>
-                <ul className="space-y-2 text-gray-600 text-sm">
+                <ul className="space-y-2 text-gray-200 text-sm">
                   <li>• Bathroom and kitchen ventilation</li>
                   <li>• Basement moisture control</li>
                   <li>• Attic insulation and ventilation</li>
@@ -856,7 +856,7 @@ export default function MouldRemediationGuidePage() {
               >
                 <Building className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold mb-3">Commercial Properties</h3>
-                <ul className="space-y-2 text-gray-600 text-sm">
+                <ul className="space-y-2 text-gray-200 text-sm">
                   <li>• HVAC system monitoring</li>
                   <li>• Workplace health compliance</li>
                   <li>• Regular professional inspections</li>
@@ -880,7 +880,7 @@ export default function MouldRemediationGuidePage() {
               >
                 <Factory className="w-12 h-12 text-purple-600 mb-4" />
                 <h3 className="text-xl font-bold mb-3">Industrial Properties</h3>
-                <ul className="space-y-2 text-gray-600 text-sm">
+                <ul className="space-y-2 text-gray-200 text-sm">
                   <li>• Large-scale ventilation systems</li>
                   <li>• Process moisture management</li>
                   <li>• Safety compliance requirements</li>
@@ -934,7 +934,7 @@ export default function MouldRemediationGuidePage() {
                     />
                   </button>
                   {expandedFAQ === index && (
-                    <div className="px-6 pb-4 text-gray-600 border-t border-gray-100">
+                    <div className="px-6 pb-4 text-gray-200 border-t border-gray-100">
                       <p className="pt-4">{faq.answer}</p>
                     </div>
                   )}
@@ -965,7 +965,7 @@ export default function MouldRemediationGuidePage() {
               >
                 <Droplets className="w-10 h-10 text-blue-600 mb-3" />
                 <h3 className="font-bold mb-2">Water Damage Guide</h3>
-                <p className="text-gray-600 text-sm">Preventing mould through water damage control</p>
+                <p className="text-gray-200 text-sm">Preventing mould through water damage control</p>
               </Link>
               
               <Link
@@ -974,7 +974,7 @@ export default function MouldRemediationGuidePage() {
               >
                 <AlertCircle className="w-10 h-10 text-orange-600 mb-3" />
                 <h3 className="font-bold mb-2">DIY Prevention</h3>
-                <p className="text-gray-600 text-sm">Steps you can take to prevent mould growth</p>
+                <p className="text-gray-200 text-sm">Steps you can take to prevent mould growth</p>
               </Link>
               
               <Link
@@ -983,7 +983,7 @@ export default function MouldRemediationGuidePage() {
               >
                 <Heart className="w-10 h-10 text-red-600 mb-3" />
                 <h3 className="font-bold mb-2">Health & Safety</h3>
-                <p className="text-gray-600 text-sm">Protecting yourself from mould exposure</p>
+                <p className="text-gray-200 text-sm">Protecting yourself from mould exposure</p>
               </Link>
               
               <Link
@@ -992,7 +992,7 @@ export default function MouldRemediationGuidePage() {
               >
                 <MapPin className="w-10 h-10 text-green-600 mb-3" />
                 <h3 className="font-bold mb-2">Local Services</h3>
-                <p className="text-gray-600 text-sm">Find mould specialists in your area</p>
+                <p className="text-gray-200 text-sm">Find mould specialists in your area</p>
               </Link>
             </div>
           </motion.div>

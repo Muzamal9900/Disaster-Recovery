@@ -168,7 +168,7 @@ export default function MouldInsurancePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Mould Coverage Scenarios
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-200">
               Mould coverage is complex and highly conditional
             </p>
           </div>
@@ -185,7 +185,7 @@ export default function MouldInsurancePage() {
                   {coverageScenarios.covered.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{item}</span>
+                      <span className="text-gray-200">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -203,7 +203,7 @@ export default function MouldInsurancePage() {
                   {coverageScenarios.notCovered.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <XCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{item}</span>
+                      <span className="text-gray-200">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -221,7 +221,7 @@ export default function MouldInsurancePage() {
                   {coverageScenarios.conditional.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <Info className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{item}</span>
+                      <span className="text-gray-200">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -251,7 +251,7 @@ export default function MouldInsurancePage() {
                 <h3 className="text-xl font-bold text-green-900 mb-3">
                   {item.factor}
                 </h3>
-                <p className="text-gray-700 mb-3">{item.details}</p>
+                <p className="text-gray-200 mb-3">{item.details}</p>
                 <div className="bg-yellow-50 border-l-4 border-yellow-500 p-3">
                   <p className="text-sm font-semibold text-yellow-800">
                     Impact: {item.impact}
@@ -288,7 +288,7 @@ export default function MouldInsurancePage() {
                   {step.actions.map((action, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-600">{action}</span>
+                      <span className="text-sm text-gray-200">{action}</span>
                     </li>
                   ))}
                 </ul>
@@ -306,7 +306,7 @@ export default function MouldInsurancePage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Health Impact Documentation
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-200">
               Medical documentation can strengthen your claim
             </p>
           </div>
@@ -317,7 +317,7 @@ export default function MouldInsurancePage() {
               {healthDocumentation.map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <FileText className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">{item}</span>
+                  <span className="text-gray-200">{item}</span>
                 </div>
               ))}
             </div>
@@ -338,14 +338,14 @@ export default function MouldInsurancePage() {
           </h2>
           
           <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-gray-200 mb-6">
               Insurance companies expect reasonable prevention efforts. Failure to prevent mould can void coverage:
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               {preventionMeasures.map((measure, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <Shield className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">{measure}</span>
+                  <span className="text-gray-200">{measure}</span>
                 </div>
               ))}
             </div>

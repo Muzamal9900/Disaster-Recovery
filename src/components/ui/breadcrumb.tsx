@@ -83,13 +83,13 @@ export function Breadcrumb() {
                 itemType="https://schema.org/ListItem"
               >
                 {index > 0 && (
-                  <ChevronRight className="h-4 w-4 mx-2 text-gray-400" />
+                  <ChevronRight className="h-4 w-4 mx-2 text-gray-200" />
                 )}
                 
                 {index === breadcrumbs.length - 1 ? (
                   // Current page (not a link)
                   <span 
-                    className="text-gray-700 font-medium"
+                    className="text-gray-200 font-medium"
                     itemProp="name"
                   >
                     {item.label}

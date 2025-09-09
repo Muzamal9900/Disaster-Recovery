@@ -62,7 +62,7 @@ export default function IndustriesPage() {
             {industries.map((industry, index) => (
               <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                 <h2 className="text-2xl font-bold mb-3">{industry.name}</h2>
-                <p className="text-gray-600 mb-4">{industry.description}</p>
+                <p className="text-gray-200 mb-4">{industry.description}</p>
                 <Link href={`/industries/${industry.slug}`}>
                   <Button variant="outline">
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />

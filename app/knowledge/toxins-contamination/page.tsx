@@ -441,7 +441,7 @@ export default function ToxinsContaminationKnowledgePage() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold mb-4">Toxins & Contamination Knowledge Base</h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+          <p className="text-xl text-gray-200 max-w-4xl mx-auto">
             Comprehensive guide to identifying, testing, and remediating environmental toxins in Australian buildings. 
             Understanding health impacts, insurance coverage, and professional solutions.
           </p>
@@ -482,7 +482,7 @@ export default function ToxinsContaminationKnowledgePage() {
                     <category.icon className="h-8 w-8 text-blue-600" />
                     <div>
                       <h2 className="text-2xl font-bold">{category.title}</h2>
-                      <p className="text-gray-600">{category.description}</p>
+                      <p className="text-gray-200">{category.description}</p>
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -495,14 +495,14 @@ export default function ToxinsContaminationKnowledgePage() {
                         <h3 className="font-bold mb-2">{toxin.name}</h3>
                         <div className="space-y-2 text-sm">
                           <div className="flex items-start gap-2">
-                            <Home className="h-4 w-4 text-gray-500 flex-shrink-0 mt-0.5" />
-                            <span className="text-gray-600">
+                            <Home className="h-4 w-4 text-gray-300 flex-shrink-0 mt-0.5" />
+                            <span className="text-gray-200">
                               {toxin.sources.length} common sources
                             </span>
                           </div>
                           <div className="flex items-start gap-2">
                             <Heart className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" />
-                            <span className="text-gray-600">
+                            <span className="text-gray-200">
                               {toxin.healthEffects.length} health effects
                             </span>
                           </div>
@@ -512,7 +512,7 @@ export default function ToxinsContaminationKnowledgePage() {
                             ) : (
                               <XCircle className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" />
                             )}
-                            <span className="text-gray-600">
+                            <span className="text-gray-200">
                               Insurance: {toxin.insuranceCoverage ? 'Usually covered' : 'Rarely covered'}
                             </span>
                           </div>
@@ -538,7 +538,7 @@ export default function ToxinsContaminationKnowledgePage() {
                     <Baby className="h-6 w-6 text-blue-600 flex-shrink-0" />
                     <div>
                       <h3 className="font-bold">Children</h3>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-200">
                         Developing organs, higher breathing rates, hand-to-mouth behaviour increases exposure. 
                         Long-term effects on growth, learning, and development.
                       </p>
@@ -548,7 +548,7 @@ export default function ToxinsContaminationKnowledgePage() {
                     <Heart className="h-6 w-6 text-red-600 flex-shrink-0" />
                     <div>
                       <h3 className="font-bold">Elderly</h3>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-200">
                         Weakened immune systems, pre-existing conditions, reduced ability to detoxify. 
                         Higher risk of severe complications.
                       </p>
@@ -558,7 +558,7 @@ export default function ToxinsContaminationKnowledgePage() {
                     <Wind className="h-6 w-6 text-purple-600 flex-shrink-0" />
                     <div>
                       <h3 className="font-bold">Respiratory Conditions</h3>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-200">
                         Asthma, COPD, allergies make individuals more sensitive to airborne toxins. 
                         Can trigger severe attacks and long-term decline.
                       </p>
@@ -568,7 +568,7 @@ export default function ToxinsContaminationKnowledgePage() {
                     <Brain className="h-6 w-6 text-green-600 flex-shrink-0" />
                     <div>
                       <h3 className="font-bold">Chemical Sensitivity</h3>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-200">
                         Multiple Chemical Sensitivity (MCS) and environmental illness sufferers. 
                         Severe reactions to low-level exposures.
                       </p>
@@ -582,7 +582,7 @@ export default function ToxinsContaminationKnowledgePage() {
                 <div className="space-y-4">
                   <div>
                     <h3 className="font-bold mb-2">Inhalation</h3>
-                    <p className="text-sm text-gray-600 mb-2">
+                    <p className="text-sm text-gray-200 mb-2">
                       Primary route for airborne toxins, gases, and particulates
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -593,7 +593,7 @@ export default function ToxinsContaminationKnowledgePage() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-2">Dermal Absorption</h3>
-                    <p className="text-sm text-gray-600 mb-2">
+                    <p className="text-sm text-gray-200 mb-2">
                       Through skin contact with contaminated surfaces or materials
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -604,7 +604,7 @@ export default function ToxinsContaminationKnowledgePage() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-2">Ingestion</h3>
-                    <p className="text-sm text-gray-600 mb-2">
+                    <p className="text-sm text-gray-200 mb-2">
                       Through contaminated food, water, or hand-to-mouth contact
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -627,18 +627,18 @@ export default function ToxinsContaminationKnowledgePage() {
                   {testingMethods.map((method, index) => (
                     <Card key={index} className="p-4 bg-gray-50">
                       <h3 className="font-bold text-lg mb-2">{method.method}</h3>
-                      <p className="text-sm text-gray-600 mb-3">{method.description}</p>
+                      <p className="text-sm text-gray-200 mb-3">{method.description}</p>
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
-                          <span className="text-gray-500">Equipment:</span>
+                          <span className="text-gray-300">Equipment:</span>
                           <span className="font-medium">{method.equipment}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-500">Cost:</span>
+                          <span className="text-gray-300">Cost:</span>
                           <span className="font-medium text-green-600">{method.cost}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-500">Results:</span>
+                          <span className="text-gray-300">Results:</span>
                           <span className="font-medium">{method.turnaround}</span>
                         </div>
                       </div>
@@ -653,21 +653,21 @@ export default function ToxinsContaminationKnowledgePage() {
                   <div className="text-center">
                     <Shield className="h-12 w-12 text-blue-600 mx-auto mb-2" />
                     <h3 className="font-bold">NATA Accreditation</h3>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-200">
                       National Association of Testing Authorities certification required
                     </p>
                   </div>
                   <div className="text-center">
                     <FileText className="h-12 w-12 text-green-600 mx-auto mb-2" />
                     <h3 className="font-bold">Chain of Custody</h3>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-200">
                       Legal documentation for sample handling and analysis
                     </p>
                   </div>
                   <div className="text-center">
                     <Microscope className="h-12 w-12 text-purple-600 mx-auto mb-2" />
                     <h3 className="font-bold">Quality Assurance</h3>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-200">
                       Blind samples, duplicates, and equipment calibration
                     </p>
                   </div>
@@ -695,7 +695,7 @@ export default function ToxinsContaminationKnowledgePage() {
                       {decontaminationMethods.map((method, index) => (
                         <tr key={index} className="border-b">
                           <td className="p-2 font-medium">{method.method}</td>
-                          <td className="p-2 text-sm text-gray-600">{method.application}</td>
+                          <td className="p-2 text-sm text-gray-200">{method.application}</td>
                           <td className="p-2 text-sm">{method.effectiveness}</td>
                           <td className="p-2">
                             <span className={`text-sm px-2 py-1 rounded ${
@@ -819,18 +819,18 @@ export default function ToxinsContaminationKnowledgePage() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="font-bold text-lg mb-2">Testing Methods</h3>
-                    <p className="text-sm text-gray-600">{selectedToxin.testing}</p>
+                    <p className="text-sm text-gray-200">{selectedToxin.testing}</p>
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-2">Remediation</h3>
-                    <p className="text-sm text-gray-600">{selectedToxin.remediation}</p>
+                    <p className="text-sm text-gray-200">{selectedToxin.remediation}</p>
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6 p-4 bg-gray-50 rounded-lg">
                   <div>
                     <h3 className="font-bold mb-2">Regulations</h3>
-                    <p className="text-sm text-gray-600">{selectedToxin.regulations}</p>
+                    <p className="text-sm text-gray-200">{selectedToxin.regulations}</p>
                   </div>
                   <div>
                     <h3 className="font-bold mb-2">Insurance Coverage</h3>

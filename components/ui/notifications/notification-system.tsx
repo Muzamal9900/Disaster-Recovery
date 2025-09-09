@@ -96,7 +96,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       case 'message':
         return <MessageSquare className="w-5 h-5 text-blue-500" />;
       default:
-        return <Info className="w-5 h-5 text-gray-500" />;
+        return <Info className="w-5 h-5 text-gray-300" />;
     }
   };
 
@@ -170,7 +170,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
             {/* Notifications List */}
             <div className="overflow-y-auto max-h-[400px]">
               {notifications.length === 0 ? (
-                <div className="p-8 text-center text-gray-500">
+                <div className="p-8 text-center text-gray-300">
                   <Bell className="w-12 h-12 mx-auto mb-4 opacity-30" />
                   <p>No notifications yet</p>
                 </div>
@@ -198,7 +198,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                               <p className="font-medium text-sm">
                                 {notification.title}
                               </p>
-                              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                              <p className="text-sm text-gray-200 dark:text-gray-200 mt-1">
                                 {notification.message}
                               </p>
                               {notification.action && (
@@ -228,8 +228,8 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                             </Button>
                           </div>
                           <div className="flex items-center gap-2 mt-2">
-                            <Clock className="w-3 h-3 text-gray-400" />
-                            <span className="text-xs text-gray-500">
+                            <Clock className="w-3 h-3 text-gray-200" />
+                            <span className="text-xs text-gray-300">
                               {new Date(notification.timestamp).toLocaleTimeString()}
                             </span>
                             {notification.priority && (
@@ -278,7 +278,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                   {getIcon(notification.type)}
                   <div className="flex-1">
                     <p className="font-medium">{notification.title}</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-sm text-gray-200 dark:text-gray-200">
                       {notification.message}
                     </p>
                   </div>

@@ -185,15 +185,15 @@ export default function CleanClaimsPartnershipPage() {
                 
                 <div className="space-y-4">
                   <div>
-                    <div className="text-sm text-gray-400 mb-1">Experience</div>
+                    <div className="text-sm text-gray-200 mb-1">Experience</div>
                     <p className="text-white">Built & sold 4 restoration companies</p>
                   </div>
                   <div>
-                    <div className="text-sm text-gray-400 mb-1">Vision</div>
+                    <div className="text-sm text-gray-200 mb-1">Vision</div>
                     <p className="text-white">Transform the global restoration industry through technology</p>
                   </div>
                   <div>
-                    <div className="text-sm text-gray-400 mb-1">Location</div>
+                    <div className="text-sm text-gray-200 mb-1">Location</div>
                     <p className="text-white">Utah, United States</p>
                   </div>
                 </div>
@@ -234,7 +234,7 @@ export default function CleanClaimsPartnershipPage() {
                   <h3 className="text-xl font-semibold text-white mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-400">
+                  <p className="text-gray-200">
                     {benefit.description}
                   </p>
                 </div>
@@ -268,7 +268,7 @@ export default function CleanClaimsPartnershipPage() {
                 <div className="text-lg font-semibold text-white mb-1">
                   {stat.label}
                 </div>
-                <div className="text-sm text-gray-400">
+                <div className="text-sm text-gray-200">
                   {stat.description}
                 </div>
               </div>
@@ -458,15 +458,15 @@ export default function CleanClaimsPartnershipPage() {
             <div className="mt-12 p-6 bg-black/30 rounded-xl">
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div>
-                  <div className="text-sm text-gray-400 mb-1">Partnership Type</div>
+                  <div className="text-sm text-gray-200 mb-1">Partnership Type</div>
                   <div className="text-2xl font-bold text-white">Strategic Technology Partner</div>
                 </div>
                 <div>
-                  <div className="text-sm text-gray-400 mb-1">Investment Round</div>
+                  <div className="text-sm text-gray-200 mb-1">Investment Round</div>
                   <div className="text-2xl font-bold text-white">Series A Lead Investor</div>
                 </div>
                 <div>
-                  <div className="text-sm text-gray-400 mb-1">Market Focus</div>
+                  <div className="text-sm text-gray-200 mb-1">Market Focus</div>
                   <div className="text-2xl font-bold text-white">Australia & Asia-Pacific</div>
                 </div>
               </div>

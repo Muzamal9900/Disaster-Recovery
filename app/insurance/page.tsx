@@ -175,7 +175,7 @@ export default function InsurancePage() {
               ))}
             </div>
             <div className="text-center">
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-200 mb-4">
                 Don't see your insurer? We work with all Australian insurance companies.
               </p>
               <Link
@@ -203,7 +203,7 @@ export default function InsurancePage() {
                     <span className="text-4xl mr-4">{claim.icon}</span>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">{claim.title}</h3>
-                      <p className="text-gray-700 mb-4">{claim.description}</p>
+                      <p className="text-gray-200 mb-4">{claim.description}</p>
                       <div className="bg-green-50 border border-green-200 rounded-lg p-3">
                         <div className="flex items-start">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mr-2 mt-0.5" />
@@ -237,7 +237,7 @@ export default function InsurancePage() {
                   <div className="flex-1">
                     <Card className="p-6">
                       <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                      <p className="text-gray-700 mb-4">{item.description}</p>
+                      <p className="text-gray-200 mb-4">{item.description}</p>
                       <div className="inline-flex items-center px-4 py-2 bg-blue-50 text-blue-700 rounded-lg font-medium">
                         {item.action}
                       </div>
@@ -326,7 +326,7 @@ export default function InsurancePage() {
                   <Shield className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Insurance Approved</h3>
-                <p className="text-gray-700">
+                <p className="text-gray-200">
                   Pre-approved by major insurers with established relationships and preferred provider status
                 </p>
               </Card>
@@ -335,7 +335,7 @@ export default function InsurancePage() {
                   <FileCheck className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Expert Documentation</h3>
-                <p className="text-gray-700">
+                <p className="text-gray-200">
                   Comprehensive documentation that meets insurance requirements and maximizes claim approval
                 </p>
               </Card>
@@ -344,7 +344,7 @@ export default function InsurancePage() {
                   <Users className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Direct Billing</h3>
-                <p className="text-gray-700">
+                <p className="text-gray-200">
                   No upfront costs - we bill your insurance company directly for approved claims
                 </p>
               </Card>
@@ -353,7 +353,7 @@ export default function InsurancePage() {
                   <Clock className="w-8 h-8 text-blue-700" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Claims Advocacy</h3>
-                <p className="text-gray-700">
+                <p className="text-gray-200">
                   We advocate for you throughout the claims process, ensuring fair treatment and full coverage
                 </p>
               </Card>
@@ -362,7 +362,7 @@ export default function InsurancePage() {
                   <AlertCircle className="w-8 h-8 text-red-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Emergency Response</h3>
-                <p className="text-gray-700">
+                <p className="text-gray-200">
                   24/7 emergency response to prevent further damage and document initial conditions immediately
                 </p>
               </Card>
@@ -371,7 +371,7 @@ export default function InsurancePage() {
                   <CheckCircle2 className="w-8 h-8 text-indigo-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Guaranteed Work</h3>
-                <p className="text-gray-700">
+                <p className="text-gray-200">
                   All restoration work is guaranteed and warranty-backed for your peace of mind
                 </p>
               </Card>

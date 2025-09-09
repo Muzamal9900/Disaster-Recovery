@@ -118,24 +118,24 @@ export default function GovernmentFundingPage() {
                     <p className="text-gray-300 mb-3">{program.description}</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
                       <div>
-                        <span className="text-gray-400">Agency:</span>
+                        <span className="text-gray-200">Agency:</span>
                         <span className="text-white ml-2">{program.agency}</span>
                       </div>
                       <div>
-                        <span className="text-gray-400">Type:</span>
+                        <span className="text-gray-200">Type:</span>
                         <span className="text-white ml-2">{program.type}</span>
                       </div>
                       <div>
-                        <span className="text-gray-400">Amount:</span>
+                        <span className="text-gray-200">Amount:</span>
                         <span className="text-green-400 font-semibold ml-2">{program.amount}</span>
                       </div>
                       <div>
-                        <span className="text-gray-400">Deadline:</span>
+                        <span className="text-gray-200">Deadline:</span>
                         <span className="text-yellow-400 ml-2">{program.deadline}</span>
                       </div>
                     </div>
                     <div className="mt-3">
-                      <p className="text-gray-400 text-sm mb-1">Eligibility:</p>
+                      <p className="text-gray-200 text-sm mb-1">Eligibility:</p>
                       <p className="text-gray-300 text-sm">{program.eligibility}</p>
                     </div>
                   </div>
@@ -224,7 +224,7 @@ export default function GovernmentFundingPage() {
                     className="flex items-center justify-between p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors group"
                   >
                     <span className="text-white group-hover:text-blue-400">{link.name}</span>
-                    <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-blue-400" />
+                    <ExternalLink className="w-4 h-4 text-gray-200 group-hover:text-blue-400" />
                   </a>
                 ))}
               </div>

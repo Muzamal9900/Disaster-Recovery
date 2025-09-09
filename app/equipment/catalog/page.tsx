@@ -65,19 +65,19 @@ export default function EquipmentCatalogPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold text-blue-600">{equipmentCatalog.length}+</div>
-              <div className="text-gray-600 mt-2">Equipment Models</div>
+              <div className="text-gray-200 mt-2">Equipment Models</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-green-600">{equipmentCategories.length}</div>
-              <div className="text-gray-600 mt-2">Categories</div>
+              <div className="text-gray-200 mt-2">Categories</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-blue-700">24/7</div>
-              <div className="text-gray-600 mt-2">Availability</div>
+              <div className="text-gray-200 mt-2">Availability</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-purple-600">100%</div>
-              <div className="text-gray-600 mt-2">Certified Equipment</div>
+              <div className="text-gray-200 mt-2">Certified Equipment</div>
             </div>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function EquipmentCatalogPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Equipment Categories</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-200 max-w-2xl mx-auto">
               Browse our professional equipment by category to find the right tools for your restoration project
             </p>
           </div>
@@ -124,7 +124,7 @@ export default function EquipmentCatalogPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Featured Equipment</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-200 max-w-2xl mx-auto">
               Our most requested professional restoration equipment with detailed specifications
             </p>
           </div>
@@ -153,23 +153,23 @@ export default function EquipmentCatalogPage() {
                 </CardHeader>
 
                 <CardContent>
-                  <p className="text-gray-600 mb-4 line-clamp-2">{item.description}</p>
+                  <p className="text-gray-200 mb-4 line-clamp-2">{item.description}</p>
                   
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center text-sm">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      <span className="text-gray-700">{item.specifications.coverage || item.specifications.airFlow}</span>
+                      <span className="text-gray-200">{item.specifications.coverage || item.specifications.airFlow}</span>
                     </div>
                     <div className="flex items-center text-sm">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      <span className="text-gray-700">{item.certifications[0]}</span>
+                      <span className="text-gray-200">{item.certifications[0]}</span>
                     </div>
                   </div>
 
                   {item.rentalPrice && (
                     <div className="bg-gray-50 rounded-lg p-3">
                       <div className="flex items-center justify-between text-sm">
-                        <span className="text-gray-600">Daily Rate:</span>
+                        <span className="text-gray-200">Daily Rate:</span>
                         <span className="font-bold text-green-600">${item.rentalPrice.daily}</span>
                       </div>
                     </div>
@@ -197,7 +197,7 @@ export default function EquipmentCatalogPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Complete Equipment Inventory</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-200 max-w-2xl mx-auto">
               Browse our entire catalog of professional disaster recovery equipment
             </p>
           </div>
@@ -226,7 +226,7 @@ export default function EquipmentCatalogPage() {
                       .map(item => (
                         <div key={item.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
                           <h4 className="font-semibold text-lg mb-2">{item.name}</h4>
-                          <p className="text-sm text-gray-600 mb-3">{item.model} by {item.manufacturer}</p>
+                          <p className="text-sm text-gray-200 mb-3">{item.model} by {item.manufacturer}</p>
                           
                           <div className="flex items-center justify-between mb-3">
                             <Badge variant={item.availability === 'available' ? 'default' : 'secondary'}>
@@ -266,7 +266,7 @@ export default function EquipmentCatalogPage() {
                     .map(item => (
                       <div key={item.id} className="border rounded-lg p-4">
                         <h4 className="font-semibold mb-2">{item.name}</h4>
-                        <p className="text-sm text-gray-600 mb-3">{item.category}</p>
+                        <p className="text-sm text-gray-200 mb-3">{item.category}</p>
                         <Link href={`/equipment/specifications/${item.id}`}>
                           <Button size="sm" variant="outline" className="w-full">
                             View Specs

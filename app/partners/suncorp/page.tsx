@@ -326,7 +326,7 @@ export default function SuncorpPartnershipPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Suncorp Group Partnership Benefits
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-center text-gray-200 mb-12 max-w-3xl mx-auto">
               Exclusive advantages for all Suncorp Group policyholders
             </p>
 
@@ -346,7 +346,7 @@ export default function SuncorpPartnershipPage() {
                     </div>
                   </div>
                   <h3 className="text-xl font-bold mb-2">{benefit.benefit}</h3>
-                  <p className="text-gray-700 mb-2">{benefit.description}</p>
+                  <p className="text-gray-200 mb-2">{benefit.description}</p>
                   <p className="text-green-600 font-semibold text-sm">{benefit.detail}</p>
                 </motion.div>
               ))}
@@ -360,7 +360,7 @@ export default function SuncorpPartnershipPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Comprehensive Coverage for All Events
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Full restoration services for Suncorp Group policyholders
             </p>
 
@@ -375,7 +375,7 @@ export default function SuncorpPartnershipPage() {
                   viewport={{ once: true }}
                 >
                   <h3 className="text-xl font-bold mb-3 text-orange-900">{service.service}</h3>
-                  <p className="text-gray-700 mb-2">{service.coverage}</p>
+                  <p className="text-gray-200 mb-2">{service.coverage}</p>
                   <div className="flex items-center gap-2 text-blue-600 font-semibold mb-1">
                     <Clock className="w-4 h-4" />
                     {service.response}
@@ -387,7 +387,7 @@ export default function SuncorpPartnershipPage() {
 
             <div className="mt-12 p-6 bg-orange-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3 text-orange-900">Building Connect Integration</h3>
-              <p className="text-gray-700">
+              <p className="text-gray-200">
                 Our direct integration with Suncorp&apos;s Building Connect platform enables real-time 
                 updates, instant approvals, and seamless communication. This means faster restoration 
                 and no paperwork hassles for policyholders.
@@ -402,7 +402,7 @@ export default function SuncorpPartnershipPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Simple Claims Process
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Works for all Suncorp Group insurance brands
             </p>
 
@@ -420,14 +420,14 @@ export default function SuncorpPartnershipPage() {
                     {step.step}
                   </div>
                   <h3 className="text-lg font-bold mb-2">{step.title}</h3>
-                  <p className="text-gray-700 mb-1">{step.description}</p>
+                  <p className="text-gray-200 mb-1">{step.description}</p>
                   <p className="text-sm text-orange-600 font-semibold">{step.detail}</p>
                 </motion.div>
               ))}
             </div>
 
             <div className="mt-12 text-center">
-              <p className="text-lg text-gray-700">
+              <p className="text-lg text-gray-200">
                 Works with AAMI • GIO • Apia • Shannons • Suncorp Insurance
               </p>
             </div>
@@ -440,7 +440,7 @@ export default function SuncorpPartnershipPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               National Coverage Network
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Suncorp Group approved teams across Australia
             </p>
 
@@ -455,7 +455,7 @@ export default function SuncorpPartnershipPage() {
                   viewport={{ once: true }}
                 >
                   <h3 className="text-xl font-bold mb-3">{region.state}</h3>
-                  <p className="text-gray-700 mb-2">{region.focus}</p>
+                  <p className="text-gray-200 mb-2">{region.focus}</p>
                   <p className="text-orange-600 font-semibold mb-1">{region.teams}</p>
                   <p className="text-green-600 text-sm font-semibold">{region.response}</p>
                 </motion.div>
@@ -470,7 +470,7 @@ export default function SuncorpPartnershipPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Proven CAT Event Response
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Major disaster deployment experience with Suncorp Group
             </p>
 
@@ -485,7 +485,7 @@ export default function SuncorpPartnershipPage() {
                   viewport={{ once: true }}
                 >
                   <h3 className="text-xl font-bold mb-3 text-orange-900">{event.event}</h3>
-                  <p className="text-gray-700 mb-2">
+                  <p className="text-gray-200 mb-2">
                     <strong>Response:</strong> {event.response}
                   </p>
                   <p className="text-green-700 font-semibold">
@@ -497,7 +497,7 @@ export default function SuncorpPartnershipPage() {
 
             <div className="mt-12 p-6 bg-blue-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3">CAT Event Preparedness</h3>
-              <p className="text-gray-700">
+              <p className="text-gray-200">
                 As a Suncorp Group preferred partner, we maintain heightened readiness during disaster 
                 seasons. Pre-positioned equipment, expanded crew rosters, and direct communication with 
                 Suncorp&apos;s CAT response team ensures immediate deployment when disasters strike.
@@ -522,28 +522,28 @@ export default function SuncorpPartnershipPage() {
                       <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
                       <div>
                         <span className="font-semibold">15+ Years Partnership</span>
-                        <p className="text-gray-600 text-sm">Long-standing Suncorp Group partner</p>
+                        <p className="text-gray-200 text-sm">Long-standing Suncorp Group partner</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
                       <div>
                         <span className="font-semibold">100,000+ Claims</span>
-                        <p className="text-gray-600 text-sm">Extensive Suncorp claims experience</p>
+                        <p className="text-gray-200 text-sm">Extensive Suncorp claims experience</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
                       <div>
                         <span className="font-semibold">4.8★ Rating</span>
-                        <p className="text-gray-600 text-sm">Policyholder satisfaction score</p>
+                        <p className="text-gray-200 text-sm">Policyholder satisfaction score</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
                       <div>
                         <span className="font-semibold">Tier 1 Status</span>
-                        <p className="text-gray-600 text-sm">Highest partnership level</p>
+                        <p className="text-gray-200 text-sm">Highest partnership level</p>
                       </div>
                     </li>
                   </ul>
@@ -556,28 +556,28 @@ export default function SuncorpPartnershipPage() {
                       <Award className="w-5 h-5 text-orange-600 mt-0.5" />
                       <div>
                         <span className="font-semibold">IICRC Certified</span>
-                        <p className="text-gray-600 text-sm">Industry-leading standards</p>
+                        <p className="text-gray-200 text-sm">Industry-leading standards</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <Shield className="w-5 h-5 text-orange-600 mt-0.5" />
                       <div>
                         <span className="font-semibold">Warranty Backed</span>
-                        <p className="text-gray-600 text-sm">Lifetime workmanship guarantee</p>
+                        <p className="text-gray-200 text-sm">Lifetime workmanship guarantee</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <TrendingUp className="w-5 h-5 text-orange-600 mt-0.5" />
                       <div>
                         <span className="font-semibold">98% First-Time Fix</span>
-                        <p className="text-gray-600 text-sm">Industry-leading resolution rate</p>
+                        <p className="text-gray-200 text-sm">Industry-leading resolution rate</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <Users className="w-5 h-5 text-orange-600 mt-0.5" />
                       <div>
                         <span className="font-semibold">300+ Technicians</span>
-                        <p className="text-gray-600 text-sm">National certified team network</p>
+                        <p className="text-gray-200 text-sm">National certified team network</p>
                       </div>
                     </li>
                   </ul>

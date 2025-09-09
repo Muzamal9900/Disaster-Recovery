@@ -113,19 +113,19 @@ export default function Certificate({
 
         {/* Main Content */}
         <div className="text-center space-y-6 mb-8">
-          <p className="text-gray-700 text-lg">This is to certify that</p>
+          <p className="text-gray-200 text-lg">This is to certify that</p>
           
           <h2 className="text-3xl font-bold text-gray-900 py-2 border-b-2 border-indigo-200 inline-block px-8">
             {contractorName || 'Contractor Name'}
           </h2>
           
-          <p className="text-gray-700 text-lg">has successfully completed the</p>
+          <p className="text-gray-200 text-lg">has successfully completed the</p>
           
           <h3 className="text-2xl font-bold text-indigo-800">
             {courseName}
           </h3>
           
-          <div className="flex items-center justify-center gap-8 text-gray-600">
+          <div className="flex items-center justify-center gap-8 text-gray-200">
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5 text-indigo-500" />
               <span>Completed: {completionDate}</span>
@@ -141,13 +141,13 @@ export default function Certificate({
         <div className="grid grid-cols-2 gap-8 mt-12">
           <div className="text-center">
             <div className="border-t-2 border-gray-400 mb-2" />
-            <p className="text-sm text-gray-600">{instructorName}</p>
-            <p className="text-xs text-gray-500">Training Director</p>
+            <p className="text-sm text-gray-200">{instructorName}</p>
+            <p className="text-xs text-gray-300">Training Director</p>
           </div>
           <div className="text-center">
             <div className="border-t-2 border-gray-400 mb-2" />
-            <p className="text-sm text-gray-600">Certificate ID: {certificateId}</p>
-            <p className="text-xs text-gray-500">Verification Code</p>
+            <p className="text-sm text-gray-200">Certificate ID: {certificateId}</p>
+            <p className="text-xs text-gray-300">Verification Code</p>
           </div>
         </div>
 

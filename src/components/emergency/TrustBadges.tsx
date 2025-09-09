@@ -44,7 +44,7 @@ export default function TrustBadges() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Certified, Insured, Guaranteed
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-200">
             Trusted by insurance companies, government agencies, and property owners nationwide
           </p>
         </motion.div>
@@ -66,7 +66,7 @@ export default function TrustBadges() {
                   </div>
                 </div>
                 <h3 className="font-bold text-lg mb-1">{cert.name}</h3>
-                <p className="text-sm text-gray-600">{cert.description}</p>
+                <p className="text-sm text-gray-200">{cert.description}</p>
               </motion.div>
             )
           })}

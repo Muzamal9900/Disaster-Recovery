@@ -287,11 +287,11 @@ const Footer: React.FC = () => {
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-blue-400">15+</div>
-                    <div className="text-xs text-gray-400">Years Experience</div>
+                    <div className="text-xs text-gray-200">Years Experience</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-emerald-600">98%</div>
-                    <div className="text-xs text-gray-400">Customer Satisfaction</div>
+                    <div className="text-xs text-gray-200">Customer Satisfaction</div>
                   </div>
                 </div>
                 
@@ -319,13 +319,13 @@ const Footer: React.FC = () => {
                     {[1,2,3,4,5].map(star => (
                       <Star key={star} className="h-4 w-4 text-blue-500 fill-current" />
                     ))}
-                    <span className="ml-2 text-sm text-gray-400">4.9/5</span>
+                    <span className="ml-2 text-sm text-gray-200">4.9/5</span>
                   </div>
                 </div>
                 <p className="text-sm text-gray-300 italic">
                   "Incredible response time and professionalism. They saved our home!"
                 </p>
-                <p className="text-xs text-gray-400 mt-2">- Sarah M., Melbourne</p>
+                <p className="text-xs text-gray-200 mt-2">- Sarah M., Melbourne</p>
               </div>
 
               {/* Social Media - Enhanced */}
@@ -413,10 +413,10 @@ const Footer: React.FC = () => {
                   { city: "Adelaide", state: "SA", time: "45-60 min", status: "available" },
                   { city: "Canberra", state: "ACT", time: "60-90 min", status: "available" }
                 ].map((location) => (
-                  <div key={location.city} className="flex items-center justify-between p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colours">
+                  <div key={location.city} className="flex items-center justify-between p-3 bg-gray-800 rounded-lg hover:bg-gray-900 transition-colours">
                     <div>
                       <div className="font-medium">{location.city}, {location.state}</div>
-                      <div className="text-sm text-gray-400">Response: {location.time}</div>
+                      <div className="text-sm text-gray-200">Response: {location.time}</div>
                     </div>
                     <div className={`px-2 py-1 rounded-full text-xs font-medium ${
                       location.status === 'live' ? 'bg-green-500/30 text-emerald-600' : 'bg-blue-500/30 text-blue-400'
@@ -435,7 +435,7 @@ const Footer: React.FC = () => {
               <div className="mt-6">
                 <button 
                   onClick={() => toggleSection('locations')}
-                  className="flex items-center justify-between w-full p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colours"
+                  className="flex items-center justify-between w-full p-3 bg-gray-800 rounded-lg hover:bg-gray-900 transition-colours"
                 >
                   <span className="font-medium">View All Locations</span>
                   {expandedSections.locations ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
@@ -497,7 +497,7 @@ const Footer: React.FC = () => {
                 ].map((resource) => (
                   <FooterLink key={resource.name} href={resource.href} 
                              className="flex items-center gap-3 p-2 hover:bg-gray-800 rounded transition-colours">
-                    <resource.icon className="h-4 w-4 text-gray-400" />
+                    <resource.icon className="h-4 w-4 text-gray-200" />
                     <span className="text-sm">{resource.name}</span>
                   </FooterLink>
                 ))}
@@ -549,7 +549,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
                   {INSURANCE_PARTNERS.slice(0, 12).map((partner, index) => (
-                    <div key={index} className="p-2 bg-gray-700 rounded text-center hover:bg-gray-600 transition-colours">
+                    <div key={index} className="p-2 bg-gray-700 rounded text-center hover:bg-gray-800 transition-colours">
                       <div className="text-xs font-medium">{partner}</div>
                     </div>
                   ))}
@@ -584,15 +584,15 @@ const Footer: React.FC = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <FooterLink href="/privacy" className="flex items-center justify-between p-3 bg-gray-700 hover:bg-gray-600 rounded transition-colours">
+                  <FooterLink href="/privacy" className="flex items-center justify-between p-3 bg-gray-700 hover:bg-gray-800 rounded transition-colours">
                     Privacy Policy
                     <ExternalLink className="h-4 w-4" />
                   </FooterLink>
-                  <FooterLink href="/terms" className="flex items-center justify-between p-3 bg-gray-700 hover:bg-gray-600 rounded transition-colours">
+                  <FooterLink href="/terms" className="flex items-center justify-between p-3 bg-gray-700 hover:bg-gray-800 rounded transition-colours">
                     Terms of Service
                     <ExternalLink className="h-4 w-4" />
                   </FooterLink>
-                  <FooterLink href="/complaints" className="flex items-center justify-between p-3 bg-gray-700 hover:bg-gray-600 rounded transition-colours">
+                  <FooterLink href="/complaints" className="flex items-center justify-between p-3 bg-gray-700 hover:bg-gray-800 rounded transition-colours">
                     Complaints Procedure
                     <ExternalLink className="h-4 w-4" />
                   </FooterLink>
@@ -606,7 +606,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 bg-gray-900">
           <div className="container px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-gray-400">
+              <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-gray-200">
                 <span>© {currentYear} {BUSINESS_NAME}. All rights reserved.</span>
                 <span className="hidden sm:inline">|</span>
                 <span>ABN: {ABN}</span>

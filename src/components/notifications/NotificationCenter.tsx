@@ -180,9 +180,9 @@ export function NotificationCenter() {
       case 'job':
         return <Briefcase className="h-5 w-5 text-green-500" />;
       case 'system':
-        return <Info className="h-5 w-5 text-gray-500" />;
+        return <Info className="h-5 w-5 text-gray-300" />;
       default:
-        return <Bell className="h-5 w-5 text-gray-500" />;
+        return <Bell className="h-5 w-5 text-gray-300" />;
     }
   };
 
@@ -235,7 +235,7 @@ export function NotificationCenter() {
                 <h4 className={`text-sm font-medium ${isUnread ? 'font-semibold' : ''}`}>
                   {notification.title}
                 </h4>
-                <p className="text-sm text-gray-600 mt-1">{notification.message}</p>
+                <p className="text-sm text-gray-200 mt-1">{notification.message}</p>
                 
                 {/* Actions */}
                 {notification.actions && notification.actions.length > 0 && (
@@ -255,7 +255,7 @@ export function NotificationCenter() {
                 
                 {/* Metadata */}
                 <div className="flex items-center gap-3 mt-2">
-                  <span className="text-xs text-gray-500">
+                  <span className="text-xs text-gray-300">
                     {formatDistanceToNow(notification.createdAt, { addSuffix: true })}
                   </span>
                   <Badge variant="outline" className={`text-xs ${getPriorityColor(notification.priority)}`}>
@@ -263,7 +263,7 @@ export function NotificationCenter() {
                   </Badge>
                   <div className="flex gap-1">
                     {notification.channels.map(channel => (
-                      <span key={channel} className="text-gray-400">
+                      <span key={channel} className="text-gray-200">
                         {getChannelIcon(channel)}
                       </span>
                     ))}
@@ -394,7 +394,7 @@ export function NotificationCenter() {
                 <NotificationItem key={notification.id} notification={notification} />
               ))
             ) : (
-              <div className="flex flex-col items-center justify-center py-12 text-gray-500">
+              <div className="flex flex-col items-center justify-center py-12 text-gray-300">
                 <Bell className="h-12 w-12 mb-3 text-gray-300" />
                 <p className="text-sm">No notifications</p>
                 <p className="text-xs mt-1">You're all caught up!</p>
@@ -416,7 +416,7 @@ export function NotificationCenter() {
                 <AlertCircle className="h-5 w-5 text-red-500 mt-0.5" />
                 <div className="flex-1">
                   <h4 className="font-semibold text-sm">{notification.title}</h4>
-                  <p className="text-sm text-gray-600 mt-1">{notification.message}</p>
+                  <p className="text-sm text-gray-200 mt-1">{notification.message}</p>
                   <div className="flex gap-2 mt-3">
                     {notification.actions?.map(action => (
                       <Button

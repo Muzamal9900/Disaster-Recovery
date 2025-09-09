@@ -137,24 +137,24 @@ export default function EarlyMorningEmergencyPage() {
               <Card className="p-6 bg-white">
                 <p className="text-4xl font-bold text-red-600 mb-2">+$5,000</p>
                 <p className="font-bold mb-2">Every 6 Hours</p>
-                <p className="text-gray-600">Additional damage from water spreading</p>
+                <p className="text-gray-200">Additional damage from water spreading</p>
               </Card>
               <Card className="p-6 bg-white">
                 <p className="text-4xl font-bold text-blue-700 mb-2">+$8,000</p>
                 <p className="font-bold mb-2">After 12 Hours</p>
-                <p className="text-gray-600">Mould growth begins, structural damage</p>
+                <p className="text-gray-200">Mould growth begins, structural damage</p>
               </Card>
               <Card className="p-6 bg-white">
                 <p className="text-4xl font-bold text-red-700 mb-2">+$15,000</p>
                 <p className="font-bold mb-2">After 24 Hours</p>
-                <p className="text-gray-600">Major structural repairs required</p>
+                <p className="text-gray-200">Major structural repairs required</p>
               </Card>
             </div>
             <div className="bg-green-100 border-2 border-green-300 rounded-lg p-8">
               <p className="text-2xl font-bold text-green-800 mb-4">
                 Save Thousands by Acting Now
               </p>
-              <p className="text-lg text-gray-700 mb-6">
+              <p className="text-lg text-gray-200 mb-6">
                 Our $500 4am - 7am surcharge is a fraction 
                 of the cost of waiting until regular hours.
               </p>
@@ -182,7 +182,7 @@ export default function EarlyMorningEmergencyPage() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="font-bold mb-3">Standard Coverage Includes:</h3>
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-2 text-gray-200">
                     <li>• Emergency response fees</li>
                     <li>• After-hours surcharges</li>
                     <li>• Weekend penalty rates</li>
@@ -192,7 +192,7 @@ export default function EarlyMorningEmergencyPage() {
                 </div>
                 <div>
                   <h3 className="font-bold mb-3">We Handle Everything:</h3>
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-2 text-gray-200">
                     <li>• Direct insurance billing</li>
                     <li>• All documentation provided</li>
                     <li>• Photos and reports included</li>

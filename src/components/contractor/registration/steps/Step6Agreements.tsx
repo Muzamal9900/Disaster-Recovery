@@ -210,7 +210,7 @@ export function Step6Agreements({ data, updateData, errors }: Step6AgreementsPro
           <div className="flex items-center justify-between mb-4">
             <div>
               <h3 className="font-semibold text-lg">Agreement Progress</h3>
-              <p className="text-sm text-gray-600 mt-1">
+              <p className="text-sm text-gray-200 mt-1">
                 Accept all agreements to proceed
               </p>
             </div>
@@ -218,7 +218,7 @@ export function Step6Agreements({ data, updateData, errors }: Step6AgreementsPro
               <div className="text-3xl font-bold text-blue-600">
                 {getCompletionPercentage()}%
               </div>
-              <p className="text-xs text-gray-500 mt-1">
+              <p className="text-xs text-gray-300 mt-1">
                 {agreements.filter(a => a.accepted).length} of {agreements.length} agreements
               </p>
             </div>
@@ -288,11 +288,11 @@ export function Step6Agreements({ data, updateData, errors }: Step6AgreementsPro
                 ).map((item, index) => (
                   <li key={index} className="text-sm flex items-start gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-1.5" />
-                    <span className="text-gray-700">{item}</span>
+                    <span className="text-gray-200">{item}</span>
                   </li>
                 ))}
                 {!expandedAgreements.includes(agreement.id) && agreement.content.length > 3 && (
-                  <li className="text-sm text-gray-500 ml-3.5">
+                  <li className="text-sm text-gray-300 ml-3.5">
                     ... and {agreement.content.length - 3} more terms
                   </li>
                 )}
@@ -330,7 +330,7 @@ export function Step6Agreements({ data, updateData, errors }: Step6AgreementsPro
                     I have read, understood, and agree to the {agreement.title}
                     <span className="text-red-500 ml-1">*</span>
                   </Label>
-                  <p className="text-xs text-gray-600">
+                  <p className="text-xs text-gray-200">
                     By accepting, you agree to be legally bound by all terms and conditions 
                     outlined in this agreement.
                   </p>
@@ -377,7 +377,7 @@ export function Step6Agreements({ data, updateData, errors }: Step6AgreementsPro
                   fullName: e.target.value
                 })}
               />
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-300">
                 Must match the name on your identification documents
               </p>
             </div>
@@ -396,7 +396,7 @@ export function Step6Agreements({ data, updateData, errors }: Step6AgreementsPro
                   position: e.target.value
                 })}
               />
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-300">
                 Your role in the company
               </p>
             </div>
@@ -405,18 +405,18 @@ export function Step6Agreements({ data, updateData, errors }: Step6AgreementsPro
           {signatureComplete() && (
             <div className="p-4 bg-gray-50 rounded-lg border-2 border-gray-200">
               <div className="text-center">
-                <p className="text-sm text-gray-600 mb-2">Digital Signature</p>
+                <p className="text-sm text-gray-200 mb-2">Digital Signature</p>
                 <p className="text-2xl font-signature font-bold text-gray-800">
                   {digitalSignature.fullName}
                 </p>
-                <p className="text-sm text-gray-600 mt-2">
+                <p className="text-sm text-gray-200 mt-2">
                   {digitalSignature.position} • {new Date().toLocaleDateString()}
                 </p>
               </div>
             </div>
           )}
 
-          <div className="text-xs text-gray-500 text-center">
+          <div className="text-xs text-gray-300 text-center">
             <p>Date: {digitalSignature.date}</p>
             <p>This signature will be recorded with your IP address and timestamp for verification</p>
           </div>
@@ -432,7 +432,7 @@ export function Step6Agreements({ data, updateData, errors }: Step6AgreementsPro
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
-          <div className="text-sm text-gray-700">
+          <div className="text-sm text-gray-200">
             <p className="font-semibold mb-2">By accepting these agreements, you acknowledge that:</p>
             <ul className="space-y-2 ml-4">
               <li className="flex items-start gap-2">

@@ -113,7 +113,7 @@ export default function TechnologyAIPage() {
                       {capability.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center gap-2">
                           <Zap className="w-4 h-4 text-yellow-400" />
-                          <span className="text-gray-400 text-sm">{feature}</span>
+                          <span className="text-gray-200 text-sm">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -140,7 +140,7 @@ export default function TechnologyAIPage() {
                     </span>
                     <h3 className="text-white font-semibold">{step.title}</h3>
                   </div>
-                  <p className="text-gray-400 text-sm">{step.description}</p>
+                  <p className="text-gray-200 text-sm">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -177,7 +177,7 @@ export default function TechnologyAIPage() {
               <div key={index} className="flex items-center gap-3 p-4 bg-white/5 rounded-lg">
                 <spec.icon className="w-6 h-6 text-blue-400" />
                 <div>
-                  <p className="text-gray-400 text-sm">{spec.label}</p>
+                  <p className="text-gray-200 text-sm">{spec.label}</p>
                   <p className="text-white font-semibold text-lg">{spec.value}</p>
                 </div>
               </div>

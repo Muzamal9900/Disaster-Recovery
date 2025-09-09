@@ -292,7 +292,7 @@ export default function UltraModernServicesPage() {
               <span className="text-white">Solutions</span>
             </h1>
             
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Industry-leading disaster recovery services with cutting-edge technology, 
               24/7 emergency response, and certified restoration experts.
             </p>
@@ -331,14 +331,14 @@ export default function UltraModernServicesPage() {
                         </motion.div>
                         <div>
                           <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-                          <p className="text-sm text-gray-400">{service.subtitle}</p>
+                          <p className="text-sm text-gray-200">{service.subtitle}</p>
                         </div>
                       </div>
                       <motion.div
                         animate={{ rotate: activeService === service.id ? 180 : 0 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <ArrowRightIcon className="w-6 h-6 text-gray-400" />
+                        <ArrowRightIcon className="w-6 h-6 text-gray-200" />
                       </motion.div>
                     </div>
 
@@ -355,7 +355,7 @@ export default function UltraModernServicesPage() {
                           className="text-center"
                         >
                           <div className="text-2xl font-bold gradient-text">{stat.value}</div>
-                          <div className="text-xs text-gray-400">{stat.label}</div>
+                          <div className="text-xs text-gray-200">{stat.label}</div>
                         </motion.div>
                       ))}
                     </div>
@@ -365,7 +365,7 @@ export default function UltraModernServicesPage() {
                       {service.features.slice(0, 3).map((feature, i) => (
                         <span
                           key={i}
-                          className="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400 border border-white/10"
+                          className="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-200 border border-white/10"
                         >
                           {feature}
                         </span>
@@ -488,7 +488,7 @@ export default function UltraModernServicesPage() {
                     <item.icon className="w-10 h-10 text-blue-400" />
                   </motion.div>
                   <h3 className="text-xl font-bold text-white mb-2">{item.value}</h3>
-                  <p className="text-gray-400">{item.title}</p>
+                  <p className="text-gray-200">{item.title}</p>
                 </motion.div>
               ))}
             </div>
@@ -505,7 +505,7 @@ export default function UltraModernServicesPage() {
               <span className="text-white">Need Emergency </span>
               <span className="gradient-text">Assistance?</span>
             </h2>
-            <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-200 mb-12 max-w-2xl mx-auto">
               Our certified restoration experts provide immediate online response for your emergency
             </p>
             <motion.div

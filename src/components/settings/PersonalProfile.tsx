@@ -233,15 +233,15 @@ export function PersonalProfile() {
                   )}
                 </div>
               </div>
-              <p className="text-gray-600 mb-1">@{profile.username}</p>
-              <p className="text-gray-600">{profile.companyName}</p>
+              <p className="text-gray-200 mb-1">@{profile.username}</p>
+              <p className="text-gray-200">{profile.companyName}</p>
               {profile.position && (
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="text-sm text-gray-300 mt-1">
                   {profile.position} • {profile.department}
                 </p>
               )}
               {profile.bio && !isEditing && (
-                <p className="text-sm text-gray-600 mt-3 max-w-2xl">{profile.bio}</p>
+                <p className="text-sm text-gray-200 mt-3 max-w-2xl">{profile.bio}</p>
               )}
             </div>
 
@@ -326,7 +326,7 @@ export function PersonalProfile() {
               onChange={(e) => setEditedProfile({ ...editedProfile, displayName: e.target.value })}
               disabled={!isEditing}
             />
-            <p className="text-xs text-gray-500 mt-1">
+            <p className="text-xs text-gray-300 mt-1">
               This is how your name will appear throughout the platform
             </p>
           </div>
@@ -426,7 +426,7 @@ export function PersonalProfile() {
                   value={profile.companyName}
                   disabled
                 />
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="text-xs text-gray-300 mt-1">
                   Contact admin to change company assignment
                 </p>
               </div>
@@ -545,14 +545,14 @@ export function PersonalProfile() {
             <div>
               <Label>Username</Label>
               <Input value={profile.username} disabled />
-              <p className="text-xs text-gray-500 mt-1">
+              <p className="text-xs text-gray-300 mt-1">
                 Username cannot be changed
               </p>
             </div>
             <div>
               <Label>Role</Label>
               <Input value={profile.role.displayName} disabled />
-              <p className="text-xs text-gray-500 mt-1">
+              <p className="text-xs text-gray-300 mt-1">
                 Contact admin to change role
               </p>
             </div>

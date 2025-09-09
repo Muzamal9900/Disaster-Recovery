@@ -165,7 +165,7 @@ export default function GeneralDisasterChecklistPage() {
                     onChange={() => toggleCheck(item.id)}
                     className="mt-1 w-5 h-5"
                   />
-                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-500' : ''}`}>
+                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-300' : ''}`}>
                     {item.text}
                     {item.critical && <span className="text-red-600 font-bold ml-2">CRITICAL</span>}
                   </span>
@@ -194,7 +194,7 @@ export default function GeneralDisasterChecklistPage() {
                     onChange={() => toggleCheck(item.id)}
                     className="mt-1 w-5 h-5"
                   />
-                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-500' : ''}`}>
+                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-300' : ''}`}>
                     {item.text}
                   </span>
                 </label>
@@ -222,7 +222,7 @@ export default function GeneralDisasterChecklistPage() {
                     onChange={() => toggleCheck(item.id)}
                     className="mt-1 w-5 h-5"
                   />
-                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-500' : ''}`}>
+                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-300' : ''}`}>
                     {item.text}
                   </span>
                 </label>
@@ -250,7 +250,7 @@ export default function GeneralDisasterChecklistPage() {
                     onChange={() => toggleCheck(item.id)}
                     className="mt-1 w-5 h-5"
                   />
-                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-500' : ''}`}>
+                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-300' : ''}`}>
                     {item.text}
                   </span>
                 </label>

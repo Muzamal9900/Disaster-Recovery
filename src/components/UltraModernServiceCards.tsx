@@ -127,7 +127,7 @@ export default function UltraModernServiceCards() {
               Restoration Technology
             </span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Industry-leading solutions powered by AI and advanced restoration systems
           </p>
         </div>
@@ -193,7 +193,7 @@ export default function UltraModernServiceCards() {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                  <p className="text-gray-200 text-sm mb-4 leading-relaxed">
                     {service.description}
                   </p>
 
@@ -207,7 +207,7 @@ export default function UltraModernServiceCards() {
                             background: hoveredIndex === index ? service.gradient : 'rgba(255, 255, 255, 0.3)',
                             boxShadow: hoveredIndex === index ? `0 0 10px ${service.colour}` : 'none' }}
                         />
-                        <span className="text-xs text-gray-500">{feature}</span>
+                        <span className="text-xs text-gray-300">{feature}</span>
                       </div>
                     ))}
                   </div>

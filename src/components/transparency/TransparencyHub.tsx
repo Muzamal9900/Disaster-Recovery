@@ -57,28 +57,28 @@ export function TransparencyHub() {
                   <span className="text-red-500 mt-1">✗</span>
                   <div>
                     <strong>Insurance Dictates Everything</strong>
-                    <p className="text-gray-600">You're told what's covered with no options</p>
+                    <p className="text-gray-200">You're told what's covered with no options</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 mt-1">✗</span>
                   <div>
                     <strong>Hidden Costs & Markups</strong>
-                    <p className="text-gray-600">Multiple layers add unnecessary costs</p>
+                    <p className="text-gray-200">Multiple layers add unnecessary costs</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 mt-1">✗</span>
                   <div>
                     <strong>No Choice or Control</strong>
-                    <p className="text-gray-600">Take it or leave it approach</p>
+                    <p className="text-gray-200">Take it or leave it approach</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 mt-1">✗</span>
                   <div>
                     <strong>Confusing Process</strong>
-                    <p className="text-gray-600">Nobody explains your actual coverage</p>
+                    <p className="text-gray-200">Nobody explains your actual coverage</p>
                   </div>
                 </li>
               </ul>
@@ -92,28 +92,28 @@ export function TransparencyHub() {
                   <span className="text-green-500 mt-1">✓</span>
                   <div>
                     <strong>You're Educated & Empowered</strong>
-                    <p className="text-gray-600">We explain exactly what your policy covers</p>
+                    <p className="text-gray-200">We explain exactly what your policy covers</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 mt-1">✓</span>
                   <div>
                     <strong>Transparent Pricing</strong>
-                    <p className="text-gray-600">See contractor rates directly, no hidden fees</p>
+                    <p className="text-gray-200">See contractor rates directly, no hidden fees</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 mt-1">✓</span>
                   <div>
                     <strong>Your Choice, Your Decision</strong>
-                    <p className="text-gray-600">Choose to pay difference for non-covered items</p>
+                    <p className="text-gray-200">Choose to pay difference for non-covered items</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 mt-1">✓</span>
                   <div>
                     <strong>Clear Communication</strong>
-                    <p className="text-gray-600">Every step explained in plain English</p>
+                    <p className="text-gray-200">Every step explained in plain English</p>
                   </div>
                 </li>
               </ul>
@@ -150,7 +150,7 @@ export function ClientTransparency() {
             <div className="space-y-6">
               <div className="border-l-4 border-blue-500 pl-6">
                 <h4 className="font-semibold text-lg mb-2">What Actually Happens:</h4>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-200 mb-4">
                   When disaster strikes, most people don't understand their insurance coverage. 
                   We change that. Our contractors will:
                 </p>
@@ -179,7 +179,7 @@ export function ClientTransparency() {
                   <AlertCircle className="h-5 w-5 text-yellow-600" />
                   Example Scenario:
                 </h4>
-                <p className="text-gray-700">
+                <p className="text-gray-200">
                   Your bathroom has water damage. Insurance covers the restoration but not 
                   the upgrade to premium tiles you've always wanted. We'll explain this clearly, 
                   quote both options, and let YOU choose whether to pay the difference for the upgrade.
@@ -189,7 +189,7 @@ export function ClientTransparency() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h4 className="font-semibold mb-3">✅ What's Usually Covered:</h4>
-                  <ul className="space-y-1 text-sm text-gray-700">
+                  <ul className="space-y-1 text-sm text-gray-200">
                     <li>• Sudden water damage</li>
                     <li>• Fire and smoke damage</li>
                     <li>• Storm damage</li>
@@ -199,7 +199,7 @@ export function ClientTransparency() {
                 </div>
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h4 className="font-semibold mb-3">❓ Often Not Covered:</h4>
-                  <ul className="space-y-1 text-sm text-gray-700">
+                  <ul className="space-y-1 text-sm text-gray-200">
                     <li>• Gradual damage/wear</li>
                     <li>• Maintenance issues</li>
                     <li>• Upgrades/improvements</li>
@@ -293,10 +293,10 @@ export function ContractorTransparency() {
 
               <div className="border-l-4 border-green-500 pl-6">
                 <h4 className="font-semibold mb-2">Pricing Guidelines Explained:</h4>
-                <p className="text-gray-700 mb-3">
+                <p className="text-gray-200 mb-3">
                   You set your own rates, but we provide industry guidelines to ensure:
                 </p>
-                <ul className="space-y-1 ml-4 text-gray-600">
+                <ul className="space-y-1 ml-4 text-gray-200">
                   <li>• Fair compensation for your expertise</li>
                   <li>• Competitive market positioning</li>
                   <li>• Client protection from overcharging</li>
@@ -338,7 +338,7 @@ export function SiteManagerFeeSection() {
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
                 <h4 className="font-semibold mb-3">When Applicable:</h4>
-                <ul className="space-y-2 text-sm text-gray-700">
+                <ul className="space-y-2 text-sm text-gray-200">
                   <li className="flex items-start gap-2">
                     <Building className="h-4 w-4 text-purple-500 mt-0.5" />
                     <span>Large commercial projects</span>
@@ -360,7 +360,7 @@ export function SiteManagerFeeSection() {
               
               <div>
                 <h4 className="font-semibold mb-3">What It Covers:</h4>
-                <ul className="space-y-2 text-sm text-gray-700">
+                <ul className="space-y-2 text-sm text-gray-200">
                   <li className="flex items-start gap-2">
                     <Award className="h-4 w-4 text-purple-500 mt-0.5" />
                     <span>Dedicated project manager</span>
@@ -397,7 +397,7 @@ export function SiteManagerFeeSection() {
                   <span className="font-semibold">5-8% recommended</span>
                 </div>
               </div>
-              <p className="text-xs text-gray-600 mt-4">
+              <p className="text-xs text-gray-200 mt-4">
                 *Fee is optional and only applied when client agrees to enhanced management services
               </p>
             </div>

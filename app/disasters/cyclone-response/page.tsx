@@ -68,7 +68,7 @@ export default function CycloneDamageRecoveryPage() {
                 <span className="text-2xl font-bold text-red-600">1</span>
               </div>
               <h3 className="font-bold mb-2">Emergency Contact</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 2-4 hours guaranteed response
               </p>
             </Card>
@@ -77,7 +77,7 @@ export default function CycloneDamageRecoveryPage() {
                 <span className="text-2xl font-bold text-blue-700">2</span>
               </div>
               <h3 className="font-bold mb-2">Rapid Assessment</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 Complete damage evaluation & safety check
               </p>
             </Card>
@@ -86,7 +86,7 @@ export default function CycloneDamageRecoveryPage() {
                 <span className="text-2xl font-bold text-blue-600">3</span>
               </div>
               <h3 className="font-bold mb-2">Immediate Action</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 Emergency mitigation to prevent further damage
               </p>
             </Card>
@@ -95,7 +95,7 @@ export default function CycloneDamageRecoveryPage() {
                 <span className="text-2xl font-bold text-green-600">4</span>
               </div>
               <h3 className="font-bold mb-2">Full Restoration</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 Complete recovery to pre-disaster condition
               </p>
             </Card>
@@ -114,7 +114,7 @@ export default function CycloneDamageRecoveryPage() {
               <Card key={index} className="p-6">
                 <MapPin className="h-8 w-8 text-blue-600 mb-3" />
                 <h3 className="font-bold text-lg mb-2">{region}</h3>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="text-gray-200 text-sm mb-4">
                   Comprehensive coverage with local teams ready for deployment
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -140,19 +140,19 @@ export default function CycloneDamageRecoveryPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div>
                 <p className="text-4xl font-bold text-blue-700">24/7</p>
-                <p className="text-gray-600">Emergency Response</p>
+                <p className="text-gray-200">Emergency Response</p>
               </div>
               <div>
                 <p className="text-4xl font-bold text-blue-700">2-4 hours</p>
-                <p className="text-gray-600">Response Time</p>
+                <p className="text-gray-200">Response Time</p>
               </div>
               <div>
                 <p className="text-4xl font-bold text-blue-700">100%</p>
-                <p className="text-gray-600">Insurance Approved</p>
+                <p className="text-gray-200">Insurance Approved</p>
               </div>
               <div>
                 <p className="text-4xl font-bold text-blue-700">10,000+</p>
-                <p className="text-gray-600">Properties Restored</p>
+                <p className="text-gray-200">Properties Restored</p>
               </div>
             </div>
           </div>

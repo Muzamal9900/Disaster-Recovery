@@ -28,7 +28,7 @@ export function AuthorProfile({ author, variant = 'compact' }: AuthorProfileProp
           {author.image ? (
             <Image src={author.image} alt={author.name} fill className="object-cover" />
           ) : (
-            <div className="w-full h-full flex items-center justify-center text-gray-500 text-lg font-semibold">
+            <div className="w-full h-full flex items-center justify-center text-gray-300 text-lg font-semibold">
               {author.name.split(' ').map(n => n[0]).join('')}
             </div>
           )}
@@ -36,10 +36,10 @@ export function AuthorProfile({ author, variant = 'compact' }: AuthorProfileProp
         <div>
           <div className="text-sm">
             <span className="font-semibold">{author.name}</span>
-            <span className="text-gray-500 mx-2">•</span>
-            <span className="text-gray-600">{author.role}</span>
+            <span className="text-gray-300 mx-2">•</span>
+            <span className="text-gray-200">{author.role}</span>
           </div>
-          <div className="text-xs text-gray-500">{author.experience} experience</div>
+          <div className="text-xs text-gray-300">{author.experience} experience</div>
         </div>
       </div>
     );
@@ -53,15 +53,15 @@ export function AuthorProfile({ author, variant = 'compact' }: AuthorProfileProp
             {author.image ? (
               <Image src={author.image} alt={author.name} fill className="object-cover" />
             ) : (
-              <div className="w-full h-full flex items-center justify-center text-gray-500 text-xl font-semibold">
+              <div className="w-full h-full flex items-center justify-center text-gray-300 text-xl font-semibold">
                 {author.name.split(' ').map(n => n[0]).join('')}
               </div>
             )}
           </div>
           <div className="flex-1">
             <h3 className="font-bold text-lg">{author.name}</h3>
-            <p className="text-sm text-gray-600 mb-2">{author.role} • {author.experience}</p>
-            <p className="text-sm text-gray-700 mb-3">{author.bio}</p>
+            <p className="text-sm text-gray-200 mb-2">{author.role} • {author.experience}</p>
+            <p className="text-sm text-gray-200 mb-3">{author.bio}</p>
             <div className="flex flex-wrap gap-2">
               {author.certifications.map((cert, idx) => (
                 <span key={idx} className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
@@ -84,14 +84,14 @@ export function AuthorProfile({ author, variant = 'compact' }: AuthorProfileProp
             {author.image ? (
               <Image src={author.image} alt={author.name} fill className="object-cover" />
             ) : (
-              <div className="w-full h-full flex items-center justify-center text-gray-500 text-3xl font-semibold">
+              <div className="w-full h-full flex items-center justify-center text-gray-300 text-3xl font-semibold">
                 {author.name.split(' ').map(n => n[0]).join('')}
               </div>
             )}
           </div>
           <h3 className="text-xl font-bold mb-1">{author.name}</h3>
-          <p className="text-gray-600 mb-2">{author.role}</p>
-          <p className="text-sm text-gray-500 mb-4">{author.experience} industry experience</p>
+          <p className="text-gray-200 mb-2">{author.role}</p>
+          <p className="text-sm text-gray-300 mb-4">{author.experience} industry experience</p>
           
           {(author.linkedIn || author.email) && (
             <div className="flex gap-3">
@@ -113,12 +113,12 @@ export function AuthorProfile({ author, variant = 'compact' }: AuthorProfileProp
         <div className="md:w-2/3">
           <div className="mb-6">
             <h4 className="font-semibold mb-2">Professional Background</h4>
-            <p className="text-gray-700">{author.bio}</p>
+            <p className="text-gray-200">{author.bio}</p>
           </div>
           
           <div className="mb-6">
             <h4 className="font-semibold mb-2">Qualifications</h4>
-            <ul className="list-disc list-inside text-gray-700 space-y-1">
+            <ul className="list-disc list-inside text-gray-200 space-y-1">
               {author.qualifications.map((qual, idx) => (
                 <li key={idx}>{qual}</li>
               ))}

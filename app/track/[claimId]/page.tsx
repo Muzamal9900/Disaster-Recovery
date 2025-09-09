@@ -191,8 +191,8 @@ export default function TrackClaimPage({ params }: { params: Promise<{ claimId: 
         <div className="container mx-auto px-4 max-w-4xl">
           <Card>
             <CardContent className="py-12 text-center">
-              <Clock className="h-12 w-12 text-gray-400 mx-auto mb-4 animate-pulse" />
-              <p className="text-gray-600">Loading claim details...</p>
+              <Clock className="h-12 w-12 text-gray-200 mx-auto mb-4 animate-pulse" />
+              <p className="text-gray-200">Loading claim details...</p>
             </CardContent>
           </Card>
         </div>
@@ -207,7 +207,7 @@ export default function TrackClaimPage({ params }: { params: Promise<{ claimId: 
           <Card>
             <CardContent className="py-12 text-center">
               <AlertCircle className="h-12 w-12 text-red-500 mx-auto mb-4" />
-              <p className="text-gray-600">Claim not found</p>
+              <p className="text-gray-200">Claim not found</p>
             </CardContent>
           </Card>
         </div>
@@ -223,8 +223,8 @@ export default function TrackClaimPage({ params }: { params: Promise<{ claimId: 
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">Track Your Claim</h1>
-          <p className="text-gray-600">Claim ID: <strong>{claimData.id}</strong></p>
-          <p className="text-sm text-gray-500">Submitted {timeElapsed}</p>
+          <p className="text-gray-200">Claim ID: <strong>{claimData.id}</strong></p>
+          <p className="text-sm text-gray-300">Submitted {timeElapsed}</p>
         </div>
 
         {/* 60-Minute Guarantee Alert */}
@@ -268,7 +268,7 @@ export default function TrackClaimPage({ params }: { params: Promise<{ claimId: 
                     <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${
                       isCompleted ? 'bg-green-100 text-green-600' :
                       isInProgress ? 'bg-blue-100 text-blue-600 animate-pulse' :
-                      'bg-gray-100 text-gray-400'
+                      'bg-gray-100 text-gray-200'
                     }`}>
                       <Icon className="h-5 w-5" />
                     </div>
@@ -276,7 +276,7 @@ export default function TrackClaimPage({ params }: { params: Promise<{ claimId: 
                       <p className={`font-medium ${
                         isCompleted ? 'text-green-700' :
                         isInProgress ? 'text-blue-700' :
-                        'text-gray-500'
+                        'text-gray-300'
                       }`}>
                         {step.label}
                       </p>
@@ -310,11 +310,11 @@ export default function TrackClaimPage({ params }: { params: Promise<{ claimId: 
                 </h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex items-center gap-2">
-                    <User className="h-4 w-4 text-gray-500" />
+                    <User className="h-4 w-4 text-gray-300" />
                     <span>Contact: {claimData.contractor.contactPerson}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 text-gray-500" />
+                    <Phone className="h-4 w-4 text-gray-300" />
                     <span>Direct: {claimData.contractor.directPhone}</span>
                   </div>
                   {claimData.contractor.acceptedAt && (
@@ -348,7 +348,7 @@ export default function TrackClaimPage({ params }: { params: Promise<{ claimId: 
                 <Home className="h-4 w-4" />
                 Property
               </h4>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 {claimData.property.address}, {claimData.property.suburb} {claimData.property.state} {claimData.property.postcode}
               </p>
             </div>

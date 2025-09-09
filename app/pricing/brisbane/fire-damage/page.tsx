@@ -82,12 +82,12 @@ export default function BrisbaneFireSmokeDamagePricingPage() {
               <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                 <h3 className="font-bold text-lg mb-2">{range.type}</h3>
                 <p className="text-2xl font-bold text-green-600 mb-3">{range.range}</p>
-                <p className="text-gray-600 text-sm">{range.description}</p>
+                <p className="text-gray-200 text-sm">{range.description}</p>
               </Card>
             ))}
           </div>
           <div className="mt-8 text-center">
-            <p className="text-gray-600">
+            <p className="text-gray-200">
               * Prices are estimates for Brisbane metro area. Final cost determined after assessment.
             </p>
           </div>
@@ -110,7 +110,7 @@ export default function BrisbaneFireSmokeDamagePricingPage() {
                       {factor.impact} impact
                     </span>
                   </div>
-                  <p className="text-gray-600">{factor.example}</p>
+                  <p className="text-gray-200">{factor.example}</p>
                 </Card>
               ))}
             </div>
@@ -174,7 +174,7 @@ export default function BrisbaneFireSmokeDamagePricingPage() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-bold mb-3">Response Coverage:</h4>
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-2 text-gray-200">
                     <li>• Brisbane CBD: 30 minutes</li>
                     <li>• Inner suburbs: 45 minutes</li>
                     <li>• Outer suburbs: 60 minutes</li>
@@ -183,7 +183,7 @@ export default function BrisbaneFireSmokeDamagePricingPage() {
                 </div>
                 <div>
                   <h4 className="font-bold mb-3">Common Issues:</h4>
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-2 text-gray-200">
                     <li>• Storm damage (peak season)</li>
                     <li>• Burst pipes (winter months)</li>
                     <li>• Flash flooding (summer storms)</li>

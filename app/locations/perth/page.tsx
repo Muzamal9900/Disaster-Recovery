@@ -316,7 +316,7 @@ export default function PerthLocationPage() {
               {uniqueChallenges.map((item, index) => (
                 <div key={index} className="bg-gradient-to-br from-orange-50 to-white p-4 rounded-lg shadow">
                   <h3 className="font-bold text-orange-800 mb-2">{item.challenge}</h3>
-                  <p className="text-sm text-gray-600 mb-2">{item.impact}</p>
+                  <p className="text-sm text-gray-200 mb-2">{item.impact}</p>
                   <p className="text-sm text-green-700 font-semibold">{item.solution}</p>
                 </div>
               ))}
@@ -330,7 +330,7 @@ export default function PerthLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Perth Service Areas & Risk Zones
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-center text-gray-200 mb-12 max-w-3xl mx-auto">
               Strategic coverage from Yanchep to Mandurah, coast to hills
             </p>
 
@@ -349,7 +349,7 @@ export default function PerthLocationPage() {
                   <p className="text-orange-600 font-semibold mb-1">
                     {suburb.response} response
                   </p>
-                  <p className="text-gray-600 text-sm mb-1">
+                  <p className="text-gray-200 text-sm mb-1">
                     Population: {suburb.population}
                   </p>
                   <p className={`text-sm font-semibold ${
@@ -365,7 +365,7 @@ export default function PerthLocationPage() {
 
             <div className="mt-12 p-6 bg-orange-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3">Complete Perth Metropolitan Coverage:</h3>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-200 leading-relaxed">
                 <strong>Northern Beaches:</strong> Scarborough, Trigg, Sorrento, Hillarys, Mullaloo, Burns Beach • 
                 <strong>Northern Suburbs:</strong> Joondalup, Wanneroo, Karrinyup, Warwick, Greenwood, Kingsley • 
                 <strong>Eastern Suburbs:</strong> Midland, Guildford, Bassendean, Bayswater, Morley, Noranda • 
@@ -383,7 +383,7 @@ export default function PerthLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Perth&apos;s Climate Disaster Risks
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Specialised response for WA&apos;s Mediterranean climate extremes
             </p>
 
@@ -414,7 +414,7 @@ export default function PerthLocationPage() {
 
             <div className="mt-12 p-6 bg-red-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3 text-red-800">Perth Bushfire Preparedness</h3>
-              <p className="text-gray-700">
+              <p className="text-gray-200">
                 Perth Hills and urban-bushland interface suburbs face extreme bushfire risk during summer. 
                 Our teams maintain heightened readiness from November to April, with pre-positioned 
                 equipment in high-risk areas including Mundaring, Kalamunda, and Roleystone.
@@ -429,7 +429,7 @@ export default function PerthLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Recent Perth Emergency Responses
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Proven expertise across Perth&apos;s diverse property types
             </p>
 
@@ -448,7 +448,7 @@ export default function PerthLocationPage() {
                     <div>
                       <h3 className="text-xl font-bold mb-2">{project.type}</h3>
                       <p className="text-orange-600 font-semibold mb-1">{project.location}</p>
-                      <p className="text-gray-700 mb-2">{project.damage}</p>
+                      <p className="text-gray-200 mb-2">{project.damage}</p>
                       <div className="flex flex-wrap gap-4 text-sm">
                         <span className="text-green-600">✓ {project.response}</span>
                         <span className="text-green-600">✓ {project.outcome}</span>

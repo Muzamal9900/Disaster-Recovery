@@ -653,7 +653,7 @@ export default function PitchDeckPresentation() {
               <Button
                 onClick={() => setAudioEnabled(!audioEnabled)}
                 variant="outline"
-                className={audioEnabled ? 'text-blue-400' : 'text-gray-500'}
+                className={audioEnabled ? 'text-blue-400' : 'text-gray-300'}
               >
                 {audioEnabled ? <Volume2 className="h-4 w-4" /> : <VolumeX className="h-4 w-4" />}
               </Button>

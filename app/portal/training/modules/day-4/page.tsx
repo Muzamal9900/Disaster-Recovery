@@ -465,7 +465,7 @@ export default function Day4HealthSafety() {
                 <h1 className="text-2xl font-bold text-gray-900">
                   Day 4: Health & Safety Compliance
                 </h1>
-                <p className="text-sm text-gray-600">Your safety and legal compliance</p>
+                <p className="text-sm text-gray-200">Your safety and legal compliance</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -489,7 +489,7 @@ export default function Day4HealthSafety() {
             <CardContent className="p-4">
               <h3 className="font-semibold mb-2">Module Progress</h3>
               <Progress value={(completedSections.length / modules.length) * 100} className="mb-2" />
-              <p className="text-xs text-gray-600">
+              <p className="text-xs text-gray-200">
                 {completedSections.length} of {modules.length} modules completed
               </p>
             </CardContent>
@@ -513,10 +513,10 @@ export default function Day4HealthSafety() {
                     ) : (
                       <div className="h-4 w-4 rounded-full border-2 border-gray-300" />
                     )}
-                    <span className="text-xs text-gray-600">Module {module.id}</span>
+                    <span className="text-xs text-gray-200">Module {module.id}</span>
                   </div>
                   <h4 className="text-sm font-medium">{module.title}</h4>
-                  <p className="text-xs text-gray-600 mt-1">{module.duration}</p>
+                  <p className="text-xs text-gray-200 mt-1">{module.duration}</p>
                 </CardContent>
               </Card>
             ))}
@@ -574,7 +574,7 @@ export default function Day4HealthSafety() {
                           <Card>
                             <CardHeader className="pb-3">
                               <CardTitle className="text-base">Queensland</CardTitle>
-                              <p className="text-xs text-gray-600">
+                              <p className="text-xs text-gray-200">
                                 {modules[0].content.legislation.state.qld.authority}
                               </p>
                             </CardHeader>
@@ -590,7 +590,7 @@ export default function Day4HealthSafety() {
                           <Card>
                             <CardHeader className="pb-3">
                               <CardTitle className="text-base">New South Wales</CardTitle>
-                              <p className="text-xs text-gray-600">
+                              <p className="text-xs text-gray-200">
                                 {modules[0].content.legislation.state.nsw.authority}
                               </p>
                             </CardHeader>
@@ -837,7 +837,7 @@ export default function Day4HealthSafety() {
                     <Card key={idx} className="mb-4">
                       <CardContent className="p-4">
                         <h4 className="font-semibold mb-2">{scenario.title}</h4>
-                        <p className="text-sm text-gray-600 mb-3">{scenario.scenario}</p>
+                        <p className="text-sm text-gray-200 mb-3">{scenario.scenario}</p>
                         <div className="space-y-2">
                           {scenario.tasks.map((task, taskIdx) => (
                             <label key={taskIdx} className="flex items-start gap-2">

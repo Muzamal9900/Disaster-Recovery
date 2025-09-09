@@ -279,7 +279,7 @@ const TechnicianSyncManager: React.FC = () => {
             </div>
             <div>
               <h2 className="text-xl font-semibold">Technician Sync Manager</h2>
-              <p className="text-sm text-gray-500">Clean Claims API Integration</p>
+              <p className="text-sm text-gray-300">Clean Claims API Integration</p>
             </div>
           </div>
           <div className="flex items-center space-x-2">
@@ -295,7 +295,7 @@ const TechnicianSyncManager: React.FC = () => {
               disabled={isSyncing}
               className={`px-4 py-2 rounded-lg flex items-center space-x-2 ${
                 isSyncing 
-                  ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  ? 'bg-gray-300 text-gray-300 cursor-not-allowed'
                   : 'bg-blue-600 text-white hover:bg-blue-700'
               }`}
             >
@@ -309,7 +309,7 @@ const TechnicianSyncManager: React.FC = () => {
         {isSyncing && (
           <div className="mt-4">
             <div className="flex items-center justify-between text-sm mb-1">
-              <span className="text-gray-600">Syncing technicians...</span>
+              <span className="text-gray-200">Syncing technicians...</span>
               <span className="font-medium">{syncProgress}%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
@@ -324,23 +324,23 @@ const TechnicianSyncManager: React.FC = () => {
         {/* Metrics */}
         <div className="grid grid-cols-5 gap-4 mt-4">
           <div className="bg-gray-50 rounded-lg p-3">
-            <p className="text-xs text-gray-500">Total Technicians</p>
+            <p className="text-xs text-gray-300">Total Technicians</p>
             <p className="text-2xl font-semibold">{syncMetrics.totalTechnicians}</p>
           </div>
           <div className="bg-green-50 rounded-lg p-3">
-            <p className="text-xs text-gray-500">Synced</p>
+            <p className="text-xs text-gray-300">Synced</p>
             <p className="text-2xl font-semibold text-green-600">{syncMetrics.syncedTechnicians}</p>
           </div>
           <div className="bg-yellow-50 rounded-lg p-3">
-            <p className="text-xs text-gray-500">Pending</p>
+            <p className="text-xs text-gray-300">Pending</p>
             <p className="text-2xl font-semibold text-yellow-600">{syncMetrics.pendingSync}</p>
           </div>
           <div className="bg-red-50 rounded-lg p-3">
-            <p className="text-xs text-gray-500">Failed</p>
+            <p className="text-xs text-gray-300">Failed</p>
             <p className="text-2xl font-semibold text-red-600">{syncMetrics.failedSync}</p>
           </div>
           <div className="bg-blue-50 rounded-lg p-3">
-            <p className="text-xs text-gray-500">Last Sync</p>
+            <p className="text-xs text-gray-300">Last Sync</p>
             <p className="text-sm font-medium text-blue-600">
               {syncMetrics.lastSyncTime 
                 ? new Date(syncMetrics.lastSyncTime).toLocaleTimeString()
@@ -361,7 +361,7 @@ const TechnicianSyncManager: React.FC = () => {
                 className={`px-3 py-1 rounded-lg capitalize ${
                   filterStatus === status
                     ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-600 hover:bg-gray-100'
+                    : 'text-gray-200 hover:bg-gray-100'
                 }`}
               >
                 {status}
@@ -399,13 +399,13 @@ const TechnicianSyncManager: React.FC = () => {
                       />
                     ) : (
                       <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
-                        <User className="h-6 w-6 text-gray-500" />
+                        <User className="h-6 w-6 text-gray-300" />
                       </div>
                     )}
                     <div className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-2 border-white ${
                       technician.status === 'active' ? 'bg-green-500' :
                       technician.status === 'training' ? 'bg-blue-500' :
-                      'bg-gray-500'
+                      'bg-gray-700'
                     }`} />
                   </div>
 
@@ -422,7 +422,7 @@ const TechnicianSyncManager: React.FC = () => {
                         </span>
                       ))}
                     </div>
-                    <div className="flex items-center space-x-4 mt-1 text-sm text-gray-600">
+                    <div className="flex items-center space-x-4 mt-1 text-sm text-gray-200">
                       <span>{technician.companyAffiliation.name}</span>
                       {technician.email && (
                         <span>{technician.email}</span>
@@ -449,7 +449,7 @@ const TechnicianSyncManager: React.FC = () => {
                       </div>
                     ))}
                     {technician.certifications.length > 3 && (
-                      <span className="text-xs text-gray-500">
+                      <span className="text-xs text-gray-300">
                         +{technician.certifications.length - 3} more
                       </span>
                     )}
@@ -459,7 +459,7 @@ const TechnicianSyncManager: React.FC = () => {
                 {/* Sync Status */}
                 <div className="flex items-center space-x-3">
                   <div className="text-right">
-                    <p className="text-xs text-gray-500">Sync Status</p>
+                    <p className="text-xs text-gray-300">Sync Status</p>
                     <span className={`inline-block px-2 py-1 text-xs rounded-full ${
                       getStatusColor(technician.syncStatus.status)
                     }`}>
@@ -473,9 +473,9 @@ const TechnicianSyncManager: React.FC = () => {
                     }}
                     className="p-2 hover:bg-gray-100 rounded-lg"
                   >
-                    <RefreshCw className="h-4 w-4 text-gray-600" />
+                    <RefreshCw className="h-4 w-4 text-gray-200" />
                   </button>
-                  <ChevronRight className="h-5 w-5 text-gray-400" />
+                  <ChevronRight className="h-5 w-5 text-gray-200" />
                 </div>
               </div>
 
@@ -504,7 +504,7 @@ const TechnicianSyncManager: React.FC = () => {
               <h3 className="text-lg font-semibold">Technician Profile</h3>
               <button
                 onClick={() => setSelectedTechnician(null)}
-                className="text-gray-400 hover:text-gray-600"
+                className="text-gray-200 hover:text-gray-200"
               >
                 ×
               </button>
@@ -521,16 +521,16 @@ const TechnicianSyncManager: React.FC = () => {
                   />
                 ) : (
                   <div className="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center">
-                    <User className="h-10 w-10 text-gray-500" />
+                    <User className="h-10 w-10 text-gray-300" />
                   </div>
                 )}
                 <button className="absolute bottom-0 right-0 p-1 bg-white rounded-full shadow-lg hover:bg-gray-50">
-                  <Camera className="h-4 w-4 text-gray-600" />
+                  <Camera className="h-4 w-4 text-gray-200" />
                 </button>
               </div>
               <div className="flex-1">
                 <h4 className="text-xl font-semibold">{selectedTechnician.name}</h4>
-                <p className="text-gray-600">{selectedTechnician.companyAffiliation.name}</p>
+                <p className="text-gray-200">{selectedTechnician.companyAffiliation.name}</p>
                 <div className="flex items-center space-x-2 mt-2">
                   <span className={`px-2 py-1 text-xs rounded-full ${
                     getTechnicianStatusColor(selectedTechnician.status)
@@ -549,7 +549,7 @@ const TechnicianSyncManager: React.FC = () => {
               </div>
               <div className="text-right">
                 {selectedTechnician.cleanClaimsId && (
-                  <p className="text-xs text-gray-500">Clean Claims ID</p>
+                  <p className="text-xs text-gray-300">Clean Claims ID</p>
                 )}
                 <p className="font-mono text-sm">{selectedTechnician.cleanClaimsId || 'Not synced'}</p>
               </div>
@@ -560,11 +560,11 @@ const TechnicianSyncManager: React.FC = () => {
               <h5 className="font-medium mb-3">Contact Information</h5>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-xs text-gray-500">Email</p>
+                  <p className="text-xs text-gray-300">Email</p>
                   <p className="text-sm">{selectedTechnician.email || 'Not provided'}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500">Phone</p>
+                  <p className="text-xs text-gray-300">Phone</p>
                   <p className="text-sm">{selectedTechnician.contactNumber || 'Not provided'}</p>
                 </div>
               </div>
@@ -579,11 +579,11 @@ const TechnicianSyncManager: React.FC = () => {
                     <div key={cert.id} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center space-x-3">
                         <Shield className={`h-5 w-5 ${
-                          cert.verificationStatus === 'verified' ? 'text-green-600' : 'text-gray-400'
+                          cert.verificationStatus === 'verified' ? 'text-green-600' : 'text-gray-200'
                         }`} />
                         <div>
                           <p className="font-medium">{cert.name}</p>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-gray-200">
                             {cert.code} • {cert.issuingBody} • Expires {new Date(cert.expiryDate || '').toLocaleDateString()}
                           </p>
                         </div>
@@ -599,7 +599,7 @@ const TechnicianSyncManager: React.FC = () => {
                   ))}
                 </div>
               ) : (
-                <p className="text-sm text-gray-500">No certifications on file</p>
+                <p className="text-sm text-gray-300">No certifications on file</p>
               )}
             </div>
 
@@ -609,29 +609,29 @@ const TechnicianSyncManager: React.FC = () => {
                 <h5 className="font-medium mb-3">Professional Details</h5>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <p className="text-xs text-gray-500">Experience</p>
+                    <p className="text-xs text-gray-300">Experience</p>
                     <p className="text-sm">{selectedTechnician.metadata.yearsExperience} years</p>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500">Completed Jobs</p>
+                    <p className="text-xs text-gray-300">Completed Jobs</p>
                     <p className="text-sm">{selectedTechnician.metadata.completedJobs}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500">Rating</p>
+                    <p className="text-xs text-gray-300">Rating</p>
                     <div className="flex items-center space-x-1">
                       <Star className="h-4 w-4 text-blue-600" />
                       <span className="text-sm">{selectedTechnician.metadata.rating}</span>
                     </div>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500">Languages</p>
+                    <p className="text-xs text-gray-300">Languages</p>
                     <p className="text-sm">{selectedTechnician.metadata.languages?.join(', ')}</p>
                   </div>
                 </div>
                 {selectedTechnician.metadata.bio && (
                   <div className="mt-4">
-                    <p className="text-xs text-gray-500 mb-1">Bio</p>
-                    <p className="text-sm text-gray-700">{selectedTechnician.metadata.bio}</p>
+                    <p className="text-xs text-gray-300 mb-1">Bio</p>
+                    <p className="text-sm text-gray-200">{selectedTechnician.metadata.bio}</p>
                   </div>
                 )}
               </div>
@@ -664,8 +664,8 @@ const TechnicianSyncManager: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Import Technicians</h3>
             
             <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
-              <Upload className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-              <p className="text-gray-600 mb-2">Drop CSV file here or click to browse</p>
+              <Upload className="h-12 w-12 text-gray-200 mx-auto mb-4" />
+              <p className="text-gray-200 mb-2">Drop CSV file here or click to browse</p>
               <input
                 type="file"
                 accept=".csv"
@@ -681,8 +681,8 @@ const TechnicianSyncManager: React.FC = () => {
             </div>
 
             <div className="mt-4">
-              <p className="text-sm text-gray-600">Expected format:</p>
-              <ul className="text-xs text-gray-500 mt-2 space-y-1">
+              <p className="text-sm text-gray-200">Expected format:</p>
+              <ul className="text-xs text-gray-300 mt-2 space-y-1">
                 <li>• Name, Email, Phone, Company, Certifications</li>
                 <li>• CSV format with headers</li>
                 <li>• Maximum 500 records per import</li>

@@ -272,19 +272,19 @@ const ContractorServiceMap: React.FC<ContractorServiceMapProps> = ({
 
       {/* Legend */}
       <div className="absolute top-4 left-4 bg-white rounded-lg shadow-md p-3">
-        <h4 className="text-xs font-semibold text-gray-700 mb-2">Legend</h4>
+        <h4 className="text-xs font-semibold text-gray-200 mb-2">Legend</h4>
         <div className="space-y-1">
           <div className="flex items-center space-x-2">
             <div className="w-3 h-3 bg-blue-500 rounded-full opacity-30"></div>
-            <span className="text-xs text-gray-600">Service Area</span>
+            <span className="text-xs text-gray-200">Service Area</span>
           </div>
           <div className="flex items-center space-x-2">
             <div className="w-3 h-3 border-2 border-blue-500 rounded-full border-dashed"></div>
-            <span className="text-xs text-gray-600">Max Radius</span>
+            <span className="text-xs text-gray-200">Max Radius</span>
           </div>
           <div className="flex items-center space-x-2">
             <div className="w-3 h-3 bg-red-600 rounded-full"></div>
-            <span className="text-xs text-gray-600">Job Location</span>
+            <span className="text-xs text-gray-200">Job Location</span>
           </div>
         </div>
       </div>
@@ -299,7 +299,7 @@ const ContractorServiceMap: React.FC<ContractorServiceMapProps> = ({
       
       <div className="space-y-3 max-h-96 overflow-y-auto">
         {eligibleContractors.length === 0 ? (
-          <div className="text-center py-8 text-gray-500">
+          <div className="text-center py-8 text-gray-300">
             <MapPin className="w-12 h-12 mx-auto mb-3 text-gray-300" />
             <p>No eligible contractors for this location</p>
           </div>
@@ -331,7 +331,7 @@ const ContractorServiceMap: React.FC<ContractorServiceMapProps> = ({
                     </div>
                     <div className="flex-1">
                       <h4 className="font-medium text-gray-900">{ec.companyName}</h4>
-                      <div className="flex items-center space-x-4 mt-1 text-sm text-gray-600">
+                      <div className="flex items-center space-x-4 mt-1 text-sm text-gray-200">
                         <span className="flex items-center">
                           <Navigation className="w-3 h-3 mr-1" />
                           {ec.distance.toFixed(1)} mi
@@ -371,7 +371,7 @@ const ContractorServiceMap: React.FC<ContractorServiceMapProps> = ({
                     <div className="text-lg font-bold text-gray-900">
                       {ec.score.finalScore.toFixed(0)}
                     </div>
-                    <div className="text-xs text-gray-600">Score</div>
+                    <div className="text-xs text-gray-200">Score</div>
                   </div>
                 </div>
                 
@@ -415,7 +415,7 @@ const ContractorServiceMap: React.FC<ContractorServiceMapProps> = ({
           <h4 className="font-semibold text-gray-900">Selected Contractor</h4>
           <button
             onClick={() => setSelectedContractor(null)}
-            className="text-gray-400 hover:text-gray-600"
+            className="text-gray-200 hover:text-gray-200"
           >
             ×
           </button>
@@ -423,21 +423,21 @@ const ContractorServiceMap: React.FC<ContractorServiceMapProps> = ({
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div>
-            <p className="text-xs text-gray-600">Company</p>
+            <p className="text-xs text-gray-200">Company</p>
             <p className="font-medium">{selectedContractor.companyName}</p>
           </div>
           <div>
-            <p className="text-xs text-gray-600">Contact</p>
+            <p className="text-xs text-gray-200">Contact</p>
             <p className="font-medium">{selectedContractor.contactName}</p>
           </div>
           <div>
-            <p className="text-xs text-gray-600">Response Time</p>
+            <p className="text-xs text-gray-200">Response Time</p>
             <p className="font-medium">
               {selectedContractor.serviceArea.responseTime.emergency} min (Emergency)
             </p>
           </div>
           <div>
-            <p className="text-xs text-gray-600">Capacity</p>
+            <p className="text-xs text-gray-200">Capacity</p>
             <p className="font-medium">
               {selectedContractor.capacity.currentActiveJobs}/{selectedContractor.capacity.maxActiveJobs} Active
             </p>
@@ -451,19 +451,19 @@ const ContractorServiceMap: React.FC<ContractorServiceMapProps> = ({
                 <p className="text-2xl font-bold text-blue-600">
                   {selectedContractor.kpiScore.overallScore}%
                 </p>
-                <p className="text-xs text-gray-600">KPI Score</p>
+                <p className="text-xs text-gray-200">KPI Score</p>
               </div>
               <div className="text-center">
                 <p className="text-2xl font-bold text-green-600">
                   {selectedContractor.leadStatistics.totalLeadsAccepted}
                 </p>
-                <p className="text-xs text-gray-600">Jobs Completed</p>
+                <p className="text-xs text-gray-200">Jobs Completed</p>
               </div>
               <div className="text-center">
                 <p className="text-2xl font-bold text-yellow-600">
                   {selectedContractor.leadStatistics.acceptanceRate}%
                 </p>
-                <p className="text-xs text-gray-600">Accept Rate</p>
+                <p className="text-xs text-gray-200">Accept Rate</p>
               </div>
             </div>
             
@@ -495,7 +495,7 @@ const ContractorServiceMap: React.FC<ContractorServiceMapProps> = ({
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-xl font-bold text-gray-900">Contractor Service Coverage</h2>
-          <p className="text-gray-600 mt-1">
+          <p className="text-gray-200 mt-1">
             {lead 
               ? `Showing contractors available for ${lead.jobLocation.city}, ${lead.jobLocation.state}`
               : 'Interactive map showing contractor service areas'}
@@ -528,20 +528,20 @@ const ContractorServiceMap: React.FC<ContractorServiceMapProps> = ({
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Job Details</h3>
               <div className="space-y-3">
                 <div>
-                  <p className="text-xs text-gray-600">Location</p>
+                  <p className="text-xs text-gray-200">Location</p>
                   <p className="font-medium">{lead.jobLocation.address}</p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-200">
                     {lead.jobLocation.city}, {lead.jobLocation.state} {lead.jobLocation.zipCode}
                   </p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-600">Service Type</p>
+                  <p className="text-xs text-gray-200">Service Type</p>
                   <p className="font-medium capitalize">
                     {lead.jobDetails.serviceType.replace('_', ' ')}
                   </p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-600">Priority</p>
+                  <p className="text-xs text-gray-200">Priority</p>
                   <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
                     lead.priority === 'critical' ? 'bg-red-100 text-red-800' :
                     lead.priority === 'high' ? 'bg-orange-100 text-orange-800' :
@@ -553,7 +553,7 @@ const ContractorServiceMap: React.FC<ContractorServiceMapProps> = ({
                 </div>
                 {lead.estimatedValue && (
                   <div>
-                    <p className="text-xs text-gray-600">Estimated Value</p>
+                    <p className="text-xs text-gray-200">Estimated Value</p>
                     <p className="font-medium">
                       ${lead.estimatedValue.toLocaleString()}
                     </p>

@@ -215,7 +215,7 @@ export default function ContractorLoginPage() {
               className={`flex-1 py-2 px-4 rounded-lg font-medium transition-all ${
                 loginMethod === 'credentials'
                   ? 'bg-white/20 text-white backdrop-blur-sm'
-                  : 'text-gray-400 hover:text-white hover:bg-white/10'
+                  : 'text-gray-200 hover:text-white hover:bg-white/10'
               }`}
             >
               <Key className="inline h-4 w-4 mr-2" />
@@ -226,7 +226,7 @@ export default function ContractorLoginPage() {
               className={`flex-1 py-2 px-4 rounded-lg font-medium transition-all ${
                 loginMethod === 'sso'
                   ? 'bg-white/20 text-white backdrop-blur-sm'
-                  : 'text-gray-400 hover:text-white hover:bg-white/10'
+                  : 'text-gray-200 hover:text-white hover:bg-white/10'
               }`}
             >
               <Fingerprint className="inline h-4 w-4 mr-2" />
@@ -245,7 +245,7 @@ export default function ContractorLoginPage() {
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <User className="h-5 w-5 text-gray-400 group-focus-within:text-blue-400 transition-colours" />
+                      <User className="h-5 w-5 text-gray-200 group-focus-within:text-blue-400 transition-colours" />
                     </div>
                     <input
                       id="username"
@@ -266,7 +266,7 @@ export default function ContractorLoginPage() {
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Lock className="h-5 w-5 text-gray-400 group-focus-within:text-blue-400 transition-colours" />
+                      <Lock className="h-5 w-5 text-gray-200 group-focus-within:text-blue-400 transition-colours" />
                     </div>
                     <input
                       id="password"
@@ -280,7 +280,7 @@ export default function ContractorLoginPage() {
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white transition-colours"
+                      className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-200 hover:text-white transition-colours"
                     >
                       {showPassword ? (
                         <EyeOff className="h-5 w-5" />
@@ -348,7 +348,7 @@ export default function ContractorLoginPage() {
 
                 {/* Demo credentials hint */}
                 <div className="text-center">
-                  <p className="text-xs text-gray-400 mb-2">Demo Credentials:</p>
+                  <p className="text-xs text-gray-200 mb-2">Demo Credentials:</p>
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 rounded-lg backdrop-blur-sm">
                     <Sparkles className="h-3 w-3 text-blue-500" />
                     <code className="text-xs text-gray-300">demo / Demo123!</code>
@@ -402,7 +402,7 @@ export default function ContractorLoginPage() {
             </Link>
             <Link
               href="/"
-              className="inline-flex items-center text-sm text-gray-400 hover:text-white transition-colours"
+              className="inline-flex items-center text-sm text-gray-200 hover:text-white transition-colours"
             >
               <ArrowLeft className="h-4 w-4 mr-1" />
               Back to main site

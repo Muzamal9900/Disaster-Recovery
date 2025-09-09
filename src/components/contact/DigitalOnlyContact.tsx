@@ -80,9 +80,9 @@ export function EmergencyContactOptions() {
               <method.icon className={`h-6 w-6 text-${method.color}-600`} />
             </div>
             <h4 className="text-lg font-semibold mb-2">{method.title}</h4>
-            <p className="text-gray-600 text-sm mb-3">{method.description}</p>
+            <p className="text-gray-200 text-sm mb-3">{method.description}</p>
             <div className="flex items-center justify-between">
-              <span className="text-xs text-gray-500">{method.time}</span>
+              <span className="text-xs text-gray-300">{method.time}</span>
               <button className={`text-${method.color}-600 font-semibold text-sm hover:text-${method.color}-700`}>
                 {method.action} →
               </button>
@@ -127,7 +127,7 @@ export function QuickResponseForm() {
       
       <div className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-200 mb-2">
             How urgent is your situation?
           </label>
           <div className="grid grid-cols-3 gap-2">
@@ -152,7 +152,7 @@ export function QuickResponseForm() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-200 mb-2">
             Your Email (for instant updates)
           </label>
           <input
@@ -164,7 +164,7 @@ export function QuickResponseForm() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-200 mb-2">
             Property Postcode
           </label>
           <input
@@ -187,7 +187,7 @@ export function QuickResponseForm() {
         </button>
       </div>
 
-      <p className="text-xs text-gray-600 mt-4 text-center">
+      <p className="text-xs text-gray-200 mt-4 text-center">
         <Clock className="inline h-3 w-3 mr-1" />
         Average response time: 47 seconds
       </p>

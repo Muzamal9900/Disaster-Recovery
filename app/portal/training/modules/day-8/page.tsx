@@ -526,7 +526,7 @@ export default function Day8MouldRemediation() {
                 <h1 className="text-2xl font-bold text-gray-900">
                   Day 8: Mould Remediation
                 </h1>
-                <p className="text-sm text-gray-600">Advanced biohazard control</p>
+                <p className="text-sm text-gray-200">Advanced biohazard control</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -550,7 +550,7 @@ export default function Day8MouldRemediation() {
             <CardContent className="p-4">
               <h3 className="font-semibold mb-2">Mould Specialist</h3>
               <Progress value={33} className="mb-2" />
-              <p className="text-xs text-gray-600">2 of 6 modules completed</p>
+              <p className="text-xs text-gray-200">2 of 6 modules completed</p>
             </CardContent>
           </Card>
 
@@ -572,10 +572,10 @@ export default function Day8MouldRemediation() {
                     ) : (
                       <div className="h-4 w-4 rounded-full border-2 border-gray-300" />
                     )}
-                    <span className="text-xs text-gray-600">Module {module.id}</span>
+                    <span className="text-xs text-gray-200">Module {module.id}</span>
                   </div>
                   <h4 className="text-sm font-medium">{module.title}</h4>
-                  <p className="text-xs text-gray-600 mt-1">{module.duration}</p>
+                  <p className="text-xs text-gray-200 mt-1">{module.duration}</p>
                 </CardContent>
               </Card>
             ))}
@@ -636,10 +636,10 @@ export default function Day8MouldRemediation() {
                             <div className="grid grid-cols-2 gap-6">
                               <div>
                                 <h4 className="font-medium mb-2">Appearance</h4>
-                                <p className="text-sm text-gray-600 mb-4">{mould.appearance}</p>
+                                <p className="text-sm text-gray-200 mb-4">{mould.appearance}</p>
                                 
                                 <h4 className="font-medium mb-2">Common Habitat</h4>
-                                <p className="text-sm text-gray-600">{mould.habitat}</p>
+                                <p className="text-sm text-gray-200">{mould.habitat}</p>
                               </div>
                               <div>
                                 <h4 className="font-medium mb-2">Health Effects</h4>
@@ -759,7 +759,7 @@ export default function Day8MouldRemediation() {
                           </div>
                           <div>
                             <p className="font-medium">{step.action}</p>
-                            <p className="text-sm text-gray-600">{step.detail}</p>
+                            <p className="text-sm text-gray-200">{step.detail}</p>
                           </div>
                         </div>
                       ))}
@@ -834,7 +834,7 @@ export default function Day8MouldRemediation() {
                             <CardTitle className="text-sm">{method.method}</CardTitle>
                           </CardHeader>
                           <CardContent>
-                            <p className="text-sm text-gray-600 mb-2">{method.use}</p>
+                            <p className="text-sm text-gray-200 mb-2">{method.use}</p>
                             {method.solution && (
                               <Badge variant="secondary">{method.solution}</Badge>
                             )}
@@ -866,7 +866,7 @@ export default function Day8MouldRemediation() {
                     <CardTitle className="text-base">{scenario.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-gray-600 mb-3">{scenario.situation}</p>
+                    <p className="text-sm text-gray-200 mb-3">{scenario.situation}</p>
                     <div className="space-y-2">
                       <p className="text-sm font-medium">Complete these tasks:</p>
                       {scenario.tasks.map((task, tIdx) => (

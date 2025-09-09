@@ -37,7 +37,7 @@ export function Breadcrumbs({ items }: { items?: BreadcrumbItem[] }) {
             <li>
               <Link 
                 href="/" 
-                className="text-gray-500 hover:text-gray-700 transition-colours"
+                className="text-gray-300 hover:text-gray-200 transition-colours"
                 aria-label="Home"
               >
                 <Home className="h-4 w-4" />
@@ -46,11 +46,11 @@ export function Breadcrumbs({ items }: { items?: BreadcrumbItem[] }) {
             
             {breadcrumbs.map((item, index) => (
               <li key={index} className="flex items-center">
-                <ChevronRight className="h-4 w-4 text-gray-400 mx-2" />
+                <ChevronRight className="h-4 w-4 text-gray-200 mx-2" />
                 {item.href ? (
                   <Link 
                     href={item.href}
-                    className="text-gray-600 hover:text-blue-600 transition-colours"
+                    className="text-gray-200 hover:text-blue-600 transition-colours"
                   >
                     {item.name}
                   </Link>

@@ -140,7 +140,7 @@ export default function InsuranceDecoderHub() {
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-2xl p-2">
               <div className="flex items-center gap-2">
-                <Search className="w-6 h-6 text-gray-400 ml-2" />
+                <Search className="w-6 h-6 text-gray-200 ml-2" />
                 <input
                   type="text"
                   placeholder="Search insurance terms, coverage questions..."
@@ -195,7 +195,7 @@ export default function InsuranceDecoderHub() {
                   className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all ${
                     selectedCategory === cat.value
                       ? 'bg-blue-600 text-white shadow-lg'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      : 'bg-gray-100 text-gray-200 hover:bg-gray-200'
                   }`}
                 >
                   <Icon className="w-5 h-5" />
@@ -246,7 +246,7 @@ export default function InsuranceDecoderHub() {
                       </div>
                     </div>
                     <div className="p-6">
-                      <p className="text-gray-700 mb-4">{term.snippet}</p>
+                      <p className="text-gray-200 mb-4">{term.snippet}</p>
                       <div className="flex items-center justify-between">
                         <span className={`text-sm font-semibold ${
                           term.category === 'coverage' ? 'text-green-600' :
@@ -255,7 +255,7 @@ export default function InsuranceDecoderHub() {
                         }`}>
                           {term.category.charAt(0).toUpperCase() + term.category.slice(1)}
                         </span>
-                        <ArrowRight className="w-5 h-5 text-gray-400" />
+                        <ArrowRight className="w-5 h-5 text-gray-200" />
                       </div>
                     </div>
                   </Link>
@@ -273,7 +273,7 @@ export default function InsuranceDecoderHub() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Is Your Damage Covered? Check Now
             </h2>
-            <p className="text-xl text-gray-700">
+            <p className="text-xl text-gray-200">
               Our intelligent coverage checker analyzes your specific situation
             </p>
           </div>
@@ -291,7 +291,7 @@ export default function InsuranceDecoderHub() {
                   <div className="flex items-start justify-between mb-4">
                     <h3 className="text-xl font-bold">{scenario.title}</h3>
                     <div className="text-right">
-                      <p className="text-sm text-gray-600">Coverage Probability</p>
+                      <p className="text-sm text-gray-200">Coverage Probability</p>
                       <p className={`text-2xl font-bold ${
                         scenario.probability >= 70 ? 'text-green-600' :
                         scenario.probability >= 40 ? 'text-yellow-600' :
@@ -316,9 +316,9 @@ export default function InsuranceDecoderHub() {
                   </div>
                   
                   <div className="space-y-2">
-                    <p className="text-sm font-semibold text-gray-700">Key Factors:</p>
+                    <p className="text-sm font-semibold text-gray-200">Key Factors:</p>
                     {scenario.factors.map((factor, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                      <div key={idx} className="flex items-center gap-2 text-sm text-gray-200">
                         <CheckCircle className="w-4 h-4 text-blue-500" />
                         {factor}
                       </div>
@@ -368,9 +368,9 @@ export default function InsuranceDecoderHub() {
                     </span>
                   </div>
                   <h3 className="text-xl font-bold mb-2">{comp.comparison}</h3>
-                  <p className="text-gray-600 mb-3">{comp.damageType}</p>
+                  <p className="text-gray-200 mb-3">{comp.damageType}</p>
                   <div className="bg-white rounded-lg p-3">
-                    <p className="text-sm text-gray-700">
+                    <p className="text-sm text-gray-200">
                       <span className="font-semibold">Key Difference:</span> {comp.keyDifference}
                     </p>
                   </div>
@@ -397,11 +397,11 @@ export default function InsuranceDecoderHub() {
             <AlertTriangle className="w-8 h-8 text-yellow-600 flex-shrink-0 mt-1" />
             <div>
               <h3 className="text-xl font-bold mb-2">Important Educational Notice</h3>
-              <p className="text-gray-700 mb-3">
+              <p className="text-gray-200 mb-3">
                 This information is general education only. Every insurance policy is different. 
                 We are restoration contractors sharing industry knowledge, not insurance advisors.
               </p>
-              <ul className="space-y-1 text-sm text-gray-600">
+              <ul className="space-y-1 text-sm text-gray-200">
                 <li>• Always consult your specific policy documents</li>
                 <li>• Contact your insurer for definitive coverage decisions</li>
                 <li>• We help with restoration and claim documentation, not coverage determination</li>

@@ -63,7 +63,7 @@ export default function QuotePage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 Connecting You to Our Quote System
               </h2>
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-200 mb-6">
                 You'll be redirected to our comprehensive quote request form where you can 
                 provide details about your damage and connect with certified contractors.
               </p>
@@ -89,7 +89,7 @@ export default function QuotePage() {
                   <span className="font-bold text-blue-600">1</span>
                 </div>
                 <h3 className="font-bold mb-2">Describe Your Damage</h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-200">
                   Provide details about your property and damage type
                 </p>
               </Card>
@@ -98,7 +98,7 @@ export default function QuotePage() {
                   <span className="font-bold text-blue-600">2</span>
                 </div>
                 <h3 className="font-bold mb-2">Contractor Matching</h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-200">
                   System finds qualified contractors in your area
                 </p>
               </Card>
@@ -107,7 +107,7 @@ export default function QuotePage() {
                   <span className="font-bold text-blue-600">3</span>
                 </div>
                 <h3 className="font-bold mb-2">Receive Quotes</h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-200">
                   Get detailed quotes from multiple contractors
                 </p>
               </Card>
@@ -116,7 +116,7 @@ export default function QuotePage() {
                   <span className="font-bold text-green-600">4</span>
                 </div>
                 <h3 className="font-bold mb-2">Choose & Book</h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-200">
                   Compare options and select your preferred contractor
                 </p>
               </Card>
@@ -150,37 +150,37 @@ export default function QuotePage() {
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="p-6 bg-white shadow-md">
               <h3 className="font-bold mb-2">Water Damage Restoration</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 Burst pipes, flooding, leaks, and water extraction services
               </p>
             </Card>
             <Card className="p-6 bg-white shadow-md">
               <h3 className="font-bold mb-2">Fire Damage Restoration</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 Smoke cleanup, soot removal, and structural fire damage repair
               </p>
             </Card>
             <Card className="p-6 bg-white shadow-md">
               <h3 className="font-bold mb-2">Mould Remediation</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 Black mould removal, air quality testing, and mould prevention
               </p>
             </Card>
             <Card className="p-6 bg-white shadow-md">
               <h3 className="font-bold mb-2">Storm Damage Repair</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 Wind damage, hail damage, and emergency storm repairs
               </p>
             </Card>
             <Card className="p-6 bg-white shadow-md">
               <h3 className="font-bold mb-2">Biohazard Cleanup</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 Sewage cleanup, trauma cleanup, and hazardous material removal
               </p>
             </Card>
             <Card className="p-6 bg-white shadow-md">
               <h3 className="font-bold mb-2">Emergency Services</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 24/7 emergency response and disaster mitigation services
               </p>
             </Card>

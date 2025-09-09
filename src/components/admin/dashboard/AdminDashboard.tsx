@@ -92,12 +92,12 @@ export function AdminDashboard({ user }: AdminDashboardProps) {
               <h1 className="text-2xl font-bold text-gray-900">
                 NRP Admin Portal
               </h1>
-              <p className="text-gray-600">
+              <p className="text-gray-200">
                 Contractor Management & Compliance
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <span className="text-sm text-gray-600">
+              <span className="text-sm text-gray-200">
                 Welcome, {user?.name || 'Administrator'}
               </span>
               <Button variant="outline" size="icon">
@@ -147,11 +147,11 @@ export function AdminDashboard({ user }: AdminDashboardProps) {
                   <CardTitle className="text-sm font-medium">
                     Pending Applications
                   </CardTitle>
-                  <Users className="h-4 w-4 text-gray-400" />
+                  <Users className="h-4 w-4 text-gray-200" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">{stats.pendingApplications}</div>
-                  <p className="text-xs text-gray-600 mt-1">
+                  <p className="text-xs text-gray-200 mt-1">
                     {stats.pendingApplications > 0 ? 'Requires review' : 'All processed'}
                   </p>
                 </CardContent>
@@ -165,11 +165,11 @@ export function AdminDashboard({ user }: AdminDashboardProps) {
                   <CardTitle className="text-sm font-medium">
                     Documents to Verify
                   </CardTitle>
-                  <FileSearch className="h-4 w-4 text-gray-400" />
+                  <FileSearch className="h-4 w-4 text-gray-200" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">{stats.documentsToVerify}</div>
-                  <p className="text-xs text-gray-600 mt-1">
+                  <p className="text-xs text-gray-200 mt-1">
                     Awaiting verification
                   </p>
                 </CardContent>
@@ -184,13 +184,13 @@ export function AdminDashboard({ user }: AdminDashboardProps) {
                   <CardTitle className="text-sm font-medium">
                     Compliance Issues
                   </CardTitle>
-                  <Shield className="h-4 w-4 text-gray-400" />
+                  <Shield className="h-4 w-4 text-gray-200" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold text-red-600">
                     {stats.complianceIssues}
                   </div>
-                  <p className="text-xs text-gray-600 mt-1">
+                  <p className="text-xs text-gray-200 mt-1">
                     Need attention
                   </p>
                 </CardContent>
@@ -204,11 +204,11 @@ export function AdminDashboard({ user }: AdminDashboardProps) {
                   <CardTitle className="text-sm font-medium">
                     Open Tickets
                   </CardTitle>
-                  <HeadphonesIcon className="h-4 w-4 text-gray-400" />
+                  <HeadphonesIcon className="h-4 w-4 text-gray-200" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">{stats.openTickets}</div>
-                  <p className="text-xs text-gray-600 mt-1">
+                  <p className="text-xs text-gray-200 mt-1">
                     Awaiting response
                   </p>
                 </CardContent>
@@ -233,7 +233,7 @@ export function AdminDashboard({ user }: AdminDashboardProps) {
                         }`} />
                         <div className="flex-1">
                           <p className="text-sm">{notification.message}</p>
-                          <p className="text-xs text-gray-500 mt-1">
+                          <p className="text-xs text-gray-300 mt-1">
                             {notification.timestamp}
                           </p>
                         </div>

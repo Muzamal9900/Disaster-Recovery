@@ -199,7 +199,7 @@ export default function RealCostInsuranceDelaysPage() {
                   <div className="text-sm text-gray-300">Catastrophes occur Oct-April (ICA)</div>
                 </div>
               </div>
-              <p className="text-xs text-gray-400 mt-4 text-center">
+              <p className="text-xs text-gray-200 mt-4 text-center">
                 Sources: <a href="https://insurancecouncil.com.au/wp-content/uploads/2024/08/21100_ICA_Catastrophe-Report_Print-2024_Final-single-pages.pdf" 
                   className="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">ICA Catastrophe Report 2024</a> | 
                 <a href="https://www.asic.gov.au/" className="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">ASIC Oct 2024</a>
@@ -231,7 +231,7 @@ export default function RealCostInsuranceDelaysPage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               The Broken System Timeline
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Here's what really happens when you call your insurance company - and why each delay costs you thousands
             </p>
           </div>
@@ -267,7 +267,7 @@ export default function RealCostInsuranceDelaysPage() {
                       </div>
                     </div>
                     
-                    <p className="text-gray-700 mb-4">{stage.description}</p>
+                    <p className="text-gray-200 mb-4">{stage.description}</p>
                     
                     <div className="grid lg:grid-cols-2 gap-6">
                       <div>
@@ -277,7 +277,7 @@ export default function RealCostInsuranceDelaysPage() {
                         </h4>
                         <ul className="space-y-2">
                           {stage.problems.map((problem, pIdx) => (
-                            <li key={pIdx} className="text-sm text-gray-600 flex items-start gap-2">
+                            <li key={pIdx} className="text-sm text-gray-200 flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></div>
                               {problem}
                             </li>
@@ -312,7 +312,7 @@ export default function RealCostInsuranceDelaysPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Real World Example: The $34,500 Difference
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-200">
               Same damage, two different approaches - the cost difference is shocking
             </p>
           </div>
@@ -341,7 +341,7 @@ export default function RealCostInsuranceDelaysPage() {
                 <h4 className="font-semibold text-gray-900">Cost Breakdown:</h4>
                 {realWorldExample.delayedResponse.breakdown.map((item, idx) => (
                   <div key={idx} className="flex justify-between text-sm">
-                    <span className="text-gray-700">{item.item}</span>
+                    <span className="text-gray-200">{item.item}</span>
                     <span className="font-semibold text-red-600">${item.cost.toLocaleString()}</span>
                   </div>
                 ))}
@@ -351,7 +351,7 @@ export default function RealCostInsuranceDelaysPage() {
                 <h4 className="font-semibold text-gray-900 mb-3">Additional Problems:</h4>
                 <ul className="space-y-2">
                   {realWorldExample.delayedResponse.problems.map((problem, idx) => (
-                    <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
+                    <li key={idx} className="text-sm text-gray-200 flex items-start gap-2">
                       <AlertTriangle className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
                       {problem}
                     </li>
@@ -383,7 +383,7 @@ export default function RealCostInsuranceDelaysPage() {
                 <h4 className="font-semibold text-gray-900">Cost Breakdown:</h4>
                 {realWorldExample.immediateResponse.breakdown.map((item, idx) => (
                   <div key={idx} className="flex justify-between text-sm">
-                    <span className="text-gray-700">{item.item}</span>
+                    <span className="text-gray-200">{item.item}</span>
                     <span className="font-semibold text-green-600">${item.cost.toLocaleString()}</span>
                   </div>
                 ))}
@@ -393,7 +393,7 @@ export default function RealCostInsuranceDelaysPage() {
                 <h4 className="font-semibold text-gray-900 mb-3">Additional Benefits:</h4>
                 <ul className="space-y-2">
                   {realWorldExample.immediateResponse.benefits.map((benefit, idx) => (
-                    <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
+                    <li key={idx} className="text-sm text-gray-200 flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                       {benefit}
                     </li>
@@ -426,7 +426,7 @@ export default function RealCostInsuranceDelaysPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Your Legal Rights Under Australian Law
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Section 54 of the Insurance Contracts Act 1984 protects your right to choose qualified contractors for emergency mitigation work
             </p>
           </div>
@@ -443,7 +443,7 @@ export default function RealCostInsuranceDelaysPage() {
                     <Badge className="mb-3 text-xs bg-blue-100 text-blue-800">
                       {right.law}
                     </Badge>
-                    <p className="text-gray-600 mb-4 text-sm">{right.description}</p>
+                    <p className="text-gray-200 mb-4 text-sm">{right.description}</p>
                     <div className="bg-green-50 border border-green-200 p-3 rounded-lg">
                       <h4 className="font-medium text-green-900 mb-1">Action You Can Take:</h4>
                       <p className="text-sm text-green-800">{right.action}</p>

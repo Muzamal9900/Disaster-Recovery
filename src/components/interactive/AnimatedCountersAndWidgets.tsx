@@ -129,7 +129,7 @@ function LiveAvailabilityWidget() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <Users className="h-5 w-5 text-green-600" />
-            <span className="font-semibold text-gray-700">Teams Available</span>
+            <span className="font-semibold text-gray-200">Teams Available</span>
           </div>
           <motion.span 
             className={`font-bold text-lg ${teamStatus.available ? 'text-green-600' : 'text-red-600'}`}
@@ -144,7 +144,7 @@ function LiveAvailabilityWidget() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <Clock className="h-5 w-5 text-blue-600" />
-            <span className="font-semibold text-gray-700">Response Time</span>
+            <span className="font-semibold text-gray-200">Response Time</span>
           </div>
           <motion.span 
             className="font-bold text-lg text-blue-600"
@@ -161,7 +161,7 @@ function LiveAvailabilityWidget() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <Zap className="h-5 w-5 text-yellow-600" />
-            <span className="font-semibold text-gray-700">Active Jobs</span>
+            <span className="font-semibold text-gray-200">Active Jobs</span>
           </div>
           <motion.span 
             className="font-bold text-lg text-yellow-600"
@@ -178,7 +178,7 @@ function LiveAvailabilityWidget() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <Shield className="h-5 w-5 text-purple-600" />
-            <span className="font-semibold text-gray-700">Teams Ready</span>
+            <span className="font-semibold text-gray-200">Teams Ready</span>
           </div>
           <motion.span 
             className="font-bold text-lg text-purple-600"
@@ -256,7 +256,7 @@ function StatCard({ icon: Icon, value, label, suffix = '', prefix = '', colour, 
       />
 
       <motion.p
-        className="text-lg font-bold text-gray-600 mt-4"
+        className="text-lg font-bold text-gray-200 mt-4"
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ delay: delay + 1 }}
@@ -319,7 +319,7 @@ function ResponseTimeMap() {
                   repeat: Infinity,
                   delay: index * 0.3 }}
               />
-              <span className="font-semibold text-gray-700">{location.city}</span>
+              <span className="font-semibold text-gray-200">{location.city}</span>
             </div>
             <div className="text-right">
               <motion.div 
@@ -331,7 +331,7 @@ function ResponseTimeMap() {
               >
                 {location.time}min
               </motion.div>
-              <div className="text-xs text-gray-500">Est. Response</div>
+              <div className="text-xs text-gray-300">Est. Response</div>
             </div>
           </motion.div>
         ))}
@@ -398,7 +398,7 @@ export default function AnimatedCountersAndWidgets() {
           Real-Time Emergency Response
         </h2>
 
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-200 max-w-3xl mx-auto">
           Track our live performance metrics and team availability nationwide
         </p>
       </motion.div>

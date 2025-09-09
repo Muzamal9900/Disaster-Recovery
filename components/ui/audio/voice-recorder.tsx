@@ -449,7 +449,7 @@ export const VoiceRecorder: React.FC<VoiceRecorderProps> = ({
 
       {/* Processing Indicator */}
       {isProcessing && (
-        <div className="flex items-center justify-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+        <div className="flex items-center justify-center gap-2 text-sm text-gray-200 dark:text-gray-200">
           <Loader2 className="w-4 h-4 animate-spin" />
           Processing audio...
         </div>

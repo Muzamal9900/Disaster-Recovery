@@ -153,7 +153,7 @@ export default function ThermalImagingPage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Thermal Imaging Applications
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Comprehensive damage detection across multiple scenarios
             </p>
           </div>
@@ -181,7 +181,7 @@ export default function ThermalImagingPage() {
                           </Badge>
                         )}
                       </div>
-                      <p className="text-gray-600 mb-3">{app.description}</p>
+                      <p className="text-gray-200 mb-3">{app.description}</p>
                       
                       {/* Certification Requirement */}
                       <div className={`p-3 rounded-md mb-4 ${
@@ -198,7 +198,7 @@ export default function ThermalImagingPage() {
 
                       <ul className="space-y-2">
                         {app.benefits.map((benefit, bIdx) => (
-                          <li key={bIdx} className="flex items-center gap-2 text-sm text-gray-600">
+                          <li key={bIdx} className="flex items-center gap-2 text-sm text-gray-200">
                             <CheckCircle className="h-4 w-4 text-green-500" />
                             {benefit}
                           </li>
@@ -220,7 +220,7 @@ export default function ThermalImagingPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Thermal Imaging Process
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-200">
               Professional thermal inspection in four steps
             </p>
           </div>
@@ -259,7 +259,7 @@ export default function ThermalImagingPage() {
                 <Card className="p-6 h-full">
                   <step.icon className="h-10 w-10 text-blue-600 mb-4 mx-auto" />
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
+                  <p className="text-gray-200">{step.description}</p>
                 </Card>
               </div>
             ))}
@@ -282,7 +282,7 @@ export default function ThermalImagingPage() {
                   <Gauge className="h-6 w-6 text-green-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Standard Moisture Detection</h3>
-                <p className="text-sm text-gray-600 mb-4">
+                <p className="text-sm text-gray-200 mb-4">
                   Basic thermal cameras used by 95% of restoration technicians for moisture identification and general inspection.
                 </p>
                 <ul className="space-y-2 text-sm">
@@ -308,7 +308,7 @@ export default function ThermalImagingPage() {
                   <Target className="h-6 w-6 text-purple-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Certified Thermal Analysis</h3>
-                <p className="text-sm text-gray-600 mb-4">
+                <p className="text-sm text-gray-200 mb-4">
                   Level 1/2 Thermography certification required for electrical analysis and quantitative building assessment.
                 </p>
                 <ul className="space-y-2 text-sm">
@@ -333,7 +333,7 @@ export default function ThermalImagingPage() {
                   <Shield className="h-6 w-6 text-red-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Licensed Applications</h3>
-                <p className="text-sm text-gray-600 mb-4">
+                <p className="text-sm text-gray-200 mb-4">
                   State licensing required for electrical system work and regulatory compliance applications.
                 </p>
                 <ul className="space-y-2 text-sm">
@@ -362,7 +362,7 @@ export default function ThermalImagingPage() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-medium text-gray-900 mb-2">For Electrical Analysis:</h4>
-                  <ul className="space-y-1 text-sm text-gray-700">
+                  <ul className="space-y-1 text-sm text-gray-200">
                     <li>"Do you hold Level 1 or 2 Thermography certification?"</li>
                     <li>"Can you provide quantitative temperature analysis?"</li>
                     <li>"Are you trained in electrical thermal patterns?"</li>
@@ -370,7 +370,7 @@ export default function ThermalImagingPage() {
                 </div>
                 <div>
                   <h4 className="font-medium text-gray-900 mb-2">For Building Assessment:</h4>
-                  <ul className="space-y-1 text-sm text-gray-700">
+                  <ul className="space-y-1 text-sm text-gray-200">
                     <li>"Do you provide building envelope thermal analysis?"</li>
                     <li>"Can you calculate thermal bridging coefficients?"</li>
                     <li>"Is your report suitable for energy audits?"</li>
@@ -393,7 +393,7 @@ export default function ThermalImagingPage() {
               <div className="grid md:grid-cols-2 gap-6">
                 {Object.entries(specifications).map(([key, value]) => (
                   <div key={key} className="flex justify-between py-3 border-b border-gray-200">
-                    <span className="font-medium text-gray-700">{key}</span>
+                    <span className="font-medium text-gray-200">{key}</span>
                     <span className="text-gray-900 font-semibold">{value}</span>
                   </div>
                 ))}

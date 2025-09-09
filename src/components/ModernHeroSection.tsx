@@ -299,7 +299,7 @@ const ModernHeroSection: React.FC = () => {
                       <Icon className="h-8 w-8 text-white" />
                     </motion.div>
                     
-                    <p className="text-xs text-gray-400 uppercase tracking-widest font-medium mb-1">
+                    <p className="text-xs text-gray-200 uppercase tracking-widest font-medium mb-1">
                       {item.label}
                     </p>
                     <p className="font-bold text-white text-sm">
@@ -320,7 +320,7 @@ const ModernHeroSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 1.8 }}
         >
           <motion.div className="flex flex-col items-center gap-2">
-            <span className="text-xs text-gray-400 uppercase tracking-widest">
+            <span className="text-xs text-gray-200 uppercase tracking-widest">
               Scroll to explore
             </span>
             <motion.div

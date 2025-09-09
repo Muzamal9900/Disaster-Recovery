@@ -105,7 +105,7 @@ export default function BiohazardCleaningPage() {
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Professional Biohazard & Crime Scene Cleaning in Brisbane
               </h1>
-              <p className="text-xl text-gray-700 mb-8">
+              <p className="text-xl text-gray-200 mb-8">
                 Certified biohazard remediation specialists providing discrete, compassionate 
                 cleaning for trauma scenes, crime scenes, and hazardous situations. Available 
                 24/7 with unmarked vehicles and respectful, professional service.
@@ -138,14 +138,14 @@ export default function BiohazardCleaningPage() {
                       </a>
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div className="text-center">
-                          <Heart className="h-8 w-8 mx-auto mb-1 text-gray-600" />
+                          <Heart className="h-8 w-8 mx-auto mb-1 text-gray-200" />
                           <p className="font-medium">Compassionate</p>
-                          <p className="text-gray-600">Understanding service</p>
+                          <p className="text-gray-200">Understanding service</p>
                         </div>
                         <div className="text-center">
-                          <Lock className="h-8 w-8 mx-auto mb-1 text-gray-600" />
+                          <Lock className="h-8 w-8 mx-auto mb-1 text-gray-200" />
                           <p className="font-medium">Confidential</p>
-                          <p className="text-gray-600">Complete privacy</p>
+                          <p className="text-gray-200">Complete privacy</p>
                         </div>
                       </div>
                     </div>
@@ -159,15 +159,15 @@ export default function BiohazardCleaningPage() {
 
               <div className="grid grid-cols-3 gap-4">
                 <div className="flex items-center gap-2">
-                  <Shield className="h-5 w-5 text-gray-600" />
+                  <Shield className="h-5 w-5 text-gray-200" />
                   <span className="text-sm font-medium">Police Approved</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Heart className="h-5 w-5 text-gray-600" />
+                  <Heart className="h-5 w-5 text-gray-200" />
                   <span className="text-sm font-medium">Compassionate</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Lock className="h-5 w-5 text-gray-600" />
+                  <Lock className="h-5 w-5 text-gray-200" />
                   <span className="text-sm font-medium">100% Discrete</span>
                 </div>
               </div>
@@ -202,7 +202,7 @@ export default function BiohazardCleaningPage() {
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <Card>
               <CardHeader>
-                <UserX className="h-10 w-10 text-gray-600 mb-4" />
+                <UserX className="h-10 w-10 text-gray-200 mb-4" />
                 <CardTitle>Trauma & Crime Scene</CardTitle>
                 <CardDescription>
                   Professional cleanup after traumatic incidents
@@ -232,7 +232,7 @@ export default function BiohazardCleaningPage() {
 
             <Card>
               <CardHeader>
-                <Heart className="h-10 w-10 text-gray-600 mb-4" />
+                <Heart className="h-10 w-10 text-gray-200 mb-4" />
                 <CardTitle>Unattended Death</CardTitle>
                 <CardDescription>
                   Respectful remediation after undiscovered death
@@ -262,7 +262,7 @@ export default function BiohazardCleaningPage() {
 
             <Card>
               <CardHeader>
-                <ShieldAlert className="h-10 w-10 text-gray-600 mb-4" />
+                <ShieldAlert className="h-10 w-10 text-gray-200 mb-4" />
                 <CardTitle>Hazardous Situations</CardTitle>
                 <CardDescription>
                   Specialised cleaning for dangerous materials
@@ -298,24 +298,24 @@ export default function BiohazardCleaningPage() {
                 <CardTitle>Blood & Bodily Fluid Cleanup</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600 mb-4">
+                <p className="text-sm text-gray-200 mb-4">
                   Safe removal and decontamination of biological materials
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <ArrowRight className="h-4 w-4 text-gray-600 mt-0.5" />
+                    <ArrowRight className="h-4 w-4 text-gray-200 mt-0.5" />
                     <span className="text-sm">Blood spill remediation</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <ArrowRight className="h-4 w-4 text-gray-600 mt-0.5" />
+                    <ArrowRight className="h-4 w-4 text-gray-200 mt-0.5" />
                     <span className="text-sm">Vehicle accident cleanup</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <ArrowRight className="h-4 w-4 text-gray-600 mt-0.5" />
+                    <ArrowRight className="h-4 w-4 text-gray-200 mt-0.5" />
                     <span className="text-sm">Medical waste disposal</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <ArrowRight className="h-4 w-4 text-gray-600 mt-0.5" />
+                    <ArrowRight className="h-4 w-4 text-gray-200 mt-0.5" />
                     <span className="text-sm">Workplace injury cleanup</span>
                   </li>
                 </ul>
@@ -327,24 +327,24 @@ export default function BiohazardCleaningPage() {
                 <CardTitle>Deceased Estate Cleaning</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600 mb-4">
+                <p className="text-sm text-gray-200 mb-4">
                   Compassionate cleaning and restoration services
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <ArrowRight className="h-4 w-4 text-gray-600 mt-0.5" />
+                    <ArrowRight className="h-4 w-4 text-gray-200 mt-0.5" />
                     <span className="text-sm">Property decontamination</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <ArrowRight className="h-4 w-4 text-gray-600 mt-0.5" />
+                    <ArrowRight className="h-4 w-4 text-gray-200 mt-0.5" />
                     <span className="text-sm">Odour elimination</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <ArrowRight className="h-4 w-4 text-gray-600 mt-0.5" />
+                    <ArrowRight className="h-4 w-4 text-gray-200 mt-0.5" />
                     <span className="text-sm">Deep cleaning services</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <ArrowRight className="h-4 w-4 text-gray-600 mt-0.5" />
+                    <ArrowRight className="h-4 w-4 text-gray-200 mt-0.5" />
                     <span className="text-sm">Property preparation for sale</span>
                   </li>
                 </ul>
@@ -367,7 +367,7 @@ export default function BiohazardCleaningPage() {
                 <Heart className="h-10 w-10 text-red-500" />
               </div>
               <h3 className="font-bold mb-2">Compassion First</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 Understanding and respectful service during difficult times
               </p>
             </div>
@@ -376,7 +376,7 @@ export default function BiohazardCleaningPage() {
                 <Lock className="h-10 w-10 text-blue-600" />
               </div>
               <h3 className="font-bold mb-2">Complete Privacy</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 Unmarked vehicles and discrete, professional service
               </p>
             </div>
@@ -385,7 +385,7 @@ export default function BiohazardCleaningPage() {
                 <Shield className="h-10 w-10 text-green-600" />
               </div>
               <h3 className="font-bold mb-2">Certified Safe</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 Following all health and safety regulations
               </p>
             </div>
@@ -394,7 +394,7 @@ export default function BiohazardCleaningPage() {
                 <FileText className="h-10 w-10 text-purple-600" />
               </div>
               <h3 className="font-bold mb-2">Full Documentation</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 Complete reports for insurance and legal purposes
               </p>
             </div>
@@ -463,8 +463,8 @@ export default function BiohazardCleaningPage() {
                   </div>
                   <div className="flex-grow">
                     <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                    <p className="text-gray-700 mb-2">{item.description}</p>
-                    <span className="text-sm text-gray-600 font-medium">{item.time}</span>
+                    <p className="text-gray-200 mb-2">{item.description}</p>
+                    <span className="text-sm text-gray-200 font-medium">{item.time}</span>
                   </div>
                 </div>
               ))}
@@ -487,7 +487,7 @@ export default function BiohazardCleaningPage() {
                   <CardTitle className="text-lg">{faq.question}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-700">{faq.answer}</p>
+                  <p className="text-gray-200">{faq.answer}</p>
                 </CardContent>
               </Card>
             ))}
@@ -502,28 +502,28 @@ export default function BiohazardCleaningPage() {
             Support Resources
           </h2>
           <div className="max-w-3xl mx-auto">
-            <p className="text-center text-gray-700 mb-6">
+            <p className="text-center text-gray-200 mb-6">
               If you or someone you know needs support, these services are available:
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="bg-white p-4 rounded-lg">
                 <h4 className="font-bold mb-2">Lifeline Australia</h4>
-                <p className="text-sm text-gray-600">Crisis support and suicide prevention</p>
+                <p className="text-sm text-gray-200">Crisis support and suicide prevention</p>
                 <p className="font-bold text-blue-600">13 11 14</p>
               </div>
               <div className="bg-white p-4 rounded-lg">
                 <h4 className="font-bold mb-2">Beyond Blue</h4>
-                <p className="text-sm text-gray-600">Mental health support</p>
+                <p className="text-sm text-gray-200">Mental health support</p>
                 <p className="font-bold text-blue-600">online support22 4636</p>
               </div>
               <div className="bg-white p-4 rounded-lg">
                 <h4 className="font-bold mb-2">Victim Assist Queensland</h4>
-                <p className="text-sm text-gray-600">Support for victims of crime</p>
+                <p className="text-sm text-gray-200">Support for victims of crime</p>
                 <p className="font-bold text-blue-600">online support</p>
               </div>
               <div className="bg-white p-4 rounded-lg">
                 <h4 className="font-bold mb-2">Griefline</h4>
-                <p className="text-sm text-gray-600">Grief counselling and support</p>
+                <p className="text-sm text-gray-200">Grief counselling and support</p>
                 <p className="font-bold text-blue-600">online support</p>
               </div>
             </div>

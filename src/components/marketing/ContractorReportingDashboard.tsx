@@ -204,7 +204,7 @@ const ContractorReportingDashboard: React.FC<ContractorReportingDashboardProps> 
       case 'high': return 'text-green-600 bg-green-50';
       case 'medium': return 'text-yellow-600 bg-yellow-50';
       case 'low': return 'text-red-600 bg-red-50';
-      default: return 'text-gray-600 bg-gray-50';
+      default: return 'text-gray-200 bg-gray-50';
     }
   };
 
@@ -213,7 +213,7 @@ const ContractorReportingDashboard: React.FC<ContractorReportingDashboardProps> 
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-600">Total Leads Generated</p>
+            <p className="text-sm text-gray-200">Total Leads Generated</p>
             <p className="text-3xl font-bold text-gray-900">{reportingData?.summary.totalLeads}</p>
             <p className="text-sm text-green-600 mt-2">
               <TrendingUp className="w-4 h-4 inline mr-1" />
@@ -229,7 +229,7 @@ const ContractorReportingDashboard: React.FC<ContractorReportingDashboardProps> 
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-600">Total Revenue</p>
+            <p className="text-sm text-gray-200">Total Revenue</p>
             <p className="text-3xl font-bold text-gray-900">
               {formatCurrency(reportingData?.summary.totalRevenue || 0)}
             </p>
@@ -247,7 +247,7 @@ const ContractorReportingDashboard: React.FC<ContractorReportingDashboardProps> 
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-600">Marketing ROI</p>
+            <p className="text-sm text-gray-200">Marketing ROI</p>
             <p className="text-3xl font-bold text-gray-900">
               {formatPercentage(reportingData?.summary.roi || 0)}
             </p>
@@ -265,7 +265,7 @@ const ContractorReportingDashboard: React.FC<ContractorReportingDashboardProps> 
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-600">Territory Rank</p>
+            <p className="text-sm text-gray-200">Territory Rank</p>
             <p className="text-3xl font-bold text-gray-900">#{reportingData?.summary.territoryRank}</p>
             <p className="text-sm text-green-600 mt-2">
               <Star className="w-4 h-4 inline mr-1" />
@@ -305,11 +305,11 @@ const ContractorReportingDashboard: React.FC<ContractorReportingDashboardProps> 
         <table className="w-full">
           <thead>
             <tr className="border-b border-gray-200">
-              <th className="text-left py-3 px-4 font-medium text-gray-700">Source</th>
-              <th className="text-right py-3 px-4 font-medium text-gray-700">Leads</th>
-              <th className="text-right py-3 px-4 font-medium text-gray-700">Cost</th>
-              <th className="text-right py-3 px-4 font-medium text-gray-700">Revenue</th>
-              <th className="text-right py-3 px-4 font-medium text-gray-700">ROI</th>
+              <th className="text-left py-3 px-4 font-medium text-gray-200">Source</th>
+              <th className="text-right py-3 px-4 font-medium text-gray-200">Leads</th>
+              <th className="text-right py-3 px-4 font-medium text-gray-200">Cost</th>
+              <th className="text-right py-3 px-4 font-medium text-gray-200">Revenue</th>
+              <th className="text-right py-3 px-4 font-medium text-gray-200">ROI</th>
             </tr>
           </thead>
           <tbody>
@@ -354,23 +354,23 @@ const ContractorReportingDashboard: React.FC<ContractorReportingDashboardProps> 
             
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
-                <span className="text-gray-600">Your Contribution:</span>
+                <span className="text-gray-200">Your Contribution:</span>
                 <span className="font-medium">{formatCurrency(campaign.yourContribution)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Your Share:</span>
+                <span className="text-gray-200">Your Share:</span>
                 <span className="font-medium">{formatPercentage(campaign.yourShare)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Leads Generated:</span>
+                <span className="text-gray-200">Leads Generated:</span>
                 <span className="font-medium">{campaign.leadsGenerated}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Revenue:</span>
+                <span className="text-gray-200">Revenue:</span>
                 <span className="font-medium">{formatCurrency(campaign.revenue)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">ROI:</span>
+                <span className="text-gray-200">ROI:</span>
                 <span className="font-medium text-green-600">{formatPercentage(campaign.roi)}</span>
               </div>
             </div>
@@ -392,7 +392,7 @@ const ContractorReportingDashboard: React.FC<ContractorReportingDashboardProps> 
               <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div className="flex items-center space-x-3">
                   <span className="font-medium text-gray-900">#{index + 1}</span>
-                  <span className={competitor.contractor === 'Your Company' ? 'font-semibold text-blue-600' : 'text-gray-700'}>
+                  <span className={competitor.contractor === 'Your Company' ? 'font-semibold text-blue-600' : 'text-gray-200'}>
                     {competitor.contractor}
                   </span>
                 </div>
@@ -409,15 +409,15 @@ const ContractorReportingDashboard: React.FC<ContractorReportingDashboardProps> 
           <h4 className="font-medium text-gray-900 mb-4">Territory Summary</h4>
           <div className="space-y-4">
             <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
-              <span className="text-gray-700">Your Territory:</span>
+              <span className="text-gray-200">Your Territory:</span>
               <span className="font-medium text-gray-900">{reportingData?.territoryInsights.yourTerritory}</span>
             </div>
             <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-              <span className="text-gray-700">Current Rank:</span>
+              <span className="text-gray-200">Current Rank:</span>
               <span className="font-medium text-gray-900">#{reportingData?.territoryInsights.rank} of {reportingData?.territoryInsights.totalContractors}</span>
             </div>
             <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
-              <span className="text-gray-700">Market Share:</span>
+              <span className="text-gray-200">Market Share:</span>
               <span className="font-medium text-gray-900">{formatPercentage(reportingData?.territoryInsights.marketShare || 0)}</span>
             </div>
           </div>
@@ -446,7 +446,7 @@ const ContractorReportingDashboard: React.FC<ContractorReportingDashboardProps> 
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">{opportunity.title}</h4>
-                  <p className="text-sm text-gray-600 mt-1">{opportunity.description}</p>
+                  <p className="text-sm text-gray-200 mt-1">{opportunity.description}</p>
                 </div>
               </div>
               <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium ${getConfidenceColor(opportunity.confidence)}`}>
@@ -456,15 +456,15 @@ const ContractorReportingDashboard: React.FC<ContractorReportingDashboardProps> 
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
               <div className="text-center p-3 bg-gray-50 rounded-lg">
-                <p className="text-sm text-gray-600">Estimated Cost</p>
+                <p className="text-sm text-gray-200">Estimated Cost</p>
                 <p className="text-lg font-semibold text-gray-900">{formatCurrency(opportunity.estimatedCost)}</p>
               </div>
               <div className="text-center p-3 bg-green-50 rounded-lg">
-                <p className="text-sm text-gray-600">Potential Revenue</p>
+                <p className="text-sm text-gray-200">Potential Revenue</p>
                 <p className="text-lg font-semibold text-green-600">{formatCurrency(opportunity.potentialRevenue)}</p>
               </div>
               <div className="text-center p-3 bg-purple-50 rounded-lg">
-                <p className="text-sm text-gray-600">Estimated ROI</p>
+                <p className="text-sm text-gray-200">Estimated ROI</p>
                 <p className="text-lg font-semibold text-purple-600">{formatPercentage(opportunity.estimatedROI)}</p>
               </div>
             </div>
@@ -473,7 +473,7 @@ const ContractorReportingDashboard: React.FC<ContractorReportingDashboardProps> 
               <h5 className="font-medium text-gray-900 mb-2">Benefits:</h5>
               <ul className="space-y-1">
                 {opportunity.benefits.map((benefit, index) => (
-                  <li key={index} className="text-sm text-gray-600 flex items-center">
+                  <li key={index} className="text-sm text-gray-200 flex items-center">
                     <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></div>
                     {benefit}
                   </li>
@@ -482,7 +482,7 @@ const ContractorReportingDashboard: React.FC<ContractorReportingDashboardProps> 
             </div>
 
             <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4 text-sm text-gray-600">
+              <div className="flex items-center space-x-4 text-sm text-gray-200">
                 <div className="flex items-center">
                   <Clock className="w-4 h-4 mr-1" />
                   Deadline: {new Date(opportunity.deadline).toLocaleDateString()}
@@ -524,7 +524,7 @@ const ContractorReportingDashboard: React.FC<ContractorReportingDashboardProps> 
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Marketing Performance Dashboard</h1>
-          <p className="text-gray-600 mt-1">Track your leads, campaigns, and growth opportunities</p>
+          <p className="text-gray-200 mt-1">Track your leads, campaigns, and growth opportunities</p>
         </div>
         <div className="flex space-x-2">
           <button className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50">

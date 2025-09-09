@@ -316,7 +316,7 @@ export default function WhyMouldReturnsPage() {
               Victorian Building Authority research shows one in three Australian homes affected by mould. 
               ABCB estimates 33% of new homes have condensation management problems. Here's why remediation fails.
             </p>
-            <p className="text-sm text-gray-400 mb-4">
+            <p className="text-sm text-gray-200 mb-4">
               Sources: <a href="https://www.vba.vic.gov.au/about/research/examining-indoor-mould-and-moisture-damage-in-victorian-residential-buildings" 
                 className="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">VBA Research 2024</a> | 
               <a href="https://www.abcb.gov.au/resources/videos/abcb-roadshow-2024-improving-waterproofing-and-water-shedding-provisions" 
@@ -366,7 +366,7 @@ export default function WhyMouldReturnsPage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               The 7 Reasons Mould Removal Fails
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Based on analysis of 500+ failed mould removal cases nationwide
             </p>
           </div>
@@ -390,7 +390,7 @@ export default function WhyMouldReturnsPage() {
                       </Badge>
                     </div>
                     
-                    <p className="text-gray-700 mb-4">{failure.description}</p>
+                    <p className="text-gray-200 mb-4">{failure.description}</p>
                     
                     <div className="grid lg:grid-cols-3 gap-6">
                       <div>
@@ -420,7 +420,7 @@ export default function WhyMouldReturnsPage() {
                         </h4>
                         <ul className="space-y-2">
                           {failure.redFlags.map((flag, fIdx) => (
-                            <li key={fIdx} className="text-sm text-gray-600 flex items-start gap-2">
+                            <li key={fIdx} className="text-sm text-gray-200 flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></div>
                               {flag}
                             </li>
@@ -443,7 +443,7 @@ export default function WhyMouldReturnsPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Professional vs "Cowboy" Mould Removal
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-200">
               Same problem, completely different approaches - vastly different success rates
             </p>
           </div>
@@ -543,7 +543,7 @@ export default function WhyMouldReturnsPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Real Case Study: The $1,600 Difference
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-200">
               {realWorldCase.scenario} - Same problem, two different outcomes
             </p>
           </div>
@@ -567,7 +567,7 @@ export default function WhyMouldReturnsPage() {
                 <h4 className="font-semibold text-gray-900">Cost Breakdown:</h4>
                 {realWorldCase.cowboyJob.breakdown.map((item, idx) => (
                   <div key={idx} className="flex justify-between text-sm">
-                    <span className="text-gray-700">{item.split(':')[0]}</span>
+                    <span className="text-gray-200">{item.split(':')[0]}</span>
                     <span className="font-semibold text-red-600">{item.split(':')[1]}</span>
                   </div>
                 ))}
@@ -577,7 +577,7 @@ export default function WhyMouldReturnsPage() {
                 <h4 className="font-semibold text-gray-900 mb-3">Additional Problems:</h4>
                 <ul className="space-y-2">
                   {realWorldCase.cowboyJob.problems.map((problem, idx) => (
-                    <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
+                    <li key={idx} className="text-sm text-gray-200 flex items-start gap-2">
                       <AlertCircle className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
                       {problem}
                     </li>
@@ -604,7 +604,7 @@ export default function WhyMouldReturnsPage() {
                 <h4 className="font-semibold text-gray-900">Investment Breakdown:</h4>
                 {realWorldCase.professionalJob.breakdown.map((item, idx) => (
                   <div key={idx} className="flex justify-between text-sm">
-                    <span className="text-gray-700">{item.split(':')[0]}</span>
+                    <span className="text-gray-200">{item.split(':')[0]}</span>
                     <span className="font-semibold text-green-600">{item.split(':')[1]}</span>
                   </div>
                 ))}
@@ -614,7 +614,7 @@ export default function WhyMouldReturnsPage() {
                 <h4 className="font-semibold text-gray-900 mb-3">Results Achieved:</h4>
                 <ul className="space-y-2">
                   {realWorldCase.professionalJob.benefits.map((benefit, idx) => (
-                    <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
+                    <li key={idx} className="text-sm text-gray-200 flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                       {benefit}
                     </li>
@@ -647,7 +647,7 @@ export default function WhyMouldReturnsPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               How to Verify a Real Mould Professional
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-200">
               Use this checklist to avoid cowboy operators and ensure permanent mould removal
             </p>
           </div>
@@ -675,7 +675,7 @@ export default function WhyMouldReturnsPage() {
                           </Badge>
                         )}
                       </div>
-                      <p className="text-gray-700 mb-3">{item.description}</p>
+                      <p className="text-gray-200 mb-3">{item.description}</p>
                       <div className={`p-3 rounded-lg ${
                         item.critical ? 'bg-red-100' : 'bg-yellow-100'
                       }`}>

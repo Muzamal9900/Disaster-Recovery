@@ -343,7 +343,7 @@ export default function LeadAttributionSystem() {
             }`}
           >
             <p className="font-medium text-gray-900">{option.name}</p>
-            <p className="text-xs text-gray-500 mt-1">{option.desc}</p>
+            <p className="text-xs text-gray-300 mt-1">{option.desc}</p>
           </button>
         ))}
       </div>
@@ -355,7 +355,7 @@ export default function LeadAttributionSystem() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-600">Total Leads</p>
+            <p className="text-sm font-medium text-gray-200">Total Leads</p>
             <p className="text-3xl font-bold text-gray-900 mt-1">
               {formatNumber(mockAttributionData.totalLeads)}
             </p>
@@ -369,7 +369,7 @@ export default function LeadAttributionSystem() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-600">Total Revenue</p>
+            <p className="text-sm font-medium text-gray-200">Total Revenue</p>
             <p className="text-3xl font-bold text-gray-900 mt-1">
               {formatCurrency(mockAttributionData[selectedModel].totalValue)}
             </p>
@@ -383,7 +383,7 @@ export default function LeadAttributionSystem() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-600">Avg Cost per Lead</p>
+            <p className="text-sm font-medium text-gray-200">Avg Cost per Lead</p>
             <p className="text-3xl font-bold text-gray-900 mt-1">
               {formatCurrency(
                 mockAttributionData.sources.reduce((sum, s) => sum + s.cost, 0) / 
@@ -400,7 +400,7 @@ export default function LeadAttributionSystem() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-600">Conversion Rate</p>
+            <p className="text-sm font-medium text-gray-200">Conversion Rate</p>
             <p className="text-3xl font-bold text-gray-900 mt-1">
               {formatPercentage(
                 mockAttributionData.sources.reduce((sum, s) => sum + s.conversions, 0) / 
@@ -420,7 +420,7 @@ export default function LeadAttributionSystem() {
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
       <div className="flex justify-between items-center mb-6">
         <h3 className="text-lg font-semibold text-gray-900">Lead Source Attribution</h3>
-        <div className="text-sm text-gray-500">
+        <div className="text-sm text-gray-300">
           Using {selectedModel.replace('_', ' ')} model
         </div>
       </div>
@@ -429,13 +429,13 @@ export default function LeadAttributionSystem() {
         <table className="w-full">
           <thead>
             <tr className="border-b border-gray-200">
-              <th className="text-left py-3 text-sm font-medium text-gray-600">Source/Medium</th>
-              <th className="text-right py-3 text-sm font-medium text-gray-600">Leads</th>
-              <th className="text-right py-3 text-sm font-medium text-gray-600">Conversions</th>
-              <th className="text-right py-3 text-sm font-medium text-gray-600">Revenue</th>
-              <th className="text-right py-3 text-sm font-medium text-gray-600">Cost per Lead</th>
-              <th className="text-right py-3 text-sm font-medium text-gray-600">ROI</th>
-              <th className="text-right py-3 text-sm font-medium text-gray-600">Attribution</th>
+              <th className="text-left py-3 text-sm font-medium text-gray-200">Source/Medium</th>
+              <th className="text-right py-3 text-sm font-medium text-gray-200">Leads</th>
+              <th className="text-right py-3 text-sm font-medium text-gray-200">Conversions</th>
+              <th className="text-right py-3 text-sm font-medium text-gray-200">Revenue</th>
+              <th className="text-right py-3 text-sm font-medium text-gray-200">Cost per Lead</th>
+              <th className="text-right py-3 text-sm font-medium text-gray-200">ROI</th>
+              <th className="text-right py-3 text-sm font-medium text-gray-200">Attribution</th>
             </tr>
           </thead>
           <tbody>
@@ -446,9 +446,9 @@ export default function LeadAttributionSystem() {
                     <div className={`w-3 h-3 rounded-full ${sourceColors[index % sourceColors.length]}`} />
                     <div>
                       <p className="font-medium text-gray-900">{source.source}</p>
-                      <p className="text-sm text-gray-500">{source.medium}</p>
+                      <p className="text-sm text-gray-300">{source.medium}</p>
                       {source.campaign && (
-                        <p className="text-xs text-gray-400">{source.campaign}</p>
+                        <p className="text-xs text-gray-200">{source.campaign}</p>
                       )}
                     </div>
                   </div>
@@ -500,31 +500,31 @@ export default function LeadAttributionSystem() {
               <div className="flex items-center space-x-2">
                 {path.path.map((step, stepIndex) => (
                   <React.Fragment key={stepIndex}>
-                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
+                    <span className="px-2 py-1 bg-gray-100 text-gray-200 text-xs rounded-full">
                       {step}
                     </span>
                     {stepIndex < path.path.length - 1 && (
-                      <ArrowRight className="w-4 h-4 text-gray-400" />
+                      <ArrowRight className="w-4 h-4 text-gray-200" />
                     )}
                   </React.Fragment>
                 ))}
               </div>
-              <div className="text-sm text-gray-500">
+              <div className="text-sm text-gray-300">
                 {path.frequency} occurrences
               </div>
             </div>
             
             <div className="grid grid-cols-3 gap-4 text-sm">
               <div>
-                <p className="text-gray-600">Conversions</p>
+                <p className="text-gray-200">Conversions</p>
                 <p className="font-medium text-gray-900">{formatNumber(path.conversions)}</p>
               </div>
               <div>
-                <p className="text-gray-600">Revenue</p>
+                <p className="text-gray-200">Revenue</p>
                 <p className="font-medium text-gray-900">{formatCurrency(path.revenue)}</p>
               </div>
               <div>
-                <p className="text-gray-600">Avg Time to Convert</p>
+                <p className="text-gray-200">Avg Time to Convert</p>
                 <p className="font-medium text-gray-900">{path.averageTimeToConversion.toFixed(1)} days</p>
               </div>
             </div>
@@ -546,24 +546,24 @@ export default function LeadAttributionSystem() {
                 <p className="font-medium text-gray-900">
                   {touchpoint.source}/{touchpoint.medium}
                 </p>
-                <p className="text-sm text-gray-500">{touchpoint.page}</p>
+                <p className="text-sm text-gray-300">{touchpoint.page}</p>
               </div>
             </div>
             <div className="flex space-x-6 text-sm">
               <div className="text-center">
-                <p className="text-gray-600">Visits</p>
+                <p className="text-gray-200">Visits</p>
                 <p className="font-medium">{formatNumber(touchpoint.visits)}</p>
               </div>
               <div className="text-center">
-                <p className="text-gray-600">Interactions</p>
+                <p className="text-gray-200">Interactions</p>
                 <p className="font-medium">{formatNumber(touchpoint.interactions)}</p>
               </div>
               <div className="text-center">
-                <p className="text-gray-600">Conversions</p>
+                <p className="text-gray-200">Conversions</p>
                 <p className="font-medium">{formatNumber(touchpoint.conversions)}</p>
               </div>
               <div className="text-center">
-                <p className="text-gray-600">Bounce Rate</p>
+                <p className="text-gray-200">Bounce Rate</p>
                 <p className="font-medium">{formatPercentage(touchpoint.bounceRate)}</p>
               </div>
             </div>
@@ -585,7 +585,7 @@ export default function LeadAttributionSystem() {
             <div key={territory} className="p-4 border border-gray-200 rounded-lg">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4 text-gray-500" />
+                  <MapPin className="w-4 h-4 text-gray-300" />
                   <h4 className="font-medium text-gray-900">{territory}</h4>
                 </div>
                 <div className={`w-3 h-3 rounded-full ${
@@ -596,15 +596,15 @@ export default function LeadAttributionSystem() {
               </div>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Leads Assigned:</span>
+                  <span className="text-gray-200">Leads Assigned:</span>
                   <span className="font-medium">{formatNumber(territoryLeads)}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Conversion Rate:</span>
+                  <span className="text-gray-200">Conversion Rate:</span>
                   <span className="font-medium">{formatPercentage(conversionRate)}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Contractors:</span>
+                  <span className="text-gray-200">Contractors:</span>
                   <span className="font-medium">{Math.floor(Math.random() * 5) + 2}</span>
                 </div>
               </div>
@@ -620,7 +620,7 @@ export default function LeadAttributionSystem() {
       <div className="flex justify-between items-center mb-8">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Lead Attribution System</h1>
-          <p className="text-gray-600 mt-2">
+          <p className="text-gray-200 mt-2">
             Track lead sources and attribute conversions across multiple touchpoints
           </p>
         </div>
@@ -635,7 +635,7 @@ export default function LeadAttributionSystem() {
             <option value="90d">Last 90 Days</option>
             <option value="1y">Last Year</option>
           </select>
-          <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colours">
+          <button className="px-4 py-2 bg-gray-100 text-gray-200 rounded-lg hover:bg-gray-200 transition-colours">
             <RefreshCw className="w-4 h-4 mr-2 inline" />
             Refresh
           </button>

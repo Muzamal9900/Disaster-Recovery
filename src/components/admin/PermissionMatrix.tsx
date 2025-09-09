@@ -114,7 +114,7 @@ export function PermissionMatrix() {
             <Shield className="h-6 w-6" />
             Permission Matrix
           </h2>
-          <p className="text-gray-600 mt-1">
+          <p className="text-gray-200 mt-1">
             Complete overview of role-based access control and permissions
           </p>
         </div>
@@ -143,7 +143,7 @@ export function PermissionMatrix() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-xs text-gray-600 mb-3">{definition.description}</p>
+              <p className="text-xs text-gray-200 mb-3">{definition.description}</p>
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium">
                   {definition.permissions.length} permissions
@@ -191,7 +191,7 @@ export function PermissionMatrix() {
                   {Object.entries(ROLE_DEFINITIONS).map(([role, definition]) => (
                     <th key={role} className="text-center p-4 font-medium text-sm min-w-[120px]">
                       <div className="flex flex-col items-center">
-                        <span className="text-xs text-gray-500">Level {definition.hierarchy}</span>
+                        <span className="text-xs text-gray-300">Level {definition.hierarchy}</span>
                         <span>{definition.name.split(' ')[0]}</span>
                       </div>
                     </th>
@@ -324,7 +324,7 @@ export function PermissionMatrix() {
                   <div key={resource} className="border rounded-lg p-4">
                     <div className="mb-3">
                       <p className="font-medium">{resource}</p>
-                      <p className="text-sm text-gray-600">{description}</p>
+                      <p className="text-sm text-gray-200">{description}</p>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                       {Object.entries(ROLE_DEFINITIONS).map(([role, definition]) => {
@@ -338,7 +338,7 @@ export function PermissionMatrix() {
                           accessLevel === 'Full Access' ? 'text-green-600' :
                           accessLevel === 'Company Only' ? 'text-blue-600' :
                           accessLevel === 'Read Only' ? 'text-yellow-600' :
-                          'text-gray-600';
+                          'text-gray-200';
                         
                         return (
                           <div key={role} className="text-sm">
@@ -379,8 +379,8 @@ export function PermissionMatrix() {
                             {role}
                           </Badge>
                         </div>
-                        <p className="text-sm text-gray-600 mt-1">{definition.description}</p>
-                        <div className="flex items-center gap-4 mt-2 text-xs text-gray-500">
+                        <p className="text-sm text-gray-200 mt-1">{definition.description}</p>
+                        <div className="flex items-center gap-4 mt-2 text-xs text-gray-300">
                           <span>{definition.permissions.length} direct permissions</span>
                           {index < Object.entries(ROLE_DEFINITIONS).length - 1 && (
                             <span>Can manage lower roles</span>
@@ -388,7 +388,7 @@ export function PermissionMatrix() {
                         </div>
                       </div>
                       {index < Object.entries(ROLE_DEFINITIONS).length - 1 && (
-                        <div className="text-gray-400">
+                        <div className="text-gray-200">
                           <ChevronDown className="h-5 w-5" />
                         </div>
                       )}

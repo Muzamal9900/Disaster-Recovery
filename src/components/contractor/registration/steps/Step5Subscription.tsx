@@ -272,15 +272,15 @@ export function Step5Subscription({ data, updateData, errors }: Step5Subscriptio
                   <div className="flex-1">
                     <h4 className="font-semibold text-lg">{tier.name}</h4>
                     <p className="text-2xl font-bold text-blue-600 mt-1">
-                      ${tier.price}<span className="text-sm font-normal text-gray-500">/month</span>
+                      ${tier.price}<span className="text-sm font-normal text-gray-300">/month</span>
                     </p>
-                    <p className="text-sm text-gray-600 mt-2">{tier.description}</p>
+                    <p className="text-sm text-gray-200 mt-2">{tier.description}</p>
                     
                     <ul className="mt-3 space-y-1">
                       {tier.features.map((feature, index) => (
                         <li key={index} className="text-sm flex items-start gap-2">
                           <CheckCircle className="h-3 w-3 text-green-500 mt-0.5" />
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-gray-200">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -294,7 +294,7 @@ export function Step5Subscription({ data, updateData, errors }: Step5Subscriptio
           {selectedTier === 'TIER_100KM' && (
             <div className="p-4 bg-gray-50 rounded-lg">
               <Label className="font-medium">Rural Extension Coverage</Label>
-              <p className="text-sm text-gray-600 mt-1 mb-3">
+              <p className="text-sm text-gray-200 mt-1 mb-3">
                 Add additional coverage beyond 100km at $35/month per 25km radius
               </p>
               <div className="flex items-center gap-4">
@@ -309,7 +309,7 @@ export function Step5Subscription({ data, updateData, errors }: Step5Subscriptio
                 </Button>
                 <div className="text-center">
                   <p className="font-semibold">{100 + ruralExtension}km</p>
-                  <p className="text-xs text-gray-500">Total radius</p>
+                  <p className="text-xs text-gray-300">Total radius</p>
                 </div>
                 <Button
                   type="button"
@@ -322,7 +322,7 @@ export function Step5Subscription({ data, updateData, errors }: Step5Subscriptio
                 {ruralExtension > 0 && (
                   <div className="ml-auto text-right">
                     <p className="font-semibold text-green-600">+${ruralExtension * 35 / 25}/mo</p>
-                    <p className="text-xs text-gray-500">Extension cost</p>
+                    <p className="text-xs text-gray-300">Extension cost</p>
                   </div>
                 )}
               </div>
@@ -435,7 +435,7 @@ export function Step5Subscription({ data, updateData, errors }: Step5Subscriptio
                   <RadioGroupItem value="DIRECT_DEBIT" id="direct-debit" />
                   <Label htmlFor="direct-debit" className="cursor-pointer flex-1">
                     <div className="font-medium">Direct Debit</div>
-                    <div className="text-xs text-gray-500">Bank account</div>
+                    <div className="text-xs text-gray-300">Bank account</div>
                   </Label>
                 </div>
                 
@@ -443,7 +443,7 @@ export function Step5Subscription({ data, updateData, errors }: Step5Subscriptio
                   <RadioGroupItem value="CREDIT_CARD" id="credit-card" />
                   <Label htmlFor="credit-card" className="cursor-pointer flex-1">
                     <div className="font-medium">Credit Card</div>
-                    <div className="text-xs text-gray-500">Visa/Mastercard</div>
+                    <div className="text-xs text-gray-300">Visa/Mastercard</div>
                   </Label>
                 </div>
                 
@@ -451,7 +451,7 @@ export function Step5Subscription({ data, updateData, errors }: Step5Subscriptio
                   <RadioGroupItem value="BANK_TRANSFER" id="bank-transfer" />
                   <Label htmlFor="bank-transfer" className="cursor-pointer flex-1">
                     <div className="font-medium">Bank Transfer</div>
-                    <div className="text-xs text-gray-500">Manual payment</div>
+                    <div className="text-xs text-gray-300">Manual payment</div>
                   </Label>
                 </div>
               </div>
@@ -574,13 +574,13 @@ export function Step5Subscription({ data, updateData, errors }: Step5Subscriptio
             <div className="flex justify-between items-center mb-4">
               <div>
                 <h4 className="font-semibold">Professional Background Screening</h4>
-                <p className="text-sm text-gray-600 mt-1">
+                <p className="text-sm text-gray-200 mt-1">
                   Comprehensive checks by accredited third-party provider (TBD)
                 </p>
               </div>
               <div className="text-right">
-                <p className="text-lg font-bold text-gray-500">$2,500 - $5,000</p>
-                <p className="text-xs text-gray-500">Estimated one-time fee</p>
+                <p className="text-lg font-bold text-gray-300">$2,500 - $5,000</p>
+                <p className="text-xs text-gray-300">Estimated one-time fee</p>
               </div>
             </div>
 
@@ -629,7 +629,7 @@ export function Step5Subscription({ data, updateData, errors }: Step5Subscriptio
                 <Label htmlFor="background-check-acknowledge" className="font-normal cursor-pointer">
                   I understand and accept the estimated background check fee
                 </Label>
-                <p className="text-xs text-gray-600">
+                <p className="text-xs text-gray-200">
                   I acknowledge that a background check fee of approximately $2,500-$5,000 will be 
                   required before final approval. The exact amount will be confirmed.
                 </p>
@@ -672,7 +672,7 @@ export function Step5Subscription({ data, updateData, errors }: Step5Subscriptio
                 <Label htmlFor="performance-bond" className="font-normal cursor-pointer">
                   I agree to the Performance Bond terms <span className="text-red-500">*</span>
                 </Label>
-                <p className="text-xs text-gray-600">
+                <p className="text-xs text-gray-200">
                   I consent to withholding ${calculateBondAmount().toFixed(2)} as a performance bond, 
                   refundable after 12 months subject to terms and conditions.
                 </p>
@@ -689,7 +689,7 @@ export function Step5Subscription({ data, updateData, errors }: Step5Subscriptio
                 <Label htmlFor="payment-terms" className="font-normal cursor-pointer">
                   I accept the payment terms and conditions <span className="text-red-500">*</span>
                 </Label>
-                <p className="text-xs text-gray-600">
+                <p className="text-xs text-gray-200">
                   Including automatic monthly billing, lead fees, and cancellation policy.
                 </p>
               </div>
@@ -710,7 +710,7 @@ export function Step5Subscription({ data, updateData, errors }: Step5Subscriptio
           <CardContent>
             <div className="space-y-3">
               <div className="flex justify-between">
-                <span className="text-gray-600">Base Subscription</span>
+                <span className="text-gray-200">Base Subscription</span>
                 <span className="font-semibold">
                   ${SUBSCRIPTION_TIERS.find(t => t.id === selectedTier)?.price.toFixed(2)}/mo
                 </span>
@@ -718,7 +718,7 @@ export function Step5Subscription({ data, updateData, errors }: Step5Subscriptio
               
               {ruralExtension > 0 && (
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Rural Extension ({ruralExtension}km)</span>
+                  <span className="text-gray-200">Rural Extension ({ruralExtension}km)</span>
                   <span className="font-semibold">
                     +${(ruralExtension * 35 / 25).toFixed(2)}/mo
                   </span>
@@ -731,13 +731,13 @@ export function Step5Subscription({ data, updateData, errors }: Step5Subscriptio
               </div>
               
               <div className="flex justify-between text-sm">
-                <span className="text-gray-600">Performance Bond (one-time)</span>
+                <span className="text-gray-200">Performance Bond (one-time)</span>
                 <span>${calculateBondAmount().toFixed(2)}</span>
               </div>
               
               <div className="flex justify-between text-sm">
-                <span className="text-gray-600">Background Check (one-time)</span>
-                <span className="text-gray-500">$2,500-$5,000 (TBD)</span>
+                <span className="text-gray-200">Background Check (one-time)</span>
+                <span className="text-gray-300">$2,500-$5,000 (TBD)</span>
               </div>
 
               <Alert className="bg-blue-50 border-blue-200 mt-4">

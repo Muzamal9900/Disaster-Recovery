@@ -283,7 +283,7 @@ export default function MelbourneLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Melbourne Service Areas & Response Times
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-center text-gray-200 mb-12 max-w-3xl mx-auto">
               Strategic coverage across Melbourne&apos;s diverse suburbs and regions
             </p>
 
@@ -302,7 +302,7 @@ export default function MelbourneLocationPage() {
                   <p className="text-blue-600 font-semibold mb-1">
                     {suburb.response} response
                   </p>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-200 text-sm">
                     Population: {suburb.population}
                   </p>
                 </motion.div>
@@ -311,7 +311,7 @@ export default function MelbourneLocationPage() {
 
             <div className="mt-12 p-6 bg-blue-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3">Complete Melbourne Coverage Including:</h3>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-200 leading-relaxed">
                 <strong>Inner City:</strong> Richmond, South Yarra, Prahran, St Kilda, Carlton • 
                 <strong>Eastern:</strong> Box Hill, Ringwood, Glen Waverley, Camberwell, Hawthorn • 
                 <strong>Western:</strong> Footscray, Sunshine, Werribee, Melton, Caroline Springs • 
@@ -329,7 +329,7 @@ export default function MelbourneLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Melbourne&apos;s Weather Challenge Specialists
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Expert response for Melbourne&apos;s infamous &quot;four seasons in one day&quot;
             </p>
 
@@ -360,7 +360,7 @@ export default function MelbourneLocationPage() {
 
             <div className="mt-12 p-6 bg-yellow-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3 text-yellow-800">Melbourne Weather Alert</h3>
-              <p className="text-gray-700">
+              <p className="text-gray-200">
                 Melbourne&apos;s rapidly changing weather creates unique restoration challenges. 
                 Our teams are equipped for sudden storms, flash flooding, and extreme temperature 
                 variations that can cause burst pipes and structural damage.
@@ -375,7 +375,7 @@ export default function MelbourneLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Recent Melbourne Emergency Responses
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Proven expertise across Melbourne&apos;s diverse architecture
             </p>
 
@@ -394,7 +394,7 @@ export default function MelbourneLocationPage() {
                     <div>
                       <h3 className="text-xl font-bold mb-2">{project.type}</h3>
                       <p className="text-blue-600 font-semibold mb-1">{project.location}</p>
-                      <p className="text-gray-700 mb-2">{project.damage}</p>
+                      <p className="text-gray-200 mb-2">{project.damage}</p>
                       <div className="flex flex-wrap gap-4 text-sm">
                         <span className="text-green-600">✓ {project.response}</span>
                         <span className="text-green-600">✓ {project.outcome}</span>

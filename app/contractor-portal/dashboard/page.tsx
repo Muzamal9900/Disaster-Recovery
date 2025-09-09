@@ -101,7 +101,7 @@ export default function ContractorPortalDashboardPage() {
                       </span>
                     </div>
                     <div className="flex items-center justify-between text-sm">
-                      <div className="flex items-center gap-4 text-gray-400">
+                      <div className="flex items-center gap-4 text-gray-200">
                         <span className="flex items-center gap-1">
                           <MapPin className="w-4 h-4" />
                           {job.location}
@@ -138,7 +138,7 @@ export default function ContractorPortalDashboardPage() {
                       <span className="text-blue-400 font-semibold text-sm whitespace-nowrap">{item.time}</span>
                       <div className="flex-1">
                         <p className="text-white font-medium text-sm">{item.task}</p>
-                        <p className="text-gray-400 text-xs mt-1">{item.client}</p>
+                        <p className="text-gray-200 text-xs mt-1">{item.client}</p>
                       </div>
                     </div>
                   </div>

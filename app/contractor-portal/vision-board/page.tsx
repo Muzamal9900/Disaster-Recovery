@@ -159,7 +159,7 @@ export default function VisionBoardPage() {
 
             {certificates.length === 0 ? (
               <div className="text-center py-12">
-                <Award className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <Award className="w-16 h-16 text-gray-200 mx-auto mb-4" />
                 <p className="text-gray-300 mb-4">No certificates yet</p>
                 <Link
                   href="/contractor-portal/training/courses"
@@ -182,18 +182,18 @@ export default function VisionBoardPage() {
                           </span>
                           <span>{cert.courseHours} Hours</span>
                         </div>
-                        <p className="text-xs text-gray-400 mt-2">ID: {cert.id}</p>
+                        <p className="text-xs text-gray-200 mt-2">ID: {cert.id}</p>
                       </div>
                       <div className="flex gap-2">
                         <button
-                          className="p-2 text-gray-400 hover:text-white transition-colors"
+                          className="p-2 text-gray-200 hover:text-white transition-colors"
                           title="Download Certificate"
                         >
                           <Download className="w-4 h-4" />
                         </button>
                         <button
                           onClick={() => removeCertificate(cert.id)}
-                          className="p-2 text-gray-400 hover:text-red-400 transition-colors"
+                          className="p-2 text-gray-200 hover:text-red-400 transition-colors"
                           title="Remove from Board"
                         >
                           <Trash2 className="w-4 h-4" />
@@ -262,7 +262,7 @@ export default function VisionBoardPage() {
                   </button>
                   <button
                     onClick={() => setShowAddGoal(false)}
-                    className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+                    className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors"
                   >
                     Cancel
                   </button>
@@ -282,7 +282,7 @@ export default function VisionBoardPage() {
                         <span>Target: {goal.target}</span>
                         <span>Current: {goal.current}</span>
                       </div>
-                      <p className="text-xs text-gray-400 mt-1">Deadline: {goal.deadline}</p>
+                      <p className="text-xs text-gray-200 mt-1">Deadline: {goal.deadline}</p>
                     </div>
                     <div className="flex gap-2">
                       <button
@@ -290,7 +290,7 @@ export default function VisionBoardPage() {
                         className={`p-2 transition-colors ${
                           goal.completed 
                             ? 'text-green-400 hover:text-green-300' 
-                            : 'text-gray-400 hover:text-white'
+                            : 'text-gray-200 hover:text-white'
                         }`}
                         title={goal.completed ? 'Mark as incomplete' : 'Mark as complete'}
                       >
@@ -298,7 +298,7 @@ export default function VisionBoardPage() {
                       </button>
                       <button
                         onClick={() => removeGoal(goal.id)}
-                        className="p-2 text-gray-400 hover:text-red-400 transition-colors"
+                        className="p-2 text-gray-200 hover:text-red-400 transition-colors"
                         title="Remove goal"
                       >
                         <Trash2 className="w-4 h-4" />

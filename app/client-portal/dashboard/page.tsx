@@ -69,7 +69,7 @@ export default function ClientPortalDashboardPage() {
                     </div>
                     <div className="flex-1">
                       <p className="text-white font-medium">{activity.action}</p>
-                      <p className="text-gray-400 text-sm">{activity.time}</p>
+                      <p className="text-gray-200 text-sm">{activity.time}</p>
                     </div>
                   </div>
                 ))}
@@ -92,7 +92,7 @@ export default function ClientPortalDashboardPage() {
                       <span className="text-xs px-2 py-1 bg-blue-600 text-white rounded-full">Upcoming</span>
                     </div>
                     <p className="text-gray-300 text-sm mb-1">{apt.date} at {apt.time}</p>
-                    <p className="text-gray-400 text-xs">{apt.location}</p>
+                    <p className="text-gray-200 text-xs">{apt.location}</p>
                   </div>
                 ))}
               </div>

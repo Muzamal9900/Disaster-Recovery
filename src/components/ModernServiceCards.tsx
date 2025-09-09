@@ -187,7 +187,7 @@ const ModernServiceCards: React.FC = () => {
             </span>
           </h2>
           
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto premium-text">
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto premium-text">
             Advanced disaster recovery technology meets decades of expertise. 
             Every service backed by AI-powered assessments and guaranteed results.
           </p>
@@ -273,7 +273,7 @@ const ModernServiceCards: React.FC = () => {
                 </h3>
                 
                 {/* Description */}
-                <p className="text-gray-400 mb-6 leading-relaxed group-hover:text-gray-300 transition-colours">
+                <p className="text-gray-200 mb-6 leading-relaxed group-hover:text-gray-300 transition-colours">
                   {service.description}
                 </p>
                 
@@ -308,7 +308,7 @@ const ModernServiceCards: React.FC = () => {
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-3">
                     <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${service.colour} animate-pulse`} />
-                    <span className="text-xs text-gray-500 uppercase tracking-wide">
+                    <span className="text-xs text-gray-300 uppercase tracking-wide">
                       {service.stats.label}
                     </span>
                   </div>
@@ -365,15 +365,15 @@ const ModernServiceCards: React.FC = () => {
           transition={{ duration: 0.8, delay: 1 }}
         >
           <div className="inline-flex items-center gap-6">
-            <div className="flex items-center gap-2 text-sm text-gray-400">
+            <div className="flex items-center gap-2 text-sm text-gray-200">
               <Shield className="h-4 w-4 text-blue-400" />
               <span>Industry Certified</span>
             </div>
-            <div className="flex items-center gap-2 text-sm text-gray-400">
+            <div className="flex items-center gap-2 text-sm text-gray-200">
               <Clock className="h-4 w-4 text-emerald-600" />
               <span>24/7 Response</span>
             </div>
-            <div className="flex items-center gap-2 text-sm text-gray-400">
+            <div className="flex items-center gap-2 text-sm text-gray-200">
               <Award className="h-4 w-4 text-purple-400" />
               <span>Guaranteed Results</span>
             </div>

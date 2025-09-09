@@ -63,7 +63,7 @@ export default function SocialProofBar() {
                 <div className="text-3xl md:text-4xl font-bold text-white mb-1">
                   {stat.number}
                 </div>
-                <div className="text-sm text-gray-400">
+                <div className="text-sm text-gray-200">
                   {stat.label}
                 </div>
               </motion.div>

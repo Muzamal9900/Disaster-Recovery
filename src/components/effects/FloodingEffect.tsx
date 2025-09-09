@@ -101,7 +101,7 @@ export default function FloodingEffect() {
         
         {/* Debris floating (optional dramatic effect) */}
         <div className={`absolute bottom-8 left-10 w-8 h-1 bg-gray-700/30 rounded ${styles.animateFloat}`} />
-        <div className={`absolute bottom-10 right-20 w-6 h-1 bg-gray-600/20 rounded ${styles.animateFloatDelayed}`} />
+        <div className={`absolute bottom-10 right-20 w-6 h-1 bg-gray-800/20 rounded ${styles.animateFloatDelayed}`} />
         <div className={`absolute bottom-6 left-1/3 w-4 h-0.5 bg-gray-800/25 rounded ${styles.animateFloat}`} />
       </div>
     </>

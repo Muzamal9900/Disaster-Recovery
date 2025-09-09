@@ -230,7 +230,7 @@ export const LiveDashboard: React.FC = () => {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{metrics.activeContractors}</div>
-            <div className="text-xs text-gray-500">
+            <div className="text-xs text-gray-300">
               {contractors.filter(c => c.status === 'available').length} available
             </div>
           </CardContent>
@@ -358,7 +358,7 @@ export const LiveDashboard: React.FC = () => {
                         {getJobIcon(job.type)}
                         <div>
                           <p className="font-medium text-sm">{job.type}</p>
-                          <div className="flex items-center gap-2 text-xs text-gray-500">
+                          <div className="flex items-center gap-2 text-xs text-gray-300">
                             <MapPin className="w-3 h-3" />
                             <span>{job.location}</span>
                             <Clock className="w-3 h-3 ml-2" />
@@ -406,7 +406,7 @@ export const LiveDashboard: React.FC = () => {
                       )} />
                       <div>
                         <p className="font-medium text-sm">{contractor.name}</p>
-                        <div className="flex items-center gap-2 text-xs text-gray-500">
+                        <div className="flex items-center gap-2 text-xs text-gray-300">
                           <Shield className="w-3 h-3" />
                           <span>{contractor.jobsCompleted} jobs</span>
                           <span className="ml-2">⭐ {contractor.rating}</span>
@@ -438,7 +438,7 @@ export const LiveDashboard: React.FC = () => {
                   <Progress value={metric.value} className="flex-1" />
                   <span className="text-sm font-bold">{metric.value}%</span>
                 </div>
-                <p className="text-xs text-gray-500">Target: {metric.target}%</p>
+                <p className="text-xs text-gray-300">Target: {metric.target}%</p>
               </div>
             ))}
           </div>
@@ -465,7 +465,7 @@ export const LiveDashboard: React.FC = () => {
                     <Zap className="w-4 h-4 text-red-500" />
                     <span className="text-sm">{alert.message}</span>
                   </div>
-                  <span className="text-xs text-gray-500">
+                  <span className="text-xs text-gray-300">
                     {new Date(alert.timestamp).toLocaleTimeString()}
                   </span>
                 </div>

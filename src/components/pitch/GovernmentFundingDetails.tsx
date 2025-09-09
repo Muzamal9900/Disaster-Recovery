@@ -128,7 +128,7 @@ export default function GovernmentFundingDetails() {
                           </div>
                         </div>
 
-                        <div className="text-xs text-gray-400">
+                        <div className="text-xs text-gray-200">
                           Authority: {program.authority}
                         </div>
                       </motion.div>
@@ -159,7 +159,7 @@ export default function GovernmentFundingDetails() {
                         <div className="text-blue-400 font-bold mb-1">
                           {formatCurrency(program.minGrant)} - {formatCurrency(program.maxGrant)}
                         </div>
-                        <div className="text-xs text-gray-400">{program.authority}</div>
+                        <div className="text-xs text-gray-200">{program.authority}</div>
                       </motion.div>
                     ))}
                   </div>
@@ -235,22 +235,22 @@ export default function GovernmentFundingDetails() {
                           <h3 className="font-bold text-white mb-2">{step.phase}</h3>
                           <div className="grid md:grid-cols-3 gap-4 mb-3">
                             <div>
-                              <span className="text-xs text-gray-400">Duration:</span>
+                              <span className="text-xs text-gray-200">Duration:</span>
                               <div className="text-blue-400">{step.duration}</div>
                             </div>
                             <div>
-                              <span className="text-xs text-gray-400">Cost:</span>
+                              <span className="text-xs text-gray-200">Cost:</span>
                               <div className="text-yellow-400">{step.cost}</div>
                             </div>
                             <div>
-                              <span className="text-xs text-gray-400">Authority:</span>
+                              <span className="text-xs text-gray-200">Authority:</span>
                               <div className="text-gray-300 text-sm">{step.authority}</div>
                             </div>
                           </div>
                           <div className="grid md:grid-cols-2 gap-4">
                             <div>
                               <h4 className="text-sm font-semibold text-gray-300 mb-1">Requirements:</h4>
-                              <ul className="text-xs text-gray-400 space-y-1">
+                              <ul className="text-xs text-gray-200 space-y-1">
                                 {step.requirements.slice(0, 2).map((req, i) => (
                                   <li key={i}>• {req}</li>
                                 ))}
@@ -258,7 +258,7 @@ export default function GovernmentFundingDetails() {
                             </div>
                             <div>
                               <h4 className="text-sm font-semibold text-gray-300 mb-1">Deliverables:</h4>
-                              <ul className="text-xs text-gray-400 space-y-1">
+                              <ul className="text-xs text-gray-200 space-y-1">
                                 {step.deliverables.slice(0, 2).map((del, i) => (
                                   <li key={i}>• {del}</li>
                                 ))}
@@ -336,7 +336,7 @@ export default function GovernmentFundingDetails() {
                         <div className="grid md:grid-cols-2 gap-4">
                           {details.activities.map((activity, i) => (
                             <div key={i} className="flex items-start gap-2">
-                              <ArrowRight className="h-4 w-4 text-gray-400 mt-0.5 flex-shrink-0" />
+                              <ArrowRight className="h-4 w-4 text-gray-200 mt-0.5 flex-shrink-0" />
                               <span className="text-gray-300 text-sm">{activity}</span>
                             </div>
                           ))}

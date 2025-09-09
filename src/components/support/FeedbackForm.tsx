@@ -191,7 +191,7 @@ export function FeedbackForm({
       case 'bug_report':
         return 'text-red-600 bg-red-100';
       default:
-        return 'text-gray-600 bg-gray-100';
+        return 'text-gray-200 bg-gray-100';
     }
   };
 
@@ -204,11 +204,11 @@ export function FeedbackForm({
               <CheckCircle className="h-8 w-8 text-green-600" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Thank You!</h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-200 mb-4">
               Your {formData.type.replace('_', ' ')} has been submitted successfully.
             </p>
             {!formData.isAnonymous && (
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-300">
                 We'll send updates to {formData.userEmail}
               </p>
             )}
@@ -357,7 +357,7 @@ export function FeedbackForm({
                     <RadioGroupItem value={level} />
                     <div>
                       <p className="font-medium capitalize">{level} Impact</p>
-                      <p className="text-sm text-gray-500">{impactDescriptions[level]}</p>
+                      <p className="text-sm text-gray-300">{impactDescriptions[level]}</p>
                     </div>
                   </label>
                 ))}
@@ -387,7 +387,7 @@ export function FeedbackForm({
                   />
                 </button>
               ))}
-              <span className="ml-2 text-sm text-gray-500 self-center">
+              <span className="ml-2 text-sm text-gray-300 self-center">
                 {rating > 0 && `${rating} out of 5`}
               </span>
             </div>
@@ -400,11 +400,11 @@ export function FeedbackForm({
           <div className="mt-2">
             <label className="flex items-center justify-center w-full h-24 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
               <div className="text-center">
-                <Upload className="h-6 w-6 text-gray-400 mx-auto mb-1" />
-                <p className="text-xs text-gray-600">
+                <Upload className="h-6 w-6 text-gray-200 mx-auto mb-1" />
+                <p className="text-xs text-gray-200">
                   Click to upload screenshots or files
                 </p>
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-gray-300">
                   PNG, JPG, PDF up to 5MB
                 </p>
               </div>
@@ -425,9 +425,9 @@ export function FeedbackForm({
                 {formData.attachments.map((file, index) => (
                   <div key={index} className="flex items-center justify-between text-sm bg-gray-50 p-2 rounded">
                     <div className="flex items-center gap-2">
-                      <Paperclip className="h-4 w-4 text-gray-500" />
+                      <Paperclip className="h-4 w-4 text-gray-300" />
                       <span>{file.name}</span>
-                      <span className="text-gray-500">
+                      <span className="text-gray-300">
                         ({(file.size / 1024).toFixed(1)} KB)
                       </span>
                     </div>
@@ -438,7 +438,7 @@ export function FeedbackForm({
                         newFiles.splice(index, 1);
                         setFormData({ ...formData, attachments: newFiles });
                       }}
-                      className="text-gray-500 hover:text-red-500"
+                      className="text-gray-300 hover:text-red-500"
                     >
                       <X className="h-4 w-4" />
                     </button>
@@ -460,7 +460,7 @@ export function FeedbackForm({
               }
             />
             <Label htmlFor="anonymous" className="flex items-center gap-2 cursor-pointer">
-              <Shield className="h-4 w-4 text-gray-500" />
+              <Shield className="h-4 w-4 text-gray-300" />
               Submit anonymously
             </Label>
           </div>

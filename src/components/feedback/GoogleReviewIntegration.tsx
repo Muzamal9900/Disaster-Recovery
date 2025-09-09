@@ -199,8 +199,8 @@ export default function GoogleReviewIntegration({
       case 'completed': return 'text-green-600 bg-green-50';
       case 'clicked': return 'text-blue-600 bg-blue-50';
       case 'sent': return 'text-yellow-600 bg-yellow-50';
-      case 'expired': return 'text-gray-600 bg-gray-50';
-      default: return 'text-gray-600 bg-gray-50';
+      case 'expired': return 'text-gray-200 bg-gray-50';
+      default: return 'text-gray-200 bg-gray-50';
     }
   };
 
@@ -213,7 +213,7 @@ export default function GoogleReviewIntegration({
           </div>
           <div>
             <h3 className="font-semibold text-gray-900">{businessProfile?.businessName}</h3>
-            <p className="text-sm text-gray-500">Google Business Profile</p>
+            <p className="text-sm text-gray-300">Google Business Profile</p>
           </div>
         </div>
         <div className="text-right">
@@ -223,13 +223,13 @@ export default function GoogleReviewIntegration({
               {businessProfile?.averageRating}
             </span>
           </div>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-300">
             {businessProfile?.totalReviews} reviews
           </p>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-200 mb-4">
         <div className="flex items-center">
           <MapPin className="w-4 h-4 mr-2" />
           <span>{businessProfile?.address}</span>
@@ -262,7 +262,7 @@ export default function GoogleReviewIntegration({
           <ExternalLink className="w-4 h-4 mr-2" />
           View on Google
         </a>
-        <button className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colours">
+        <button className="px-4 py-2 border border-gray-300 rounded-lg text-gray-200 hover:bg-gray-50 transition-colours">
           <RefreshCw className="w-4 h-4" />
         </button>
       </div>
@@ -274,7 +274,7 @@ export default function GoogleReviewIntegration({
       <div className="bg-white rounded-lg border border-gray-200 p-4">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-600">Average Rating</p>
+            <p className="text-sm text-gray-200">Average Rating</p>
             <p className="text-2xl font-bold text-gray-900">
               {businessProfile?.averageRating}
             </p>
@@ -287,7 +287,7 @@ export default function GoogleReviewIntegration({
       <div className="bg-white rounded-lg border border-gray-200 p-4">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-600">Total Reviews</p>
+            <p className="text-sm text-gray-200">Total Reviews</p>
             <p className="text-2xl font-bold text-gray-900">
               {businessProfile?.totalReviews}
             </p>
@@ -300,18 +300,18 @@ export default function GoogleReviewIntegration({
       <div className="bg-white rounded-lg border border-gray-200 p-4">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-600">Response Rate</p>
+            <p className="text-sm text-gray-200">Response Rate</p>
             <p className="text-2xl font-bold text-gray-900">92%</p>
           </div>
           <ThumbsUp className="w-8 h-8 text-green-500" />
         </div>
-        <p className="text-xs text-gray-500 mt-1">Above average</p>
+        <p className="text-xs text-gray-300 mt-1">Above average</p>
       </div>
 
       <div className="bg-white rounded-lg border border-gray-200 p-4">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-600">Invitations Sent</p>
+            <p className="text-sm text-gray-200">Invitations Sent</p>
             <p className="text-2xl font-bold text-gray-900">
               {invitations.length}
             </p>
@@ -331,7 +331,7 @@ export default function GoogleReviewIntegration({
         <h3 className="text-lg font-semibold text-gray-900">Send Review Invitation</h3>
         <button
           onClick={() => setShowInviteForm(false)}
-          className="text-gray-400 hover:text-gray-600"
+          className="text-gray-200 hover:text-gray-200"
         >
           ×
         </button>
@@ -339,7 +339,7 @@ export default function GoogleReviewIntegration({
 
       <div className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-200 mb-1">
             Customer Email
           </label>
           <input
@@ -352,7 +352,7 @@ export default function GoogleReviewIntegration({
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-200 mb-1">
             Custom Message (Optional)
           </label>
           <textarea
@@ -401,7 +401,7 @@ export default function GoogleReviewIntegration({
           </button>
           <button
             onClick={() => setShowInviteForm(false)}
-            className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colours"
+            className="px-4 py-2 border border-gray-300 rounded-lg text-gray-200 hover:bg-gray-50 transition-colours"
           >
             Cancel
           </button>
@@ -426,7 +426,7 @@ export default function GoogleReviewIntegration({
             <div className="flex items-start justify-between mb-2">
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-medium text-gray-600">
+                  <span className="text-sm font-medium text-gray-200">
                     {review.customerName[0]}
                   </span>
                 </div>
@@ -445,7 +445,7 @@ export default function GoogleReviewIntegration({
                         />
                       ))}
                     </div>
-                    <span className="text-sm text-gray-500">
+                    <span className="text-sm text-gray-300">
                       {review.publishedDate.toLocaleDateString('en-AU')}
                     </span>
                   </div>
@@ -458,7 +458,7 @@ export default function GoogleReviewIntegration({
               )}
             </div>
 
-            <p className="text-gray-700 text-sm mb-3">{review.text}</p>
+            <p className="text-gray-200 text-sm mb-3">{review.text}</p>
 
             {review.response ? (
               <div className="bg-blue-50 rounded-lg p-3">
@@ -497,10 +497,10 @@ export default function GoogleReviewIntegration({
         <table className="w-full">
           <thead>
             <tr className="border-b border-gray-200">
-              <th className="text-left py-2 text-sm font-medium text-gray-600">Customer</th>
-              <th className="text-left py-2 text-sm font-medium text-gray-600">Sent</th>
-              <th className="text-left py-2 text-sm font-medium text-gray-600">Status</th>
-              <th className="text-left py-2 text-sm font-medium text-gray-600">Actions</th>
+              <th className="text-left py-2 text-sm font-medium text-gray-200">Customer</th>
+              <th className="text-left py-2 text-sm font-medium text-gray-200">Sent</th>
+              <th className="text-left py-2 text-sm font-medium text-gray-200">Status</th>
+              <th className="text-left py-2 text-sm font-medium text-gray-200">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -511,10 +511,10 @@ export default function GoogleReviewIntegration({
                     <p className="text-sm font-medium text-gray-900">
                       {invitation.customerEmail}
                     </p>
-                    <p className="text-xs text-gray-500">Job: {invitation.jobId}</p>
+                    <p className="text-xs text-gray-300">Job: {invitation.jobId}</p>
                   </div>
                 </td>
-                <td className="py-3 text-sm text-gray-600">
+                <td className="py-3 text-sm text-gray-200">
                   {invitation.sentDate.toLocaleDateString('en-AU')}
                 </td>
                 <td className="py-3">
@@ -524,11 +524,11 @@ export default function GoogleReviewIntegration({
                 </td>
                 <td className="py-3">
                   <div className="flex space-x-2">
-                    <button className="text-gray-400 hover:text-blue-600">
+                    <button className="text-gray-200 hover:text-blue-600">
                       <Eye className="w-4 h-4" />
                     </button>
                     {invitation.status === 'sent' && (
-                      <button className="text-gray-400 hover:text-green-600">
+                      <button className="text-gray-200 hover:text-green-600">
                         <RefreshCw className="w-4 h-4" />
                       </button>
                     )}
@@ -557,7 +557,7 @@ export default function GoogleReviewIntegration({
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             Love our service?
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-200 mb-6">
             Help others discover our quality work by leaving a Google review
           </p>
 
@@ -567,11 +567,11 @@ export default function GoogleReviewIntegration({
               <span className="font-semibold text-gray-900">
                 {businessProfile?.averageRating}
               </span>
-              <span className="text-gray-600">
+              <span className="text-gray-200">
                 ({businessProfile?.totalReviews} reviews)
               </span>
             </div>
-            <p className="text-sm text-gray-600">{businessProfile?.businessName}</p>
+            <p className="text-sm text-gray-200">{businessProfile?.businessName}</p>
           </div>
 
           <a
@@ -586,7 +586,7 @@ export default function GoogleReviewIntegration({
           </a>
 
           <div className="mt-6 pt-6 border-t border-gray-200">
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-300">
               Takes less than 2 minutes and helps our business grow
             </p>
           </div>
@@ -599,7 +599,7 @@ export default function GoogleReviewIntegration({
     <div className="max-w-6xl mx-auto p-6">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900">Google Review Integration</h1>
-        <p className="text-gray-600 mt-2">
+        <p className="text-gray-200 mt-2">
           Manage your Google Business Profile and review invitations
         </p>
       </div>

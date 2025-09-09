@@ -145,8 +145,8 @@ export default function WhyFirstPage() {
                 viewport={{ once: true }}
               >
                 <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-sm font-semibold text-gray-700 mb-1">{stat.label}</div>
-                <div className="text-xs text-gray-500">{stat.detail}</div>
+                <div className="text-sm font-semibold text-gray-200 mb-1">{stat.label}</div>
+                <div className="text-xs text-gray-300">{stat.detail}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -228,7 +228,7 @@ export default function WhyFirstPage() {
             <h2 className="text-4xl font-bold mb-4 text-center text-gray-900">
               The Science Is Undeniable
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Peer-reviewed research proves professional restoration saves lives and money
             </p>
 
@@ -249,7 +249,7 @@ export default function WhyFirstPage() {
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-gray-900 mb-1">{evidence.title}</h3>
                       <div className="text-3xl font-bold text-blue-600 mb-2">{evidence.stat}</div>
-                      <p className="text-gray-600">{evidence.description}</p>
+                      <p className="text-gray-200">{evidence.description}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -271,7 +271,7 @@ export default function WhyFirstPage() {
             <h2 className="text-4xl font-bold mb-4 text-center text-gray-900">
               The Critical Catalyst
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Restoration professionals connect multiple disciplines to save lives
             </p>
 
@@ -287,7 +287,7 @@ export default function WhyFirstPage() {
                     viewport={{ once: true }}
                   >
                     <h3 className="text-lg font-bold text-gray-900 mb-2">{role.discipline}</h3>
-                    <p className="text-gray-600">{role.connection}</p>
+                    <p className="text-gray-200">{role.connection}</p>
                   </motion.div>
                 ))}
               </div>
@@ -362,7 +362,7 @@ export default function WhyFirstPage() {
               <div className="bg-gradient-to-br from-green-50 to-white p-8 rounded-lg shadow-lg">
                 <Award className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-2xl font-bold mb-4 text-gray-900">Certified Professionals</h3>
-                <ul className="space-y-3 text-gray-600">
+                <ul className="space-y-3 text-gray-200">
                   <li className="flex items-start gap-3">
                     <span className="text-green-600 mt-1">✓</span>
                     <span>IICRC certification requiring continuous education</span>
@@ -385,7 +385,7 @@ export default function WhyFirstPage() {
               <div className="bg-gradient-to-br from-red-50 to-white p-8 rounded-lg shadow-lg">
                 <Building className="w-12 h-12 text-red-600 mb-4" />
                 <h3 className="text-2xl font-bold mb-4 text-gray-900">General Builders</h3>
-                <ul className="space-y-3 text-gray-600">
+                <ul className="space-y-3 text-gray-200">
                   <li className="flex items-start gap-3">
                     <span className="text-red-600 mt-1">✗</span>
                     <span>No disaster-specific training required</span>

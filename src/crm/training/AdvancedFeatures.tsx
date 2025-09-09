@@ -77,15 +77,15 @@ export default function AdvancedFeaturesModule() {
             
             <li key="0" className="flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">API Integration</span>
+              <span className="text-gray-200">API Integration</span>
             </li>
             <li key="1" className="flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Mobile Features</span>
+              <span className="text-gray-200">Mobile Features</span>
             </li>
             <li key="2" className="flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Enterprise Features</span>
+              <span className="text-gray-200">Enterprise Features</span>
             </li>
           </ul>
         </CardContent>
@@ -144,7 +144,7 @@ export default function AdvancedFeaturesModule() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="prose prose-gray max-w-none">
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">
                   Integration Capabilities:
 • Insurance Company APIs - Direct claim feeds
 • Accounting Systems - QuickBooks, Xero, MYOB
@@ -204,7 +204,7 @@ export default function AdvancedFeaturesModule() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="prose prose-gray max-w-none">
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">
                   Mobile App Capabilities:
 • On-site lead acceptance
 • Photo and video documentation
@@ -265,7 +265,7 @@ export default function AdvancedFeaturesModule() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="prose prose-gray max-w-none">
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">
                   Advanced Capabilities:
 • Multi-territory franchise management
 • Team hierarchy and permissions

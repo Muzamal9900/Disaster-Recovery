@@ -123,8 +123,8 @@ export default function EmergencyChecklistsPage() {
                     </span>
                   </div>
                   <h3 className="text-xl font-bold mb-2">{checklist.title}</h3>
-                  <p className="text-gray-600 mb-3">{checklist.description}</p>
-                  <div className="flex items-center text-sm text-gray-500">
+                  <p className="text-gray-200 mb-3">{checklist.description}</p>
+                  <div className="flex items-center text-sm text-gray-300">
                     <Clock className="w-4 h-4 mr-1" />
                     {checklist.timeframe}
                   </div>
@@ -143,7 +143,7 @@ export default function EmergencyChecklistsPage() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <Phone className="w-12 h-12 text-red-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Emergency Contacts</h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-gray-200">
                 <li>• Emergency Services: 000</li>
                 <li>• SES Storm/Flood: 132 500</li>
                 <li>• Poisons Info: 13 11 26</li>
@@ -153,7 +153,7 @@ export default function EmergencyChecklistsPage() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <Shield className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Insurance Must-Dos</h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-gray-200">
                 <li>• Take photos immediately</li>
                 <li>• Do not throw anything away</li>
                 <li>• Keep all receipts</li>
@@ -163,7 +163,7 @@ export default function EmergencyChecklistsPage() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <Home className="w-12 h-12 text-green-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Property Safety</h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-gray-200">
                 <li>• Turn off utilities if needed</li>
                 <li>• Document all damage</li>
                 <li>• Secure the property</li>

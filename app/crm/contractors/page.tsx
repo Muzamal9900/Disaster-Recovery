@@ -147,7 +147,7 @@ export default function ContractorsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-4">
-              <Link href="/crm" className="text-gray-500 hover:text-gray-700">
+              <Link href="/crm" className="text-gray-300 hover:text-gray-200">
                 ← Back to Dashboard
               </Link>
               <div className="h-6 w-px bg-gray-300"></div>
@@ -171,7 +171,7 @@ export default function ContractorsPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {/* Search */}
             <div>
-              <label htmlFor="search" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="search" className="block text-sm font-medium text-gray-200 mb-2">
                 Search Contractors
               </label>
               <input
@@ -186,7 +186,7 @@ export default function ContractorsPage() {
 
             {/* Status Filter */}
             <div>
-              <label htmlFor="status" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="status" className="block text-sm font-medium text-gray-200 mb-2">
                 Status
               </label>
               <select
@@ -205,7 +205,7 @@ export default function ContractorsPage() {
 
             {/* Tier Filter */}
             <div>
-              <label htmlFor="tier" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="tier" className="block text-sm font-medium text-gray-200 mb-2">
                 Membership Tier
               </label>
               <select
@@ -224,7 +224,7 @@ export default function ContractorsPage() {
 
             {/* Results Count */}
             <div className="flex items-end">
-              <div className="text-sm text-gray-600">
+              <div className="text-sm text-gray-200">
                 Showing {filteredContractors.length} of {contractors.length} contractors
               </div>
             </div>
@@ -236,29 +236,29 @@ export default function ContractorsPage() {
           {isLoading ? (
             <div className="p-12 text-center">
               <div className="inline-block w-8 h-8 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
-              <p className="mt-4 text-gray-600">Loading contractors from database...</p>
+              <p className="mt-4 text-gray-200">Loading contractors from database...</p>
             </div>
           ) : (
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead className="bg-gray-50 border-b border-gray-200">
                   <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
                       Business Details
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
                       Contact Information
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
                       Location
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
                       Membership
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
                       Status
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
                       Actions
                     </th>
                   </tr>
@@ -266,7 +266,7 @@ export default function ContractorsPage() {
                 <tbody className="bg-white divide-y divide-gray-200">
                   {filteredContractors.length === 0 ? (
                     <tr>
-                      <td colSpan={6} className="px-6 py-12 text-center text-gray-500">
+                      <td colSpan={6} className="px-6 py-12 text-center text-gray-300">
                         No contractors found matching your criteria.
                       </td>
                     </tr>
@@ -278,7 +278,7 @@ export default function ContractorsPage() {
                             <div className="font-medium text-gray-900">
                               {contractor.business_name}
                             </div>
-                            <div className="text-sm text-gray-500">
+                            <div className="text-sm text-gray-300">
                               ABN: {contractor.abn}
                             </div>
                           </div>
@@ -288,7 +288,7 @@ export default function ContractorsPage() {
                             <div className="text-sm text-gray-900">
                               {contractor.email}
                             </div>
-                            <div className="text-sm text-gray-500">
+                            <div className="text-sm text-gray-300">
                               {contractor.phone}
                             </div>
                           </div>
@@ -338,7 +338,7 @@ export default function ContractorsPage() {
                 </div>
               </div>
               <div className="ml-4">
-                <p className="text-sm font-medium text-gray-600">Total Contractors</p>
+                <p className="text-sm font-medium text-gray-200">Total Contractors</p>
                 <p className="text-2xl font-semibold text-gray-900">{contractors.length}</p>
               </div>
             </div>
@@ -354,7 +354,7 @@ export default function ContractorsPage() {
                 </div>
               </div>
               <div className="ml-4">
-                <p className="text-sm font-medium text-gray-600">Active</p>
+                <p className="text-sm font-medium text-gray-200">Active</p>
                 <p className="text-2xl font-semibold text-gray-900">
                   {contractors.filter(c => c.status === 'active').length}
                 </p>
@@ -372,7 +372,7 @@ export default function ContractorsPage() {
                 </div>
               </div>
               <div className="ml-4">
-                <p className="text-sm font-medium text-gray-600">Pending</p>
+                <p className="text-sm font-medium text-gray-200">Pending</p>
                 <p className="text-2xl font-semibold text-gray-900">
                   {contractors.filter(c => c.status === 'pending').length}
                 </p>
@@ -390,7 +390,7 @@ export default function ContractorsPage() {
                 </div>
               </div>
               <div className="ml-4">
-                <p className="text-sm font-medium text-gray-600">Enterprise Tier</p>
+                <p className="text-sm font-medium text-gray-200">Enterprise Tier</p>
                 <p className="text-2xl font-semibold text-gray-900">
                   {contractors.filter(c => c.membership_tier === 'enterprise').length}
                 </p>

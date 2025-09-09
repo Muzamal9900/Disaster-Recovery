@@ -51,7 +51,7 @@ export default function RetailShoppingCentersPage() {
               <Card key={index} className="p-6">
                 <AlertTriangle className="h-10 w-10 text-blue-700 mb-4" />
                 <h3 className="font-bold mb-2">{risk}</h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-200">
                   Specialised response protocols for retail & shopping centres sector
                 </p>
               </Card>
@@ -71,21 +71,21 @@ export default function RetailShoppingCentersPage() {
               <div className="text-center">
                 <Clock className="h-12 w-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Minimal Downtime</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-200">
                   Priority response to get your operations running again
                 </p>
               </div>
               <div className="text-center">
                 <Shield className="h-12 w-12 text-green-600 mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Compliance Assured</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-200">
                   Meet all industry regulations and safety standards
                 </p>
               </div>
               <div className="text-center">
                 <CheckCircle2 className="h-12 w-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Insurance Expertise</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-200">
                   Direct billing and claim management
                 </p>
               </div>

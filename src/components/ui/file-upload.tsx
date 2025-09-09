@@ -29,7 +29,7 @@ const getFileIcon = (file: File) => {
   if (type.includes('zip') || type.includes('rar') || type.includes('7z')) 
     return <Archive className="h-5 w-5 text-blue-600" />;
   
-  return <FileText className="h-5 w-5 text-gray-500" />;
+  return <FileText className="h-5 w-5 text-gray-300" />;
 };
 
 const formatFileSize = (bytes: number) => {
@@ -160,18 +160,18 @@ export default function FileUpload({
           >
             <Upload className={cn(
               "h-8 w-8 transition-colours",
-              dragOver ? "text-blue-600" : "text-gray-600"
+              dragOver ? "text-blue-600" : "text-gray-200"
             )} />
           </motion.div>
           
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
             {label}
           </h3>
-          <p className="text-sm text-gray-600 mb-4">
+          <p className="text-sm text-gray-200 mb-4">
             {description}
           </p>
           
-          <div className="text-xs text-gray-500">
+          <div className="text-xs text-gray-300">
             <p>Maximum file size: {maxSize}MB</p>
             <p>Accepted formats: {accept}</p>
             <p>Maximum files: {maxFiles}</p>
@@ -220,7 +220,7 @@ export default function FileUpload({
               {files.length > 1 && (
                 <button
                   onClick={clearAll}
-                  className="text-xs text-gray-500 hover:text-red-600 transition-colours"
+                  className="text-xs text-gray-300 hover:text-red-600 transition-colours"
                 >
                   Clear All
                 </button>
@@ -243,7 +243,7 @@ export default function FileUpload({
                       <p className="text-sm font-medium text-gray-900 truncate">
                         {file.name}
                       </p>
-                      <p className="text-xs text-gray-500">
+                      <p className="text-xs text-gray-300">
                         {formatFileSize(file.size)}
                       </p>
                     </div>
@@ -254,7 +254,7 @@ export default function FileUpload({
                       e.stopPropagation();
                       removeFile(index);
                     }}
-                    className="flex-shrink-0 p-1 text-gray-400 hover:text-red-600 transition-colours rounded-full hover:bg-red-50"
+                    className="flex-shrink-0 p-1 text-gray-200 hover:text-red-600 transition-colours rounded-full hover:bg-red-50"
                   >
                     <X className="h-4 w-4" />
                   </button>

@@ -55,7 +55,7 @@ export function AnalyticsDashboard() {
             <BarChart3 className="h-6 w-6" />
             Reporting & Analytics
           </h1>
-          <p className="text-gray-600 mt-1">
+          <p className="text-gray-200 mt-1">
             Performance insights, compliance tracking, and business intelligence
           </p>
         </div>
@@ -111,7 +111,7 @@ export function AnalyticsDashboard() {
               </CardHeader>
               <CardContent>
                 <p className="text-2xl font-bold">{overviewMetrics.kpi.score}%</p>
-                <p className="text-xs text-gray-500">Overall performance score</p>
+                <p className="text-xs text-gray-300">Overall performance score</p>
               </CardContent>
             </Card>
 
@@ -135,7 +135,7 @@ export function AnalyticsDashboard() {
               </CardHeader>
               <CardContent>
                 <p className="text-2xl font-bold">{overviewMetrics.compliance.score}%</p>
-                <p className="text-xs text-gray-500">Compliance score</p>
+                <p className="text-xs text-gray-300">Compliance score</p>
               </CardContent>
             </Card>
 
@@ -157,7 +157,7 @@ export function AnalyticsDashboard() {
                   <p className="text-2xl font-bold">
                     ${(overviewMetrics.financial.profit / 1000).toFixed(0)}k
                   </p>
-                  <p className="text-xs text-gray-500">Net profit this month</p>
+                  <p className="text-xs text-gray-300">Net profit this month</p>
                 </CardContent>
               </Card>
             </ProtectedComponent>
@@ -177,7 +177,7 @@ export function AnalyticsDashboard() {
               </CardHeader>
               <CardContent>
                 <p className="text-2xl font-bold">{overviewMetrics.leads.rate}%</p>
-                <p className="text-xs text-gray-500">Conversion rate</p>
+                <p className="text-xs text-gray-300">Conversion rate</p>
               </CardContent>
             </Card>
           </div>

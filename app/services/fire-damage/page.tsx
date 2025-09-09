@@ -193,7 +193,7 @@ export default function FireDamagePage() {
             </p>
             
             <h3 className="text-xl font-semibold text-white mb-4 r6-text-glow-subtle">Immediate Response Critical</h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-200 mb-6">
               Time is crucial in fire damage restoration. Acidic smoke residues become increasingly corrosive, and secondary 
               damage from firefighting efforts can compound the problem. Our 24/7 emergency response team begins mitigation 
               immediately to prevent further damage and reduce restoration costs.
@@ -224,11 +224,11 @@ export default function FireDamagePage() {
               <span className="text-2xl font-bold text-electric-blue r6-text-glow">1</span>
             </div>
             <h3 className="text-xl font-semibold text-white mb-3">Initial Assessment</h3>
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-200 mb-4">
               Comprehensive damage evaluation following S700 protocols including structural assessment, 
               smoke penetration analysis, and air quality testing.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
+            <ul className="text-sm text-gray-300 space-y-1">
               <li className="r6-list-item">• Thermal imaging surveys</li>
               <li className="r6-list-item">• Moisture content analysis</li>
               <li className="r6-list-item">• Contamination level testing</li>
@@ -241,11 +241,11 @@ export default function FireDamagePage() {
               <span className="text-2xl font-bold text-electric-blue r6-text-glow">2</span>
             </div>
             <h3 className="text-xl font-semibold text-white mb-3">Stabilization & Cleaning</h3>
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-200 mb-4">
               Immediate stabilization of the structure followed by systematic cleaning of all affected surfaces 
               using specialised techniques for different materials.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
+            <ul className="text-sm text-gray-300 space-y-1">
               <li className="r6-list-item">• Emergency board-up/tarping</li>
               <li className="r6-list-item">• Soot and residue removal</li>
               <li className="r6-list-item">• HVAC system cleaning</li>
@@ -258,11 +258,11 @@ export default function FireDamagePage() {
               <span className="text-2xl font-bold text-electric-blue r6-text-glow">3</span>
             </div>
             <h3 className="text-xl font-semibold text-white mb-3">Deodorization & Restoration</h3>
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-200 mb-4">
               Complete odour elimination using multiple treatment methods followed by full structural 
               restoration to pre-loss condition.
             </p>
-            <ul className="text-sm text-gray-500 space-y-1">
+            <ul className="text-sm text-gray-300 space-y-1">
               <li className="r6-list-item">• Thermal fogging treatment</li>
               <li className="r6-list-item">• Ozone/hydroxyl generation</li>
               <li className="r6-list-item">• Structural reconstruction</li>
@@ -284,7 +284,7 @@ export default function FireDamagePage() {
               <h3 className="text-xl font-semibold text-white mb-3">
                 Thermal Fogging Systems
               </h3>
-              <p className="text-gray-400 mb-4">
+              <p className="text-gray-200 mb-4">
                 Professional thermal fogging equipment creates microscopic droplets that penetrate the same 
                 pathways as smoke, neutralizing odours at their source in porous materials and hard-to-reach areas.
               </p>

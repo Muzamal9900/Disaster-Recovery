@@ -77,15 +77,15 @@ export default function ReportingModule() {
             
             <li key="0" className="flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Standard Reports</span>
+              <span className="text-gray-200">Standard Reports</span>
             </li>
             <li key="1" className="flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Custom Report Builder</span>
+              <span className="text-gray-200">Custom Report Builder</span>
             </li>
             <li key="2" className="flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Analytics Integration</span>
+              <span className="text-gray-200">Analytics Integration</span>
             </li>
           </ul>
         </CardContent>
@@ -144,7 +144,7 @@ export default function ReportingModule() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="prose prose-gray max-w-none">
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">
                   Available Report Types:
 • Daily Lead Summary - New leads, acceptance rates, revenue
 • Weekly Performance - KPIs, territory coverage, trends
@@ -204,7 +204,7 @@ export default function ReportingModule() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="prose prose-gray max-w-none">
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">
                   Creating Custom Reports:
 1. Select data sources (leads, jobs, revenue, territories)
 2. Choose metrics and dimensions
@@ -264,7 +264,7 @@ export default function ReportingModule() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="prose prose-gray max-w-none">
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">
                   Data Insights:
 • Predictive lead volume forecasting
 • Seasonal trend analysis

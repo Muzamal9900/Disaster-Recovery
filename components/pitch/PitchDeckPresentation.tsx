@@ -122,7 +122,7 @@ export default function PitchDeckPresentation() {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">60+ Minute Response Times</h4>
-                    <p className="text-gray-400">Current industry average for initial contact</p>
+                    <p className="text-gray-200">Current industry average for initial contact</p>
                   </div>
                 </motion.div>
                 
@@ -137,7 +137,7 @@ export default function PitchDeckPresentation() {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Manual Processes</h4>
-                    <p className="text-gray-400">Paper-based systems and phone tag</p>
+                    <p className="text-gray-200">Paper-based systems and phone tag</p>
                   </div>
                 </motion.div>
                 
@@ -152,7 +152,7 @@ export default function PitchDeckPresentation() {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Poor Contractor Matching</h4>
-                    <p className="text-gray-400">Geographic and skill mismatches</p>
+                    <p className="text-gray-200">Geographic and skill mismatches</p>
                   </div>
                 </motion.div>
               </div>
@@ -255,7 +255,7 @@ export default function PitchDeckPresentation() {
                     <span className="text-white font-semibold">Platform Fees</span>
                     <Badge className="bg-green-500/20 text-green-300">Primary</Badge>
                   </div>
-                  <p className="text-gray-400 text-sm">$550 per claim (20% of total)</p>
+                  <p className="text-gray-200 text-sm">$550 per claim (20% of total)</p>
                   <div className="mt-2 h-2 bg-gray-700 rounded-full overflow-hidden">
                     <div className="h-full w-3/4 bg-gradient-to-r from-green-400 to-green-600" />
                   </div>
@@ -266,7 +266,7 @@ export default function PitchDeckPresentation() {
                     <span className="text-white font-semibold">Contractor Subscriptions</span>
                     <Badge className="bg-blue-500/20 text-blue-300">Growth</Badge>
                   </div>
-                  <p className="text-gray-400 text-sm">$299-999/month premium features</p>
+                  <p className="text-gray-200 text-sm">$299-999/month premium features</p>
                   <div className="mt-2 h-2 bg-gray-700 rounded-full overflow-hidden">
                     <div className="h-full w-1/2 bg-gradient-to-r from-blue-400 to-blue-600" />
                   </div>
@@ -277,7 +277,7 @@ export default function PitchDeckPresentation() {
                     <span className="text-white font-semibold">Insurance API</span>
                     <Badge className="bg-purple-500/20 text-purple-300">Future</Badge>
                   </div>
-                  <p className="text-gray-400 text-sm">Direct integration fees</p>
+                  <p className="text-gray-200 text-sm">Direct integration fees</p>
                   <div className="mt-2 h-2 bg-gray-700 rounded-full overflow-hidden">
                     <div className="h-full w-1/4 bg-gradient-to-r from-purple-400 to-purple-600" />
                   </div>
@@ -339,7 +339,7 @@ export default function PitchDeckPresentation() {
             >
               <DollarSign className="h-8 w-8 text-green-400 mx-auto mb-2" />
               <div className="text-3xl font-bold text-white">$500K</div>
-              <div className="text-sm text-gray-400">MRR Target</div>
+              <div className="text-sm text-gray-200">MRR Target</div>
             </motion.div>
             
             <motion.div 
@@ -350,7 +350,7 @@ export default function PitchDeckPresentation() {
             >
               <Users className="h-8 w-8 text-blue-400 mx-auto mb-2" />
               <div className="text-3xl font-bold text-white">150+</div>
-              <div className="text-sm text-gray-400">Target Contractors</div>
+              <div className="text-sm text-gray-200">Target Contractors</div>
             </motion.div>
             
             <motion.div 
@@ -361,7 +361,7 @@ export default function PitchDeckPresentation() {
             >
               <TrendingUp className="h-8 w-8 text-purple-400 mx-auto mb-2" />
               <div className="text-3xl font-bold text-white">25%+</div>
-              <div className="text-sm text-gray-400">Growth Target</div>
+              <div className="text-sm text-gray-200">Growth Target</div>
             </motion.div>
             
             <motion.div 
@@ -372,7 +372,7 @@ export default function PitchDeckPresentation() {
             >
               <Globe className="h-8 w-8 text-orange-400 mx-auto mb-2" />
               <div className="text-3xl font-bold text-white">7</div>
-              <div className="text-sm text-gray-400">States Covered</div>
+              <div className="text-sm text-gray-200">States Covered</div>
             </motion.div>
           </div>
           
@@ -382,7 +382,7 @@ export default function PitchDeckPresentation() {
             <div className="space-y-3">
               {['Q1 2024', 'Q2 2024', 'Q3 2024', 'Q4 2024'].map((quarter, index) => (
                 <div key={quarter} className="flex items-center gap-4">
-                  <span className="text-gray-400 w-20">{quarter}</span>
+                  <span className="text-gray-200 w-20">{quarter}</span>
                   <div className="flex-1 h-8 bg-gray-700 rounded-full overflow-hidden">
                     <motion.div 
                       initial={{ width: 0 }}
@@ -448,7 +448,7 @@ export default function PitchDeckPresentation() {
                   <advantage.icon className="h-10 w-10 text-blue-400" />
                   <div>
                     <h3 className="text-xl font-bold text-white">{advantage.title}</h3>
-                    <p className="text-sm text-gray-400">{advantage.description}</p>
+                    <p className="text-sm text-gray-200">{advantage.description}</p>
                   </div>
                 </div>
                 <ul className="space-y-2">
@@ -486,7 +486,7 @@ export default function PitchDeckPresentation() {
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-white">Technology Development</span>
-                    <span className="text-gray-400">40%</span>
+                    <span className="text-gray-200">40%</span>
                   </div>
                   <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
                     <div className="h-full w-2/5 bg-blue-500" />
@@ -496,7 +496,7 @@ export default function PitchDeckPresentation() {
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-white">Market Expansion</span>
-                    <span className="text-gray-400">30%</span>
+                    <span className="text-gray-200">30%</span>
                   </div>
                   <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
                     <div className="h-full w-[30%] bg-green-500" />
@@ -506,7 +506,7 @@ export default function PitchDeckPresentation() {
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-white">Sales & Marketing</span>
-                    <span className="text-gray-400">20%</span>
+                    <span className="text-gray-200">20%</span>
                   </div>
                   <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
                     <div className="h-full w-1/5 bg-purple-500" />
@@ -516,7 +516,7 @@ export default function PitchDeckPresentation() {
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-white">Operations</span>
-                    <span className="text-gray-400">10%</span>
+                    <span className="text-gray-200">10%</span>
                   </div>
                   <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
                     <div className="h-full w-[10%] bg-orange-500" />
@@ -586,19 +586,19 @@ export default function PitchDeckPresentation() {
               <div className="space-y-4">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <h4 className="text-white font-semibold mb-2">Disaster Recovery Grants</h4>
-                  <p className="text-gray-400 text-sm">Federal and state programs for disaster resilience</p>
+                  <p className="text-gray-200 text-sm">Federal and state programs for disaster resilience</p>
                   <p className="text-green-400 text-sm mt-2">Potential: $1-5M</p>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <h4 className="text-white font-semibold mb-2">Innovation & Technology Grants</h4>
-                  <p className="text-gray-400 text-sm">R&D tax incentives and AI development support</p>
+                  <p className="text-gray-200 text-sm">R&D tax incentives and AI development support</p>
                   <p className="text-green-400 text-sm mt-2">Potential: $500K-2M</p>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <h4 className="text-white font-semibold mb-2">Regional Development</h4>
-                  <p className="text-gray-400 text-sm">Support for services in underserved areas</p>
+                  <p className="text-gray-200 text-sm">Support for services in underserved areas</p>
                   <p className="text-green-400 text-sm mt-2">Potential: $250K-1M</p>
                 </div>
               </div>
@@ -613,7 +613,7 @@ export default function PitchDeckPresentation() {
                     <CheckCircle2 className="h-5 w-5 text-green-400 mt-1" />
                     <div>
                       <p className="text-white font-semibold">National Resilience</p>
-                      <p className="text-gray-400 text-sm">Supporting government disaster response objectives</p>
+                      <p className="text-gray-200 text-sm">Supporting government disaster response objectives</p>
                     </div>
                   </div>
                   
@@ -621,7 +621,7 @@ export default function PitchDeckPresentation() {
                     <CheckCircle2 className="h-5 w-5 text-green-400 mt-1" />
                     <div>
                       <p className="text-white font-semibold">Job Creation</p>
-                      <p className="text-gray-400 text-sm">Empowering contractor network nationwide</p>
+                      <p className="text-gray-200 text-sm">Empowering contractor network nationwide</p>
                     </div>
                   </div>
                   
@@ -629,7 +629,7 @@ export default function PitchDeckPresentation() {
                     <CheckCircle2 className="h-5 w-5 text-green-400 mt-1" />
                     <div>
                       <p className="text-white font-semibold">Community Support</p>
-                      <p className="text-gray-400 text-sm">Faster recovery for affected communities</p>
+                      <p className="text-gray-200 text-sm">Faster recovery for affected communities</p>
                     </div>
                   </div>
                   
@@ -637,7 +637,7 @@ export default function PitchDeckPresentation() {
                     <CheckCircle2 className="h-5 w-5 text-green-400 mt-1" />
                     <div>
                       <p className="text-white font-semibold">Data & Insights</p>
-                      <p className="text-gray-400 text-sm">Valuable disaster recovery data for policy</p>
+                      <p className="text-gray-200 text-sm">Valuable disaster recovery data for policy</p>
                     </div>
                   </div>
                 </div>
@@ -676,7 +676,7 @@ export default function PitchDeckPresentation() {
                 <Users className="h-12 w-12 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-1">CEO & Founder</h3>
-              <p className="text-gray-400 mb-3">Disaster Recovery Expert</p>
+              <p className="text-gray-200 mb-3">Disaster Recovery Expert</p>
               <div className="text-sm text-gray-300 space-y-1">
                 <p>• 15+ years in insurance</p>
                 <p>• Former restoration company owner</p>
@@ -694,7 +694,7 @@ export default function PitchDeckPresentation() {
                 <Brain className="h-12 w-12 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-1">CTO</h3>
-              <p className="text-gray-400 mb-3">AI & ML Expert</p>
+              <p className="text-gray-200 mb-3">AI & ML Expert</p>
               <div className="text-sm text-gray-300 space-y-1">
                 <p>• PhD in Neural Networks</p>
                 <p>• Ex-Google AI researcher</p>
@@ -712,7 +712,7 @@ export default function PitchDeckPresentation() {
                 <BarChart3 className="h-12 w-12 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-1">COO</h3>
-              <p className="text-gray-400 mb-3">Operations Specialist</p>
+              <p className="text-gray-200 mb-3">Operations Specialist</p>
               <div className="text-sm text-gray-300 space-y-1">
                 <p>• Ex-Uber marketplace lead</p>
                 <p>• Scaled 3 startups to exit</p>
@@ -916,7 +916,7 @@ export default function PitchDeckPresentation() {
                   {slides[currentSlide].title}
                 </h2>
                 {slides[currentSlide].subtitle && (
-                  <p className="text-xl text-gray-400">{slides[currentSlide].subtitle}</p>
+                  <p className="text-xl text-gray-200">{slides[currentSlide].subtitle}</p>
                 )}
               </div>
 
@@ -936,7 +936,7 @@ export default function PitchDeckPresentation() {
 
               {/* Progress Bar */}
               <div className="mt-8 space-y-2">
-                <div className="flex items-center justify-between text-sm text-gray-400">
+                <div className="flex items-center justify-between text-sm text-gray-200">
                   <span>Progress</span>
                   <span>{Math.round(progress)}%</span>
                 </div>

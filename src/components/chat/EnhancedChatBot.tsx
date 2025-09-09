@@ -262,7 +262,7 @@ export function EnhancedChatBot() {
                 <Send size={20} />
               </button>
             </div>
-            <div className="flex items-center justify-center gap-4 mt-2 text-xs text-gray-500">
+            <div className="flex items-center justify-center gap-4 mt-2 text-xs text-gray-300">
               <button className="hover:text-blue-600"><FileText size={14} /> Claims</button>
               <button className="hover:text-blue-600"><DollarSign size={14} /> Pricing</button>
               <button className="hover:text-blue-600"><Phone size={14} /> Call</button>

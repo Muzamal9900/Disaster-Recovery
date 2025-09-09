@@ -122,7 +122,7 @@ export function TestimonialsSection({ limit = 3, showFullStories = false }: Test
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold mb-4">Trusted by Thousands Across Australia</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-200 max-w-2xl mx-auto">
             Real stories from property owners and businesses we\'ve helped recover from disaster
           </p>
           
@@ -136,7 +136,7 @@ export function TestimonialsSection({ limit = 3, showFullStories = false }: Test
               ))}
             </div>
             <span className="font-semibold">4.9/5</span>
-            <span className="text-gray-500">from 2,847 verified reviews</span>
+            <span className="text-gray-300">from 2,847 verified reviews</span>
           </div>
         </div>
 
@@ -148,13 +148,13 @@ export function TestimonialsSection({ limit = 3, showFullStories = false }: Test
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">
-                      <span className="text-lg font-semibold text-gray-600">
+                      <span className="text-lg font-semibold text-gray-200">
                         {testimonial.name.split(' ').map(n => n[0]).join('')}
                       </span>
                     </div>
                     <div>
                       <h4 className="font-semibold">{testimonial.name}</h4>
-                      <p className="text-sm text-gray-500">{testimonial.location}</p>
+                      <p className="text-sm text-gray-300">{testimonial.location}</p>
                     </div>
                   </div>
                   {testimonial.verified && (
@@ -176,7 +176,7 @@ export function TestimonialsSection({ limit = 3, showFullStories = false }: Test
                       </svg>
                     ))}
                   </div>
-                  <span className="text-sm text-gray-500">{testimonial.date}</span>
+                  <span className="text-sm text-gray-300">{testimonial.date}</span>
                 </div>
                 
                 {/* Service Type */}
@@ -185,7 +185,7 @@ export function TestimonialsSection({ limit = 3, showFullStories = false }: Test
                     {testimonial.service}
                   </span>
                   {testimonial.propertyType && (
-                    <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                    <span className="bg-gray-100 text-gray-200 text-xs px-2 py-1 rounded">
                       {testimonial.propertyType}
                     </span>
                   )}
@@ -199,13 +199,13 @@ export function TestimonialsSection({ limit = 3, showFullStories = false }: Test
               
               {/* Quote */}
               <div className="p-6">
-                <p className="text-gray-700 mb-4 italic">"{testimonial.quote}"</p>
+                <p className="text-gray-200 mb-4 italic">"{testimonial.quote}"</p>
                 
                 {testimonial.fullStory && (
                   <>
                     {expandedId === testimonial.id && (
                       <div className="mt-4 pt-4 border-t border-gray-100">
-                        <p className="text-sm text-gray-600">{testimonial.fullStory}</p>
+                        <p className="text-sm text-gray-200">{testimonial.fullStory}</p>
                       </div>
                     )}
                     <button
@@ -218,7 +218,7 @@ export function TestimonialsSection({ limit = 3, showFullStories = false }: Test
                 )}
                 
                 {testimonial.insuranceCompany && (
-                  <div className="mt-4 pt-4 border-t border-gray-100 text-sm text-gray-500">
+                  <div className="mt-4 pt-4 border-t border-gray-100 text-sm text-gray-300">
                     Insurance: {testimonial.insuranceCompany}
                   </div>
                 )}
@@ -259,7 +259,7 @@ export function GoogleReviewsWidget() {
               ))}
             </div>
             <span className="text-sm font-semibold">4.9</span>
-            <span className="text-sm text-gray-500">(847 reviews)</span>
+            <span className="text-sm text-gray-300">(847 reviews)</span>
           </div>
         </div>
       </div>

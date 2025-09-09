@@ -205,7 +205,7 @@ export default function DocumentUpload({
       case 'APPROVE': return 'text-green-600 bg-green-100';
       case 'REVIEW': return 'text-yellow-600 bg-yellow-100';
       case 'REJECT': return 'text-red-600 bg-red-100';
-      default: return 'text-gray-600 bg-gray-100';
+      default: return 'text-gray-200 bg-gray-100';
     }
   };
 
@@ -214,7 +214,7 @@ export default function DocumentUpload({
       case 'HIGH': return 'text-red-600';
       case 'MEDIUM': return 'text-yellow-600';
       case 'LOW': return 'text-green-600';
-      default: return 'text-gray-600';
+      default: return 'text-gray-200';
     }
   };
 
@@ -238,13 +238,13 @@ export default function DocumentUpload({
             {title}
             {required && <span className="text-red-500 ml-1">*</span>}
           </h3>
-          <p className="text-sm text-gray-600 mt-1">{description}</p>
+          <p className="text-sm text-gray-200 mt-1">{description}</p>
         </div>
         
         {uploadedFile && !uploadState.uploading && !uploadState.analysing && (
           <button
             onClick={reset}
-            className="text-gray-400 hover:text-gray-600"
+            className="text-gray-200 hover:text-gray-200"
           >
             <X className="w-5 h-5" />
           </button>
@@ -261,14 +261,14 @@ export default function DocumentUpload({
           `}
         >
           <input {...getInputProps()} />
-          <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+          <Upload className="w-12 h-12 text-gray-200 mx-auto mb-4" />
           <p className="text-lg font-medium text-gray-900 mb-2">
             {isDragActive ? 'Drop file here' : 'Upload Document'}
           </p>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-200">
             Drag and drop or click to select file
           </p>
-          <p className="text-xs text-gray-500 mt-2">
+          <p className="text-xs text-gray-300 mt-2">
             Accepted: PDF, JPEG, PNG, DOC, DOCX (Max {(maxSize / 1024 / 1024).toFixed(1)}MB)
           </p>
         </div>
@@ -279,7 +279,7 @@ export default function DocumentUpload({
             <File className="w-8 h-8 text-blue-600" />
             <div className="flex-1">
               <p className="font-medium text-gray-900">{uploadedFile.name}</p>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-200">
                 {(uploadedFile.size / 1024 / 1024).toFixed(2)} MB • {uploadedFile.type}
               </p>
             </div>
@@ -289,8 +289,8 @@ export default function DocumentUpload({
           {uploadState.uploading && (
             <div className="space-y-2">
               <div className="flex items-center justify-between text-sm">
-                <span className="text-gray-600">Uploading...</span>
-                <span className="text-gray-600">{uploadState.progress}%</span>
+                <span className="text-gray-200">Uploading...</span>
+                <span className="text-gray-200">{uploadState.progress}%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div
@@ -346,13 +346,13 @@ export default function DocumentUpload({
 
                 <div className="grid grid-cols-2 gap-4 mb-3">
                   <div>
-                    <p className="text-sm font-medium text-gray-700">Confidence Score</p>
+                    <p className="text-sm font-medium text-gray-200">Confidence Score</p>
                     <p className="text-2xl font-bold text-gray-900">
                       {uploadState.analysisResult.confidenceScore}%
                     </p>
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-gray-700">Risk Factors</p>
+                    <p className="text-sm font-medium text-gray-200">Risk Factors</p>
                     <p className="text-2xl font-bold text-gray-900">
                       {uploadState.analysisResult.riskFactors.length}
                     </p>
@@ -361,8 +361,8 @@ export default function DocumentUpload({
 
                 {uploadState.analysisResult.suspiciousElements.length > 0 && (
                   <div className="mb-3">
-                    <p className="text-sm font-medium text-gray-700 mb-2">Concerns:</p>
-                    <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
+                    <p className="text-sm font-medium text-gray-200 mb-2">Concerns:</p>
+                    <ul className="list-disc list-inside text-sm text-gray-200 space-y-1">
                       {uploadState.analysisResult.suspiciousElements.map((element, index) => (
                         <li key={index}>{element}</li>
                       ))}
@@ -386,21 +386,21 @@ export default function DocumentUpload({
                   
                   <div className="space-y-4">
                     <div>
-                      <h6 className="font-medium text-gray-700 mb-2">Content Analysis</h6>
-                      <p className="text-sm text-gray-600">
+                      <h6 className="font-medium text-gray-200 mb-2">Content Analysis</h6>
+                      <p className="text-sm text-gray-200">
                         {uploadState.analysisResult.analysisDetails.contentAnalysis}
                       </p>
                     </div>
                     
                     <div>
-                      <h6 className="font-medium text-gray-700 mb-2">Plagiarism Check</h6>
-                      <p className="text-sm text-gray-600">
+                      <h6 className="font-medium text-gray-200 mb-2">Plagiarism Check</h6>
+                      <p className="text-sm text-gray-200">
                         {uploadState.analysisResult.analysisDetails.plagiarismCheck}
                       </p>
                     </div>
 
                     <div>
-                      <h6 className="font-medium text-gray-700 mb-2">Risk Factors</h6>
+                      <h6 className="font-medium text-gray-200 mb-2">Risk Factors</h6>
                       <div className="space-y-2">
                         {uploadState.analysisResult.riskFactors.map((factor, index) => (
                           <div key={index} className="flex items-start gap-3 p-3 bg-gray-50 rounded">
@@ -412,8 +412,8 @@ export default function DocumentUpload({
                             </span>
                             <div className="flex-1">
                               <p className="font-medium text-gray-900">{factor.description}</p>
-                              <p className="text-sm text-gray-600">{factor.evidence}</p>
-                              <p className="text-xs text-gray-500 mt-1">Category: {factor.category}</p>
+                              <p className="text-sm text-gray-200">{factor.evidence}</p>
+                              <p className="text-xs text-gray-300 mt-1">Category: {factor.category}</p>
                             </div>
                           </div>
                         ))}

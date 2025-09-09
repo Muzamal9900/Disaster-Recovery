@@ -318,7 +318,7 @@ export default function GoldCoastLocationPage() {
               {uniqueChallenges.map((item, index) => (
                 <div key={index} className="bg-gradient-to-br from-blue-50 to-white p-4 rounded-lg shadow">
                   <h3 className="font-bold text-blue-800 mb-2">{item.challenge}</h3>
-                  <p className="text-sm text-gray-600 mb-2">{item.impact}</p>
+                  <p className="text-sm text-gray-200 mb-2">{item.impact}</p>
                   <p className="text-sm text-green-700 font-semibold">{item.solution}</p>
                 </div>
               ))}
@@ -332,7 +332,7 @@ export default function GoldCoastLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Gold Coast Service Areas & Risk Zones
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-center text-gray-200 mb-12 max-w-3xl mx-auto">
               Strategic coverage from Beenleigh to Coolangatta, beaches to hinterland
             </p>
 
@@ -351,7 +351,7 @@ export default function GoldCoastLocationPage() {
                   <p className="text-cyan-600 font-semibold mb-1">
                     {suburb.response} response
                   </p>
-                  <p className="text-gray-600 text-sm mb-1">
+                  <p className="text-gray-200 text-sm mb-1">
                     Population: {suburb.population}
                   </p>
                   <p className={`text-sm font-semibold ${
@@ -367,7 +367,7 @@ export default function GoldCoastLocationPage() {
 
             <div className="mt-12 p-6 bg-blue-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3">Complete Gold Coast Coverage:</h3>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-200 leading-relaxed">
                 <strong>Northern Beaches:</strong> Main Beach, Surfers Paradise, Broadbeach, Mermaid Beach • 
                 <strong>Central Coast:</strong> Miami, Burleigh Heads, Burleigh Waters, Varsity Lakes • 
                 <strong>Southern Beaches:</strong> Palm Beach, Currumbin, Tugun, Coolangatta • 
@@ -385,7 +385,7 @@ export default function GoldCoastLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Gold Coast&apos;s Climate Disaster Risks
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Specialised response for coastal subtropical extremes
             </p>
 
@@ -416,7 +416,7 @@ export default function GoldCoastLocationPage() {
 
             <div className="mt-12 p-6 bg-cyan-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3 text-cyan-800">High-Rise Vulnerability</h3>
-              <p className="text-gray-700">
+              <p className="text-gray-200">
                 Gold Coast&apos;s 200+ residential towers face unique challenges including balcony flooding, 
                 wind-driven rain on upper floors, and complex water damage affecting multiple units. 
                 Our high-rise specialist teams are equipped with equipment for accessing all floors 
@@ -432,7 +432,7 @@ export default function GoldCoastLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Recent Gold Coast Emergency Responses
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Proven expertise from high-rises to hinterland
             </p>
 
@@ -451,7 +451,7 @@ export default function GoldCoastLocationPage() {
                     <div>
                       <h3 className="text-xl font-bold mb-2">{project.type}</h3>
                       <p className="text-cyan-600 font-semibold mb-1">{project.location}</p>
-                      <p className="text-gray-700 mb-2">{project.damage}</p>
+                      <p className="text-gray-200 mb-2">{project.damage}</p>
                       <div className="flex flex-wrap gap-4 text-sm">
                         <span className="text-green-600">✓ {project.response}</span>
                         <span className="text-green-600">✓ {project.outcome}</span>

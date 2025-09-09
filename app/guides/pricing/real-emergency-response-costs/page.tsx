@@ -260,7 +260,7 @@ export default function RealEmergencyResponseCostsPage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               What's Included in ${comprehensiveService.price.toLocaleString()} Professional Response
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Seven essential professional services - everything disclosed upfront, no hidden surprises
             </p>
           </div>
@@ -292,9 +292,9 @@ export default function RealEmergencyResponseCostsPage() {
                           {service.value}
                         </Badge>
                       </div>
-                      <p className="text-gray-700 mb-3">{service.description}</p>
+                      <p className="text-gray-200 mb-3">{service.description}</p>
                       <div className="bg-gray-50 p-3 rounded-lg">
-                        <p className="text-sm text-gray-600">{service.details}</p>
+                        <p className="text-sm text-gray-200">{service.details}</p>
                       </div>
                     </div>
                   </div>
@@ -326,7 +326,7 @@ export default function RealEmergencyResponseCostsPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Hidden Cost Operators: What They Actually Charge
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-200">
               Low initial quotes become shock invoices - here's how the scam works
             </p>
           </div>
@@ -337,7 +337,7 @@ export default function RealEmergencyResponseCostsPage() {
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-2xl font-semibold text-red-900">{operator.operator}</h3>
                   <div className="text-right">
-                    <div className="text-lg text-gray-600">Initial Quote:</div>
+                    <div className="text-lg text-gray-200">Initial Quote:</div>
                     <div className="text-2xl font-bold text-green-600">{operator.initialQuote}</div>
                   </div>
                 </div>
@@ -358,7 +358,7 @@ export default function RealEmergencyResponseCostsPage() {
                               )}
                             </div>
                             {cost.note && (
-                              <p className="text-xs text-gray-600 mt-1">{cost.note}</p>
+                              <p className="text-xs text-gray-200 mt-1">{cost.note}</p>
                             )}
                           </div>
                           <div className="font-bold text-red-600">{cost.cost}</div>
@@ -414,7 +414,7 @@ export default function RealEmergencyResponseCostsPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Additional Services - Complete Transparency
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-200">
               These services are NOT included in base response but are clearly disclosed if needed
             </p>
           </div>
@@ -435,7 +435,7 @@ export default function RealEmergencyResponseCostsPage() {
                   <div className="space-y-3">
                     {category.items.map((item, iIdx) => (
                       <div key={iIdx} className="flex justify-between">
-                        <span className="text-gray-700 text-sm">{item.service}</span>
+                        <span className="text-gray-200 text-sm">{item.service}</span>
                         <span className="text-gray-900 font-medium text-sm">{item.rate}</span>
                       </div>
                     ))}
@@ -467,7 +467,7 @@ export default function RealEmergencyResponseCostsPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Real Case Study: The Invoice Truth
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-200">
               {realWorldComparison.scenario} - Same damage, two pricing approaches
             </p>
           </div>
@@ -536,7 +536,7 @@ export default function RealEmergencyResponseCostsPage() {
                       <span className="text-gray-900">{item.service}</span>
                       <span className={idx === 0 ? 'text-green-600' : 'text-red-600'}>${item.cost}</span>
                     </div>
-                    <p className={`text-xs mt-1 ${idx === 0 ? 'text-gray-600' : 'text-red-700'}`}>
+                    <p className={`text-xs mt-1 ${idx === 0 ? 'text-gray-200' : 'text-red-700'}`}>
                       {item.explanation}
                     </p>
                   </div>

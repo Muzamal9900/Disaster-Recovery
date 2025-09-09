@@ -82,7 +82,7 @@ const categoryConfig = {
     borderColor: 'border-gray-500/20',
     bgPattern: 'bg-gradient-to-br from-gray-50 to-slate-50',
     iconBg: 'bg-gradient-to-br from-gray-100 to-slate-100',
-    iconColor: 'text-gray-700'
+    iconColor: 'text-gray-200'
   }
 };
 
@@ -133,7 +133,7 @@ export default function PremiumServiceCard({
           <div className="absolute top-4 right-4 z-20">
             <div className="flex items-center gap-1 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full shadow-lg">
               <Clock className="w-3 h-3 text-green-600" />
-              <span className="text-xs font-semibold text-gray-700">{responseTime}</span>
+              <span className="text-xs font-semibold text-gray-200">{responseTime}</span>
             </div>
           </div>
         )}
@@ -195,7 +195,7 @@ export default function PremiumServiceCard({
           </div>
 
           {/* Description */}
-          <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
+          <p className="text-gray-200 text-sm leading-relaxed line-clamp-2">
             {description}
           </p>
 
@@ -206,7 +206,7 @@ export default function PremiumServiceCard({
                 <li
                   key={index}
                   className={cn(
-                    "flex items-start gap-2 text-sm text-gray-600",
+                    "flex items-start gap-2 text-sm text-gray-200",
                     "transition-all duration-300 delay-75",
                     isHovered ? "translate-x-1" : "translate-x-0"
                   )}

@@ -375,7 +375,7 @@ export default function CoverageChecker() {
               <div className="max-w-3xl mx-auto">
                 {/* Progress Bar */}
                 <div className="mb-8">
-                  <div className="flex justify-between text-sm text-gray-600 mb-2">
+                  <div className="flex justify-between text-sm text-gray-200 mb-2">
                     <span>Question {step + 1} of {questions.length}</span>
                     <span>{Math.round(((step + 1) / questions.length) * 100)}% Complete</span>
                   </div>
@@ -399,7 +399,7 @@ export default function CoverageChecker() {
                     className="bg-white rounded-xl shadow-lg p-8"
                   >
                     <h3 className="text-2xl font-bold mb-2">{questions[step].question}</h3>
-                    <p className="text-gray-600 mb-6">{questions[step].subtitle}</p>
+                    <p className="text-gray-200 mb-6">{questions[step].subtitle}</p>
                     
                     <div className="space-y-3">
                       {questions[step].options.map((option) => (
@@ -413,11 +413,11 @@ export default function CoverageChecker() {
                           <div className="flex items-start justify-between">
                             <div>
                               <p className="font-semibold mb-1">{option.label}</p>
-                              <p className="text-sm text-gray-600">{option.description}</p>
+                              <p className="text-sm text-gray-200">{option.description}</p>
                             </div>
                             {option.impact === 'positive' && <TrendingUp className="w-5 h-5 text-green-500 mt-1" />}
                             {option.impact === 'negative' && <TrendingDown className="w-5 h-5 text-red-500 mt-1" />}
-                            {option.impact === 'neutral' && <AlertCircle className="w-5 h-5 text-gray-400 mt-1" />}
+                            {option.impact === 'neutral' && <AlertCircle className="w-5 h-5 text-gray-200 mt-1" />}
                           </div>
                         </motion.button>
                       ))}
@@ -476,10 +476,10 @@ export default function CoverageChecker() {
                       <div key={index} className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
                         {factor.impact === 'positive' && <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />}
                         {factor.impact === 'negative' && <XCircle className="w-5 h-5 text-red-500 mt-0.5" />}
-                        {factor.impact === 'neutral' && <AlertCircle className="w-5 h-5 text-gray-400 mt-0.5" />}
+                        {factor.impact === 'neutral' && <AlertCircle className="w-5 h-5 text-gray-200 mt-0.5" />}
                         <div className="flex-1">
                           <p className="font-semibold">{factor.question}</p>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-gray-200">
                             Your answer: {factor.answer} - {factor.explanation}
                           </p>
                         </div>
@@ -497,7 +497,7 @@ export default function CoverageChecker() {
                         <span className="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
                           {index + 1}
                         </span>
-                        <p className="text-gray-700">{step}</p>
+                        <p className="text-gray-200">{step}</p>
                       </div>
                     ))}
                   </div>
@@ -514,7 +514,7 @@ export default function CoverageChecker() {
                   </a>
                   <button
                     onClick={resetChecker}
-                    className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition-colors"
+                    className="flex-1 bg-gray-800 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-900 transition-colors"
                   >
                     Check Another Scenario
                   </button>
@@ -528,7 +528,7 @@ export default function CoverageChecker() {
                 <AlertTriangle className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold mb-1">Important Notice</p>
-                  <p className="text-sm text-gray-700">
+                  <p className="text-sm text-gray-200">
                     This is a general assessment based on typical insurance policies. Your specific policy may differ. 
                     Always consult your policy documents and insurer for definitive coverage decisions. 
                     We provide restoration services and claim support, not insurance advice.

@@ -216,7 +216,7 @@ export default function CleanLandingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl mx-auto"
+              className="text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl mx-auto"
             >
               Australia's largest emergency restoration network. 
               <10,000 IICRC certified contractors ready to help, with insurance approval guaranteed.
@@ -244,7 +244,7 @@ export default function CleanLandingPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="flex items-center justify-center gap-8 mt-12 text-sm text-gray-600"
+              className="flex items-center justify-center gap-8 mt-12 text-sm text-gray-200"
             >
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600" />
@@ -270,7 +270,7 @@ export default function CleanLandingPage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
               Why Choose Our Network
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-200 max-w-2xl mx-auto">
               We connect you with the best restoration professionals in Australia
             </p>
           </div>
@@ -292,7 +292,7 @@ export default function CleanLandingPage() {
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-200">
                       {feature.description}
                     </p>
                   </CardContent>
@@ -310,7 +310,7 @@ export default function CleanLandingPage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
               Emergency Services We Cover
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-200 max-w-2xl mx-auto">
               Professional restoration for all types of property damage
             </p>
           </div>
@@ -352,7 +352,7 @@ export default function CleanLandingPage() {
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-gray-200 text-sm mb-4">
                     {service.description}
                   </p>
                   <Link href="/contact" className="text-blue-600 font-medium inline-flex items-center hover:text-blue-700">
@@ -373,7 +373,7 @@ export default function CleanLandingPage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
               Contractor Portal - Professional Certification Program
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-200 max-w-3xl mx-auto">
               Join Australia's premier disaster recovery network. Complete our comprehensive 14-day certification program and become an approved restoration contractor.
             </p>
           </div>
@@ -410,7 +410,7 @@ export default function CleanLandingPage() {
                     <span className="text-sm font-bold text-indigo-600">{module.day}</span>
                     <h4 className="text-sm font-semibold text-gray-900">{module.title}</h4>
                   </div>
-                  <ul className="text-xs text-gray-600 space-y-1">
+                  <ul className="text-xs text-gray-200 space-y-1">
                     {module.topics.map((topic, i) => (
                       <li key={i} className="flex items-start">
                         <CheckCircle className="h-3 w-3 text-green-500 mr-1 mt-0.5 flex-shrink-0" />
@@ -460,7 +460,7 @@ export default function CleanLandingPage() {
               ></iframe>
             </div>
             <div className="mt-6 text-center">
-              <p className="text-gray-400 mb-4">
+              <p className="text-gray-200 mb-4">
                 Discover how we're building Australia's largest disaster recovery network
               </p>
               <div className="flex justify-center gap-4">
@@ -489,7 +489,7 @@ export default function CleanLandingPage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
               How It Works
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-200 max-w-2xl mx-auto">
               From disaster to restoration in 4 simple steps
             </p>
           </div>
@@ -516,7 +516,7 @@ export default function CleanLandingPage() {
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-200">
                     {item.description}
                   </p>
                 </motion.div>
@@ -538,7 +538,7 @@ export default function CleanLandingPage() {
                 <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
               ))}
             </div>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-200">
               4.9/5 from 10,000+ reviews
             </p>
           </div>
@@ -559,14 +559,14 @@ export default function CleanLandingPage() {
                         <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <p className="text-gray-700 mb-4 italic">
+                    <p className="text-gray-200 mb-4 italic">
                       "{testimonial.quote}"
                     </p>
                     <div className="border-t pt-4">
                       <p className="font-semibold text-gray-900">
                         {testimonial.author}
                       </p>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-200">
                         {testimonial.location} • {testimonial.service}
                       </p>
                     </div>

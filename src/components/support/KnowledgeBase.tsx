@@ -247,7 +247,7 @@ export function KnowledgeBase() {
           
           {/* Search Bar */}
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-200" />
             <Input
               type="text"
               placeholder="Search for articles, guides, or topics..."
@@ -256,7 +256,7 @@ export function KnowledgeBase() {
                 setSearchQuery(e.target.value);
                 handleSearch(e.target.value);
               }}
-              className="w-full pl-10 pr-4 py-3 bg-white text-gray-900 placeholder:text-gray-500"
+              className="w-full pl-10 pr-4 py-3 bg-white text-gray-900 placeholder:text-gray-300"
             />
           </div>
 
@@ -306,14 +306,14 @@ export function KnowledgeBase() {
                     <div className="flex-1">
                       <h3 className="font-medium flex items-center gap-2">
                         {result.title}
-                        <ArrowRight className="h-4 w-4 text-gray-400" />
+                        <ArrowRight className="h-4 w-4 text-gray-200" />
                       </h3>
-                      <p className="text-sm text-gray-600 mt-1">{result.excerpt}</p>
+                      <p className="text-sm text-gray-200 mt-1">{result.excerpt}</p>
                       <div className="flex items-center gap-3 mt-2">
                         <Badge variant="outline" className="text-xs">
                           {result.category}
                         </Badge>
-                        <span className="text-xs text-gray-500">
+                        <span className="text-xs text-gray-300">
                           Updated {new Date(result.lastUpdated).toLocaleDateString()}
                         </span>
                       </div>
@@ -352,10 +352,10 @@ export function KnowledgeBase() {
                             {category.name}
                             <ChevronRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </h3>
-                          <p className="text-sm text-gray-600 mt-1">
+                          <p className="text-sm text-gray-200 mt-1">
                             {category.description}
                           </p>
-                          <p className="text-xs text-gray-500 mt-2">
+                          <p className="text-xs text-gray-300 mt-2">
                             {category.articleCount} articles
                           </p>
                         </div>
@@ -384,11 +384,11 @@ export function KnowledgeBase() {
                     >
                       <div>
                         <h4 className="font-medium">{article.title}</h4>
-                        <p className="text-sm text-gray-600 mt-1">
+                        <p className="text-sm text-gray-200 mt-1">
                           {article.excerpt.substring(0, 100)}...
                         </p>
                       </div>
-                      <ChevronRight className="h-5 w-5 text-gray-400" />
+                      <ChevronRight className="h-5 w-5 text-gray-200" />
                     </div>
                   ))}
                 </div>
@@ -414,12 +414,12 @@ export function KnowledgeBase() {
                       className="flex items-center justify-between text-sm"
                     >
                       <span className="flex items-center gap-2">
-                        <span className="text-gray-500">#{index + 1}</span>
+                        <span className="text-gray-300">#{index + 1}</span>
                         <span className="hover:text-blue-600 cursor-pointer">
                           {article.title}
                         </span>
                       </span>
-                      <span className="text-xs text-gray-500">
+                      <span className="text-xs text-gray-300">
                         {article.views} views
                       </span>
                     </div>
@@ -465,7 +465,7 @@ export function KnowledgeBase() {
                       onClick={() => setSelectedArticle(article)}
                     >
                       <p className="font-medium">{article.title}</p>
-                      <p className="text-xs text-gray-500">
+                      <p className="text-xs text-gray-300">
                         {formatDistanceToNow(article.lastUpdated)} ago
                       </p>
                     </div>
@@ -483,7 +483,7 @@ export function KnowledgeBase() {
           <CardHeader>
             <div className="flex items-center justify-between">
               <div>
-                <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
+                <div className="flex items-center gap-2 text-sm text-gray-300 mb-2">
                   <Button
                     variant="ghost"
                     size="sm"
@@ -501,7 +501,7 @@ export function KnowledgeBase() {
                   )}
                 </div>
                 <CardTitle className="text-2xl">{selectedArticle.title}</CardTitle>
-                <div className="flex items-center gap-4 mt-2 text-sm text-gray-500">
+                <div className="flex items-center gap-4 mt-2 text-sm text-gray-300">
                   <span>By {selectedArticle.author}</span>
                   <span>•</span>
                   <span>Updated {formatDistanceToNow(selectedArticle.lastUpdated)} ago</span>

@@ -84,7 +84,7 @@ export default function ContractorPortalJobsPage() {
       'storm-damage': 'bg-purple-600',
       'biohazard': 'bg-orange-600'
     };
-    return colors[type] || 'bg-gray-600';
+    return colors[type] || 'bg-gray-800';
   };
 
   const getStatusColor = (status: string) => {
@@ -102,7 +102,7 @@ export default function ContractorPortalJobsPage() {
       case 'urgent': return 'text-red-400';
       case 'high': return 'text-orange-400';
       case 'medium': return 'text-yellow-400';
-      default: return 'text-gray-400';
+      default: return 'text-gray-200';
     }
   };
 
@@ -128,7 +128,7 @@ export default function ContractorPortalJobsPage() {
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-200 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search jobs by title, location, or client..."
@@ -193,15 +193,15 @@ export default function ContractorPortalJobsPage() {
                       </div>
                       <p className="text-gray-300 mb-3">{job.description}</p>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
-                        <div className="flex items-center gap-2 text-gray-400">
+                        <div className="flex items-center gap-2 text-gray-200">
                           <MapPin className="w-4 h-4" />
                           <span>{job.location}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-gray-400">
+                        <div className="flex items-center gap-2 text-gray-200">
                           <Clock className="w-4 h-4" />
                           <span>Deadline: {job.deadline}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-gray-400">
+                        <div className="flex items-center gap-2 text-gray-200">
                           <Briefcase className="w-4 h-4" />
                           <span>{job.client}</span>
                         </div>
@@ -211,7 +211,7 @@ export default function ContractorPortalJobsPage() {
                         </div>
                       </div>
                       <div className="mb-3">
-                        <p className="text-gray-400 text-sm mb-2">Requirements:</p>
+                        <p className="text-gray-200 text-sm mb-2">Requirements:</p>
                         <div className="flex flex-wrap gap-2">
                           {job.requirements.map((req, index) => (
                             <span key={index} className="px-2 py-1 bg-white/10 text-gray-300 rounded text-sm">
@@ -246,7 +246,7 @@ export default function ContractorPortalJobsPage() {
 
         {filteredJobs.length === 0 && (
           <div className="text-center py-12">
-            <Briefcase className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <Briefcase className="w-16 h-16 text-gray-200 mx-auto mb-4" />
             <p className="text-gray-300 text-lg">No jobs found matching your criteria</p>
           </div>
         )}

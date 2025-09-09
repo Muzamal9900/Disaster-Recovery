@@ -442,7 +442,7 @@ export default function Day3InsuranceClaims() {
                 <h1 className="text-2xl font-bold text-gray-900">
                   Day 3: Insurance Claims Process
                 </h1>
-                <p className="text-sm text-gray-600">Master the insurance ecosystem</p>
+                <p className="text-sm text-gray-200">Master the insurance ecosystem</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -466,7 +466,7 @@ export default function Day3InsuranceClaims() {
             <CardContent className="p-4">
               <h3 className="font-semibold mb-2">Module Progress</h3>
               <Progress value={50} className="mb-2" />
-              <p className="text-xs text-gray-600">3 of 6 modules completed</p>
+              <p className="text-xs text-gray-200">3 of 6 modules completed</p>
             </CardContent>
           </Card>
 
@@ -488,10 +488,10 @@ export default function Day3InsuranceClaims() {
                     ) : (
                       <div className="h-4 w-4 rounded-full border-2 border-gray-300" />
                     )}
-                    <span className="text-xs text-gray-600">Module {module.id}</span>
+                    <span className="text-xs text-gray-200">Module {module.id}</span>
                   </div>
                   <h4 className="text-sm font-medium">{module.title}</h4>
-                  <p className="text-xs text-gray-600 mt-1">{module.duration}</p>
+                  <p className="text-xs text-gray-200 mt-1">{module.duration}</p>
                 </CardContent>
               </Card>
             ))}
@@ -527,15 +527,15 @@ export default function Day3InsuranceClaims() {
                               <h3 className="font-semibold text-lg mb-2">{insurer.name}</h3>
                               <div className="space-y-2 text-sm">
                                 <div>
-                                  <span className="text-gray-600">Claim Process:</span>
+                                  <span className="text-gray-200">Claim Process:</span>
                                   <p className="font-medium">{insurer.claimProcess}</p>
                                 </div>
                                 <div>
-                                  <span className="text-gray-600">Payment Terms:</span>
+                                  <span className="text-gray-200">Payment Terms:</span>
                                   <p className="font-medium">{insurer.paymentTerms}</p>
                                 </div>
                                 <div>
-                                  <span className="text-gray-600">Preferred Vendor:</span>
+                                  <span className="text-gray-200">Preferred Vendor:</span>
                                   <p className="font-medium">{insurer.preferredVendor}</p>
                                 </div>
                               </div>
@@ -577,9 +577,9 @@ export default function Day3InsuranceClaims() {
                         <CardContent className="p-4">
                           <h4 className="font-medium mb-2">{policy.type}</h4>
                           <div className="space-y-1 text-sm">
-                            <p><span className="text-gray-600">Covers:</span> {policy.covers}</p>
-                            <p><span className="text-gray-600">Common:</span> {policy.common}</p>
-                            <p><span className="text-gray-600">Excluded:</span> {policy.excluded}</p>
+                            <p><span className="text-gray-200">Covers:</span> {policy.covers}</p>
+                            <p><span className="text-gray-200">Common:</span> {policy.common}</p>
+                            <p><span className="text-gray-200">Excluded:</span> {policy.excluded}</p>
                             <Badge variant="secondary" className="mt-2">{policy.excess}</Badge>
                           </div>
                         </CardContent>
@@ -633,7 +633,7 @@ export default function Day3InsuranceClaims() {
                             <TableCell>{item.description}</TableCell>
                             <TableCell>{item.unit}</TableCell>
                             <TableCell>{item.typicalPrice}</TableCell>
-                            <TableCell className="text-sm text-gray-600">{item.when}</TableCell>
+                            <TableCell className="text-sm text-gray-200">{item.when}</TableCell>
                           </TableRow>
                         ))}
                       </TableBody>

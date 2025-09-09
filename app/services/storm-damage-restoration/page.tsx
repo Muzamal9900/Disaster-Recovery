@@ -377,7 +377,7 @@ export default function StormDamageRestorationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Australian Storm Types We Handle
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-center text-gray-200 mb-12 max-w-3xl mx-auto">
               Specialised response for every severe weather system
             </p>
 
@@ -397,8 +397,8 @@ export default function StormDamageRestorationPage() {
                     </div>
                     <h3 className="text-xl font-bold">{storm.type}</h3>
                   </div>
-                  <p className="text-gray-700 mb-2">{storm.damage}</p>
-                  <p className="text-sm text-gray-600 mb-1">{storm.frequency}</p>
+                  <p className="text-gray-200 mb-2">{storm.damage}</p>
+                  <p className="text-sm text-gray-200 mb-1">{storm.frequency}</p>
                   <p className="text-sm font-semibold text-purple-600">Season: {storm.season}</p>
                 </motion.div>
               ))}
@@ -412,7 +412,7 @@ export default function StormDamageRestorationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Storm Damage Types & Solutions
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Comprehensive restoration for all storm-related damage
             </p>
 
@@ -427,7 +427,7 @@ export default function StormDamageRestorationPage() {
                   viewport={{ once: true }}
                 >
                   <h3 className="text-xl font-bold mb-3 text-purple-900">{damage.damage}</h3>
-                  <p className="text-gray-700 mb-2">
+                  <p className="text-gray-200 mb-2">
                     <strong>Causes:</strong> {damage.causes}
                   </p>
                   <p className={`font-semibold mb-2 ${
@@ -452,7 +452,7 @@ export default function StormDamageRestorationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Australia&apos;s Storm Belt Coverage
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Pre-positioned teams in severe weather corridors
             </p>
 
@@ -477,15 +477,15 @@ export default function StormDamageRestorationPage() {
                   }`}>
                     Risk: {belt.risk}
                   </p>
-                  <p className="text-gray-700 mb-2 text-sm">{belt.events}</p>
-                  <p className="text-gray-600 text-sm">Coverage: {belt.coverage}</p>
+                  <p className="text-gray-200 mb-2 text-sm">{belt.events}</p>
+                  <p className="text-gray-200 text-sm">Coverage: {belt.coverage}</p>
                 </motion.div>
               ))}
             </div>
 
             <div className="mt-12 p-6 bg-purple-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3">Supercell Alley Response</h3>
-              <p className="text-gray-700">
+              <p className="text-gray-200">
                 Southeast Queensland&apos;s "Supercell Alley" experiences the most intense storms in Australia, 
                 with giant hail exceeding 10cm. Our specialised supercell response teams are equipped with 
                 reinforced vehicles and protective gear for immediate deployment during these extreme events.
@@ -500,7 +500,7 @@ export default function StormDamageRestorationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Storm Response Protocol
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Systematic approach from emergency response to complete restoration
             </p>
 
@@ -550,10 +550,10 @@ export default function StormDamageRestorationPage() {
                   viewport={{ once: true }}
                 >
                   <h3 className="text-xl font-bold mb-3 text-purple-900">{season.season}</h3>
-                  <p className="text-gray-700 mb-2">
+                  <p className="text-gray-200 mb-2">
                     <strong>Main Threat:</strong> {season.threat}
                   </p>
-                  <p className="text-gray-700 mb-2">
+                  <p className="text-gray-200 mb-2">
                     <strong>Preparation:</strong> {season.preparation}
                   </p>
                   <p className="text-purple-600 font-semibold">
@@ -621,7 +621,7 @@ export default function StormDamageRestorationPage() {
 
               <div className="mt-12 p-6 bg-purple-50 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">Bureau of Meteorology Integration</h3>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-200 mb-4">
                   We monitor Bureau of Meteorology warnings 24/7 and pre-deploy teams when severe weather 
                   is forecast. This proactive approach means we&apos;re often on-site within minutes of storm 
                   passage, providing the fastest possible response to minimise damage.

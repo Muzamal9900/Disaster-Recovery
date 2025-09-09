@@ -260,7 +260,7 @@ export default function LandingHeader({ demoMode = false, onToggleDemo }: Landin
                           <span className="text-white group-hover:text-blue-300 transition-colors">
                             {item.label}
                           </span>
-                          <ArrowRight className="h-4 w-4 text-gray-500 ml-auto group-hover:text-blue-400 group-hover:translate-x-1 transition-all" />
+                          <ArrowRight className="h-4 w-4 text-gray-300 ml-auto group-hover:text-blue-400 group-hover:translate-x-1 transition-all" />
                         </Link>
                       ))}
                     </div>

@@ -169,10 +169,10 @@ export default function WaterDamageRestorationPage() {
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-white mb-3">Clean Water</h3>
-              <p className="text-gray-400 mb-4">
+              <p className="text-gray-200 mb-4">
                 Water from sanitary sources like broken water lines, tub overflows, or rainwater. Requires immediate extraction and drying to prevent escalation.
               </p>
-              <ul className="space-y-2 text-sm text-gray-500">
+              <ul className="space-y-2 text-sm text-gray-300">
                 <li className="flex items-start r6-list-item">
                   <svg className="w-5 h-5 text-electric-blue mr-2 mt-0.5 r6-icon-glow" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -212,7 +212,7 @@ export default function WaterDamageRestorationPage() {
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-white mb-3">Grey Water</h3>
-              <p className="text-gray-400 mb-4">
+              <p className="text-gray-200 mb-4">
                 Contains significant contamination that could cause illness. Requires PPE, antimicrobial treatment, and disposal of affected porous materials.
               </p>
               <ul className="space-y-2 text-sm text-neutral-600">
@@ -255,7 +255,7 @@ export default function WaterDamageRestorationPage() {
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-white mb-3">Black Water</h3>
-              <p className="text-gray-400 mb-4">
+              <p className="text-gray-200 mb-4">
                 Grossly contaminated water containing pathogens and toxins. Requires full PPE, containment, and specialised biohazard protocols per IICRC S500.
               </p>
               <ul className="space-y-2 text-sm text-neutral-600">
@@ -316,7 +316,7 @@ export default function WaterDamageRestorationPage() {
                     />
                     <div>
                       <h4 className="font-semibold text-white mb-1">Immediate Assessment</h4>
-                      <p className="text-sm text-gray-400">
+                      <p className="text-sm text-gray-200">
                         Phone triage determines severity and dispatches appropriate resources
                       </p>
                     </div>
@@ -327,7 +327,7 @@ export default function WaterDamageRestorationPage() {
                     </svg>
                     <div>
                       <h4 className="font-semibold text-white mb-1">Response Time</h4>
-                      <p className="text-sm text-gray-400">
+                      <p className="text-sm text-gray-200">
                         Average arrival: 47 minutes in metropolitan areas
                       </p>
                     </div>
@@ -362,7 +362,7 @@ export default function WaterDamageRestorationPage() {
                       className="mx-auto mb-2 rounded"
                     />
                     <h4 className="font-semibold text-sm text-white">Thermal Imaging</h4>
-                    <p className="text-xs text-gray-400 mt-1">
+                    <p className="text-xs text-gray-200 mt-1">
                       Identifies hidden moisture
                     </p>
                   </div>
@@ -459,7 +459,7 @@ export default function WaterDamageRestorationPage() {
                     />
                     <div>
                       <h4 className="font-semibold text-white">Dehumidifiers</h4>
-                      <p className="text-sm text-gray-400">
+                      <p className="text-sm text-gray-200">
                         Remove up to 30 gallons of moisture daily
                       </p>
                     </div>
@@ -474,7 +474,7 @@ export default function WaterDamageRestorationPage() {
                     />
                     <div>
                       <h4 className="font-semibold text-white">Air Movers</h4>
-                      <p className="text-sm text-gray-400">
+                      <p className="text-sm text-gray-200">
                         Create rapid evaporation with targeted airflow
                       </p>
                     </div>
@@ -511,7 +511,7 @@ export default function WaterDamageRestorationPage() {
                       />
                       <h4 className="font-semibold text-emerald-600">Thermal Fogging</h4>
                     </div>
-                    <p className="text-sm text-gray-400">
+                    <p className="text-sm text-gray-200">
                       Penetrates porous materials for deep deodorization
                     </p>
                   </div>
@@ -522,7 +522,7 @@ export default function WaterDamageRestorationPage() {
                       </svg>
                       <h4 className="font-semibold text-emerald-600">HEPA Filtration</h4>
                     </div>
-                    <p className="text-sm text-gray-400">
+                    <p className="text-sm text-gray-200">
                       Removes 99.97% of airborne particles and mould spores
                     </p>
                   </div>
@@ -558,19 +558,19 @@ export default function WaterDamageRestorationPage() {
                 <div className="grid md:grid-cols-3 gap-4 mt-6 text-center">
                   <div>
                     <h4 className="font-semibold text-white">Minor Repairs</h4>
-                    <p className="text-sm text-gray-400 mt-1">
+                    <p className="text-sm text-gray-200 mt-1">
                       Drywall, paint, carpet
                     </p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-white">Major Repairs</h4>
-                    <p className="text-sm text-gray-400 mt-1">
+                    <p className="text-sm text-gray-200 mt-1">
                       Structural, roofing, rooms
                     </p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-white">Reconstruction</h4>
-                    <p className="text-sm text-gray-400 mt-1">
+                    <p className="text-sm text-gray-200 mt-1">
                       Complete rebuild services
                     </p>
                   </div>
@@ -641,7 +641,7 @@ export default function WaterDamageRestorationPage() {
                 </div>
                 <h3 className="font-bold text-white mb-2">{item.name}</h3>
                 <p className="text-sm text-electric-blue font-semibold mb-1 r6-text-glow-subtle">{item.specs}</p>
-                <p className="text-sm text-gray-400">{item.benefit}</p>
+                <p className="text-sm text-gray-200">{item.benefit}</p>
               </div>
             ))}
           </div>
@@ -692,7 +692,7 @@ export default function WaterDamageRestorationPage() {
             <div className="r6-glass-subtle rounded-xl p-6 border border-electric-blue/20">
               <h4 className="font-bold text-electric-blue mb-4 r6-text-glow-subtle">Documentation We Provide:</h4>
               <ul className="space-y-2 text-sm">
-                <li className="flex items-center text-gray-400 r6-list-item">
+                <li className="flex items-center text-gray-200 r6-list-item">
                   <span className="w-2 h-2 bg-electric-blue rounded-full mr-3 r6-pulse-dot"></span>
                   Pre-mitigation photos and videos
                 </li>
@@ -767,7 +767,7 @@ export default function WaterDamageRestorationPage() {
             <div key={index} className="r6-card-premium r6-hover-lift p-6 group">
               <div className="text-4xl mb-4 r6-icon-float">{item.icon}</div>
               <h3 className="text-xl font-bold text-white mb-2 group-hover:text-electric-blue transition-colours">{item.title}</h3>
-              <p className="text-gray-400">{item.description}</p>
+              <p className="text-gray-200">{item.description}</p>
             </div>
           ))}
         </div>

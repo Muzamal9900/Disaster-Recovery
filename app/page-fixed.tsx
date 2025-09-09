@@ -80,7 +80,7 @@ export default function FixedHomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-xl text-gray-600 mb-8"
+                className="text-xl text-gray-200 mb-8"
               >
                 Connect with <10,000 IICRC certified contractors instantly.
                 100% online. No phone calls. Help in minutes.
@@ -97,7 +97,7 @@ export default function FixedHomePage() {
                   <CardContent className="p-6 text-center">
                     <MessageCircle className="h-10 w-10 text-blue-600 mx-auto mb-3" />
                     <h3 className="font-semibold mb-1">Live Chat</h3>
-                    <p className="text-sm text-gray-600">Instant response</p>
+                    <p className="text-sm text-gray-200">Instant response</p>
                     <p className="text-xs text-green-600 mt-2">Available Now</p>
                   </CardContent>
                 </Card>
@@ -106,7 +106,7 @@ export default function FixedHomePage() {
                   <CardContent className="p-6 text-center">
                     <Globe className="h-10 w-10 text-green-600 mx-auto mb-3" />
                     <h3 className="font-semibold mb-1">Online Claim</h3>
-                    <p className="text-sm text-gray-600">2-minute form</p>
+                    <p className="text-sm text-gray-200">2-minute form</p>
                     <p className="text-xs text-green-600 mt-2">Quick & Easy</p>
                   </CardContent>
                 </Card>
@@ -115,7 +115,7 @@ export default function FixedHomePage() {
                   <CardContent className="p-6 text-center">
                     <Globe className="h-10 w-10 text-purple-600 mx-auto mb-3" />
                     <h3 className="font-semibold mb-1">Email Support</h3>
-                    <p className="text-sm text-gray-600">Detailed help</p>
+                    <p className="text-sm text-gray-200">Detailed help</p>
                     <p className="text-xs text-green-600 mt-2">< 1hr response</p>
                   </CardContent>
                 </Card>
@@ -213,7 +213,7 @@ export default function FixedHomePage() {
                 >
                   <feature.icon className="h-12 w-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.desc}</p>
+                  <p className="text-gray-200">{feature.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -245,7 +245,7 @@ export default function FixedHomePage() {
                     {item.step}
                   </div>
                   <h3 className="font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-600">{item.desc}</p>
+                  <p className="text-sm text-gray-200">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -263,7 +263,7 @@ export default function FixedHomePage() {
                 <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
               ))}
             </div>
-            <p className="text-center text-lg text-gray-600 mb-12">
+            <p className="text-center text-lg text-gray-200 mb-12">
               4.9/5 from 10,000+ verified reviews
             </p>
 
@@ -292,10 +292,10 @@ export default function FixedHomePage() {
                         <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <p className="text-gray-700 mb-4 italic">"{testimonial.quote}"</p>
+                    <p className="text-gray-200 mb-4 italic">"{testimonial.quote}"</p>
                     <div className="border-t pt-4">
                       <p className="font-semibold">{testimonial.author}</p>
-                      <p className="text-sm text-gray-600">{testimonial.location}</p>
+                      <p className="text-sm text-gray-200">{testimonial.location}</p>
                     </div>
                   </CardContent>
                 </Card>

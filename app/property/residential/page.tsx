@@ -196,7 +196,7 @@ export default function ResidentialPropertyPage() {
     },
     {
       disaster: 'Storm Damage',
-      icon: <Cloud className="w-6 h-6 text-gray-600" />,
+      icon: <Cloud className="w-6 h-6 text-gray-200" />,
       residentialConcerns: [
         'Roof damage and leaks',
         'Window breakage',
@@ -474,7 +474,7 @@ export default function ResidentialPropertyPage() {
                   className={`px-4 py-2 rounded-lg font-semibold transition-all ${
                     selectedPropertyType === key
                       ? 'bg-blue-600 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-blue-50 border border-gray-200'
+                      : 'bg-white text-gray-200 hover:bg-blue-50 border border-gray-200'
                   }`}
                 >
                   {propertyTypes[key as keyof typeof propertyTypes].name}
@@ -494,7 +494,7 @@ export default function ResidentialPropertyPage() {
                   <h3 className="text-2xl font-bold mb-4">
                     {propertyTypes[selectedPropertyType as keyof typeof propertyTypes].name}
                   </h3>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-gray-200 mb-6">
                     {propertyTypes[selectedPropertyType as keyof typeof propertyTypes].description}
                   </p>
                   
@@ -504,7 +504,7 @@ export default function ResidentialPropertyPage() {
                       {propertyTypes[selectedPropertyType as keyof typeof propertyTypes].commonIssues.map((issue, idx) => (
                         <li key={idx} className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-red-500 mt-0.5" />
-                          <span className="text-gray-700">{issue}</span>
+                          <span className="text-gray-200">{issue}</span>
                         </li>
                       ))}
                     </ul>
@@ -513,12 +513,12 @@ export default function ResidentialPropertyPage() {
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-white rounded-lg p-4 border border-gray-200">
                       <DollarSign className="w-6 h-6 text-green-600 mb-2" />
-                      <p className="text-sm font-semibold text-gray-600">Average Claim</p>
+                      <p className="text-sm font-semibold text-gray-200">Average Claim</p>
                       <p className="font-bold">{propertyTypes[selectedPropertyType as keyof typeof propertyTypes].averageClaimSize}</p>
                     </div>
                     <div className="bg-white rounded-lg p-4 border border-gray-200">
                       <Clock className="w-6 h-6 text-blue-600 mb-2" />
-                      <p className="text-sm font-semibold text-gray-600">Response Time</p>
+                      <p className="text-sm font-semibold text-gray-200">Response Time</p>
                       <p className="font-bold">{propertyTypes[selectedPropertyType as keyof typeof propertyTypes].responseTime}</p>
                     </div>
                   </div>
@@ -534,7 +534,7 @@ export default function ResidentialPropertyPage() {
                       {propertyTypes[selectedPropertyType as keyof typeof propertyTypes].insuranceConsiderations.map((consideration, idx) => (
                         <li key={idx} className="flex items-start gap-2">
                           <Info className="w-4 h-4 text-blue-500 mt-0.5" />
-                          <span className="text-gray-700 text-sm">{consideration}</span>
+                          <span className="text-gray-200 text-sm">{consideration}</span>
                         </li>
                       ))}
                     </ul>
@@ -576,10 +576,10 @@ export default function ResidentialPropertyPage() {
                   
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <h4 className="font-semibold text-sm mb-2 text-gray-600">Residential Concerns</h4>
+                      <h4 className="font-semibold text-sm mb-2 text-gray-200">Residential Concerns</h4>
                       <ul className="space-y-1">
                         {disaster.residentialConcerns.map((concern, idx) => (
-                          <li key={idx} className="text-sm text-gray-700 flex items-start gap-1">
+                          <li key={idx} className="text-sm text-gray-200 flex items-start gap-1">
                             <span className="text-red-500">•</span>
                             {concern}
                           </li>
@@ -587,10 +587,10 @@ export default function ResidentialPropertyPage() {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-sm mb-2 text-gray-600">Immediate Actions</h4>
+                      <h4 className="font-semibold text-sm mb-2 text-gray-200">Immediate Actions</h4>
                       <ul className="space-y-1">
                         {disaster.immediateActions.map((action, idx) => (
-                          <li key={idx} className="text-sm text-gray-700 flex items-start gap-1">
+                          <li key={idx} className="text-sm text-gray-200 flex items-start gap-1">
                             <span className="text-green-500">•</span>
                             {action}
                           </li>
@@ -633,10 +633,10 @@ export default function ResidentialPropertyPage() {
                       {step.step}
                     </div>
                     <h3 className="font-bold mb-2">{step.title}</h3>
-                    <p className="text-sm text-gray-600 mb-3">{step.description}</p>
+                    <p className="text-sm text-gray-200 mb-3">{step.description}</p>
                     <ul className="space-y-1">
                       {step.details.map((detail, idx) => (
-                        <li key={idx} className="text-xs text-gray-500 flex items-start gap-1">
+                        <li key={idx} className="text-xs text-gray-300 flex items-start gap-1">
                           <CheckCircle className="w-3 h-3 text-green-500 mt-0.5" />
                           {detail}
                         </li>
@@ -684,7 +684,7 @@ export default function ResidentialPropertyPage() {
                   </div>
                   <ul className="space-y-2">
                     {category.tips.map((tip, idx) => (
-                      <li key={idx} className="text-sm text-gray-700 flex items-start gap-2">
+                      <li key={idx} className="text-sm text-gray-200 flex items-start gap-2">
                         <span className="text-green-500 mt-1">✓</span>
                         {tip}
                       </li>
@@ -734,7 +734,7 @@ export default function ResidentialPropertyPage() {
                       {factor.impact} Impact
                     </span>
                   </div>
-                  <p className="text-sm text-gray-600 mb-3">{factor.description}</p>
+                  <p className="text-sm text-gray-200 mb-3">{factor.description}</p>
                   <div className="pt-3 border-t border-gray-200">
                     <p className="text-sm font-semibold text-blue-600">{factor.range}</p>
                   </div>
@@ -780,7 +780,7 @@ export default function ResidentialPropertyPage() {
                     />
                   </button>
                   {expandedSection === index && (
-                    <div className="px-6 pb-4 text-gray-600 border-t border-gray-100">
+                    <div className="px-6 pb-4 text-gray-200 border-t border-gray-100">
                       <p className="pt-4">{faq.answer}</p>
                     </div>
                   )}
@@ -811,7 +811,7 @@ export default function ResidentialPropertyPage() {
               >
                 <Droplets className="w-10 h-10 text-blue-600 mb-3" />
                 <h3 className="font-bold mb-2">Water Damage Guide</h3>
-                <p className="text-gray-600 text-sm">Complete water damage recovery guide</p>
+                <p className="text-gray-200 text-sm">Complete water damage recovery guide</p>
               </Link>
               
               <Link
@@ -820,7 +820,7 @@ export default function ResidentialPropertyPage() {
               >
                 <AlertCircle className="w-10 h-10 text-orange-600 mb-3" />
                 <h3 className="font-bold mb-2">Emergency Checklist</h3>
-                <p className="text-gray-600 text-sm">What to do in the first 24 hours</p>
+                <p className="text-gray-200 text-sm">What to do in the first 24 hours</p>
               </Link>
               
               <Link
@@ -829,7 +829,7 @@ export default function ResidentialPropertyPage() {
               >
                 <Shield className="w-10 h-10 text-green-600 mb-3" />
                 <h3 className="font-bold mb-2">Insurance Decoder</h3>
-                <p className="text-gray-600 text-sm">Understanding your home insurance</p>
+                <p className="text-gray-200 text-sm">Understanding your home insurance</p>
               </Link>
               
               <Link
@@ -838,7 +838,7 @@ export default function ResidentialPropertyPage() {
               >
                 <Phone className="w-10 h-10 text-red-600 mb-3" />
                 <h3 className="font-bold mb-2">Emergency Contacts</h3>
-                <p className="text-gray-600 text-sm">24/7 residential emergency services</p>
+                <p className="text-gray-200 text-sm">24/7 residential emergency services</p>
               </Link>
             </div>
           </motion.div>

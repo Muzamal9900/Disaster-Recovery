@@ -309,7 +309,7 @@ export default function BushfireDamageRestorationPage() {
                 {healthHazards.map((hazard, index) => (
                   <div key={index} className="bg-white p-4 rounded-lg shadow">
                     <h3 className="font-bold text-red-700 mb-2">{hazard.hazard}</h3>
-                    <p className="text-sm text-gray-600 mb-2">Risk: {hazard.risk}</p>
+                    <p className="text-sm text-gray-200 mb-2">Risk: {hazard.risk}</p>
                     <p className="text-sm text-green-700">Solution: {hazard.solution}</p>
                   </div>
                 ))}
@@ -324,7 +324,7 @@ export default function BushfireDamageRestorationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Bushfire Restoration Process
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-center text-gray-200 mb-12 max-w-3xl mx-auto">
               Systematic approach developed from decades of Australian bushfire recovery
             </p>
 
@@ -355,7 +355,7 @@ export default function BushfireDamageRestorationPage() {
                         {phase.actions.map((action, actionIndex) => (
                           <li key={actionIndex} className="flex items-start gap-2">
                             <CheckCircle className="w-4 h-4 text-green-600 mt-0.5" />
-                            <span className="text-gray-700">{action}</span>
+                            <span className="text-gray-200">{action}</span>
                           </li>
                         ))}
                       </ul>
@@ -373,7 +373,7 @@ export default function BushfireDamageRestorationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Australian Bushfire Risk Areas We Service
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Specialist teams positioned in all high-risk bushfire zones
             </p>
 
@@ -394,7 +394,7 @@ export default function BushfireDamageRestorationPage() {
                       <strong>High-risk areas:</strong>
                       <ul className="mt-1 space-y-1">
                         {area.areas.map((location, locIndex) => (
-                          <li key={locIndex} className="text-gray-600">• {location}</li>
+                          <li key={locIndex} className="text-gray-200">• {location}</li>
                         ))}
                       </ul>
                     </div>
@@ -417,7 +417,7 @@ export default function BushfireDamageRestorationPage() {
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-lg shadow-lg">
-                  <Wind className="w-12 h-12 text-gray-600 mb-4" />
+                  <Wind className="w-12 h-12 text-gray-200 mb-4" />
                   <h3 className="text-2xl font-bold mb-4">Smoke Penetration</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
@@ -541,7 +541,7 @@ export default function BushfireDamageRestorationPage() {
               <h2 className="text-3xl font-bold mb-6">
                 Supporting Australian Communities Through Recovery
               </h2>
-              <p className="text-lg text-gray-700 mb-8">
+              <p className="text-lg text-gray-200 mb-8">
                 We understand bushfire recovery extends beyond property restoration. 
                 Our teams are trained in trauma-informed care and work closely with 
                 community support services to ensure comprehensive recovery for affected families.

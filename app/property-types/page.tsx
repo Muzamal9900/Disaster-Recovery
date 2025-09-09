@@ -114,9 +114,9 @@ export default function PropertyTypesPage() {
       case 'Government': return 'bg-red-600';
       case 'Healthcare': return 'bg-pink-600';
       case 'Education': return 'bg-yellow-600';
-      case 'Industrial': return 'bg-gray-600';
+      case 'Industrial': return 'bg-gray-800';
       case 'Hospitality': return 'bg-blue-700';
-      default: return 'bg-gray-600';
+      default: return 'bg-gray-800';
     }
   };
 
@@ -154,7 +154,7 @@ export default function PropertyTypesPage() {
                     </span>
                   </div>
                   <h2 className="text-2xl font-bold mb-3">{property.name}</h2>
-                  <p className="text-gray-600 mb-4">{property.description}</p>
+                  <p className="text-gray-200 mb-4">{property.description}</p>
                   <div className="space-y-2 mb-4">
                     <p className="text-sm flex justify-between">
                       <span>Response:</span>
@@ -187,7 +187,7 @@ export default function PropertyTypesPage() {
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="p-6">
                 <h3 className="text-xl font-bold mb-4">Residential Properties</h3>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-gray-200">
                   <li>• Family safety and health priority</li>
                   <li>• Personal belongings protection</li>
                   <li>• Temporary accommodation assistance</li>
@@ -196,7 +196,7 @@ export default function PropertyTypesPage() {
               </Card>
               <Card className="p-6">
                 <h3 className="text-xl font-bold mb-4">Commercial Properties</h3>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-gray-200">
                   <li>• Business continuity focus</li>
                   <li>• Minimize revenue loss</li>
                   <li>• Document and data recovery</li>
@@ -205,7 +205,7 @@ export default function PropertyTypesPage() {
               </Card>
               <Card className="p-6">
                 <h3 className="text-xl font-bold mb-4">Strata Properties</h3>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-gray-200">
                   <li>• Multiple stakeholder coordination</li>
                   <li>• Common area prioritization</li>
                   <li>• Strata management liaison</li>
@@ -214,7 +214,7 @@ export default function PropertyTypesPage() {
               </Card>
               <Card className="p-6">
                 <h3 className="text-xl font-bold mb-4">Government Properties</h3>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-gray-200">
                   <li>• Public safety paramount</li>
                   <li>• Regulatory compliance</li>
                   <li>• Security clearance protocols</li>

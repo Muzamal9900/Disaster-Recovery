@@ -276,7 +276,7 @@ export default function TrainingHub() {
       case 'in-progress':
         return <PlayCircle className="h-5 w-5 text-blue-600" />;
       case 'locked':
-        return <Lock className="h-5 w-5 text-gray-400" />;
+        return <Lock className="h-5 w-5 text-gray-200" />;
       default:
         return <AlertCircle className="h-5 w-5 text-yellow-600" />;
     }
@@ -289,7 +289,7 @@ export default function TrainingHub() {
       case 'in-progress':
         return 'bg-blue-100 text-blue-800';
       case 'locked':
-        return 'bg-gray-100 text-gray-600';
+        return 'bg-gray-100 text-gray-200';
       default:
         return 'bg-yellow-100 text-yellow-800';
     }
@@ -310,12 +310,12 @@ export default function TrainingHub() {
               </Link>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">Training Hub</h1>
-                <p className="text-sm text-gray-600">Complete your certification journey</p>
+                <p className="text-sm text-gray-200">Complete your certification journey</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
               <div className="text-right">
-                <p className="text-sm text-gray-600">Overall Progress</p>
+                <p className="text-sm text-gray-200">Overall Progress</p>
                 <p className="text-lg font-bold">18% Complete</p>
               </div>
               <Button>
@@ -345,19 +345,19 @@ export default function TrainingHub() {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 pt-4">
                 <div className="text-center">
                   <p className="text-3xl font-bold text-blue-600">2</p>
-                  <p className="text-sm text-gray-600">Days Completed</p>
+                  <p className="text-sm text-gray-200">Days Completed</p>
                 </div>
                 <div className="text-center">
                   <p className="text-3xl font-bold text-green-600">90%</p>
-                  <p className="text-sm text-gray-600">Average Score</p>
+                  <p className="text-sm text-gray-200">Average Score</p>
                 </div>
                 <div className="text-center">
                   <p className="text-3xl font-bold text-purple-600">16</p>
-                  <p className="text-sm text-gray-600">Modules Completed</p>
+                  <p className="text-sm text-gray-200">Modules Completed</p>
                 </div>
                 <div className="text-center">
                   <p className="text-3xl font-bold text-orange-600">11.5</p>
-                  <p className="text-sm text-gray-600">Days Remaining</p>
+                  <p className="text-sm text-gray-200">Days Remaining</p>
                 </div>
               </div>
             </div>
@@ -383,7 +383,7 @@ export default function TrainingHub() {
                           <CardTitle className="text-lg">
                             Day {day.day}: {day.title}
                           </CardTitle>
-                          <p className="text-sm text-gray-600 mt-1">
+                          <p className="text-sm text-gray-200 mt-1">
                             <Clock className="inline h-3 w-3 mr-1" />
                             {day.duration} • {day.modules.length} modules
                           </p>
@@ -392,13 +392,13 @@ export default function TrainingHub() {
                       <div className="flex items-center gap-3">
                         {day.status === 'completed' && (
                           <div className="text-right">
-                            <p className="text-sm text-gray-600">Score</p>
+                            <p className="text-sm text-gray-200">Score</p>
                             <p className="text-xl font-bold text-green-600">{day.score}%</p>
                           </div>
                         )}
                         {day.status === 'in-progress' && (
                           <div className="text-right">
-                            <p className="text-sm text-gray-600">Progress</p>
+                            <p className="text-sm text-gray-200">Progress</p>
                             <p className="text-xl font-bold text-blue-600">{day.progress}%</p>
                           </div>
                         )}
@@ -424,7 +424,7 @@ export default function TrainingHub() {
                               day.status === 'completed' ? 'text-green-600' : 
                               day.status === 'in-progress' && idx < 4 ? 'text-green-600' : 'text-gray-300'
                             }`} />
-                            <span className={day.status === 'completed' || (day.status === 'in-progress' && idx < 4) ? '' : 'text-gray-500'}>
+                            <span className={day.status === 'completed' || (day.status === 'in-progress' && idx < 4) ? '' : 'text-gray-300'}>
                               {module}
                             </span>
                           </div>
@@ -449,7 +449,7 @@ export default function TrainingHub() {
                           <CardTitle className="text-lg">
                             Day {day.day}: {day.title}
                           </CardTitle>
-                          <p className="text-sm text-gray-600 mt-1">
+                          <p className="text-sm text-gray-200 mt-1">
                             <Clock className="inline h-3 w-3 mr-1" />
                             {day.duration} • {day.modules.length} modules
                           </p>
@@ -477,13 +477,13 @@ export default function TrainingHub() {
                 <div key={cert.title} className={`p-4 border rounded-lg ${cert.status === 'locked' ? 'opacity-60 bg-gray-50' : 'bg-white'}`}>
                   <div className="flex items-start justify-between mb-3">
                     <Award className="h-8 w-8 text-yellow-600" />
-                    {cert.status === 'locked' && <Lock className="h-4 w-4 text-gray-400" />}
+                    {cert.status === 'locked' && <Lock className="h-4 w-4 text-gray-200" />}
                   </div>
                   <h3 className="font-semibold mb-1">{cert.title}</h3>
-                  <p className="text-sm text-gray-600 mb-3">{cert.description}</p>
+                  <p className="text-sm text-gray-200 mb-3">{cert.description}</p>
                   <div className="flex items-center justify-between">
                     <div className="text-sm">
-                      <p className="text-gray-600">Duration: {cert.duration}</p>
+                      <p className="text-gray-200">Duration: {cert.duration}</p>
                       <p className="font-semibold">${cert.price}</p>
                       {cert.prerequisite && (
                         <p className="text-xs text-red-600 mt-1">Requires: {cert.prerequisite}</p>
@@ -509,17 +509,17 @@ export default function TrainingHub() {
               <Button variant="outline" className="h-auto py-4 flex flex-col">
                 <Users className="h-6 w-6 mb-2" />
                 <span>Peer Forum</span>
-                <span className="text-xs text-gray-600">Connect with other contractors</span>
+                <span className="text-xs text-gray-200">Connect with other contractors</span>
               </Button>
               <Button variant="outline" className="h-auto py-4 flex flex-col">
                 <FileText className="h-6 w-6 mb-2" />
                 <span>Resource Library</span>
-                <span className="text-xs text-gray-600">24/7 access to materials</span>
+                <span className="text-xs text-gray-200">24/7 access to materials</span>
               </Button>
               <Button variant="outline" className="h-auto py-4 flex flex-col">
                 <Heart className="h-6 w-6 mb-2" />
                 <span>Mentor Support</span>
-                <span className="text-xs text-gray-600">1-on-1 coaching available</span>
+                <span className="text-xs text-gray-200">1-on-1 coaching available</span>
               </Button>
             </div>
           </CardContent>

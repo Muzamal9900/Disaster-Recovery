@@ -77,15 +77,15 @@ export default function AutomationModule() {
             
             <li key="0" className="flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Automated Workflows</span>
+              <span className="text-gray-200">Automated Workflows</span>
             </li>
             <li key="1" className="flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">Custom Automation Rules</span>
+              <span className="text-gray-200">Custom Automation Rules</span>
             </li>
             <li key="2" className="flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-700">AI-Powered Features</span>
+              <span className="text-gray-200">AI-Powered Features</span>
             </li>
           </ul>
         </CardContent>
@@ -144,7 +144,7 @@ export default function AutomationModule() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="prose prose-gray max-w-none">
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">
                   Pre-Built Automations:
 • Lead Auto-Accept - Criteria-based automatic acceptance
 • Territory Expansion - Dynamic radius adjustment
@@ -204,7 +204,7 @@ export default function AutomationModule() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="prose prose-gray max-w-none">
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">
                   Creating Custom Rules:
 1. Define trigger events (lead received, job completed)
 2. Set conditions (territory, service type, value)
@@ -264,7 +264,7 @@ export default function AutomationModule() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="prose prose-gray max-w-none">
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">
                   Smart Automation:
 • Lead scoring and prioritization
 • Optimal contractor matching

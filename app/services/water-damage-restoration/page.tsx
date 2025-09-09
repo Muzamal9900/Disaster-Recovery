@@ -218,13 +218,13 @@ export default function WaterDamageRestorationPage() {
                     <p className="text-3xl font-bold text-white">
                       {brisbaneFloods.details.propertiesFlooded.toLocaleString()}
                     </p>
-                    <p className="text-sm text-gray-400">Properties Flooded</p>
+                    <p className="text-sm text-gray-200">Properties Flooded</p>
                   </div>
                   <div className="bg-black/30 rounded-lg p-3">
                     <p className="text-3xl font-bold text-white">
                       {brisbaneFloods.details.totalDamage}
                     </p>
-                    <p className="text-sm text-gray-400">Total Damage</p>
+                    <p className="text-sm text-gray-200">Total Damage</p>
                   </div>
                 </div>
                 
@@ -234,7 +234,7 @@ export default function WaterDamageRestorationPage() {
                   </p>
                 </div>
                 
-                <p className="text-xs text-gray-500 mt-3">
+                <p className="text-xs text-gray-300 mt-3">
                   Source: {brisbaneFloods.publicRecord}
                 </p>
               </article>
@@ -251,11 +251,11 @@ export default function WaterDamageRestorationPage() {
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="bg-black/30 rounded-lg p-3">
                     <p className="text-3xl font-bold text-white">14.4m</p>
-                    <p className="text-sm text-gray-400">Record Water Level</p>
+                    <p className="text-sm text-gray-200">Record Water Level</p>
                   </div>
                   <div className="bg-black/30 rounded-lg p-3">
                     <p className="text-3xl font-bold text-white">3,000</p>
-                    <p className="text-sm text-gray-400">Homes Destroyed</p>
+                    <p className="text-sm text-gray-200">Homes Destroyed</p>
                   </div>
                 </div>
                 
@@ -265,7 +265,7 @@ export default function WaterDamageRestorationPage() {
                   </p>
                 </div>
                 
-                <p className="text-xs text-gray-500 mt-3">
+                <p className="text-xs text-gray-300 mt-3">
                   Source: {VERIFIED_CASE_STUDIES[1].publicRecord}
                 </p>
               </article>
@@ -375,7 +375,7 @@ export default function WaterDamageRestorationPage() {
                   <p className="text-3xl font-bold text-blue-400 mb-2">
                     {insurer.marketShare}
                   </p>
-                  <p className="text-sm text-gray-400">Market Share</p>
+                  <p className="text-sm text-gray-200">Market Share</p>
                   <p className="text-sm text-blue-300 mt-3">
                     Approval: <strong className="text-white">{insurer.averageClaimTime}</strong>
                   </p>
@@ -427,7 +427,7 @@ export default function WaterDamageRestorationPage() {
                   </div>
                 </div>
                 
-                <p className="text-xs text-gray-500 mt-6">
+                <p className="text-xs text-gray-300 mt-6">
                   Source: AIHW Environmental Health Report 2023
                 </p>
               </div>

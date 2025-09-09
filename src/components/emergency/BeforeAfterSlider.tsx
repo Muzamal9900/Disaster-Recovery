@@ -104,7 +104,7 @@ export default function BeforeAfterSlider() {
               className={`px-4 py-2 rounded-full transition-all ${
                 index === activeCase 
                   ? 'bg-blue-500 text-black font-bold' 
-                  : 'bg-gray-700 text-white hover:bg-gray-600'
+                  : 'bg-gray-700 text-white hover:bg-gray-800'
               }`}
             >
               {caseItem.disaster.split(' ')[0]}
@@ -272,19 +272,19 @@ export default function BeforeAfterSlider() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div>
               <div className="text-3xl font-bold text-blue-500">48hrs</div>
-              <div className="text-gray-400">Average Restoration</div>
+              <div className="text-gray-200">Average Restoration</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-emerald-600">100%</div>
-              <div className="text-gray-400">Insurance Approved</div>
+              <div className="text-gray-200">Insurance Approved</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-400">24/7</div>
-              <div className="text-gray-400">Emergency Response</div>
+              <div className="text-gray-200">Emergency Response</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-red-400">47min</div>
-              <div className="text-gray-400">Average Arrival</div>
+              <div className="text-gray-200">Average Arrival</div>
             </div>
           </div>
         </motion.div>

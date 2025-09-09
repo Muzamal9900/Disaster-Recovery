@@ -128,7 +128,7 @@ export default function ImageUpload({
       <div className="mb-4">
         <label 
           htmlFor="image-upload" 
-          className="block text-sm font-medium text-gray-700 mb-2"
+          className="block text-sm font-medium text-gray-200 mb-2"
         >
           Upload Image
         </label>
@@ -140,7 +140,7 @@ export default function ImageUpload({
           multiple={multiple}
           onChange={handleFileSelect}
           disabled={status.isUploading}
-          className="block w-full text-sm text-gray-500
+          className="block w-full text-sm text-gray-300
             file:mr-4 file:py-2 file:px-4
             file:rounded-full file:border-0
             file:text-sm file:font-semibold
@@ -153,7 +153,7 @@ export default function ImageUpload({
       {/* Progress Bar */}
       {status.isUploading && (
         <div className="mb-4">
-          <div className="flex justify-between text-sm text-gray-600 mb-1">
+          <div className="flex justify-between text-sm text-gray-200 mb-1">
             <span>Uploading...</span>
             <span>{status.progress}%</span>
           </div>
@@ -191,7 +191,7 @@ export default function ImageUpload({
       {/* Preview */}
       {preview && (
         <div className="mt-4">
-          <p className="text-sm font-medium text-gray-700 mb-2">Preview:</p>
+          <p className="text-sm font-medium text-gray-200 mb-2">Preview:</p>
           <img 
             src={preview} 
             alt="Upload preview" 
@@ -201,7 +201,7 @@ export default function ImageUpload({
       )}
 
       {/* Info */}
-      <div className="mt-4 text-xs text-gray-500">
+      <div className="mt-4 text-xs text-gray-300">
         <p>• Maximum size: {maxSizeMB}MB</p>
         <p>• Maximum dimensions: {maxWidthOrHeight}px</p>
         <p>• Images are automatically compressed</p>

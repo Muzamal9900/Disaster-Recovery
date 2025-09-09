@@ -154,7 +154,7 @@ export default function MouldChecklistPage() {
                     onChange={() => toggleCheck(item.id)}
                     className="mt-1 w-5 h-5"
                   />
-                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-500' : ''}`}>
+                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-300' : ''}`}>
                     {item.text}
                     {item.critical && <span className="text-red-600 font-bold ml-2">CRITICAL</span>}
                   </span>
@@ -183,7 +183,7 @@ export default function MouldChecklistPage() {
                     onChange={() => toggleCheck(item.id)}
                     className="mt-1 w-5 h-5"
                   />
-                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-500' : ''}`}>
+                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-300' : ''}`}>
                     {item.text}
                     {item.critical && <span className="text-yellow-600 font-bold ml-2">CRITICAL</span>}
                   </span>
@@ -212,7 +212,7 @@ export default function MouldChecklistPage() {
                     onChange={() => toggleCheck(item.id)}
                     className="mt-1 w-5 h-5"
                   />
-                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-500' : ''}`}>
+                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-300' : ''}`}>
                     {item.text}
                   </span>
                 </label>
@@ -240,7 +240,7 @@ export default function MouldChecklistPage() {
                     onChange={() => toggleCheck(item.id)}
                     className="mt-1 w-5 h-5"
                   />
-                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-500' : ''}`}>
+                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-300' : ''}`}>
                     {item.text}
                   </span>
                 </label>
@@ -257,7 +257,7 @@ export default function MouldChecklistPage() {
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-white rounded-lg p-4 border-2 border-red-300">
               <h3 className="font-bold text-red-700 mb-2">Mild Symptoms</h3>
-              <ul className="text-sm space-y-1 text-gray-700">
+              <ul className="text-sm space-y-1 text-gray-200">
                 <li>• Sneezing</li>
                 <li>• Runny nose</li>
                 <li>• Red eyes</li>
@@ -266,7 +266,7 @@ export default function MouldChecklistPage() {
             </div>
             <div className="bg-white rounded-lg p-4 border-2 border-orange-300">
               <h3 className="font-bold text-orange-700 mb-2">Moderate Symptoms</h3>
-              <ul className="text-sm space-y-1 text-gray-700">
+              <ul className="text-sm space-y-1 text-gray-200">
                 <li>• Persistent cough</li>
                 <li>• Wheezing</li>
                 <li>• Headaches</li>
@@ -275,7 +275,7 @@ export default function MouldChecklistPage() {
             </div>
             <div className="bg-white rounded-lg p-4 border-2 border-red-500">
               <h3 className="font-bold text-red-800 mb-2">Severe Symptoms</h3>
-              <ul className="text-sm space-y-1 text-gray-700">
+              <ul className="text-sm space-y-1 text-gray-200">
                 <li>• Difficulty breathing</li>
                 <li>• Chest tightness</li>
                 <li>• Fever</li>
@@ -300,7 +300,7 @@ export default function MouldChecklistPage() {
             </Link>
             <Link
               href="/guides/mould"
-              className="bg-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-700 transition-colors inline-flex items-center justify-center gap-2"
+              className="bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-colors inline-flex items-center justify-center gap-2"
             >
               <CheckSquare className="w-5 h-5" />
               Complete Mould Guide

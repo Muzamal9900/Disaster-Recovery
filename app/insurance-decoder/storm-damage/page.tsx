@@ -196,7 +196,7 @@ export default function StormDamageInsurancePage() {
                       <Zap className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-gray-900">{item.event}</h4>
-                        <p className="text-sm text-gray-600 mt-1">{item.details}</p>
+                        <p className="text-sm text-gray-200 mt-1">{item.details}</p>
                       </div>
                     </div>
                   </div>
@@ -217,7 +217,7 @@ export default function StormDamageInsurancePage() {
                       <AlertTriangle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-gray-900">{item.event}</h4>
-                        <p className="text-sm text-gray-600 mt-1">{item.details}</p>
+                        <p className="text-sm text-gray-200 mt-1">{item.details}</p>
                       </div>
                     </div>
                   </div>
@@ -256,7 +256,7 @@ export default function StormDamageInsurancePage() {
                     {category.covered.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-gray-700">{item}</span>
+                        <span className="text-sm text-gray-200">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -268,7 +268,7 @@ export default function StormDamageInsurancePage() {
                     {category.documentation.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <FileText className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-gray-700">{item}</span>
+                        <span className="text-sm text-gray-200">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -308,7 +308,7 @@ export default function StormDamageInsurancePage() {
                       {phase.actions.map((action, idx) => (
                         <li key={idx} className="flex items-start gap-2">
                           <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-gray-700">{action}</span>
+                          <span className="text-sm text-gray-200">{action}</span>
                         </li>
                       ))}
                     </ul>
@@ -346,10 +346,10 @@ export default function StormDamageInsurancePage() {
                 <h3 className="text-lg font-bold text-purple-900 mb-3">
                   {deductible.type}
                 </h3>
-                <p className="text-gray-700 mb-3">{deductible.description}</p>
+                <p className="text-gray-200 mb-3">{deductible.description}</p>
                 <div className="bg-gray-50 rounded p-3 mb-3">
                   <p className="text-sm font-semibold text-gray-800">When it applies:</p>
-                  <p className="text-sm text-gray-600">{deductible.whenApplies}</p>
+                  <p className="text-sm text-gray-200">{deductible.whenApplies}</p>
                 </div>
                 <div className="bg-yellow-50 rounded p-3">
                   <p className="text-sm font-semibold text-yellow-800">Example:</p>
@@ -373,7 +373,7 @@ export default function StormDamageInsurancePage() {
               {maximizingTips.map((tip, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">{tip}</span>
+                  <span className="text-gray-200">{tip}</span>
                 </div>
               ))}
             </div>

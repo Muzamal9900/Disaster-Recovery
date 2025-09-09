@@ -106,7 +106,7 @@ export default function UltraModernFooter() {
                   <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                     Disaster Recovery Pro
                   </h2>
-                  <p className="text-gray-400">#1 Emergency Response Team</p>
+                  <p className="text-gray-200">#1 Emergency Response Team</p>
                 </div>
               </div>
 
@@ -118,7 +118,7 @@ export default function UltraModernFooter() {
                       <BoltIcon className="w-8 h-8 text-blue-500 animate-pulse" />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-400 uppercase tracking-wider">24/7 Emergency Response</p>
+                      <p className="text-sm text-gray-200 uppercase tracking-wider">24/7 Emergency Response</p>
                       <a href="/emergency" className="text-3xl font-bold text-white hover:text-cyan-400 transition-colours">
                         Get Help Now
                       </a>
@@ -149,7 +149,7 @@ export default function UltraModernFooter() {
                           href={link.href}
                           onMouseEnter={() => setHoveredLink(`${section.title}-${link.label}`)}
                           onMouseLeave={() => setHoveredLink(null)}
-                          className="group flex items-center gap-2 text-gray-400 hover:text-white transition-all"
+                          className="group flex items-center gap-2 text-gray-200 hover:text-white transition-all"
                         >
                           <span className={`w-1.5 h-1.5 bg-cyan-400 rounded-full transition-transform ${
                             hoveredLink === `${section.title}-${link.label}` ? 'scale-100' : 'scale-0'
@@ -215,7 +215,7 @@ export default function UltraModernFooter() {
                 >
                   <item.icon className={`w-8 h-8 ${item.colour} group-hover:scale-110 transition-transform`} />
                   <div>
-                    <p className="text-xs text-gray-400 uppercase tracking-wider">{item.label}</p>
+                    <p className="text-xs text-gray-200 uppercase tracking-wider">{item.label}</p>
                     <p className="text-white font-semibold">{item.value}</p>
                   </div>
                 </a>
@@ -226,17 +226,17 @@ export default function UltraModernFooter() {
             <div className="border-t border-white/10 pt-8 mt-8">
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className="text-center md:text-left">
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-gray-200 text-sm">
                     © {new Date().getFullYear()} Disaster Recovery Pro. All rights reserved.
                   </p>
                   <div className="flex gap-4 mt-2 justify-center md:justify-start">
-                    <Link href="/privacy" className="text-xs text-gray-500 hover:text-white transition-colours">
+                    <Link href="/privacy" className="text-xs text-gray-300 hover:text-white transition-colours">
                       Privacy Policy
                     </Link>
-                    <Link href="/terms" className="text-xs text-gray-500 hover:text-white transition-colours">
+                    <Link href="/terms" className="text-xs text-gray-300 hover:text-white transition-colours">
                       Terms of Service
                     </Link>
-                    <Link href="/sitemap" className="text-xs text-gray-500 hover:text-white transition-colours">
+                    <Link href="/sitemap" className="text-xs text-gray-300 hover:text-white transition-colours">
                       Sitemap
                     </Link>
                   </div>
@@ -244,7 +244,7 @@ export default function UltraModernFooter() {
 
                 {/* Social Links */}
                 <div className="flex items-center gap-4">
-                  <span className="text-sm text-gray-400">Follow Us:</span>
+                  <span className="text-sm text-gray-200">Follow Us:</span>
                   {['Facebook', 'Twitter', 'LinkedIn', 'Instagram'].map((social) => (
                     <a
                       key={social}

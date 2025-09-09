@@ -47,7 +47,7 @@ export const PageLoader = () => (
     <div className="text-center">
       <LoadingSpinner size="lg" />
       <p className="mt-4 text-lg font-medium gradient-text">Loading...</p>
-      <p className="mt-2 text-sm text-gray-500">Preparing your experience</p>
+      <p className="mt-2 text-sm text-gray-300">Preparing your experience</p>
     </div>
   </div>
 );

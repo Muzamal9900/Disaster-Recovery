@@ -85,7 +85,7 @@ export default function ClientPortalPage() {
                 className={`flex items-center gap-2 py-4 px-2 border-b-2 transition-colors ${
                   activeTab === tab.id
                     ? 'border-blue-600 text-blue-600'
-                    : 'border-transparent text-gray-600 hover:text-gray-900'
+                    : 'border-transparent text-gray-200 hover:text-gray-900'
                 }`}
               >
                 <tab.icon className="h-5 w-5" />
@@ -120,7 +120,7 @@ export default function ClientPortalPage() {
                       <TrendingUp className="h-5 w-5 text-green-500" />
                     </div>
                     <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
-                    <div className="text-sm text-gray-600">{stat.label}</div>
+                    <div className="text-sm text-gray-200">{stat.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -134,10 +134,10 @@ export default function ClientPortalPage() {
                       <div className="flex items-start justify-between mb-4">
                         <div>
                           <h3 className="text-lg font-semibold">{claim.id}</h3>
-                          <p className="text-gray-600">{claim.property}</p>
+                          <p className="text-gray-200">{claim.property}</p>
                           <div className="flex items-center gap-4 mt-2">
-                            <span className="text-sm text-gray-500">Type: {claim.type}</span>
-                            <span className="text-sm text-gray-500">Value: {claim.value}</span>
+                            <span className="text-sm text-gray-300">Type: {claim.type}</span>
+                            <span className="text-sm text-gray-300">Value: {claim.value}</span>
                           </div>
                         </div>
                         <span className={`px-3 py-1 rounded-full text-sm font-medium ${
@@ -151,7 +151,7 @@ export default function ClientPortalPage() {
                       
                       {/* Progress Bar */}
                       <div className="mb-4">
-                        <div className="flex justify-between text-sm text-gray-600 mb-2">
+                        <div className="flex justify-between text-sm text-gray-200 mb-2">
                           <span>Progress</span>
                           <span>{claim.progress}%</span>
                         </div>
@@ -164,11 +164,11 @@ export default function ClientPortalPage() {
                       </div>
 
                       <div className="flex items-center justify-between text-sm">
-                        <div className="flex items-center gap-2 text-gray-600">
+                        <div className="flex items-center gap-2 text-gray-200">
                           <Calendar className="h-4 w-4" />
                           <span>Submitted: {claim.submitted}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-gray-600">
+                        <div className="flex items-center gap-2 text-gray-200">
                           <Clock className="h-4 w-4" />
                           <span>Est. Completion: {claim.estimatedCompletion}</span>
                         </div>
@@ -203,7 +203,7 @@ export default function ClientPortalPage() {
                     </div>
                     <div>
                       <div className="font-semibold">Submit New Claim</div>
-                      <div className="text-sm text-gray-600">Start recovery process</div>
+                      <div className="text-sm text-gray-200">Start recovery process</div>
                     </div>
                   </Link>
                   
@@ -216,7 +216,7 @@ export default function ClientPortalPage() {
                     </div>
                     <div>
                       <div className="font-semibold">Schedule Assessment</div>
-                      <div className="text-sm text-gray-600">Book inspection time</div>
+                      <div className="text-sm text-gray-200">Book inspection time</div>
                     </div>
                   </Link>
                   
@@ -229,7 +229,7 @@ export default function ClientPortalPage() {
                     </div>
                     <div>
                       <div className="font-semibold">Get Support</div>
-                      <div className="text-sm text-gray-600">Chat with our team</div>
+                      <div className="text-sm text-gray-200">Chat with our team</div>
                     </div>
                   </Link>
                 </div>
@@ -244,7 +244,7 @@ export default function ClientPortalPage() {
               className="bg-white rounded-xl shadow-lg p-8"
             >
               <h2 className="text-2xl font-bold mb-6">All Claims</h2>
-              <p className="text-gray-600">View and manage all your insurance claims.</p>
+              <p className="text-gray-200">View and manage all your insurance claims.</p>
               {/* Add detailed claims management here */}
             </motion.div>
           )}
@@ -256,7 +256,7 @@ export default function ClientPortalPage() {
               className="bg-white rounded-xl shadow-lg p-8"
             >
               <h2 className="text-2xl font-bold mb-6">Documents</h2>
-              <p className="text-gray-600">Access all your reports, invoices, and documentation.</p>
+              <p className="text-gray-200">Access all your reports, invoices, and documentation.</p>
               {/* Add document management here */}
             </motion.div>
           )}
@@ -268,7 +268,7 @@ export default function ClientPortalPage() {
               className="bg-white rounded-xl shadow-lg p-8"
             >
               <h2 className="text-2xl font-bold mb-6">Messages</h2>
-              <p className="text-gray-600">Communicate with your recovery team.</p>
+              <p className="text-gray-200">Communicate with your recovery team.</p>
               {/* Add messaging interface here */}
             </motion.div>
           )}

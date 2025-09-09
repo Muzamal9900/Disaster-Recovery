@@ -73,7 +73,7 @@ export default function ClientPortalDocumentsPage() {
       'Reports': 'bg-indigo-600',
       'Invoices': 'bg-red-600'
     };
-    return colors[category] || 'bg-gray-600';
+    return colors[category] || 'bg-gray-800';
   };
 
   const filteredDocuments = documents.filter(doc => {
@@ -108,7 +108,7 @@ export default function ClientPortalDocumentsPage() {
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-200 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search documents..."
@@ -171,7 +171,7 @@ export default function ClientPortalDocumentsPage() {
 
         {filteredDocuments.length === 0 && (
           <div className="text-center py-12">
-            <Folder className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <Folder className="w-16 h-16 text-gray-200 mx-auto mb-4" />
             <p className="text-gray-300 text-lg">No documents found</p>
           </div>
         )}

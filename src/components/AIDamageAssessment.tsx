@@ -64,7 +64,7 @@ export default function AIDamageAssessment() {
       case 'moderate': return 'text-blue-500 bg-blue-500/10 border-blue-500/30';
       case 'severe': return 'text-blue-500 bg-blue-500/10 border-blue-500/30';
       case 'critical': return 'text-red-400 bg-red-400/10 border-red-400/30';
-      default: return 'text-gray-400 bg-gray-400/10 border-gray-400/30';
+      default: return 'text-gray-200 bg-gray-400/10 border-gray-400/30';
     }
   };
 
@@ -74,7 +74,7 @@ export default function AIDamageAssessment() {
       case 'medium': return 'bg-blue-600';
       case 'high': return 'bg-blue-600';
       case 'immediate': return 'bg-red-500';
-      default: return 'bg-gray-500';
+      default: return 'bg-gray-700';
     }
   };
 
@@ -96,7 +96,7 @@ export default function AIDamageAssessment() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Instant Damage Assessment
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-200 max-w-2xl mx-auto">
             Upload a photo and our AI will instantly analyse damage severity, estimate costs, and provide actionable recommendations
           </p>
         </div>
@@ -134,8 +134,8 @@ export default function AIDamageAssessment() {
                   <div className="text-center">
                     <div className="text-4xl mb-3">📸</div>
                     <p className="text-white font-medium mb-1">Click to upload image</p>
-                    <p className="text-gray-500 text-sm">or drag and drop</p>
-                    <p className="text-gray-600 text-xs mt-2">PNG, JPG up to 10MB</p>
+                    <p className="text-gray-300 text-sm">or drag and drop</p>
+                    <p className="text-gray-200 text-xs mt-2">PNG, JPG up to 10MB</p>
                   </div>
                 )}
               </div>
@@ -169,7 +169,7 @@ export default function AIDamageAssessment() {
                 'Insurance-ready reports',
                 'Multiple damage type detection'
               ].map((feature, index) => (
-                <div key={index} className="flex items-center gap-2 text-sm text-gray-400">
+                <div key={index} className="flex items-center gap-2 text-sm text-gray-200">
                   <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
@@ -194,7 +194,7 @@ export default function AIDamageAssessment() {
                 {/* Confidence Score */}
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-gray-400 text-sm">AI Confidence</span>
+                    <span className="text-gray-200 text-sm">AI Confidence</span>
                     <span className="text-white font-medium">{analysis.confidence}%</span>
                   </div>
                   <div className="w-full bg-gray-800 rounded-full h-2">
@@ -207,7 +207,7 @@ export default function AIDamageAssessment() {
 
                 {/* Damage Types */}
                 <div>
-                  <p className="text-gray-400 text-sm mb-2">Detected Issues</p>
+                  <p className="text-gray-200 text-sm mb-2">Detected Issues</p>
                   <div className="flex flex-wrap gap-2">
                     {analysis.type.map((type, index) => (
                       <span
@@ -222,7 +222,7 @@ export default function AIDamageAssessment() {
 
                 {/* Cost Estimation */}
                 <div className="bg-black/30 rounded-lg p-4">
-                  <p className="text-gray-400 text-sm mb-1">Estimated Cost Range</p>
+                  <p className="text-gray-200 text-sm mb-1">Estimated Cost Range</p>
                   <p className="text-2xl font-bold text-white">
                     ${analysis.estimatedCost.min.toLocaleString()} - ${analysis.estimatedCost.max.toLocaleString()}
                   </p>
@@ -230,7 +230,7 @@ export default function AIDamageAssessment() {
 
                 {/* Urgency Level */}
                 <div className="flex items-center gap-2">
-                  <span className="text-gray-400 text-sm">Urgency:</span>
+                  <span className="text-gray-200 text-sm">Urgency:</span>
                   <div className="flex items-center gap-1">
                     {['immediate', 'high', 'medium'].includes(analysis.urgency) && (
                       <div className={`w-2 h-6 rounded-sm ${getUrgencyColor(analysis.urgency)}`} />
@@ -241,14 +241,14 @@ export default function AIDamageAssessment() {
                     {analysis.urgency === 'immediate' && (
                       <div className={`w-2 h-6 rounded-sm ${getUrgencyColor(analysis.urgency)}`} />
                     )}
-                    <div className={`w-2 h-6 rounded-sm ${analysis.urgency === 'low' ? 'bg-gray-600' : 'bg-gray-700'}`} />
+                    <div className={`w-2 h-6 rounded-sm ${analysis.urgency === 'low' ? 'bg-gray-800' : 'bg-gray-700'}`} />
                   </div>
                   <span className="text-white font-medium capitalize">{analysis.urgency}</span>
                 </div>
 
                 {/* Recommendations */}
                 <div>
-                  <p className="text-gray-400 text-sm mb-3">AI Recommendations</p>
+                  <p className="text-gray-200 text-sm mb-3">AI Recommendations</p>
                   <div className="space-y-2">
                     {analysis.recommendations.map((rec, index) => (
                       <div key={index} className="flex items-start gap-2">
@@ -264,7 +264,7 @@ export default function AIDamageAssessment() {
                   <button className="flex-1 py-2 px-4 bg-blue-700 hover:bg-orange-700 rounded-lg font-medium text-white transition-colours">
                     Request Service
                   </button>
-                  <button className="flex-1 py-2 px-4 bg-gray-800 hover:bg-gray-700 rounded-lg font-medium text-white transition-colours">
+                  <button className="flex-1 py-2 px-4 bg-gray-800 hover:bg-gray-900 rounded-lg font-medium text-white transition-colours">
                     Download Report
                   </button>
                 </div>
@@ -272,7 +272,7 @@ export default function AIDamageAssessment() {
             ) : (
               <div className="text-center py-12">
                 <div className="text-6xl mb-4 opacity-20">🔍</div>
-                <p className="text-gray-500">Upload an image to see AI analysis</p>
+                <p className="text-gray-300">Upload an image to see AI analysis</p>
               </div>
             )}
           </div>

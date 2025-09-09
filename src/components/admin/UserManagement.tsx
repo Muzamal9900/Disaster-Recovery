@@ -246,7 +246,7 @@ export function UserManagement() {
             <Users className="h-6 w-6" />
             User Management
           </h2>
-          <p className="text-gray-600 mt-1">
+          <p className="text-gray-200 mt-1">
             Manage user accounts, roles, and permissions
           </p>
         </div>
@@ -278,7 +278,7 @@ export function UserManagement() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold">{users.length}</p>
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-300">
               {users.filter(u => u.isActive).length} active
             </p>
           </CardContent>
@@ -291,7 +291,7 @@ export function UserManagement() {
             </CardHeader>
             <CardContent>
               <p className="text-2xl font-bold">{usersByRole[role as UserRole] || 0}</p>
-              <p className="text-xs text-gray-500">users</p>
+              <p className="text-xs text-gray-300">users</p>
             </CardContent>
           </Card>
         ))}
@@ -304,7 +304,7 @@ export function UserManagement() {
             <CardTitle>Users</CardTitle>
             <div className="flex gap-3">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />
                 <Input
                   placeholder="Search users..."
                   value={searchTerm}
@@ -358,22 +358,22 @@ export function UserManagement() {
                     <td className="p-4">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
-                          <User className="h-5 w-5 text-gray-600" />
+                          <User className="h-5 w-5 text-gray-200" />
                         </div>
                         <div>
                           <p className="font-medium">{user.name}</p>
-                          <p className="text-sm text-gray-600">{user.email}</p>
+                          <p className="text-sm text-gray-200">{user.email}</p>
                         </div>
                       </div>
                     </td>
                     <td className="p-4">
                       {user.company ? (
                         <div className="flex items-center gap-2">
-                          <Building className="h-4 w-4 text-gray-400" />
+                          <Building className="h-4 w-4 text-gray-200" />
                           <span>{user.company.name}</span>
                         </div>
                       ) : (
-                        <span className="text-gray-400">N/A</span>
+                        <span className="text-gray-200">N/A</span>
                       )}
                     </td>
                     <td className="p-4">
@@ -410,7 +410,7 @@ export function UserManagement() {
                       </div>
                     </td>
                     <td className="p-4">
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-200">
                         {user.lastLogin 
                           ? new Date(user.lastLogin).toLocaleDateString()
                           : 'Never'}
@@ -580,7 +580,7 @@ export function UserManagement() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="font-medium">Role: {ROLE_DEFINITIONS[selectedUser.role].name}</p>
-                    <p className="text-sm text-gray-600 mt-1">
+                    <p className="text-sm text-gray-200 mt-1">
                       {ROLE_DEFINITIONS[selectedUser.role].description}
                     </p>
                   </div>
@@ -603,7 +603,7 @@ export function UserManagement() {
                     return (
                       <div key={category} className="border rounded-lg p-3">
                         <div className="flex items-center gap-2 mb-2">
-                          <Shield className="h-4 w-4 text-gray-400" />
+                          <Shield className="h-4 w-4 text-gray-200" />
                           <p className="font-medium">{details.name}</p>
                         </div>
                         <div className="grid grid-cols-2 gap-2">

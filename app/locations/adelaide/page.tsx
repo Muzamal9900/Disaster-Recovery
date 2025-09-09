@@ -316,7 +316,7 @@ export default function AdelaideLocationPage() {
               {uniqueChallenges.map((item, index) => (
                 <div key={index} className="bg-gradient-to-br from-amber-50 to-white p-4 rounded-lg shadow">
                   <h3 className="font-bold text-amber-800 mb-2">{item.challenge}</h3>
-                  <p className="text-sm text-gray-600 mb-2">{item.impact}</p>
+                  <p className="text-sm text-gray-200 mb-2">{item.impact}</p>
                   <p className="text-sm text-green-700 font-semibold">{item.solution}</p>
                 </div>
               ))}
@@ -330,7 +330,7 @@ export default function AdelaideLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Adelaide Service Areas & Risk Zones
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-center text-gray-200 mb-12 max-w-3xl mx-auto">
               Strategic coverage from Gawler to Aldinga, coast to Adelaide Hills
             </p>
 
@@ -349,7 +349,7 @@ export default function AdelaideLocationPage() {
                   <p className="text-amber-600 font-semibold mb-1">
                     {suburb.response} response
                   </p>
-                  <p className="text-gray-600 text-sm mb-1">
+                  <p className="text-gray-200 text-sm mb-1">
                     Population: {suburb.population}
                   </p>
                   <p className={`text-sm font-semibold ${
@@ -365,7 +365,7 @@ export default function AdelaideLocationPage() {
 
             <div className="mt-12 p-6 bg-amber-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3">Complete Adelaide Metropolitan Coverage:</h3>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-200 leading-relaxed">
                 <strong>City & North:</strong> Adelaide CBD, North Adelaide, Prospect, Enfield, Salisbury, Elizabeth, Gawler • 
                 <strong>Eastern Suburbs:</strong> Norwood, Burnside, Campbelltown, Paradise, Rostrevor, Magill • 
                 <strong>Adelaide Hills:</strong> Stirling, Crafers, Mount Barker, Bridgewater, Aldgate, Belair • 
@@ -383,7 +383,7 @@ export default function AdelaideLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Adelaide&apos;s Climate Disaster Risks
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Specialised response for Australia&apos;s driest capital city
             </p>
 
@@ -414,7 +414,7 @@ export default function AdelaideLocationPage() {
 
             <div className="mt-12 p-6 bg-orange-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3 text-orange-800">Adelaide Extreme Heat Protocol</h3>
-              <p className="text-gray-700">
+              <p className="text-gray-200">
                 As Australia&apos;s driest capital with regular 40°C+ temperatures, Adelaide faces unique 
                 heat-related property damage. Our teams maintain constant readiness for burst pipes, 
                 HVAC failures, and structural stress damage during heatwaves, with pre-positioned 
@@ -430,7 +430,7 @@ export default function AdelaideLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Recent Adelaide Emergency Responses
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Proven expertise across Adelaide&apos;s diverse property types
             </p>
 
@@ -449,7 +449,7 @@ export default function AdelaideLocationPage() {
                     <div>
                       <h3 className="text-xl font-bold mb-2">{project.type}</h3>
                       <p className="text-amber-600 font-semibold mb-1">{project.location}</p>
-                      <p className="text-gray-700 mb-2">{project.damage}</p>
+                      <p className="text-gray-200 mb-2">{project.damage}</p>
                       <div className="flex flex-wrap gap-4 text-sm">
                         <span className="text-green-600">✓ {project.response}</span>
                         <span className="text-green-600">✓ {project.outcome}</span>

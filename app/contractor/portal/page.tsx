@@ -180,7 +180,7 @@ export default function ContractorPortalPage() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
-          <p className="mt-4 text-gray-600">Loading portal...</p>
+          <p className="mt-4 text-gray-200">Loading portal...</p>
         </div>
       </div>
     );
@@ -202,7 +202,7 @@ export default function ContractorPortalPage() {
               </div>
               <div>
                 <h1 className="text-xl font-bold">Contractor Portal</h1>
-                <p className="text-sm text-gray-600">{contractor?.company || 'Premium Restoration Services'}</p>
+                <p className="text-sm text-gray-200">{contractor?.company || 'Premium Restoration Services'}</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -225,7 +225,7 @@ export default function ContractorPortalPage() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-gray-600">Available Jobs</p>
+                  <p className="text-sm text-gray-200">Available Jobs</p>
                   <p className="text-2xl font-bold">{availableJobs.length}</p>
                 </div>
                 <Briefcase className="h-8 w-8 text-blue-600" />
@@ -237,7 +237,7 @@ export default function ContractorPortalPage() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-gray-600">Active Jobs</p>
+                  <p className="text-sm text-gray-200">Active Jobs</p>
                   <p className="text-2xl font-bold">{acceptedJobs.length}</p>
                 </div>
                 <Clock className="h-8 w-8 text-orange-600" />
@@ -249,7 +249,7 @@ export default function ContractorPortalPage() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-gray-600">Completed</p>
+                  <p className="text-sm text-gray-200">Completed</p>
                   <p className="text-2xl font-bold">{completedJobs.length}</p>
                 </div>
                 <CheckCircle2 className="h-8 w-8 text-green-600" />
@@ -261,7 +261,7 @@ export default function ContractorPortalPage() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-gray-600">Earnings</p>
+                  <p className="text-sm text-gray-200">Earnings</p>
                   <p className="text-2xl font-bold">${(jobs.filter(j => j.status === 'accepted' || j.status === 'completed').length * 2750).toLocaleString()}</p>
                 </div>
                 <DollarSign className="h-8 w-8 text-green-600" />
@@ -298,8 +298,8 @@ export default function ContractorPortalPage() {
             {availableJobs.length === 0 ? (
               <Card>
                 <CardContent className="py-12 text-center">
-                  <Briefcase className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                  <p className="text-gray-600">No available jobs at the moment</p>
+                  <Briefcase className="h-12 w-12 text-gray-200 mx-auto mb-4" />
+                  <p className="text-gray-200">No available jobs at the moment</p>
                 </CardContent>
               </Card>
             ) : (
@@ -335,8 +335,8 @@ export default function ContractorPortalPage() {
                           Client Details
                         </h4>
                         <p className="text-sm">{job.client.name}</p>
-                        <p className="text-sm text-gray-600">{job.client.phone}</p>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-gray-200">{job.client.phone}</p>
+                        <p className="text-sm text-gray-200">
                           {job.client.address}, {job.client.suburb}
                         </p>
                       </div>
@@ -352,7 +352,7 @@ export default function ContractorPortalPage() {
                             </Badge>
                           ))}
                         </div>
-                        <p className="text-sm text-gray-600">{job.damage.description}</p>
+                        <p className="text-sm text-gray-200">{job.damage.description}</p>
                       </div>
                     </div>
                     
@@ -378,8 +378,8 @@ export default function ContractorPortalPage() {
             {acceptedJobs.length === 0 ? (
               <Card>
                 <CardContent className="py-12 text-center">
-                  <Clock className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                  <p className="text-gray-600">No active jobs</p>
+                  <Clock className="h-12 w-12 text-gray-200 mx-auto mb-4" />
+                  <p className="text-gray-200">No active jobs</p>
                 </CardContent>
               </Card>
             ) : (
@@ -408,8 +408,8 @@ export default function ContractorPortalPage() {
           <TabsContent value="completed" className="space-y-4 mt-6">
             <Card>
               <CardContent className="py-12 text-center">
-                <CheckCircle2 className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600">No completed jobs yet</p>
+                <CheckCircle2 className="h-12 w-12 text-gray-200 mx-auto mb-4" />
+                <p className="text-gray-200">No completed jobs yet</p>
               </CardContent>
             </Card>
           </TabsContent>

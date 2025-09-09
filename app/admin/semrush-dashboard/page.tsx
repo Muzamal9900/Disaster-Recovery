@@ -145,7 +145,7 @@ export default function SEMrushDashboard() {
                   <h2 className="text-lg font-semibold">
                     SEMrush API Status
                   </h2>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-200">
                     {loading ? 'Checking connection...' : 
                      isConnected ? 'Connected and ready' : 
                      'Not connected - Add API key to .env file'}
@@ -164,19 +164,19 @@ export default function SEMrushDashboard() {
               <h2 className="text-xl font-bold mb-4">Domain Overview</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div>
-                  <p className="text-sm text-gray-600">Organic Keywords</p>
+                  <p className="text-sm text-gray-200">Organic Keywords</p>
                   <p className="text-2xl font-bold">{domainMetrics.organic_keywords?.toLocaleString() || '0'}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600">Organic Traffic</p>
+                  <p className="text-sm text-gray-200">Organic Traffic</p>
                   <p className="text-2xl font-bold">{domainMetrics.organic_traffic?.toLocaleString() || '0'}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600">Traffic Value</p>
+                  <p className="text-sm text-gray-200">Traffic Value</p>
                   <p className="text-2xl font-bold">${domainMetrics.organic_cost?.toLocaleString() || '0'}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600">Competitors</p>
+                  <p className="text-sm text-gray-200">Competitors</p>
                   <p className="text-2xl font-bold">{competitors.length}</p>
                 </div>
               </div>
@@ -278,7 +278,7 @@ export default function SEMrushDashboard() {
                   
                   {/* Actions */}
                   <div className="mt-6 flex justify-between items-center">
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-200">
                       {keywordData.filter(k => k.pageExists).length} of {keywordData.length} pages exist
                     </p>
                     <Button 
@@ -357,19 +357,19 @@ export default function SEMrushDashboard() {
                 <h3 className="font-semibold mb-2">Coverage Summary</h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
                   <div>
-                    <p className="text-sm text-gray-600">Total Keywords</p>
+                    <p className="text-sm text-gray-200">Total Keywords</p>
                     <p className="text-2xl font-bold">70+</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600">Pages Created</p>
+                    <p className="text-sm text-gray-200">Pages Created</p>
                     <p className="text-2xl font-bold text-green-600">400+</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600">Coverage Rate</p>
+                    <p className="text-sm text-gray-200">Coverage Rate</p>
                     <p className="text-2xl font-bold text-green-600">95%</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600">Opportunities</p>
+                    <p className="text-sm text-gray-200">Opportunities</p>
                     <p className="text-2xl font-bold text-blue-700">12</p>
                   </div>
                 </div>
@@ -415,7 +415,7 @@ export default function SEMrushDashboard() {
                   </table>
                 </div>
               ) : (
-                <p className="text-gray-600">No competitor data available. Connect SEMrush API to view competitors.</p>
+                <p className="text-gray-200">No competitor data available. Connect SEMrush API to view competitors.</p>
               )}
             </Card>
           )}

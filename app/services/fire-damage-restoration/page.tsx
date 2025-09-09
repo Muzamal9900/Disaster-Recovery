@@ -103,7 +103,7 @@ export default function FireDamageRestorationPage() {
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Fire & Smoke Damage Restoration Specialists in Queensland
               </h1>
-              <p className="text-xl text-gray-700 mb-8">
+              <p className="text-xl text-gray-200 mb-8">
                 IICRC certified fire restoration experts providing complete fire damage recovery, 
                 smoke removal, and odour elimination. Insurance approved with 25+ years experience.
               </p>
@@ -132,12 +132,12 @@ export default function FireDamageRestorationPage() {
                         <div className="text-center">
                           <Truck className="h-8 w-8 mx-auto mb-1 text-blue-700" />
                           <p className="font-medium">Rapid Response</p>
-                          <p className="text-gray-600">&lt; 60 minutes</p>
+                          <p className="text-gray-200">&lt; 60 minutes</p>
                         </div>
                         <div className="text-center">
                           <Shield className="h-8 w-8 mx-auto mb-1 text-blue-700" />
                           <p className="font-medium">Insurance Help</p>
-                          <p className="text-gray-600">We manage claims</p>
+                          <p className="text-gray-200">We manage claims</p>
                         </div>
                       </div>
                     </div>
@@ -191,7 +191,7 @@ export default function FireDamageRestorationPage() {
             <AlertCircle className="h-6 w-6 text-red-600 flex-shrink-0 mt-1" />
             <div>
               <h3 className="font-bold text-lg mb-2">Critical: Act Fast to Prevent Secondary Damage</h3>
-              <p className="text-gray-700">
+              <p className="text-gray-200">
                 Fire damage continues to worsen in the hours and days following a fire. Acidic soot and smoke 
                 residues can permanently damage surfaces, while water from firefighting efforts can cause mould 
                 growth within 24-48 hours. Immediate professional intervention is essential.
@@ -307,7 +307,7 @@ export default function FireDamageRestorationPage() {
                 <CardTitle>Contents Restoration</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600 mb-4">
+                <p className="text-sm text-gray-200 mb-4">
                   Professional cleaning and restoration of fire-damaged belongings
                 </p>
                 <ul className="space-y-2">
@@ -336,7 +336,7 @@ export default function FireDamageRestorationPage() {
                 <CardTitle>Water Damage Mitigation</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600 mb-4">
+                <p className="text-sm text-gray-200 mb-4">
                   Addressing water damage from firefighting efforts
                 </p>
                 <ul className="space-y-2">
@@ -418,7 +418,7 @@ export default function FireDamageRestorationPage() {
                   </div>
                   <div className="flex-grow">
                     <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                    <p className="text-gray-700 mb-2">{item.description}</p>
+                    <p className="text-gray-200 mb-2">{item.description}</p>
                     <span className="text-sm text-blue-700 font-medium">{item.time}</span>
                   </div>
                 </div>
@@ -442,7 +442,7 @@ export default function FireDamageRestorationPage() {
                   <CardTitle className="text-lg">{faq.question}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-700">{faq.answer}</p>
+                  <p className="text-gray-200">{faq.answer}</p>
                 </CardContent>
               </Card>
             ))}
@@ -457,7 +457,7 @@ export default function FireDamageRestorationPage() {
             <h2 className="text-3xl font-bold text-center mb-8">
               We Work With All Major Insurance Companies
             </h2>
-            <p className="text-center text-gray-700 mb-8">
+            <p className="text-center text-gray-200 mb-8">
               Our team assists you throughout the insurance claim process, helping ensure you receive maximum coverage for your fire damage restoration.
             </p>
             <div className="grid md:grid-cols-4 gap-4">

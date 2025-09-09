@@ -219,7 +219,7 @@ export function DataBreachNotification() {
                     <p className="text-2xl font-bold text-red-600">
                       {activeBreaches.length}
                     </p>
-                    <p className="text-xs text-gray-500">Active Incidents</p>
+                    <p className="text-xs text-gray-300">Active Incidents</p>
                   </div>
                   <Activity className="h-8 w-8 text-red-500" />
                 </div>
@@ -233,9 +233,9 @@ export function DataBreachNotification() {
                     <p className="text-2xl font-bold">
                       {breaches.reduce((sum, b) => sum + b.affectedRecords, 0)}
                     </p>
-                    <p className="text-xs text-gray-500">Records Affected</p>
+                    <p className="text-xs text-gray-300">Records Affected</p>
                   </div>
-                  <Database className="h-8 w-8 text-gray-400" />
+                  <Database className="h-8 w-8 text-gray-200" />
                 </div>
               </CardContent>
             </Card>
@@ -247,9 +247,9 @@ export function DataBreachNotification() {
                     <p className="text-2xl font-bold">
                       {breaches.filter(b => b.notificationsSent).length}
                     </p>
-                    <p className="text-xs text-gray-500">Users Notified</p>
+                    <p className="text-xs text-gray-300">Users Notified</p>
                   </div>
-                  <Mail className="h-8 w-8 text-gray-400" />
+                  <Mail className="h-8 w-8 text-gray-200" />
                 </div>
               </CardContent>
             </Card>
@@ -261,7 +261,7 @@ export function DataBreachNotification() {
                     <p className="text-2xl font-bold text-green-600">
                       {resolvedBreaches.length}
                     </p>
-                    <p className="text-xs text-gray-500">Resolved</p>
+                    <p className="text-xs text-gray-300">Resolved</p>
                   </div>
                   <CheckCircle className="h-8 w-8 text-green-500" />
                 </div>
@@ -289,7 +289,7 @@ export function DataBreachNotification() {
           <Card>
             <CardContent className="pt-6">
               {activeBreaches.length === 0 ? (
-                <div className="text-center py-8 text-gray-500">
+                <div className="text-center py-8 text-gray-300">
                   <Shield className="h-12 w-12 mx-auto mb-3 text-green-500" />
                   <p>No active security incidents</p>
                   <p className="text-sm mt-1">System is operating normally</p>
@@ -310,7 +310,7 @@ export function DataBreachNotification() {
                             <Badge variant="outline">
                               {breach.type.replace('_', ' ')}
                             </Badge>
-                            <span className="text-sm text-gray-600">
+                            <span className="text-sm text-gray-200">
                               {getTimeElapsed(breach.detectedAt)}
                             </span>
                           </div>
@@ -328,15 +328,15 @@ export function DataBreachNotification() {
 
                       <div className="grid grid-cols-3 gap-4 text-sm">
                         <div>
-                          <p className="text-gray-600">Affected Records</p>
+                          <p className="text-gray-200">Affected Records</p>
                           <p className="font-medium">{breach.affectedRecords.toLocaleString()}</p>
                         </div>
                         <div>
-                          <p className="text-gray-600">Investigation Status</p>
+                          <p className="text-gray-200">Investigation Status</p>
                           <p className="font-medium capitalize">{breach.investigationStatus}</p>
                         </div>
                         <div>
-                          <p className="text-gray-600">Notifications</p>
+                          <p className="text-gray-200">Notifications</p>
                           <div className="flex items-center gap-2">
                             {breach.notificationsSent ? (
                               <CheckCircle className="h-4 w-4 text-green-500" />
@@ -414,7 +414,7 @@ export function DataBreachNotification() {
                     <div className="flex justify-between items-start">
                       <div>
                         <p className="font-medium mb-2">{breach.description}</p>
-                        <div className="flex items-center gap-4 text-sm text-gray-600">
+                        <div className="flex items-center gap-4 text-sm text-gray-200">
                           <span>Started: {getTimeElapsed(breach.detectedAt)}</span>
                           <span>Severity: {breach.severity}</span>
                           <span>Records: {breach.affectedRecords}</span>
@@ -444,13 +444,13 @@ export function DataBreachNotification() {
                     <div className="flex justify-between items-start">
                       <div>
                         <p className="font-medium mb-2">{breach.description}</p>
-                        <div className="flex items-center gap-4 text-sm text-gray-600">
+                        <div className="flex items-center gap-4 text-sm text-gray-200">
                           <span>Detected: {new Date(breach.detectedAt).toLocaleDateString()}</span>
                           <span>Resolved: {breach.reportedAt && new Date(breach.reportedAt).toLocaleDateString()}</span>
                           <span>Records: {breach.affectedRecords}</span>
                         </div>
                         {breach.rootCause && (
-                          <p className="text-sm text-gray-600 mt-2">
+                          <p className="text-sm text-gray-200 mt-2">
                             <strong>Root Cause:</strong> {breach.rootCause}
                           </p>
                         )}
@@ -488,7 +488,7 @@ export function DataBreachNotification() {
               </div>
               <div className="flex-1">
                 <p className="font-medium">Within 72 hours</p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-200">
                   Notify OAIC if breach likely to result in serious harm
                 </p>
               </div>
@@ -499,7 +499,7 @@ export function DataBreachNotification() {
               </div>
               <div className="flex-1">
                 <p className="font-medium">As soon as practicable</p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-200">
                   Notify affected individuals of eligible data breach
                 </p>
               </div>
@@ -510,7 +510,7 @@ export function DataBreachNotification() {
               </div>
               <div className="flex-1">
                 <p className="font-medium">Within 30 days</p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-200">
                   Complete investigation and submit final report
                 </p>
               </div>

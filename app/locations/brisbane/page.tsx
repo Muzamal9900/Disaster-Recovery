@@ -299,7 +299,7 @@ export default function BrisbaneLocationPage() {
               {floodHistory.map((flood, index) => (
                 <div key={index} className="bg-white p-4 rounded-lg shadow text-center">
                   <div className="text-3xl font-bold text-blue-600">{flood.year}</div>
-                  <div className="text-sm text-gray-600 mt-2">
+                  <div className="text-sm text-gray-200 mt-2">
                     <p>Peak: {flood.level}</p>
                     <p>{flood.damage} affected</p>
                     <p>{flood.areas}</p>
@@ -316,7 +316,7 @@ export default function BrisbaneLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Brisbane Service Areas & Flood Risk Zones
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-center text-gray-200 mb-12 max-w-3xl mx-auto">
               Strategic coverage with special focus on flood-prone areas
             </p>
 
@@ -335,7 +335,7 @@ export default function BrisbaneLocationPage() {
                   <p className="text-blue-600 font-semibold mb-1">
                     {suburb.response} response
                   </p>
-                  <p className="text-gray-600 text-sm mb-1">
+                  <p className="text-gray-200 text-sm mb-1">
                     Population: {suburb.population}
                   </p>
                   <p className={`text-sm font-semibold ${
@@ -352,7 +352,7 @@ export default function BrisbaneLocationPage() {
 
             <div className="mt-12 p-6 bg-blue-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3">Complete Brisbane & SEQ Coverage:</h3>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-200 leading-relaxed">
                 <strong>Inner Brisbane:</strong> CBD, South Brisbane, West End, New Farm, Fortitude Valley, Spring Hill • 
                 <strong>Western:</strong> Toowong, Indooroopilly, Kenmore, Brookfield, Chapel Hill, Fig Tree Pocket • 
                 <strong>Northern:</strong> Chermside, Aspley, Kedron, Lutwyche, Stafford, Everton Park • 
@@ -370,7 +370,7 @@ export default function BrisbaneLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Brisbane&apos;s Subtropical Disaster Challenges
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Specialised response for Queensland&apos;s unique weather patterns
             </p>
 
@@ -401,7 +401,7 @@ export default function BrisbaneLocationPage() {
 
             <div className="mt-12 p-6 bg-red-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3 text-red-800">Brisbane Flood Warning System</h3>
-              <p className="text-gray-700">
+              <p className="text-gray-200">
                 We monitor Brisbane River levels 24/7 during wet season. Our teams pre-position 
                 equipment when river levels reach 2.0m at the City Gauge, ensuring immediate 
                 response capability for flood-prone suburbs like West End, Milton, Rocklea, and Fairfield.
@@ -416,7 +416,7 @@ export default function BrisbaneLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Recent Brisbane Emergency Responses
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Proven expertise in Brisbane&apos;s major disaster events
             </p>
 
@@ -435,7 +435,7 @@ export default function BrisbaneLocationPage() {
                     <div>
                       <h3 className="text-xl font-bold mb-2">{project.type}</h3>
                       <p className="text-blue-600 font-semibold mb-1">{project.location}</p>
-                      <p className="text-gray-700 mb-2">{project.damage}</p>
+                      <p className="text-gray-200 mb-2">{project.damage}</p>
                       <div className="flex flex-wrap gap-4 text-sm">
                         <span className="text-green-600">✓ {project.response}</span>
                         <span className="text-green-600">✓ {project.outcome}</span>
@@ -504,7 +504,7 @@ export default function BrisbaneLocationPage() {
 
               <div className="mt-12 p-6 bg-blue-100 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">La Niña Preparedness</h3>
-                <p className="text-gray-700">
+                <p className="text-gray-200">
                   With La Niña conditions increasing flood risk, our Brisbane teams maintain 
                   enhanced readiness from November to March. Extra pumps, generators, and 
                   drying equipment are pre-staged for immediate deployment to flood-prone areas.

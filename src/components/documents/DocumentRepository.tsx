@@ -261,8 +261,8 @@ const DocumentRepository: React.FC<DocumentRepositoryProps> = ({
     if (mimeType.startsWith('video/')) return <Video className="w-5 h-5 text-purple-600" />;
     if (mimeType.startsWith('audio/')) return <Music className="w-5 h-5 text-green-600" />;
     if (mimeType.includes('pdf')) return <FileText className="w-5 h-5 text-red-600" />;
-    if (mimeType.includes('code') || mimeType.includes('text')) return <Code className="w-5 h-5 text-gray-600" />;
-    return <File className="w-5 h-5 text-gray-600" />;
+    if (mimeType.includes('code') || mimeType.includes('text')) return <Code className="w-5 h-5 text-gray-200" />;
+    return <File className="w-5 h-5 text-gray-200" />;
   };
 
   const getStatusBadge = (status: DocumentStatus) => {
@@ -286,7 +286,7 @@ const DocumentRepository: React.FC<DocumentRepositoryProps> = ({
   };
 
   const Breadcrumb = () => (
-    <nav className="flex items-center space-x-2 text-sm text-gray-600 mb-6">
+    <nav className="flex items-center space-x-2 text-sm text-gray-200 mb-6">
       <button 
         onClick={() => setCurrentFolder(null)}
         className="hover:text-blue-600"
@@ -311,7 +311,7 @@ const DocumentRepository: React.FC<DocumentRepositoryProps> = ({
           <div key={upload.fileId} className="bg-white rounded-lg border border-gray-200 p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-900">{upload.fileName}</span>
-              <span className="text-sm text-gray-600">{upload.progress}%</span>
+              <span className="text-sm text-gray-200">{upload.progress}%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div 
@@ -319,7 +319,7 @@ const DocumentRepository: React.FC<DocumentRepositoryProps> = ({
                 style={{ width: `${upload.progress}%` }}
               ></div>
             </div>
-            <div className="flex justify-between text-xs text-gray-500 mt-1">
+            <div className="flex justify-between text-xs text-gray-300 mt-1">
               <span>{formatFileSize(upload.uploadedBytes)} / {formatFileSize(upload.fileSize)}</span>
               <span className="capitalize">{upload.status.replace('_', ' ')}</span>
             </div>
@@ -342,10 +342,10 @@ const DocumentRepository: React.FC<DocumentRepositoryProps> = ({
           </div>
           <div className="flex-1 text-left">
             <h3 className="font-medium text-gray-900">{folder.name}</h3>
-            <p className="text-sm text-gray-600">{folder.documentCount} documents</p>
+            <p className="text-sm text-gray-200">{folder.documentCount} documents</p>
           </div>
           {folder.accessLevel === 'admin_only' && userRole !== 'admin' && (
-            <Lock className="w-4 h-4 text-gray-400" />
+            <Lock className="w-4 h-4 text-gray-200" />
           )}
         </button>
       ))}
@@ -373,7 +373,7 @@ const DocumentRepository: React.FC<DocumentRepositoryProps> = ({
               {getFileIcon(doc.mimeType)}
             </div>
             <button className="p-1 hover:bg-gray-100 rounded">
-              <MoreHorizontal className="w-4 h-4 text-gray-400" />
+              <MoreHorizontal className="w-4 h-4 text-gray-200" />
             </button>
           </div>
           
@@ -384,14 +384,14 @@ const DocumentRepository: React.FC<DocumentRepositoryProps> = ({
           <div className="space-y-2">
             {getStatusBadge(doc.status)}
             
-            <div className="text-xs text-gray-600">
+            <div className="text-xs text-gray-200">
               <p>Size: {formatFileSize(doc.fileSize)}</p>
               <p>Modified: {new Date(doc.lastModifiedAt).toLocaleDateString()}</p>
               {doc.expiryDate && (
                 <p className={`flex items-center ${
                   doc.status === 'expired' || doc.status === 'expiring_soon' 
                     ? 'text-red-600' 
-                    : 'text-gray-600'
+                    : 'text-gray-200'
                 }`}>
                   <Clock className="w-3 h-3 mr-1" />
                   Expires: {new Date(doc.expiryDate).toLocaleDateString()}
@@ -422,22 +422,22 @@ const DocumentRepository: React.FC<DocumentRepositoryProps> = ({
                 checked={selectedDocuments.length === documents.length && documents.length > 0}
               />
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
               Document
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
               Status
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
               Category
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
               Size
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
               Modified
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
               Actions
             </th>
           </tr>
@@ -465,12 +465,12 @@ const DocumentRepository: React.FC<DocumentRepositoryProps> = ({
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">{doc.title}</p>
-                    <p className="text-sm text-gray-600">{doc.fileName}</p>
+                    <p className="text-sm text-gray-200">{doc.fileName}</p>
                     {doc.expiryDate && (
                       <p className={`text-xs flex items-center mt-1 ${
                         doc.status === 'expired' || doc.status === 'expiring_soon' 
                           ? 'text-red-600' 
-                          : 'text-gray-500'
+                          : 'text-gray-300'
                       }`}>
                         <Clock className="w-3 h-3 mr-1" />
                         Expires: {new Date(doc.expiryDate).toLocaleDateString()}
@@ -494,16 +494,16 @@ const DocumentRepository: React.FC<DocumentRepositoryProps> = ({
               <td className="px-6 py-4">
                 <div className="flex items-center space-x-2">
                   <button className="p-2 hover:bg-gray-100 rounded-lg" title="View">
-                    <Eye className="w-4 h-4 text-gray-600" />
+                    <Eye className="w-4 h-4 text-gray-200" />
                   </button>
                   <button className="p-2 hover:bg-gray-100 rounded-lg" title="Download">
-                    <Download className="w-4 h-4 text-gray-600" />
+                    <Download className="w-4 h-4 text-gray-200" />
                   </button>
                   <button className="p-2 hover:bg-gray-100 rounded-lg" title="Share">
-                    <Share2 className="w-4 h-4 text-gray-600" />
+                    <Share2 className="w-4 h-4 text-gray-200" />
                   </button>
                   <button className="p-2 hover:bg-gray-100 rounded-lg" title="More">
-                    <MoreHorizontal className="w-4 h-4 text-gray-600" />
+                    <MoreHorizontal className="w-4 h-4 text-gray-200" />
                   </button>
                 </div>
               </td>
@@ -535,7 +535,7 @@ const DocumentRepository: React.FC<DocumentRepositoryProps> = ({
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Document Repository</h1>
-          <p className="text-gray-600 mt-1">Manage your compliance and operational documents</p>
+          <p className="text-gray-200 mt-1">Manage your compliance and operational documents</p>
         </div>
         <div className="flex items-center space-x-2">
           <button
@@ -560,7 +560,7 @@ const DocumentRepository: React.FC<DocumentRepositoryProps> = ({
       <div className="flex items-center justify-between bg-white p-4 rounded-lg border border-gray-200">
         <div className="flex items-center space-x-4">
           <div className="relative">
-            <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-200" />
             <input
               type="text"
               placeholder="Search documents..."
@@ -638,7 +638,7 @@ const DocumentRepository: React.FC<DocumentRepositoryProps> = ({
         <div className="text-center py-12">
           <FileText className="w-16 h-16 text-gray-300 mx-auto mb-4" />
           <h3 className="text-lg font-medium text-gray-900 mb-2">No documents found</h3>
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-200 mb-4">
             {searchQuery ? 'Try adjusting your search criteria' : 'Upload documents to get started'}
           </p>
           {!searchQuery && (

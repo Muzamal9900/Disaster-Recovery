@@ -100,7 +100,7 @@ export default function ClientPortalMessagesPage() {
             <div className="w-1/3 border-r border-white/20">
               <div className="p-4 border-b border-white/20">
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-200 w-5 h-5" />
                   <input
                     type="text"
                     placeholder="Search conversations..."
@@ -126,7 +126,7 @@ export default function ClientPortalMessagesPage() {
                       <div className="flex-1">
                         <div className="flex justify-between items-start mb-1">
                           <h3 className="text-white font-semibold">{conv.name}</h3>
-                          <span className="text-gray-400 text-xs">{conv.time}</span>
+                          <span className="text-gray-200 text-xs">{conv.time}</span>
                         </div>
                         <p className="text-gray-300 text-sm truncate">{conv.lastMessage}</p>
                       </div>
@@ -153,7 +153,7 @@ export default function ClientPortalMessagesPage() {
                     <h3 className="text-white font-semibold">
                       {conversations.find(c => c.id === selectedConversation)?.name}
                     </h3>
-                    <p className="text-gray-400 text-sm">Active now</p>
+                    <p className="text-gray-200 text-sm">Active now</p>
                   </div>
                 </div>
               </div>
@@ -176,7 +176,7 @@ export default function ClientPortalMessagesPage() {
                       <div className={`flex items-center gap-1 mt-1 ${
                         message.isMe ? 'justify-end' : 'justify-start'
                       }`}>
-                        <span className="text-gray-400 text-xs">{message.time}</span>
+                        <span className="text-gray-200 text-xs">{message.time}</span>
                         {message.isMe && <CheckCheck className="w-4 h-4 text-blue-400" />}
                       </div>
                     </div>

@@ -181,7 +181,7 @@ export default function DemoCredentialsPage() {
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-2xl font-bold text-white">{demo.title}</h2>
-                  <Clock className="h-5 w-5 text-gray-400" />
+                  <Clock className="h-5 w-5 text-gray-200" />
                 </div>
                 <p className="text-gray-300 mb-2">{demo.description}</p>
                 <p className="text-sm text-blue-400">Duration: {demo.duration}</p>
@@ -189,10 +189,10 @@ export default function DemoCredentialsPage() {
 
               {/* Credentials */}
               <div className="space-y-3 mb-6">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Test Credentials</h3>
+                <h3 className="text-sm font-semibold text-gray-200 uppercase tracking-wider">Test Credentials</h3>
                 {Object.entries(demo.credentials).map(([field, value]) => (
                   <div key={field} className="flex items-center justify-between p-3 bg-black/30 rounded-lg">
-                    <span className="text-sm text-gray-400 capitalize">
+                    <span className="text-sm text-gray-200 capitalize">
                       {field.replace(/([A-Z])/g, ' $1').trim()}:
                     </span>
                     <div className="flex items-center gap-2">
@@ -209,7 +209,7 @@ export default function DemoCredentialsPage() {
                         {copiedItem === `${key}-${field}` ? (
                           <CheckCircle className="h-4 w-4 text-emerald-600" />
                         ) : (
-                          <Copy className="h-4 w-4 text-gray-400" />
+                          <Copy className="h-4 w-4 text-gray-200" />
                         )}
                       </button>
                     </div>
@@ -219,7 +219,7 @@ export default function DemoCredentialsPage() {
 
               {/* Features */}
               <div className="space-y-2 mb-6">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Demo Features</h3>
+                <h3 className="text-sm font-semibold text-gray-200 uppercase tracking-wider">Demo Features</h3>
                 {demo.features.map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-emerald-600 mt-0.5" />
@@ -251,13 +251,13 @@ export default function DemoCredentialsPage() {
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-gray-700">
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-gray-400">Claim ID</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-gray-400">Customer</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-gray-400">Type</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-gray-400">Location</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-gray-400">Value</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-gray-400">Status</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-gray-400">Contractor</th>
+                    <th className="text-left py-3 px-4 text-sm font-semibold text-gray-200">Claim ID</th>
+                    <th className="text-left py-3 px-4 text-sm font-semibold text-gray-200">Customer</th>
+                    <th className="text-left py-3 px-4 text-sm font-semibold text-gray-200">Type</th>
+                    <th className="text-left py-3 px-4 text-sm font-semibold text-gray-200">Location</th>
+                    <th className="text-left py-3 px-4 text-sm font-semibold text-gray-200">Value</th>
+                    <th className="text-left py-3 px-4 text-sm font-semibold text-gray-200">Status</th>
+                    <th className="text-left py-3 px-4 text-sm font-semibold text-gray-200">Contractor</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -294,7 +294,7 @@ export default function DemoCredentialsPage() {
                   <div className="flex items-start justify-between mb-3">
                     <div>
                       <h4 className="font-semibold text-white">{contractor.name}</h4>
-                      <p className="text-sm text-gray-400 flex items-center gap-1 mt-1">
+                      <p className="text-sm text-gray-200 flex items-center gap-1 mt-1">
                         <MapPin className="h-3 w-3" />
                         {contractor.location}
                       </p>
@@ -307,11 +307,11 @@ export default function DemoCredentialsPage() {
                   
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-gray-400">Jobs Completed:</span>
+                      <span className="text-gray-200">Jobs Completed:</span>
                       <span className="text-white font-semibold">{contractor.jobs}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-400">Response Time:</span>
+                      <span className="text-gray-200">Response Time:</span>
                       <span className="text-emerald-600 font-semibold">{contractor.responseTime}</span>
                     </div>
                     <div className="pt-2 border-t border-gray-700">

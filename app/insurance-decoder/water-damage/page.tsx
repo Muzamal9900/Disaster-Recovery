@@ -177,7 +177,7 @@ export default function WaterDamageInsurancePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               What's Covered vs What's Not
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-200">
               Know your policy coverage before disaster strikes
             </p>
           </div>
@@ -194,7 +194,7 @@ export default function WaterDamageInsurancePage() {
                   {coverageTypes.covered.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{item}</span>
+                      <span className="text-gray-200">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -210,7 +210,7 @@ export default function WaterDamageInsurancePage() {
                   {coverageTypes.notCovered.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <XCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{item}</span>
+                      <span className="text-gray-200">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -226,7 +226,7 @@ export default function WaterDamageInsurancePage() {
                   {coverageTypes.grey.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <Info className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{item}</span>
+                      <span className="text-gray-200">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -261,7 +261,7 @@ export default function WaterDamageInsurancePage() {
                   {step.actions.map((action, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-600">{action}</span>
+                      <span className="text-gray-200">{action}</span>
                     </li>
                   ))}
                 </ul>
@@ -294,21 +294,21 @@ export default function WaterDamageInsurancePage() {
                       <XCircle className="w-5 h-5 text-red-600" />
                       <span className="font-semibold text-red-900">Mistake</span>
                     </div>
-                    <p className="text-gray-700">{item.mistake}</p>
+                    <p className="text-gray-200">{item.mistake}</p>
                   </div>
                   <div>
                     <div className="flex items-center gap-2 mb-2">
                       <AlertCircle className="w-5 h-5 text-yellow-600" />
                       <span className="font-semibold text-yellow-900">Consequence</span>
                     </div>
-                    <p className="text-gray-700">{item.consequence}</p>
+                    <p className="text-gray-200">{item.consequence}</p>
                   </div>
                   <div>
                     <div className="flex items-center gap-2 mb-2">
                       <CheckCircle className="w-5 h-5 text-green-600" />
                       <span className="font-semibold text-green-900">Solution</span>
                     </div>
-                    <p className="text-gray-700">{item.solution}</p>
+                    <p className="text-gray-200">{item.solution}</p>
                   </div>
                 </div>
               </motion.div>
@@ -328,7 +328,7 @@ export default function WaterDamageInsurancePage() {
             <div className="bg-white rounded-xl shadow-lg p-6">
               <FileText className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-4">Documentation Tips</h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-gray-200">
                 <li>• Video walkthrough showing all damage</li>
                 <li>• Close-up photos of each damaged item</li>
                 <li>• Keep a written log of events</li>
@@ -340,7 +340,7 @@ export default function WaterDamageInsurancePage() {
             <div className="bg-white rounded-xl shadow-lg p-6">
               <Calculator className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-4">Cost Considerations</h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-gray-200">
                 <li>• Know your deductible amount</li>
                 <li>• Understand coverage limits</li>
                 <li>• Ask about depreciation vs replacement</li>

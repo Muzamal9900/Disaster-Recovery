@@ -377,7 +377,7 @@ export default function FloodDamageRestorationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Flood Types We Handle
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-center text-gray-200 mb-12 max-w-3xl mx-auto">
               Specialised response protocols for every flood scenario
             </p>
 
@@ -414,7 +414,7 @@ export default function FloodDamageRestorationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Water Contamination Categories
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Professional assessment and treatment for all contamination levels
             </p>
 
@@ -435,7 +435,7 @@ export default function FloodDamageRestorationPage() {
                   <h3 className={`text-xl font-bold mb-2 ${cat.color === 'black' ? 'text-white' : ''}`}>
                     {cat.category}: {cat.name}
                   </h3>
-                  <p className={`mb-2 ${cat.color === 'black' ? 'text-gray-200' : 'text-gray-700'}`}>
+                  <p className={`mb-2 ${cat.color === 'black' ? 'text-gray-200' : 'text-gray-200'}`}>
                     <strong>Source:</strong> {cat.source}
                   </p>
                   <p className={`mb-2 font-semibold ${
@@ -453,7 +453,7 @@ export default function FloodDamageRestorationPage() {
             </div>
 
             <div className="mt-8 p-6 bg-orange-50 rounded-lg max-w-4xl mx-auto">
-              <p className="text-gray-700">
+              <p className="text-gray-200">
                 <strong>Important:</strong> Most flood water is Category 3 (Black Water) containing sewage, 
                 chemicals, and biological hazards. Never attempt DIY cleanup without proper protection and equipment.
               </p>
@@ -467,7 +467,7 @@ export default function FloodDamageRestorationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Australia&apos;s High-Risk Flood Zones
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Pre-positioned teams in flood-prone regions nationwide
             </p>
 
@@ -492,8 +492,8 @@ export default function FloodDamageRestorationPage() {
                   }`}>
                     Risk Level: {zone.risk}
                   </p>
-                  <p className="text-gray-700 mb-2 text-sm">{zone.history}</p>
-                  <p className="text-gray-600 text-sm">Coverage: {zone.coverage}</p>
+                  <p className="text-gray-200 mb-2 text-sm">{zone.history}</p>
+                  <p className="text-gray-200 text-sm">Coverage: {zone.coverage}</p>
                 </motion.div>
               ))}
             </div>
@@ -506,7 +506,7 @@ export default function FloodDamageRestorationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Professional Flood Restoration Process
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Systematic approach from emergency response to complete restoration
             </p>
 
@@ -557,7 +557,7 @@ export default function FloodDamageRestorationPage() {
                     viewport={{ once: true }}
                   >
                     <h3 className="text-xl font-bold mb-3 text-blue-900">{factor.factor}</h3>
-                    <p className="text-gray-700 mb-3">
+                    <p className="text-gray-200 mb-3">
                       <strong>Impact:</strong> {factor.impact}
                     </p>
                     <p className="text-green-700">
@@ -626,7 +626,7 @@ export default function FloodDamageRestorationPage() {
 
               <div className="mt-12 p-6 bg-blue-50 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">La Niña Preparedness</h3>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-200 mb-4">
                   With La Niña conditions increasing flood risk across Eastern Australia, our teams are on 
                   heightened alert. We&apos;ve increased equipment stocks, expanded crew numbers, and established 
                   additional response centres in high-risk areas.

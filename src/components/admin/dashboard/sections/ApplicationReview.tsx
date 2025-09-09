@@ -113,7 +113,7 @@ export function ApplicationReview() {
       case 'low': return 'text-green-600';
       case 'medium': return 'text-yellow-600';
       case 'high': return 'text-red-600';
-      default: return 'text-gray-600';
+      default: return 'text-gray-200';
     }
   };
 
@@ -165,7 +165,7 @@ export function ApplicationReview() {
         <h2 className="text-xl font-bold">Application Review</h2>
         <div className="flex gap-3">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />
             <Input
               placeholder="Search applications..."
               value={searchTerm}
@@ -228,12 +228,12 @@ export function ApplicationReview() {
                       <td className="p-4">
                         <div>
                           <p className="font-medium">{app.contractorName}</p>
-                          <p className="text-sm text-gray-600">{app.email}</p>
+                          <p className="text-sm text-gray-200">{app.email}</p>
                         </div>
                       </td>
                       <td className="p-4">
                         <div className="flex items-center gap-2">
-                          <Building className="h-4 w-4 text-gray-400" />
+                          <Building className="h-4 w-4 text-gray-200" />
                           <span>{app.companyName}</span>
                         </div>
                       </td>
@@ -245,7 +245,7 @@ export function ApplicationReview() {
                               style={{ width: `${(app.completedSteps.length / 7) * 100}%` }}
                             />
                           </div>
-                          <span className="text-sm text-gray-600">
+                          <span className="text-sm text-gray-200">
                             {app.completedSteps.length}/7
                           </span>
                         </div>
@@ -273,7 +273,7 @@ export function ApplicationReview() {
                         </Badge>
                       </td>
                       <td className="p-4">
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-gray-200">
                           {new Date(app.submittedAt).toLocaleDateString()}
                         </div>
                       </td>
@@ -332,19 +332,19 @@ export function ApplicationReview() {
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Label className="text-sm text-gray-600">Applicant</Label>
+                  <Label className="text-sm text-gray-200">Applicant</Label>
                   <p className="font-medium">{selectedApplication.contractorName}</p>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-600">Company</Label>
+                  <Label className="text-sm text-gray-200">Company</Label>
                   <p className="font-medium">{selectedApplication.companyName}</p>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-600">Application Score</Label>
+                  <Label className="text-sm text-gray-200">Application Score</Label>
                   <p className="font-medium">{calculateApplicationScore(selectedApplication)}%</p>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-600">Risk Assessment</Label>
+                  <Label className="text-sm text-gray-200">Risk Assessment</Label>
                   <p className={`font-medium ${getRiskColor(selectedApplication.riskLevel)}`}>
                     {selectedApplication.riskLevel || 'Pending'}
                   </p>
@@ -361,7 +361,7 @@ export function ApplicationReview() {
                   rows={4}
                   className="mt-2"
                 />
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="text-xs text-gray-300 mt-1">
                   These notes will be included in the notification to the applicant.
                 </p>
               </div>

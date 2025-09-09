@@ -318,7 +318,7 @@ export default function NewcastleLocationPage() {
               {uniqueChallenges.map((item, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-50 to-white p-4 rounded-lg shadow">
                   <h3 className="font-bold text-slate-800 mb-2">{item.challenge}</h3>
-                  <p className="text-sm text-gray-600 mb-2">{item.impact}</p>
+                  <p className="text-sm text-gray-200 mb-2">{item.impact}</p>
                   <p className="text-sm text-green-700 font-semibold">{item.solution}</p>
                 </div>
               ))}
@@ -332,7 +332,7 @@ export default function NewcastleLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Hunter Region Service Areas & Risk Zones
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-center text-gray-200 mb-12 max-w-3xl mx-auto">
               Strategic coverage from Port Stephens to Upper Hunter
             </p>
 
@@ -351,7 +351,7 @@ export default function NewcastleLocationPage() {
                   <p className="text-blue-600 font-semibold mb-1">
                     {suburb.response} response
                   </p>
-                  <p className="text-gray-600 text-sm mb-1">
+                  <p className="text-gray-200 text-sm mb-1">
                     Population: {suburb.population}
                   </p>
                   <p className={`text-sm font-semibold ${
@@ -368,7 +368,7 @@ export default function NewcastleLocationPage() {
 
             <div className="mt-12 p-6 bg-blue-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3">Complete Hunter Coverage:</h3>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-200 leading-relaxed">
                 <strong>Newcastle:</strong> CBD, Hamilton, Merewether, Bar Beach, The Junction, Mayfield • 
                 <strong>Lake Macquarie:</strong> Charlestown, Belmont, Warners Bay, Toronto, Morisset • 
                 <strong>Maitland:</strong> East Maitland, Rutherford, Thornton, Morpeth, Lorn • 
@@ -386,7 +386,7 @@ export default function NewcastleLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Newcastle&apos;s Disaster Risk Profile
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Specialised response for industrial and natural disasters
             </p>
 
@@ -417,7 +417,7 @@ export default function NewcastleLocationPage() {
 
             <div className="mt-12 p-6 bg-slate-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3 text-slate-800">Industrial Disaster Preparedness</h3>
-              <p className="text-gray-700">
+              <p className="text-gray-200">
                 Newcastle&apos;s port and industrial facilities require specialised disaster response 
                 capabilities. Our teams are trained and equipped for chemical spills, industrial 
                 flooding, and contamination events with appropriate safety certifications and 
@@ -433,7 +433,7 @@ export default function NewcastleLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Recent Hunter Region Emergency Responses
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Proven expertise from coast to coalfields
             </p>
 
@@ -452,7 +452,7 @@ export default function NewcastleLocationPage() {
                     <div>
                       <h3 className="text-xl font-bold mb-2">{project.type}</h3>
                       <p className="text-blue-600 font-semibold mb-1">{project.location}</p>
-                      <p className="text-gray-700 mb-2">{project.damage}</p>
+                      <p className="text-gray-200 mb-2">{project.damage}</p>
                       <div className="flex flex-wrap gap-4 text-sm">
                         <span className="text-green-600">✓ {project.response}</span>
                         <span className="text-green-600">✓ {project.outcome}</span>

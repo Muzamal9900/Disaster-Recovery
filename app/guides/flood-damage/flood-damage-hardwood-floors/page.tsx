@@ -139,19 +139,19 @@ export default function FloodDamageHardwoodFloorsPage() {
             <div className="grid md:grid-cols-4 gap-6 mt-12">
               <Card className="p-6 text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-2">30-60min</div>
-                <p className="text-sm text-gray-600">Response Time</p>
+                <p className="text-sm text-gray-200">Response Time</p>
               </Card>
               <Card className="p-6 text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
-                <p className="text-sm text-gray-600">Availability</p>
+                <p className="text-sm text-gray-200">Availability</p>
               </Card>
               <Card className="p-6 text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-2">200+</div>
-                <p className="text-sm text-gray-600">Hours Training</p>
+                <p className="text-sm text-gray-200">Hours Training</p>
               </Card>
               <Card className="p-6 text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-2">100%</div>
-                <p className="text-sm text-gray-600">Insurance Approved</p>
+                <p className="text-sm text-gray-200">Insurance Approved</p>
               </Card>
             </div>
 

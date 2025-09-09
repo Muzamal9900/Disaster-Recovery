@@ -244,7 +244,7 @@ export default function BuilderVsRestorerPage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Two Completely Different Approaches
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Same damage, different methodology - vastly different outcomes for cost, timeline, and waste
             </p>
           </div>
@@ -352,7 +352,7 @@ export default function BuilderVsRestorerPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Real World Scenario Comparisons
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-200">
               Same damage, two approaches - see the dramatic difference in cost, time, and waste
             </p>
           </div>
@@ -362,7 +362,7 @@ export default function BuilderVsRestorerPage() {
               <div key={idx}>
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{scenario.scenario}</h3>
-                  <p className="text-gray-600">{scenario.damage}</p>
+                  <p className="text-gray-200">{scenario.damage}</p>
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-8">
@@ -392,7 +392,7 @@ export default function BuilderVsRestorerPage() {
 
                     <div className="mb-4">
                       <h5 className="font-medium text-gray-900 mb-2">Typical Process:</h5>
-                      <ol className="space-y-1 text-sm text-gray-700">
+                      <ol className="space-y-1 text-sm text-gray-200">
                         {scenario.builderApproach.steps.map((step, sIdx) => (
                           <li key={sIdx} className="flex items-start gap-2">
                             <span className="bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">{sIdx + 1}</span>
@@ -440,7 +440,7 @@ export default function BuilderVsRestorerPage() {
 
                     <div className="mb-4">
                       <h5 className="font-medium text-gray-900 mb-2">Professional Process:</h5>
-                      <ol className="space-y-1 text-sm text-gray-700">
+                      <ol className="space-y-1 text-sm text-gray-200">
                         {scenario.restorerApproach.steps.map((step, sIdx) => (
                           <li key={sIdx} className="flex items-start gap-2">
                             <span className="bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">{sIdx + 1}</span>
@@ -498,7 +498,7 @@ export default function BuilderVsRestorerPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Environmental Impact: The Restoration Advantage
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-200">
               Professional restoration isn't just better for your wallet - it's better for the planet
             </p>
           </div>
@@ -510,7 +510,7 @@ export default function BuilderVsRestorerPage() {
               </div>
               <div className="text-3xl font-bold text-green-600 mb-2">{environmentalImpact.wasteReduction}</div>
               <h3 className="font-semibold text-gray-900 mb-2">Waste Reduction</h3>
-              <p className="text-sm text-gray-600">Less material to landfill compared to full demolition</p>
+              <p className="text-sm text-gray-200">Less material to landfill compared to full demolition</p>
             </Card>
 
             <Card className="p-6 text-center">
@@ -519,7 +519,7 @@ export default function BuilderVsRestorerPage() {
               </div>
               <div className="text-3xl font-bold text-blue-600 mb-2">{environmentalImpact.carbonFootprint}</div>
               <h3 className="font-semibold text-gray-900 mb-2">Carbon Footprint</h3>
-              <p className="text-sm text-gray-600">Reduced manufacturing and transport emissions</p>
+              <p className="text-sm text-gray-200">Reduced manufacturing and transport emissions</p>
             </Card>
 
             <Card className="p-6 text-center">
@@ -528,7 +528,7 @@ export default function BuilderVsRestorerPage() {
               </div>
               <div className="text-3xl font-bold text-purple-600 mb-2">{environmentalImpact.materialConservation}</div>
               <h3 className="font-semibold text-gray-900 mb-2">Material Conservation</h3>
-              <p className="text-sm text-gray-600">Original materials preserved and restored</p>
+              <p className="text-sm text-gray-200">Original materials preserved and restored</p>
             </Card>
 
             <Card className="p-6 text-center">
@@ -537,7 +537,7 @@ export default function BuilderVsRestorerPage() {
               </div>
               <div className="text-3xl font-bold text-blue-700 mb-2">{environmentalImpact.recyclingRate}</div>
               <h3 className="font-semibold text-gray-900 mb-2">Recycling Rate</h3>
-              <p className="text-sm text-gray-600">Materials that must be replaced are recycled</p>
+              <p className="text-sm text-gray-200">Materials that must be replaced are recycled</p>
             </Card>
 
             <Card className="p-6 text-center">
@@ -546,7 +546,7 @@ export default function BuilderVsRestorerPage() {
               </div>
               <div className="text-3xl font-bold text-red-600 mb-2">{environmentalImpact.landfillDiversion}</div>
               <h3 className="font-semibold text-gray-900 mb-2">Landfill Diversion</h3>
-              <p className="text-sm text-gray-600">Average waste diverted per restoration job</p>
+              <p className="text-sm text-gray-200">Average waste diverted per restoration job</p>
             </Card>
 
             <Card className="p-6 text-center">
@@ -555,7 +555,7 @@ export default function BuilderVsRestorerPage() {
               </div>
               <div className="text-3xl font-bold text-yellow-600 mb-2">{environmentalImpact.energySavings}</div>
               <h3 className="font-semibold text-gray-900 mb-2">Energy Savings</h3>
-              <p className="text-sm text-gray-600">Less energy than manufacturing new materials</p>
+              <p className="text-sm text-gray-200">Less energy than manufacturing new materials</p>
             </Card>
           </div>
         </div>
@@ -568,7 +568,7 @@ export default function BuilderVsRestorerPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Training and Qualification Differences
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-200">
               Different skills, different tools, different outcomes
             </p>
           </div>

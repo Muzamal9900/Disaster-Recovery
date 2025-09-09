@@ -819,7 +819,7 @@ ${slide.speakerNotes}
         <div className="px-6 py-4">
           {/* Progress Bar */}
           <div className="mb-4">
-            <div className="flex items-center justify-between text-xs text-gray-400 mb-2">
+            <div className="flex items-center justify-between text-xs text-gray-200 mb-2">
               <span>{slide.chapter}</span>
               <span>Slide {currentSlide + 1} of {professionalSlides.length}</span>
             </div>
@@ -863,7 +863,7 @@ ${slide.speakerNotes}
             {/* Center Info */}
             <div className="text-center">
               <div className="text-white font-semibold">{slide.title}</div>
-              <div className="text-gray-400 text-sm">{slide.subtitle}</div>
+              <div className="text-gray-200 text-sm">{slide.subtitle}</div>
             </div>
 
             {/* Right Controls */}
@@ -923,7 +923,7 @@ ${slide.speakerNotes}
             
             <div className="space-y-4">
               <div>
-                <label className="text-gray-400 text-sm flex items-center gap-2 mb-2">
+                <label className="text-gray-200 text-sm flex items-center gap-2 mb-2">
                   <Mic className="h-4 w-4" />
                   Narration Volume
                 </label>
@@ -939,7 +939,7 @@ ${slide.speakerNotes}
               </div>
               
               <div>
-                <label className="text-gray-400 text-sm flex items-center gap-2 mb-2">
+                <label className="text-gray-200 text-sm flex items-center gap-2 mb-2">
                   <Music className="h-4 w-4" />
                   Background Music
                 </label>
@@ -955,7 +955,7 @@ ${slide.speakerNotes}
               </div>
               
               <div>
-                <label className="text-gray-400 text-sm flex items-center gap-2">
+                <label className="text-gray-200 text-sm flex items-center gap-2">
                   <input
                     type="checkbox"
                     checked={autoAdvance}

@@ -240,7 +240,7 @@ export function NotificationPreferences() {
       <div className="flex justify-between items-center">
         <div>
           <h2 className="text-2xl font-bold">Notification Preferences</h2>
-          <p className="text-gray-600 mt-1">
+          <p className="text-gray-200 mt-1">
             Manage how and when you receive notifications
           </p>
         </div>
@@ -274,10 +274,10 @@ export function NotificationPreferences() {
               {/* In-App Notifications */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <Bell className="h-5 w-5 text-gray-500" />
+                  <Bell className="h-5 w-5 text-gray-300" />
                   <div>
                     <Label htmlFor="in-app">In-App Notifications</Label>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-300">
                       Notifications within the platform
                     </p>
                   </div>
@@ -294,10 +294,10 @@ export function NotificationPreferences() {
               {/* Email Notifications */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-gray-500" />
+                  <Mail className="h-5 w-5 text-gray-300" />
                   <div>
                     <Label htmlFor="email">Email Notifications</Label>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-300">
                       Receive notifications via email
                     </p>
                   </div>
@@ -314,10 +314,10 @@ export function NotificationPreferences() {
               {/* SMS Notifications */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <MessageSquare className="h-5 w-5 text-gray-500" />
+                  <MessageSquare className="h-5 w-5 text-gray-300" />
                   <div>
                     <Label htmlFor="sms">SMS Notifications</Label>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-300">
                       Text messages for urgent alerts
                     </p>
                   </div>
@@ -334,10 +334,10 @@ export function NotificationPreferences() {
               {/* Push Notifications */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <Smartphone className="h-5 w-5 text-gray-500" />
+                  <Smartphone className="h-5 w-5 text-gray-300" />
                   <div>
                     <Label htmlFor="push">Push Notifications</Label>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-300">
                       Mobile app notifications
                     </p>
                   </div>

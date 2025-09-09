@@ -223,7 +223,7 @@ export default function CourseCatalogPage() {
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-200 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search courses..."
@@ -288,7 +288,7 @@ export default function CourseCatalogPage() {
                 <h3 className="text-lg font-semibold text-white mb-2">{course.title}</h3>
                 <p className="text-gray-300 text-sm mb-4">{course.description}</p>
                 
-                <div className="flex items-center gap-3 text-sm text-gray-400 mb-4">
+                <div className="flex items-center gap-3 text-sm text-gray-200 mb-4">
                   <span className="flex items-center gap-1">
                     <Clock className="w-4 h-4" />
                     {course.duration}
@@ -305,7 +305,7 @@ export default function CourseCatalogPage() {
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
                       <span className="text-white text-sm font-semibold">{course.rating}</span>
                     </div>
-                    <span className="text-gray-400 text-sm">({course.enrolled.toLocaleString()} enrolled)</span>
+                    <span className="text-gray-200 text-sm">({course.enrolled.toLocaleString()} enrolled)</span>
                   </div>
                   <span className="text-green-400 font-semibold">{course.price}</span>
                 </div>
@@ -342,7 +342,7 @@ export default function CourseCatalogPage() {
 
         {filteredCourses.length === 0 && (
           <div className="text-center py-12">
-            <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <BookOpen className="w-16 h-16 text-gray-200 mx-auto mb-4" />
             <p className="text-gray-300 text-lg">No courses found matching your criteria</p>
           </div>
         )}

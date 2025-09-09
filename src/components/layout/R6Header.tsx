@@ -518,7 +518,7 @@ export default function R6Header() {
             {/* Chat Content */}
             <div className="p-6 space-y-4">
               <div className="bg-gray-50 rounded-lg p-4">
-                <p className="text-sm text-gray-600 mb-3">
+                <p className="text-sm text-gray-200 mb-3">
                   👋 Hi! I'm here to help with your emergency restoration needs.
                 </p>
                 <p className="text-sm font-semibold text-gray-900 mb-2">
@@ -552,7 +552,7 @@ export default function R6Header() {
               </div>
 
               <div className="text-center pt-2 border-t">
-                <p className="text-xs text-gray-500 mb-2">
+                <p className="text-xs text-gray-300 mb-2">
                   For immediate emergencies, call directly:
                 </p>
                 <a href="#contact-form">

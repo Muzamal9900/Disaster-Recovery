@@ -249,7 +249,7 @@ export default function UltraModernHero() {
 
         {/* Subtitle */}
         <p 
-          className={`text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-200 ${
+          className={`text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >

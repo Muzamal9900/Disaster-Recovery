@@ -440,7 +440,7 @@ const TransparencyBillingDashboard: React.FC = () => {
             </div>
             <div>
               <h2 className="text-xl font-semibold">Transparency Billing – Industry Cost Guidelines</h2>
-              <p className="text-sm text-gray-500">(AUD, incl GST)</p>
+              <p className="text-sm text-gray-300">(AUD, incl GST)</p>
             </div>
           </div>
           <div className="flex items-center space-x-2">
@@ -486,7 +486,7 @@ const TransparencyBillingDashboard: React.FC = () => {
             className={`px-3 py-1 rounded-lg whitespace-nowrap ${
               selectedCategory === 'all'
                 ? 'bg-green-100 text-green-700'
-                : 'text-gray-600 hover:bg-gray-100'
+                : 'text-gray-200 hover:bg-gray-100'
             }`}
           >
             All Categories
@@ -500,7 +500,7 @@ const TransparencyBillingDashboard: React.FC = () => {
                 className={`px-3 py-1 rounded-lg flex items-center space-x-1 whitespace-nowrap ${
                   selectedCategory === cat.category
                     ? `bg-${cat.colour}-100 text-${cat.colour}-700`
-                    : 'text-gray-600 hover:bg-gray-100'
+                    : 'text-gray-200 hover:bg-gray-100'
                 }`}
               >
                 <Icon className="h-4 w-4" />
@@ -533,14 +533,14 @@ const TransparencyBillingDashboard: React.FC = () => {
                     <div className="text-left">
                       <h3 className="font-semibold">{categorySection.title}</h3>
                       {categorySection.description && (
-                        <p className="text-sm text-gray-600 mt-1">{categorySection.description}</p>
+                        <p className="text-sm text-gray-200 mt-1">{categorySection.description}</p>
                       )}
                     </div>
                   </div>
                   {isExpanded ? (
-                    <ChevronUp className="h-5 w-5 text-gray-400" />
+                    <ChevronUp className="h-5 w-5 text-gray-200" />
                   ) : (
-                    <ChevronDown className="h-5 w-5 text-gray-400" />
+                    <ChevronDown className="h-5 w-5 text-gray-200" />
                   )}
                 </button>
 
@@ -554,20 +554,20 @@ const TransparencyBillingDashboard: React.FC = () => {
                             <h4 className="font-medium mb-3">{item.itemName}</h4>
                             <div className="grid grid-cols-2 gap-4">
                               <div>
-                                <p className="text-sm text-gray-500">Normal Hours (8am-4pm Mon-Fri)</p>
+                                <p className="text-sm text-gray-300">Normal Hours (8am-4pm Mon-Fri)</p>
                                 <p className="text-lg font-semibold text-green-600">
                                   ${item.priceRange.normalHours?.min}–${item.priceRange.normalHours?.max}/hr
                                 </p>
                               </div>
                               <div>
-                                <p className="text-sm text-gray-500">After Hours</p>
+                                <p className="text-sm text-gray-300">After Hours</p>
                                 <p className="text-lg font-semibold text-blue-700">
                                   ${item.priceRange.afterHours?.min}–${item.priceRange.afterHours?.max}/hr
                                 </p>
                               </div>
                             </div>
                             {item.notes && (
-                              <p className="text-sm text-gray-600 mt-2 italic">{item.notes}</p>
+                              <p className="text-sm text-gray-200 mt-2 italic">{item.notes}</p>
                             )}
                           </div>
                         ))}
@@ -581,13 +581,13 @@ const TransparencyBillingDashboard: React.FC = () => {
                             {item.priceRange.withRemoteMonitoring && item.priceRange.standard ? (
                               <div className="grid grid-cols-2 gap-4">
                                 <div>
-                                  <p className="text-sm text-gray-500">With Remote Monitoring</p>
+                                  <p className="text-sm text-gray-300">With Remote Monitoring</p>
                                   <p className="text-lg font-semibold text-purple-600">
                                     ${item.priceRange.withRemoteMonitoring.min}–${item.priceRange.withRemoteMonitoring.max}/day
                                   </p>
                                 </div>
                                 <div>
-                                  <p className="text-sm text-gray-500">Standard (max 4 days/week)</p>
+                                  <p className="text-sm text-gray-300">Standard (max 4 days/week)</p>
                                   <p className="text-lg font-semibold text-blue-600">
                                     ${item.priceRange.standard.min}–${item.priceRange.standard.max}/day
                                   </p>
@@ -596,13 +596,13 @@ const TransparencyBillingDashboard: React.FC = () => {
                             ) : item.priceRange.firstUnit && item.priceRange.additionalUnit ? (
                               <div className="grid grid-cols-2 gap-4">
                                 <div>
-                                  <p className="text-sm text-gray-500">First Hour</p>
+                                  <p className="text-sm text-gray-300">First Hour</p>
                                   <p className="text-lg font-semibold text-purple-600">
                                     ${item.priceRange.firstUnit.min}–${item.priceRange.firstUnit.max}
                                   </p>
                                 </div>
                                 <div>
-                                  <p className="text-sm text-gray-500">Each Additional Hour</p>
+                                  <p className="text-sm text-gray-300">Each Additional Hour</p>
                                   <p className="text-lg font-semibold text-blue-600">
                                     ${item.priceRange.additionalUnit.min}–${item.priceRange.additionalUnit.max}
                                   </p>
@@ -614,7 +614,7 @@ const TransparencyBillingDashboard: React.FC = () => {
                               </p>
                             )}
                             {item.notes && (
-                              <p className="text-sm text-gray-600 mt-2 italic">{item.notes}</p>
+                              <p className="text-sm text-gray-200 mt-2 italic">{item.notes}</p>
                             )}
                           </div>
                         ))}
@@ -628,7 +628,7 @@ const TransparencyBillingDashboard: React.FC = () => {
                               <div className="flex-1">
                                 <p className="font-medium">{item.itemName}</p>
                                 {item.notes && (
-                                  <p className="text-sm text-gray-600 mt-1">{item.notes}</p>
+                                  <p className="text-sm text-gray-200 mt-1">{item.notes}</p>
                                 )}
                               </div>
                               <div className="text-right ml-4">
@@ -636,7 +636,7 @@ const TransparencyBillingDashboard: React.FC = () => {
                                   {formatPriceRange(item.priceRange, item.unit)}
                                 </p>
                                 {item.unit !== 'fixed' && (
-                                  <p className="text-sm text-gray-500">
+                                  <p className="text-sm text-gray-300">
                                     {item.unit.replace('per_', 'per ').replace('_', ' ')}
                                   </p>
                                 )}
@@ -659,7 +659,7 @@ const TransparencyBillingDashboard: React.FC = () => {
           <AlertCircle className="h-5 w-5 mr-2 text-blue-700" />
           Client Information
         </h3>
-        <ul className="space-y-2 text-sm text-gray-700">
+        <ul className="space-y-2 text-sm text-gray-200">
           <li className="flex items-start">
             <span className="text-blue-700 mr-2">•</span>
             All price guidelines above are inclusive of GST.

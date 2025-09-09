@@ -170,7 +170,7 @@ export function TerritoryManager() {
         <h2 className="text-xl font-bold">Territory Management</h2>
         <div className="flex gap-3">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />
             <Input
               placeholder="Search contractors..."
               value={searchTerm}
@@ -215,7 +215,7 @@ export function TerritoryManager() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold">{regionStats.metropolitan}</p>
-            <p className="text-xs text-gray-600">≤50km radius</p>
+            <p className="text-xs text-gray-200">≤50km radius</p>
           </CardContent>
         </Card>
         
@@ -225,7 +225,7 @@ export function TerritoryManager() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold">{regionStats.regional}</p>
-            <p className="text-xs text-gray-600">50-100km radius</p>
+            <p className="text-xs text-gray-200">50-100km radius</p>
           </CardContent>
         </Card>
         
@@ -235,7 +235,7 @@ export function TerritoryManager() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold">{regionStats.rural}</p>
-            <p className="text-xs text-gray-600">&gt;100km radius</p>
+            <p className="text-xs text-gray-200">&gt;100km radius</p>
           </CardContent>
         </Card>
         
@@ -245,7 +245,7 @@ export function TerritoryManager() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold">{regionStats.postcodeBased}</p>
-            <p className="text-xs text-gray-600">Specific areas</p>
+            <p className="text-xs text-gray-200">Specific areas</p>
           </CardContent>
         </Card>
       </div>
@@ -268,7 +268,7 @@ export function TerritoryManager() {
                       <div className="flex items-center gap-4 mb-2">
                         <div>
                           <p className="font-medium">{conflict.territory1.companyName}</p>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-gray-200">
                             {conflict.territory1.type === 'radius' 
                               ? `${conflict.territory1.radiusKm}km radius` 
                               : `${conflict.territory1.postcodes?.length || 0} postcodes`}
@@ -277,7 +277,7 @@ export function TerritoryManager() {
                         <span className="text-red-600 font-bold">⚠️ OVERLAPS WITH</span>
                         <div>
                           <p className="font-medium">{conflict.territory2.companyName}</p>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-gray-200">
                             {conflict.territory2.type === 'radius' 
                               ? `${conflict.territory2.radiusKm}km radius` 
                               : `${conflict.territory2.postcodes?.length || 0} postcodes`}
@@ -340,15 +340,15 @@ export function TerritoryManager() {
                     <td className="p-4">
                       <div>
                         <p className="font-medium">{territory.companyName}</p>
-                        <p className="text-sm text-gray-600">{territory.contractorName}</p>
+                        <p className="text-sm text-gray-200">{territory.contractorName}</p>
                       </div>
                     </td>
                     <td className="p-4">
                       <div className="flex items-center gap-2">
                         {territory.type === 'radius' ? (
-                          <Target className="h-4 w-4 text-gray-400" />
+                          <Target className="h-4 w-4 text-gray-200" />
                         ) : (
-                          <MapPin className="h-4 w-4 text-gray-400" />
+                          <MapPin className="h-4 w-4 text-gray-200" />
                         )}
                         <span className="capitalize">{territory.type}</span>
                       </div>
@@ -361,7 +361,7 @@ export function TerritoryManager() {
                       ) : (
                         <span>{territory.suburbs?.length} suburbs</span>
                       )}
-                      <p className="text-xs text-gray-500 mt-1">
+                      <p className="text-xs text-gray-300 mt-1">
                         ~{calculateCoverage(territory).toFixed(0)} km²
                       </p>
                     </td>
@@ -412,19 +412,19 @@ export function TerritoryManager() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
             <div className="p-3 border rounded-lg">
               <p className="font-medium text-sm">Western NSW</p>
-              <p className="text-xs text-gray-600">0 contractors</p>
+              <p className="text-xs text-gray-200">0 contractors</p>
             </div>
             <div className="p-3 border rounded-lg">
               <p className="font-medium text-sm">Far North QLD</p>
-              <p className="text-xs text-gray-600">1 contractor</p>
+              <p className="text-xs text-gray-200">1 contractor</p>
             </div>
             <div className="p-3 border rounded-lg">
               <p className="font-medium text-sm">Tasmania East</p>
-              <p className="text-xs text-gray-600">0 contractors</p>
+              <p className="text-xs text-gray-200">0 contractors</p>
             </div>
             <div className="p-3 border rounded-lg">
               <p className="font-medium text-sm">NT Remote</p>
-              <p className="text-xs text-gray-600">0 contractors</p>
+              <p className="text-xs text-gray-200">0 contractors</p>
             </div>
           </div>
         </CardContent>
@@ -497,21 +497,21 @@ export function TerritoryManager() {
                     onClick={() => setResolutionNotes('Territories will be divided by postcodes with clear boundaries.')}
                   >
                     <p className="font-medium text-sm">Geographic Division</p>
-                    <p className="text-xs text-gray-600">Split territory by postcodes or natural boundaries</p>
+                    <p className="text-xs text-gray-200">Split territory by postcodes or natural boundaries</p>
                   </button>
                   <button
                     className="w-full text-left p-3 border rounded-lg hover:bg-gray-50"
                     onClick={() => setResolutionNotes('Both contractors approved for shared territory with lead rotation.')}
                   >
                     <p className="font-medium text-sm">Shared Territory</p>
-                    <p className="text-xs text-gray-600">Allow overlap with lead distribution rules</p>
+                    <p className="text-xs text-gray-200">Allow overlap with lead distribution rules</p>
                   </button>
                   <button
                     className="w-full text-left p-3 border rounded-lg hover:bg-gray-50"
                     onClick={() => setResolutionNotes('One contractor to adjust radius to eliminate overlap.')}
                   >
                     <p className="font-medium text-sm">Radius Adjustment</p>
-                    <p className="text-xs text-gray-600">Reduce coverage radius for one contractor</p>
+                    <p className="text-xs text-gray-200">Reduce coverage radius for one contractor</p>
                   </button>
                 </div>
               </div>

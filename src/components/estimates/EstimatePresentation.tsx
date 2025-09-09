@@ -71,7 +71,7 @@ const EstimatePresentation: React.FC<EstimatePresentationProps> = ({
       severe: 'text-red-600',
       total_loss: 'text-red-800'
     };
-    return colours[level] || 'text-gray-600';
+    return colours[level] || 'text-gray-200';
   };
 
   return (
@@ -88,9 +88,9 @@ const EstimatePresentation: React.FC<EstimatePresentationProps> = ({
                 {estimate.status.replace('_', ' ').toUpperCase()}
               </span>
             </div>
-            <p className="text-gray-600">Version {estimate.version} • {estimate.type} Estimate</p>
+            <p className="text-gray-200">Version {estimate.version} • {estimate.type} Estimate</p>
             {estimate.claimNumber && (
-              <p className="text-sm text-gray-500 mt-1">Claim #: {estimate.claimNumber}</p>
+              <p className="text-sm text-gray-300 mt-1">Claim #: {estimate.claimNumber}</p>
             )}
           </div>
 
@@ -137,24 +137,24 @@ const EstimatePresentation: React.FC<EstimatePresentationProps> = ({
         {/* Key Information */}
         <div className="grid grid-cols-4 gap-4 pt-4 border-t">
           <div>
-            <p className="text-sm text-gray-500">Total Amount</p>
+            <p className="text-sm text-gray-300">Total Amount</p>
             <p className="text-xl font-bold text-gray-900">{formatCurrency(estimate.totals.total)}</p>
-            <p className="text-xs text-gray-500">Inc. GST</p>
+            <p className="text-xs text-gray-300">Inc. GST</p>
           </div>
           <div>
-            <p className="text-sm text-gray-500">Valid Until</p>
+            <p className="text-sm text-gray-300">Valid Until</p>
             <p className="text-lg font-semibold text-gray-900">
               {new Date(estimate.validUntil).toLocaleDateString('en-AU')}
             </p>
           </div>
           <div>
-            <p className="text-sm text-gray-500">Assessment Date</p>
+            <p className="text-sm text-gray-300">Assessment Date</p>
             <p className="text-lg font-semibold text-gray-900">
               {new Date(estimate.assessment.assessmentDate).toLocaleDateString('en-AU')}
             </p>
           </div>
           <div>
-            <p className="text-sm text-gray-500">Estimated Duration</p>
+            <p className="text-sm text-gray-300">Estimated Duration</p>
             <p className="text-lg font-semibold text-gray-900">
               {estimate.scope.timeline.estimatedDuration} days
             </p>
@@ -173,7 +173,7 @@ const EstimatePresentation: React.FC<EstimatePresentationProps> = ({
                 className={`py-4 px-1 border-b-2 font-medium text-sm capitalize ${
                   activeTab === tab
                     ? 'border-blue-500 text-blue-600'
-                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                    : 'border-transparent text-gray-300 hover:text-gray-200 hover:border-gray-300'
                 }`}
               >
                 {tab === 'comparison' ? 'Price Comparison' : tab}
@@ -189,27 +189,27 @@ const EstimatePresentation: React.FC<EstimatePresentationProps> = ({
               {/* Property Details */}
               <div>
                 <h3 className="text-lg font-semibold mb-4 flex items-center">
-                  <Building className="h-5 w-5 mr-2 text-gray-600" />
+                  <Building className="h-5 w-5 mr-2 text-gray-200" />
                   Property Details
                 </h3>
                 <div className="grid grid-cols-2 gap-6 bg-gray-50 p-4 rounded">
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">Address</p>
+                    <p className="text-sm text-gray-200 mb-1">Address</p>
                     <p className="font-medium flex items-start">
-                      <MapPin className="h-4 w-4 mr-2 mt-0.5 text-gray-400" />
+                      <MapPin className="h-4 w-4 mr-2 mt-0.5 text-gray-200" />
                       {estimate.assessment.propertyDetails.address}
                     </p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">Property Type</p>
+                    <p className="text-sm text-gray-200 mb-1">Property Type</p>
                     <p className="font-medium capitalize">{estimate.assessment.propertyDetails.propertyType}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">Total Area</p>
+                    <p className="text-sm text-gray-200 mb-1">Total Area</p>
                     <p className="font-medium">{estimate.assessment.propertyDetails.totalArea} sqm</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">Affected Area</p>
+                    <p className="text-sm text-gray-200 mb-1">Affected Area</p>
                     <p className="font-medium text-blue-700">{estimate.assessment.propertyDetails.affectedArea} sqm</p>
                   </div>
                 </div>
@@ -224,15 +224,15 @@ const EstimatePresentation: React.FC<EstimatePresentationProps> = ({
                 <div className="bg-orange-50 border border-orange-200 rounded p-4">
                   <div className="grid grid-cols-3 gap-4">
                     <div>
-                      <p className="text-sm text-gray-600">Primary Cause</p>
+                      <p className="text-sm text-gray-200">Primary Cause</p>
                       <p className="font-semibold capitalize">{estimate.assessment.damageAssessment.primaryCause.replace('_', ' ')}</p>
                     </div>
                     <div>
-                      <p className="text-sm text-gray-600">IICRC Category</p>
+                      <p className="text-sm text-gray-200">IICRC Category</p>
                       <p className="font-semibold">Category {estimate.assessment.damageAssessment.category}</p>
                     </div>
                     <div>
-                      <p className="text-sm text-gray-600">IICRC Class</p>
+                      <p className="text-sm text-gray-200">IICRC Class</p>
                       <p className="font-semibold">Class {estimate.assessment.damageAssessment.class}</p>
                     </div>
                   </div>
@@ -254,7 +254,7 @@ const EstimatePresentation: React.FC<EstimatePresentationProps> = ({
               {/* Technician Info */}
               <div>
                 <h3 className="text-lg font-semibold mb-4 flex items-center">
-                  <User className="h-5 w-5 mr-2 text-gray-600" />
+                  <User className="h-5 w-5 mr-2 text-gray-200" />
                   Assessment Technician
                 </h3>
                 <div className="bg-gray-50 p-4 rounded">
@@ -296,11 +296,11 @@ const EstimatePresentation: React.FC<EstimatePresentationProps> = ({
                 <table className="min-w-full divide-y divide-gray-200">
                   <thead className="bg-gray-50">
                     <tr>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Description</th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Quantity</th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Unit Price</th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Total</th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Source</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase">Description</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase">Quantity</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase">Unit Price</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase">Total</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase">Source</th>
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
@@ -310,7 +310,7 @@ const EstimatePresentation: React.FC<EstimatePresentationProps> = ({
                           <div>
                             <p className="text-sm font-medium text-gray-900">{item.description}</p>
                             {item.notes && (
-                              <p className="text-xs text-gray-500 mt-1">{item.notes}</p>
+                              <p className="text-xs text-gray-300 mt-1">{item.notes}</p>
                             )}
                           </div>
                         </td>
@@ -401,7 +401,7 @@ const EstimatePresentation: React.FC<EstimatePresentationProps> = ({
             <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-semibold mb-3">Scope Summary</h3>
-                <p className="text-gray-600">{estimate.scope.summary}</p>
+                <p className="text-gray-200">{estimate.scope.summary}</p>
               </div>
 
               {/* Work Phases */}
@@ -414,11 +414,11 @@ const EstimatePresentation: React.FC<EstimatePresentationProps> = ({
                         <h4 className="font-semibold">
                           Phase {phase.phase}: {phase.name}
                         </h4>
-                        <span className="text-sm text-gray-500">
+                        <span className="text-sm text-gray-300">
                           {phase.duration} days
                         </span>
                       </div>
-                      <p className="text-sm text-gray-600 mb-3">{phase.description}</p>
+                      <p className="text-sm text-gray-200 mb-3">{phase.description}</p>
                       <div className="space-y-1">
                         {phase.tasks.map((task, idx) => (
                           <div key={idx} className="flex items-start text-sm">
@@ -481,12 +481,12 @@ const EstimatePresentation: React.FC<EstimatePresentationProps> = ({
                 <table className="min-w-full">
                   <thead className="bg-gray-50">
                     <tr>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Category</th>
-                      <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">NRP Guideline</th>
-                      <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">Contractor Rate</th>
-                      <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">Industry Avg</th>
-                      <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">Selected</th>
-                      <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase">Variance</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase">Category</th>
+                      <th className="px-6 py-3 text-right text-xs font-medium text-gray-300 uppercase">NRP Guideline</th>
+                      <th className="px-6 py-3 text-right text-xs font-medium text-gray-300 uppercase">Contractor Rate</th>
+                      <th className="px-6 py-3 text-right text-xs font-medium text-gray-300 uppercase">Industry Avg</th>
+                      <th className="px-6 py-3 text-right text-xs font-medium text-gray-300 uppercase">Selected</th>
+                      <th className="px-6 py-3 text-center text-xs font-medium text-gray-300 uppercase">Variance</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200">
@@ -526,7 +526,7 @@ const EstimatePresentation: React.FC<EstimatePresentationProps> = ({
               </div>
 
               <div className="bg-gray-50 p-4 rounded">
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-200">
                   <strong>Note:</strong> Variance shows the percentage difference between the selected price and NRP guidelines. 
                   Variances within ±10% are considered standard market rates.
                 </p>
@@ -539,7 +539,7 @@ const EstimatePresentation: React.FC<EstimatePresentationProps> = ({
       {/* Legal Disclaimer */}
       <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
         <h3 className="text-lg font-semibold mb-3">Important Notice</h3>
-        <div className="space-y-2 text-sm text-gray-600">
+        <div className="space-y-2 text-sm text-gray-200">
           <p>{estimate.metadata.disclaimer.text}</p>
           {estimate.metadata.disclaimer.sections.map((section, idx) => (
             <div key={idx} className={section.emphasis === 'highlighted' ? 'bg-yellow-50 p-3 rounded' : ''}>

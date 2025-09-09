@@ -150,7 +150,7 @@ export default function Step3ExperienceReferences({ data, onNext, onBack }: Step
     <div className="space-y-8">
       <div>
         <h2 className="text-2xl font-bold text-gray-900">Work Experience & References</h2>
-        <p className="mt-2 text-gray-600">
+        <p className="mt-2 text-gray-200">
           Share your professional experience and provide references to validate your expertise
         </p>
       </div>

@@ -159,7 +159,7 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
     if (avg >= 4) return { text: 'Great!', emoji: '😊', colour: 'text-green-600' };
     if (avg === 3) return { text: 'Good', emoji: '😐', colour: 'text-yellow-600' };
     if (avg >= 1) return { text: 'We can do better', emoji: '😔', colour: 'text-red-600' };
-    return { text: 'Rate your experience', emoji: '⭐', colour: 'text-gray-600' };
+    return { text: 'Rate your experience', emoji: '⭐', colour: 'text-gray-200' };
   };
 
   const RatingStars = ({ category, value, onChange }: {
@@ -168,7 +168,7 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
     onChange: (rating: number) => void;
   }) => (
     <div className="space-y-2">
-      <label className="block text-sm font-medium text-gray-700">
+      <label className="block text-sm font-medium text-gray-200">
         {categoryLabels[category]}
       </label>
       <div className="flex items-center space-x-1">
@@ -185,7 +185,7 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
             <Star className={`w-6 h-6 ${rating <= value ? 'fill-current' : ''}`} />
           </button>
         ))}
-        <span className="ml-3 text-sm text-gray-600">
+        <span className="ml-3 text-sm text-gray-200">
           {value > 0 ? ratingLabels[value as keyof typeof ratingLabels]?.label : 'Not rated'}
         </span>
       </div>
@@ -202,7 +202,7 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
               <h2 className={`text-2xl font-bold ${getOverallSentiment().colour}`}>
                 {getOverallSentiment().text}
               </h2>
-              <p className="text-gray-600 mt-2">
+              <p className="text-gray-200 mt-2">
                 How was your experience with {jobDetails.contractorName}?
               </p>
             </div>
@@ -256,12 +256,12 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
           <div className="space-y-6">
             <div className="text-center mb-6">
               <h2 className="text-xl font-bold text-gray-900">Tell us more about your experience</h2>
-              <p className="text-gray-600 mt-2">Your feedback helps us improve our service</p>
+              <p className="text-gray-200 mt-2">Your feedback helps us improve our service</p>
             </div>
 
             <div className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-200 mb-2">
                   <ThumbsUp className="w-4 h-4 inline mr-2 text-green-500" />
                   What did we do well?
                 </label>
@@ -275,7 +275,7 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-200 mb-2">
                   <ThumbsDown className="w-4 h-4 inline mr-2 text-red-500" />
                   What could we improve?
                 </label>
@@ -289,7 +289,7 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-200 mb-2">
                   <MessageSquare className="w-4 h-4 inline mr-2 text-blue-500" />
                   Any suggestions for future services?
                 </label>
@@ -335,7 +335,7 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
           <div className="space-y-6">
             <div className="text-center mb-6">
               <h2 className="text-xl font-bold text-gray-900">Show off the results!</h2>
-              <p className="text-gray-600 mt-2">
+              <p className="text-gray-200 mt-2">
                 Add photos to showcase the quality work (optional but appreciated)
               </p>
             </div>
@@ -358,8 +358,8 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
               ))}
 
               <label className="w-full h-32 border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center cursor-pointer hover:border-blue-400 hover:bg-blue-50 transition-colours">
-                <Upload className="w-8 h-8 text-gray-400 mb-2" />
-                <span className="text-sm text-gray-500">Upload Photos</span>
+                <Upload className="w-8 h-8 text-gray-200 mb-2" />
+                <span className="text-sm text-gray-300">Upload Photos</span>
                 <input
                   type="file"
                   multiple
@@ -372,7 +372,7 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
 
             <div className="bg-gray-50 rounded-lg p-4">
               <h3 className="font-medium text-gray-900 mb-2">Photo Guidelines</h3>
-              <ul className="text-sm text-gray-600 space-y-1">
+              <ul className="text-sm text-gray-200 space-y-1">
                 <li>• Before and after shots work great</li>
                 <li>• Good lighting helps showcase the quality</li>
                 <li>• Maximum 5 photos per review</li>
@@ -390,7 +390,7 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
                 <CheckCircle className="w-8 h-8 text-green-600" />
               </div>
               <h2 className="text-xl font-bold text-gray-900">Almost done!</h2>
-              <p className="text-gray-600 mt-2">Review your feedback before submitting</p>
+              <p className="text-gray-200 mt-2">Review your feedback before submitting</p>
             </div>
 
             <div className="bg-gray-50 rounded-lg p-6 space-y-4">
@@ -399,7 +399,7 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   {Object.entries(ratings).map(([category, rating]) => (
                     <div key={category} className="flex justify-between">
-                      <span className="text-gray-600 capitalize">
+                      <span className="text-gray-200 capitalize">
                         {categoryLabels[category as keyof typeof categoryLabels]}:
                       </span>
                       <div className="flex items-center">
@@ -476,7 +476,7 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
               </div>
             )}
 
-            <div className="text-center text-sm text-gray-500">
+            <div className="text-center text-sm text-gray-300">
               <p>
                 By submitting this feedback, you agree to our{' '}
                 <a href="/privacy" className="text-blue-600 hover:text-blue-700">
@@ -503,12 +503,12 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
         <div className="flex items-center justify-between mb-6">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Service Feedback</h1>
-            <p className="text-gray-600 mt-2">Help us improve by sharing your experience</p>
+            <p className="text-gray-200 mt-2">Help us improve by sharing your experience</p>
           </div>
           {onCancel && (
             <button
               onClick={onCancel}
-              className="text-gray-400 hover:text-gray-600"
+              className="text-gray-200 hover:text-gray-200"
             >
               <X className="w-6 h-6" />
             </button>
@@ -519,20 +519,20 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
         <div className="bg-gray-50 rounded-lg p-4 mb-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
             <div className="flex items-center">
-              <Briefcase className="w-4 h-4 text-gray-500 mr-2" />
-              <span className="text-gray-600">Job:</span>
+              <Briefcase className="w-4 h-4 text-gray-300 mr-2" />
+              <span className="text-gray-200">Job:</span>
               <span className="font-medium ml-1">{jobDetails.jobNumber}</span>
             </div>
             <div className="flex items-center">
-              <Calendar className="w-4 h-4 text-gray-500 mr-2" />
-              <span className="text-gray-600">Completed:</span>
+              <Calendar className="w-4 h-4 text-gray-300 mr-2" />
+              <span className="text-gray-200">Completed:</span>
               <span className="font-medium ml-1">
                 {jobDetails.completedDate.toLocaleDateString('en-AU')}
               </span>
             </div>
             <div className="flex items-center">
-              <User className="w-4 h-4 text-gray-500 mr-2" />
-              <span className="text-gray-600">Contractor:</span>
+              <User className="w-4 h-4 text-gray-300 mr-2" />
+              <span className="text-gray-200">Contractor:</span>
               <span className="font-medium ml-1">{jobDetails.contractorName}</span>
             </div>
           </div>
@@ -549,7 +549,7 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
                       ? 'bg-blue-600 text-white'
                       : currentStep > step.id
                       ? 'bg-green-500 text-white'
-                      : 'bg-gray-200 text-gray-600'
+                      : 'bg-gray-200 text-gray-200'
                   }`}
                 >
                   {currentStep > step.id ? (
@@ -558,7 +558,7 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
                     step.id
                   )}
                 </div>
-                <p className="text-xs mt-2 text-center text-gray-600 hidden sm:block">
+                <p className="text-xs mt-2 text-center text-gray-200 hidden sm:block">
                   {step.title}
                 </p>
               </div>
@@ -586,8 +586,8 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
           disabled={currentStep === 1}
           className={`px-6 py-3 rounded-lg font-medium transition-colours ${
             currentStep === 1
-              ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              ? 'bg-gray-100 text-gray-200 cursor-not-allowed'
+              : 'bg-gray-200 text-gray-200 hover:bg-gray-300'
           }`}
         >
           Previous
@@ -599,7 +599,7 @@ export default function FeedbackCollection({ jobId, contractorId, jobDetails, on
             disabled={currentStep === 1 && ratings.overall === 0}
             className={`px-6 py-3 rounded-lg font-medium transition-colours ${
               (currentStep === 1 && ratings.overall === 0)
-                ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                ? 'bg-gray-100 text-gray-200 cursor-not-allowed'
                 : 'bg-blue-600 text-white hover:bg-blue-700'
             }`}
           >

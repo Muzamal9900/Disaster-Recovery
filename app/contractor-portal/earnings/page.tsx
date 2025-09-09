@@ -136,12 +136,12 @@ export default function ContractorPortalEarningsPage() {
               <div key={index} className="p-4 bg-white/5 rounded-lg">
                 <h3 className="text-white font-semibold mb-2">{month.month}</h3>
                 <p className="text-2xl font-bold text-green-400 mb-1">{month.earnings}</p>
-                <p className="text-gray-400 text-sm">{month.jobs} jobs completed</p>
+                <p className="text-gray-200 text-sm">{month.jobs} jobs completed</p>
                 <div className="mt-3 flex items-center gap-2">
                   <div className="flex-1 bg-white/20 rounded-full h-2">
                     <div className="bg-green-500 h-2 rounded-full" style={{ width: `${(month.jobs / 20) * 100}%` }}></div>
                   </div>
-                  <span className="text-xs text-gray-400">{month.jobs}/20</span>
+                  <span className="text-xs text-gray-200">{month.jobs}/20</span>
                 </div>
               </div>
             ))}
@@ -191,7 +191,7 @@ export default function ContractorPortalEarningsPage() {
                     <td className="py-3 px-4 text-gray-300">{transaction.date}</td>
                     <td className="py-3 px-4">
                       <p className="text-white">{transaction.job}</p>
-                      <p className="text-gray-400 text-sm">{transaction.client}</p>
+                      <p className="text-gray-200 text-sm">{transaction.client}</p>
                     </td>
                     <td className="py-3 px-4 text-green-400 font-semibold">{transaction.amount}</td>
                     <td className="py-3 px-4">

@@ -402,7 +402,7 @@ export default function Day2WaterDamageRestoration() {
                 <h1 className="text-2xl font-bold text-gray-900">
                   Day 2: Water Damage Restoration Fundamentals
                 </h1>
-                <p className="text-sm text-gray-600">Master the science of structural drying</p>
+                <p className="text-sm text-gray-200">Master the science of structural drying</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -426,7 +426,7 @@ export default function Day2WaterDamageRestoration() {
             <CardContent className="p-4">
               <h3 className="font-semibold mb-2">Today's Modules</h3>
               <Progress value={33} className="mb-2" />
-              <p className="text-xs text-gray-600">2 of 6 modules completed</p>
+              <p className="text-xs text-gray-200">2 of 6 modules completed</p>
             </CardContent>
           </Card>
 
@@ -448,10 +448,10 @@ export default function Day2WaterDamageRestoration() {
                     ) : (
                       <div className="h-4 w-4 rounded-full border-2 border-gray-300" />
                     )}
-                    <span className="text-xs text-gray-600">Module {module.id}</span>
+                    <span className="text-xs text-gray-200">Module {module.id}</span>
                   </div>
                   <h4 className="text-sm font-medium">{module.title}</h4>
-                  <p className="text-xs text-gray-600 mt-1">{module.duration}</p>
+                  <p className="text-xs text-gray-200 mt-1">{module.duration}</p>
                 </CardContent>
               </Card>
             ))}
@@ -505,7 +505,7 @@ export default function Day2WaterDamageRestoration() {
                             <ul className="space-y-2">
                               {category.examples.map((example, idx) => (
                                 <li key={idx} className="flex items-start gap-2">
-                                  <CheckCircle className="h-4 w-4 text-gray-400 mt-0.5" />
+                                  <CheckCircle className="h-4 w-4 text-gray-200 mt-0.5" />
                                   <span className="text-sm">{example}</span>
                                 </li>
                               ))}
@@ -601,14 +601,14 @@ export default function Day2WaterDamageRestoration() {
                           <div className="flex items-start justify-between">
                             <div>
                               <h4 className="font-semibold">{item.name}</h4>
-                              <p className="text-sm text-gray-600 mt-1">{item.use}</p>
+                              <p className="text-sm text-gray-200 mt-1">{item.use}</p>
                               <div className="grid grid-cols-2 gap-4 mt-3">
                                 <div>
-                                  <span className="text-xs text-gray-500">Reading Range</span>
+                                  <span className="text-xs text-gray-300">Reading Range</span>
                                   <p className="text-sm font-medium">{item.reading}</p>
                                 </div>
                                 <div>
-                                  <span className="text-xs text-gray-500">Technique</span>
+                                  <span className="text-xs text-gray-300">Technique</span>
                                   <p className="text-sm">{item.technique}</p>
                                 </div>
                               </div>
@@ -689,7 +689,7 @@ export default function Day2WaterDamageRestoration() {
                       <Card key={idx}>
                         <CardContent className="p-4">
                           <h4 className="font-semibold mb-2">{exercise.title}</h4>
-                          <p className="text-sm text-gray-600 mb-3">{exercise.scenario}</p>
+                          <p className="text-sm text-gray-200 mb-3">{exercise.scenario}</p>
                           <div className="space-y-2">
                             <p className="text-sm font-medium">Tasks:</p>
                             {exercise.tasks.map((task, taskIdx) => (

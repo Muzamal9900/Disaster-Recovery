@@ -163,7 +163,7 @@ const ComplianceReporting: React.FC<ComplianceReportingProps> = ({
     switch (trend) {
       case 'improving': return <TrendingUp className="w-4 h-4 text-green-600" />;
       case 'declining': return <TrendingDown className="w-4 h-4 text-red-600" />;
-      case 'stable': return <Minus className="w-4 h-4 text-gray-600" />;
+      case 'stable': return <Minus className="w-4 h-4 text-gray-200" />;
       default: return null;
     }
   };
@@ -171,7 +171,7 @@ const ComplianceReporting: React.FC<ComplianceReportingProps> = ({
   const MetricCard = ({ metric }: { metric: ComplianceMetric }) => (
     <div className="bg-white rounded-lg border border-gray-200 p-4">
       <div className="flex items-center justify-between mb-2">
-        <p className="text-sm text-gray-600">{metric.name}</p>
+        <p className="text-sm text-gray-200">{metric.name}</p>
         {getTrendIcon(metric.trend)}
       </div>
       <div className="flex items-baseline space-x-2">
@@ -179,7 +179,7 @@ const ComplianceReporting: React.FC<ComplianceReportingProps> = ({
           {typeof metric.value === 'number' ? metric.value.toFixed(1) : metric.value}
         </p>
         {metric.target && (
-          <p className="text-sm text-gray-500">/ {metric.target}</p>
+          <p className="text-sm text-gray-300">/ {metric.target}</p>
         )}
       </div>
       {metric.changePercentage !== undefined && (
@@ -218,7 +218,7 @@ const ComplianceReporting: React.FC<ComplianceReportingProps> = ({
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center">
           <p className="text-4xl font-bold text-gray-900">{score}%</p>
-          <p className="text-sm text-gray-600">Compliance</p>
+          <p className="text-sm text-gray-200">Compliance</p>
         </div>
       </div>
     </div>
@@ -230,7 +230,7 @@ const ComplianceReporting: React.FC<ComplianceReportingProps> = ({
       
       <div className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-200 mb-2">
             Report Type
           </label>
           <select
@@ -249,7 +249,7 @@ const ComplianceReporting: React.FC<ComplianceReportingProps> = ({
 
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-200 mb-2">
               Start Date
             </label>
             <input
@@ -260,7 +260,7 @@ const ComplianceReporting: React.FC<ComplianceReportingProps> = ({
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-200 mb-2">
               End Date
             </label>
             <input
@@ -273,7 +273,7 @@ const ComplianceReporting: React.FC<ComplianceReportingProps> = ({
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-200 mb-2">
             Contractors (Optional)
           </label>
           <select
@@ -320,7 +320,7 @@ const ComplianceReporting: React.FC<ComplianceReportingProps> = ({
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-xl font-semibold text-gray-900">{selectedReport.title}</h2>
-              <p className="text-sm text-gray-600 mt-1">
+              <p className="text-sm text-gray-200 mt-1">
                 Generated on {new Date(selectedReport.generatedAt).toLocaleDateString()} by {selectedReport.generatedBy}
               </p>
             </div>
@@ -469,7 +469,7 @@ const ComplianceReporting: React.FC<ComplianceReportingProps> = ({
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Compliance Reporting</h1>
-          <p className="text-gray-600 mt-1">Generate and view compliance reports</p>
+          <p className="text-gray-200 mt-1">Generate and view compliance reports</p>
         </div>
         <div className="flex items-center space-x-2">
           <button className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
@@ -505,15 +505,15 @@ const ComplianceReporting: React.FC<ComplianceReportingProps> = ({
               onClick={() => setSelectedReport(report)}
             >
               <div className="flex items-center space-x-3">
-                <FileText className="w-5 h-5 text-gray-600" />
+                <FileText className="w-5 h-5 text-gray-200" />
                 <div>
                   <p className="font-medium text-gray-900">{report.title}</p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-200">
                     {new Date(report.generatedAt).toLocaleDateString()}
                   </p>
                 </div>
               </div>
-              <ChevronRight className="w-4 h-4 text-gray-400" />
+              <ChevronRight className="w-4 h-4 text-gray-200" />
             </div>
           ))}
         </div>

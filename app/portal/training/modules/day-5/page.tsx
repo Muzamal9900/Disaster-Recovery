@@ -473,7 +473,7 @@ export default function Day5EquipmentTechnology() {
                 <h1 className="text-2xl font-bold text-gray-900">
                   Day 5: Equipment & Technology
                 </h1>
-                <p className="text-sm text-gray-600">Master professional restoration equipment</p>
+                <p className="text-sm text-gray-200">Master professional restoration equipment</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -497,7 +497,7 @@ export default function Day5EquipmentTechnology() {
             <CardContent className="p-4">
               <h3 className="font-semibold mb-2">Equipment Mastery</h3>
               <Progress value={33} className="mb-2" />
-              <p className="text-xs text-gray-600">2 of 6 modules completed</p>
+              <p className="text-xs text-gray-200">2 of 6 modules completed</p>
             </CardContent>
           </Card>
 
@@ -519,10 +519,10 @@ export default function Day5EquipmentTechnology() {
                     ) : (
                       <div className="h-4 w-4 rounded-full border-2 border-gray-300" />
                     )}
-                    <span className="text-xs text-gray-600">Module {module.id}</span>
+                    <span className="text-xs text-gray-200">Module {module.id}</span>
                   </div>
                   <h4 className="text-sm font-medium">{module.title}</h4>
-                  <p className="text-xs text-gray-600 mt-1">{module.duration}</p>
+                  <p className="text-xs text-gray-200 mt-1">{module.duration}</p>
                 </CardContent>
               </Card>
             ))}
@@ -565,9 +565,9 @@ export default function Day5EquipmentTechnology() {
                             <div>
                               <h4 className="font-medium mb-2">Specifications</h4>
                               <div className="space-y-1 text-sm">
-                                <p><span className="text-gray-600">Range:</span> {modules[0].content.moistureMeters.penetrating.specifications.range}</p>
-                                <p><span className="text-gray-600">Accuracy:</span> {modules[0].content.moistureMeters.penetrating.specifications.accuracy}</p>
-                                <p><span className="text-gray-600">Depth:</span> {modules[0].content.moistureMeters.penetrating.specifications.depth}</p>
+                                <p><span className="text-gray-200">Range:</span> {modules[0].content.moistureMeters.penetrating.specifications.range}</p>
+                                <p><span className="text-gray-200">Accuracy:</span> {modules[0].content.moistureMeters.penetrating.specifications.accuracy}</p>
+                                <p><span className="text-gray-200">Depth:</span> {modules[0].content.moistureMeters.penetrating.specifications.depth}</p>
                               </div>
                             </div>
                             <div>
@@ -720,7 +720,7 @@ export default function Day5EquipmentTechnology() {
                         <Card key={key}>
                           <CardHeader>
                             <CardTitle className="text-base">{type.name}</CardTitle>
-                            <div className="flex gap-4 text-sm text-gray-600">
+                            <div className="flex gap-4 text-sm text-gray-200">
                               <span>Power: {type.power}</span>
                               <span>Airflow: {type.airflow}</span>
                               <span>Draw: {type.amps}</span>
@@ -759,7 +759,7 @@ export default function Day5EquipmentTechnology() {
                           <div className="space-y-4">
                             <div>
                               <h4 className="font-medium mb-2">Air Movers</h4>
-                              <p className="text-sm text-gray-600 mb-2">
+                              <p className="text-sm text-gray-200 mb-2">
                                 Formula: {equipmentCalculations.airMovers.formula}
                               </p>
                               <div className="p-3 bg-gray-50 rounded-lg">
@@ -774,7 +774,7 @@ export default function Day5EquipmentTechnology() {
 
                             <div>
                               <h4 className="font-medium mb-2">Dehumidifiers</h4>
-                              <p className="text-sm text-gray-600 mb-3">
+                              <p className="text-sm text-gray-200 mb-3">
                                 Formula: {equipmentCalculations.dehumidifiers.formula}
                               </p>
                               <Card>

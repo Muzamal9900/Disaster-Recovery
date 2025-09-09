@@ -118,7 +118,7 @@ export default function ContractorPortalPage() {
                 className={`flex items-center gap-2 py-4 px-2 border-b-2 transition-colors ${
                   activeTab === tab.id
                     ? 'border-indigo-600 text-indigo-600'
-                    : 'border-transparent text-gray-600 hover:text-gray-900'
+                    : 'border-transparent text-gray-200 hover:text-gray-900'
                 }`}
               >
                 <tab.icon className="h-5 w-5" />
@@ -157,7 +157,7 @@ export default function ContractorPortalPage() {
                       </span>
                     </div>
                     <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
-                    <div className="text-sm text-gray-600">{stat.label}</div>
+                    <div className="text-sm text-gray-200">{stat.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -179,7 +179,7 @@ export default function ContractorPortalPage() {
                       <div className="flex items-start justify-between mb-4">
                         <div>
                           <h3 className="text-lg font-semibold">{job.type}</h3>
-                          <div className="flex items-center gap-4 mt-2 text-sm text-gray-600">
+                          <div className="flex items-center gap-4 mt-2 text-sm text-gray-200">
                             <span className="flex items-center gap-1">
                               <MapPin className="h-4 w-4" />
                               {job.location}
@@ -225,19 +225,19 @@ export default function ContractorPortalPage() {
                   <h2 className="text-2xl font-bold mb-6">Earnings Overview</h2>
                   <div className="space-y-4">
                     <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-gray-600">This Week</span>
+                      <span className="text-gray-200">This Week</span>
                       <span className="text-2xl font-bold text-green-600">{earnings.thisWeek}</span>
                     </div>
                     <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-gray-600">This Month</span>
+                      <span className="text-gray-200">This Month</span>
                       <span className="text-2xl font-bold text-gray-900">{earnings.thisMonth}</span>
                     </div>
                     <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-gray-600">Pending Payment</span>
+                      <span className="text-gray-200">Pending Payment</span>
                       <span className="text-xl font-semibold text-yellow-600">{earnings.pending}</span>
                     </div>
                     <div className="flex justify-between items-center py-3">
-                      <span className="text-gray-600">Next Payout</span>
+                      <span className="text-gray-200">Next Payout</span>
                       <span className="text-gray-900">{earnings.nextPayout}</span>
                     </div>
                   </div>
@@ -255,7 +255,7 @@ export default function ContractorPortalPage() {
                   <div className="space-y-6">
                     <div>
                       <div className="flex justify-between mb-2">
-                        <span className="text-sm text-gray-600">Customer Satisfaction</span>
+                        <span className="text-sm text-gray-200">Customer Satisfaction</span>
                         <span className="text-sm font-semibold">98%</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
@@ -264,7 +264,7 @@ export default function ContractorPortalPage() {
                     </div>
                     <div>
                       <div className="flex justify-between mb-2">
-                        <span className="text-sm text-gray-600">On-Time Completion</span>
+                        <span className="text-sm text-gray-200">On-Time Completion</span>
                         <span className="text-sm font-semibold">95%</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
@@ -273,7 +273,7 @@ export default function ContractorPortalPage() {
                     </div>
                     <div>
                       <div className="flex justify-between mb-2">
-                        <span className="text-sm text-gray-600">Response Rate</span>
+                        <span className="text-sm text-gray-200">Response Rate</span>
                         <span className="text-sm font-semibold">92%</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
@@ -302,7 +302,7 @@ export default function ContractorPortalPage() {
               className="bg-white rounded-xl shadow-lg p-8"
             >
               <h2 className="text-2xl font-bold mb-6">Job Board</h2>
-              <p className="text-gray-600">Browse and accept available jobs in your area.</p>
+              <p className="text-gray-200">Browse and accept available jobs in your area.</p>
               {/* Add detailed job board here */}
             </motion.div>
           )}
@@ -314,7 +314,7 @@ export default function ContractorPortalPage() {
               className="bg-white rounded-xl shadow-lg p-8"
             >
               <h2 className="text-2xl font-bold mb-6">Earnings & Payments</h2>
-              <p className="text-gray-600">Track your income and payment history.</p>
+              <p className="text-gray-200">Track your income and payment history.</p>
               {/* Add earnings management here */}
             </motion.div>
           )}
@@ -326,7 +326,7 @@ export default function ContractorPortalPage() {
               className="bg-white rounded-xl shadow-lg p-8"
             >
               <h2 className="text-2xl font-bold mb-6">Training & Certification</h2>
-              <p className="text-gray-600">Access courses to improve your skills and earn certifications.</p>
+              <p className="text-gray-200">Access courses to improve your skills and earn certifications.</p>
               {/* Add training content here */}
             </motion.div>
           )}
@@ -338,7 +338,7 @@ export default function ContractorPortalPage() {
               className="bg-white rounded-xl shadow-lg p-8"
             >
               <h2 className="text-2xl font-bold mb-6">Vision Board</h2>
-              <p className="text-gray-600 mb-6">Track your achievements, certifications, and goals.</p>
+              <p className="text-gray-200 mb-6">Track your achievements, certifications, and goals.</p>
               <Link 
                 href="/contractor-portal/vision-board"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
@@ -356,7 +356,7 @@ export default function ContractorPortalPage() {
               className="bg-white rounded-xl shadow-lg p-8"
             >
               <h2 className="text-2xl font-bold mb-6">Resources & Tools</h2>
-              <p className="text-gray-600">Access documentation, tools, and support materials.</p>
+              <p className="text-gray-200">Access documentation, tools, and support materials.</p>
               {/* Add resources here */}
             </motion.div>
           )}

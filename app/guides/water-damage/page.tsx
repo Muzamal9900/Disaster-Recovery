@@ -181,7 +181,7 @@ export default function WaterDamageGuidePage() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Understanding Water Categories
           </h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">
+          <p className="text-center text-gray-200 mb-12 text-lg">
             Not all water damage is the same. The category determines health risks and restoration approach.
           </p>
           
@@ -202,12 +202,12 @@ export default function WaterDamageGuidePage() {
                 }`}>
                   <div className="text-4xl mb-3">{category.icon}</div>
                   <h3 className="text-xl font-bold mb-2">{category.title}</h3>
-                  <p className="text-gray-700 mb-4">{category.description}</p>
+                  <p className="text-gray-200 mb-4">{category.description}</p>
                   
                   <div className="space-y-3">
                     <div>
-                      <p className="font-semibold text-sm text-gray-600 mb-1">Common Sources:</p>
-                      <ul className="text-sm text-gray-700 space-y-1">
+                      <p className="font-semibold text-sm text-gray-200 mb-1">Common Sources:</p>
+                      <ul className="text-sm text-gray-200 space-y-1">
                         {category.sources.map((source, idx) => (
                           <li key={idx} className="flex items-start gap-2">
                             <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
@@ -251,11 +251,11 @@ export default function WaterDamageGuidePage() {
               >
                 <div className="text-3xl mb-3">{dmgClass.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{dmgClass.class}</h3>
-                <p className="text-gray-700 mb-3">{dmgClass.description}</p>
+                <p className="text-gray-200 mb-3">{dmgClass.description}</p>
                 <div className="space-y-2 text-sm">
                   <div>
                     <span className="font-semibold">Affected:</span>
-                    <p className="text-gray-600">{dmgClass.affected}</p>
+                    <p className="text-gray-200">{dmgClass.affected}</p>
                   </div>
                   <div className="pt-2 border-t">
                     <span className="font-semibold">Typical Dry Time:</span>
@@ -274,7 +274,7 @@ export default function WaterDamageGuidePage() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Critical Response Timeline
           </h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">
+          <p className="text-center text-gray-200 mb-12 text-lg">
             Every hour matters in water damage. Here's what needs to happen when.
           </p>
           
@@ -340,7 +340,7 @@ export default function WaterDamageGuidePage() {
                   >
                     <Icon className="w-12 h-12 text-blue-600 mb-4" />
                     <h3 className="text-2xl font-bold mb-3">{property.type} Properties</h3>
-                    <p className="text-gray-600 mb-4">Specialized guidance for {property.type.toLowerCase()} water damage</p>
+                    <p className="text-gray-200 mb-4">Specialized guidance for {property.type.toLowerCase()} water damage</p>
                     <div className="space-y-2">
                       {property.specifics.map((specific, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-sm">
@@ -389,7 +389,7 @@ export default function WaterDamageGuidePage() {
                   </span>
                 </div>
                 <h3 className="text-xl font-bold mb-2">{item.source}</h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-200 text-sm">
                   Complete guide to {item.source.toLowerCase()} water damage
                 </p>
               </Link>
@@ -475,7 +475,7 @@ export default function WaterDamageGuidePage() {
             >
               <Zap className="w-8 h-8 text-red-600 mb-3" />
               <h3 className="font-bold mb-2">Emergency Checklist</h3>
-              <p className="text-sm text-gray-600">Immediate actions for water damage</p>
+              <p className="text-sm text-gray-200">Immediate actions for water damage</p>
             </Link>
             
             <Link
@@ -484,7 +484,7 @@ export default function WaterDamageGuidePage() {
             >
               <Shield className="w-8 h-8 text-green-600 mb-3" />
               <h3 className="font-bold mb-2">Mould Prevention</h3>
-              <p className="text-sm text-gray-600">Stop mould before it starts</p>
+              <p className="text-sm text-gray-200">Stop mould before it starts</p>
             </Link>
             
             <Link
@@ -493,7 +493,7 @@ export default function WaterDamageGuidePage() {
             >
               <Info className="w-8 h-8 text-blue-600 mb-3" />
               <h3 className="font-bold mb-2">Drying Process</h3>
-              <p className="text-sm text-gray-600">Professional drying explained</p>
+              <p className="text-sm text-gray-200">Professional drying explained</p>
             </Link>
             
             <Link
@@ -502,7 +502,7 @@ export default function WaterDamageGuidePage() {
             >
               <Phone className="w-8 h-8 text-purple-600 mb-3" />
               <h3 className="font-bold mb-2">Who to Call First</h3>
-              <p className="text-sm text-gray-600">Get the right help immediately</p>
+              <p className="text-sm text-gray-200">Get the right help immediately</p>
             </Link>
           </div>
         </div>

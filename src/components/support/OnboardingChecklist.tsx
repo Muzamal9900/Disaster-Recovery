@@ -238,7 +238,7 @@ const categoryInfo = {
   setup: {
     title: 'Platform Setup',
     icon: Settings,
-    colour: 'text-gray-600 bg-gray-100'
+    colour: 'text-gray-200 bg-gray-100'
   }
 };
 
@@ -330,7 +330,7 @@ export function OnboardingChecklist({ embedded = false, onComplete }: Onboarding
             <Target className="h-6 w-6" />
             Onboarding Progress
           </h2>
-          <p className="text-gray-600 mt-1">
+          <p className="text-gray-200 mt-1">
             Complete these steps to get fully set up on the platform
           </p>
         </div>
@@ -368,22 +368,22 @@ export function OnboardingChecklist({ embedded = false, onComplete }: Onboarding
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
             <div className="text-center">
               <p className="text-2xl font-bold text-green-600">{checklist.completedCount}</p>
-              <p className="text-sm text-gray-500">Completed</p>
+              <p className="text-sm text-gray-300">Completed</p>
             </div>
             <div className="text-center">
               <p className="text-2xl font-bold text-blue-700">
                 {checklist.items.filter(i => !i.isCompleted && i.isRequired).length}
               </p>
-              <p className="text-sm text-gray-500">Required Remaining</p>
+              <p className="text-sm text-gray-300">Required Remaining</p>
             </div>
             <div className="text-center">
               <p className="text-2xl font-bold text-blue-600">
                 {checklist.items.filter(i => !i.isCompleted && !i.isRequired).length}
               </p>
-              <p className="text-sm text-gray-500">Optional</p>
+              <p className="text-sm text-gray-300">Optional</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl font-bold text-gray-600">
+              <p className="text-2xl font-bold text-gray-200">
                 {Math.ceil(
                   checklist.items
                     .filter(i => !i.isCompleted)
@@ -393,7 +393,7 @@ export function OnboardingChecklist({ embedded = false, onComplete }: Onboarding
                     }, 0) / 60
                 )}h
               </p>
-              <p className="text-sm text-gray-500">Est. Time Left</p>
+              <p className="text-sm text-gray-300">Est. Time Left</p>
             </div>
           </div>
         </CardContent>
@@ -445,9 +445,9 @@ export function OnboardingChecklist({ embedded = false, onComplete }: Onboarding
                       className="w-24 h-2"
                     />
                     {isExpanded ? (
-                      <ChevronDown className="h-5 w-5 text-gray-400" />
+                      <ChevronDown className="h-5 w-5 text-gray-200" />
                     ) : (
-                      <ChevronRight className="h-5 w-5 text-gray-400" />
+                      <ChevronRight className="h-5 w-5 text-gray-200" />
                     )}
                   </div>
                 </div>
@@ -471,7 +471,7 @@ export function OnboardingChecklist({ embedded = false, onComplete }: Onboarding
                               "mt-0.5 transition-colours",
                               item.isCompleted
                                 ? "text-green-600 cursor-default"
-                                : "text-gray-400 hover:text-blue-600"
+                                : "text-gray-200 hover:text-blue-600"
                             )}
                             disabled={item.isCompleted}
                           >
@@ -485,7 +485,7 @@ export function OnboardingChecklist({ embedded = false, onComplete }: Onboarding
                             <div className="flex items-center gap-2">
                               <p className={cn(
                                 "font-medium",
-                                item.isCompleted && "line-through text-gray-500"
+                                item.isCompleted && "line-through text-gray-300"
                               )}>
                                 {item.title}
                               </p>
@@ -495,17 +495,17 @@ export function OnboardingChecklist({ embedded = false, onComplete }: Onboarding
                                 </Badge>
                               )}
                               {item.estimatedTime && !item.isCompleted && (
-                                <span className="text-xs text-gray-500 flex items-center gap-1">
+                                <span className="text-xs text-gray-300 flex items-center gap-1">
                                   <Clock className="h-3 w-3" />
                                   {item.estimatedTime}
                                 </span>
                               )}
                             </div>
-                            <p className="text-sm text-gray-600 mt-1">
+                            <p className="text-sm text-gray-200 mt-1">
                               {item.description}
                             </p>
                             {item.completedAt && (
-                              <p className="text-xs text-gray-500 mt-1">
+                              <p className="text-xs text-gray-300 mt-1">
                                 Completed {new Date(item.completedAt).toLocaleDateString()}
                               </p>
                             )}

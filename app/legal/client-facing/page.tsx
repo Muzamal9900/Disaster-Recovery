@@ -49,7 +49,7 @@ export default function ClientFacingDocumentsPage() {
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
             Client-Facing Documents
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-200">
             Customer service agreements and client protection frameworks
           </p>
         </div>
@@ -80,12 +80,12 @@ export default function ClientFacingDocumentsPage() {
 
         <div className="mt-12 bg-blue-50 rounded-lg p-6">
           <h2 className="text-2xl font-bold mb-4">Document Compliance</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-200 mb-4">
             All documents in this section are designed to comply with Australian law and
             industry best practices. They are regularly reviewed and updated to ensure
             ongoing compliance with regulatory requirements.
           </p>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-200">
             <strong>ABN:</strong> 85 151 794 142 | 
             <strong> Last Review:</strong> August 2025 |
             <strong> Next Review:</strong> August 2026

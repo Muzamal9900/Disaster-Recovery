@@ -24,7 +24,7 @@ export default function BiohazardPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Professional Biohazard Cleanup Services
             </h1>
-            <p className="text-xl text-gray-700 mb-8">
+            <p className="text-xl text-gray-200 mb-8">
               Expert decontamination and biohazard remediation by certified specialists
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -56,37 +56,37 @@ export default function BiohazardPage() {
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="text-3xl mb-4">🔬</div>
                 <h3 className="text-xl font-semibold mb-3">Crime Scene Cleanup</h3>
-                <p className="text-gray-600">Professional cleanup and decontamination of crime scenes with compassionate, discreet service.</p>
+                <p className="text-gray-200">Professional cleanup and decontamination of crime scenes with compassionate, discreet service.</p>
               </div>
               
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="text-3xl mb-4">🩺</div>
                 <h3 className="text-xl font-semibold mb-3">Trauma Scene Cleanup</h3>
-                <p className="text-gray-600">Specialised cleanup of traumatic incidents including accidents, suicides, and unattended deaths.</p>
+                <p className="text-gray-200">Specialised cleanup of traumatic incidents including accidents, suicides, and unattended deaths.</p>
               </div>
               
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="text-3xl mb-4">🩸</div>
                 <h3 className="text-xl font-semibold mb-3">Bloodborne Pathogen Cleanup</h3>
-                <p className="text-gray-600">Safe removal and disposal of blood and other potentially infectious materials (OPIM).</p>
+                <p className="text-gray-200">Safe removal and disposal of blood and other potentially infectious materials (OPIM).</p>
               </div>
               
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="text-3xl mb-4">🗂️</div>
                 <h3 className="text-xl font-semibold mb-3">Infectious Waste Removal</h3>
-                <p className="text-gray-600">Proper handling and disposal of medical waste, sharps, and contaminated materials.</p>
+                <p className="text-gray-200">Proper handling and disposal of medical waste, sharps, and contaminated materials.</p>
               </div>
               
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="text-3xl mb-4">⚗️</div>
                 <h3 className="text-xl font-semibold mb-3">Drug Lab Cleanup</h3>
-                <p className="text-gray-600">Specialised remediation of illegal drug manufacturing sites and chemical contamination.</p>
+                <p className="text-gray-200">Specialised remediation of illegal drug manufacturing sites and chemical contamination.</p>
               </div>
               
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="text-3xl mb-4">🏠</div>
                 <h3 className="text-xl font-semibold mb-3">Hoarding Cleanup</h3>
-                <p className="text-gray-600">Compassionate cleanup of hoarding situations with biohazard considerations.</p>
+                <p className="text-gray-200">Compassionate cleanup of hoarding situations with biohazard considerations.</p>
               </div>
             </div>
 

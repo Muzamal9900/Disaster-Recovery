@@ -80,7 +80,7 @@ export function CustomerJourneyWizard() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Your Journey to Recovery
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-200">
               From disaster to restoration in 5 simple steps
             </p>
             <div className="mt-6 inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full">
@@ -109,7 +109,7 @@ export function CustomerJourneyWizard() {
                     ? 'bg-white text-blue-600'
                     : currentStep > index + 1
                     ? 'bg-green-500 text-white'
-                    : 'bg-gray-200 text-gray-600'
+                    : 'bg-gray-200 text-gray-200'
                 }`}>
                   {currentStep > index + 1 ? <CheckCircle className="h-6 w-6" /> : step.id}
                 </div>
@@ -124,19 +124,19 @@ export function CustomerJourneyWizard() {
                         {step.title}
                       </h3>
                       <p className={`${
-                        currentStep === index + 1 ? 'text-blue-100' : 'text-gray-600'
+                        currentStep === index + 1 ? 'text-blue-100' : 'text-gray-200'
                       }`}>
                         {step.description}
                       </p>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className={`text-sm ${
-                        currentStep === index + 1 ? 'text-blue-100' : 'text-gray-500'
+                        currentStep === index + 1 ? 'text-blue-100' : 'text-gray-300'
                       }`}>
                         {step.estimatedTime}
                       </span>
                       <step.icon className={`h-6 w-6 ${
-                        currentStep === index + 1 ? 'text-white' : 'text-gray-400'
+                        currentStep === index + 1 ? 'text-white' : 'text-gray-200'
                       }`} />
                     </div>
                   </div>
@@ -167,7 +167,7 @@ export function CustomerJourneyWizard() {
               <div className="space-y-6">
                 {/* Emergency Type */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-200 mb-2">
                     What type of emergency?
                   </label>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -189,7 +189,7 @@ export function CustomerJourneyWizard() {
 
                 {/* Property Type */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-200 mb-2">
                     Property type?
                   </label>
                   <div className="grid grid-cols-2 gap-3">
@@ -212,7 +212,7 @@ export function CustomerJourneyWizard() {
 
                 {/* Urgency */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-200 mb-2">
                     How urgent?
                   </label>
                   <div className="grid grid-cols-3 gap-3">
@@ -263,19 +263,19 @@ export function CustomerJourneyWizard() {
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold text-blue-600">60min</div>
-              <div className="text-sm text-gray-600">Response Time</div>
+              <div className="text-sm text-gray-200">Response Time</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600">24/7</div>
-              <div className="text-sm text-gray-600">Available</div>
+              <div className="text-sm text-gray-200">Available</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600">100%</div>
-              <div className="text-sm text-gray-600">Transparent</div>
+              <div className="text-sm text-gray-200">Transparent</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600">Direct</div>
-              <div className="text-sm text-gray-600">Billing</div>
+              <div className="text-sm text-gray-200">Billing</div>
             </div>
           </div>
         </div>

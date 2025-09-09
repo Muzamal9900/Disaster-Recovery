@@ -56,7 +56,7 @@ export default function GetHelpPage() {
                 <li>4. Choose the best contractor for your needs</li>
               </ol>
             </div>
-            <p className="text-gray-600">
+            <p className="text-gray-200">
               All contractors are IICRC certified and meet Disaster Recovery standards
             </p>
           </Card>
@@ -252,7 +252,7 @@ export default function GetHelpPage() {
                         ))}
                       </SelectContent>
                     </Select>
-                    <p className="text-sm text-gray-600 mt-2">
+                    <p className="text-sm text-gray-200 mt-2">
                       Wider radius = more contractor options and potentially faster response
                     </p>
                   </div>
@@ -321,7 +321,7 @@ export default function GetHelpPage() {
                   <span className="font-bold text-blue-700">1</span>
                 </div>
                 <h3 className="font-bold mb-2">Submit Request</h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-200">
                   Fill out the form with your damage details
                 </p>
               </Card>
@@ -330,7 +330,7 @@ export default function GetHelpPage() {
                   <span className="font-bold text-blue-700">2</span>
                 </div>
                 <h3 className="font-bold mb-2">Smart Matching</h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-200">
                   System finds qualified contractors in your radius
                 </p>
               </Card>
@@ -339,7 +339,7 @@ export default function GetHelpPage() {
                   <span className="font-bold text-blue-700">3</span>
                 </div>
                 <h3 className="font-bold mb-2">Receive Quotes</h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-200">
                   Get multiple quotes from certified contractors
                 </p>
               </Card>
@@ -348,7 +348,7 @@ export default function GetHelpPage() {
                   <span className="font-bold text-green-600">4</span>
                 </div>
                 <h3 className="font-bold mb-2">Choose & Start</h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-200">
                   Select your contractor and begin restoration
                 </p>
               </Card>

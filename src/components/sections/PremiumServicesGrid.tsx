@@ -166,7 +166,7 @@ export default function PremiumServicesGrid({
                 </span>
               </h2>
               
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-200 leading-relaxed">
                 From emergency water extraction to complete fire restoration, our expert team delivers 
                 comprehensive solutions with cutting-edge equipment and proven techniques.
               </p>
@@ -184,7 +184,7 @@ export default function PremiumServicesGrid({
                       "transition-all duration-300 transform hover:scale-105",
                       selectedCategory === category.id
                         ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg"
-                        : "bg-white text-gray-700 border border-gray-200 hover:border-blue-300 hover:text-blue-600"
+                        : "bg-white text-gray-200 border border-gray-200 hover:border-blue-300 hover:text-blue-600"
                     )}
                   >
                     <span className="flex items-center gap-2">
@@ -249,7 +249,7 @@ export default function PremiumServicesGrid({
                 </div>
                 <div className="text-left">
                   <h3 className="font-bold text-gray-900">Need Emergency Service?</h3>
-                  <p className="text-sm text-gray-600">Available 24/7 across Queensland</p>
+                  <p className="text-sm text-gray-200">Available 24/7 across Queensland</p>
                 </div>
               </div>
               

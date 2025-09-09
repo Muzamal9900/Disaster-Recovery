@@ -333,7 +333,7 @@ export default function SydneyLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Sydney Service Areas & Response Times
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-center text-gray-200 mb-12 max-w-3xl mx-auto">
               Strategic positioning across Sydney ensures rapid response to all suburbs
             </p>
 
@@ -352,7 +352,7 @@ export default function SydneyLocationPage() {
                   <p className="text-blue-600 font-semibold mb-1">
                     {suburb.response} response
                   </p>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-200 text-sm">
                     Population: {suburb.population}
                   </p>
                 </motion.div>
@@ -361,7 +361,7 @@ export default function SydneyLocationPage() {
 
             <div className="mt-12 p-6 bg-blue-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3">Complete Sydney Coverage Including:</h3>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-200 leading-relaxed">
                 <strong>Eastern Suburbs:</strong> Bondi, Coogee, Randwick, Waverley, Woollahra • 
                 <strong>North Shore:</strong> Chatswood, Mosman, Neutral Bay, Cremorne, Kirribilli • 
                 <strong>Inner West:</strong> Newtown, Marrickville, Leichhardt, Balmain, Glebe • 
@@ -379,7 +379,7 @@ export default function SydneyLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Sydney&apos;s Common Disaster Risks
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Specialised response for Sydney&apos;s unique climate and infrastructure challenges
             </p>
 
@@ -416,7 +416,7 @@ export default function SydneyLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Recent Sydney Emergency Responses
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Proven track record across Sydney&apos;s diverse property types
             </p>
 
@@ -435,7 +435,7 @@ export default function SydneyLocationPage() {
                     <div>
                       <h3 className="text-xl font-bold mb-2">{project.type}</h3>
                       <p className="text-blue-600 font-semibold mb-1">{project.location}</p>
-                      <p className="text-gray-700 mb-2">{project.damage}</p>
+                      <p className="text-gray-200 mb-2">{project.damage}</p>
                       <div className="flex flex-wrap gap-4 text-sm">
                         <span className="text-green-600">✓ {project.response}</span>
                         <span className="text-green-600">✓ {project.outcome}</span>
@@ -454,7 +454,7 @@ export default function SydneyLocationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Trusted by Sydney&apos;s Major Insurers
             </h2>
-            <p className="text-xl text-center text-gray-600 mb-12">
+            <p className="text-xl text-center text-gray-200 mb-12">
               Direct billing with all major insurance companies operating in NSW
             </p>
 
@@ -462,7 +462,7 @@ export default function SydneyLocationPage() {
               {["NRMA Insurance", "Suncorp", "Allianz", "QBE", "IAG", "Youi", "Budget Direct", "AAMI"].map((insurer, index) => (
                 <div
                   key={index}
-                  className="bg-white p-4 rounded-lg shadow text-center font-semibold text-gray-700"
+                  className="bg-white p-4 rounded-lg shadow text-center font-semibold text-gray-200"
                 >
                   {insurer}
                 </div>

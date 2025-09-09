@@ -129,7 +129,7 @@ export default function ComingSoonPage() {
               <h2 className="text-3xl font-bold mb-6 text-center">
                 Areas Going Live Soon
               </h2>
-              <p className="text-center text-gray-600 mb-8">
+              <p className="text-center text-gray-200 mb-8">
                 Service areas activate as IICRC certified contractors join our network
               </p>
               
@@ -174,7 +174,7 @@ export default function ComingSoonPage() {
                 <p className="text-center font-bold mb-2">
                   Are you an IICRC Certified Restoration Professional?
                 </p>
-                <p className="text-center text-sm text-gray-600 mb-4">
+                <p className="text-center text-sm text-gray-200 mb-4">
                   Help us launch your area and get exclusive territory rights
                 </p>
                 <div className="text-center">
@@ -250,7 +250,7 @@ export default function ComingSoonPage() {
                 <div className="text-center py-8">
                   <CheckCircle2 className="h-16 w-16 text-green-600 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold mb-2">You're on the List!</h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-200">
                     We'll notify you as soon as we have verified contractors in {postcode}.
                   </p>
                   {isContractor && (

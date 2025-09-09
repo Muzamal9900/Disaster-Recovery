@@ -77,15 +77,15 @@ export default function LeadManagementModule() {
             
             <li key="0" className="flex items-start gap-2">"
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />"
-              <span className="text-gray-700">Lead Types & Priority</span>"
+              <span className="text-gray-200">Lead Types & Priority</span>"
             </li>
             <li key="1" className="flex items-start gap-2">"
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />"
-              <span className="text-gray-700">Lead Acceptance Process</span>"
+              <span className="text-gray-200">Lead Acceptance Process</span>"
             </li>
             <li key="2" className="flex items-start gap-2">"
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />"
-              <span className="text-gray-700">Territory-Based Distribution</span>"
+              <span className="text-gray-200">Territory-Based Distribution</span>"
             </li>
           </ul>
         </CardContent>
@@ -144,7 +144,7 @@ export default function LeadManagementModule() {
             </CardHeader>
             <CardContent className="space-y-4">"
               <div className="prose prose-gray max-w-none">"
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">"
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">"
                   Lead Categories:
 1. Emergency (Priority 1) - Immediate response required
    • Active flooding, fire damage, sewage overflow
@@ -212,7 +212,7 @@ export default function LeadManagementModule() {
             </CardHeader>
             <CardContent className="space-y-4">"
               <div className="prose prose-gray max-w-none">"
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">"
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">"
                   Automated Lead Flow:
 1. Insurance claim submitted → Lead generated
 2. Territory matching → Qualified contractors notified
@@ -273,7 +273,7 @@ export default function LeadManagementModule() {
             </CardHeader>
             <CardContent className="space-y-4">"
               <div className="prose prose-gray max-w-none">"
-                <div className="whitespace-pre-line text-gray-700 leading-relaxed">"
+                <div className="whitespace-pre-line text-gray-200 leading-relaxed">"
                   Smart Lead Routing:
 • Geo-location matching to contractor territories
 • Service category alignment

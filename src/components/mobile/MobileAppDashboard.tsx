@@ -164,20 +164,20 @@ export function MobileAppDashboard() {
                 <span className="text-xs mt-1 text-blue-600">Home</span>
               </button>
               <button className="flex flex-col items-center p-2">
-                <Briefcase className="h-5 w-5 text-gray-400" />
-                <span className="text-xs mt-1 text-gray-400">Jobs</span>
+                <Briefcase className="h-5 w-5 text-gray-200" />
+                <span className="text-xs mt-1 text-gray-200">Jobs</span>
               </button>
               <button className="flex flex-col items-center p-2">
-                <Shield className="h-5 w-5 text-gray-400" />
-                <span className="text-xs mt-1 text-gray-400">Compliance</span>
+                <Shield className="h-5 w-5 text-gray-200" />
+                <span className="text-xs mt-1 text-gray-200">Compliance</span>
               </button>
               <button className="flex flex-col items-center p-2">
-                <Bell className="h-5 w-5 text-gray-400" />
-                <span className="text-xs mt-1 text-gray-400">Alerts</span>
+                <Bell className="h-5 w-5 text-gray-200" />
+                <span className="text-xs mt-1 text-gray-200">Alerts</span>
               </button>
               <button className="flex flex-col items-center p-2">
-                <User className="h-5 w-5 text-gray-400" />
-                <span className="text-xs mt-1 text-gray-400">Profile</span>
+                <User className="h-5 w-5 text-gray-200" />
+                <span className="text-xs mt-1 text-gray-200">Profile</span>
               </button>
             </div>
           </div>
@@ -261,17 +261,17 @@ export function MobileAppDashboard() {
                 <div className="flex justify-between items-start mb-2">
                   <div>
                     <p className="font-medium text-sm">{job.jobNumber}</p>
-                    <p className="text-xs text-gray-500">{job.client.name}</p>
+                    <p className="text-xs text-gray-300">{job.client.name}</p>
                   </div>
                   <Badge className={`text-xs ${
                     job.priority === 'emergency' ? 'bg-red-100 text-red-700' :
                     job.priority === 'urgent' ? 'bg-orange-100 text-orange-700' :
-                    'bg-gray-100 text-gray-700'
+                    'bg-gray-100 text-gray-200'
                   }`}>
                     {job.priority}
                   </Badge>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-gray-600">
+                <div className="flex items-center gap-2 text-xs text-gray-200">
                   <MapPin className="h-3 w-3" />
                   <span className="flex-1 truncate">{job.location.address}</span>
                 </div>
@@ -314,7 +314,7 @@ export function MobileAppDashboard() {
               <RefreshCw className={`h-4 w-4 ${mockSyncStatus.isSyncing ? 'animate-spin' : ''}`} />
               <span className="text-sm">Sync Status</span>
             </div>
-            <span className="text-xs text-gray-500">
+            <span className="text-xs text-gray-300">
               {mockSyncStatus.isSyncing ? 'Syncing...' : `Last: ${new Date(mockSyncStatus.lastSync).toLocaleTimeString()}`}
             </span>
           </div>
@@ -410,7 +410,7 @@ export function MobileAppDashboard() {
                 </div>
                 <div className="flex-1">
                   <h4 className="font-semibold">Secure Authentication</h4>
-                  <p className="text-sm text-gray-600 mt-1">
+                  <p className="text-sm text-gray-200 mt-1">
                     Biometric login (Face ID/Touch ID) with 2FA support
                   </p>
                   <div className="flex gap-2 mt-2">
@@ -428,7 +428,7 @@ export function MobileAppDashboard() {
                 </div>
                 <div className="flex-1">
                   <h4 className="font-semibold">Job Management On-the-Go</h4>
-                  <p className="text-sm text-gray-600 mt-1">
+                  <p className="text-sm text-gray-200 mt-1">
                     View jobs, update status, upload photos, and manage documentation
                   </p>
                   <div className="flex gap-2 mt-2">
@@ -446,7 +446,7 @@ export function MobileAppDashboard() {
                 </div>
                 <div className="flex-1">
                   <h4 className="font-semibold">Offline Functionality</h4>
-                  <p className="text-sm text-gray-600 mt-1">
+                  <p className="text-sm text-gray-200 mt-1">
                     Capture data without connection, auto-sync when online
                   </p>
                   <div className="flex gap-2 mt-2">
@@ -463,7 +463,7 @@ export function MobileAppDashboard() {
                 </div>
                 <div className="flex-1">
                   <h4 className="font-semibold">Compliance Reminders</h4>
-                  <p className="text-sm text-gray-600 mt-1">
+                  <p className="text-sm text-gray-200 mt-1">
                     Push notifications for expiring certifications and documents
                   </p>
                   <div className="flex gap-2 mt-2">
@@ -491,11 +491,11 @@ export function MobileAppDashboard() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm">App Size</span>
-                  <span className="text-sm text-gray-500">~45 MB</span>
+                  <span className="text-sm text-gray-300">~45 MB</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm">Offline Storage</span>
-                  <span className="text-sm text-gray-500">Up to 500 MB</span>
+                  <span className="text-sm text-gray-300">Up to 500 MB</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm">Battery Usage</span>
@@ -523,7 +523,7 @@ export function MobileAppDashboard() {
                 <Play className="h-4 w-4 mr-2" />
                 Get it on Google Play
               </Button>
-              <p className="text-xs text-center text-gray-500">
+              <p className="text-xs text-center text-gray-300">
                 Version 2.1.0 • Released Dec 2024
               </p>
             </CardContent>

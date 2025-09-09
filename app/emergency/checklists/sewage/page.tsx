@@ -165,7 +165,7 @@ export default function SewageChecklistPage() {
                     onChange={() => toggleCheck(item.id)}
                     className="mt-1 w-5 h-5"
                   />
-                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-500' : ''}`}>
+                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-300' : ''}`}>
                     {item.text}
                     {item.critical && <span className="text-red-600 font-bold ml-2">CRITICAL</span>}
                   </span>
@@ -194,7 +194,7 @@ export default function SewageChecklistPage() {
                     onChange={() => toggleCheck(item.id)}
                     className="mt-1 w-5 h-5"
                   />
-                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-500' : ''}`}>
+                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-300' : ''}`}>
                     {item.text}
                     {item.critical && <span className="text-yellow-600 font-bold ml-2">CRITICAL</span>}
                   </span>
@@ -228,7 +228,7 @@ export default function SewageChecklistPage() {
                     onChange={() => toggleCheck(item.id)}
                     className="mt-1 w-5 h-5"
                   />
-                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-500' : ''}`}>
+                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-300' : ''}`}>
                     {item.text}
                     {item.critical && <span className="text-green-600 font-bold ml-2">REQUIRED</span>}
                   </span>
@@ -262,7 +262,7 @@ export default function SewageChecklistPage() {
                     onChange={() => toggleCheck(item.id)}
                     className="mt-1 w-5 h-5"
                   />
-                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-500' : ''}`}>
+                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-300' : ''}`}>
                     {item.text}
                   </span>
                 </label>
@@ -310,7 +310,7 @@ export default function SewageChecklistPage() {
             </Link>
             <Link
               href="/services/sewage-cleanup"
-              className="bg-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-700 transition-colors inline-flex items-center justify-center gap-2"
+              className="bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-colors inline-flex items-center justify-center gap-2"
             >
               <Shield className="w-5 h-5" />
               Sewage Cleanup Services

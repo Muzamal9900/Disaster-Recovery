@@ -111,7 +111,7 @@ export default function ContractorPortalResourcesPage() {
                   <div key={itemIndex} className="flex items-center justify-between p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
                     <div className="flex-1">
                       <p className="text-white font-medium">{item.title}</p>
-                      <p className="text-gray-400 text-sm">
+                      <p className="text-gray-200 text-sm">
                         {item.type} • {item.size || item.duration}
                       </p>
                     </div>

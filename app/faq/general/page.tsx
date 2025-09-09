@@ -66,11 +66,11 @@ export default function GeneralQuestionsPage() {
                         </div>
                         <h2 className="text-xl font-bold pr-4">{faq.question}</h2>
                       </div>
-                      <ChevronDown className="h-5 w-5 text-gray-500 group-open:hidden" />
-                      <ChevronUp className="h-5 w-5 text-gray-500 hidden group-open:block" />
+                      <ChevronDown className="h-5 w-5 text-gray-300 group-open:hidden" />
+                      <ChevronUp className="h-5 w-5 text-gray-300 hidden group-open:block" />
                     </summary>
                     <div className="mt-4 ml-14">
-                      <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                      <p className="text-gray-200 leading-relaxed">{faq.answer}</p>
                     </div>
                   </details>
                 </Card>
@@ -92,35 +92,35 @@ export default function GeneralQuestionsPage() {
               <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer">
                 <HelpCircle className="h-8 w-8 text-blue-600 mb-3" />
                 <h3 className="font-bold mb-2">Water Damage FAQs</h3>
-                <p className="text-sm text-gray-600">Everything about water damage restoration</p>
+                <p className="text-sm text-gray-200">Everything about water damage restoration</p>
               </Card>
             </Link>
             <Link href="/faq/fire-damage">
               <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer">
                 <HelpCircle className="h-8 w-8 text-blue-600 mb-3" />
                 <h3 className="font-bold mb-2">Fire & Smoke Damage FAQs</h3>
-                <p className="text-sm text-gray-600">Fire and smoke restoration questions answered</p>
+                <p className="text-sm text-gray-200">Fire and smoke restoration questions answered</p>
               </Card>
             </Link>
             <Link href="/faq/mould-removal">
               <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer">
                 <HelpCircle className="h-8 w-8 text-blue-600 mb-3" />
                 <h3 className="font-bold mb-2">Mould Remediation FAQs</h3>
-                <p className="text-sm text-gray-600">Important information about mould removal</p>
+                <p className="text-sm text-gray-200">Important information about mould removal</p>
               </Card>
             </Link>
             <Link href="/faq/insurance-claims">
               <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer">
                 <HelpCircle className="h-8 w-8 text-blue-600 mb-3" />
                 <h3 className="font-bold mb-2">Insurance Claims FAQs</h3>
-                <p className="text-sm text-gray-600">Navigate the insurance claim process</p>
+                <p className="text-sm text-gray-200">Navigate the insurance claim process</p>
               </Card>
             </Link>
             <Link href="/faq/emergency-response">
               <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer">
                 <HelpCircle className="h-8 w-8 text-blue-600 mb-3" />
                 <h3 className="font-bold mb-2">Emergency Response FAQs</h3>
-                <p className="text-sm text-gray-600">Critical information for disaster emergencies</p>
+                <p className="text-sm text-gray-200">Critical information for disaster emergencies</p>
               </Card>
             </Link>
           </div>
