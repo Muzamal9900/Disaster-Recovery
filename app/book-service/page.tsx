@@ -188,6 +188,13 @@ export default function BookServicePage() {
     setIsProcessing(true);
 
     try {
+      // Prepare form data for submission
+      const bookingData = {
+        ...formData,
+        timestamp: new Date().toISOString(),
+        amount: 2750
+      };
+      
       // In production, this would:
       // 1. Create Stripe payment intent for $2,750
       // 2. Process payment
@@ -195,14 +202,47 @@ export default function BookServicePage() {
       // 4. Send to job distribution system
       // 5. Email confirmations
 
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-
-      // Redirect to payment processing
-      router.push('/book-service/payment?amount=2750');
-    } catch (error) {
+      // Simulate API call with potential failures
+      await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          // Simulate different scenarios (in production, remove this)
+          const random = Math.random();
+          if (random > 0.9) {
+            // 10% chance of payment error
+            reject({ type: 'payment', code: 'PAYMENT_DECLINED' });
+          } else if (random > 0.85) {
+            // 5% chance of network error
+            reject({ type: 'network', code: 'NETWORK_ERROR' });
+          } else {
+            // 85% success rate
+            resolve(bookingData);
+          }
+        }, 2000);
+      });
+      
+      // Generate booking ID
+      const bookingId = 'NRP-2024-' + Math.random().toString(36).substr(2, 9).toUpperCase();
+      
+      // Redirect to success page with booking details
+      const successParams = new URLSearchParams({
+        booking: bookingId,
+        service: formData.serviceType,
+        urgency: formData.urgencyLevel,
+        amount: '2750'
+      });
+      
+      router.push(`/book-service/success?${successParams.toString()}`);
+    } catch (error: any) {
       console.error('Booking error:', error);
-      alert('An error occurred. Please try again.');
+      
+      // Redirect to error page with error details
+      const errorParams = new URLSearchParams({
+        type: error?.type || 'unknown',
+        code: error?.code || 'ERR_UNKNOWN',
+        attempt: 'ATT-' + Math.random().toString(36).substr(2, 9).toUpperCase()
+      });
+      
+      router.push(`/book-service/error?${errorParams.toString()}`);
     } finally {
       setIsProcessing(false);
     }
@@ -214,6 +254,24 @@ export default function BookServicePage() {
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: undefined }));
     }
+  };
+
+  // Calculate form completion percentage
+  const calculateCompletionPercentage = () => {
+    const requiredFields: (keyof FormData)[] = [
+      'serviceType', 'propertyType', 'urgencyLevel', // Step 1
+      'propertyAddress', 'propertySuburb', 'propertyState', 'postcode', 'affectedRooms', // Step 2
+      'firstName', 'lastName', 'email', 'contactPhone', // Step 3
+      'insuranceStatus', // Step 4
+      'termsAccepted', 'paymentAuthorized' // Step 5
+    ];
+    
+    const completedFields = requiredFields.filter(field => {
+      const value = formData[field];
+      return value !== '' && value !== undefined && value !== null;
+    });
+    
+    return Math.round((completedFields.length / requiredFields.length) * 100);
   };
 
   // Real-time field validation on blur
@@ -346,8 +404,33 @@ export default function BookServicePage() {
               </div>
             ))}
           </div>
-          <div className="mt-2 text-center text-sm text-gray-300">
-            Step {currentStep} of 5
+          <div className="mt-2 text-center">
+            <div className="text-sm text-gray-300">
+              Step {currentStep} of 5
+            </div>
+            <div className="mt-2">
+              <div className="flex items-center justify-center gap-2">
+                <div className="text-lg font-semibold text-blue-600">
+                  {calculateCompletionPercentage()}% Complete
+                </div>
+                {calculateCompletionPercentage() === 100 && (
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                )}
+              </div>
+              <div className="mt-2 w-full max-w-md mx-auto">
+                <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-gradient-to-r from-blue-500 to-blue-600 transition-all duration-500"
+                    style={{ width: `${calculateCompletionPercentage()}%` }}
+                    role="progressbar"
+                    aria-valuenow={calculateCompletionPercentage()}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    aria-label={`Form ${calculateCompletionPercentage()}% complete`}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
