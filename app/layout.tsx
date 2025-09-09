@@ -20,6 +20,7 @@ import MobileEmergencyCTA from '@/components/emergency/MobileEmergencyCTA'
 import MobileNav from '@/components/mobile/MobileNav'
 import MobileFAB from '@/components/mobile/MobileFAB'
 import Breadcrumb from '@/components/Breadcrumb'
+import NavigationIndicator from '@/components/NavigationIndicator'
 // import { LiveChat } from '@/components/support/LiveChat' - Removed duplicate
 // import { AudioSystemSimple } from '@/components/audio/AudioSystemSimple' - Removed non-functioning
 
@@ -233,6 +234,7 @@ export default function RootLayout({
           </div>
           <MobileNav />
           <Breadcrumb />
+          <NavigationIndicator />
           <main id="main-content" className="min-h-screen">
             {children}
           </main>

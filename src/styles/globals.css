@@ -8,6 +8,9 @@
 /* Import UI/UX fixes and improvements */
 @import './ui-fixes.css';
 
+/* Import contrast fixes for hover and focus states */
+@import './contrast-fixes.css';
+
 @layer base {
   :root {
     --background: 0 0% 100%;

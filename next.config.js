@@ -191,8 +191,11 @@ const nextConfig = {
       '@radix-ui/react-icons',
       'framer-motion',
       'recharts',
-      'date-fns'
+      'date-fns',
+      '@headlessui/react',
+      '@heroicons/react'
     ],
+    webVitalsAttribution: ['CLS', 'LCP'],
   },
 
   // Production optimizations
