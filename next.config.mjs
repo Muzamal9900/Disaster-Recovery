@@ -129,9 +129,6 @@ const nextConfig = {
   
   // Disable powered by header
   poweredByHeader: false,
-  
-  // Output configuration
-  output: 'standalone',
 };
 
 export default nextConfig;
