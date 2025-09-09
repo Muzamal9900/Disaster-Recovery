@@ -2,11 +2,6 @@
 
 import { useState } from 'react';
 import { FileText, Clock, CheckCircle, AlertCircle, Filter, Search, Download } from 'lucide-react';
-import { Metadata } from 'next';
-
-// Force Next.js to recognize this page
-export const runtime = 'nodejs';
-export const dynamic = 'force-static';
 
 export default function ClientPortalClaimsPage() {
   const [searchTerm, setSearchTerm] = useState('');
