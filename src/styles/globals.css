@@ -5,6 +5,9 @@
 /* Import email overflow fixes */
 @import './email-overflow-fix.css';
 
+/* Import UI/UX fixes and improvements */
+@import './ui-fixes.css';
+
 @layer base {
   :root {
     --background: 0 0% 100%;
