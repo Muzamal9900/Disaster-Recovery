@@ -109,6 +109,25 @@ export default function BookServicePage() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [currentStep]);
 
+  // Enhanced validation functions
+  const validateEmail = (email: string): boolean => {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+  };
+
+  const validatePostcode = (postcode: string): boolean => {
+    // Australian postcode validation (0200-0299, 0800-9999)
+    const num = parseInt(postcode);
+    return /^[0-9]{4}$/.test(postcode) && 
+           ((num >= 200 && num <= 299) || (num >= 800 && num <= 9999));
+  };
+
+  const validatePhone = (phone: string): boolean => {
+    // Australian phone number validation
+    const cleaned = phone.replace(/\D/g, '');
+    return cleaned.length === 10 && (cleaned.startsWith('04') || cleaned.startsWith('0'));
+  };
+
   const validateStep = (step: number): boolean => {
     const newErrors: Partial<Record<keyof FormData, string>> = {};
 
@@ -122,16 +141,16 @@ export default function BookServicePage() {
         if (!formData.propertyAddress) newErrors.propertyAddress = 'Property address is required';
         if (!formData.suburb) newErrors.suburb = 'Suburb is required';
         if (!formData.state) newErrors.state = 'State is required';
-        if (!formData.postcode || !/^\d{4}$/.test(formData.postcode)) {
-          newErrors.postcode = 'Valid 4-digit postcode required';
+        if (!formData.postcode || !validatePostcode(formData.postcode)) {
+          newErrors.postcode = 'Valid Australian postcode required (0200-0299 or 0800-9999)';
         }
         if (!formData.affectedArea) newErrors.affectedArea = 'Affected area description is required';
         break;
       case 3:
         if (!formData.firstName) newErrors.firstName = 'First name is required';
         if (!formData.lastName) newErrors.lastName = 'Last name is required';
-        if (!formData.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-          newErrors.email = 'Valid email is required';
+        if (!formData.email || !validateEmail(formData.email)) {
+          newErrors.email = 'Please enter a valid email address';
         }
         // Phone validation removed - using email-only contact
         break;
@@ -194,6 +213,58 @@ export default function BookServicePage() {
     // Clear error for this field when user starts typing
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: undefined }));
+    }
+  };
+
+  // Real-time field validation on blur
+  const validateField = (fieldName: keyof FormData) => {
+    const value = formData[fieldName];
+    let error = '';
+    
+    switch (fieldName) {
+      case 'email':
+        if (value && !validateEmail(String(value))) {
+          error = 'Please enter a valid email address';
+        } else if (!value) {
+          error = 'Email is required';
+        }
+        break;
+      case 'postcode':
+        if (value && !validatePostcode(String(value))) {
+          error = 'Invalid Australian postcode';
+        } else if (!value) {
+          error = 'Postcode is required';
+        }
+        break;
+      case 'firstName':
+      case 'lastName':
+        if (!value || String(value).trim().length < 2) {
+          error = `${fieldName === 'firstName' ? 'First' : 'Last'} name must be at least 2 characters`;
+        }
+        break;
+      case 'propertyAddress':
+        if (!value || String(value).trim().length < 5) {
+          error = 'Please enter a valid address';
+        }
+        break;
+      case 'suburb':
+        if (!value || String(value).trim().length < 2) {
+          error = 'Suburb is required';
+        }
+        break;
+      case 'damageDescription':
+        if (!value || String(value).trim().length < 20) {
+          error = 'Please provide at least 20 characters describing the damage';
+        }
+        break;
+    }
+    
+    if (error) {
+      setErrors(prev => ({ ...prev, [fieldName]: error }));
+      return false;
+    } else {
+      setErrors(prev => ({ ...prev, [fieldName]: undefined }));
+      return true;
     }
   };
 
@@ -302,7 +373,13 @@ export default function BookServicePage() {
           </div>
 
           {/* Form Steps */}
-          <form onSubmit={handleFormSubmit} className="bg-white rounded-xl shadow-lg p-8">
+          <form 
+            onSubmit={handleFormSubmit} 
+            method="POST" 
+            action="/api/bookings"
+            className="bg-white rounded-xl shadow-lg p-8"
+            noValidate
+          >
             {/* Step 1: Service Details */}
             {currentStep === 1 && (
               <div className="space-y-6">
@@ -437,12 +514,16 @@ export default function BookServicePage() {
                   <input
                     type="text"
                     id="address"
+                    name="propertyAddress"
+                    required
                     value={formData.propertyAddress}
                     onChange={(e) => updateFormData('propertyAddress', e.target.value)}
                     className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 ${
                       errors.propertyAddress ? 'border-red-300' : 'border-gray-300'
                     }`}
                     placeholder="123 Main Street"
+                    aria-required="true"
+                    aria-invalid={!!errors.propertyAddress}
                   />
                   {errors.propertyAddress && (
                     <p className="mt-1 text-sm text-red-600">{errors.propertyAddress}</p>
@@ -457,11 +538,15 @@ export default function BookServicePage() {
                     <input
                       type="text"
                       id="suburb"
+                      name="suburb"
+                      required
                       value={formData.suburb}
                       onChange={(e) => updateFormData('suburb', e.target.value)}
                       className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 ${
                         errors.suburb ? 'border-red-300' : 'border-gray-300'
                       }`}
+                      aria-required="true"
+                      aria-invalid={!!errors.suburb}
                     />
                     {errors.suburb && <p className="mt-1 text-sm text-red-600">{errors.suburb}</p>}
                   </div>
@@ -473,12 +558,19 @@ export default function BookServicePage() {
                     <input
                       type="text"
                       id="postcode"
+                      name="postcode"
+                      required
                       maxLength={4}
+                      pattern="[0-9]{4}"
                       value={formData.postcode}
                       onChange={(e) => updateFormData('postcode', e.target.value)}
                       className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 ${
                         errors.postcode ? 'border-red-300' : 'border-gray-300'
                       }`}
+                      placeholder="2000"
+                      aria-required="true"
+                      aria-invalid={!!errors.postcode}
+                      aria-describedby="postcode-hint"
                     />
                     {errors.postcode && <p className="mt-1 text-sm text-red-600">{errors.postcode}</p>}
                   </div>
@@ -490,11 +582,15 @@ export default function BookServicePage() {
                   </label>
                   <select
                     id="state"
+                    name="state"
+                    required
                     value={formData.state}
                     onChange={(e) => updateFormData('state', e.target.value)}
                     className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 ${
                       errors.state ? 'border-red-300' : 'border-gray-300'
                     }`}
+                    aria-required="true"
+                    aria-invalid={!!errors.state}
                   >
                     <option value="">Select State</option>
                     {STATES.map(state => (
@@ -552,11 +648,17 @@ export default function BookServicePage() {
                     <input
                       type="text"
                       id="firstName"
+                      name="firstName"
+                      required
                       value={formData.firstName}
                       onChange={(e) => updateFormData('firstName', e.target.value)}
                       className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 ${
                         errors.firstName ? 'border-red-300' : 'border-gray-300'
                       }`}
+                      placeholder="Enter your first name"
+                      aria-required="true"
+                      aria-invalid={!!errors.firstName}
+                      aria-describedby={errors.firstName ? 'firstName-error' : 'firstName-hint'}
                     />
                     {errors.firstName && <p className="mt-1 text-sm text-red-600">{errors.firstName}</p>}
                   </div>
@@ -568,6 +670,8 @@ export default function BookServicePage() {
                     <input
                       type="text"
                       id="lastName"
+                      name="lastName"
+                      required
                       value={formData.lastName}
                       onChange={(e) => updateFormData('lastName', e.target.value)}
                       className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 ${
@@ -576,6 +680,7 @@ export default function BookServicePage() {
                       placeholder="Enter your last name"
                       aria-required="true"
                       aria-invalid={!!errors.lastName}
+                      aria-describedby={errors.lastName ? 'lastName-error' : 'lastName-hint'}
                     />
                     {!errors.lastName && (
                       <p className="mt-1 text-xs text-gray-300">As it appears on your insurance documents</p>
@@ -591,11 +696,17 @@ export default function BookServicePage() {
                   <input
                     type="email"
                     id="email"
+                    name="email"
+                    required
                     value={formData.email}
                     onChange={(e) => updateFormData('email', e.target.value)}
                     className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 ${
                       errors.email ? 'border-red-300' : 'border-gray-300'
                     }`}
+                    placeholder="your.email@example.com"
+                    aria-required="true"
+                    aria-invalid={!!errors.email}
+                    aria-describedby={errors.email ? 'email-error' : 'email-hint'}
                   />
                   {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
                 </div>
