@@ -1,13 +1,17 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowLeft, PlayCircle, CheckCircle, Lock, Clock, BookOpen, Award, Download, ChevronRight } from 'lucide-react';
+import { ArrowLeft, PlayCircle, CheckCircle, Lock, Clock, BookOpen, Award, Download, ChevronRight, Eye } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import dynamic from 'next/dynamic';
+
+const Certificate = dynamic(() => import('@/components/contractor/Certificate'), { ssr: false });
 
 export default function WRTCoursePage() {
   const router = useRouter();
   const [currentModule, setCurrentModule] = useState(0);
   const [completedModules, setCompletedModules] = useState<number[]>([]);
+  const [showCertificate, setShowCertificate] = useState(false);
 
   const courseModules = [
     {
@@ -344,16 +348,47 @@ export default function WRTCoursePage() {
                 <Award className="w-12 h-12 text-white mb-3" />
                 <h3 className="text-xl font-semibold text-white mb-2">Congratulations!</h3>
                 <p className="text-white/90 mb-4">
-                  You've completed all modules. Download your certificate of completion.
+                  You've completed all modules. View and download your certificate of completion.
                 </p>
-                <button className="w-full px-4 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Download Certificate
+                <button 
+                  onClick={() => setShowCertificate(true)}
+                  className="w-full px-4 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
+                >
+                  <Eye className="w-5 h-5" />
+                  View Certificate
                 </button>
               </div>
             )}
           </div>
         </div>
       </div>
+
+      {/* Certificate Modal */}
+      {showCertificate && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="sticky top-0 bg-white border-b p-4 flex items-center justify-between">
+              <h2 className="text-2xl font-bold text-gray-900">Your Certificate</h2>
+              <button
+                onClick={() => setShowCertificate(false)}
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <Certificate
+              courseName="Water Damage Restoration Technician (WRT)"
+              contractorName="John Smith" 
+              completionDate={new Date().toLocaleDateString()}
+              certificateId={`WRT-${Date.now()}`}
+              courseHours="24"
+              instructorName="National Restoration Projects"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

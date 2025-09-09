@@ -17,7 +17,8 @@ import {
   Settings,
   ChevronRight,
   Clock,
-  CheckCircle
+  CheckCircle,
+  Target
 } from 'lucide-react'
 import Link from 'next/link'
 
@@ -108,6 +109,7 @@ export default function ContractorPortalPage() {
               { id: 'jobs', label: 'Job Board', icon: Briefcase },
               { id: 'earnings', label: 'Earnings', icon: DollarSign },
               { id: 'training', label: 'Training', icon: Award },
+              { id: 'vision', label: 'Vision Board', icon: Target },
               { id: 'resources', label: 'Resources', icon: FileText }
             ].map(tab => (
               <button
@@ -326,6 +328,24 @@ export default function ContractorPortalPage() {
               <h2 className="text-2xl font-bold mb-6">Training & Certification</h2>
               <p className="text-gray-600">Access courses to improve your skills and earn certifications.</p>
               {/* Add training content here */}
+            </motion.div>
+          )}
+
+          {activeTab === 'vision' && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="bg-white rounded-xl shadow-lg p-8"
+            >
+              <h2 className="text-2xl font-bold mb-6">Vision Board</h2>
+              <p className="text-gray-600 mb-6">Track your achievements, certifications, and goals.</p>
+              <Link 
+                href="/contractor-portal/vision-board"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+              >
+                <Target className="w-5 h-5" />
+                Go to Vision Board
+              </Link>
             </motion.div>
           )}
 
