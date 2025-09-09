@@ -5,8 +5,11 @@ const nextConfig = {
   
   // FORCE DEPLOYMENT - CACHE CLEAR
   generateBuildId: async () => {
-    return 'build-2025-09-09-FIX-404-PAGES-' + Date.now()
+    return 'build-2025-09-09-INCLUDE-ALL-PAGES-' + Date.now()
   },
+  
+  // Force static generation of dynamic routes
+  generateStaticParams: true,
   
   // Disable type checking during build
   typescript: {

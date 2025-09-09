@@ -7,8 +7,21 @@ import { ChevronRight, Home } from 'lucide-react';
 export default function Breadcrumb() {
   const pathname = usePathname();
   
-  // Don't show breadcrumbs on homepage
-  if (pathname === '/') return null;
+  // Show simple breadcrumb even on homepage
+  if (pathname === '/') {
+    return (
+      <nav aria-label="Breadcrumb" className="bg-gray-50 border-b border-gray-200">
+        <div className="container mx-auto px-4 py-2">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li className="flex items-center text-gray-900 font-medium">
+              <Home className="w-4 h-4 mr-1" />
+              Home
+            </li>
+          </ol>
+        </div>
+      </nav>
+    );
+  }
   
   // Generate breadcrumb items from pathname
   const generateBreadcrumbs = () => {
