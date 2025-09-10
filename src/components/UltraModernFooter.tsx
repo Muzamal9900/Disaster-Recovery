@@ -105,7 +105,7 @@ export default function UltraModernFooter() {
           </p>
           <Link
             href="/emergency"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold text-white transition-all hover:scale-105"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold text-white transition-all hover:scale-105 min-h-[44px] inline-flex items-center justify-center px-4 py-3"
             style={{
               background: 'linear-gradient(135deg, #ff4545 0%, #ff8845 100%)',
               boxShadow: '0 10px 40px rgba(255, 69, 69, 0.3)' }}
@@ -205,7 +205,7 @@ export default function UltraModernFooter() {
                 <li key={item.label}>
                   <Link 
                     href={item.href}
-                    className="text-gray-200 hover:text-white text-sm transition-colours relative group inline-flex items-center"
+                    className="text-gray-200 hover:text-white text-sm transition-colours relative group inline-flex items-center min-h-[44px] min-w-[44px] py-2 px-4"
                   >
                     <span className="absolute left-0 w-0 h-[1px] bg-purple-500 transition-all group-hover:w-full" />
                     <span className="relative">{item.label}</span>
@@ -226,7 +226,7 @@ export default function UltraModernFooter() {
                 <li key={item.label}>
                   <Link 
                     href={item.href}
-                    className="text-gray-200 hover:text-white text-sm transition-colours relative group inline-flex items-center"
+                    className="text-gray-200 hover:text-white text-sm transition-colours relative group inline-flex items-center min-h-[44px] min-w-[44px] py-2 px-4"
                   >
                     <span className="absolute left-0 w-0 h-[1px] bg-cyan-500 transition-all group-hover:w-full" />
                     <span className="relative">{item.label}</span>
@@ -247,7 +247,7 @@ export default function UltraModernFooter() {
                 <li key={item.label}>
                   <Link 
                     href={item.href}
-                    className="text-gray-200 hover:text-white text-sm transition-colours relative group inline-flex items-center"
+                    className="text-gray-200 hover:text-white text-sm transition-colours relative group inline-flex items-center min-h-[44px] min-w-[44px] py-2 px-4"
                   >
                     <span className="absolute left-0 w-0 h-[1px] bg-emerald-500 transition-all group-hover:w-full" />
                     <span className="relative">{item.label}</span>
@@ -264,7 +264,8 @@ export default function UltraModernFooter() {
           <div className="flex justify-center items-center gap-8">
             <Link 
               href="/partners/clean-claims"
-              className="group relative bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all hover:scale-105"
+              className="group relative bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all hover:scale-105 min-h-[44px] min-w-[44px] inline-flex items-center justify-center px-4 py-3"
+              style={{ minWidth: '44px', width: 'auto' }}
             >
               <Image
                 src="/logos/3D Clean Claims.png"

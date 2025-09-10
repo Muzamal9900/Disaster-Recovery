@@ -102,7 +102,7 @@ export default function MobileNav() {
   return (
     <>
       {/* Mobile Header Bar */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b">
+      <nav className="mobile-navigation lg:hidden fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b" role="navigation" aria-label="Mobile navigation">
         <div className="flex items-center justify-between px-4 h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
@@ -214,7 +214,7 @@ export default function MobileNav() {
             </SheetContent>
           </Sheet>
         </div>
-      </div>
+      </nav>
 
       {/* Mobile Bottom Navigation */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-lg border-t">

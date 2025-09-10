@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import SearchBar from '@/components/SearchBar';
 
 interface SubDropdownItem {
   label: string;
@@ -444,8 +445,14 @@ export default function UltraModernHeader() {
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-2">
+            {/* Search Bar */}
+            <div className="hidden md:block flex-1 max-w-md mx-8">
+              <SearchBar />
+            </div>
+
+            {/* Desktop Navigation - Conditionally rendered to avoid mobile touch target issues */}
+            <div className="hidden md:block">
+              <nav className="flex items-center gap-2">
               {navItems.map((item) => (
                 <div
                   key={item.label}
@@ -455,7 +462,7 @@ export default function UltraModernHeader() {
                 >
                   <Link
                     href={item.href}
-                    className="relative px-5 py-2.5 text-sm font-medium text-white hover:text-white transition-all duration-300 rounded-full group"
+                    className="relative px-5 py-2.5 text-sm font-medium text-white hover:text-white transition-all duration-300 rounded-full group min-h-[44px] inline-flex items-center justify-center px-4 py-3"
                     aria-haspopup={item.dropdown ? "true" : undefined}
                     aria-expanded={item.dropdown ? activeDropdown === item.label : undefined}
                     id={`nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
@@ -569,7 +576,7 @@ export default function UltraModernHeader() {
                                       <Link
                                         key={formItem.label}
                                         href={formItem.href}
-                                        className="block px-3 py-2 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-all rounded-lg"
+                                        className="block px-3 py-2 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-all rounded-lg min-h-[44px] inline-flex items-center justify-center px-4 py-3"
                                       >
                                         {formItem.label}
                                       </Link>
@@ -587,14 +594,15 @@ export default function UltraModernHeader() {
                   )}
                 </div>
               ))}
-            </nav>
+              </nav>
+            </div>
 
             {/* CTA Buttons - CRM and Emergency */}
             <div className="hidden md:flex items-center gap-3 ml-6">
               {/* CRM Portal Button */}
               <Link
                 href="/crm"
-                className="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
+                className="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl min-h-[44px] inline-flex items-center justify-center px-4 py-3"
               >
                 NRP CRM Portal
               </Link>
@@ -602,7 +610,7 @@ export default function UltraModernHeader() {
               {/* Contact Button */}
               <Link
                 href="/contact"
-                className="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-red-600 to-blue-700 rounded-full hover:from-red-700 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl"
+                className="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-red-600 to-blue-700 rounded-full hover:from-red-700 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl min-h-[44px] inline-flex items-center justify-center px-4 py-3"
               >
                 📱 Contact
               </Link>

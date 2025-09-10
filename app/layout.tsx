@@ -9,6 +9,7 @@ import '@/styles/mobile-fixes.css'
 import '@/styles/storm-clouds.css'
 import '@/styles/enhanced-storm.css'
 import '@/styles/performance-optimizations.css'
+import '@/styles/mobile-touch-targets.css'
 import { Providers } from './providers'
 import UltraModernHeader from '@/components/UltraModernHeader'
 import UltraModernFooter from '@/components/UltraModernFooter'
@@ -21,6 +22,9 @@ import MobileNav from '@/components/mobile/MobileNav'
 import MobileFAB from '@/components/mobile/MobileFAB'
 import Breadcrumb from '@/components/Breadcrumb'
 import NavigationIndicator from '@/components/NavigationIndicator'
+import LoadingIndicator from '@/components/LoadingIndicator'
+import ProgressSpinner from '@/components/ProgressSpinner'
+import LazyImage from '@/components/LazyImage'
 // import { LiveChat } from '@/components/support/LiveChat' - Removed duplicate
 // import { AudioSystemSimple } from '@/components/audio/AudioSystemSimple' - Removed non-functioning
 
@@ -226,6 +230,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${poppins.variable} ${inter.variable} font-sans`}>
+        <a href="#main-content" className="skip-to-main sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-[9999] focus:p-4 focus:bg-blue-600 focus:text-white focus:no-underline focus:min-w-[200px] focus:text-center">
+          Skip to main content
+        </a>
         <GoogleTagManager />
         <MicrosoftClarity />
         <Providers>
@@ -243,6 +250,9 @@ export default function RootLayout({
           </div>
           <MobileFAB />
           <MobileEmergencyCTA />
+          <LoadingIndicator />
+          <ProgressSpinner />
+          <LazyImage />
           {/* <LiveChat /> - Reserved for future version */}
           {/* <AudioSystemSimple /> - Removed as not functioning properly */}
         </Providers>

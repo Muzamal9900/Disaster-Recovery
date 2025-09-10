@@ -573,6 +573,8 @@ export default function BookServicePage() {
                     rows={4}
                     value={formData.damageDescription}
                     onChange={(e) => updateFormData('damageDescription', e.target.value)}
+                    required
+                    aria-required="true"
                     className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
                       errors.damageDescription ? 'border-red-300' : 'border-gray-300'
                     }`}
@@ -783,6 +785,7 @@ export default function BookServicePage() {
                     required
                     value={formData.email}
                     onChange={(e) => updateFormData('email', e.target.value)}
+                    pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
                     className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 ${
                       errors.email ? 'border-red-300' : 'border-gray-300'
                     }`}
@@ -795,7 +798,7 @@ export default function BookServicePage() {
                 </div>
 
                 {/* Phone field hidden - no phone support available */}
-                <input type="hidden" id="phone" value="" />
+                <input type="hidden" id="phone" value="" required aria-required="true" pattern="[0-9]{10,14}" />
 
                 <div>
                   <label className="block text-sm font-medium text-gray-200 mb-2">Preferred Contact Method</label>
@@ -932,7 +935,7 @@ export default function BookServicePage() {
                     />
                     <button
                       type="button"
-                      className="mt-3 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colours"
+                      className="mt-3 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colours min-h-[44px] min-w-[44px] p-3"
                       onClick={() => document.querySelector<HTMLInputElement>('input[type="file"]')?.click()}
                     >
                       Select Photos

@@ -87,6 +87,7 @@ export default function MobileFAB() {
                 variant="secondary"
                 className="rounded-full h-10 w-10 shadow-lg"
                 onClick={scrollToTop}
+                aria-label="Scroll to top"
               >
                 <ArrowUp className="h-4 w-4" />
               </Button>
@@ -142,6 +143,7 @@ export default function MobileFAB() {
                           item.color
                         )}
                         onClick={() => setIsOpen(false)}
+                        aria-label={item.label}
                       >
                         <item.icon className="h-5 w-5" />
                       </Button>
@@ -157,6 +159,7 @@ export default function MobileFAB() {
                         item.action?.();
                         setIsOpen(false);
                       }}
+                      aria-label={item.label}
                     >
                       <item.icon className="h-5 w-5" />
                     </Button>
@@ -181,6 +184,7 @@ export default function MobileFAB() {
                 : "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
             )}
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open quick actions menu"}
           >
             <motion.div
               animate={{ rotate: isOpen ? 45 : 0 }}

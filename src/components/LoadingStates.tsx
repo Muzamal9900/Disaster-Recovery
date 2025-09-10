@@ -3,12 +3,25 @@
 import React from 'react';
 
 export const ServiceCardSkeleton = () => (
-  <div className="bg-white rounded-xl p-6 shadow-lg">
-    <div className="skeleton h-8 w-24 rounded-full mb-3" />
-    <div className="skeleton h-10 w-10 rounded-full mx-auto mb-4" />
-    <div className="skeleton h-6 w-32 mx-auto mb-2" />
-    <div className="skeleton h-4 w-full mb-3" />
-    <div className="skeleton h-4 w-20" />
+  <div 
+    className="relative h-full p-6 rounded-2xl animate-pulse"
+    style={{
+      background: 'rgba(255, 255, 255, 0.05)',
+      backdropFilter: 'blur(10px)',
+      border: '1px solid rgba(255, 255, 255, 0.1)'
+    }}
+  >
+    {/* Icon placeholder */}
+    <div className="w-14 h-14 bg-gray-600 rounded-xl mb-4 animate-pulse" />
+    
+    {/* Title placeholder */}
+    <div className="h-6 bg-gray-600 rounded-md mb-2 animate-pulse" style={{ width: '80%' }} />
+    
+    {/* Description placeholder - simplified */}
+    <div className="h-4 bg-gray-700 rounded animate-pulse mb-4" />
+    
+    {/* Features placeholder - simplified */}
+    <div className="h-3 bg-gray-700 rounded animate-pulse" style={{ width: '50%' }} />
   </div>
 );
 

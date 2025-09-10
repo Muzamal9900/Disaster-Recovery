@@ -141,13 +141,13 @@ export default function EnhancedMobileNav() {
           
           <div className="flex items-center space-x-2">
             <button
-              className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="p-2 rounded-lg hover:bg-gray-100 transition-colors min-h-[44px] min-w-[44px] p-3"
               aria-label="Search"
             >
               <Search className="h-5 w-5 text-gray-600" />
             </button>
             <button
-              className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="p-2 rounded-lg hover:bg-gray-100 transition-colors min-h-[44px] min-w-[44px] p-3"
               aria-label="User account"
             >
               <User className="h-5 w-5 text-gray-600" />

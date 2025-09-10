@@ -10,7 +10,7 @@ export default function Breadcrumb() {
   // Show simple breadcrumb even on homepage
   if (pathname === '/') {
     return (
-      <nav aria-label="Breadcrumb" className="bg-gray-50 border-b border-gray-200">
+      <nav aria-label="breadcrumb" className="breadcrumb-navigation bg-gray-50 border-b border-gray-200">
         <div className="container mx-auto px-4 py-2">
           <ol className="flex items-center space-x-2 text-sm">
             <li className="flex items-center text-gray-900 font-medium">
@@ -77,8 +77,8 @@ export default function Breadcrumb() {
   
   return (
     <nav 
-      aria-label="Breadcrumb" 
-      className="w-full bg-gray-50 border-b border-gray-200"
+      aria-label="breadcrumb" 
+      className="breadcrumb-navigation w-full bg-gray-50 border-b border-gray-200"
     >
       <div className="container mx-auto px-4 py-3">
         <ol 

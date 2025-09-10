@@ -172,7 +172,8 @@ export default function HomePage() {
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-sm text-gray-200 mb-3">{service.desc}</p>
                   <button 
-                    className="text-blue-600 font-semibold hover:text-blue-700 min-h-[44px] py-3 px-4 flex items-center justify-center rounded-lg transition-all hover:bg-blue-50"
+                    className="text-blue-600 font-semibold hover:text-blue-700 px-4 py-3 h-[44px] flex items-center justify-center rounded-lg transition-all hover:bg-blue-50"
+                    style={{ minHeight: '44px', height: '44px' }}
                     onClick={() => window.location.href = '/services'}
                     aria-label={`Get help for ${service.title}`}
                   >

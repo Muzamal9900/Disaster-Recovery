@@ -4,6 +4,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useMagneticEffect, useScrollTrigger } from '@/hooks/useMagneticEffect';
+import { HeroSkeleton } from '@/components/LoadingStates';
 import { 
   AlertTriangle, 
   Shield, 
@@ -16,6 +17,7 @@ import {
 } from 'lucide-react';
 
 export default function UltraModernHero() {
+  const [isLoading, setIsLoading] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -56,9 +58,17 @@ export default function UltraModernHero() {
   const [isVisible, setIsVisible] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
 
+  // Simulate loading time for demonstration
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   // Initialize particle system
   useEffect(() => {
-    const particleCount = 15;
+    const particleCount = 5; // Reduced from 15 to optimize DOM elements
     const newParticles = Array.from({ length: particleCount }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
@@ -117,6 +127,10 @@ export default function UltraModernHero() {
       colour: 'from-blue-600 to-blue-600'
     }
   ];
+
+  if (isLoading) {
+    return <HeroSkeleton />;
+  }
 
   return (
     <>
