@@ -189,7 +189,7 @@ export const ServicePageLayout: React.FC<ServicePageLayoutProps> = ({
                         {service.title}
                       </h4>
                     </div>
-                    <svg className="w-5 h-5 text-neutral-400 group-hover:text-primary-600 transition-colours" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-neutral-600 group-hover:text-primary-600 transition-colours" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>

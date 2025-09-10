@@ -221,11 +221,11 @@ export default function CustomerServiceCoursePage() {
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0">
                         {completedModules.includes(module.id) ? (
-                          <CheckCircle className="w-6 h-6 text-green-400" />
+                          <CheckCircle className="w-6 h-6 text-green-600" />
                         ) : module.locked ? (
                           <Lock className="w-6 h-6 text-gray-200" />
                         ) : (
-                          <PlayCircle className="w-6 h-6 text-purple-400" />
+                          <PlayCircle className="w-6 h-6 text-purple-600" />
                         )}
                       </div>
                       <div className="flex-1">
@@ -269,21 +269,21 @@ export default function CustomerServiceCoursePage() {
               <h3 className="text-xl font-semibold text-white mb-4">Course Details</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <Users className="w-5 h-5 text-purple-400" />
+                  <Users className="w-5 h-5 text-purple-600" />
                   <div>
                     <p className="text-gray-200 text-sm">Focus</p>
                     <p className="text-white font-semibold">Customer Relations</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-purple-400" />
+                  <Clock className="w-5 h-5 text-purple-600" />
                   <div>
                     <p className="text-gray-200 text-sm">Duration</p>
                     <p className="text-white font-semibold">10 Hours Total</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Award className="w-5 h-5 text-purple-400" />
+                  <Award className="w-5 h-5 text-purple-600" />
                   <div>
                     <p className="text-gray-200 text-sm">Certification</p>
                     <p className="text-white font-semibold">NRP Excellence Badge</p>
@@ -297,19 +297,19 @@ export default function CustomerServiceCoursePage() {
               <h3 className="text-xl font-semibold text-white mb-4">Key Skills You'll Learn</h3>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <MessageSquare className="w-4 h-4 text-purple-400" />
+                  <MessageSquare className="w-4 h-4 text-purple-600" />
                   <span className="text-gray-300 text-sm">Effective Communication</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Heart className="w-4 h-4 text-purple-400" />
+                  <Heart className="w-4 h-4 text-purple-600" />
                   <span className="text-gray-300 text-sm">Empathy & Support</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <AlertTriangle className="w-4 h-4 text-purple-400" />
+                  <AlertTriangle className="w-4 h-4 text-purple-600" />
                   <span className="text-gray-300 text-sm">Crisis Management</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Users className="w-4 h-4 text-purple-400" />
+                  <Users className="w-4 h-4 text-purple-600" />
                   <span className="text-gray-300 text-sm">Relationship Building</span>
                 </div>
               </div>
@@ -321,15 +321,15 @@ export default function CustomerServiceCoursePage() {
               <div className="space-y-2">
                 <button className="w-full p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-between group">
                   <span className="text-white">Course Handbook</span>
-                  <Download className="w-4 h-4 text-gray-200 group-hover:text-purple-400" />
+                  <Download className="w-4 h-4 text-gray-200 group-hover:text-purple-600" />
                 </button>
                 <button className="w-full p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-between group">
                   <span className="text-white">Communication Templates</span>
-                  <Download className="w-4 h-4 text-gray-200 group-hover:text-purple-400" />
+                  <Download className="w-4 h-4 text-gray-200 group-hover:text-purple-600" />
                 </button>
                 <button className="w-full p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-between group">
                   <span className="text-white">Crisis Scenarios Guide</span>
-                  <Download className="w-4 h-4 text-gray-200 group-hover:text-purple-400" />
+                  <Download className="w-4 h-4 text-gray-200 group-hover:text-purple-600" />
                 </button>
               </div>
             </div>

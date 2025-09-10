@@ -291,7 +291,7 @@ const AuditTrailLogger: React.FC<AuditTrailLoggerProps> = ({
       case 'deleted': return 'bg-red-50 text-red-600';
       case 'approved': return 'bg-green-50 text-green-600';
       case 'rejected': return 'bg-red-50 text-red-600';
-      default: return 'bg-gray-50 text-gray-200';
+      default: return 'bg-gray-50 text-gray-700';
     }
   };
 
@@ -315,9 +315,9 @@ const AuditTrailLogger: React.FC<AuditTrailLoggerProps> = ({
       case 'video': return <Video className="w-5 h-5 text-purple-600" />;
       case 'document': return <FileText className="w-5 h-5 text-green-600" />;
       case 'certificate': return <Award className="w-5 h-5 text-blue-700" />;
-      case 'log': return <Database className="w-5 h-5 text-gray-200" />;
+      case 'log': return <Database className="w-5 h-5 text-gray-700" />;
       case 'screenshot': return <Camera className="w-5 h-5 text-indigo-600" />;
-      default: return <File className="w-5 h-5 text-gray-200" />;
+      default: return <File className="w-5 h-5 text-gray-700" />;
     }
   };
 
@@ -352,7 +352,7 @@ const AuditTrailLogger: React.FC<AuditTrailLoggerProps> = ({
             </div>
             <div className="flex-1">
               <p className="font-medium text-gray-900">{trail.description}</p>
-              <div className="flex items-center space-x-4 mt-1 text-sm text-gray-200">
+              <div className="flex items-center space-x-4 mt-1 text-sm text-gray-700">
                 <div className="flex items-center">
                   <User className="w-3 h-3 mr-1" />
                   {trail.performedBy}
@@ -378,30 +378,30 @@ const AuditTrailLogger: React.FC<AuditTrailLoggerProps> = ({
             <div className="bg-gray-50 rounded-lg p-3 space-y-2">
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <p className="text-gray-200">IP Address:</p>
+                  <p className="text-gray-700">IP Address:</p>
                   <p className="font-mono">{trail.ipAddress}</p>
                 </div>
                 <div>
-                  <p className="text-gray-200">Entity ID:</p>
+                  <p className="text-gray-700">Entity ID:</p>
                   <p className="font-mono">{trail.entityId}</p>
                 </div>
               </div>
               
               <div className="text-sm">
-                <p className="text-gray-200">User Agent:</p>
+                <p className="text-gray-700">User Agent:</p>
                 <p className="font-mono text-xs">{trail.userAgent}</p>
               </div>
 
               {trail.previousValue && trail.newValue && (
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="text-gray-200 mb-1">Previous Value:</p>
+                    <p className="text-gray-700 mb-1">Previous Value:</p>
                     <pre className="bg-white p-2 rounded text-xs overflow-x-auto">
                       {JSON.stringify(trail.previousValue, null, 2)}
                     </pre>
                   </div>
                   <div>
-                    <p className="text-gray-200 mb-1">New Value:</p>
+                    <p className="text-gray-700 mb-1">New Value:</p>
                     <pre className="bg-white p-2 rounded text-xs overflow-x-auto">
                       {JSON.stringify(trail.newValue, null, 2)}
                     </pre>
@@ -411,11 +411,11 @@ const AuditTrailLogger: React.FC<AuditTrailLoggerProps> = ({
 
               {trail.metadata && Object.keys(trail.metadata).length > 0 && (
                 <div className="text-sm">
-                  <p className="text-gray-200 mb-1">Additional Details:</p>
+                  <p className="text-gray-700 mb-1">Additional Details:</p>
                   <div className="bg-white p-2 rounded">
                     {Object.entries(trail.metadata).map(([key, value]) => (
                       <div key={key} className="flex justify-between py-1">
-                        <span className="text-gray-200">{key.replace(/([A-Z])/g, ' $1').trim()}:</span>
+                        <span className="text-gray-700">{key.replace(/([A-Z])/g, ' $1').trim()}:</span>
                         <span className="font-medium">{String(value)}</span>
                       </div>
                     ))}
@@ -456,7 +456,7 @@ const AuditTrailLogger: React.FC<AuditTrailLoggerProps> = ({
               <div className="p-2 bg-gray-50 rounded-lg">
                 {getEvidenceIcon(evidence.category)}
               </div>
-              <span className="text-xs text-gray-300 capitalize">
+              <span className="text-xs text-gray-700 capitalize">
                 {evidence.category}
               </span>
             </div>
@@ -465,11 +465,11 @@ const AuditTrailLogger: React.FC<AuditTrailLoggerProps> = ({
               {evidence.fileName}
             </h4>
             
-            <p className="text-sm text-gray-200 mb-3 line-clamp-2">
+            <p className="text-sm text-gray-700 mb-3 line-clamp-2">
               {evidence.description}
             </p>
             
-            <div className="space-y-1 text-xs text-gray-300">
+            <div className="space-y-1 text-xs text-gray-700">
               <p>Size: {formatFileSize(evidence.fileSize)}</p>
               <p>Uploaded: {new Date(evidence.uploadedAt).toLocaleDateString()}</p>
               <p>By: {evidence.uploadedBy}</p>
@@ -511,7 +511,7 @@ const AuditTrailLogger: React.FC<AuditTrailLoggerProps> = ({
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Audit Trail & Evidence</h1>
-          <p className="text-gray-200 mt-1">Complete log of compliance events and supporting evidence</p>
+          <p className="text-gray-700 mt-1">Complete log of compliance events and supporting evidence</p>
         </div>
         <div className="flex items-center space-x-2">
           <button className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
@@ -525,7 +525,7 @@ const AuditTrailLogger: React.FC<AuditTrailLoggerProps> = ({
         <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-6 space-y-4 lg:space-y-0">
           <div className="flex items-center space-x-4">
             <div className="relative">
-              <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-200" />
+              <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-700" />
               <input
                 type="text"
                 placeholder="Search audit trail..."
@@ -578,7 +578,7 @@ const AuditTrailLogger: React.FC<AuditTrailLoggerProps> = ({
             </select>
           </div>
 
-          <div className="text-sm text-gray-200">
+          <div className="text-sm text-gray-700">
             {filteredTrails.length} event{filteredTrails.length !== 1 ? 's' : ''}
           </div>
         </div>
@@ -586,8 +586,8 @@ const AuditTrailLogger: React.FC<AuditTrailLoggerProps> = ({
         <div className="space-y-4">
           {filteredTrails.length === 0 ? (
             <div className="text-center py-8">
-              <History className="w-12 h-12 text-gray-300 mx-auto mb-3" />
-              <p className="text-gray-200">No audit trail events found</p>
+              <History className="w-12 h-12 text-gray-700 mx-auto mb-3" />
+              <p className="text-gray-700">No audit trail events found</p>
             </div>
           ) : (
             filteredTrails.map((trail) => (

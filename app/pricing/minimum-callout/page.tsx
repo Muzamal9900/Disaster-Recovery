@@ -75,7 +75,7 @@ export default function MinimumCalloutPage() {
             <p className="text-2xl mb-4">
               Why Professional Disaster Recovery Starts at $2,200
             </p>
-            <p className="text-xl mb-8 text-blue-200">
+            <p className="text-xl mb-8 text-blue-700">
               Insurance Approved • No Hidden Fees • Guaranteed Results
             </p>
             <div className="bg-white/10 backdrop-blur rounded-lg p-6 mb-8">
@@ -108,14 +108,14 @@ export default function MinimumCalloutPage() {
                     <span className="text-2xl font-bold text-green-600">{service.value}</span>
                   </div>
                   <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                  <p className="text-gray-200">{service.description}</p>
+                  <p className="text-gray-700">{service.description}</p>
                 </Card>
               );
             })}
           </div>
           <div className="bg-green-50 border-2 border-green-200 rounded-lg p-8 text-center">
             <h3 className="text-2xl font-bold mb-4">Total Value: $2,200+</h3>
-            <p className="text-lg text-gray-200">
+            <p className="text-lg text-gray-700">
               You receive over $2,200 worth of professional services, equipment, and expertise 
               from the moment we arrive at your property.
             </p>
@@ -233,22 +233,22 @@ export default function MinimumCalloutPage() {
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               <Card className="p-6 bg-white">
                 <p className="text-4xl font-bold text-red-600 mb-2">$15,000</p>
-                <p className="text-gray-200">Average cost of untreated water damage after 48 hours</p>
+                <p className="text-gray-700">Average cost of untreated water damage after 48 hours</p>
               </Card>
               <Card className="p-6 bg-white">
                 <p className="text-4xl font-bold text-blue-700 mb-2">$8,500</p>
-                <p className="text-gray-200">Average mould remediation if not addressed immediately</p>
+                <p className="text-gray-700">Average mould remediation if not addressed immediately</p>
               </Card>
               <Card className="p-6 bg-white">
                 <p className="text-4xl font-bold text-green-600 mb-2">$2,200</p>
-                <p className="text-gray-200">Your investment for complete professional response</p>
+                <p className="text-gray-700">Your investment for complete professional response</p>
               </Card>
             </div>
             <div className="bg-green-100 border-2 border-green-300 rounded-lg p-8">
               <p className="text-2xl font-bold text-green-800 mb-4">
                 Save $21,300+ by Acting Now
               </p>
-              <p className="text-lg text-gray-200 mb-6">
+              <p className="text-lg text-gray-700 mb-6">
                 Every hour of delay increases damage exponentially. 
                 Our $2,200 callout fee is a fraction of the cost of delayed action.
               </p>
@@ -275,28 +275,28 @@ export default function MinimumCalloutPage() {
                   <span className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">1</span>
                   <div>
                     <p className="font-bold">We Arrive & Start Work</p>
-                    <p className="text-gray-200">No upfront payment required - we begin immediately</p>
+                    <p className="text-gray-700">No upfront payment required - we begin immediately</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <span className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">2</span>
                   <div>
                     <p className="font-bold">Complete Documentation</p>
-                    <p className="text-gray-200">We assist with insurance paperwork and documentation</p>
+                    <p className="text-gray-700">We assist with insurance paperwork and documentation</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <span className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">3</span>
                   <div>
                     <p className="font-bold">Direct Insurance Billing</p>
-                    <p className="text-gray-200">We bill your insurance company directly</p>
+                    <p className="text-gray-700">We bill your insurance company directly</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <span className="bg-green-700 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">✓</span>
                   <div>
                     <p className="font-bold">You Pay Nothing</p>
-                    <p className="text-gray-200">Only your standard excess applies (if any)</p>
+                    <p className="text-gray-700">Only your standard excess applies (if any)</p>
                   </div>
                 </div>
               </div>

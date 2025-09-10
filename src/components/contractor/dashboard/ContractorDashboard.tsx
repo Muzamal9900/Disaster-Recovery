@@ -93,7 +93,7 @@ export function ContractorDashboard() {
               <h1 className="text-2xl font-bold text-gray-900">
                 Contractor Portal
               </h1>
-              <p className="text-gray-200">
+              <p className="text-gray-700">
                 Welcome back, {dashboardData.profile.companyName}
               </p>
             </div>
@@ -158,11 +158,11 @@ export function ContractorDashboard() {
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between pb-2">
                   <CardTitle className="text-sm font-medium">Total Jobs</CardTitle>
-                  <BarChart3 className="h-4 w-4 text-gray-200" />
+                  <BarChart3 className="h-4 w-4 text-gray-700" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">{dashboardData.kpi.totalJobs}</div>
-                  <p className="text-xs text-gray-200">
+                  <p className="text-xs text-gray-700">
                     {dashboardData.kpi.completedJobs} completed
                   </p>
                 </CardContent>
@@ -171,7 +171,7 @@ export function ContractorDashboard() {
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between pb-2">
                   <CardTitle className="text-sm font-medium">Quality Score</CardTitle>
-                  <Star className="h-4 w-4 text-gray-200" />
+                  <Star className="h-4 w-4 text-gray-700" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">
@@ -184,26 +184,26 @@ export function ContractorDashboard() {
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between pb-2">
                   <CardTitle className="text-sm font-medium">Response Time</CardTitle>
-                  <Clock className="h-4 w-4 text-gray-200" />
+                  <Clock className="h-4 w-4 text-gray-700" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">
                     {dashboardData.kpi.averageResponseTime?.toFixed(1)}h
                   </div>
-                  <p className="text-xs text-gray-200">Average response</p>
+                  <p className="text-xs text-gray-700">Average response</p>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between pb-2">
                   <CardTitle className="text-sm font-medium">Account Balance</CardTitle>
-                  <DollarSign className="h-4 w-4 text-gray-200" />
+                  <DollarSign className="h-4 w-4 text-gray-700" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">
                     ${dashboardData.subscription.accountBalance.toFixed(2)}
                   </div>
-                  <p className="text-xs text-gray-200">
+                  <p className="text-xs text-gray-700">
                     Credit limit: ${dashboardData.subscription.creditLimit}
                   </p>
                 </CardContent>
@@ -221,11 +221,11 @@ export function ContractorDashboard() {
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div>
-                    <p className="text-sm text-gray-200">Current Tier</p>
+                    <p className="text-sm text-gray-700">Current Tier</p>
                     <p className="font-semibold">{dashboardData.subscription.tier}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-200">Next Billing</p>
+                    <p className="text-sm text-gray-700">Next Billing</p>
                     <p className="font-semibold">
                       {dashboardData.subscription.nextBillingDate 
                         ? new Date(dashboardData.subscription.nextBillingDate).toLocaleDateString()
@@ -233,7 +233,7 @@ export function ContractorDashboard() {
                     </p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-200">Monthly Amount</p>
+                    <p className="text-sm text-gray-700">Monthly Amount</p>
                     <p className="font-semibold">${dashboardData.subscription.amount}</p>
                   </div>
                 </div>
@@ -257,8 +257,8 @@ export function ContractorDashboard() {
                     >
                       <div className="flex-1">
                         <p className="font-medium text-sm">{notification.subject}</p>
-                        <p className="text-xs text-gray-200 mt-1">{notification.message}</p>
-                        <p className="text-xs text-gray-200 mt-2">
+                        <p className="text-xs text-gray-700 mt-1">{notification.message}</p>
+                        <p className="text-xs text-gray-700 mt-2">
                           {new Date(notification.createdAt).toLocaleString()}
                         </p>
                       </div>

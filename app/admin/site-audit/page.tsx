@@ -311,9 +311,9 @@ export default function SiteAuditPage() {
       case 'medium':
         return 'text-yellow-700';
       case 'low':
-        return 'text-gray-200';
+        return 'text-gray-700';
       default:
-        return 'text-gray-300';
+        return 'text-gray-700';
     }
   };
 
@@ -364,7 +364,7 @@ export default function SiteAuditPage() {
                   <h2 className="text-2xl font-bold mb-4">
                     Run Complete Site Audit
                   </h2>
-                  <p className="text-gray-200 mb-6">
+                  <p className="text-gray-700 mb-6">
                     Check all integrations, SEO, performance, and functionality
                   </p>
                   <Button 
@@ -391,7 +391,7 @@ export default function SiteAuditPage() {
                         {overallHealth}%
                       </span>
                     </div>
-                    <p className="text-xl text-gray-200">Overall Site Health</p>
+                    <p className="text-xl text-gray-700">Overall Site Health</p>
                   </div>
                   
                   <div className="grid grid-cols-3 gap-4 mb-6">
@@ -399,19 +399,19 @@ export default function SiteAuditPage() {
                       <div className="text-2xl font-bold text-green-600">
                         {auditResults.filter(r => r.status === 'pass').length}
                       </div>
-                      <p className="text-sm text-gray-200">Passed</p>
+                      <p className="text-sm text-gray-700">Passed</p>
                     </div>
                     <div className="text-center">
                       <div className="text-2xl font-bold text-blue-700">
                         {auditResults.filter(r => r.status === 'warning').length}
                       </div>
-                      <p className="text-sm text-gray-200">Warnings</p>
+                      <p className="text-sm text-gray-700">Warnings</p>
                     </div>
                     <div className="text-center">
                       <div className="text-2xl font-bold text-red-600">
                         {auditResults.filter(r => r.status === 'fail').length}
                       </div>
-                      <p className="text-sm text-gray-200">Failed</p>
+                      <p className="text-sm text-gray-700">Failed</p>
                     </div>
                   </div>
                   
@@ -437,7 +437,7 @@ export default function SiteAuditPage() {
                   <h3 className="text-lg font-bold mb-4 flex items-center">
                     {getCategoryIcon(category)}
                     <span className="ml-2">{category}</span>
-                    <span className="ml-auto text-sm font-normal text-gray-200">
+                    <span className="ml-auto text-sm font-normal text-gray-700">
                       {items.filter(i => i.status === 'pass').length}/{items.length} passed
                     </span>
                   </h3>
@@ -454,7 +454,7 @@ export default function SiteAuditPage() {
                                 {item.severity.toUpperCase()}
                               </span>
                             </div>
-                            <p className="text-sm text-gray-200">{item.details}</p>
+                            <p className="text-sm text-gray-700">{item.details}</p>
                             {item.recommendation && (
                               <p className="text-sm text-blue-600 mt-1">
                                 → {item.recommendation}

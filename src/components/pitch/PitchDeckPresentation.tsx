@@ -56,7 +56,7 @@ export default function PitchDeckPresentation() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="text-2xl text-gray-100 mb-8 max-w-4xl mx-auto"
+            className="text-2xl text-gray-800 mb-8 max-w-4xl mx-auto"
           >
             Transforming a $1B Australian market with AI orchestration,
             creating an unstoppable platform positioned for 10x growth.
@@ -66,7 +66,7 @@ export default function PitchDeckPresentation() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 1 }}
-            className="flex items-center justify-center gap-2 text-blue-200"
+            className="flex items-center justify-center gap-2 text-blue-700"
           >
             <Rocket className="h-8 w-8" />
             <span className="text-xl font-semibold">Investment Opportunity</span>
@@ -86,7 +86,7 @@ export default function PitchDeckPresentation() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl font-bold text-white mb-12 text-center flex items-center justify-center gap-3"
           >
-            <Target className="h-12 w-12 text-red-400" />
+            <Target className="h-12 w-12 text-red-600" />
             The Problem
           </motion.h2>
           
@@ -104,8 +104,8 @@ export default function PitchDeckPresentation() {
                 transition={{ delay: index * 0.3, duration: 0.8 }}
                 className="flex items-start gap-4 bg-red-950/30 backdrop-blur-sm rounded-xl p-6 border border-red-600/30"
               >
-                <span className="text-red-400 text-2xl font-bold mt-1">•</span>
-                <span className="text-xl text-gray-100">{point}</span>
+                <span className="text-red-600 text-2xl font-bold mt-1">•</span>
+                <span className="text-xl text-gray-800">{point}</span>
               </motion.div>
             ))}
           </div>
@@ -143,7 +143,7 @@ export default function PitchDeckPresentation() {
                 className="flex items-start gap-4 bg-green-900/20 backdrop-blur-sm rounded-xl p-6 border border-green-500/30"
               >
                 <span className="text-emerald-600 text-2xl font-bold mt-1">✓</span>
-                <span className="text-xl text-gray-100">{point}</span>
+                <span className="text-xl text-gray-800">{point}</span>
               </motion.div>
             ))}
           </div>
@@ -179,9 +179,9 @@ export default function PitchDeckPresentation() {
                 transition={{ delay: index * 0.2, duration: 0.8 }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"
               >
-                <metric.icon className="h-12 w-12 text-blue-400 mx-auto mb-4" />
+                <metric.icon className="h-12 w-12 text-blue-600 mx-auto mb-4" />
                 <div className="text-4xl font-bold text-white mb-2">{metric.value}</div>
-                <div className="text-lg font-semibold text-blue-300 mb-1">{metric.label}</div>
+                <div className="text-lg font-semibold text-blue-700 mb-1">{metric.label}</div>
                 <div className="text-sm text-gray-200">{metric.description}</div>
               </motion.div>
             ))}
@@ -234,7 +234,7 @@ export default function PitchDeckPresentation() {
                 transition={{ delay: index * 0.2, duration: 0.8 }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all"
               >
-                <advantage.icon className="h-12 w-12 text-blue-400 mb-4" />
+                <advantage.icon className="h-12 w-12 text-blue-600 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{advantage.title}</h3>
                 <p className="text-gray-200">{advantage.description}</p>
               </motion.div>
@@ -255,7 +255,7 @@ export default function PitchDeckPresentation() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl font-bold text-white mb-12 text-center flex items-center justify-center gap-3"
           >
-            <ChartBar className="h-12 w-12 text-purple-400" />
+            <ChartBar className="h-12 w-12 text-purple-600" />
             Growth Trajectory
           </motion.h2>
           
@@ -278,7 +278,7 @@ export default function PitchDeckPresentation() {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-gray-100">{milestone.target}</span>
+                    <span className="text-gray-800">{milestone.target}</span>
                     <span className="text-emerald-600 font-semibold">{milestone.revenue}</span>
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-3">
@@ -321,7 +321,7 @@ export default function PitchDeckPresentation() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl font-bold text-white mb-8 text-center flex items-center justify-center gap-3"
           >
-            <Shield className="h-12 w-12 text-yellow-400" />
+            <Shield className="h-12 w-12 text-yellow-600" />
             Secret Weapon: Government Partnership
           </motion.h2>
           
@@ -333,26 +333,26 @@ export default function PitchDeckPresentation() {
               transition={{ delay: 0.3 }}
               className="bg-yellow-900/20 backdrop-blur-sm rounded-xl p-6 border border-yellow-500/30"
             >
-              <h3 className="text-2xl font-bold text-yellow-400 mb-4 flex items-center gap-2">
+              <h3 className="text-2xl font-bold text-yellow-600 mb-4 flex items-center gap-2">
                 <DollarSign className="h-6 w-6" />
                 $2.4B Government Funding
               </h3>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-100">Industry Growth Program</span>
-                  <span className="text-yellow-400 font-bold">Up to $5M</span>
+                  <span className="text-gray-800">Industry Growth Program</span>
+                  <span className="text-yellow-600 font-bold">Up to $5M</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-100">Clean Energy Innovation</span>
-                  <span className="text-yellow-400 font-bold">$500M Pool</span>
+                  <span className="text-gray-800">Clean Energy Innovation</span>
+                  <span className="text-yellow-600 font-bold">$500M Pool</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-100">Defence Industry Grants</span>
-                  <span className="text-yellow-400 font-bold">Up to $1M</span>
+                  <span className="text-gray-800">Defence Industry Grants</span>
+                  <span className="text-yellow-600 font-bold">Up to $1M</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-100">CSIRO Kick-Start</span>
-                  <span className="text-yellow-400 font-bold">$10K-$50K</span>
+                  <span className="text-gray-800">CSIRO Kick-Start</span>
+                  <span className="text-yellow-600 font-bold">$10K-$50K</span>
                 </div>
               </div>
             </motion.div>
@@ -364,25 +364,25 @@ export default function PitchDeckPresentation() {
               transition={{ delay: 0.5 }}
               className="bg-blue-900/20 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30"
             >
-              <h3 className="text-2xl font-bold text-blue-400 mb-4 flex items-center gap-2">
+              <h3 className="text-2xl font-bold text-blue-600 mb-4 flex items-center gap-2">
                 <Award className="h-6 w-6" />
                 Industry Recognition Framework
               </h3>
-              <div className="space-y-3 text-gray-100">
+              <div className="space-y-3 text-gray-800">
                 <div className="flex items-start gap-2">
-                  <span className="text-blue-400 font-bold">•</span>
+                  <span className="text-blue-600 font-bold">•</span>
                   <span>CPP40421 Certificate IV Recognition</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-blue-400 font-bold">•</span>
+                  <span className="text-blue-600 font-bold">•</span>
                   <span>ANZSIC Industry Classification</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-blue-400 font-bold">•</span>
+                  <span className="text-blue-600 font-bold">•</span>
                   <span>Australian Standards Development</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-blue-400 font-bold">•</span>
+                  <span className="text-blue-600 font-bold">•</span>
                   <span>Professional Registration System</span>
                 </div>
               </div>
@@ -399,16 +399,16 @@ export default function PitchDeckPresentation() {
             <h3 className="text-3xl font-bold text-white mb-6 text-center">Strategic Advantage</h3>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">Regulatory Moat</div>
-                <div className="text-gray-100">Government-backed industry standards create competitive barriers</div>
+                <div className="text-3xl font-bold text-yellow-600 mb-2">Regulatory Moat</div>
+                <div className="text-gray-800">Government-backed industry standards create competitive barriers</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">Revenue Streams</div>
-                <div className="text-gray-100">Training, certification, and accreditation programs</div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">Revenue Streams</div>
+                <div className="text-gray-800">Training, certification, and accreditation programs</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">Market Position</div>
-                <div className="text-gray-100">First-mover advantage as industry standard setter</div>
+                <div className="text-3xl font-bold text-green-600 mb-2">Market Position</div>
+                <div className="text-gray-800">First-mover advantage as industry standard setter</div>
               </div>
             </div>
           </motion.div>
@@ -445,7 +445,7 @@ export default function PitchDeckPresentation() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-2xl text-gray-100 mb-12 max-w-4xl mx-auto"
+            className="text-2xl text-gray-800 mb-12 max-w-4xl mx-auto"
           >
             We're raising $3M to accelerate growth and build market presence.
             With our AI technology and early traction, this is your opportunity
@@ -461,15 +461,15 @@ export default function PitchDeckPresentation() {
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-emerald-600 mb-2">$3M</div>
-                <div className="text-gray-100">Raising</div>
+                <div className="text-gray-800">Raising</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-400 mb-2">5%</div>
-                <div className="text-gray-100">Market Share Target</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">5%</div>
+                <div className="text-gray-800">Market Share Target</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">$20M</div>
-                <div className="text-gray-100">Revenue Target</div>
+                <div className="text-4xl font-bold text-purple-600 mb-2">$20M</div>
+                <div className="text-gray-800">Revenue Target</div>
               </div>
             </div>
             
@@ -653,7 +653,7 @@ export default function PitchDeckPresentation() {
               <Button
                 onClick={() => setAudioEnabled(!audioEnabled)}
                 variant="outline"
-                className={audioEnabled ? 'text-blue-400' : 'text-gray-300'}
+                className={audioEnabled ? 'text-blue-600' : 'text-gray-300'}
               >
                 {audioEnabled ? <Volume2 className="h-4 w-4" /> : <VolumeX className="h-4 w-4" />}
               </Button>

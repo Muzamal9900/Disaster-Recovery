@@ -381,7 +381,7 @@ export const LiveChatInterface: React.FC = () => {
                                   <p className="text-sm">{message.content}</p>
                                   <div className={cn(
                                     'flex items-center gap-1 mt-1',
-                                    message.type === 'sent' ? 'text-blue-100' : 'text-gray-300'
+                                    message.type === 'sent' ? 'text-blue-800' : 'text-gray-300'
                                   )}>
                                     <Clock className="w-3 h-3" />
                                     <span className="text-xs">
@@ -395,8 +395,8 @@ export const LiveChatInterface: React.FC = () => {
                                         {message.status === 'sending' && <Clock className="w-3 h-3" />}
                                         {message.status === 'sent' && <Check className="w-3 h-3" />}
                                         {message.status === 'delivered' && <CheckCheck className="w-3 h-3" />}
-                                        {message.status === 'read' && <CheckCheck className="w-3 h-3 text-blue-200" />}
-                                        {message.status === 'error' && <AlertCircle className="w-3 h-3 text-red-300" />}
+                                        {message.status === 'read' && <CheckCheck className="w-3 h-3 text-blue-700" />}
+                                        {message.status === 'error' && <AlertCircle className="w-3 h-3 text-red-700" />}
                                       </span>
                                     )}
                                   </div>

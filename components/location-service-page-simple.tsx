@@ -41,7 +41,7 @@ export default function LocationServicePageComponent({ data }: { data: any }) {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {title}
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+            <p className="text-xl md:text-2xl mb-8 text-blue-800">
               {description}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -271,7 +271,7 @@ export default function LocationServicePageComponent({ data }: { data: any }) {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Need Emergency Restoration Services?
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-blue-800">
               Available 24/7 across {city} - Insurance approved contractors ready to help
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

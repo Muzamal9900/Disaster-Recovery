@@ -29,7 +29,7 @@ export default function WorkflowDemoPage() {
     <div className="container mx-auto p-6 max-w-4xl">
       <div className="mb-8">
         <h1 className="text-4xl font-bold mb-2">Workflow Demo</h1>
-        <p className="text-gray-200">Complete contractor acceptance process</p>
+        <p className="text-gray-700">Complete contractor acceptance process</p>
       </div>
 
       <Card>
@@ -47,7 +47,7 @@ export default function WorkflowDemoPage() {
                     <div className="h-5 w-5 rounded-full border-2 border-gray-300" />
                   )}
                 </div>
-                <div className={`flex-1 ${index <= step ? 'text-green-700' : 'text-gray-300'}`}>
+                <div className={`flex-1 ${index <= step ? 'text-green-700' : 'text-gray-700'}`}>
                   {stepText}
                 </div>
               </div>

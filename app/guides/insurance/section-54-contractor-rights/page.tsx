@@ -159,7 +159,7 @@ export default function Section54ContractorRightsPage() {
         <div className="relative container mx-auto px-6 py-24 lg:py-32">
           <div className="max-w-4xl">
             {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-sm text-gray-300 mb-8">
+            <nav className="flex items-center gap-2 text-sm text-gray-700 mb-8">
               <Link href="/" className="hover:text-white transition">Home</Link>
               <span>/</span>
               <Link href="/guides" className="hover:text-white transition">Guides</Link>
@@ -169,7 +169,7 @@ export default function Section54ContractorRightsPage() {
               <span className="text-white">Section 54 Rights</span>
             </nav>
 
-            <Badge className="mb-4 bg-blue-500/20 text-blue-300 border-blue-500/30">
+            <Badge className="mb-4 bg-blue-500/20 text-blue-700 border-blue-500/30">
               <Scale className="h-3 w-3 mr-1" />
               Insurance Contracts Act 1984
             </Badge>
@@ -178,7 +178,7 @@ export default function Section54ContractorRightsPage() {
               Your Legal Right to Choose Emergency Contractors
             </h1>
             
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl lg:text-2xl text-gray-700 mb-8 leading-relaxed">
               Section 54 of the Insurance Contracts Act 1984 protects Australian policyholders from insurer interference in contractor selection. Here's what you need to know.
             </p>
 
@@ -230,7 +230,7 @@ export default function Section54ContractorRightsPage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Section 54: The Law Explained
             </h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Understanding the specific provisions that protect your contractor choice rights
             </p>
           </div>
@@ -254,11 +254,11 @@ export default function Section54ContractorRightsPage() {
                     <div className="grid lg:grid-cols-3 gap-6">
                       <div>
                         <h4 className="font-medium text-gray-900 mb-2">Legal Provision:</h4>
-                        <p className="text-sm text-gray-200">{provision.description}</p>
+                        <p className="text-sm text-gray-700">{provision.description}</p>
                       </div>
                       <div>
                         <h4 className="font-medium text-gray-900 mb-2">Real World Meaning:</h4>
-                        <p className="text-sm text-gray-200">{provision.realWorld}</p>
+                        <p className="text-sm text-gray-700">{provision.realWorld}</p>
                       </div>
                       <div>
                         <h4 className="font-medium text-gray-900 mb-2">Your Protection:</h4>
@@ -280,7 +280,7 @@ export default function Section54ContractorRightsPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Common Insurance Company Tactics (And How to Respond)
             </h2>
-            <p className="text-xl text-gray-200">
+            <p className="text-xl text-gray-700">
               Recognise these common attempts to restrict your contractor choice - and know your legal response
             </p>
           </div>
@@ -323,7 +323,7 @@ export default function Section54ContractorRightsPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               What Makes a "Qualified" Contractor?
             </h2>
-            <p className="text-xl text-gray-200">
+            <p className="text-xl text-gray-700">
               Section 54 protects your right to choose - but the contractor must be qualified and appropriate
             </p>
           </div>
@@ -340,13 +340,13 @@ export default function Section54ContractorRightsPage() {
                     
                     <div className="space-y-3">
                       <div>
-                        <p className="text-sm font-medium text-gray-200 mb-1">Why It Matters:</p>
-                        <p className="text-sm text-gray-200">{qual.why}</p>
+                        <p className="text-sm font-medium text-gray-700 mb-1">Why It Matters:</p>
+                        <p className="text-sm text-gray-700">{qual.why}</p>
                       </div>
                       
                       <div>
-                        <p className="text-sm font-medium text-gray-200 mb-1">How to Verify:</p>
-                        <p className="text-sm text-gray-200">{qual.verify}</p>
+                        <p className="text-sm font-medium text-gray-700 mb-1">How to Verify:</p>
+                        <p className="text-sm text-gray-700">{qual.verify}</p>
                       </div>
                       
                       <div className="bg-green-50 p-3 rounded-lg">
@@ -369,7 +369,7 @@ export default function Section54ContractorRightsPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Step-by-Step Action Guide
             </h2>
-            <p className="text-xl text-gray-200">
+            <p className="text-xl text-gray-700">
               How to properly exercise your Section 54 rights when disaster strikes
             </p>
           </div>
@@ -392,7 +392,7 @@ export default function Section54ContractorRightsPage() {
                         <h4 className="font-medium text-gray-900 mb-3">Required Actions:</h4>
                         <ul className="space-y-2">
                           {step.actions.map((action, aIdx) => (
-                            <li key={aIdx} className="flex items-start gap-2 text-sm text-gray-200">
+                            <li key={aIdx} className="flex items-start gap-2 text-sm text-gray-700">
                               <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                               {action}
                             </li>

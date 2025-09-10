@@ -253,9 +253,9 @@ export default function WebsiteAnalytics() {
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
       <div className="flex items-center justify-between">
         <div className="flex-1">
-          <p className="text-sm font-medium text-gray-200">{title}</p>
+          <p className="text-sm font-medium text-gray-700">{title}</p>
           <p className="text-3xl font-bold text-gray-900 mt-1">{value}</p>
-          {subtitle && <p className="text-sm text-gray-300 mt-1">{subtitle}</p>}
+          {subtitle && <p className="text-sm text-gray-700 mt-1">{subtitle}</p>}
           {change && (
             <div className="flex items-center mt-2">
               {change.isPositive ? (
@@ -268,7 +268,7 @@ export default function WebsiteAnalytics() {
               }`}>
                 {Math.abs(change.value)}%
               </span>
-              <span className="text-sm text-gray-300 ml-1">vs last period</span>
+              <span className="text-sm text-gray-700 ml-1">vs last period</span>
             </div>
           )}
         </div>
@@ -320,11 +320,11 @@ export default function WebsiteAnalytics() {
         <table className="w-full">
           <thead>
             <tr className="border-b border-gray-200">
-              <th className="text-left py-3 text-sm font-medium text-gray-200">Source/Medium</th>
-              <th className="text-right py-3 text-sm font-medium text-gray-200">Sessions</th>
-              <th className="text-right py-3 text-sm font-medium text-gray-200">Users</th>
-              <th className="text-right py-3 text-sm font-medium text-gray-200">Conv Rate</th>
-              <th className="text-right py-3 text-sm font-medium text-gray-200">Revenue</th>
+              <th className="text-left py-3 text-sm font-medium text-gray-700">Source/Medium</th>
+              <th className="text-right py-3 text-sm font-medium text-gray-700">Sessions</th>
+              <th className="text-right py-3 text-sm font-medium text-gray-700">Users</th>
+              <th className="text-right py-3 text-sm font-medium text-gray-700">Conv Rate</th>
+              <th className="text-right py-3 text-sm font-medium text-gray-700">Revenue</th>
             </tr>
           </thead>
           <tbody>
@@ -333,7 +333,7 @@ export default function WebsiteAnalytics() {
                 <td className="py-3">
                   <div>
                     <p className="font-medium text-gray-900">{source.source}</p>
-                    <p className="text-sm text-gray-300">{source.medium}</p>
+                    <p className="text-sm text-gray-700">{source.medium}</p>
                   </div>
                 </td>
                 <td className="py-3 text-right font-medium">{formatNumber(source.sessions)}</td>
@@ -379,12 +379,12 @@ export default function WebsiteAnalytics() {
                 </div>
                 <div>
                   <p className="font-medium text-gray-900 capitalize">{device}</p>
-                  <p className="text-sm text-gray-300">{formatPercentage(percentage)} of traffic</p>
+                  <p className="text-sm text-gray-700">{formatPercentage(percentage)} of traffic</p>
                 </div>
               </div>
               <div className="text-right">
                 <p className="font-medium text-gray-900">{formatNumber(data.sessions)}</p>
-                <p className="text-sm text-gray-300">{formatPercentage(data.conversionRate)} conv.</p>
+                <p className="text-sm text-gray-700">{formatPercentage(data.conversionRate)} conv.</p>
               </div>
             </div>
           );
@@ -401,7 +401,7 @@ export default function WebsiteAnalytics() {
           <div className="flex justify-between items-center mb-4">
             <h4 className="font-medium text-gray-900">{funnel.name}</h4>
             <div className="text-right">
-              <p className="text-sm text-gray-200">Overall Conversion Rate</p>
+              <p className="text-sm text-gray-700">Overall Conversion Rate</p>
               <p className="text-2xl font-bold text-gray-900">{formatPercentage(funnel.conversionRate)}</p>
             </div>
           </div>
@@ -422,12 +422,12 @@ export default function WebsiteAnalytics() {
                       </div>
                       <div>
                         <p className="font-medium text-gray-900">{step.name}</p>
-                        <p className="text-sm text-gray-300">{step.url}</p>
+                        <p className="text-sm text-gray-700">{step.url}</p>
                       </div>
                     </div>
                     <div className="text-right">
                       <p className="font-bold text-gray-900">{formatNumber(step.visits)}</p>
-                      <p className="text-sm text-gray-300">visitors</p>
+                      <p className="text-sm text-gray-700">visitors</p>
                     </div>
                   </div>
                   
@@ -447,15 +447,15 @@ export default function WebsiteAnalytics() {
           <div className="mt-6 grid grid-cols-3 gap-4 text-center">
             <div className="p-3 bg-gray-50 rounded-lg">
               <p className="text-2xl font-bold text-green-600">{formatNumber(funnel.totalConversions)}</p>
-              <p className="text-sm text-gray-200">Total Conversions</p>
+              <p className="text-sm text-gray-700">Total Conversions</p>
             </div>
             <div className="p-3 bg-gray-50 rounded-lg">
               <p className="text-2xl font-bold text-red-600">{formatPercentage(funnel.dropoffRate)}</p>
-              <p className="text-sm text-gray-200">Dropoff Rate</p>
+              <p className="text-sm text-gray-700">Dropoff Rate</p>
             </div>
             <div className="p-3 bg-gray-50 rounded-lg">
               <p className="text-2xl font-bold text-blue-600">{formatCurrency(funnel.revenue)}</p>
-              <p className="text-sm text-gray-200">Revenue</p>
+              <p className="text-sm text-gray-700">Revenue</p>
             </div>
           </div>
         </div>
@@ -471,7 +471,7 @@ export default function WebsiteAnalytics() {
           <div key={territory.territory} className="p-4 border border-gray-200 rounded-lg">
             <div className="flex justify-between items-start mb-3">
               <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5 text-gray-200" />
+                <MapPin className="w-5 h-5 text-gray-700" />
                 <h4 className="font-medium text-gray-900">{territory.territory}</h4>
               </div>
               <span className={`px-2 py-1 rounded-full text-xs font-medium ${
@@ -485,19 +485,19 @@ export default function WebsiteAnalytics() {
             
             <div className="grid grid-cols-4 gap-4 text-sm">
               <div>
-                <p className="text-gray-200">Sessions</p>
+                <p className="text-gray-700">Sessions</p>
                 <p className="font-medium">{formatNumber(territory.sessions)}</p>
               </div>
               <div>
-                <p className="text-gray-200">Leads</p>
+                <p className="text-gray-700">Leads</p>
                 <p className="font-medium">{formatNumber(territory.leads)}</p>
               </div>
               <div>
-                <p className="text-gray-200">Conversions</p>
+                <p className="text-gray-700">Conversions</p>
                 <p className="font-medium">{formatNumber(territory.conversions)}</p>
               </div>
               <div>
-                <p className="text-gray-200">Revenue</p>
+                <p className="text-gray-700">Revenue</p>
                 <p className="font-medium">{formatCurrency(territory.revenue)}</p>
               </div>
             </div>
@@ -514,15 +514,15 @@ export default function WebsiteAnalytics() {
         {mockAnalytics.googleAnalytics.geographicData.map((location, index) => (
           <div key={index} className="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg">
             <div className="flex items-center space-x-3">
-              <Globe className="w-5 h-5 text-gray-200" />
+              <Globe className="w-5 h-5 text-gray-700" />
               <div>
                 <p className="font-medium text-gray-900">{location.city}, {location.region}</p>
-                <p className="text-sm text-gray-300">{formatNumber(location.sessions)} sessions</p>
+                <p className="text-sm text-gray-700">{formatNumber(location.sessions)} sessions</p>
               </div>
             </div>
             <div className="text-right">
               <p className="font-medium text-gray-900">{formatCurrency(location.revenue)}</p>
-              <p className="text-sm text-gray-300">{formatNumber(location.conversions)} conv.</p>
+              <p className="text-sm text-gray-700">{formatNumber(location.conversions)} conv.</p>
             </div>
           </div>
         ))}
@@ -535,7 +535,7 @@ export default function WebsiteAnalytics() {
       <div className="flex justify-between items-center mb-8">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Website Analytics</h1>
-          <p className="text-gray-200 mt-2">
+          <p className="text-gray-700 mt-2">
             Track website performance and visitor behaviour across all territories
           </p>
         </div>
@@ -550,7 +550,7 @@ export default function WebsiteAnalytics() {
             <option value="month">Last 30 Days</option>
             <option value="quarter">Last 90 Days</option>
           </select>
-          <button className="px-4 py-2 bg-gray-100 text-gray-200 rounded-lg hover:bg-gray-200 transition-colours">
+          <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colours">
             <RefreshCw className="w-4 h-4 mr-2 inline" />
             Refresh
           </button>
@@ -577,7 +577,7 @@ export default function WebsiteAnalytics() {
                 className={`flex items-center px-1 py-4 border-b-2 font-medium text-sm transition-colours ${
                   selectedView === tab.key
                     ? 'border-blue-500 text-blue-600'
-                    : 'border-transparent text-gray-300 hover:text-gray-200 hover:border-gray-300'
+                    : 'border-transparent text-gray-700 hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
                 {tab.icon}
@@ -603,7 +603,7 @@ export default function WebsiteAnalytics() {
       {selectedView === 'territory' && <TerritoryPerformance />}
       {selectedView === 'flow' && (
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <p className="text-gray-200">Visitor flow visualization would be implemented here</p>
+          <p className="text-gray-700">Visitor flow visualization would be implemented here</p>
         </div>
       )}
     </div>

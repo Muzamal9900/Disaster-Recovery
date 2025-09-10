@@ -245,12 +245,12 @@ export default function NewcastleLocationPage() {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Disaster Recovery Newcastle
-                <span className="block text-blue-300 text-3xl md:text-4xl mt-2">
+                <span className="block text-blue-700 text-3xl md:text-4xl mt-2">
                   Hunter Region&apos;s Industrial & Storm Damage Specialists
                 </span>
               </h1>
               
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              <p className="text-xl text-blue-800 mb-8 leading-relaxed">
                 From Newcastle&apos;s industrial heart to Hunter Valley vineyards - our IICRC-certified 
                 technicians provide <strong>60-minute emergency response</strong> across the Hunter Region. 
                 Specialists in East Coast Low storms, Hunter River flooding, industrial disasters, 

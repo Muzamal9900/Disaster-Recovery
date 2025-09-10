@@ -207,7 +207,7 @@ export default function OnlineClaimPage() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold mb-2">Submit Online Claim</h1>
-          <p className="text-gray-200">Platform Fee: ${PLATFORM_FEE.toFixed(2)}</p>
+          <p className="text-gray-700">Platform Fee: ${PLATFORM_FEE.toFixed(2)}</p>
         </div>
 
         {/* Progress Steps */}
@@ -216,7 +216,7 @@ export default function OnlineClaimPage() {
             {[1, 2, 3, 4].map((s) => (
               <div key={s} className="flex items-center">
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                  step >= s ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-300'
+                  step >= s ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'
                 }`}>
                   {s}
                 </div>
@@ -645,7 +645,7 @@ export default function OnlineClaimPage() {
 
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h4 className="font-semibold mb-2">Contractor Responsibilities:</h4>
-                  <ul className="text-sm space-y-1 text-gray-200">
+                  <ul className="text-sm space-y-1 text-gray-700">
                     <li className="font-bold text-red-600">• Initial phone contact within 60 MINUTES (GUARANTEED)</li>
                     <li>• Schedule and conduct property inspection</li>
                     <li>• Perform emergency make-safe works</li>
@@ -708,7 +708,7 @@ export default function OnlineClaimPage() {
                         <CreditCard className="h-5 w-5" />
                         <span className="font-medium">Credit/Debit Card</span>
                       </div>
-                      <p className="text-sm text-gray-200 mt-1">Secure payment via Stripe</p>
+                      <p className="text-sm text-gray-700 mt-1">Secure payment via Stripe</p>
                     </div>
                   </div>
                 </div>

@@ -248,11 +248,11 @@ export default function WRTCoursePage() {
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0">
                         {completedModules.includes(module.id) ? (
-                          <CheckCircle className="w-6 h-6 text-green-400" />
+                          <CheckCircle className="w-6 h-6 text-green-600" />
                         ) : module.locked ? (
                           <Lock className="w-6 h-6 text-gray-200" />
                         ) : (
-                          <PlayCircle className="w-6 h-6 text-blue-400" />
+                          <PlayCircle className="w-6 h-6 text-blue-600" />
                         )}
                       </div>
                       <div className="flex-1">
@@ -296,21 +296,21 @@ export default function WRTCoursePage() {
               <h3 className="text-xl font-semibold text-white mb-4">Course Details</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <BookOpen className="w-5 h-5 text-blue-400" />
+                  <BookOpen className="w-5 h-5 text-blue-600" />
                   <div>
                     <p className="text-gray-200 text-sm">Modules</p>
                     <p className="text-white font-semibold">12 Comprehensive Modules</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-blue-400" />
+                  <Clock className="w-5 h-5 text-blue-600" />
                   <div>
                     <p className="text-gray-200 text-sm">Duration</p>
                     <p className="text-white font-semibold">3 Days (24 Hours)</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Award className="w-5 h-5 text-blue-400" />
+                  <Award className="w-5 h-5 text-blue-600" />
                   <div>
                     <p className="text-gray-200 text-sm">Certification</p>
                     <p className="text-white font-semibold">IICRC WRT Certificate</p>
@@ -325,19 +325,19 @@ export default function WRTCoursePage() {
               <div className="space-y-2">
                 <button className="w-full p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-between group">
                   <span className="text-white">Course Manual (PDF)</span>
-                  <Download className="w-4 h-4 text-gray-200 group-hover:text-blue-400" />
+                  <Download className="w-4 h-4 text-gray-200 group-hover:text-blue-600" />
                 </button>
                 <button className="w-full p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-between group">
                   <span className="text-white">Quick Reference Guide</span>
-                  <Download className="w-4 h-4 text-gray-200 group-hover:text-blue-400" />
+                  <Download className="w-4 h-4 text-gray-200 group-hover:text-blue-600" />
                 </button>
                 <button className="w-full p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-between group">
                   <span className="text-white">Psychrometric Chart</span>
-                  <Download className="w-4 h-4 text-gray-200 group-hover:text-blue-400" />
+                  <Download className="w-4 h-4 text-gray-200 group-hover:text-blue-600" />
                 </button>
                 <button className="w-full p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-between group">
                   <span className="text-white">Australian Standards</span>
-                  <Download className="w-4 h-4 text-gray-200 group-hover:text-blue-400" />
+                  <Download className="w-4 h-4 text-gray-200 group-hover:text-blue-600" />
                 </button>
               </div>
             </div>

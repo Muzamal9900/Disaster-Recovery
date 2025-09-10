@@ -692,7 +692,7 @@ ${slide.speakerNotes}
                     <AnimatedCounter value={metric.value} prefix={metric.value.includes('$') ? '$' : ''} suffix={metric.value.includes('B') ? 'B' : metric.value.includes('M') ? 'M' : ''} />
                   </div>
                   <div className="text-sm opacity-80">{metric.label}</div>
-                  <div className="text-xs text-green-300">{metric.trend}</div>
+                  <div className="text-xs text-green-700">{metric.trend}</div>
                 </motion.div>
               ))}
             </div>
@@ -713,7 +713,7 @@ ${slide.speakerNotes}
                   transition={{ delay: index * 0.2 }}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="text-4xl font-bold text-red-400">{problem.stat}</div>
+                  <div className="text-4xl font-bold text-red-600">{problem.stat}</div>
                   <div className="text-lg font-semibold mt-2">{problem.issue}</div>
                   <div className="text-sm opacity-80 mt-1">{problem.description}</div>
                 </motion.div>

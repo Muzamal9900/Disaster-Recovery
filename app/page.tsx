@@ -206,7 +206,7 @@ export default function HomePage() {
                   viewport={{ once: true }}
                 >
                   <div className="text-4xl font-bold">{stat.value}</div>
-                  <div className="text-blue-100">{stat.label}</div>
+                  <div className="text-blue-800">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -321,7 +321,7 @@ export default function HomePage() {
             </h2>
             <div className="flex justify-center gap-1 mb-8">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
+                <Star key={i} className="h-6 w-6 text-yellow-600 fill-current" />
               ))}
             </div>
             <p className="text-center text-lg text-gray-700 mb-12">
@@ -353,7 +353,7 @@ export default function HomePage() {
                   <CardContent className="p-6">
                     <div className="flex gap-1 mb-4">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                        <Star key={i} className="h-4 w-4 text-yellow-600 fill-current" />
                       ))}
                     </div>
                     <p className="text-gray-700 mb-4 italic">"{testimonial.quote}"</p>
@@ -375,7 +375,7 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Emergency? Get Help Now
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-blue-800 mb-8 max-w-2xl mx-auto">
               100% digital platform. No phone calls needed. 
               Connect instantly with certified professionals.
             </p>

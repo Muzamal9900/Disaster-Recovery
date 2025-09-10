@@ -310,12 +310,12 @@ export default function StormDamageRestorationPage() {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Storm Damage Restoration
-                <span className="block text-purple-300 text-3xl md:text-4xl mt-2">
+                <span className="block text-purple-700 text-3xl md:text-4xl mt-2">
                   Australia&apos;s Severe Weather Recovery Specialists
                 </span>
               </h1>
               
-              <p className="text-xl text-purple-100 mb-8 leading-relaxed">
+              <p className="text-xl text-purple-800 mb-8 leading-relaxed">
                 From supercell hailstorms to East Coast Lows, we&apos;ve restored thousands of 
                 storm-damaged properties across Australia. Our IICRC-certified teams provide 
                 <strong> immediate emergency response</strong> with make-safe services, structural 
@@ -325,22 +325,22 @@ export default function StormDamageRestorationPage() {
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <Clock className="w-8 h-8 mx-auto mb-2 text-purple-300" />
+                  <Clock className="w-8 h-8 mx-auto mb-2 text-purple-700" />
                   <div className="text-2xl font-bold">60min</div>
                   <div className="text-sm">Emergency Response</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <Shield className="w-8 h-8 mx-auto mb-2 text-purple-300" />
+                  <Shield className="w-8 h-8 mx-auto mb-2 text-purple-700" />
                   <div className="text-2xl font-bold">Make-Safe</div>
                   <div className="text-sm">Insurance Approved</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <Building className="w-8 h-8 mx-auto mb-2 text-purple-300" />
+                  <Building className="w-8 h-8 mx-auto mb-2 text-purple-700" />
                   <div className="text-2xl font-bold">15,000+</div>
                   <div className="text-sm">Storms Responded</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <Users className="w-8 h-8 mx-auto mb-2 text-purple-300" />
+                  <Users className="w-8 h-8 mx-auto mb-2 text-purple-700" />
                   <div className="text-2xl font-bold">24/7</div>
                   <div className="text-sm">Storm Teams</div>
                 </div>
@@ -644,7 +644,7 @@ export default function StormDamageRestorationPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <Cloud className="w-16 h-16 mx-auto mb-6 text-purple-300" />
+              <Cloud className="w-16 h-16 mx-auto mb-6 text-purple-700" />
               
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
                 When Storms Strike, WHO&apos;S FIRST Matters

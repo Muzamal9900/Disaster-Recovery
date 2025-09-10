@@ -111,7 +111,7 @@ export default function GMBCategoryPage({ params }: { params: { category: string
               </h1>
 
               {/* Description */}
-              <p className="text-xl text-blue-200 mb-8">
+              <p className="text-xl text-blue-700 mb-8">
                 {category.description}
               </p>
 
@@ -122,11 +122,11 @@ export default function GMBCategoryPage({ params }: { params: { category: string
                   <span className="text-white">24/7 Response</span>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full">
-                  <Shield className="h-5 w-5 text-blue-400" />
+                  <Shield className="h-5 w-5 text-blue-600" />
                   <span className="text-white">Insurance Approved</span>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full">
-                  <MapPin className="h-5 w-5 text-purple-400" />
+                  <MapPin className="h-5 w-5 text-purple-600" />
                   <span className="text-white">Australia Wide</span>
                 </div>
               </div>
@@ -170,7 +170,7 @@ export default function GMBCategoryPage({ params }: { params: { category: string
                       <h3 className="text-lg font-semibold text-white mb-2">
                         {service}
                       </h3>
-                      <p className="text-blue-200 text-sm">
+                      <p className="text-blue-700 text-sm">
                         Professional {service.toLowerCase()} services available 24/7
                       </p>
                     </div>
@@ -194,7 +194,7 @@ export default function GMBCategoryPage({ params }: { params: { category: string
                   <Clock className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">24/7 Emergency</h3>
-                <p className="text-blue-200">Round-the-clock response teams ready to help</p>
+                <p className="text-blue-700">Round-the-clock response teams ready to help</p>
               </div>
 
               <div className="text-center">
@@ -202,7 +202,7 @@ export default function GMBCategoryPage({ params }: { params: { category: string
                   <Users className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">115K+ Contractors</h3>
-                <p className="text-blue-200">Certified professionals across Australia</p>
+                <p className="text-blue-700">Certified professionals across Australia</p>
               </div>
 
               <div className="text-center">
@@ -210,7 +210,7 @@ export default function GMBCategoryPage({ params }: { params: { category: string
                   <Award className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Insurance Approved</h3>
-                <p className="text-blue-200">Preferred vendor for major insurers</p>
+                <p className="text-blue-700">Preferred vendor for major insurers</p>
               </div>
 
               <div className="text-center">
@@ -218,7 +218,7 @@ export default function GMBCategoryPage({ params }: { params: { category: string
                   <Zap className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">AI Matching</h3>
-                <p className="text-blue-200">Instant contractor matching technology</p>
+                <p className="text-blue-700">Instant contractor matching technology</p>
               </div>
             </div>
           </div>
@@ -239,7 +239,7 @@ export default function GMBCategoryPage({ params }: { params: { category: string
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">Emergency Assessment</h3>
-                    <p className="text-blue-200">
+                    <p className="text-blue-700">
                       Our team arrives quickly to assess the damage and create an action plan
                     </p>
                   </div>
@@ -251,7 +251,7 @@ export default function GMBCategoryPage({ params }: { params: { category: string
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">Immediate Mitigation</h3>
-                    <p className="text-blue-200">
+                    <p className="text-blue-700">
                       We start work immediately to prevent further damage and secure your property
                     </p>
                   </div>
@@ -263,7 +263,7 @@ export default function GMBCategoryPage({ params }: { params: { category: string
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">Complete Restoration</h3>
-                    <p className="text-blue-200">
+                    <p className="text-blue-700">
                       Full restoration to pre-loss condition with insurance coordination
                     </p>
                   </div>
@@ -288,14 +288,14 @@ export default function GMBCategoryPage({ params }: { params: { category: string
                   href={`/services/${category.slug}/${city.toLowerCase()}`}
                   className="px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-center hover:bg-white/10 transition-all group"
                 >
-                  <span className="text-white group-hover:text-blue-300 transition-colors">
+                  <span className="text-white group-hover:text-blue-700 transition-colors">
                     {city}
                   </span>
                 </Link>
               ))}
             </div>
 
-            <p className="text-center text-blue-200 mt-8">
+            <p className="text-center text-blue-700 mt-8">
               And thousands more locations across Australia
             </p>
           </div>
@@ -307,7 +307,7 @@ export default function GMBCategoryPage({ params }: { params: { category: string
             <h2 className="text-4xl font-bold text-white mb-6">
               Need {category.name}?
             </h2>
-            <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-blue-700 mb-8 max-w-2xl mx-auto">
               Don't wait - every minute counts. Our certified professionals are ready to help 24/7.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

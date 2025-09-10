@@ -267,7 +267,7 @@ export default function CommissionTracking() {
     <div className="max-w-7xl mx-auto p-6">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900">Commission Tracking</h1>
-        <p className="text-gray-200 mt-2">
+        <p className="text-gray-700 mt-2">
           Track your affiliate earnings, payouts, and performance metrics
         </p>
       </div>
@@ -277,7 +277,7 @@ export default function CommissionTracking() {
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-gray-200">Pending</p>
+              <p className="text-sm font-medium text-gray-700">Pending</p>
               <p className="text-2xl font-bold text-blue-700">{formatCurrency(totalEarnings.pending)}</p>
             </div>
             <div className="p-3 bg-orange-100 rounded-lg">
@@ -285,14 +285,14 @@ export default function CommissionTracking() {
             </div>
           </div>
           <div className="mt-2 flex items-center text-sm">
-            <span className="text-gray-300">Next payout: April 1</span>
+            <span className="text-gray-700">Next payout: April 1</span>
           </div>
         </div>
 
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-gray-200">This Month</p>
+              <p className="text-sm font-medium text-gray-700">This Month</p>
               <p className="text-2xl font-bold text-blue-600">{formatCurrency(totalEarnings.approved)}</p>
             </div>
             <div className="p-3 bg-blue-100 rounded-lg">
@@ -302,14 +302,14 @@ export default function CommissionTracking() {
           <div className="mt-2 flex items-center text-sm">
             <ArrowUpRight className="w-4 h-4 text-green-500 mr-1" />
             <span className="text-green-500">+{mockPerformance.trends.revenue}%</span>
-            <span className="text-gray-300 ml-1">vs last month</span>
+            <span className="text-gray-700 ml-1">vs last month</span>
           </div>
         </div>
 
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-gray-200">Paid Out</p>
+              <p className="text-sm font-medium text-gray-700">Paid Out</p>
               <p className="text-2xl font-bold text-green-600">{formatCurrency(totalEarnings.paid)}</p>
             </div>
             <div className="p-3 bg-green-100 rounded-lg">
@@ -317,14 +317,14 @@ export default function CommissionTracking() {
             </div>
           </div>
           <div className="mt-2 flex items-center text-sm">
-            <span className="text-gray-300">Last payment: April 1</span>
+            <span className="text-gray-700">Last payment: April 1</span>
           </div>
         </div>
 
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-gray-200">Lifetime Total</p>
+              <p className="text-sm font-medium text-gray-700">Lifetime Total</p>
               <p className="text-2xl font-bold text-purple-600">{formatCurrency(totalEarnings.lifetime)}</p>
             </div>
             <div className="p-3 bg-purple-100 rounded-lg">
@@ -332,7 +332,7 @@ export default function CommissionTracking() {
             </div>
           </div>
           <div className="mt-2 flex items-center text-sm">
-            <span className="text-gray-300">{mockCommissions.length} payouts</span>
+            <span className="text-gray-700">{mockCommissions.length} payouts</span>
           </div>
         </div>
       </div>
@@ -345,15 +345,15 @@ export default function CommissionTracking() {
             
             <div className="space-y-4">
               <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-200">Base Rate:</span>
+                <span className="text-sm text-gray-700">Base Rate:</span>
                 <span className="font-medium">{mockCommissionStructure.baseRate}%</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-200">Current Tier:</span>
+                <span className="text-sm text-gray-700">Current Tier:</span>
                 <span className="font-medium text-blue-600">Silver (18%)</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-200">Next Tier:</span>
+                <span className="text-sm text-gray-700">Next Tier:</span>
                 <span className="font-medium text-purple-600">Gold (22%)</span>
               </div>
             </div>
@@ -369,7 +369,7 @@ export default function CommissionTracking() {
                   style={{ width: `${(24000 / 50000) * 100}%` }}
                 />
               </div>
-              <p className="text-xs text-gray-300 mt-1">
+              <p className="text-xs text-gray-700 mt-1">
                 $26K more to unlock 22% commission rate
               </p>
             </div>
@@ -390,19 +390,19 @@ export default function CommissionTracking() {
             
             <div className="space-y-4">
               <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-200">Conversion Rate:</span>
+                <span className="text-sm text-gray-700">Conversion Rate:</span>
                 <span className="font-medium">{mockPerformance.currentPeriod.conversionRate}%</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-200">Avg Order Value:</span>
+                <span className="text-sm text-gray-700">Avg Order Value:</span>
                 <span className="font-medium">{formatCurrency(mockPerformance.currentPeriod.averageOrderValue)}</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-200">Total Clicks:</span>
+                <span className="text-sm text-gray-700">Total Clicks:</span>
                 <span className="font-medium">{mockPerformance.currentPeriod.clicks.toLocaleString()}</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-200">Conversions:</span>
+                <span className="text-sm text-gray-700">Conversions:</span>
                 <span className="font-medium">{mockPerformance.currentPeriod.conversions}</span>
               </div>
             </div>
@@ -454,11 +454,11 @@ export default function CommissionTracking() {
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-gray-200">
-                    <th className="text-left py-3 text-sm font-medium text-gray-200">Period</th>
-                    <th className="text-left py-3 text-sm font-medium text-gray-200">Revenue</th>
-                    <th className="text-left py-3 text-sm font-medium text-gray-200">Commission</th>
-                    <th className="text-left py-3 text-sm font-medium text-gray-200">Status</th>
-                    <th className="text-left py-3 text-sm font-medium text-gray-200">Actions</th>
+                    <th className="text-left py-3 text-sm font-medium text-gray-700">Period</th>
+                    <th className="text-left py-3 text-sm font-medium text-gray-700">Revenue</th>
+                    <th className="text-left py-3 text-sm font-medium text-gray-700">Commission</th>
+                    <th className="text-left py-3 text-sm font-medium text-gray-700">Status</th>
+                    <th className="text-left py-3 text-sm font-medium text-gray-700">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -472,7 +472,7 @@ export default function CommissionTracking() {
                               year: 'numeric' 
                             })}
                           </p>
-                          <p className="text-xs text-gray-300">
+                          <p className="text-xs text-gray-700">
                             {commission.period.start.toLocaleDateString('en-AU')} - {commission.period.end.toLocaleDateString('en-AU')}
                           </p>
                         </div>
@@ -482,7 +482,7 @@ export default function CommissionTracking() {
                           <p className="text-sm font-medium text-gray-900">
                             {formatCurrency(commission.revenue.net)}
                           </p>
-                          <p className="text-xs text-gray-300">
+                          <p className="text-xs text-gray-700">
                             Gross: {formatCurrency(commission.revenue.gross)}
                           </p>
                         </div>
@@ -509,11 +509,11 @@ export default function CommissionTracking() {
                         <div className="flex space-x-2">
                           <button 
                             onClick={() => setShowTransactionDetails(commission.id)}
-                            className="text-gray-200 hover:text-blue-600"
+                            className="text-gray-700 hover:text-blue-600"
                           >
                             <Eye className="w-4 h-4" />
                           </button>
-                          <button className="text-gray-200 hover:text-gray-200">
+                          <button className="text-gray-700 hover:text-gray-700">
                             <Download className="w-4 h-4" />
                           </button>
                         </div>
@@ -545,11 +545,11 @@ export default function CommissionTracking() {
                       </span>
                     </div>
                     <p className="text-sm font-medium text-gray-900">{transaction.description}</p>
-                    <p className="text-xs text-gray-300 mt-1">
+                    <p className="text-xs text-gray-700 mt-1">
                       {transaction.customer?.name} • {transaction.date.toLocaleDateString('en-AU')}
                     </p>
                     {transaction.trackingCode && (
-                      <p className="text-xs text-gray-200 mt-1">
+                      <p className="text-xs text-gray-700 mt-1">
                         Tracking: {transaction.trackingCode}
                       </p>
                     )}
@@ -558,7 +558,7 @@ export default function CommissionTracking() {
                     <p className="text-sm font-medium text-gray-900">
                       {formatCurrency(transaction.commission)}
                     </p>
-                    <p className="text-xs text-gray-300">
+                    <p className="text-xs text-gray-700">
                       on {formatCurrency(transaction.amount)}
                     </p>
                   </div>

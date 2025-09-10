@@ -82,7 +82,7 @@ export default function SewageChecklistPage() {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center mb-4">
-              <AlertTriangle className="w-12 h-12 mr-4 text-yellow-400" />
+              <AlertTriangle className="w-12 h-12 mr-4 text-yellow-600" />
               <h1 className="text-3xl md:text-4xl font-bold">
                 Sewage Backup Emergency Checklist
               </h1>

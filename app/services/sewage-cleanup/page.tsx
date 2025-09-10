@@ -103,7 +103,7 @@ export default function SewageCleanupPage() {
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Professional Sewage Cleanup & Sanitization Services in Brisbane
               </h1>
-              <p className="text-xl text-gray-200 mb-8">
+              <p className="text-xl text-gray-700 mb-8">
                 Category 3 black water specialists providing immediate response for sewage 
                 backups, overflows, and contamination. Health-certified technicians with 
                 advanced sanitization equipment available 24/7.
@@ -137,12 +137,12 @@ export default function SewageCleanupPage() {
                         <div className="text-center">
                           <Truck className="h-8 w-8 mx-auto mb-1 text-blue-700" />
                           <p className="font-medium">Rapid Response</p>
-                          <p className="text-gray-200">&lt; 60 minutes</p>
+                          <p className="text-gray-700">&lt; 60 minutes</p>
                         </div>
                         <div className="text-center">
                           <ShieldAlert className="h-8 w-8 mx-auto mb-1 text-blue-700" />
                           <p className="font-medium">Health Certified</p>
-                          <p className="text-gray-200">Safe cleanup</p>
+                          <p className="text-gray-700">Safe cleanup</p>
                         </div>
                       </div>
                     </div>
@@ -199,7 +199,7 @@ export default function SewageCleanupPage() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <p className="font-medium mb-2">Sewage Contains:</p>
-                  <ul className="text-sm text-gray-200 space-y-1">
+                  <ul className="text-sm text-gray-700 space-y-1">
                     <li>• E. coli and other harmful bacteria</li>
                     <li>• Hepatitis A, Rotavirus, and other viruses</li>
                     <li>• Parasites including Giardia and Cryptosporidium</li>
@@ -208,7 +208,7 @@ export default function SewageCleanupPage() {
                 </div>
                 <div>
                   <p className="font-medium mb-2">Health Risks Include:</p>
-                  <ul className="text-sm text-gray-200 space-y-1">
+                  <ul className="text-sm text-gray-700 space-y-1">
                     <li>• Gastroenteritis and severe diarrhea</li>
                     <li>• Respiratory infections</li>
                     <li>• Skin infections and rashes</li>
@@ -426,7 +426,7 @@ export default function SewageCleanupPage() {
                   </div>
                   <div className="flex-grow">
                     <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                    <p className="text-gray-200 mb-2">{item.description}</p>
+                    <p className="text-gray-700 mb-2">{item.description}</p>
                     <span className="text-sm text-blue-700 font-medium">{item.time}</span>
                   </div>
                 </div>
@@ -450,7 +450,7 @@ export default function SewageCleanupPage() {
                   <CardTitle className="text-lg">{faq.question}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-200">{faq.answer}</p>
+                  <p className="text-gray-700">{faq.answer}</p>
                 </CardContent>
               </Card>
             ))}
@@ -470,28 +470,28 @@ export default function SewageCleanupPage() {
                 <Shield className="h-8 w-8 text-blue-700 mx-auto" />
               </div>
               <h4 className="font-bold">Full PPE</h4>
-              <p className="text-sm text-gray-200">Hazmat suits, respirators, gloves</p>
+              <p className="text-sm text-gray-700">Hazmat suits, respirators, gloves</p>
             </div>
             <div className="text-center">
               <div className="bg-white p-4 rounded-lg shadow mb-3">
                 <Droplets className="h-8 w-8 text-blue-700 mx-auto" />
               </div>
               <h4 className="font-bold">Extraction Equipment</h4>
-              <p className="text-sm text-gray-200">Industrial pumps & vacuums</p>
+              <p className="text-sm text-gray-700">Industrial pumps & vacuums</p>
             </div>
             <div className="text-center">
               <div className="bg-white p-4 rounded-lg shadow mb-3">
                 <ShieldAlert className="h-8 w-8 text-blue-700 mx-auto" />
               </div>
               <h4 className="font-bold">Disinfectants</h4>
-              <p className="text-sm text-gray-200">Hospital-grade sanitizers</p>
+              <p className="text-sm text-gray-700">Hospital-grade sanitizers</p>
             </div>
             <div className="text-center">
               <div className="bg-white p-4 rounded-lg shadow mb-3">
                 <CheckCircle className="h-8 w-8 text-blue-700 mx-auto" />
               </div>
               <h4 className="font-bold">Testing Equipment</h4>
-              <p className="text-sm text-gray-200">Bacteria & pathogen testing</p>
+              <p className="text-sm text-gray-700">Bacteria & pathogen testing</p>
             </div>
           </div>
         </div>

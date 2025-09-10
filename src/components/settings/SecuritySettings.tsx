@@ -376,7 +376,7 @@ export function SecuritySettings() {
             {/* Password Status */}
             <div className="p-4 border rounded-lg">
               <div className="flex items-center justify-between mb-2">
-                <Lock className="h-5 w-5 text-gray-300" />
+                <Lock className="h-5 w-5 text-gray-700" />
                 {daysUntilPasswordExpiry && daysUntilPasswordExpiry < 30 ? (
                   <Badge className="bg-yellow-100 text-yellow-800">
                     Expires soon
@@ -388,7 +388,7 @@ export function SecuritySettings() {
                 )}
               </div>
               <p className="font-medium">Password</p>
-              <p className="text-sm text-gray-300">
+              <p className="text-sm text-gray-700">
                 {daysUntilPasswordExpiry 
                   ? `Expires in ${daysUntilPasswordExpiry} days`
                   : 'No expiry set'}
@@ -398,7 +398,7 @@ export function SecuritySettings() {
             {/* 2FA Status */}
             <div className="p-4 border rounded-lg">
               <div className="flex items-center justify-between mb-2">
-                <Key className="h-5 w-5 text-gray-300" />
+                <Key className="h-5 w-5 text-gray-700" />
                 {settings.twoFactorEnabled ? (
                   <Badge className="bg-green-100 text-green-800">
                     Enabled
@@ -410,7 +410,7 @@ export function SecuritySettings() {
                 )}
               </div>
               <p className="font-medium">Two-Factor Auth</p>
-              <p className="text-sm text-gray-300">
+              <p className="text-sm text-gray-700">
                 {settings.twoFactorEnabled 
                   ? `Using ${settings.twoFactorMethod?.toUpperCase()}`
                   : 'Not configured'}
@@ -420,13 +420,13 @@ export function SecuritySettings() {
             {/* Trusted Devices */}
             <div className="p-4 border rounded-lg">
               <div className="flex items-center justify-between mb-2">
-                <Monitor className="h-5 w-5 text-gray-300" />
+                <Monitor className="h-5 w-5 text-gray-700" />
                 <Badge variant="outline">
                   {settings.trustedDevices?.length || 0}
                 </Badge>
               </div>
               <p className="font-medium">Trusted Devices</p>
-              <p className="text-sm text-gray-300">
+              <p className="text-sm text-gray-700">
                 Currently active sessions
               </p>
             </div>
@@ -466,7 +466,7 @@ export function SecuritySettings() {
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-300 hover:text-gray-200"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-700 hover:text-gray-700"
                   >
                     {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                   </button>
@@ -488,7 +488,7 @@ export function SecuritySettings() {
                   <button
                     type="button"
                     onClick={() => setShowNewPassword(!showNewPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-300 hover:text-gray-200"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-700 hover:text-gray-700"
                   >
                     {showNewPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                   </button>
@@ -703,10 +703,10 @@ export function SecuritySettings() {
                       {getDeviceIcon(device.deviceType)}
                       <div>
                         <p className="font-medium">{device.deviceName}</p>
-                        <p className="text-sm text-gray-300">
+                        <p className="text-sm text-gray-700">
                           Last used: {new Date(device.lastUsed).toLocaleDateString()}
                         </p>
-                        <p className="text-xs text-gray-200">{device.ipAddress}</p>
+                        <p className="text-xs text-gray-700">{device.ipAddress}</p>
                       </div>
                     </div>
                     <Button
@@ -750,10 +750,10 @@ export function SecuritySettings() {
                         <p className="font-medium">
                           {login.success ? 'Successful login' : 'Failed login attempt'}
                         </p>
-                        <p className="text-sm text-gray-300">
+                        <p className="text-sm text-gray-700">
                           {new Date(login.timestamp).toLocaleString()}
                         </p>
-                        <p className="text-xs text-gray-200">
+                        <p className="text-xs text-gray-700">
                           {login.location} • {login.ipAddress}
                         </p>
                       </div>

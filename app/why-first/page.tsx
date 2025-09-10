@@ -102,21 +102,21 @@ export default function WhyFirstPage() {
               transition={{ delay: 0.2 }}
               className="mb-6"
             >
-              <Shield className="w-16 h-16 mx-auto mb-4 text-blue-300" />
+              <Shield className="w-16 h-16 mx-auto mb-4 text-blue-700" />
             </motion.div>
             
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               The Science Behind
-              <span className="block text-blue-300 mt-2">Who&apos;s First</span>
+              <span className="block text-blue-700 mt-2">Who&apos;s First</span>
             </h1>
             
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+            <p className="text-xl text-blue-800 mb-8 leading-relaxed">
               Restoration professionals are not cleanup crews. They are critical first responders 
               protecting 25 million Australians from invisible killers in our built environment.
             </p>
 
             <div className="bg-red-600/20 border-2 border-red-400 rounded-lg p-6 mt-8">
-              <AlertTriangle className="w-8 h-8 mx-auto mb-3 text-red-300" />
+              <AlertTriangle className="w-8 h-8 mx-auto mb-3 text-red-700" />
               <p className="text-lg font-semibold">
                 Every minute without professional intervention increases health risks exponentially.
                 The difference between restoration and renovation is the difference between life and death.
@@ -168,36 +168,36 @@ export default function WhyFirstPage() {
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-black/30 p-6 rounded-lg">
-                <h3 className="text-2xl font-bold mb-4 text-red-400">Asbestos Reality</h3>
+                <h3 className="text-2xl font-bold mb-4 text-red-600">Asbestos Reality</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <span className="text-red-400 mt-1">▶</span>
+                    <span className="text-red-600 mt-1">▶</span>
                     <span>Kills more Australians annually than road accidents</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-red-400 mt-1">▶</span>
+                    <span className="text-red-600 mt-1">▶</span>
                     <span>Found in 79 Sydney sites in 2024, including playgrounds</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-red-400 mt-1">▶</span>
+                    <span className="text-red-600 mt-1">▶</span>
                     <span>57% increase in removal notifications since 2019</span>
                   </li>
                 </ul>
               </div>
 
               <div className="bg-black/30 p-6 rounded-lg">
-                <h3 className="text-2xl font-bold mb-4 text-yellow-400">VOC Contamination</h3>
+                <h3 className="text-2xl font-bold mb-4 text-yellow-600">VOC Contamination</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <span className="text-yellow-400 mt-1">▶</span>
+                    <span className="text-yellow-600 mt-1">▶</span>
                     <span>Indoor levels 5x higher than outdoor</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-yellow-400 mt-1">▶</span>
+                    <span className="text-yellow-600 mt-1">▶</span>
                     <span>91% of formaldehyde released in first 50 days</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-yellow-400 mt-1">▶</span>
+                    <span className="text-yellow-600 mt-1">▶</span>
                     <span>Causes cancer, respiratory illness, neurological damage</span>
                   </li>
                 </ul>
@@ -314,22 +314,22 @@ export default function WhyFirstPage() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <AlertTriangle className="w-16 h-16 mx-auto mb-6 text-yellow-400" />
+            <AlertTriangle className="w-16 h-16 mx-auto mb-6 text-yellow-600" />
             <h2 className="text-4xl font-bold mb-8">
               The Climate Crisis Demands Professional Response
             </h2>
 
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               <div className="bg-black/30 p-6 rounded-lg">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">40%</div>
+                <div className="text-3xl font-bold text-yellow-600 mb-2">40%</div>
                 <p>Increase in weather disasters since 2019</p>
               </div>
               <div className="bg-black/30 p-6 rounded-lg">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">1.51°C</div>
+                <div className="text-3xl font-bold text-yellow-600 mb-2">1.51°C</div>
                 <p>Temperature increase since 1910</p>
               </div>
               <div className="bg-black/30 p-6 rounded-lg">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">30%</div>
+                <div className="text-3xl font-bold text-yellow-600 mb-2">30%</div>
                 <p>Expected rainfall increase by 2030</p>
               </div>
             </div>

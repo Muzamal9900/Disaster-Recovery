@@ -159,8 +159,8 @@ const ModernHeroSection: React.FC = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500" />
               </div>
-              <AlertTriangle className="h-5 w-5 text-red-400" />
-              <span className="text-sm font-semibold text-red-300 tracking-wide">
+              <AlertTriangle className="h-5 w-5 text-red-600" />
+              <span className="text-sm font-semibold text-red-700 tracking-wide">
                 24/7 Online Emergency Response Available
               </span>
               <Zap className="h-4 w-4 text-blue-500 animate-pulse" />
@@ -299,7 +299,7 @@ const ModernHeroSection: React.FC = () => {
                       <Icon className="h-8 w-8 text-white" />
                     </motion.div>
                     
-                    <p className="text-xs text-gray-200 uppercase tracking-widest font-medium mb-1">
+                    <p className="text-xs text-gray-700 uppercase tracking-widest font-medium mb-1">
                       {item.label}
                     </p>
                     <p className="font-bold text-white text-sm">
@@ -320,7 +320,7 @@ const ModernHeroSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 1.8 }}
         >
           <motion.div className="flex flex-col items-center gap-2">
-            <span className="text-xs text-gray-200 uppercase tracking-widest">
+            <span className="text-xs text-gray-700 uppercase tracking-widest">
               Scroll to explore
             </span>
             <motion.div

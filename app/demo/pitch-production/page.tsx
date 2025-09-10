@@ -23,7 +23,7 @@ export default function PitchProductionPage() {
           <h1 className="text-4xl font-bold text-white mb-4">
             Investor Pitch Deck - Production Version
           </h1>
-          <p className="text-blue-200 text-lg">
+          <p className="text-blue-700 text-lg">
             Professional presentation with ElevenLabs voice narration and synchronized slides
           </p>
         </div>

@@ -100,7 +100,7 @@ export default function UltraModernFooter() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-3 mb-6">
                 <div className="animate-spin-slow">
-                  <ShieldCheckIcon className="w-16 h-16 text-cyan-400" />
+                  <ShieldCheckIcon className="w-16 h-16 text-cyan-600" />
                 </div>
                 <div className="text-left">
                   <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -119,7 +119,7 @@ export default function UltraModernFooter() {
                     </div>
                     <div>
                       <p className="text-sm text-gray-200 uppercase tracking-wider">24/7 Emergency Response</p>
-                      <a href="/emergency" className="text-3xl font-bold text-white hover:text-cyan-400 transition-colours">
+                      <a href="/emergency" className="text-3xl font-bold text-white hover:text-cyan-600 transition-colours">
                         Get Help Now
                       </a>
                     </div>
@@ -191,14 +191,14 @@ export default function UltraModernFooter() {
                   label: 'Emergency Response',
                   value: 'Online Support 24/7',
                   href: '/emergency',
-                  colour: 'text-red-400'
+                  colour: 'text-red-600'
                 },
                 {
                   icon: EnvelopeIcon,
                   label: 'Email Support',
                   value: 'help@disasterrecovery.com.au',
                   href: 'mailto:help@disasterrecovery.com.au',
-                  colour: 'text-blue-400'
+                  colour: 'text-blue-600'
                 },
                 {
                   icon: ClockIcon,
@@ -273,7 +273,7 @@ export default function UltraModernFooter() {
           isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
         } hover:scale-110`}
       >
-        <ArrowUpIcon className="w-6 h-6 text-cyan-400" />
+        <ArrowUpIcon className="w-6 h-6 text-cyan-600" />
         <div className="absolute inset-0 rounded-full border-2 border-cyan-400 animate-ping" />
       </button>
     </>

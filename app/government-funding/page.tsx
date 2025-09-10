@@ -83,7 +83,7 @@ export default function GovernmentFundingPage() {
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-white mb-4">Government Funding & Assistance</h1>
-          <p className="text-gray-200">Access disaster recovery grants and financial support programs</p>
+          <p className="text-gray-700">Access disaster recovery grants and financial support programs</p>
         </div>
 
         {/* Alert Banner */}
@@ -109,34 +109,34 @@ export default function GovernmentFundingPage() {
                 <div className="flex flex-col lg:flex-row justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
-                      <Building className="w-6 h-6 text-blue-400" />
+                      <Building className="w-6 h-6 text-blue-600" />
                       <h3 className="text-xl font-semibold text-white">{program.name}</h3>
                       <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
                         {program.status === 'active' ? 'Active' : 'Closed'}
                       </span>
                     </div>
-                    <p className="text-gray-300 mb-3">{program.description}</p>
+                    <p className="text-gray-700 mb-3">{program.description}</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
                       <div>
-                        <span className="text-gray-200">Agency:</span>
+                        <span className="text-gray-700">Agency:</span>
                         <span className="text-white ml-2">{program.agency}</span>
                       </div>
                       <div>
-                        <span className="text-gray-200">Type:</span>
+                        <span className="text-gray-700">Type:</span>
                         <span className="text-white ml-2">{program.type}</span>
                       </div>
                       <div>
-                        <span className="text-gray-200">Amount:</span>
-                        <span className="text-green-400 font-semibold ml-2">{program.amount}</span>
+                        <span className="text-gray-700">Amount:</span>
+                        <span className="text-green-600 font-semibold ml-2">{program.amount}</span>
                       </div>
                       <div>
-                        <span className="text-gray-200">Deadline:</span>
-                        <span className="text-yellow-400 ml-2">{program.deadline}</span>
+                        <span className="text-gray-700">Deadline:</span>
+                        <span className="text-yellow-600 ml-2">{program.deadline}</span>
                       </div>
                     </div>
                     <div className="mt-3">
-                      <p className="text-gray-200 text-sm mb-1">Eligibility:</p>
-                      <p className="text-gray-300 text-sm">{program.eligibility}</p>
+                      <p className="text-gray-700 text-sm mb-1">Eligibility:</p>
+                      <p className="text-gray-700 text-sm">{program.eligibility}</p>
                     </div>
                   </div>
                   <div className="flex flex-col gap-2">
@@ -165,7 +165,7 @@ export default function GovernmentFundingPage() {
                     <span className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
                       {index + 1}
                     </span>
-                    <span className="text-gray-300 pt-1">{step}</span>
+                    <span className="text-gray-700 pt-1">{step}</span>
                   </li>
                 ))}
               </ol>
@@ -185,7 +185,7 @@ export default function GovernmentFundingPage() {
                 ].map((resource, index) => (
                   <div key={index} className="flex items-center justify-between p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
                     <span className="text-white">{resource}</span>
-                    <button className="p-2 text-blue-400 hover:text-blue-300">
+                    <button className="p-2 text-blue-600 hover:text-blue-700">
                       <Download className="w-5 h-5" />
                     </button>
                   </div>
@@ -201,8 +201,8 @@ export default function GovernmentFundingPage() {
               <ul className="space-y-2">
                 {requiredDocuments.map((doc, index) => (
                   <li key={index} className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">{doc}</span>
+                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm">{doc}</span>
                   </li>
                 ))}
               </ul>
@@ -223,8 +223,8 @@ export default function GovernmentFundingPage() {
                     href={link.url}
                     className="flex items-center justify-between p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors group"
                   >
-                    <span className="text-white group-hover:text-blue-400">{link.name}</span>
-                    <ExternalLink className="w-4 h-4 text-gray-200 group-hover:text-blue-400" />
+                    <span className="text-white group-hover:text-blue-600">{link.name}</span>
+                    <ExternalLink className="w-4 h-4 text-gray-700 group-hover:text-blue-600" />
                   </a>
                 ))}
               </div>

@@ -270,12 +270,12 @@ export default function SydneyLocationPage() {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Disaster Recovery Sydney
-                <span className="block text-blue-300 text-3xl md:text-4xl mt-2">
+                <span className="block text-blue-700 text-3xl md:text-4xl mt-2">
                   24/7 Emergency Restoration Across All Sydney Suburbs
                 </span>
               </h1>
               
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              <p className="text-xl text-blue-800 mb-8 leading-relaxed">
                 From Bondi to Blacktown, Hornsby to Hurstville - our IICRC-certified technicians 
                 provide <strong>60-minute emergency response</strong> across Greater Sydney. 
                 Specialising in water damage, fire restoration, and mould remediation for 

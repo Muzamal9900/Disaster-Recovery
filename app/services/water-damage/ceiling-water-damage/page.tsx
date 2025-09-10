@@ -210,7 +210,7 @@ export default function CeilingWaterDamagePage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Ceiling Water Damage Repair Brisbane
             </h1>
-            <p className="text-xl mb-8 text-slate-200">
+            <p className="text-xl mb-8 text-slate-700">
               Emergency ceiling leak repairs and restoration. Prevent collapse, stop leaks, 
               and restore your ceiling to perfect condition. Available 24/7 across Queensland.
             </p>
@@ -264,7 +264,7 @@ export default function CeilingWaterDamagePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold mb-4">Types of Ceiling Water Damage</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Identify your ceiling damage type for appropriate action
             </p>
           </div>
@@ -287,10 +287,10 @@ export default function CeilingWaterDamagePage() {
                     {item.severity}
                   </span>
                 </div>
-                <p className="text-sm text-gray-200 mb-2">
+                <p className="text-sm text-gray-700 mb-2">
                   <strong>Signs:</strong> {item.signs}
                 </p>
-                <p className="text-sm text-gray-200 mb-2">
+                <p className="text-sm text-gray-700 mb-2">
                   <strong>Action:</strong> {item.action}
                 </p>
                 <p className="text-sm font-semibold text-blue-700">
@@ -314,7 +314,7 @@ export default function CeilingWaterDamagePage() {
                     <h3 className="text-xl font-bold">{item.cause}</h3>
                     <span className="text-2xl font-bold text-blue-600">{item.percentage}</span>
                   </div>
-                  <p className="text-gray-200 mb-3">{item.details}</p>
+                  <p className="text-gray-700 mb-3">{item.details}</p>
                   <div className="pt-3 border-t">
                     <p className="text-sm">
                       <strong className="text-green-600">Prevention:</strong> {item.prevention}
@@ -332,7 +332,7 @@ export default function CeilingWaterDamagePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold mb-4">Our Ceiling Restoration Process</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Professional 6-step process to completely restore water-damaged ceilings
             </p>
           </div>
@@ -346,7 +346,7 @@ export default function CeilingWaterDamagePage() {
                     </div>
                     <h3 className="text-lg font-bold">{item.title}</h3>
                   </div>
-                  <p className="text-gray-200 mb-3">{item.description}</p>
+                  <p className="text-gray-700 mb-3">{item.description}</p>
                   <ul className="space-y-1">
                     {item.actions.map((action, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-sm">
@@ -436,14 +436,14 @@ export default function CeilingWaterDamagePage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-10">Early Warning Signs to Watch</h2>
             <Card className="p-8 bg-blue-50">
-              <p className="text-center mb-6 text-gray-200">
+              <p className="text-center mb-6 text-gray-700">
                 Early detection prevents major damage and ceiling collapse
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 {warningSignsToWatch.map((sign, index) => (
                   <div key={index} className="flex items-center gap-2">
                     <AlertCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
-                    <span className="text-gray-200">{sign}</span>
+                    <span className="text-gray-700">{sign}</span>
                   </div>
                 ))}
               </div>
@@ -525,7 +525,7 @@ export default function CeilingWaterDamagePage() {
               {faqs.map((faq, index) => (
                 <Card key={index} className="p-6">
                   <h3 className="text-lg font-bold mb-3 text-slate-900">{faq.question}</h3>
-                  <p className="text-gray-200 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                 </Card>
               ))}
             </div>

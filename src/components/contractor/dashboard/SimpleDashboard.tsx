@@ -56,7 +56,7 @@ export function SimpleDashboard() {
       <div className="flex justify-between items-center">
         <div>
           <h1 className="text-3xl font-bold">Contractor Dashboard</h1>
-          <p className="text-gray-200 mt-1">Welcome back, Demo Restoration Services</p>
+          <p className="text-gray-700 mt-1">Welcome back, Demo Restoration Services</p>
         </div>
         <Badge className="bg-green-100 text-green-800">Active</Badge>
       </div>
@@ -66,44 +66,44 @@ export function SimpleDashboard() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Jobs Completed</CardTitle>
-            <CheckCircle className="h-4 w-4 text-gray-200" />
+            <CheckCircle className="h-4 w-4 text-gray-700" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{kpiData.jobsCompleted}</div>
-            <p className="text-xs text-gray-200">This month</p>
+            <p className="text-xs text-gray-700">This month</p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Average Rating</CardTitle>
-            <Star className="h-4 w-4 text-gray-200" />
+            <Star className="h-4 w-4 text-gray-700" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{kpiData.avgRating}</div>
-            <p className="text-xs text-gray-200">From 89 reviews</p>
+            <p className="text-xs text-gray-700">From 89 reviews</p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Response Time</CardTitle>
-            <Clock className="h-4 w-4 text-gray-200" />
+            <Clock className="h-4 w-4 text-gray-700" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{kpiData.responseTime}</div>
-            <p className="text-xs text-gray-200">Average</p>
+            <p className="text-xs text-gray-700">Average</p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Revenue</CardTitle>
-            <DollarSign className="h-4 w-4 text-gray-200" />
+            <DollarSign className="h-4 w-4 text-gray-700" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{kpiData.revenue}</div>
-            <p className="text-xs text-gray-200">Year to date</p>
+            <p className="text-xs text-gray-700">Year to date</p>
           </CardContent>
         </Card>
       </div>
@@ -137,21 +137,21 @@ export function SimpleDashboard() {
             <CardContent className="space-y-4">
               <div>
                 <div className="flex justify-between mb-2">
-                  <span className="text-sm text-gray-200">Job Completion Rate</span>
+                  <span className="text-sm text-gray-700">Job Completion Rate</span>
                   <span className="text-sm font-semibold">95%</span>
                 </div>
                 <Progress value={95} />
               </div>
               <div>
                 <div className="flex justify-between mb-2">
-                  <span className="text-sm text-gray-200">Customer Satisfaction</span>
+                  <span className="text-sm text-gray-700">Customer Satisfaction</span>
                   <span className="text-sm font-semibold">96%</span>
                 </div>
                 <Progress value={96} />
               </div>
               <div>
                 <div className="flex justify-between mb-2">
-                  <span className="text-sm text-gray-200">On-Time Arrival</span>
+                  <span className="text-sm text-gray-700">On-Time Arrival</span>
                   <span className="text-sm font-semibold">89%</span>
                 </div>
                 <Progress value={89} />
@@ -170,21 +170,21 @@ export function SimpleDashboard() {
                   <CheckCircle className="h-5 w-5 text-green-500" />
                   <div className="flex-1">
                     <p className="text-sm font-medium">Job #1247 completed</p>
-                    <p className="text-xs text-gray-300">Water damage restoration - 2 hours ago</p>
+                    <p className="text-xs text-gray-700">Water damage restoration - 2 hours ago</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <FileCheck className="h-5 w-5 text-blue-500" />
                   <div className="flex-1">
                     <p className="text-sm font-medium">Invoice #892 submitted</p>
-                    <p className="text-xs text-gray-300">$3,450 - 5 hours ago</p>
+                    <p className="text-xs text-gray-700">$3,450 - 5 hours ago</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Award className="h-5 w-5 text-blue-600" />
                   <div className="flex-1">
                     <p className="text-sm font-medium">5-star review received</p>
-                    <p className="text-xs text-gray-300">From John Smith - Yesterday</p>
+                    <p className="text-xs text-gray-700">From John Smith - Yesterday</p>
                   </div>
                 </div>
               </div>
@@ -203,8 +203,8 @@ export function SimpleDashboard() {
                   <div className="flex justify-between items-start">
                     <div>
                       <h3 className="font-semibold">Job #1248 - Water Damage</h3>
-                      <p className="text-sm text-gray-200">123 Main St, Sydney</p>
-                      <p className="text-xs text-gray-300 mt-1">Started: 2 hours ago</p>
+                      <p className="text-sm text-gray-700">123 Main St, Sydney</p>
+                      <p className="text-xs text-gray-700 mt-1">Started: 2 hours ago</p>
                     </div>
                     <Badge>In Progress</Badge>
                   </div>
@@ -213,8 +213,8 @@ export function SimpleDashboard() {
                   <div className="flex justify-between items-start">
                     <div>
                       <h3 className="font-semibold">Job #1249 - Mould Remediation</h3>
-                      <p className="text-sm text-gray-200">456 Park Ave, Melbourne</p>
-                      <p className="text-xs text-gray-300 mt-1">Scheduled: Tomorrow 9:00 AM</p>
+                      <p className="text-sm text-gray-700">456 Park Ave, Melbourne</p>
+                      <p className="text-xs text-gray-700 mt-1">Scheduled: Tomorrow 9:00 AM</p>
                     </div>
                     <Badge variant="outline">Scheduled</Badge>
                   </div>
@@ -223,8 +223,8 @@ export function SimpleDashboard() {
                   <div className="flex justify-between items-start">
                     <div>
                       <h3 className="font-semibold">Job #1250 - Fire Damage Assessment</h3>
-                      <p className="text-sm text-gray-200">789 Queen St, Brisbane</p>
-                      <p className="text-xs text-gray-300 mt-1">Scheduled: Next Monday</p>
+                      <p className="text-sm text-gray-700">789 Queen St, Brisbane</p>
+                      <p className="text-xs text-gray-700 mt-1">Scheduled: Next Monday</p>
                     </div>
                     <Badge variant="outline">Pending</Badge>
                   </div>
@@ -247,7 +247,7 @@ export function SimpleDashboard() {
                     <Shield className="h-5 w-5 text-green-500" />
                     <div>
                       <p className="font-medium">Insurance</p>
-                      <p className="text-xs text-gray-300">Expires: {complianceData.insurance.expiry}</p>
+                      <p className="text-xs text-gray-700">Expires: {complianceData.insurance.expiry}</p>
                     </div>
                   </div>
                   <Badge className="bg-green-100 text-green-800">Active</Badge>
@@ -257,7 +257,7 @@ export function SimpleDashboard() {
                     <Award className="h-5 w-5 text-green-500" />
                     <div>
                       <p className="font-medium">IICRC Certifications</p>
-                      <p className="text-xs text-gray-300">Expires: {complianceData.certifications.expiry}</p>
+                      <p className="text-xs text-gray-700">Expires: {complianceData.certifications.expiry}</p>
                     </div>
                   </div>
                   <Badge className="bg-green-100 text-green-800">Active</Badge>
@@ -267,7 +267,7 @@ export function SimpleDashboard() {
                     <Users className="h-5 w-5 text-green-500" />
                     <div>
                       <p className="font-medium">Background Check</p>
-                      <p className="text-xs text-gray-300">Verified: {complianceData.background.date}</p>
+                      <p className="text-xs text-gray-700">Verified: {complianceData.background.date}</p>
                     </div>
                   </div>
                   <Badge className="bg-green-100 text-green-800">Verified</Badge>
@@ -277,7 +277,7 @@ export function SimpleDashboard() {
                     <FileText className="h-5 w-5 text-green-500" />
                     <div>
                       <p className="font-medium">Business Licenses</p>
-                      <p className="text-xs text-gray-300">Expires: {complianceData.licenses.expiry}</p>
+                      <p className="text-xs text-gray-700">Expires: {complianceData.licenses.expiry}</p>
                     </div>
                   </div>
                   <Badge className="bg-green-100 text-green-800">Active</Badge>
@@ -301,14 +301,14 @@ export function SimpleDashboard() {
                     <div className="flex justify-between items-center">
                       <div>
                         <p className="text-sm font-medium">Advanced Water Damage Restoration</p>
-                        <p className="text-xs text-gray-300">Duration: 8 hours | CEUs: 0.8</p>
+                        <p className="text-xs text-gray-700">Duration: 8 hours | CEUs: 0.8</p>
                       </div>
                       <Button size="sm">Enroll</Button>
                     </div>
                     <div className="flex justify-between items-center">
                       <div>
                         <p className="text-sm font-medium">Mould Remediation Best Practices</p>
-                        <p className="text-xs text-gray-300">Duration: 4 hours | CEUs: 0.4</p>
+                        <p className="text-xs text-gray-700">Duration: 4 hours | CEUs: 0.4</p>
                       </div>
                       <Button size="sm">Enroll</Button>
                     </div>
@@ -320,14 +320,14 @@ export function SimpleDashboard() {
                     <div className="flex justify-between items-center">
                       <div>
                         <p className="text-sm">IICRC WRT Certification</p>
-                        <p className="text-xs text-gray-300">Completed: Jan 15, 2024</p>
+                        <p className="text-xs text-gray-700">Completed: Jan 15, 2024</p>
                       </div>
                       <CheckCircle className="h-5 w-5 text-green-500" />
                     </div>
                     <div className="flex justify-between items-center">
                       <div>
                         <p className="text-sm">Fire Damage Restoration</p>
-                        <p className="text-xs text-gray-300">Completed: Dec 1, 2023</p>
+                        <p className="text-xs text-gray-700">Completed: Dec 1, 2023</p>
                       </div>
                       <CheckCircle className="h-5 w-5 text-green-500" />
                     </div>
@@ -346,7 +346,7 @@ export function SimpleDashboard() {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">$12,450</div>
-                <p className="text-xs text-gray-200">5 invoices pending</p>
+                <p className="text-xs text-gray-700">5 invoices pending</p>
               </CardContent>
             </Card>
             <Card>
@@ -355,7 +355,7 @@ export function SimpleDashboard() {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">$8,320</div>
-                <p className="text-xs text-gray-200">Received 3 days ago</p>
+                <p className="text-xs text-gray-700">Received 3 days ago</p>
               </CardContent>
             </Card>
             <Card>
@@ -364,7 +364,7 @@ export function SimpleDashboard() {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">$5,200</div>
-                <p className="text-xs text-gray-200">In 2 days</p>
+                <p className="text-xs text-gray-700">In 2 days</p>
               </CardContent>
             </Card>
           </div>
@@ -378,7 +378,7 @@ export function SimpleDashboard() {
                 <div className="flex justify-between items-center p-3 border rounded">
                   <div>
                     <p className="font-medium">Invoice #892</p>
-                    <p className="text-xs text-gray-300">Water damage - Job #1247</p>
+                    <p className="text-xs text-gray-700">Water damage - Job #1247</p>
                   </div>
                   <div className="text-right">
                     <p className="font-semibold">$3,450</p>
@@ -388,7 +388,7 @@ export function SimpleDashboard() {
                 <div className="flex justify-between items-center p-3 border rounded">
                   <div>
                     <p className="font-medium">Invoice #891</p>
-                    <p className="text-xs text-gray-300">Mould remediation - Job #1244</p>
+                    <p className="text-xs text-gray-700">Mould remediation - Job #1244</p>
                   </div>
                   <div className="text-right">
                     <p className="font-semibold">$2,100</p>

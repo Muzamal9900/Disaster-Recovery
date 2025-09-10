@@ -188,7 +188,7 @@ export default function AffiliateSignup() {
           <div className="space-y-6">"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   Company Name *
                 </label>
                 <input
@@ -205,7 +205,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   Trading Name
                 </label>
                 <input
@@ -217,7 +217,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   ABN *
                 </label>
                 <input
@@ -235,7 +235,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   ACN
                 </label>
                 <input
@@ -247,7 +247,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   Business Email *
                 </label>
                 <input
@@ -264,7 +264,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   Business Phone *
                 </label>
                 <input
@@ -281,7 +281,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div className="md:col-span-2">"
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   Website
                 </label>
                 <input
@@ -294,7 +294,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div className="md:col-span-2">"
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   Business Description
                 </label>
                 <textarea
@@ -315,7 +315,7 @@ export default function AffiliateSignup() {
             <h3 className="text-lg font-semibold text-gray-900">Primary Contact</h3>"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   Full Name *
                 </label>
                 <input
@@ -332,7 +332,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   Role/Position *
                 </label>
                 <input
@@ -349,7 +349,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   Email *
                 </label>
                 <input
@@ -366,7 +366,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   Phone
                 </label>
                 <input
@@ -381,7 +381,7 @@ export default function AffiliateSignup() {
             <h3 className="text-lg font-semibold text-gray-900 mt-8">Business Address</h3>"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
               <div className="md:col-span-2">"
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   Street Address *
                 </label>
                 <input
@@ -398,7 +398,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div className="md:col-span-2">"
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   Street Address Line 2
                 </label>
                 <input
@@ -410,7 +410,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   City *
                 </label>
                 <input
@@ -427,7 +427,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   State *
                 </label>
                 <select
@@ -453,7 +453,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   Postcode *
                 </label>
                 <input
@@ -494,7 +494,7 @@ export default function AffiliateSignup() {
                 >
                   <div className="flex items-start space-x-3">"
                     <div className={`p-2 rounded-lg ${
-                      formData.category === key ? 'bg-blue-100 text-blue-600' : 'bg-gray-100 text-gray-200'
+                      formData.category === key ? 'bg-blue-100 text-blue-600' : 'bg-gray-100 text-gray-700'
                     }`}>
                       {categoryIcons[key as PartnerCategory]}
                     </div>
@@ -502,7 +502,7 @@ export default function AffiliateSignup() {
                       <p className="font-medium text-gray-900">"
                         {key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}'
                       </p>
-                      <p className="text-sm text-gray-300 mt-1">{description}</p>"
+                      <p className="text-sm text-gray-700 mt-1">{description}</p>"
                     </div>
                   </div>
                 </button>
@@ -535,7 +535,7 @@ export default function AffiliateSignup() {
             <h3 className="text-lg font-semibold text-gray-900">Banking Details</h3>"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
               <div className="md:col-span-2">"
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   Account Name *
                 </label>
                 <input
@@ -552,7 +552,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   BSB *
                 </label>
                 <input
@@ -570,7 +570,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   Account Number *
                 </label>
                 <input
@@ -587,7 +587,7 @@ export default function AffiliateSignup() {
               </div>
 
               <div className="md:col-span-2">"
-                <label className="block text-sm font-medium text-gray-200 mb-1">"
+                <label className="block text-sm font-medium text-gray-700 mb-1">"
                   Preferred Payment Method
                 </label>
                 <select
@@ -617,12 +617,12 @@ export default function AffiliateSignup() {
                 >
                   <Award className={`w-8 h-8 mx-auto mb-2 ${
                     tier === 'bronze' ? 'text-blue-700' :'
-                    tier === 'silver' ? 'text-gray-300' :'
+                    tier === 'silver' ? 'text-gray-700' :'
                     tier === 'gold' ? 'text-blue-600' :'
                     'text-purple-600'
                   }`} />
                   <p className="font-semibold text-gray-900 capitalize">{tier}</p>"
-                  <p className="text-xs text-gray-300 mt-1">"
+                  <p className="text-xs text-gray-700 mt-1">"
                     {tier === 'bronze' ? 'Starting tier' :'
                      tier === 'silver' ? '$10k+ revenue' :'
                      tier === 'gold' ? '$50k+ revenue' :'
@@ -636,15 +636,15 @@ export default function AffiliateSignup() {
               <h4 className="font-semibold text-gray-900 mb-2">Commission Schedule</h4>"
               <div className="space-y-2 text-sm">"
                 <div className="flex justify-between">"
-                  <span className="text-gray-200">Payout Frequency:</span>"
+                  <span className="text-gray-700">Payout Frequency:</span>"
                   <span className="font-medium">Monthly</span>"
                 </div>
                 <div className="flex justify-between">"
-                  <span className="text-gray-200">Minimum Payout:</span>"
+                  <span className="text-gray-700">Minimum Payout:</span>"
                   <span className="font-medium">$100</span>"
                 </div>
                 <div className="flex justify-between">"
-                  <span className="text-gray-200">Next Payout Date:</span>"
+                  <span className="text-gray-700">Next Payout Date:</span>"
                   <span className="font-medium">1st of each month</span>"
                 </div>
               </div>
@@ -659,7 +659,7 @@ export default function AffiliateSignup() {
             
             <div className="bg-gray-50 rounded-lg p-6 max-h-96 overflow-y-auto">"
               <h4 className="font-semibold text-gray-900 mb-3">Partner Agreement Summary</h4>"
-              <div className="space-y-4 text-sm text-gray-200">"
+              <div className="space-y-4 text-sm text-gray-700">"
                 <div>
                   <h5 className="font-medium text-gray-900">1. Commission Structure</h5>"
                   <p>Partners earn commissions based on their category and tier. Commissions are calculated on net revenue after refunds and adjustments.</p>
@@ -691,7 +691,7 @@ export default function AffiliateSignup() {
                   onChange={(e) => setFormData({ ...formData, agreementAccepted: e.target.checked })}
                   className="mt-1 w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                 />
-                <span className="ml-3 text-sm text-gray-200">"
+                <span className="ml-3 text-sm text-gray-700">"
                   I have read and agree to the Partner Agreement, Terms of Service, and Privacy Policy. 
                   I confirm that all information provided is accurate and complete.
                 </span>
@@ -722,7 +722,7 @@ export default function AffiliateSignup() {
     <div className="max-w-4xl mx-auto p-6">"
       <div className="mb-8">"
         <h1 className="text-3xl font-bold text-gray-900">Partner & Affiliate Signup</h1>"
-        <p className="text-gray-200 mt-2">"
+        <p className="text-gray-700 mt-2">"
           Join our network and grow your business with NRP
         </p>
       </div>
@@ -738,7 +738,7 @@ export default function AffiliateSignup() {
                       ? 'bg-blue-600 border-blue-600 text-white'
                       : currentStep > step.id
                       ? 'bg-green-500 border-green-500 text-white'
-                      : 'bg-white border-gray-300 text-gray-300'
+                      : 'bg-white border-gray-300 text-gray-700'
                   }`}
                 >
                   {currentStep > step.id ? (
@@ -776,8 +776,8 @@ export default function AffiliateSignup() {
             disabled={currentStep === 1}
             className={`flex items-center px-6 py-3 rounded-lg font-medium transition-colours ${
               currentStep === 1
-                ? 'bg-gray-100 text-gray-200 cursor-not-allowed'
-                : 'bg-gray-200 text-gray-200 hover:bg-gray-300'
+                ? 'bg-gray-100 text-gray-700 cursor-not-allowed'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
             }`}
           >
             <ArrowLeft className="w-5 h-5 mr-2" />"
@@ -808,21 +808,21 @@ export default function AffiliateSignup() {
         <div className="bg-blue-50 rounded-lg p-4">"
           <TrendingUp className="w-8 h-8 text-blue-600 mb-2" />"
           <h3 className="font-semibold text-gray-900">Grow Your Business</h3>"
-          <p className="text-sm text-gray-200 mt-1">"
+          <p className="text-sm text-gray-700 mt-1">"
             Access our network of restoration contractors and expand your customer base
           </p>
         </div>
         <div className="bg-green-50 rounded-lg p-4">"
           <DollarSign className="w-8 h-8 text-green-600 mb-2" />"
           <h3 className="font-semibold text-gray-900">Earn Commissions</h3>"
-          <p className="text-sm text-gray-200 mt-1">"
+          <p className="text-sm text-gray-700 mt-1">"
             Competitive commission rates with performance bonuses and tier upgrades
           </p>
         </div>
         <div className="bg-purple-50 rounded-lg p-4">"
           <Shield className="w-8 h-8 text-purple-600 mb-2" />"
           <h3 className="font-semibold text-gray-900">Trusted Network</h3>"
-          <p className="text-sm text-gray-200 mt-1">"
+          <p className="text-sm text-gray-700 mt-1">"
             Join Australia's leading restoration professional network'
           </p>
         </div>

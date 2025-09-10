@@ -145,14 +145,14 @@ export default function MobileAuthentication() {
 
   const SecurityFeatures = () => (
     <div className="bg-gray-50 rounded-xl p-4 space-y-3">
-      <h3 className="text-sm font-semibold text-gray-200 mb-3">Security Features</h3>
+      <h3 className="text-sm font-semibold text-gray-700 mb-3">Security Features</h3>
       
       <div className="space-y-2">
         <div className="flex items-start space-x-3">
           <Shield className="w-5 h-5 text-green-500 mt-0.5" />
           <div className="flex-1">
             <p className="text-sm font-medium text-gray-900">End-to-End Encryption</p>
-            <p className="text-xs text-gray-300">AES-256 encryption for all data</p>
+            <p className="text-xs text-gray-700">AES-256 encryption for all data</p>
           </div>
         </div>
 
@@ -160,7 +160,7 @@ export default function MobileAuthentication() {
           <Fingerprint className="w-5 h-5 text-blue-500 mt-0.5" />
           <div className="flex-1">
             <p className="text-sm font-medium text-gray-900">Biometric Authentication</p>
-            <p className="text-xs text-gray-300">Face ID / Touch ID support</p>
+            <p className="text-xs text-gray-700">Face ID / Touch ID support</p>
           </div>
         </div>
 
@@ -168,7 +168,7 @@ export default function MobileAuthentication() {
           <Key className="w-5 h-5 text-purple-500 mt-0.5" />
           <div className="flex-1">
             <p className="text-sm font-medium text-gray-900">Two-Factor Authentication</p>
-            <p className="text-xs text-gray-300">TOTP, SMS, or Email verification</p>
+            <p className="text-xs text-gray-700">TOTP, SMS, or Email verification</p>
           </div>
         </div>
 
@@ -176,7 +176,7 @@ export default function MobileAuthentication() {
           <Clock className="w-5 h-5 text-blue-600 mt-0.5" />
           <div className="flex-1">
             <p className="text-sm font-medium text-gray-900">Session Management</p>
-            <p className="text-xs text-gray-300">Auto-logout after {mockAuthSettings.sessionTimeout} minutes</p>
+            <p className="text-xs text-gray-700">Auto-logout after {mockAuthSettings.sessionTimeout} minutes</p>
           </div>
         </div>
 
@@ -184,11 +184,11 @@ export default function MobileAuthentication() {
           {authState.networkStatus === 'online' ? (
             <Wifi className="w-5 h-5 text-green-500 mt-0.5" />
           ) : (
-            <WifiOff className="w-5 h-5 text-gray-200 mt-0.5" />
+            <WifiOff className="w-5 h-5 text-gray-700 mt-0.5" />
           )}
           <div className="flex-1">
             <p className="text-sm font-medium text-gray-900">Offline Mode</p>
-            <p className="text-xs text-gray-300">
+            <p className="text-xs text-gray-700">
               {authState.networkStatus === 'online' ? 'Connected' : 'Working offline'}
             </p>
           </div>
@@ -206,7 +206,7 @@ export default function MobileAuthentication() {
           className={`p-4 rounded-xl transition-all ${
             authMethod === method
               ? 'bg-blue-600 text-white shadow-lg scale-105'
-              : 'bg-gray-100 text-gray-200 hover:bg-gray-200'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
           disabled={method === 'biometric' && !authState.biometricAvailable}
         >
@@ -226,7 +226,7 @@ export default function MobileAuthentication() {
         <h3 erbaum="text-lg font-semibold text-gray-900">
           Authenticate with {mockAuthSettings.biometric.type === 'faceId' ? 'Face ID' : 'Touch ID'}
         </h3>
-        <p className="text-sm text-gray-300 mt-1">
+        <p className="text-sm text-gray-700 mt-1">
           Look at your device to continue
         </p>
       </div>
@@ -251,7 +251,7 @@ export default function MobileAuthentication() {
   const CredentialsAuthView = () => (
     <div className="space-y-4">
       <div>
-        <label className="block text-sm font-medium text-gray-200 mb-1">
+        <label className="block text-sm font-medium text-gray-700 mb-1">
           Email Address
         </label>
         <div className="relative">
@@ -262,12 +262,12 @@ export default function MobileAuthentication() {
             className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="contractor@example.com"
           />
-          <Mail className="absolute left-3 top-3.5 w-5 h-5 text-gray-200" />
+          <Mail className="absolute left-3 top-3.5 w-5 h-5 text-gray-700" />
         </div>
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-200 mb-1">
+        <label className="block text-sm font-medium text-gray-700 mb-1">
           Password
         </label>
         <div className="relative">
@@ -278,11 +278,11 @@ export default function MobileAuthentication() {
             className="w-full px-4 py-3 pl-10 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="Enter your password"
           />
-          <Lock className="absolute left-3 top-3.5 w-5 h-5 text-gray-200" />
+          <Lock className="absolute left-3 top-3.5 w-5 h-5 text-gray-700" />
           <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}
-            className="absolute right-3 top-3.5 text-gray-200 hover:text-gray-200"
+            className="absolute right-3 top-3.5 text-gray-700 hover:text-gray-700"
           >
             {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
           </button>
@@ -291,7 +291,7 @@ export default function MobileAuthentication() {
 
       {mockAuthSettings.twoFactor.enabled && (
         <div>
-          <label className="block text-sm font-medium text-gray-200 mb-1">
+          <label className="block text-sm font-medium text-gray-700 mb-1">
             Two-Factor Code
           </label>
           <div className="relative">
@@ -303,7 +303,7 @@ export default function MobileAuthentication() {
               placeholder="000000"
               maxLength={6}
             />
-            <Smartphone className="absolute left-3 top-3.5 w-5 h-5 text-gray-200" />
+            <Smartphone className="absolute left-3 top-3.5 w-5 h-5 text-gray-700" />
           </div>
         </div>
       )}
@@ -316,7 +316,7 @@ export default function MobileAuthentication() {
           onChange={(e) => setRememberDevice(e.target.checked)}
           className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
         />
-        <label htmlFor="rememberDevice" className="ml-2 text-sm text-gray-200">
+        <label htmlFor="rememberDevice" className="ml-2 text-sm text-gray-700">
           Remember this device for 30 days
         </label>
       </div>
@@ -344,7 +344,7 @@ export default function MobileAuthentication() {
     <div className="space-y-6">
       <div className="text-center">
         <h3 className="text-lg font-semibold text-gray-900">Enter your PIN</h3>
-        <p className="text-sm text-gray-300 mt-1">
+        <p className="text-sm text-gray-700 mt-1">
           Enter your {mockAuthSettings.pin.length}-digit PIN to continue
         </p>
       </div>
@@ -366,7 +366,7 @@ export default function MobileAuthentication() {
         <button
           type="button"
           onClick={() => setShowPin(!showPin)}
-          className="absolute right-3 top-4 text-gray-200 hover:text-gray-200"
+          className="absolute right-3 top-4 text-gray-700 hover:text-gray-700"
         >
           {showPin ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
         </button>
@@ -410,12 +410,12 @@ export default function MobileAuthentication() {
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             Authentication Successful
           </h2>
-          <p className="text-gray-200 mb-6">
+          <p className="text-gray-700 mb-6">
             You have been securely authenticated
           </p>
           <button
             onClick={() => setAuthState({ ...authState, isAuthenticated: false })}
-            className="px-6 py-2 bg-gray-100 text-gray-200 rounded-lg hover:bg-gray-200 transition-colours"
+            className="px-6 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colours"
           >
             Sign Out
           </button>
@@ -428,7 +428,7 @@ export default function MobileAuthentication() {
     <div className="max-w-4xl mx-auto p-6">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900">Mobile Authentication</h1>
-        <p className="text-gray-200 mt-2">
+        <p className="text-gray-700 mt-2">
           Secure multi-factor authentication for field technicians
         </p>
       </div>
@@ -463,27 +463,27 @@ export default function MobileAuthentication() {
           <SecurityFeatures />
 
           <div className="mt-6 bg-white rounded-xl shadow-lg p-4">
-            <h3 className="text-sm font-semibold text-gray-200 mb-3">Device Information</h3>
+            <h3 className="text-sm font-semibold text-gray-700 mb-3">Device Information</h3>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
-                <span className="text-gray-300">Platform:</span>
+                <span className="text-gray-700">Platform:</span>
                 <span className="text-gray-900">iOS 17.3</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-300">Device:</span>
+                <span className="text-gray-700">Device:</span>
                 <span className="text-gray-900">iPhone 15 Pro</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-300">App Version:</span>
+                <span className="text-gray-700">App Version:</span>
                 <span className="text-gray-900">2.4.1</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-300">Biometric:</span>
+                <span className="text-gray-700">Biometric:</span>
                 <span className="text-gray-900">Face ID</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-300">Network:</span>
-                <span className={authState.networkStatus === 'online' ? 'text-green-600' : 'text-gray-300'}>
+                <span className="text-gray-700">Network:</span>
+                <span className={authState.networkStatus === 'online' ? 'text-green-600' : 'text-gray-700'}>
                   {authState.networkStatus === 'online' ? 'Online' : 'Offline'}
                 </span>
               </div>
@@ -491,27 +491,27 @@ export default function MobileAuthentication() {
           </div>
 
           <div className="mt-6 bg-white rounded-xl shadow-lg p-4">
-            <h3 className="text-sm font-semibold text-gray-200 mb-3">Recent Activity</h3>
+            <h3 className="text-sm font-semibold text-gray-700 mb-3">Recent Activity</h3>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
                 <div className="flex-1">
                   <p className="text-sm text-gray-900">Successful login</p>
-                  <p className="text-xs text-gray-300">Today at 9:30 AM</p>
+                  <p className="text-xs text-gray-700">Today at 9:30 AM</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <AlertCircle className="w-4 h-4 text-blue-600 mt-0.5" />
                 <div className="flex-1">
                   <p className="text-sm text-gray-900">2FA code requested</p>
-                  <p className="text-xs text-gray-300">Yesterday at 2:15 PM</p>
+                  <p className="text-xs text-gray-700">Yesterday at 2:15 PM</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <RefreshCw className="w-4 h-4 text-blue-500 mt-0.5" />
                 <div className="flex-1">
                   <p className="text-sm text-gray-900">Password changed</p>
-                  <p className="text-xs text-gray-300">5 days ago</p>
+                  <p className="text-xs text-gray-700">5 days ago</p>
                 </div>
               </div>
             </div>

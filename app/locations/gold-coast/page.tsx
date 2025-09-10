@@ -245,12 +245,12 @@ export default function GoldCoastLocationPage() {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Disaster Recovery Gold Coast
-                <span className="block text-cyan-300 text-3xl md:text-4xl mt-2">
+                <span className="block text-cyan-700 text-3xl md:text-4xl mt-2">
                   High-Rise & Coastal Storm Damage Specialists
                 </span>
               </h1>
               
-              <p className="text-xl text-cyan-100 mb-8 leading-relaxed">
+              <p className="text-xl text-cyan-800 mb-8 leading-relaxed">
                 From Surfers Paradise high-rises to Hinterland properties - our IICRC-certified technicians 
                 provide <strong>45-minute emergency response</strong> across the Gold Coast. 
                 Specialists in high-rise water damage, East Coast Low storms, and subtropical 

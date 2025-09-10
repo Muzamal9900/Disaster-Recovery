@@ -92,7 +92,7 @@ export default function PremiumHeader() {
                 <Clock className="w-4 h-4" />
                 <span>24/7 Emergency Service</span>
               </div>
-              <a href="#contact-form" className="flex items-center gap-2 font-semibold hover:text-blue-200 transition-colours">
+              <a href="#contact-form" className="flex items-center gap-2 font-semibold hover:text-blue-700 transition-colours">
                 <MessageSquare className="w-4 h-4" />
                 <span>online support</span>
               </a>

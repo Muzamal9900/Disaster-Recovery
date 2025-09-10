@@ -453,7 +453,7 @@ export default function Day7Assessment() {
                 <h1 className="text-2xl font-bold text-gray-900">
                   Day 7: Assessment & Review
                 </h1>
-                <p className="text-sm text-gray-200">Week 1 knowledge check and preparation</p>
+                <p className="text-sm text-gray-700">Week 1 knowledge check and preparation</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -477,7 +477,7 @@ export default function Day7Assessment() {
             <CardContent className="p-4">
               <h3 className="font-semibold mb-2">Assessment Progress</h3>
               <Progress value={(currentSection / assessmentSections.length) * 100} className="mb-2" />
-              <p className="text-xs text-gray-200">
+              <p className="text-xs text-gray-700">
                 Section {currentSection + 1} of {assessmentSections.length}
               </p>
             </CardContent>
@@ -501,10 +501,10 @@ export default function Day7Assessment() {
                     ) : (
                       <div className="h-4 w-4 rounded-full border-2 border-gray-300" />
                     )}
-                    <span className="text-xs text-gray-200">Section {section.id}</span>
+                    <span className="text-xs text-gray-700">Section {section.id}</span>
                   </div>
                   <h4 className="text-sm font-medium">{section.title}</h4>
-                  <p className="text-xs text-gray-200 mt-1">{section.duration}</p>
+                  <p className="text-xs text-gray-700 mt-1">{section.duration}</p>
                 </CardContent>
               </Card>
             ))}
@@ -688,7 +688,7 @@ export default function Day7Assessment() {
                                   <p className="text-sm text-green-600 mb-2">
                                     Correct answer: {question.options[question.correct]}
                                   </p>
-                                  <p className="text-sm text-gray-200">
+                                  <p className="text-sm text-gray-700">
                                     <strong>Explanation:</strong> {question.explanation}
                                   </p>
                                 </>
@@ -743,9 +743,9 @@ export default function Day7Assessment() {
                               <div>
                                 <Badge variant="outline" className="mb-2">{day.day}</Badge>
                                 <h4 className="font-semibold">{day.title}</h4>
-                                <p className="text-sm text-gray-200 mt-1">{day.preview}</p>
+                                <p className="text-sm text-gray-700 mt-1">{day.preview}</p>
                               </div>
-                              <ChevronRight className="h-5 w-5 text-gray-200" />
+                              <ChevronRight className="h-5 w-5 text-gray-700" />
                             </div>
                           </CardContent>
                         </Card>

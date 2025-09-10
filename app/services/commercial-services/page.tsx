@@ -155,7 +155,7 @@ export default function CommercialServicesPage() {
             <h1 className="text-5xl font-bold mb-6">
               Commercial Disaster Recovery Services
             </h1>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-blue-800">
               Protecting Queensland businesses with rapid response restoration. 
               Minimizing downtime, maximizing recovery for offices, retail, industrial and healthcare facilities.
             </p>
@@ -196,7 +196,7 @@ export default function CommercialServicesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Industries We Serve</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Specialised restoration solutions for every commercial sector across Queensland
             </p>
           </div>
@@ -205,7 +205,7 @@ export default function CommercialServicesPage() {
               <Card key={index} className="p-6 hover:shadow-xl transition-shadow border-2 hover:border-blue-200">
                 <sector.icon className="h-12 w-12 text-blue-600 mb-4" />
                 <h3 className="text-xl font-bold mb-2">{sector.title}</h3>
-                <p className="text-gray-200 mb-4">{sector.description}</p>
+                <p className="text-gray-700 mb-4">{sector.description}</p>
                 <ul className="space-y-2">
                   {sector.services.map((service, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-sm">
@@ -225,7 +225,7 @@ export default function CommercialServicesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Our Business Continuity Process</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Systematic approach to minimize downtime and get your business operational quickly
             </p>
           </div>
@@ -248,7 +248,7 @@ export default function CommercialServicesPage() {
                         {item.time}
                       </span>
                     </div>
-                    <p className="text-gray-200">{item.description}</p>
+                    <p className="text-gray-700">{item.description}</p>
                   </div>
                 </div>
               </div>
@@ -262,7 +262,7 @@ export default function CommercialServicesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Comprehensive Commercial Services</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Full-service restoration and recovery for businesses of all sizes
             </p>
           </div>
@@ -270,7 +270,7 @@ export default function CommercialServicesPage() {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <AlertTriangle className="h-10 w-10 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Emergency Response</h3>
-              <ul className="space-y-2 text-gray-200">
+              <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                   <span>24/7 emergency hotline</span>
@@ -293,7 +293,7 @@ export default function CommercialServicesPage() {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <Building2 className="h-10 w-10 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Property Restoration</h3>
-              <ul className="space-y-2 text-gray-200">
+              <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                   <span>Structural drying & dehumidification</span>
@@ -316,7 +316,7 @@ export default function CommercialServicesPage() {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <Briefcase className="h-10 w-10 text-green-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Business Support</h3>
-              <ul className="space-y-2 text-gray-200">
+              <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                   <span>Insurance claim management</span>
@@ -345,7 +345,7 @@ export default function CommercialServicesPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">Why Queensland Businesses Choose Us</h2>
-              <p className="text-xl text-gray-200">
+              <p className="text-xl text-gray-700">
                 Trusted by hundreds of commercial clients for professional disaster recovery
               </p>
             </div>
@@ -353,32 +353,32 @@ export default function CommercialServicesPage() {
               <div className="bg-white p-6 rounded-lg">
                 <div className="text-3xl font-bold text-blue-600 mb-2">2 Hours</div>
                 <div className="font-semibold mb-2">Average Response Time</div>
-                <p className="text-gray-200">Rapid commercial emergency response across Brisbane and Southeast Queensland</p>
+                <p className="text-gray-700">Rapid commercial emergency response across Brisbane and Southeast Queensland</p>
               </div>
               <div className="bg-white p-6 rounded-lg">
                 <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
                 <div className="font-semibold mb-2">Businesses Restored</div>
-                <p className="text-gray-200">Extensive experience with commercial properties of all types and sizes</p>
+                <p className="text-gray-700">Extensive experience with commercial properties of all types and sizes</p>
               </div>
               <div className="bg-white p-6 rounded-lg">
                 <div className="text-3xl font-bold text-blue-600 mb-2">$50M+</div>
                 <div className="font-semibold mb-2">Insurance Claims Managed</div>
-                <p className="text-gray-200">Direct billing with all major commercial insurers</p>
+                <p className="text-gray-700">Direct billing with all major commercial insurers</p>
               </div>
               <div className="bg-white p-6 rounded-lg">
                 <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
                 <div className="font-semibold mb-2">Emergency Availability</div>
-                <p className="text-gray-200">Round-the-clock support when disaster strikes</p>
+                <p className="text-gray-700">Round-the-clock support when disaster strikes</p>
               </div>
               <div className="bg-white p-6 rounded-lg">
                 <div className="text-3xl font-bold text-blue-600 mb-2">100%</div>
                 <div className="font-semibold mb-2">Licensed & Insured</div>
-                <p className="text-gray-200">Fully certified for all commercial restoration work</p>
+                <p className="text-gray-700">Fully certified for all commercial restoration work</p>
               </div>
               <div className="bg-white p-6 rounded-lg">
                 <div className="text-3xl font-bold text-blue-600 mb-2">15+</div>
                 <div className="font-semibold mb-2">Years Experience</div>
-                <p className="text-gray-200">Proven track record in commercial disaster recovery</p>
+                <p className="text-gray-700">Proven track record in commercial disaster recovery</p>
               </div>
             </div>
           </div>
@@ -390,7 +390,7 @@ export default function CommercialServicesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Recent Commercial Projects</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Successfully restoring Queensland businesses after major disasters
             </p>
           </div>
@@ -401,10 +401,10 @@ export default function CommercialServicesPage() {
                   Office Complex
                 </div>
                 <h3 className="text-xl font-bold mb-2">Brisbane CBD Office Tower</h3>
-                <p className="text-gray-200 mb-4">
+                <p className="text-gray-700 mb-4">
                   Major water damage across 5 floors. Restored in 14 days with zero business days lost.
                 </p>
-                <div className="text-sm text-gray-300">
+                <div className="text-sm text-gray-700">
                   <strong>Services:</strong> Water extraction, structural drying, content restoration
                 </div>
               </div>
@@ -415,10 +415,10 @@ export default function CommercialServicesPage() {
                   Retail Chain
                 </div>
                 <h3 className="text-xl font-bold mb-2">Gold Coast Shopping Centre</h3>
-                <p className="text-gray-200 mb-4">
+                <p className="text-gray-700 mb-4">
                   Fire damage to 8 retail stores. Phased restoration allowed 6 stores to reopen in 7 days.
                 </p>
-                <div className="text-sm text-gray-300">
+                <div className="text-sm text-gray-700">
                   <strong>Services:</strong> Fire restoration, smoke removal, reconstruction
                 </div>
               </div>
@@ -429,10 +429,10 @@ export default function CommercialServicesPage() {
                   Healthcare
                 </div>
                 <h3 className="text-xl font-bold mb-2">Medical Centre Ipswich</h3>
-                <p className="text-gray-200 mb-4">
+                <p className="text-gray-700 mb-4">
                   Storm damage and flooding. Priority restoration with full infection control protocols.
                 </p>
-                <div className="text-sm text-gray-300">
+                <div className="text-sm text-gray-700">
                   <strong>Services:</strong> Emergency response, biohazard cleaning, full restoration
                 </div>
               </div>
@@ -446,7 +446,7 @@ export default function CommercialServicesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Commercial Service Areas</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Rapid response commercial restoration across Southeast Queensland
             </p>
           </div>
@@ -454,12 +454,12 @@ export default function CommercialServicesPage() {
             {['Brisbane CBD', 'Gold Coast', 'Sunshine Coast', 'Ipswich', 'Logan', 'Redlands', 'Moreton Bay', 'Toowoomba'].map((area) => (
               <div key={area} className="bg-white p-4 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow">
                 <h3 className="font-semibold text-lg">{area}</h3>
-                <p className="text-sm text-gray-200 mt-1">24/7 Commercial Response</p>
+                <p className="text-sm text-gray-700 mt-1">24/7 Commercial Response</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
-            <p className="text-gray-200">
+            <p className="text-gray-700">
               Also servicing: Caboolture, Redcliffe, Cleveland, Wynnum, Carindale, Chermside, Indooroopilly, and all surrounding commercial areas
             </p>
           </div>
@@ -475,7 +475,7 @@ export default function CommercialServicesPage() {
               {faqs.map((faq, index) => (
                 <Card key={index} className="p-6">
                   <h3 className="text-xl font-bold mb-3 text-blue-900">{faq.question}</h3>
-                  <p className="text-gray-200 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                 </Card>
               ))}
             </div>
@@ -504,7 +504,7 @@ export default function CommercialServicesPage() {
               Request Commercial Assessment
             </Button>
           </div>
-          <p className="mt-6 text-blue-200">
+          <p className="mt-6 text-blue-700">
             Preferred restoration partner for Queensland's leading businesses
           </p>
         </div>

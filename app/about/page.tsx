@@ -82,7 +82,7 @@ export default function ModernAboutPage() {
               animate={{ scale: [1, 1.02, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <SparklesIcon className="w-4 h-4 text-purple-400" />
+              <SparklesIcon className="w-4 h-4 text-purple-600" />
               <span className="text-sm font-medium text-purple-700">Trusted Since 2025</span>
             </motion.div>
 
@@ -188,7 +188,7 @@ export default function ModernAboutPage() {
                   }}
                 />
                 <div id="founder-fallback" className="hidden w-full h-full items-center justify-center bg-gradient-to-r from-purple-500/20 to-indigo-500/20">
-                  <UserGroupIcon className="w-32 h-32 text-purple-400/50" />
+                  <UserGroupIcon className="w-32 h-32 text-purple-600/50" />
                 </div>
               </div>
               <motion.div
@@ -278,7 +278,7 @@ export default function ModernAboutPage() {
                 className="bg-gradient-to-r from-purple-500/10 to-indigo-500/10 border border-purple-500/30 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all"
                 whileHover={{ y: -5 }}
               >
-                <TrophyIcon className="w-12 h-12 text-purple-400 mx-auto mb-3" />
+                <TrophyIcon className="w-12 h-12 text-purple-600 mx-auto mb-3" />
                 <h3 className="text-xl font-bold mb-1">{cert.name}</h3>
                 <p className="text-gray-700 text-xs">{cert.desc}</p>
               </motion.div>
@@ -308,7 +308,7 @@ export default function ModernAboutPage() {
           </motion.div>
 
           <div className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-3xl p-12 border border-purple-500/30 text-center">
-            <UserGroupIcon className="w-24 h-24 text-purple-400 mx-auto mb-6" />
+            <UserGroupIcon className="w-24 h-24 text-purple-600 mx-auto mb-6" />
             <h3 className="text-2xl font-bold mb-4">150+ Certified Professionals</h3>
             <p className="text-gray-700 max-w-2xl mx-auto mb-8">
               Our team includes IICRC-certified restoration specialists, project managers, 

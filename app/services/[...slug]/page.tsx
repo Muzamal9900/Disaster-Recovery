@@ -128,12 +128,12 @@ export default async function SEOLocationPage({ params }: { params: PageParams }
                 <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                   {page.serviceName} in {page.city}
                   {page.suburb && (
-                    <span className="block text-3xl lg:text-4xl text-blue-200 mt-2">
+                    <span className="block text-3xl lg:text-4xl text-blue-700 mt-2">
                       {page.suburb} {page.postcode}
                     </span>
                   )}
                 </h1>
-                <p className="text-xl text-blue-100 mb-8">
+                <p className="text-xl text-blue-800 mb-8">
                   Professional {page.serviceName.toLowerCase()} services for {page.propertyType.toLowerCase()} properties{page.businessType && ` including ${page.businessType.replace(/-/g, ' ')}`}. 24/7 emergency response across {page.city} and surrounding areas.
                 </p>
                 
@@ -192,7 +192,7 @@ export default async function SEOLocationPage({ params }: { params: PageParams }
                 </h3>
                 <form className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-200 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
                       Your Name
                     </label>
                     <input
@@ -202,7 +202,7 @@ export default async function SEOLocationPage({ params }: { params: PageParams }
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-200 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
                       Phone Number
                     </label>
                     <input
@@ -212,7 +212,7 @@ export default async function SEOLocationPage({ params }: { params: PageParams }
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-200 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
                       Property Type
                     </label>
                     <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
@@ -223,7 +223,7 @@ export default async function SEOLocationPage({ params }: { params: PageParams }
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-200 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
                       Describe Your Situation
                     </label>
                     <textarea
@@ -276,15 +276,15 @@ export default async function SEOLocationPage({ params }: { params: PageParams }
                     <Star className="w-5 h-5 text-blue-500 fill-current" />
                     <Star className="w-5 h-5 text-blue-500 fill-current" />
                     <Star className="w-5 h-5 text-blue-500 fill-current" />
-                    <span className="text-sm text-gray-200">4.9/5 Rating</span>
+                    <span className="text-sm text-gray-700">4.9/5 Rating</span>
                   </div>
-                  <div className="text-sm text-gray-200">
+                  <div className="text-sm text-gray-700">
                     <strong>500+ Jobs Completed</strong> in {page.city}
                   </div>
-                  <div className="text-sm text-gray-200">
+                  <div className="text-sm text-gray-700">
                     <strong>24/7 Emergency Service</strong>
                   </div>
-                  <div className="text-sm text-gray-200">
+                  <div className="text-sm text-gray-700">
                     <strong>Insurance Approved</strong> Contractors
                   </div>
                 </div>

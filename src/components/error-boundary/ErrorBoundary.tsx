@@ -174,13 +174,13 @@ class ErrorBoundary extends Component<Props, State> {
                   Something went wrong
                 </h1>
                 
-                <p className="text-gray-200 mb-6">
+                <p className="text-gray-700 mb-6">
                   We encountered an unexpected error. Our team has been notified.
                 </p>
 
                 {process.env.NODE_ENV === 'development' && (
                   <details className="w-full mb-6 text-left">
-                    <summary className="cursor-pointer text-sm text-gray-300 hover:text-gray-200">
+                    <summary className="cursor-pointer text-sm text-gray-700 hover:text-gray-700">
                       Error details (Development only)
                     </summary>
                     <pre className="mt-2 text-xs bg-gray-100 p-3 rounded overflow-x-auto">

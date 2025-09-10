@@ -375,7 +375,7 @@ export default function BiohazardCleanupPage() {
           
           <div className="bg-gradient-to-br from-gray-50 to-neutral-100 border border-gray-200 rounded-xl p-6">
             <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
-              <svg className="w-6 h-6 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
               </svg>
             </div>
@@ -637,7 +637,7 @@ export default function BiohazardCleanupPage() {
         <h2 className="text-3xl font-bold mb-4">
           Need Professional Biohazard Cleanup?
         </h2>
-        <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
+        <p className="text-xl text-red-800 mb-8 max-w-3xl mx-auto">
           Don't risk your health or safety. Our IICRC S540 certified specialists provide safe, 
           professional biohazard cleanup with complete confidentiality and compassionate service.
         </p>
@@ -660,7 +660,7 @@ export default function BiohazardCleanupPage() {
         </div>
         
         <div className="mt-8 pt-8 border-t border-red-400">
-          <p className="text-red-100 text-sm">
+          <p className="text-red-800 text-sm">
             All biohazard cleanup consultations are completely confidential and provided with compassionate, professional service
           </p>
         </div>

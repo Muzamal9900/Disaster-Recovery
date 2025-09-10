@@ -422,12 +422,12 @@ export default function CampaignTrackingDashboard() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-200">Total Spend</p>
+            <p className="text-sm font-medium text-gray-700">Total Spend</p>
             <p className="text-3xl font-bold text-gray-900 mt-1">{formatCurrency(totals.spend)}</p>
             <div className="flex items-center mt-2">
               <TrendingUp className="w-4 h-4 text-green-500 mr-1" />
               <span className="text-sm font-medium text-green-600">+12.5%</span>
-              <span className="text-sm text-gray-300 ml-1">vs last period</span>
+              <span className="text-sm text-gray-700 ml-1">vs last period</span>
             </div>
           </div>
           <div className="p-3 bg-blue-100 rounded-lg">
@@ -439,9 +439,9 @@ export default function CampaignTrackingDashboard() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-200">Total Revenue</p>
+            <p className="text-sm font-medium text-gray-700">Total Revenue</p>
             <p className="text-3xl font-bold text-gray-900 mt-1">{formatCurrency(totals.revenue)}</p>
-            <p className="text-sm text-gray-300 mt-1">
+            <p className="text-sm text-gray-700 mt-1">
               ROAS: {overallROAS.toFixed(1)}x
             </p>
           </div>
@@ -454,9 +454,9 @@ export default function CampaignTrackingDashboard() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-200">Conversions</p>
+            <p className="text-sm font-medium text-gray-700">Conversions</p>
             <p className="text-3xl font-bold text-gray-900 mt-1">{formatNumber(totals.conversions)}</p>
-            <p className="text-sm text-gray-300 mt-1">
+            <p className="text-sm text-gray-700 mt-1">
               Avg CPA: {formatCurrency(averageCPA)}
             </p>
           </div>
@@ -469,9 +469,9 @@ export default function CampaignTrackingDashboard() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-200">Active Campaigns</p>
+            <p className="text-sm font-medium text-gray-700">Active Campaigns</p>
             <p className="text-3xl font-bold text-gray-900 mt-1">{totals.campaigns}</p>
-            <p className="text-sm text-gray-300 mt-1">
+            <p className="text-sm text-gray-700 mt-1">
               Avg CPC: {formatCurrency(averageCPC)}
             </p>
           </div>
@@ -519,28 +519,28 @@ export default function CampaignTrackingDashboard() {
         <table className="w-full">
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Campaign
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Platform
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Status
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Spend
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Revenue
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 ROAS
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Conversions
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Actions
               </th>
             </tr>
@@ -558,10 +558,10 @@ export default function CampaignTrackingDashboard() {
                     <div className="flex items-start space-x-3">
                       <div>
                         <p className="text-sm font-medium text-gray-900">{campaign.name}</p>
-                        <p className="text-sm text-gray-300">{campaign.type}</p>
+                        <p className="text-sm text-gray-700">{campaign.type}</p>
                         <div className="flex items-center mt-1">
-                          <MapPin className="w-3 h-3 text-gray-200 mr-1" />
-                          <span className="text-xs text-gray-300">
+                          <MapPin className="w-3 h-3 text-gray-700 mr-1" />
+                          <span className="text-xs text-gray-700">
                             {campaign.territories.join(', ')}
                           </span>
                         </div>
@@ -586,7 +586,7 @@ export default function CampaignTrackingDashboard() {
                       <p className="text-sm font-medium text-gray-900">
                         {formatCurrency(campaign.budget.spent)}
                       </p>
-                      <p className="text-xs text-gray-300">
+                      <p className="text-xs text-gray-700">
                         of {formatCurrency(campaign.budget.total)}
                       </p>
                     </div>
@@ -610,7 +610,7 @@ export default function CampaignTrackingDashboard() {
                       <p className="text-sm font-medium text-gray-900">
                         {formatNumber(campaign.performance.conversions)}
                       </p>
-                      <p className="text-xs text-gray-300">
+                      <p className="text-xs text-gray-700">
                         {formatPercentage(campaign.performance.conversionRate)}
                       </p>
                     </div>
@@ -623,7 +623,7 @@ export default function CampaignTrackingDashboard() {
                       >
                         <Eye className="w-4 h-4" />
                       </button>
-                      <button className="text-gray-200 hover:text-gray-200">
+                      <button className="text-gray-700 hover:text-gray-700">
                         <Edit className="w-4 h-4" />
                       </button>
                       <button className={`${
@@ -663,7 +663,7 @@ export default function CampaignTrackingDashboard() {
                   }`}>
                     {contractor.tier.toUpperCase()}
                   </span>
-                  <span className="text-sm text-gray-300">
+                  <span className="text-sm text-gray-700">
                     {contractor.territories.join(', ')}
                   </span>
                 </div>
@@ -672,7 +672,7 @@ export default function CampaignTrackingDashboard() {
                 <p className="text-sm font-medium text-gray-900">
                   {contractor.allocation}% allocation
                 </p>
-                <p className="text-xs text-gray-300">
+                <p className="text-xs text-gray-700">
                   {formatCurrency(contractor.costShare)} spend
                 </p>
               </div>
@@ -680,19 +680,19 @@ export default function CampaignTrackingDashboard() {
             
             <div className="grid grid-cols-4 gap-4 text-sm">
               <div>
-                <p className="text-gray-200">Leads</p>
+                <p className="text-gray-700">Leads</p>
                 <p className="font-medium">{formatNumber(contractor.leads)}</p>
               </div>
               <div>
-                <p className="text-gray-200">Conversions</p>
+                <p className="text-gray-700">Conversions</p>
                 <p className="font-medium">{formatNumber(contractor.conversions)}</p>
               </div>
               <div>
-                <p className="text-gray-200">Revenue</p>
+                <p className="text-gray-700">Revenue</p>
                 <p className="font-medium">{formatCurrency(contractor.revenue)}</p>
               </div>
               <div>
-                <p className="text-gray-200">ROI</p>
+                <p className="text-gray-700">ROI</p>
                 <p className="font-medium">
                   {((contractor.revenue - contractor.costShare) / contractor.costShare * 100).toFixed(1)}%
                 </p>
@@ -732,15 +732,15 @@ export default function CampaignTrackingDashboard() {
               </div>
               <div className="space-y-1 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-gray-200">Spend:</span>
+                  <span className="text-gray-700">Spend:</span>
                   <span className="font-medium">{formatCurrency(totalSpend)}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-200">Revenue:</span>
+                  <span className="text-gray-700">Revenue:</span>
                   <span className="font-medium">{formatCurrency(totalRevenue)}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-200">Efficiency:</span>
+                  <span className="text-gray-700">Efficiency:</span>
                   <span className="font-medium">{efficiency.toFixed(1)}x</span>
                 </div>
               </div>
@@ -756,7 +756,7 @@ export default function CampaignTrackingDashboard() {
       <div className="flex justify-between items-center mb-8">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Campaign Tracking Dashboard</h1>
-          <p className="text-gray-200 mt-2">
+          <p className="text-gray-700 mt-2">
             Monitor advertising performance and ROI across all platforms and territories
           </p>
         </div>
@@ -771,7 +771,7 @@ export default function CampaignTrackingDashboard() {
             <option value="90d">Last 90 Days</option>
             <option value="1y">Last Year</option>
           </select>
-          <button className="px-4 py-2 bg-gray-100 text-gray-200 rounded-lg hover:bg-gray-200 transition-colours">
+          <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colours">
             <RefreshCw className="w-4 h-4 mr-2 inline" />
             Refresh
           </button>

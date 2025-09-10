@@ -220,7 +220,7 @@ export function DataSubjectRequests({ userId, userRole }: DataSubjectRequestsPro
                   <div className="text-2xl font-bold">
                     {requests.filter(r => r.status === 'pending').length}
                   </div>
-                  <p className="text-xs text-gray-300">Pending Requests</p>
+                  <p className="text-xs text-gray-700">Pending Requests</p>
                 </CardContent>
               </Card>
               <Card>
@@ -228,7 +228,7 @@ export function DataSubjectRequests({ userId, userRole }: DataSubjectRequestsPro
                   <div className="text-2xl font-bold text-blue-600">
                     {requests.filter(r => r.status === 'in_progress').length}
                   </div>
-                  <p className="text-xs text-gray-300">In Progress</p>
+                  <p className="text-xs text-gray-700">In Progress</p>
                 </CardContent>
               </Card>
               <Card>
@@ -236,7 +236,7 @@ export function DataSubjectRequests({ userId, userRole }: DataSubjectRequestsPro
                   <div className="text-2xl font-bold text-green-600">
                     {requests.filter(r => r.status === 'completed').length}
                   </div>
-                  <p className="text-xs text-gray-300">Completed</p>
+                  <p className="text-xs text-gray-700">Completed</p>
                 </CardContent>
               </Card>
               <Card>
@@ -251,7 +251,7 @@ export function DataSubjectRequests({ userId, userRole }: DataSubjectRequestsPro
                       }, 0) / requests.filter(r => r.completedAt).length || 0
                     )} days
                   </div>
-                  <p className="text-xs text-gray-300">Avg. Response Time</p>
+                  <p className="text-xs text-gray-700">Avg. Response Time</p>
                 </CardContent>
               </Card>
             </div>
@@ -277,8 +277,8 @@ export function DataSubjectRequests({ userId, userRole }: DataSubjectRequestsPro
           {/* Requests List */}
           <div className="space-y-3">
             {requests.length === 0 ? (
-              <div className="text-center py-8 text-gray-300">
-                <Database className="h-12 w-12 mx-auto mb-3 text-gray-300" />
+              <div className="text-center py-8 text-gray-700">
+                <Database className="h-12 w-12 mx-auto mb-3 text-gray-700" />
                 <p>No data requests found</p>
               </div>
             ) : (
@@ -295,10 +295,10 @@ export function DataSubjectRequests({ userId, userRole }: DataSubjectRequestsPro
                         <p className="font-medium">
                           {requestTypes.find(rt => rt.id === request.type)?.name}
                         </p>
-                        <p className="text-sm text-gray-200 mt-1">
+                        <p className="text-sm text-gray-700 mt-1">
                           {request.description}
                         </p>
-                        <div className="flex items-center gap-4 mt-2 text-xs text-gray-300">
+                        <div className="flex items-center gap-4 mt-2 text-xs text-gray-700">
                           <span className="flex items-center gap-1">
                             <Clock className="h-3 w-3" />
                             {new Date(request.requestedAt).toLocaleDateString()}
@@ -340,12 +340,12 @@ export function DataSubjectRequests({ userId, userRole }: DataSubjectRequestsPro
                     {type.icon}
                     <div className="flex-1">
                       <h4 className="font-medium">{type.name}</h4>
-                      <p className="text-sm text-gray-200 mt-1">{type.description}</p>
+                      <p className="text-sm text-gray-700 mt-1">{type.description}</p>
                       <div className="mt-3 space-y-1">
-                        <p className="text-xs text-gray-300">
+                        <p className="text-xs text-gray-700">
                           <strong>Response time:</strong> {type.timeframe}
                         </p>
-                        <p className="text-xs text-gray-300">
+                        <p className="text-xs text-gray-700">
                           <strong>Requirements:</strong> {type.requirements}
                         </p>
                       </div>
@@ -388,7 +388,7 @@ export function DataSubjectRequests({ userId, userRole }: DataSubjectRequestsPro
                   ))}
                 </SelectContent>
               </Select>
-              <p className="text-xs text-gray-300 mt-1">
+              <p className="text-xs text-gray-700 mt-1">
                 {requestTypes.find(rt => rt.id === requestType)?.description}
               </p>
             </div>
@@ -452,23 +452,23 @@ export function DataSubjectRequests({ userId, userRole }: DataSubjectRequestsPro
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Label className="text-sm text-gray-200">Request ID</Label>
+                  <Label className="text-sm text-gray-700">Request ID</Label>
                   <p className="font-mono text-sm">{selectedRequest.id}</p>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-200">Status</Label>
+                  <Label className="text-sm text-gray-700">Status</Label>
                   <Badge className={getStatusColor(selectedRequest.status)}>
                     {selectedRequest.status}
                   </Badge>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-200">Type</Label>
+                  <Label className="text-sm text-gray-700">Type</Label>
                   <p className="font-medium">
                     {requestTypes.find(rt => rt.id === selectedRequest.type)?.name}
                   </p>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-200">Requested</Label>
+                  <Label className="text-sm text-gray-700">Requested</Label>
                   <p className="font-medium">
                     {new Date(selectedRequest.requestedAt).toLocaleString()}
                   </p>
@@ -476,20 +476,20 @@ export function DataSubjectRequests({ userId, userRole }: DataSubjectRequestsPro
               </div>
 
               <div>
-                <Label className="text-sm text-gray-200">Description</Label>
+                <Label className="text-sm text-gray-700">Description</Label>
                 <p className="mt-1">{selectedRequest.description}</p>
               </div>
 
               {selectedRequest.legalBasis && (
                 <div>
-                  <Label className="text-sm text-gray-200">Legal Basis</Label>
+                  <Label className="text-sm text-gray-700">Legal Basis</Label>
                   <p className="mt-1">{selectedRequest.legalBasis}</p>
                 </div>
               )}
 
               {selectedRequest.response && (
                 <div>
-                  <Label className="text-sm text-gray-200">Response</Label>
+                  <Label className="text-sm text-gray-700">Response</Label>
                   <p className="mt-1">{selectedRequest.response}</p>
                 </div>
               )}

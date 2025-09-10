@@ -274,7 +274,7 @@ export function SupportTickets() {
       case 'resolved':
         return <CheckCircle className="h-4 w-4 text-green-500" />;
       case 'closed':
-        return <XCircle className="h-4 w-4 text-gray-300" />;
+        return <XCircle className="h-4 w-4 text-gray-700" />;
     }
   };
 
@@ -307,7 +307,7 @@ export function SupportTickets() {
             <Ticket className="h-6 w-6" />
             Support Tickets
           </h2>
-          <p className="text-gray-200 mt-1">
+          <p className="text-gray-700 mt-1">
             Track and manage your support requests
           </p>
         </div>
@@ -392,11 +392,11 @@ export function SupportTickets() {
                 <div className="mt-2">
                   <label className="flex items-center justify-center w-full h-32 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
                     <div className="text-center">
-                      <Upload className="h-8 w-8 text-gray-200 mx-auto mb-2" />
-                      <p className="text-sm text-gray-200">
+                      <Upload className="h-8 w-8 text-gray-700 mx-auto mb-2" />
+                      <p className="text-sm text-gray-700">
                         Click to upload files or drag and drop
                       </p>
-                      <p className="text-xs text-gray-300">
+                      <p className="text-xs text-gray-700">
                         PNG, JPG, PDF up to 10MB
                       </p>
                     </div>
@@ -417,7 +417,7 @@ export function SupportTickets() {
                         <div key={index} className="flex items-center gap-2 text-sm">
                           <Paperclip className="h-4 w-4" />
                           <span>{file.name}</span>
-                          <span className="text-gray-300">
+                          <span className="text-gray-700">
                             ({(file.size / 1024).toFixed(1)} KB)
                           </span>
                         </div>
@@ -446,7 +446,7 @@ export function SupportTickets() {
           <div className="flex flex-wrap gap-4">
             <div className="flex-1 min-w-[200px]">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-200" />
+                <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-700" />
                 <Input
                   placeholder="Search tickets..."
                   value={searchQuery}
@@ -502,7 +502,7 @@ export function SupportTickets() {
                     <TableCell>
                       <div>
                         <p className="font-medium">{ticket.subject}</p>
-                        <p className="text-sm text-gray-300 truncate max-w-[300px]">
+                        <p className="text-sm text-gray-700 truncate max-w-[300px]">
                           {ticket.description}
                         </p>
                       </div>
@@ -588,7 +588,7 @@ export function SupportTickets() {
                   </div>
                 </div>
               </div>
-              <div className="text-sm text-gray-300">
+              <div className="text-sm text-gray-700">
                 <p>Created: {format(selectedTicket.createdAt, 'PPp')}</p>
                 {selectedTicket.assignedToName && (
                   <p>Assigned to: {selectedTicket.assignedToName}</p>
@@ -608,12 +608,12 @@ export function SupportTickets() {
                     <div className={`max-w-[70%]`}>
                       <div className="flex items-center gap-2 mb-1">
                         {message.senderType === 'agent' && (
-                          <User className="h-4 w-4 text-gray-300" />
+                          <User className="h-4 w-4 text-gray-700" />
                         )}
                         <span className="text-sm font-medium">
                           {message.senderName}
                         </span>
-                        <span className="text-xs text-gray-300">
+                        <span className="text-xs text-gray-700">
                           {formatDistanceToNow(message.createdAt, { addSuffix: true })}
                         </span>
                       </div>
@@ -674,7 +674,7 @@ export function SupportTickets() {
                         });
                       }}
                     >
-                      <Star className={`h-4 w-4 ${rating <= 3 ? 'text-gray-200' : 'text-blue-600'}`} />
+                      <Star className={`h-4 w-4 ${rating <= 3 ? 'text-gray-700' : 'text-blue-600'}`} />
                     </Button>
                   ))}
                 </div>

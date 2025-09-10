@@ -168,7 +168,7 @@ function Interactive3DCard({ title, description, imageUrl, features, responseTim
           </motion.h3>
           
           <motion.p 
-            className="text-gray-200 mb-6 leading-relaxed"
+            className="text-gray-700 mb-6 leading-relaxed"
             animate={isHovered ? { y: -5 } : { y: 0 }}
             transition={{ delay: 0.1 }}
           >
@@ -304,7 +304,7 @@ export default function Interactive3DServiceCards() {
         </motion.h2>
         
         <motion.p 
-          className="text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed"
+          className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}

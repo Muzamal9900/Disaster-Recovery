@@ -146,7 +146,7 @@ export default function VisionBoardPage() {
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-2xl font-semibold text-white flex items-center gap-2">
-                <Award className="w-6 h-6 text-yellow-400" />
+                <Award className="w-6 h-6 text-yellow-600" />
                 My Certifications
               </h2>
               <Link
@@ -163,7 +163,7 @@ export default function VisionBoardPage() {
                 <p className="text-gray-300 mb-4">No certificates yet</p>
                 <Link
                   href="/contractor-portal/training/courses"
-                  className="text-indigo-400 hover:text-indigo-300"
+                  className="text-indigo-600 hover:text-indigo-700"
                 >
                   Start a course to earn your first certificate
                 </Link>
@@ -193,7 +193,7 @@ export default function VisionBoardPage() {
                         </button>
                         <button
                           onClick={() => removeCertificate(cert.id)}
-                          className="p-2 text-gray-200 hover:text-red-400 transition-colors"
+                          className="p-2 text-gray-200 hover:text-red-600 transition-colors"
                           title="Remove from Board"
                         >
                           <Trash2 className="w-4 h-4" />
@@ -210,7 +210,7 @@ export default function VisionBoardPage() {
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-2xl font-semibold text-white flex items-center gap-2">
-                <Target className="w-6 h-6 text-green-400" />
+                <Target className="w-6 h-6 text-green-600" />
                 My Goals
               </h2>
               <button
@@ -289,7 +289,7 @@ export default function VisionBoardPage() {
                         onClick={() => toggleGoalComplete(goal.id)}
                         className={`p-2 transition-colors ${
                           goal.completed 
-                            ? 'text-green-400 hover:text-green-300' 
+                            ? 'text-green-600 hover:text-green-700' 
                             : 'text-gray-200 hover:text-white'
                         }`}
                         title={goal.completed ? 'Mark as incomplete' : 'Mark as complete'}
@@ -298,7 +298,7 @@ export default function VisionBoardPage() {
                       </button>
                       <button
                         onClick={() => removeGoal(goal.id)}
-                        className="p-2 text-gray-200 hover:text-red-400 transition-colors"
+                        className="p-2 text-gray-200 hover:text-red-600 transition-colors"
                         title="Remove goal"
                       >
                         <Trash2 className="w-4 h-4" />
@@ -328,7 +328,7 @@ export default function VisionBoardPage() {
 
         {/* Motivational Quote */}
         <div className="mt-8 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-center">
-          <Trophy className="w-12 h-12 text-yellow-300 mx-auto mb-4" />
+          <Trophy className="w-12 h-12 text-yellow-700 mx-auto mb-4" />
           <h3 className="text-2xl font-bold text-white mb-2">Keep Growing!</h3>
           <p className="text-white/90 max-w-2xl mx-auto">
             "Success in disaster recovery isn't just about technical skills—it's about continuous learning, 

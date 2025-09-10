@@ -51,7 +51,7 @@ export default function TechnologyAIPage() {
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-white mb-4">AI-Powered Restoration</h1>
-          <p className="text-gray-200 text-lg">Revolutionary artificial intelligence transforming disaster recovery</p>
+          <p className="text-gray-700 text-lg">Revolutionary artificial intelligence transforming disaster recovery</p>
         </div>
 
         {/* Hero Section */}
@@ -78,7 +78,7 @@ export default function TechnologyAIPage() {
                 <Brain className="w-24 h-24 text-white mx-auto mb-4" />
                 <div className="text-center">
                   <p className="text-3xl font-bold text-white mb-2">Neural Network</p>
-                  <p className="text-gray-300">Processing 1M+ data points/second</p>
+                  <p className="text-gray-700">Processing 1M+ data points/second</p>
                 </div>
               </div>
             </div>
@@ -90,8 +90,8 @@ export default function TechnologyAIPage() {
           {aiStats.map((stat, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
               <p className="text-3xl font-bold text-white mb-2">{stat.value}</p>
-              <p className="text-gray-300 mb-1">{stat.label}</p>
-              <p className="text-green-400 text-sm font-semibold">{stat.improvement}</p>
+              <p className="text-gray-700 mb-1">{stat.label}</p>
+              <p className="text-green-600 text-sm font-semibold">{stat.improvement}</p>
             </div>
           ))}
         </div>
@@ -108,12 +108,12 @@ export default function TechnologyAIPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-white mb-2">{capability.title}</h3>
-                    <p className="text-gray-300 mb-4">{capability.description}</p>
+                    <p className="text-gray-700 mb-4">{capability.description}</p>
                     <div className="grid grid-cols-2 gap-2">
                       {capability.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center gap-2">
-                          <Zap className="w-4 h-4 text-yellow-400" />
-                          <span className="text-gray-200 text-sm">{feature}</span>
+                          <Zap className="w-4 h-4 text-yellow-600" />
+                          <span className="text-gray-700 text-sm">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -140,7 +140,7 @@ export default function TechnologyAIPage() {
                     </span>
                     <h3 className="text-white font-semibold">{step.title}</h3>
                   </div>
-                  <p className="text-gray-200 text-sm">{step.description}</p>
+                  <p className="text-gray-700 text-sm">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -175,9 +175,9 @@ export default function TechnologyAIPage() {
               { label: 'Model Accuracy', value: '98.5%', icon: Brain }
             ].map((spec, index) => (
               <div key={index} className="flex items-center gap-3 p-4 bg-white/5 rounded-lg">
-                <spec.icon className="w-6 h-6 text-blue-400" />
+                <spec.icon className="w-6 h-6 text-blue-600" />
                 <div>
-                  <p className="text-gray-200 text-sm">{spec.label}</p>
+                  <p className="text-gray-700 text-sm">{spec.label}</p>
                   <p className="text-white font-semibold text-lg">{spec.value}</p>
                 </div>
               </div>

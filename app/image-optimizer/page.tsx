@@ -143,7 +143,7 @@ export default function ImageOptimizerPage() {
 
           {files.length > 0 && (
             <div className="mb-4">
-              <p className="text-sm text-gray-200">
+              <p className="text-sm text-gray-700">
                 Selected: {files.length} images
               </p>
             </div>

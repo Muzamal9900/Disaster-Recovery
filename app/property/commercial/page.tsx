@@ -429,12 +429,12 @@ export default function CommercialPropertyPage() {
             className="text-center"
           >
             <div className="flex justify-center mb-6">
-              <Building className="w-20 h-20 text-blue-300" />
+              <Building className="w-20 h-20 text-blue-700" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Commercial Property Disaster Recovery
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+            <p className="text-xl md:text-2xl mb-8 text-blue-800">
               Minimize Downtime, Protect Revenue, Ensure Business Continuity
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -902,7 +902,7 @@ export default function CommercialPropertyPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Minimize Business Disruption from Disasters
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-blue-800">
               Get priority commercial restoration services to protect your revenue
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

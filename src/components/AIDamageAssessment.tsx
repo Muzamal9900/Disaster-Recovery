@@ -63,7 +63,7 @@ export default function AIDamageAssessment() {
       case 'minor': return 'text-emerald-600 bg-emerald-500/10 border-green-400/30';
       case 'moderate': return 'text-blue-500 bg-blue-500/10 border-blue-500/30';
       case 'severe': return 'text-blue-500 bg-blue-500/10 border-blue-500/30';
-      case 'critical': return 'text-red-400 bg-red-400/10 border-red-400/30';
+      case 'critical': return 'text-red-600 bg-red-400/10 border-red-400/30';
       default: return 'text-gray-200 bg-gray-400/10 border-gray-400/30';
     }
   };
@@ -91,7 +91,7 @@ export default function AIDamageAssessment() {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30">
             <span className="text-2xl">🤖</span>
-            <span className="text-sm font-medium text-blue-400">AI-Powered Analysis</span>
+            <span className="text-sm font-medium text-blue-600">AI-Powered Analysis</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Instant Damage Assessment
@@ -252,7 +252,7 @@ export default function AIDamageAssessment() {
                   <div className="space-y-2">
                     {analysis.recommendations.map((rec, index) => (
                       <div key={index} className="flex items-start gap-2">
-                        <span className="text-blue-400 mt-0.5">•</span>
+                        <span className="text-blue-600 mt-0.5">•</span>
                         <span className="text-gray-300 text-sm">{rec}</span>
                       </div>
                     ))}

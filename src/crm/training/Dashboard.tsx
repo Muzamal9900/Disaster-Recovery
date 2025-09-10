@@ -77,15 +77,15 @@ export default function DashboardModule() {
             
             <li key="0" className="flex items-start gap-2">"
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />"
-              <span className="text-gray-200">Dashboard Overview</span>"
+              <span className="text-gray-700">Dashboard Overview</span>"
             </li>
             <li key="1" className="flex items-start gap-2">"
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />"
-              <span className="text-gray-200">Key Performance Indicators</span>"
+              <span className="text-gray-700">Key Performance Indicators</span>"
             </li>
             <li key="2" className="flex items-start gap-2">"
               <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />"
-              <span className="text-gray-200">Customizing Your Dashboard</span>"
+              <span className="text-gray-700">Customizing Your Dashboard</span>"
             </li>
           </ul>
         </CardContent>
@@ -144,7 +144,7 @@ export default function DashboardModule() {
             </CardHeader>
             <CardContent className="space-y-4">"
               <div className="prose prose-gray max-w-none">"
-                <div className="whitespace-pre-line text-gray-200 leading-relaxed">"
+                <div className="whitespace-pre-line text-gray-700 leading-relaxed">"
                   Your dashboard provides real-time insights into:
 • Active insurance claims in your territories
 • Lead conversion rates and revenue
@@ -204,7 +204,7 @@ export default function DashboardModule() {
             </CardHeader>
             <CardContent className="space-y-4">"
               <div className="prose prose-gray max-w-none">"
-                <div className="whitespace-pre-line text-gray-200 leading-relaxed">"
+                <div className="whitespace-pre-line text-gray-700 leading-relaxed">"
                   Critical Metrics to Monitor:
 • Response Time: Average time to accept leads (target: <15 minutes)
 • Conversion Rate: Percentage of leads converted to jobs (target: >70%)
@@ -264,7 +264,7 @@ export default function DashboardModule() {
             </CardHeader>
             <CardContent className="space-y-4">"
               <div className="prose prose-gray max-w-none">"
-                <div className="whitespace-pre-line text-gray-200 leading-relaxed">"
+                <div className="whitespace-pre-line text-gray-700 leading-relaxed">"
                   Personalization Options:
 • Drag and drop widget arrangement
 • Custom date ranges for analytics

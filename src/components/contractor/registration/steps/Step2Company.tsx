@@ -300,7 +300,7 @@ export function Step2Company({ data, updateData, errors }: Step2CompanyProps) {
                 </div>
               )}
             </div>
-            <p className="text-xs text-gray-300">Australian business/company registration verification</p>
+            <p className="text-xs text-gray-700">Australian business/company registration verification</p>
             {errors['company.abn'] && <p className="text-sm text-red-500">{errors['company.abn']}</p>}
           </div>
 
@@ -322,7 +322,7 @@ export function Step2Company({ data, updateData, errors }: Step2CompanyProps) {
                 <SelectItem value="TRUST">Trust</SelectItem>
               </SelectContent>
             </Select>
-            <p className="text-xs text-gray-300">Business type categorization</p>
+            <p className="text-xs text-gray-700">Business type categorization</p>
             {errors['company.companyStructure'] && (
               <p className="text-sm text-red-500">{errors['company.companyStructure']}</p>
             )}
@@ -441,7 +441,7 @@ export function Step2Company({ data, updateData, errors }: Step2CompanyProps) {
               </Button>
             </div>
           </div>
-          <p className="text-xs text-gray-300">Legal correspondence and geographic validation</p>
+          <p className="text-xs text-gray-700">Legal correspondence and geographic validation</p>
         </CardContent>
       </Card>
 
@@ -518,7 +518,7 @@ export function Step2Company({ data, updateData, errors }: Step2CompanyProps) {
             Add Another Director
           </Button>
           
-          <p className="text-xs text-gray-300">Responsible persons for business operations</p>
+          <p className="text-xs text-gray-700">Responsible persons for business operations</p>
         </CardContent>
       </Card>
 
@@ -623,8 +623,8 @@ export function Step2Company({ data, updateData, errors }: Step2CompanyProps) {
                 htmlFor="certificates"
                 className="flex flex-col items-center cursor-pointer"
               >
-                <Upload className="h-8 w-8 text-gray-200 mb-2" />
-                <span className="text-sm text-gray-200">
+                <Upload className="h-8 w-8 text-gray-700 mb-2" />
+                <span className="text-sm text-gray-700">
                   Click to upload PDF or image files
                 </span>
               </label>
@@ -648,7 +648,7 @@ export function Step2Company({ data, updateData, errors }: Step2CompanyProps) {
               </div>
             )}
             
-            <p className="text-xs text-gray-300">Proof of valid business insurance</p>
+            <p className="text-xs text-gray-700">Proof of valid business insurance</p>
           </div>
         </CardContent>
       </Card>
@@ -695,7 +695,7 @@ export function Step2Company({ data, updateData, errors }: Step2CompanyProps) {
                 ))}
               </div>
             </div>
-            <p className="text-xs text-gray-300">
+            <p className="text-xs text-gray-700">
               Service area selection for leads and compliance (minimum 25km)
             </p>
           </div>
@@ -738,19 +738,19 @@ export function Step2Company({ data, updateData, errors }: Step2CompanyProps) {
                 {logoFile ? (
                   <>
                     <CheckCircle className="h-8 w-8 text-green-600 mb-2" />
-                    <span className="text-sm text-gray-200">{logoFile.name}</span>
-                    <span className="text-xs text-gray-200 mt-1">Click to change</span>
+                    <span className="text-sm text-gray-700">{logoFile.name}</span>
+                    <span className="text-xs text-gray-700 mt-1">Click to change</span>
                   </>
                 ) : (
                   <>
-                    <Upload className="h-8 w-8 text-gray-200 mb-2" />
-                    <span className="text-sm text-gray-200">Click to upload logo</span>
-                    <span className="text-xs text-gray-200 mt-1">PNG, JPG up to 5MB</span>
+                    <Upload className="h-8 w-8 text-gray-700 mb-2" />
+                    <span className="text-sm text-gray-700">Click to upload logo</span>
+                    <span className="text-xs text-gray-700 mt-1">PNG, JPG up to 5MB</span>
                   </>
                 )}
               </label>
             </div>
-            <p className="text-xs text-gray-300">Business branding in system</p>
+            <p className="text-xs text-gray-700">Business branding in system</p>
           </div>
         </CardContent>
       </Card>

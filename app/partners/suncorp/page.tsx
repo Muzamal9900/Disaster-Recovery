@@ -260,12 +260,12 @@ export default function SuncorpPartnershipPage() {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-center">
                 Suncorp Group × Disaster Recovery
-                <span className="block text-orange-200 text-3xl md:text-4xl mt-2">
+                <span className="block text-orange-700 text-3xl md:text-4xl mt-2">
                   Approved Provider for AAMI, GIO, Apia & Suncorp Insurance
                 </span>
               </h1>
               
-              <p className="text-xl text-orange-100 mb-8 leading-relaxed text-center max-w-4xl mx-auto">
+              <p className="text-xl text-orange-800 mb-8 leading-relaxed text-center max-w-4xl mx-auto">
                 As an official Suncorp Group partner, we provide priority restoration services to all 
                 policyholders across their insurance brands. With <strong>direct billing</strong>, 
                 <strong>express authority</strong> for emergency work, and integration with Suncorp&apos;s 
@@ -282,11 +282,11 @@ export default function SuncorpPartnershipPage() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <div className="text-orange-200 mb-2 flex justify-center">
+                    <div className="text-orange-700 mb-2 flex justify-center">
                       {brand.icon}
                     </div>
                     <div className="font-bold">{brand.brand}</div>
-                    <div className="text-xs text-orange-200">{brand.focus}</div>
+                    <div className="text-xs text-orange-700">{brand.focus}</div>
                   </motion.div>
                 ))}
               </div>
@@ -596,7 +596,7 @@ export default function SuncorpPartnershipPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <Shield className="w-16 h-16 mx-auto mb-6 text-orange-200" />
+              <Shield className="w-16 h-16 mx-auto mb-6 text-orange-700" />
               
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
                 Suncorp Group Policyholders Get VIP Treatment

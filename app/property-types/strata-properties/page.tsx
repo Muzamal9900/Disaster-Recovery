@@ -68,7 +68,7 @@ export default function StrataPropertyPage() {
               <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                 <AlertTriangle className="h-10 w-10 text-blue-700 mb-4" />
                 <h3 className="font-bold text-lg mb-2">{issue}</h3>
-                <p className="text-gray-200 text-sm mb-4">
+                <p className="text-gray-700 text-sm mb-4">
                   Specialised response for strata properties
                 </p>
                 <p className="text-green-600 font-bold">✓ Covered by Insurance</p>
@@ -93,7 +93,7 @@ export default function StrataPropertyPage() {
                   </span>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Immediate Response</h3>
-                    <p className="text-gray-200">
+                    <p className="text-gray-700">
                       30 minutes arrival for strata emergencies. 
                       Priority dispatch for strata property disasters.
                     </p>
@@ -108,7 +108,7 @@ export default function StrataPropertyPage() {
                   </span>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Property Assessment</h3>
-                    <p className="text-gray-200">
+                    <p className="text-gray-700">
                       Comprehensive evaluation of your Varies property. 
                       Document all damage for insurance claims.
                     </p>
@@ -123,7 +123,7 @@ export default function StrataPropertyPage() {
                   </span>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Emergency Mitigation</h3>
-                    <p className="text-gray-200">
+                    <p className="text-gray-700">
                       Immediate action to prevent further damage. 
                       Specialised equipment for strata properties.
                     </p>
@@ -138,7 +138,7 @@ export default function StrataPropertyPage() {
                   </span>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Full Restoration</h3>
-                    <p className="text-gray-200">
+                    <p className="text-gray-700">
                       Complete restoration to pre-disaster condition. 
                       Strata compliance and standards met.
                     </p>
@@ -161,21 +161,21 @@ export default function StrataPropertyPage() {
               <div className="text-center mb-8">
                 <p className="text-4xl font-bold text-blue-600 mb-2">$2,200</p>
                 <p className="text-xl">Minimum Callout Fee</p>
-                <p className="text-gray-200">Includes complete assessment and emergency mitigation</p>
+                <p className="text-gray-700">Includes complete assessment and emergency mitigation</p>
               </div>
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="font-bold text-lg mb-4">Typical Cost Range:</h3>
                   <p className="text-3xl font-bold text-green-600 mb-2">$5,000 - $200,000+</p>
-                  <p className="text-gray-200">
+                  <p className="text-gray-700">
                     Based on Varies strata property
                   </p>
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-4">Insurance Coverage:</h3>
                   <p className="text-3xl font-bold text-green-600 mb-2">100% via strata</p>
-                  <p className="text-gray-200">
+                  <p className="text-gray-700">
                     Direct billing available for strata claims
                   </p>
                 </div>
@@ -201,21 +201,21 @@ export default function StrataPropertyPage() {
             <Card className="p-6 text-center">
               <Building className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2">Strata Expertise</h3>
-              <p className="text-gray-200">
+              <p className="text-gray-700">
                 Specialised knowledge of strata property requirements and regulations
               </p>
             </Card>
             <Card className="p-6 text-center">
               <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2">Insurance Approved</h3>
-              <p className="text-gray-200">
+              <p className="text-gray-700">
                 Preferred vendor for all major strata insurers
               </p>
             </Card>
             <Card className="p-6 text-center">
               <CheckCircle2 className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2">Compliance Guaranteed</h3>
-              <p className="text-gray-200">
+              <p className="text-gray-700">
                 Meet all strata standards and regulations
               </p>
             </Card>

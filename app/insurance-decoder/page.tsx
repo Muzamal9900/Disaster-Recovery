@@ -132,7 +132,7 @@ export default function InsuranceDecoderHub() {
             <p className="text-2xl mb-4">
               Understanding Your Coverage Before Disaster Strikes
             </p>
-            <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-700 mb-8 max-w-3xl mx-auto">
               We translate confusing policy language into clear answers. Know what's covered, 
               what's not, and why - explained by restoration experts who've seen thousands of claims.
             </p>
@@ -170,7 +170,7 @@ export default function InsuranceDecoderHub() {
             ].map((stat, index) => (
               <div key={index} className="bg-white/10 backdrop-blur rounded-lg p-4 text-center">
                 <p className="text-3xl font-bold text-white">{stat.number}</p>
-                <p className="text-blue-200">{stat.label}</p>
+                <p className="text-blue-700">{stat.label}</p>
               </div>
             ))}
           </motion.div>
@@ -441,7 +441,7 @@ export default function InsuranceDecoderHub() {
             </div>
           </div>
           
-          <p className="text-blue-200">
+          <p className="text-blue-700">
             Available 24/7 • Insurance Approved • Maximum Coverage Support
           </p>
         </div>

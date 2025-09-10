@@ -31,7 +31,7 @@ export default function ComingSoonPage() {
                 />
                 <div className="text-left">
                   <h1 className="text-4xl font-bold text-white">NRP</h1>
-                  <p className="text-blue-300 text-sm">National Restoration Professionals</p>
+                  <p className="text-blue-700 text-sm">National Restoration Professionals</p>
                 </div>
               </div>
 
@@ -44,7 +44,7 @@ export default function ComingSoonPage() {
               </h2>
 
               {/* Subtitle */}
-              <p className="text-xl lg:text-2xl text-blue-200 mb-12 leading-relaxed">
+              <p className="text-xl lg:text-2xl text-blue-700 mb-12 leading-relaxed">
                 The first nationwide platform connecting insurance claims to qualified contractors.
                 <span className="block mt-2 text-lg">
                   Every property type. Every disaster. Every location in Australia.
@@ -85,7 +85,7 @@ export default function ComingSoonPage() {
               {/* Coming Soon Badge */}
               <div className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600/20 border border-blue-600/30 rounded-full mb-8">
                 <Zap className="h-5 w-5 text-blue-500 animate-pulse" />
-                <span className="text-yellow-300 font-semibold">Launching Q1 2025 - Contractors Apply Now</span>
+                <span className="text-yellow-700 font-semibold">Launching Q1 2025 - Contractors Apply Now</span>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function ComingSoonPage() {
             <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               We Handle Every Disaster Type
             </h3>
-            <p className="text-xl text-blue-300">
+            <p className="text-xl text-blue-700">
               Instant visual recognition - You're in the right place
             </p>
           </div>
@@ -117,9 +117,9 @@ export default function ComingSoonPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-3">
-                  <Droplets className="h-5 w-5 text-blue-400 mb-1" />
+                  <Droplets className="h-5 w-5 text-blue-600 mb-1" />
                   <h4 className="text-white font-semibold text-sm">Water Damage</h4>
-                  <p className="text-blue-300 text-xs">24/7 Emergency</p>
+                  <p className="text-blue-700 text-xs">24/7 Emergency</p>
                 </div>
               </div>
             </div>
@@ -136,9 +136,9 @@ export default function ComingSoonPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-3">
-                  <Flame className="h-5 w-5 text-red-400 mb-1" />
+                  <Flame className="h-5 w-5 text-red-600 mb-1" />
                   <h4 className="text-white font-semibold text-sm">Fire Damage</h4>
-                  <p className="text-red-300 text-xs">Rapid Response</p>
+                  <p className="text-red-700 text-xs">Rapid Response</p>
                 </div>
               </div>
             </div>
@@ -157,7 +157,7 @@ export default function ComingSoonPage() {
                 <div className="absolute bottom-0 left-0 right-0 p-3">
                   <Bug className="h-5 w-5 text-emerald-600 mb-1" />
                   <h4 className="text-white font-semibold text-sm">Mould Removal</h4>
-                  <p className="text-green-300 text-xs">Health Priority</p>
+                  <p className="text-green-700 text-xs">Health Priority</p>
                 </div>
               </div>
             </div>
@@ -174,9 +174,9 @@ export default function ComingSoonPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-3">
-                  <Wrench className="h-5 w-5 text-cyan-400 mb-1" />
+                  <Wrench className="h-5 w-5 text-cyan-600 mb-1" />
                   <h4 className="text-white font-semibold text-sm">Burst Pipes</h4>
-                  <p className="text-cyan-300 text-xs">Urgent Response</p>
+                  <p className="text-cyan-700 text-xs">Urgent Response</p>
                 </div>
               </div>
             </div>
@@ -193,9 +193,9 @@ export default function ComingSoonPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-3">
-                  <AlertTriangle className="h-5 w-5 text-purple-400 mb-1" />
+                  <AlertTriangle className="h-5 w-5 text-purple-600 mb-1" />
                   <h4 className="text-white font-semibold text-sm">Biohazard</h4>
-                  <p className="text-purple-300 text-xs">Specialist Team</p>
+                  <p className="text-purple-700 text-xs">Specialist Team</p>
                 </div>
               </div>
             </div>
@@ -214,7 +214,7 @@ export default function ComingSoonPage() {
                 <div className="absolute bottom-0 left-0 right-0 p-3">
                   <Award className="h-5 w-5 text-blue-500 mb-1" />
                   <h4 className="text-white font-semibold text-sm">Pro Equipment</h4>
-                  <p className="text-yellow-300 text-xs">Industry Leading</p>
+                  <p className="text-yellow-700 text-xs">Industry Leading</p>
                 </div>
               </div>
             </div>
@@ -224,15 +224,15 @@ export default function ComingSoonPage() {
           <div className="flex flex-wrap justify-center gap-6 mt-12">
             <div className="flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full">
               <MessageSquare className="h-4 w-4 text-emerald-600" />
-              <span className="text-green-300 text-sm font-medium">24/7 Online Emergency Response</span>
+              <span className="text-green-700 text-sm font-medium">24/7 Online Emergency Response</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full">
-              <Clock className="h-4 w-4 text-blue-400" />
-              <span className="text-blue-300 text-sm font-medium">60 Minute Response Time</span>
+              <Clock className="h-4 w-4 text-blue-600" />
+              <span className="text-blue-700 text-sm font-medium">60 Minute Response Time</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-purple-500/20 border border-purple-500/30 rounded-full">
-              <Award className="h-4 w-4 text-purple-400" />
-              <span className="text-purple-300 text-sm font-medium">IICRC Certified Network</span>
+              <Award className="h-4 w-4 text-purple-600" />
+              <span className="text-purple-700 text-sm font-medium">IICRC Certified Network</span>
             </div>
           </div>
         </div>
@@ -258,8 +258,8 @@ export default function ComingSoonPage() {
               />
               <div className="relative z-10">
                 <Home className="h-8 w-8 text-emerald-600 mb-3" />
-                <h4 className="font-semibold text-green-300 mb-2">Residential</h4>
-                <p className="text-green-200 text-sm">
+                <h4 className="font-semibold text-green-700 mb-2">Residential</h4>
+                <p className="text-green-700 text-sm">
                   Granny flat → 80-floor luxury tower
                 </p>
               </div>
@@ -276,9 +276,9 @@ export default function ComingSoonPage() {
                 }}
               />
               <div className="relative z-10">
-                <Building2 className="h-8 w-8 text-blue-400 mb-3" />
-                <h4 className="font-semibold text-blue-300 mb-2">Commercial</h4>
-                <p className="text-blue-200 text-sm">
+                <Building2 className="h-8 w-8 text-blue-600 mb-3" />
+                <h4 className="font-semibold text-blue-700 mb-2">Commercial</h4>
+                <p className="text-blue-700 text-sm">
                   Corner butcher → Mega mall
                 </p>
               </div>
@@ -296,8 +296,8 @@ export default function ComingSoonPage() {
               />
               <div className="relative z-10">
                 <Factory className="h-8 w-8 text-blue-500 mb-3" />
-                <h4 className="font-semibold text-orange-300 mb-2">Industrial</h4>
-                <p className="text-orange-200 text-sm">
+                <h4 className="font-semibold text-orange-700 mb-2">Industrial</h4>
+                <p className="text-orange-700 text-sm">
                   Workshop → Offshore oil rig
                 </p>
               </div>
@@ -314,9 +314,9 @@ export default function ComingSoonPage() {
                 }}
               />
               <div className="relative z-10">
-                <Hospital className="h-8 w-8 text-purple-400 mb-3" />
-                <h4 className="font-semibold text-purple-300 mb-2">Institutional</h4>
-                <p className="text-purple-200 text-sm">
+                <Hospital className="h-8 w-8 text-purple-600 mb-3" />
+                <h4 className="font-semibold text-purple-700 mb-2">Institutional</h4>
+                <p className="text-purple-700 text-sm">
                   Local clinic → Hospital complex
                 </p>
               </div>
@@ -333,9 +333,9 @@ export default function ComingSoonPage() {
                 }}
               />
               <div className="relative z-10">
-                <Plane className="h-8 w-8 text-red-400 mb-3" />
-                <h4 className="font-semibold text-red-300 mb-2">Infrastructure</h4>
-                <p className="text-red-200 text-sm">
+                <Plane className="h-8 w-8 text-red-600 mb-3" />
+                <h4 className="font-semibold text-red-700 mb-2">Infrastructure</h4>
+                <p className="text-red-700 text-sm">
                   Bus stop → International airport
                 </p>
               </div>
@@ -353,28 +353,28 @@ export default function ComingSoonPage() {
           
           <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
             <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm border border-slate-600/30 rounded-lg p-4">
-              <Droplets className="h-6 w-6 text-blue-400" />
-              <span className="text-slate-200 font-medium">Water/Flood</span>
+              <Droplets className="h-6 w-6 text-blue-600" />
+              <span className="text-slate-700 font-medium">Water/Flood</span>
             </div>
             <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm border border-slate-600/30 rounded-lg p-4">
               <Flame className="h-6 w-6 text-blue-500" />
-              <span className="text-slate-200 font-medium">Fire/Smoke</span>
+              <span className="text-slate-700 font-medium">Fire/Smoke</span>
             </div>
             <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm border border-slate-600/30 rounded-lg p-4">
               <Bug className="h-6 w-6 text-emerald-600" />
-              <span className="text-slate-200 font-medium">Mould/Bacteria</span>
+              <span className="text-slate-700 font-medium">Mould/Bacteria</span>
             </div>
             <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm border border-slate-600/30 rounded-lg p-4">
-              <AlertTriangle className="h-6 w-6 text-red-400" />
-              <span className="text-slate-200 font-medium">Biohazard</span>
+              <AlertTriangle className="h-6 w-6 text-red-600" />
+              <span className="text-slate-700 font-medium">Biohazard</span>
             </div>
             <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm border border-slate-600/30 rounded-lg p-4">
-              <Cloud className="h-6 w-6 text-purple-400" />
-              <span className="text-slate-200 font-medium">Storm/Cyclone</span>
+              <Cloud className="h-6 w-6 text-purple-600" />
+              <span className="text-slate-700 font-medium">Storm/Cyclone</span>
             </div>
             <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm border border-slate-600/30 rounded-lg p-4">
               <Wrench className="h-6 w-6 text-blue-500" />
-              <span className="text-slate-200 font-medium">Structural</span>
+              <span className="text-slate-700 font-medium">Structural</span>
             </div>
           </div>
         </div>
@@ -387,15 +387,15 @@ export default function ComingSoonPage() {
             <h3 className="text-3xl font-bold text-white text-center mb-4">
               Contractors: Join Largest Network
             </h3>
-            <p className="text-xl text-blue-200 text-center mb-12">
+            <p className="text-xl text-blue-700 text-center mb-12">
               Your expertise. Our technology. Unlimited growth potential.
             </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-600/30 rounded-xl p-6">
-                <Globe2 className="h-10 w-10 text-blue-400 mb-4" />
+                <Globe2 className="h-10 w-10 text-blue-600 mb-4" />
                 <h4 className="text-lg font-semibold text-white mb-2">Nationwide Reach</h4>
-                <p className="text-slate-300">
+                <p className="text-slate-700">
                   Set your service radius. We'll generate thousands of location-specific pages automatically.
                 </p>
               </div>
@@ -403,7 +403,7 @@ export default function ComingSoonPage() {
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-600/30 rounded-xl p-6">
                 <Zap className="h-10 w-10 text-blue-500 mb-4" />
                 <h4 className="text-lg font-semibold text-white mb-2">Instant Leads</h4>
-                <p className="text-slate-300">
+                <p className="text-slate-700">
                   Insurance claims routed directly to you. No cold calling. No marketing costs.
                 </p>
               </div>
@@ -411,15 +411,15 @@ export default function ComingSoonPage() {
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-600/30 rounded-xl p-6">
                 <Shield className="h-10 w-10 text-emerald-600 mb-4" />
                 <h4 className="text-lg font-semibold text-white mb-2">Verified Network</h4>
-                <p className="text-slate-300">
+                <p className="text-slate-700">
                   Background checks, qualifications verified, insurance confirmed. Premium contractors only.
                 </p>
               </div>
               
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-600/30 rounded-xl p-6">
-                <Building2 className="h-10 w-10 text-purple-400 mb-4" />
+                <Building2 className="h-10 w-10 text-purple-600 mb-4" />
                 <h4 className="text-lg font-semibold text-white mb-2">All Property Types</h4>
-                <p className="text-slate-300">
+                <p className="text-slate-700">
                   Residential, commercial, industrial, institutional. From single rooms to 80-floor towers.
                 </p>
               </div>
@@ -427,15 +427,15 @@ export default function ComingSoonPage() {
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-600/30 rounded-xl p-6">
                 <Users className="h-10 w-10 text-blue-500 mb-4" />
                 <h4 className="text-lg font-semibold text-white mb-2">Clean Claims Integration</h4>
-                <p className="text-slate-300">
+                <p className="text-slate-700">
                   Seamless connection to your existing CRM and job management system.
                 </p>
               </div>
               
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-600/30 rounded-xl p-6">
-                <CheckCircle className="h-10 w-10 text-red-400 mb-4" />
+                <CheckCircle className="h-10 w-10 text-red-600 mb-4" />
                 <h4 className="text-lg font-semibold text-white mb-2">Territory Control</h4>
-                <p className="text-slate-300">
+                <p className="text-slate-700">
                   Exclusive territory options available. Dominate your local market.
                 </p>
               </div>
@@ -450,7 +450,7 @@ export default function ComingSoonPage() {
                 Start Your Application
                 <ArrowRight className="h-5 w-5" />
               </Link>
-              <p className="text-slate-400 mt-4 text-sm">
+              <p className="text-slate-600 mt-4 text-sm">
                 7-step verification process. Background checks required. Quality contractors only.
               </p>
             </div>
@@ -467,24 +467,24 @@ export default function ComingSoonPage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">8</div>
-              <div className="text-slate-300">Capital Cities</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">8</div>
+              <div className="text-slate-700">Capital Cities</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-emerald-600 mb-2">100+</div>
-              <div className="text-slate-300">Regional Centres</div>
+              <div className="text-slate-700">Regional Centres</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-blue-500 mb-2">15,000+</div>
-              <div className="text-slate-300">Suburbs & Towns</div>
+              <div className="text-slate-700">Suburbs & Towns</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">∞</div>
-              <div className="text-slate-300">Remote & Offshore</div>
+              <div className="text-4xl font-bold text-purple-600 mb-2">∞</div>
+              <div className="text-slate-700">Remote & Offshore</div>
             </div>
           </div>
           
-          <p className="text-center text-blue-200 mt-8 text-lg">
+          <p className="text-center text-blue-700 mt-8 text-lg">
             From Sydney CBD to Coober Pedy. From Brisbane to Broome. 
             <span className="block">PNG operations. Offshore platforms. No location too remote.</span>
           </p>
@@ -496,26 +496,26 @@ export default function ComingSoonPage() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3">
-              <Shield className="h-6 w-6 text-blue-400" />
+              <Shield className="h-6 w-6 text-blue-600" />
               <div>
                 <div className="text-white font-semibold">National Restoration Professionals</div>
-                <div className="text-slate-400 text-sm">Australia's Disaster Recovery Network</div>
+                <div className="text-slate-600 text-sm">Australia's Disaster Recovery Network</div>
               </div>
             </div>
             
             <div className="flex gap-6 text-sm">
-              <Link href="/contractor/apply" className="text-blue-300 hover:text-blue-200 transition">
+              <Link href="/contractor/apply" className="text-blue-700 hover:text-blue-700 transition">
                 Contractor Application
               </Link>
-              <Link href="/about" className="text-blue-300 hover:text-blue-200 transition">
+              <Link href="/about" className="text-blue-700 hover:text-blue-700 transition">
                 About NRP
               </Link>
-              <Link href="/contact" className="text-blue-300 hover:text-blue-200 transition">
+              <Link href="/contact" className="text-blue-700 hover:text-blue-700 transition">
                 Contact
               </Link>
             </div>
             
-            <div className="text-slate-400 text-sm">
+            <div className="text-slate-600 text-sm">
               © 2025 NRP. Launching Soon.
             </div>
           </div>

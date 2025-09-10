@@ -273,12 +273,12 @@ export default function CycloneDamageRestorationPage() {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Cyclone Damage Restoration
-                <span className="block text-blue-300 text-3xl md:text-4xl mt-2">
+                <span className="block text-blue-700 text-3xl md:text-4xl mt-2">
                   Category 1-5 Tropical Cyclone Recovery Specialists
                 </span>
               </h1>
               
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              <p className="text-xl text-blue-800 mb-8 leading-relaxed">
                 Australia&apos;s leading cyclone damage restoration experts. From Cyclone Yasi to 
                 Cyclone Marcus, our IICRC-certified teams have restored thousands of properties 
                 across tropical Australia. <strong>Pre-positioned teams</strong> ready for immediate 
@@ -288,22 +288,22 @@ export default function CycloneDamageRestorationPage() {
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <Wind className="w-8 h-8 mx-auto mb-2 text-blue-300" />
+                  <Wind className="w-8 h-8 mx-auto mb-2 text-blue-700" />
                   <div className="text-2xl font-bold">Cat 1-5</div>
                   <div className="text-sm">All Categories</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <Clock className="w-8 h-8 mx-auto mb-2 text-blue-300" />
+                  <Clock className="w-8 h-8 mx-auto mb-2 text-blue-700" />
                   <div className="text-2xl font-bold">2-4hr</div>
                   <div className="text-sm">Post-Cyclone Response</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <MapPin className="w-8 h-8 mx-auto mb-2 text-blue-300" />
+                  <MapPin className="w-8 h-8 mx-auto mb-2 text-blue-700" />
                   <div className="text-2xl font-bold">3 States</div>
                   <div className="text-sm">QLD, NT, WA</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <Users className="w-8 h-8 mx-auto mb-2 text-blue-300" />
+                  <Users className="w-8 h-8 mx-auto mb-2 text-blue-700" />
                   <div className="text-2xl font-bold">24/7</div>
                   <div className="text-sm">Emergency Teams</div>
                 </div>
@@ -340,7 +340,7 @@ export default function CycloneDamageRestorationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Cyclone Category Response Capabilities
             </h2>
-            <p className="text-xl text-center text-gray-200 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-center text-gray-700 mb-12 max-w-3xl mx-auto">
               Equipped and experienced for all tropical cyclone intensities
             </p>
 
@@ -360,7 +360,7 @@ export default function CycloneDamageRestorationPage() {
                 >
                   <h3 className="text-xl font-bold mb-3">{cat.category}</h3>
                   <p className="text-blue-600 font-semibold mb-2">Winds: {cat.winds}</p>
-                  <p className="text-gray-200 mb-2">{cat.damage}</p>
+                  <p className="text-gray-700 mb-2">{cat.damage}</p>
                   <p className="text-green-600 font-semibold text-sm">{cat.response}</p>
                 </motion.div>
               ))}
@@ -374,7 +374,7 @@ export default function CycloneDamageRestorationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Tropical Cyclone Coverage Zones
             </h2>
-            <p className="text-xl text-center text-gray-200 mb-12">
+            <p className="text-xl text-center text-gray-700 mb-12">
               Pre-positioned teams across Australia&apos;s cyclone belt
             </p>
 
@@ -394,8 +394,8 @@ export default function CycloneDamageRestorationPage() {
                     </div>
                     <h3 className="text-xl font-bold">{zone.region}</h3>
                   </div>
-                  <p className="text-gray-200 mb-2">{zone.cities}</p>
-                  <p className="text-sm text-gray-200 mb-2">Season: {zone.season}</p>
+                  <p className="text-gray-700 mb-2">{zone.cities}</p>
+                  <p className="text-sm text-gray-700 mb-2">Season: {zone.season}</p>
                   <p className={`font-semibold ${
                     zone.risk === 'Very High' ? 'text-red-600' :
                     zone.risk === 'High' ? 'text-orange-600' :
@@ -409,7 +409,7 @@ export default function CycloneDamageRestorationPage() {
 
             <div className="mt-12 p-6 bg-blue-50 rounded-lg max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-3">Remote & Offshore Coverage</h3>
-              <p className="text-gray-200">
+              <p className="text-gray-700">
                 Our cyclone response extends to remote communities, island territories, and offshore 
                 facilities. We&apos;ve successfully restored properties in Thursday Island, Christmas Island, 
                 offshore oil platforms, and remote mining sites affected by tropical cyclones.
@@ -436,7 +436,7 @@ export default function CycloneDamageRestorationPage() {
                   viewport={{ once: true }}
                 >
                   <h3 className="text-xl font-bold mb-3 text-blue-900">{damage.type}</h3>
-                  <p className="text-gray-200 mb-3">
+                  <p className="text-gray-700 mb-3">
                     <strong>Effects:</strong> {damage.effects}
                   </p>
                   <p className="text-green-700">
@@ -454,7 +454,7 @@ export default function CycloneDamageRestorationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Cyclone Recovery Timeline
             </h2>
-            <p className="text-xl text-center text-gray-200 mb-12">
+            <p className="text-xl text-center text-gray-700 mb-12">
               Systematic restoration from emergency response to complete rebuild
             </p>
 
@@ -542,7 +542,7 @@ export default function CycloneDamageRestorationPage() {
 
               <div className="mt-12 p-6 bg-blue-50 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">Pre-Season Preparation</h3>
-                <p className="text-gray-200 mb-4">
+                <p className="text-gray-700 mb-4">
                   Every cyclone season, we pre-position equipment and teams across the tropical zone. 
                   Our mobile command units, generators, industrial pumps, and restoration equipment are 
                   strategically located for immediate deployment when cyclones threaten.
@@ -565,7 +565,7 @@ export default function CycloneDamageRestorationPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <Wind className="w-16 h-16 mx-auto mb-6 text-blue-300 animate-spin-slow" />
+              <Wind className="w-16 h-16 mx-auto mb-6 text-blue-700 animate-spin-slow" />
               
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
                 Cyclone Recovery Starts With WHO&apos;S FIRST

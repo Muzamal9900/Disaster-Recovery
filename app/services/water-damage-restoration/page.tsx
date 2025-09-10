@@ -97,19 +97,19 @@ export default function WaterDamageRestorationPage() {
                 {/* Trust Badge with Real Statistics */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 rounded-full mb-6">
                   <Shield className="h-5 w-5 text-emerald-600" />
-                  <span className="text-green-300 font-semibold">
+                  <span className="text-green-700 font-semibold">
                     Proven in {brisbaneFloods.details.insuranceClaims.toLocaleString()} Claims
                   </span>
                 </div>
 
                 <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                   Water Damage Restoration
-                  <span className="block text-3xl lg:text-4xl text-blue-400 mt-2">
+                  <span className="block text-3xl lg:text-4xl text-blue-600 mt-2">
                     {floodStats.propertiesAffectedAnnually.toLocaleString()} Properties Protected Annually
                   </span>
                 </h1>
 
-                <p className="text-xl text-blue-200 mb-8 leading-relaxed">
+                <p className="text-xl text-blue-700 mb-8 leading-relaxed">
                   Response in <strong className="text-white">2 hours</strong>. 
                   <span className="block mt-2">
                     Mould begins in <strong className="text-white">{buildingResearch.mouldGrowthTimeframe}</strong>.
@@ -121,19 +121,19 @@ export default function WaterDamageRestorationPage() {
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className="text-3xl font-bold text-white">{floodStats.averageClaimValue}</div>
-                    <div className="text-sm text-blue-300">Average Claim</div>
+                    <div className="text-sm text-blue-700">Average Claim</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className="text-3xl font-bold text-white">24-48hr</div>
-                    <div className="text-sm text-blue-300">Critical Window</div>
+                    <div className="text-sm text-blue-700">Critical Window</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className="text-3xl font-bold text-white">$5.65B</div>
-                    <div className="text-sm text-blue-300">2022 Floods</div>
+                    <div className="text-sm text-blue-700">2022 Floods</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className="text-3xl font-bold text-white">AS/NZS</div>
-                    <div className="text-sm text-blue-300">Certified</div>
+                    <div className="text-sm text-blue-700">Certified</div>
                   </div>
                 </div>
 
@@ -182,10 +182,10 @@ export default function WaterDamageRestorationPage() {
         <section className="bg-red-900/30 border-y border-red-600/30 py-6">
           <div className="container mx-auto px-6">
             <div className="flex items-center justify-center gap-4 text-center">
-              <AlertTriangle className="h-6 w-6 text-red-400 animate-pulse" />
+              <AlertTriangle className="h-6 w-6 text-red-600 animate-pulse" />
               <p className="text-white font-semibold">
                 CSIRO: Properties dried within 48 hours show 87% less structural damage.
-                <Link href="/client/emergency" className="text-red-400 ml-2 underline">
+                <Link href="/client/emergency" className="text-red-600 ml-2 underline">
                   Act now - {buildingResearch.healthImpactCost} annual health cost from mould.
                 </Link>
               </p>
@@ -200,7 +200,7 @@ export default function WaterDamageRestorationPage() {
               <h2 className="text-4xl font-bold text-white mb-4">
                 Proven in Australia's Worst Disasters
               </h2>
-              <p className="text-xl text-blue-300">
+              <p className="text-xl text-blue-700">
                 Real results from {floodStats.largestEvent.totalClaims.toLocaleString()} insurance claims
               </p>
             </div>
@@ -211,7 +211,7 @@ export default function WaterDamageRestorationPage() {
                 <h3 className="text-2xl font-bold text-white mb-3">
                   {brisbaneFloods.title}
                 </h3>
-                <p className="text-blue-300 mb-4">{brisbaneFloods.location} • {brisbaneFloods.year}</p>
+                <p className="text-blue-700 mb-4">{brisbaneFloods.location} • {brisbaneFloods.year}</p>
                 
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="bg-black/30 rounded-lg p-3">
@@ -229,7 +229,7 @@ export default function WaterDamageRestorationPage() {
                 </div>
                 
                 <div className="p-4 bg-green-500/10 rounded-lg border border-green-500/30">
-                  <p className="text-green-300">
+                  <p className="text-green-700">
                     <strong>Key Learning:</strong> {brisbaneFloods.keyLearning}
                   </p>
                 </div>
@@ -244,7 +244,7 @@ export default function WaterDamageRestorationPage() {
                 <h3 className="text-2xl font-bold text-white mb-3">
                   {VERIFIED_CASE_STUDIES[1].title}
                 </h3>
-                <p className="text-blue-300 mb-4">
+                <p className="text-blue-700 mb-4">
                   {VERIFIED_CASE_STUDIES[1].location} • {VERIFIED_CASE_STUDIES[1].year}
                 </p>
                 
@@ -260,7 +260,7 @@ export default function WaterDamageRestorationPage() {
                 </div>
                 
                 <div className="p-4 bg-green-500/10 rounded-lg border border-green-500/30">
-                  <p className="text-green-300">
+                  <p className="text-green-700">
                     <strong>Key Learning:</strong> {VERIFIED_CASE_STUDIES[1].keyLearning}
                   </p>
                 </div>
@@ -284,24 +284,24 @@ export default function WaterDamageRestorationPage() {
               {/* Technology Specifications */}
               <div className="grid md:grid-cols-3 gap-6 mb-12">
                 <div className="bg-gradient-to-br from-blue-900/50 to-indigo-900/50 rounded-xl p-6 border border-blue-500/30">
-                  <Thermometer className="h-8 w-8 text-blue-400 mb-3" />
+                  <Thermometer className="h-8 w-8 text-blue-600 mb-3" />
                   <h3 className="text-lg font-bold text-white mb-2">Temperature</h3>
-                  <p className="text-3xl font-bold text-blue-400">22-26°C</p>
-                  <p className="text-sm text-blue-300">AS/NZS 3500.2 Standard</p>
+                  <p className="text-3xl font-bold text-blue-600">22-26°C</p>
+                  <p className="text-sm text-blue-700">AS/NZS 3500.2 Standard</p>
                 </div>
 
                 <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 rounded-xl p-6 border border-green-500/30">
                   <Droplets className="h-8 w-8 text-emerald-600 mb-3" />
                   <h3 className="text-lg font-bold text-white mb-2">Extraction</h3>
                   <p className="text-3xl font-bold text-emerald-600">90L/day</p>
-                  <p className="text-sm text-green-300">LGR Dehumidifier</p>
+                  <p className="text-sm text-green-700">LGR Dehumidifier</p>
                 </div>
 
                 <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-xl p-6 border border-purple-500/30">
-                  <Wind className="h-8 w-8 text-purple-400 mb-3" />
+                  <Wind className="h-8 w-8 text-purple-600 mb-3" />
                   <h3 className="text-lg font-bold text-white mb-2">Airflow</h3>
-                  <p className="text-3xl font-bold text-purple-400">3000 CFM</p>
-                  <p className="text-sm text-purple-300">Per 50m² Coverage</p>
+                  <p className="text-3xl font-bold text-purple-600">3000 CFM</p>
+                  <p className="text-sm text-purple-700">Per 50m² Coverage</p>
                 </div>
               </div>
 
@@ -310,7 +310,7 @@ export default function WaterDamageRestorationPage() {
                 <h3 className="text-xl font-bold text-white mb-3">
                   Court-Mandated Response Times
                 </h3>
-                <p className="text-yellow-300 mb-2">
+                <p className="text-yellow-700 mb-2">
                   Suncorp v Statewide Roads [2021] NSWCA 198:
                 </p>
                 <p className="text-white">
@@ -352,7 +352,7 @@ export default function WaterDamageRestorationPage() {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                      <p className="text-blue-200">{step.description}</p>
+                      <p className="text-blue-700">{step.description}</p>
                     </div>
                   </div>
                 ))}
@@ -372,11 +372,11 @@ export default function WaterDamageRestorationPage() {
               {INSURANCE_DATA.majorInsurers.map((insurer) => (
                 <div key={insurer.name} className="bg-white/10 rounded-xl p-6 border border-white/10 text-center">
                   <h3 className="text-xl font-bold text-white mb-3">{insurer.name}</h3>
-                  <p className="text-3xl font-bold text-blue-400 mb-2">
+                  <p className="text-3xl font-bold text-blue-600 mb-2">
                     {insurer.marketShare}
                   </p>
                   <p className="text-sm text-gray-200">Market Share</p>
-                  <p className="text-sm text-blue-300 mt-3">
+                  <p className="text-sm text-blue-700 mt-3">
                     Approval: <strong className="text-white">{insurer.averageClaimTime}</strong>
                   </p>
                 </div>
@@ -387,7 +387,7 @@ export default function WaterDamageRestorationPage() {
               <p className="text-2xl font-bold text-white mb-2">
                 {INSURANCE_DATA.claimStatistics.data.totalCatastropheClaims.toLocaleString()} Claims in 2024
               </p>
-              <p className="text-blue-300">
+              <p className="text-blue-700">
                 Total value: {INSURANCE_DATA.claimStatistics.data.totalValue} • 
                 Satisfaction: {INSURANCE_DATA.claimStatistics.data.customerSatisfaction}
               </p>
@@ -410,20 +410,20 @@ export default function WaterDamageRestorationPage() {
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <p className="text-4xl font-bold text-red-400">1 in 4</p>
-                    <p className="text-red-300">Australian homes affected by mould</p>
+                    <p className="text-4xl font-bold text-red-600">1 in 4</p>
+                    <p className="text-red-700">Australian homes affected by mould</p>
                   </div>
                   <div>
                     <p className="text-4xl font-bold text-blue-500">430,000</p>
-                    <p className="text-orange-300">Annual respiratory issues</p>
+                    <p className="text-orange-700">Annual respiratory issues</p>
                   </div>
                   <div>
                     <p className="text-4xl font-bold text-blue-500">$2.3B</p>
-                    <p className="text-yellow-300">Annual health costs</p>
+                    <p className="text-yellow-700">Annual health costs</p>
                   </div>
                   <div>
                     <p className="text-4xl font-bold text-emerald-600">1.2M</p>
-                    <p className="text-green-300">Work days lost</p>
+                    <p className="text-green-700">Work days lost</p>
                   </div>
                 </div>
                 
@@ -445,7 +445,7 @@ export default function WaterDamageRestorationPage() {
             <AustralianLocationGrid serviceSlug="water-damage-restoration" />
             
             <div className="mt-12 text-center">
-              <p className="text-xl text-blue-300">
+              <p className="text-xl text-blue-700">
                 From Coober Pedy to Thursday Island - We're There in Hours
               </p>
             </div>
@@ -459,7 +459,7 @@ export default function WaterDamageRestorationPage() {
             <h2 className="text-4xl font-bold text-white mb-6">
               {buildingResearch.mouldGrowthTimeframe} Until Permanent Damage
             </h2>
-            <p className="text-xl text-yellow-200 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-yellow-700 mb-8 max-w-3xl mx-auto">
               {floodStats.largestEvent.propertiesAffected.toLocaleString()} properties saved in 2022. 
               Don't lose {buildingResearch.propertyValueLoss} of your property value.
             </p>

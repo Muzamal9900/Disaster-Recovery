@@ -108,7 +108,7 @@ export default function WhyIndependentProfessionalsPage() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               The Truth About Restoration Qualifications
             </h1>
-            <p className="text-2xl mb-8 text-yellow-300">
+            <p className="text-2xl mb-8 text-yellow-700">
               Independent Professionals: 200+ Hours Training<br />
               Builder/Restorer Employees: 3 Days
             </p>
@@ -206,7 +206,7 @@ export default function WhyIndependentProfessionalsPage() {
                   {comparisonData.map((item, index) => (
                     <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                       <td className="p-4 font-bold">{item.aspect}</td>
-                      <td className={`p-4 text-center ${item.winner === 'independent' ? 'bg-green-50 text-green-700 font-bold' : 'text-gray-200'}`}>
+                      <td className={`p-4 text-center ${item.winner === 'independent' ? 'bg-green-50 text-green-700 font-bold' : 'text-gray-700'}`}>
                         {item.independent}
                       </td>
                       <td className={`p-4 text-center ${item.winner === 'builderEmployee' ? 'bg-green-50 text-green-700 font-bold' : 'bg-red-50 text-red-700'}`}>
@@ -289,7 +289,7 @@ export default function WhyIndependentProfessionalsPage() {
                     <Award className="h-6 w-6 text-blue-600 mr-3" />
                     <div>
                       <p className="font-bold">{assoc.name}</p>
-                      <p className="text-sm text-gray-200">{assoc.level} Recognition</p>
+                      <p className="text-sm text-gray-700">{assoc.level} Recognition</p>
                     </div>
                   </div>
                 ))}
@@ -314,7 +314,7 @@ export default function WhyIndependentProfessionalsPage() {
             <Card className="p-6">
               <TrendingUp className="h-10 w-10 text-blue-600 mb-4" />
               <h3 className="font-bold text-lg mb-3">Career Progression</h3>
-              <p className="text-gray-200">
+              <p className="text-gray-700">
                 After gaining experience, professionals realise they can provide better service 
                 independently than working for companies that prioritize profit over quality.
               </p>
@@ -322,7 +322,7 @@ export default function WhyIndependentProfessionalsPage() {
             <Card className="p-6">
               <Star className="h-10 w-10 text-yellow-600 mb-4" />
               <h3 className="font-bold text-lg mb-3">Quality Control</h3>
-              <p className="text-gray-200">
+              <p className="text-gray-700">
                 Independent professionals can maintain their high standards without pressure 
                 to cut corners or rush jobs for corporate profit margins.
               </p>
@@ -330,7 +330,7 @@ export default function WhyIndependentProfessionalsPage() {
             <Card className="p-6">
               <Users className="h-10 w-10 text-green-600 mb-4" />
               <h3 className="font-bold text-lg mb-3">Direct Relationships</h3>
-              <p className="text-gray-200">
+              <p className="text-gray-700">
                 Building direct relationships with customers and insurers means better 
                 communication, trust, and outcomes for everyone.
               </p>
@@ -347,21 +347,21 @@ export default function WhyIndependentProfessionalsPage() {
                   <span className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0">1</span>
                   <div>
                     <p className="font-bold">Years 0-2: Employee Phase</p>
-                    <p className="text-gray-200">Learn basics at builder/restorer company</p>
+                    <p className="text-gray-700">Learn basics at builder/restorer company</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <span className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0">2</span>
                   <div>
                     <p className="font-bold">Years 2-5: Certification Phase</p>
-                    <p className="text-gray-200">Pursue IICRC certifications and specialised training</p>
+                    <p className="text-gray-700">Pursue IICRC certifications and specialised training</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <span className="bg-green-700 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0">3</span>
                   <div>
                     <p className="font-bold">Years 5+: Independence Phase</p>
-                    <p className="text-gray-200">Start own business to provide quality service</p>
+                    <p className="text-gray-700">Start own business to provide quality service</p>
                   </div>
                 </div>
               </div>
@@ -380,28 +380,28 @@ export default function WhyIndependentProfessionalsPage() {
             <Card className="p-6 text-center">
               <Shield className="h-10 w-10 text-blue-600 mx-auto mb-3" />
               <h3 className="font-bold mb-2">Lower Claim Costs</h3>
-              <p className="text-sm text-gray-200">
+              <p className="text-sm text-gray-700">
                 No corporate markup or franchise fees
               </p>
             </Card>
             <Card className="p-6 text-center">
               <CheckCircle2 className="h-10 w-10 text-green-600 mx-auto mb-3" />
               <h3 className="font-bold mb-2">Higher Success Rate</h3>
-              <p className="text-sm text-gray-200">
+              <p className="text-sm text-gray-700">
                 98% first-time completion vs 72%
               </p>
             </Card>
             <Card className="p-6 text-center">
               <Clock className="h-10 w-10 text-blue-700 mx-auto mb-3" />
               <h3 className="font-bold mb-2">Faster Resolution</h3>
-              <p className="text-sm text-gray-200">
+              <p className="text-sm text-gray-700">
                 Direct communication, no corporate delays
               </p>
             </Card>
             <Card className="p-6 text-center">
               <Star className="h-10 w-10 text-yellow-600 mx-auto mb-3" />
               <h3 className="font-bold mb-2">Better Outcomes</h3>
-              <p className="text-sm text-gray-200">
+              <p className="text-sm text-gray-700">
                 4.8/5 rating vs 3.2/5 for corporates
               </p>
             </Card>

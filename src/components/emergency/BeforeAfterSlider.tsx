@@ -152,7 +152,7 @@ export default function BeforeAfterSlider() {
                   {currentCase.beforeTitle}
                 </div>
                 <div className="mt-2 bg-black/80 text-white px-4 py-2 rounded">
-                  <span className="text-red-400">BEFORE:</span> Total Devastation
+                  <span className="text-red-600">BEFORE:</span> Total Devastation
                 </div>
               </div>
             </div>
@@ -209,7 +209,7 @@ export default function BeforeAfterSlider() {
               </h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-gray-300">
-                  <MapPin className="h-5 w-5 text-blue-400 inline mr-2" />
+                  <MapPin className="h-5 w-5 text-blue-600 inline mr-2" />
                   {currentCase.location}
                 </div>
                 <div className="text-gray-300">
@@ -279,11 +279,11 @@ export default function BeforeAfterSlider() {
               <div className="text-gray-200">Insurance Approved</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-400">24/7</div>
+              <div className="text-3xl font-bold text-blue-600">24/7</div>
               <div className="text-gray-200">Emergency Response</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-red-400">47min</div>
+              <div className="text-3xl font-bold text-red-600">47min</div>
               <div className="text-gray-200">Average Arrival</div>
             </div>
           </div>

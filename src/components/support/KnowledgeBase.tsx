@@ -241,13 +241,13 @@ export function KnowledgeBase() {
             <Book className="h-8 w-8" />
             Knowledge Base
           </h1>
-          <p className="text-blue-100 mb-6">
+          <p className="text-blue-800 mb-6">
             Find answers, guides, and resources to help you succeed
           </p>
           
           {/* Search Bar */}
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-200" />
+            <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-700" />
             <Input
               type="text"
               placeholder="Search for articles, guides, or topics..."
@@ -256,14 +256,14 @@ export function KnowledgeBase() {
                 setSearchQuery(e.target.value);
                 handleSearch(e.target.value);
               }}
-              className="w-full pl-10 pr-4 py-3 bg-white text-gray-900 placeholder:text-gray-300"
+              className="w-full pl-10 pr-4 py-3 bg-white text-gray-900 placeholder:text-gray-700"
             />
           </div>
 
           {/* Quick Links */}
           {!searchQuery && (
             <div className="flex flex-wrap gap-2 justify-center mt-4">
-              <span className="text-sm text-blue-100">Popular:</span>
+              <span className="text-sm text-blue-800">Popular:</span>
               {mockRecentSearches.slice(0, 3).map((search, index) => (
                 <Button
                   key={index}
@@ -306,14 +306,14 @@ export function KnowledgeBase() {
                     <div className="flex-1">
                       <h3 className="font-medium flex items-center gap-2">
                         {result.title}
-                        <ArrowRight className="h-4 w-4 text-gray-200" />
+                        <ArrowRight className="h-4 w-4 text-gray-700" />
                       </h3>
-                      <p className="text-sm text-gray-200 mt-1">{result.excerpt}</p>
+                      <p className="text-sm text-gray-700 mt-1">{result.excerpt}</p>
                       <div className="flex items-center gap-3 mt-2">
                         <Badge variant="outline" className="text-xs">
                           {result.category}
                         </Badge>
-                        <span className="text-xs text-gray-300">
+                        <span className="text-xs text-gray-700">
                           Updated {new Date(result.lastUpdated).toLocaleDateString()}
                         </span>
                       </div>
@@ -352,10 +352,10 @@ export function KnowledgeBase() {
                             {category.name}
                             <ChevronRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </h3>
-                          <p className="text-sm text-gray-200 mt-1">
+                          <p className="text-sm text-gray-700 mt-1">
                             {category.description}
                           </p>
-                          <p className="text-xs text-gray-300 mt-2">
+                          <p className="text-xs text-gray-700 mt-2">
                             {category.articleCount} articles
                           </p>
                         </div>
@@ -384,11 +384,11 @@ export function KnowledgeBase() {
                     >
                       <div>
                         <h4 className="font-medium">{article.title}</h4>
-                        <p className="text-sm text-gray-200 mt-1">
+                        <p className="text-sm text-gray-700 mt-1">
                           {article.excerpt.substring(0, 100)}...
                         </p>
                       </div>
-                      <ChevronRight className="h-5 w-5 text-gray-200" />
+                      <ChevronRight className="h-5 w-5 text-gray-700" />
                     </div>
                   ))}
                 </div>
@@ -414,12 +414,12 @@ export function KnowledgeBase() {
                       className="flex items-center justify-between text-sm"
                     >
                       <span className="flex items-center gap-2">
-                        <span className="text-gray-300">#{index + 1}</span>
+                        <span className="text-gray-700">#{index + 1}</span>
                         <span className="hover:text-blue-600 cursor-pointer">
                           {article.title}
                         </span>
                       </span>
-                      <span className="text-xs text-gray-300">
+                      <span className="text-xs text-gray-700">
                         {article.views} views
                       </span>
                     </div>
@@ -465,7 +465,7 @@ export function KnowledgeBase() {
                       onClick={() => setSelectedArticle(article)}
                     >
                       <p className="font-medium">{article.title}</p>
-                      <p className="text-xs text-gray-300">
+                      <p className="text-xs text-gray-700">
                         {formatDistanceToNow(article.lastUpdated)} ago
                       </p>
                     </div>
@@ -483,7 +483,7 @@ export function KnowledgeBase() {
           <CardHeader>
             <div className="flex items-center justify-between">
               <div>
-                <div className="flex items-center gap-2 text-sm text-gray-300 mb-2">
+                <div className="flex items-center gap-2 text-sm text-gray-700 mb-2">
                   <Button
                     variant="ghost"
                     size="sm"
@@ -501,7 +501,7 @@ export function KnowledgeBase() {
                   )}
                 </div>
                 <CardTitle className="text-2xl">{selectedArticle.title}</CardTitle>
-                <div className="flex items-center gap-4 mt-2 text-sm text-gray-300">
+                <div className="flex items-center gap-4 mt-2 text-sm text-gray-700">
                   <span>By {selectedArticle.author}</span>
                   <span>•</span>
                   <span>Updated {formatDistanceToNow(selectedArticle.lastUpdated)} ago</span>

@@ -167,7 +167,7 @@ export function CompliancePanel({ compliance, certifications = [], insurance = [
                     <div>
                       <p className="font-medium text-sm">{item.name}</p>
                       {item.expiryDate && (
-                        <p className="text-xs text-gray-300">
+                        <p className="text-xs text-gray-700">
                           Expires: {new Date(item.expiryDate).toLocaleDateString()}
                         </p>
                       )}

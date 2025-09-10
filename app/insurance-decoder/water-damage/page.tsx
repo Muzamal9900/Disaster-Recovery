@@ -151,7 +151,7 @@ export default function WaterDamageInsurancePage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Water Damage Insurance Guide
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl">
+            <p className="text-xl text-blue-800 max-w-3xl">
               Understanding your coverage, maximizing your claim, and avoiding common pitfalls
             </p>
           </motion.div>
@@ -358,7 +358,7 @@ export default function WaterDamageInsurancePage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Need Help with Your Water Damage Claim?
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-blue-800">
             Our insurance-approved contractors can help navigate the claims process
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

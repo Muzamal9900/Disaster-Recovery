@@ -93,7 +93,7 @@ export default function UltraModernHeader() {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-md opacity-50" />
                   <div className="relative">
-                    <ShieldCheckIcon className="h-12 w-12 text-cyan-400" />
+                    <ShieldCheckIcon className="h-12 w-12 text-cyan-600" />
                   </div>
                 </div>
                 
@@ -150,7 +150,7 @@ export default function UltraModernHeader() {
                           >
                             <div className="relative z-10 flex items-center justify-between">
                               <span className="font-medium">{subItem.label}</span>
-                              <span className="text-cyan-400 opacity-0 hover:opacity-100 transition-opacity">
+                              <span className="text-cyan-600 opacity-0 hover:opacity-100 transition-opacity">
                                 →
                               </span>
                             </div>
@@ -217,7 +217,7 @@ export default function UltraModernHeader() {
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <item.icon className="w-5 h-5 text-cyan-400" />
+                    <item.icon className="w-5 h-5 text-cyan-600" />
                     <span className="font-medium">{item.label}</span>
                   </Link>
                   

@@ -68,7 +68,7 @@ export default function PitchDeckPresentation() {
               transition={{ delay: 0.2 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
             >
-              <Rocket className="h-12 w-12 text-blue-400 mb-4" />
+              <Rocket className="h-12 w-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">AI-Powered</h3>
               <p className="text-gray-300">27M parameter HRM brain technology</p>
             </motion.div>
@@ -79,7 +79,7 @@ export default function PitchDeckPresentation() {
               transition={{ delay: 0.4 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
             >
-              <Globe className="h-12 w-12 text-green-400 mb-4" />
+              <Globe className="h-12 w-12 text-green-600 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">National Scale</h3>
               <p className="text-gray-300">Complete Australian coverage</p>
             </motion.div>
@@ -90,7 +90,7 @@ export default function PitchDeckPresentation() {
               transition={{ delay: 0.6 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
             >
-              <TrendingUp className="h-12 w-12 text-purple-400 mb-4" />
+              <TrendingUp className="h-12 w-12 text-purple-600 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">10x Growth</h3>
               <p className="text-gray-300">Positioned for explosive expansion</p>
             </motion.div>
@@ -118,7 +118,7 @@ export default function PitchDeckPresentation() {
                   className="flex items-start gap-4"
                 >
                   <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-red-400 font-bold">1</span>
+                    <span className="text-red-600 font-bold">1</span>
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">60+ Minute Response Times</h4>
@@ -133,7 +133,7 @@ export default function PitchDeckPresentation() {
                   className="flex items-start gap-4"
                 >
                   <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-red-400 font-bold">2</span>
+                    <span className="text-red-600 font-bold">2</span>
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Manual Processes</h4>
@@ -148,7 +148,7 @@ export default function PitchDeckPresentation() {
                   className="flex items-start gap-4"
                 >
                   <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-red-400 font-bold">3</span>
+                    <span className="text-red-600 font-bold">3</span>
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Poor Contractor Matching</h4>
@@ -202,7 +202,7 @@ export default function PitchDeckPresentation() {
               className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl p-6 backdrop-blur-sm"
             >
               <div className="flex items-center gap-4 mb-4">
-                <Brain className="h-10 w-10 text-blue-400" />
+                <Brain className="h-10 w-10 text-blue-600" />
                 <h3 className="text-2xl font-bold text-white">Layer 1: HRM AI Brain</h3>
               </div>
               <p className="text-gray-300">AI-powered system for claim assessment, contractor matching, and analytics</p>
@@ -215,7 +215,7 @@ export default function PitchDeckPresentation() {
               className="bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-xl p-6 backdrop-blur-sm"
             >
               <div className="flex items-center gap-4 mb-4">
-                <Zap className="h-10 w-10 text-green-400" />
+                <Zap className="h-10 w-10 text-green-600" />
                 <h3 className="text-2xl font-bold text-white">Layer 2: Instant Orchestration</h3>
               </div>
               <p className="text-gray-300">Automated workflow engine targeting rapid initial response times</p>
@@ -228,7 +228,7 @@ export default function PitchDeckPresentation() {
               className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl p-6 backdrop-blur-sm"
             >
               <div className="flex items-center gap-4 mb-4">
-                <Shield className="h-10 w-10 text-purple-400" />
+                <Shield className="h-10 w-10 text-purple-600" />
                 <h3 className="text-2xl font-bold text-white">Layer 3: KPI-Driven Payments</h3>
               </div>
               <p className="text-gray-300">KPI-driven payment releases based on performance milestones</p>
@@ -253,7 +253,7 @@ export default function PitchDeckPresentation() {
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-white font-semibold">Platform Fees</span>
-                    <Badge className="bg-green-500/20 text-green-300">Primary</Badge>
+                    <Badge className="bg-green-500/20 text-green-700">Primary</Badge>
                   </div>
                   <p className="text-gray-200 text-sm">$550 per claim (20% of total)</p>
                   <div className="mt-2 h-2 bg-gray-700 rounded-full overflow-hidden">
@@ -264,7 +264,7 @@ export default function PitchDeckPresentation() {
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-white font-semibold">Contractor Subscriptions</span>
-                    <Badge className="bg-blue-500/20 text-blue-300">Growth</Badge>
+                    <Badge className="bg-blue-500/20 text-blue-700">Growth</Badge>
                   </div>
                   <p className="text-gray-200 text-sm">$299-999/month premium features</p>
                   <div className="mt-2 h-2 bg-gray-700 rounded-full overflow-hidden">
@@ -275,7 +275,7 @@ export default function PitchDeckPresentation() {
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-white font-semibold">Insurance API</span>
-                    <Badge className="bg-purple-500/20 text-purple-300">Future</Badge>
+                    <Badge className="bg-purple-500/20 text-purple-700">Future</Badge>
                   </div>
                   <p className="text-gray-200 text-sm">Direct integration fees</p>
                   <div className="mt-2 h-2 bg-gray-700 rounded-full overflow-hidden">
@@ -296,7 +296,7 @@ export default function PitchDeckPresentation() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-300">Platform Fee (20%)</span>
-                    <span className="text-xl font-semibold text-green-400">$550</span>
+                    <span className="text-xl font-semibold text-green-600">$550</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-300">Contractor Payment</span>
@@ -304,7 +304,7 @@ export default function PitchDeckPresentation() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-300">Gross Margin</span>
-                    <span className="text-xl font-semibold text-green-400">85%</span>
+                    <span className="text-xl font-semibold text-green-600">85%</span>
                   </div>
                   <div className="flex justify-between items-center pt-3 border-t border-gray-600">
                     <span className="text-gray-300">CAC Payback</span>
@@ -337,7 +337,7 @@ export default function PitchDeckPresentation() {
               transition={{ delay: 0.1 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center"
             >
-              <DollarSign className="h-8 w-8 text-green-400 mx-auto mb-2" />
+              <DollarSign className="h-8 w-8 text-green-600 mx-auto mb-2" />
               <div className="text-3xl font-bold text-white">$500K</div>
               <div className="text-sm text-gray-200">MRR Target</div>
             </motion.div>
@@ -348,7 +348,7 @@ export default function PitchDeckPresentation() {
               transition={{ delay: 0.2 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center"
             >
-              <Users className="h-8 w-8 text-blue-400 mx-auto mb-2" />
+              <Users className="h-8 w-8 text-blue-600 mx-auto mb-2" />
               <div className="text-3xl font-bold text-white">150+</div>
               <div className="text-sm text-gray-200">Target Contractors</div>
             </motion.div>
@@ -359,7 +359,7 @@ export default function PitchDeckPresentation() {
               transition={{ delay: 0.3 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center"
             >
-              <TrendingUp className="h-8 w-8 text-purple-400 mx-auto mb-2" />
+              <TrendingUp className="h-8 w-8 text-purple-600 mx-auto mb-2" />
               <div className="text-3xl font-bold text-white">25%+</div>
               <div className="text-sm text-gray-200">Growth Target</div>
             </motion.div>
@@ -370,7 +370,7 @@ export default function PitchDeckPresentation() {
               transition={{ delay: 0.4 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center"
             >
-              <Globe className="h-8 w-8 text-orange-400 mx-auto mb-2" />
+              <Globe className="h-8 w-8 text-orange-600 mx-auto mb-2" />
               <div className="text-3xl font-bold text-white">7</div>
               <div className="text-sm text-gray-200">States Covered</div>
             </motion.div>
@@ -445,7 +445,7 @@ export default function PitchDeckPresentation() {
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <advantage.icon className="h-10 w-10 text-blue-400" />
+                  <advantage.icon className="h-10 w-10 text-blue-600" />
                   <div>
                     <h3 className="text-xl font-bold text-white">{advantage.title}</h3>
                     <p className="text-sm text-gray-200">{advantage.description}</p>
@@ -454,7 +454,7 @@ export default function PitchDeckPresentation() {
                 <ul className="space-y-2">
                   {advantage.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-gray-300">
-                      <CheckCircle2 className="h-4 w-4 text-green-400" />
+                      <CheckCircle2 className="h-4 w-4 text-green-600" />
                       <span className="text-sm">{feature}</span>
                     </li>
                   ))}
@@ -536,7 +536,7 @@ export default function PitchDeckPresentation() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-300">Investment</span>
-                    <span className="text-xl font-bold text-green-400">$5M</span>
+                    <span className="text-xl font-bold text-green-600">$5M</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-300">Equity</span>
@@ -544,14 +544,14 @@ export default function PitchDeckPresentation() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-300">Expected Exit</span>
-                    <span className="text-xl font-bold text-purple-400">5-10x target</span>
+                    <span className="text-xl font-bold text-purple-600">5-10x target</span>
                   </div>
                 </div>
               </div>
               
               <div className="bg-green-500/20 rounded-xl p-4 border border-green-500/30">
                 <div className="flex items-center gap-2 mb-2">
-                  <Award className="h-6 w-6 text-green-400" />
+                  <Award className="h-6 w-6 text-green-600" />
                   <span className="text-white font-semibold">Why Now?</span>
                 </div>
                 <ul className="space-y-1 text-sm text-gray-300">
@@ -587,19 +587,19 @@ export default function PitchDeckPresentation() {
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <h4 className="text-white font-semibold mb-2">Disaster Recovery Grants</h4>
                   <p className="text-gray-200 text-sm">Federal and state programs for disaster resilience</p>
-                  <p className="text-green-400 text-sm mt-2">Potential: $1-5M</p>
+                  <p className="text-green-600 text-sm mt-2">Potential: $1-5M</p>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <h4 className="text-white font-semibold mb-2">Innovation & Technology Grants</h4>
                   <p className="text-gray-200 text-sm">R&D tax incentives and AI development support</p>
-                  <p className="text-green-400 text-sm mt-2">Potential: $500K-2M</p>
+                  <p className="text-green-600 text-sm mt-2">Potential: $500K-2M</p>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <h4 className="text-white font-semibold mb-2">Regional Development</h4>
                   <p className="text-gray-200 text-sm">Support for services in underserved areas</p>
-                  <p className="text-green-400 text-sm mt-2">Potential: $250K-1M</p>
+                  <p className="text-green-600 text-sm mt-2">Potential: $250K-1M</p>
                 </div>
               </div>
             </div>
@@ -610,7 +610,7 @@ export default function PitchDeckPresentation() {
               <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl p-6">
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-green-400 mt-1" />
+                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-1" />
                     <div>
                       <p className="text-white font-semibold">National Resilience</p>
                       <p className="text-gray-200 text-sm">Supporting government disaster response objectives</p>
@@ -618,7 +618,7 @@ export default function PitchDeckPresentation() {
                   </div>
                   
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-green-400 mt-1" />
+                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-1" />
                     <div>
                       <p className="text-white font-semibold">Job Creation</p>
                       <p className="text-gray-200 text-sm">Empowering contractor network nationwide</p>
@@ -626,7 +626,7 @@ export default function PitchDeckPresentation() {
                   </div>
                   
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-green-400 mt-1" />
+                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-1" />
                     <div>
                       <p className="text-white font-semibold">Community Support</p>
                       <p className="text-gray-200 text-sm">Faster recovery for affected communities</p>
@@ -634,7 +634,7 @@ export default function PitchDeckPresentation() {
                   </div>
                   
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-green-400 mt-1" />
+                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-1" />
                     <div>
                       <p className="text-white font-semibold">Data & Insights</p>
                       <p className="text-gray-200 text-sm">Valuable disaster recovery data for policy</p>
@@ -732,7 +732,7 @@ export default function PitchDeckPresentation() {
               ].map((advisor, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-white/10 rounded-full mx-auto mb-2 flex items-center justify-center">
-                    <Shield className="h-8 w-8 text-blue-400" />
+                    <Shield className="h-8 w-8 text-blue-600" />
                   </div>
                   <p className="text-sm text-gray-300">{advisor}</p>
                 </div>

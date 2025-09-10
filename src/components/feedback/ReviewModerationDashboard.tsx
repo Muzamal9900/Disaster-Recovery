@@ -140,7 +140,7 @@ export default function ReviewModerationDashboard() {
     <div className="max-w-7xl mx-auto p-6">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900">Review Moderation Dashboard</h1>
-        <p className="text-gray-200 mt-2">
+        <p className="text-gray-700 mt-2">
           Monitor and moderate customer feedback to maintain quality standards
         </p>
       </div>
@@ -160,7 +160,7 @@ export default function ReviewModerationDashboard() {
                 className={`flex items-center px-1 py-4 border-b-2 font-medium text-sm transition-colors ${
                   selectedTab === tab.key
                     ? 'border-blue-500 text-blue-600'
-                    : 'border-transparent text-gray-300 hover:text-gray-200 hover:border-gray-300'
+                    : 'border-transparent text-gray-700 hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
                 {tab.icon}
@@ -178,7 +178,7 @@ export default function ReviewModerationDashboard() {
               <h3 className="text-lg font-semibold text-gray-900">Moderation Queue</h3>
               <div className="flex space-x-3">
                 <div className="relative">
-                  <Search className="absolute left-3 top-3 w-4 h-4 text-gray-200" />
+                  <Search className="absolute left-3 top-3 w-4 h-4 text-gray-700" />
                   <input
                     type="text"
                     placeholder="Search..."
@@ -206,22 +206,22 @@ export default function ReviewModerationDashboard() {
             <table className="w-full">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Customer & Issue
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Rating
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Priority
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Status
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Created
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Actions
                   </th>
                 </tr>
@@ -232,16 +232,16 @@ export default function ReviewModerationDashboard() {
                     <td className="px-6 py-4">
                       <div className="flex items-start space-x-3">
                         <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-                          <User className="w-4 h-4 text-gray-200" />
+                          <User className="w-4 h-4 text-gray-700" />
                         </div>
                         <div className="min-w-0 flex-1">
                           <p className="text-sm font-medium text-gray-900 truncate">
                             {item.feedback.customerName}
                           </p>
-                          <p className="text-sm text-gray-300 truncate">
+                          <p className="text-sm text-gray-700 truncate">
                             {item.contractor.name}
                           </p>
-                          <p className="text-xs text-gray-200">
+                          <p className="text-xs text-gray-700">
                             {reasonLabels[item.reason]}
                           </p>
                         </div>
@@ -250,7 +250,7 @@ export default function ReviewModerationDashboard() {
                     <td className="px-6 py-4">
                       <div className="flex items-center">
                         <Star className={`w-4 h-4 mr-1 ${
-                          item.feedback.rating.overall >= 3 ? 'text-blue-500' : 'text-red-400'
+                          item.feedback.rating.overall >= 3 ? 'text-blue-500' : 'text-red-600'
                         } fill-current`} />
                         <span className="text-sm font-medium">
                           {item.feedback.rating.overall}/5
@@ -267,7 +267,7 @@ export default function ReviewModerationDashboard() {
                         {item.status.replace('_', ' ').toUpperCase()}
                       </span>
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-200">
+                    <td className="px-6 py-4 text-sm text-gray-700">
                       {item.createdDate.toLocaleDateString('en-AU')}
                     </td>
                     <td className="px-6 py-4">
@@ -280,7 +280,7 @@ export default function ReviewModerationDashboard() {
                         </button>
                         <button
                           onClick={() => setShowActionModal(true)}
-                          className="text-gray-200 hover:text-gray-200"
+                          className="text-gray-700 hover:text-gray-700"
                         >
                           <Send className="w-4 h-4" />
                         </button>
@@ -296,13 +296,13 @@ export default function ReviewModerationDashboard() {
 
       {selectedTab === 'reviews' && (
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <p className="text-gray-200">All reviews component would go here</p>
+          <p className="text-gray-700">All reviews component would go here</p>
         </div>
       )}
 
       {selectedTab === 'analytics' && (
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <p className="text-gray-200">Analytics component would go here</p>
+          <p className="text-gray-700">Analytics component would go here</p>
         </div>
       )}
     </div>

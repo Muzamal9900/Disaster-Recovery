@@ -32,7 +32,7 @@ export default function WhosFirstScenarioPage({ scenario }: Props) {
             className="text-center mb-8"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-4">{scenario.question}</h1>
-            <p className="text-2xl mb-6">The Answer: <span className="text-yellow-400">Disaster Recovery - Always First</span></p>
+            <p className="text-2xl mb-6">The Answer: <span className="text-yellow-600">Disaster Recovery - Always First</span></p>
           </motion.div>
           
           <motion.div
@@ -83,7 +83,7 @@ export default function WhosFirstScenarioPage({ scenario }: Props) {
               >
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                  <p className="text-gray-200">{reason}</p>
+                  <p className="text-gray-700">{reason}</p>
                 </div>
               </motion.div>
             ))}
@@ -97,7 +97,7 @@ export default function WhosFirstScenarioPage({ scenario }: Props) {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Common Mistakes: Wrong First Calls
           </h2>
-          <p className="text-center text-gray-200 mb-12 text-lg">
+          <p className="text-center text-gray-700 mb-12 text-lg">
             These seem logical but can cost you thousands and weeks of delays
           </p>
           
@@ -116,7 +116,7 @@ export default function WhosFirstScenarioPage({ scenario }: Props) {
                     <h3 className="text-xl font-bold text-red-900 mb-2">
                       Calling {mistake.who} First
                     </h3>
-                    <p className="text-gray-200">{mistake.consequence}</p>
+                    <p className="text-gray-700">{mistake.consequence}</p>
                   </div>
                 </div>
               </motion.div>
@@ -145,7 +145,7 @@ export default function WhosFirstScenarioPage({ scenario }: Props) {
                   <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">
                     {index + 1}
                   </div>
-                  <p className="text-lg text-gray-200">{step}</p>
+                  <p className="text-lg text-gray-700">{step}</p>
                 </motion.div>
               ))}
             </div>
@@ -159,7 +159,7 @@ export default function WhosFirstScenarioPage({ scenario }: Props) {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Every Minute Counts: Critical Timeline
           </h2>
-          <p className="text-center text-gray-200 mb-12 text-lg">
+          <p className="text-center text-gray-700 mb-12 text-lg">
             The first 24 hours determine your outcome
           </p>
           
@@ -195,7 +195,7 @@ export default function WhosFirstScenarioPage({ scenario }: Props) {
               <DollarSign className="w-12 h-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-xl font-bold mb-2">With Us First</h3>
               <p className="text-3xl font-bold text-green-600 mb-2">{scenario.costImpact.withUs}</p>
-              <p className="text-gray-200">Properly managed claim</p>
+              <p className="text-gray-700">Properly managed claim</p>
             </motion.div>
             
             <motion.div
@@ -205,7 +205,7 @@ export default function WhosFirstScenarioPage({ scenario }: Props) {
               <DollarSign className="w-12 h-12 text-red-600 mx-auto mb-4" />
               <h3 className="text-xl font-bold mb-2">Wrong First Call</h3>
               <p className="text-3xl font-bold text-red-600 mb-2">{scenario.costImpact.withoutUs}</p>
-              <p className="text-gray-200">Mistakes & delays</p>
+              <p className="text-gray-700">Mistakes & delays</p>
             </motion.div>
             
             <motion.div
@@ -239,7 +239,7 @@ export default function WhosFirstScenarioPage({ scenario }: Props) {
                   className="flex items-start gap-3"
                 >
                   <FileText className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                  <p className="text-gray-200">{insight}</p>
+                  <p className="text-gray-700">{insight}</p>
                 </motion.div>
               ))}
             </div>
@@ -265,7 +265,7 @@ export default function WhosFirstScenarioPage({ scenario }: Props) {
                   className="flex items-start gap-3"
                 >
                   <AlertTriangle className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" />
-                  <p className="text-gray-200 text-lg">{risk}</p>
+                  <p className="text-gray-700 text-lg">{risk}</p>
                 </motion.div>
               ))}
             </div>
@@ -292,10 +292,10 @@ export default function WhosFirstScenarioPage({ scenario }: Props) {
                 <details className="group">
                   <summary className="px-6 py-4 cursor-pointer list-none flex items-center justify-between hover:bg-gray-50">
                     <span className="text-lg font-semibold text-gray-800">{faq.question}</span>
-                    <ArrowRight className="w-5 h-5 text-gray-200 group-open:rotate-90 transition-transform" />
+                    <ArrowRight className="w-5 h-5 text-gray-700 group-open:rotate-90 transition-transform" />
                   </summary>
                   <div className="px-6 pb-4">
-                    <p className="text-gray-200">{faq.answer}</p>
+                    <p className="text-gray-700">{faq.answer}</p>
                   </div>
                 </details>
               </motion.div>
@@ -324,12 +324,12 @@ export default function WhosFirstScenarioPage({ scenario }: Props) {
               <div className="space-y-4">
                 <div>
                   <h4 className="font-bold text-gray-800 mb-2">The Situation:</h4>
-                  <p className="text-gray-200">{scenario.caseStudy.situation}</p>
+                  <p className="text-gray-700">{scenario.caseStudy.situation}</p>
                 </div>
                 
                 <div>
                   <h4 className="font-bold text-gray-800 mb-2">Our Action:</h4>
-                  <p className="text-gray-200">{scenario.caseStudy.action}</p>
+                  <p className="text-gray-700">{scenario.caseStudy.action}</p>
                 </div>
                 
                 <div className="bg-green-50 rounded-lg p-4">
@@ -355,7 +355,7 @@ export default function WhosFirstScenarioPage({ scenario }: Props) {
           
           <div className="bg-white/10 backdrop-blur rounded-xl p-8 mb-8">
             <p className="text-3xl font-bold mb-4">Remember: Who's First?</p>
-            <p className="text-4xl font-bold text-yellow-400">Disaster Recovery. Always.</p>
+            <p className="text-4xl font-bold text-yellow-600">Disaster Recovery. Always.</p>
           </div>
           
           <div className="flex flex-wrap gap-4 justify-center">
@@ -371,7 +371,7 @@ export default function WhosFirstScenarioPage({ scenario }: Props) {
             </button>
           </div>
           
-          <p className="mt-6 text-blue-200">
+          <p className="mt-6 text-blue-700">
             Available 24/7 • Immediate Response • Insurance Approved
           </p>
         </div>

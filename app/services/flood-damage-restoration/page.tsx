@@ -294,12 +294,12 @@ export default function FloodDamageRestorationPage() {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Flood Damage Restoration
-                <span className="block text-cyan-300 text-3xl md:text-4xl mt-2">
+                <span className="block text-cyan-700 text-3xl md:text-4xl mt-2">
                   Australia&apos;s Leading Flood Recovery Specialists
                 </span>
               </h1>
               
-              <p className="text-xl text-cyan-100 mb-8 leading-relaxed">
+              <p className="text-xl text-cyan-800 mb-8 leading-relaxed">
                 From the Brisbane floods to Lismore&apos;s record-breaking events, we&apos;ve restored 
                 thousands of flood-affected properties across Australia. Our IICRC-certified teams provide 
                 <strong> immediate 24/7 response</strong> with industrial-grade water extraction, 
@@ -309,22 +309,22 @@ export default function FloodDamageRestorationPage() {
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <Droplets className="w-8 h-8 mx-auto mb-2 text-cyan-300" />
+                  <Droplets className="w-8 h-8 mx-auto mb-2 text-cyan-700" />
                   <div className="text-2xl font-bold">60min</div>
                   <div className="text-sm">Metro Response</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <Clock className="w-8 h-8 mx-auto mb-2 text-cyan-300" />
+                  <Clock className="w-8 h-8 mx-auto mb-2 text-cyan-700" />
                   <div className="text-2xl font-bold">24-48hr</div>
                   <div className="text-sm">Critical Window</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <Building className="w-8 h-8 mx-auto mb-2 text-cyan-300" />
+                  <Building className="w-8 h-8 mx-auto mb-2 text-cyan-700" />
                   <div className="text-2xl font-bold">10,000+</div>
                   <div className="text-sm">Properties Restored</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <Shield className="w-8 h-8 mx-auto mb-2 text-cyan-300" />
+                  <Shield className="w-8 h-8 mx-auto mb-2 text-cyan-700" />
                   <div className="text-2xl font-bold">Cat 1-3</div>
                   <div className="text-sm">All Water Types</div>
                 </div>
@@ -439,13 +439,13 @@ export default function FloodDamageRestorationPage() {
                     <strong>Source:</strong> {cat.source}
                   </p>
                   <p className={`mb-2 font-semibold ${
-                    cat.color === 'black' ? 'text-red-400' :
+                    cat.color === 'black' ? 'text-red-600' :
                     cat.color === 'gray' ? 'text-orange-600' :
                     'text-blue-600'
                   }`}>
                     {cat.hazard}
                   </p>
-                  <p className={`text-sm ${cat.color === 'black' ? 'text-green-400' : 'text-green-600'}`}>
+                  <p className={`text-sm ${cat.color === 'black' ? 'text-green-600' : 'text-green-600'}`}>
                     Treatment: {cat.treatment}
                   </p>
                 </motion.div>
@@ -649,7 +649,7 @@ export default function FloodDamageRestorationPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <Droplets className="w-16 h-16 mx-auto mb-6 text-cyan-300" />
+              <Droplets className="w-16 h-16 mx-auto mb-6 text-cyan-700" />
               
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
                 Every Minute Counts in Flood Recovery

@@ -78,7 +78,7 @@ export default function WaterDamageChecklistPage() {
                 Water Damage Emergency Checklist
               </h1>
             </div>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-blue-800">
               Critical steps to minimize damage and ensure insurance coverage
             </p>
             <div className="mt-6 bg-blue-800 rounded-lg p-4">
@@ -147,7 +147,7 @@ export default function WaterDamageChecklistPage() {
                     onChange={() => toggleCheck(item.id)}
                     className="mt-1 w-5 h-5"
                   />
-                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-300' : ''}`}>
+                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-700' : ''}`}>
                     {item.text}
                     {item.critical && <span className="text-red-600 font-bold ml-2">CRITICAL</span>}
                   </span>
@@ -176,7 +176,7 @@ export default function WaterDamageChecklistPage() {
                     onChange={() => toggleCheck(item.id)}
                     className="mt-1 w-5 h-5"
                   />
-                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-300' : ''}`}>
+                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-700' : ''}`}>
                     {item.text}
                   </span>
                 </label>
@@ -204,7 +204,7 @@ export default function WaterDamageChecklistPage() {
                     onChange={() => toggleCheck(item.id)}
                     className="mt-1 w-5 h-5"
                   />
-                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-300' : ''}`}>
+                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-700' : ''}`}>
                     {item.text}
                   </span>
                 </label>
@@ -232,7 +232,7 @@ export default function WaterDamageChecklistPage() {
                     onChange={() => toggleCheck(item.id)}
                     className="mt-1 w-5 h-5"
                   />
-                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-300' : ''}`}>
+                  <span className={`flex-1 ${checkedItems.includes(item.id) ? 'line-through text-gray-700' : ''}`}>
                     {item.text}
                   </span>
                 </label>

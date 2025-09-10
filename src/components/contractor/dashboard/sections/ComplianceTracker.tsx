@@ -173,10 +173,10 @@ export function ComplianceTracker({ certifications, insurance, memberships }: Co
               .map(cert => (
                 <div key={cert.id} className="flex items-center justify-between p-3 border rounded-lg">
                   <div className="flex items-center gap-3">
-                    <FileText className="h-5 w-5 text-gray-200" />
+                    <FileText className="h-5 w-5 text-gray-700" />
                     <div>
                       <p className="font-medium">{cert.name}</p>
-                      <p className="text-sm text-gray-200">{cert.issuer}</p>
+                      <p className="text-sm text-gray-700">{cert.issuer}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -184,7 +184,7 @@ export function ComplianceTracker({ certifications, insurance, memberships }: Co
                       <Badge className={getStatusColor(cert.status)}>
                         {cert.status}
                       </Badge>
-                      <p className="text-xs text-gray-300 mt-1">
+                      <p className="text-xs text-gray-700 mt-1">
                         {getDaysUntilExpiryText(cert.daysUntilExpiry)}
                       </p>
                     </div>
@@ -224,10 +224,10 @@ export function ComplianceTracker({ certifications, insurance, memberships }: Co
               .map(ins => (
                 <div key={ins.id} className="flex items-center justify-between p-3 border rounded-lg">
                   <div className="flex items-center gap-3">
-                    <Shield className="h-5 w-5 text-gray-200" />
+                    <Shield className="h-5 w-5 text-gray-700" />
                     <div>
                       <p className="font-medium">{ins.type}</p>
-                      <p className="text-sm text-gray-200">
+                      <p className="text-sm text-gray-700">
                         {ins.insurer} • ${ins.coverageAmount.toLocaleString()} coverage
                       </p>
                     </div>
@@ -237,7 +237,7 @@ export function ComplianceTracker({ certifications, insurance, memberships }: Co
                       <Badge className={getStatusColor(ins.status)}>
                         {ins.status}
                       </Badge>
-                      <p className="text-xs text-gray-300 mt-1">
+                      <p className="text-xs text-gray-700 mt-1">
                         {getDaysUntilExpiryText(ins.daysUntilExpiry)}
                       </p>
                     </div>
@@ -271,7 +271,7 @@ export function ComplianceTracker({ certifications, insurance, memberships }: Co
                 <div key={mem.id} className="flex items-center justify-between p-3 border rounded-lg">
                   <div>
                     <p className="font-medium">{mem.name}</p>
-                    <p className="text-sm text-gray-200">Member #{mem.memberNumber}</p>
+                    <p className="text-sm text-gray-700">Member #{mem.memberNumber}</p>
                   </div>
                   <div className="flex items-center gap-3">
                     <Badge className={getStatusColor(mem.status)}>
@@ -302,10 +302,10 @@ export function ComplianceTracker({ certifications, insurance, memberships }: Co
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-sm text-gray-200">
+          <p className="text-sm text-gray-700">
             You will receive notifications:
           </p>
-          <ul className="mt-2 ml-4 list-disc text-sm text-gray-200">
+          <ul className="mt-2 ml-4 list-disc text-sm text-gray-700">
             <li>90 days before expiry (email)</li>
             <li>60 days before expiry (email + in-app)</li>
             <li>30 days before expiry (email + SMS)</li>

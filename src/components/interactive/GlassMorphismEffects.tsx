@@ -110,13 +110,13 @@ export function NeonGlowButton({
     const colours = {
       blue: {
         solid: 'bg-blue-600 text-white border-blue-500 shadow-blue-500/50',
-        outline: 'border-blue-500 text-blue-400 hover:bg-blue-500/10',
-        ghost: 'text-blue-400 hover:bg-blue-500/10'
+        outline: 'border-blue-500 text-blue-600 hover:bg-blue-500/10',
+        ghost: 'text-blue-600 hover:bg-blue-500/10'
       },
       purple: {
         solid: 'bg-purple-600 text-white border-purple-500 shadow-purple-500/50',
-        outline: 'border-purple-500 text-purple-400 hover:bg-purple-500/10',
-        ghost: 'text-purple-400 hover:bg-purple-500/10'
+        outline: 'border-purple-500 text-purple-600 hover:bg-purple-500/10',
+        ghost: 'text-purple-600 hover:bg-purple-500/10'
       },
       green: {
         solid: 'bg-green-700 text-white border-green-500 shadow-green-500/50',
@@ -125,8 +125,8 @@ export function NeonGlowButton({
       },
       red: {
         solid: 'bg-red-600 text-white border-red-600 shadow-red-500/50',
-        outline: 'border-red-600 text-red-400 hover:bg-red-500/10',
-        ghost: 'text-red-400 hover:bg-red-500/10'
+        outline: 'border-red-600 text-red-600 hover:bg-red-500/10',
+        ghost: 'text-red-600 hover:bg-red-500/10'
       },
       yellow: {
         solid: 'bg-yellow-600 text-white border-blue-600 shadow-blue-600/50',
@@ -135,8 +135,8 @@ export function NeonGlowButton({
       },
       pink: {
         solid: 'bg-pink-600 text-white border-pink-500 shadow-pink-500/50',
-        outline: 'border-pink-500 text-pink-400 hover:bg-pink-500/10',
-        ghost: 'text-pink-400 hover:bg-pink-500/10'
+        outline: 'border-pink-500 text-pink-600 hover:bg-pink-500/10',
+        ghost: 'text-pink-600 hover:bg-pink-500/10'
       }
     };
     
@@ -244,14 +244,14 @@ export function NeonText({
 }: NeonTextProps) {
   const getColorClass = () => {
     switch (colour) {
-      case 'blue': return 'text-blue-400';
-      case 'purple': return 'text-purple-400';
+      case 'blue': return 'text-blue-600';
+      case 'purple': return 'text-purple-600';
       case 'green': return 'text-emerald-600';
-      case 'red': return 'text-red-400';
+      case 'red': return 'text-red-600';
       case 'yellow': return 'text-blue-500';
-      case 'pink': return 'text-pink-400';
-      case 'cyan': return 'text-cyan-400';
-      default: return 'text-blue-400';
+      case 'pink': return 'text-pink-600';
+      case 'cyan': return 'text-cyan-600';
+      default: return 'text-blue-600';
     }
   };
 

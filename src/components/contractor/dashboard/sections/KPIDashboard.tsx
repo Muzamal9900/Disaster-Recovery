@@ -81,12 +81,12 @@ export function KPIDashboard({ metrics, activeJobs, incidents }: KPIDashboardPro
         <CardContent className="pt-6">
           <div className="flex justify-between items-start">
             <div>
-              <p className="text-sm text-gray-200">Overall Performance Score</p>
+              <p className="text-sm text-gray-700">Overall Performance Score</p>
               <div className="flex items-baseline gap-2 mt-2">
                 <span className={`text-4xl font-bold ${getScoreColor(metrics.overallScore)}`}>
                   {metrics.overallScore}%
                 </span>
-                <span className="flex items-center text-sm text-gray-300">
+                <span className="flex items-center text-sm text-gray-700">
                   {getTrendIcon(metrics.scoreTrend)}
                   {Math.abs(metrics.scoreTrend)}%
                 </span>
@@ -111,7 +111,7 @@ export function KPIDashboard({ metrics, activeJobs, incidents }: KPIDashboardPro
             <p className={`text-2xl font-bold ${getScoreColor(metrics.responseScore)}`}>
               {metrics.avgResponseTime}h
             </p>
-            <p className="text-xs text-gray-300 mt-1">Target: &lt;2h</p>
+            <p className="text-xs text-gray-700 mt-1">Target: &lt;2h</p>
             <Progress value={metrics.responseScore} className="mt-2 h-1" />
           </CardContent>
         </Card>
@@ -127,7 +127,7 @@ export function KPIDashboard({ metrics, activeJobs, incidents }: KPIDashboardPro
             <p className={`text-2xl font-bold ${getScoreColor(metrics.reportQuality)}`}>
               {metrics.reportQuality}%
             </p>
-            <p className="text-xs text-gray-300 mt-1">Clean Claims Score</p>
+            <p className="text-xs text-gray-700 mt-1">Clean Claims Score</p>
             <Progress value={metrics.reportQuality} className="mt-2 h-1" />
           </CardContent>
         </Card>
@@ -143,7 +143,7 @@ export function KPIDashboard({ metrics, activeJobs, incidents }: KPIDashboardPro
             <p className={`text-2xl font-bold ${getScoreColor(metrics.customerRating * 20)}`}>
               {metrics.customerRating}/5
             </p>
-            <p className="text-xs text-gray-300 mt-1">{metrics.totalReviews} reviews</p>
+            <p className="text-xs text-gray-700 mt-1">{metrics.totalReviews} reviews</p>
             <div className="flex gap-0.5 mt-2">
               {[...Array(5)].map((_, i) => (
                 <Star
@@ -151,7 +151,7 @@ export function KPIDashboard({ metrics, activeJobs, incidents }: KPIDashboardPro
                   className={`h-3 w-3 ${
                     i < Math.floor(metrics.customerRating)
                       ? 'fill-blue-500 text-blue-500'
-                      : 'text-gray-300'
+                      : 'text-gray-700'
                   }`}
                 />
               ))}
@@ -170,7 +170,7 @@ export function KPIDashboard({ metrics, activeJobs, incidents }: KPIDashboardPro
             <p className={`text-2xl font-bold ${getScoreColor(metrics.completionRate)}`}>
               {metrics.completionRate}%
             </p>
-            <p className="text-xs text-gray-300 mt-1">Jobs completed on time</p>
+            <p className="text-xs text-gray-700 mt-1">Jobs completed on time</p>
             <Progress value={metrics.completionRate} className="mt-2 h-1" />
           </CardContent>
         </Card>
@@ -193,14 +193,14 @@ export function KPIDashboard({ metrics, activeJobs, incidents }: KPIDashboardPro
               <div key={job.id} className="flex items-center justify-between p-3 border rounded-lg">
                 <div>
                   <p className="font-medium">{job.claimNumber}</p>
-                  <p className="text-sm text-gray-200">{job.address}</p>
-                  <p className="text-xs text-gray-300">{job.insurer} • {job.jobType}</p>
+                  <p className="text-sm text-gray-700">{job.address}</p>
+                  <p className="text-xs text-gray-700">{job.insurer} • {job.jobType}</p>
                 </div>
                 <div className="text-right">
                   <Badge variant={job.status === 'IN_PROGRESS' ? 'default' : 'secondary'}>
                     {job.status}
                   </Badge>
-                  <p className="text-xs text-gray-300 mt-1">
+                  <p className="text-xs text-gray-700 mt-1">
                     Started {job.daysActive} days ago
                   </p>
                 </div>
@@ -229,7 +229,7 @@ export function KPIDashboard({ metrics, activeJobs, incidents }: KPIDashboardPro
             </CardHeader>
             <CardContent>
               {incidents.length === 0 ? (
-                <div className="text-center py-8 text-gray-300">
+                <div className="text-center py-8 text-gray-700">
                   <CheckCircle className="h-12 w-12 mx-auto mb-3 text-green-500" />
                   <p>No incidents recorded - Great work!</p>
                 </div>
@@ -243,8 +243,8 @@ export function KPIDashboard({ metrics, activeJobs, incidents }: KPIDashboardPro
                             <AlertTriangle className="h-4 w-4 text-blue-600" />
                             <p className="font-medium">{incident.type}</p>
                           </div>
-                          <p className="text-sm text-gray-200 mt-1">{incident.description}</p>
-                          <p className="text-xs text-gray-300 mt-2">
+                          <p className="text-sm text-gray-700 mt-1">{incident.description}</p>
+                          <p className="text-xs text-gray-700 mt-2">
                             {new Date(incident.date).toLocaleDateString()} • Job #{incident.jobId}
                           </p>
                         </div>
@@ -294,15 +294,15 @@ export function KPIDashboard({ metrics, activeJobs, incidents }: KPIDashboardPro
                 </div>
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-200">5-Star Reviews</span>
+                    <span className="text-gray-700">5-Star Reviews</span>
                     <span>+${metrics.fiveStarBonus || 0}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-200">Perfect Reports</span>
+                    <span className="text-gray-700">Perfect Reports</span>
                     <span>+${metrics.perfectReportBonus || 0}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-200">Fast Response</span>
+                    <span className="text-gray-700">Fast Response</span>
                     <span>+${metrics.fastResponseBonus || 0}</span>
                   </div>
                 </div>
@@ -317,7 +317,7 @@ export function KPIDashboard({ metrics, activeJobs, incidents }: KPIDashboardPro
                       <Award className="h-5 w-5 text-blue-600" />
                       <div>
                         <p className="text-sm font-medium">{achievement.title}</p>
-                        <p className="text-xs text-gray-300">{achievement.date}</p>
+                        <p className="text-xs text-gray-700">{achievement.date}</p>
                       </div>
                     </div>
                   ))}

@@ -91,7 +91,7 @@ export default function DemoModeBanner() {
         <div className="fixed top-16 right-4 z-[1001] bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden animate-in slide-in-from-top-2">
           <div className="p-4 bg-gradient-to-r from-orange-50 to-yellow-50 border-b">
             <h3 className="font-bold text-gray-900 mb-1">Choose Demo Type</h3>
-            <p className="text-sm text-gray-200">Select an automated demo walkthrough</p>
+            <p className="text-sm text-gray-700">Select an automated demo walkthrough</p>
           </div>
           
           <div className="p-2">
@@ -104,7 +104,7 @@ export default function DemoModeBanner() {
               </div>
               <div className="text-left">
                 <div className="font-semibold text-gray-900">Contractor Signup</div>
-                <div className="text-sm text-gray-300">Auto-fill contractor application</div>
+                <div className="text-sm text-gray-700">Auto-fill contractor application</div>
               </div>
             </button>
             
@@ -117,7 +117,7 @@ export default function DemoModeBanner() {
               </div>
               <div className="text-left">
                 <div className="font-semibold text-gray-900">Client Claim</div>
-                <div className="text-sm text-gray-300">Auto-fill insurance claim</div>
+                <div className="text-sm text-gray-700">Auto-fill insurance claim</div>
               </div>
             </button>
             
@@ -130,13 +130,13 @@ export default function DemoModeBanner() {
               </div>
               <div className="text-left">
                 <div className="font-semibold text-gray-900">Investor Pitch</div>
-                <div className="text-sm text-gray-300">12-slide presentation deck</div>
+                <div className="text-sm text-gray-700">12-slide presentation deck</div>
               </div>
             </button>
           </div>
           
           <div className="px-4 py-3 bg-gray-50 border-t">
-            <p className="text-xs text-gray-300 text-center">
+            <p className="text-xs text-gray-700 text-center">
               Demos will auto-fill forms with sample data
             </p>
           </div>

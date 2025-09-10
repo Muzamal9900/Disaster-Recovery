@@ -115,7 +115,7 @@ export default function LighthouseReportPage() {
               <h2 className="text-2xl font-bold mb-4">
                 Site Performance Audit
               </h2>
-              <p className="text-gray-200 mb-6">
+              <p className="text-gray-700 mb-6">
                 Test all pages for Lighthouse 100/100 scores across all metrics
               </p>
               
@@ -146,7 +146,7 @@ export default function LighthouseReportPage() {
                       <div className={`text-4xl font-bold ${getScoreColor(result.score)}`}>
                         {result.score}
                       </div>
-                      <div className="text-sm text-gray-200 mt-1">
+                      <div className="text-sm text-gray-700 mt-1">
                         {result.category}
                       </div>
                     </div>
@@ -167,7 +167,7 @@ export default function LighthouseReportPage() {
                       </div>
                       <ul className="space-y-2">
                         {result.details.map((detail, index) => (
-                          <li key={index} className="text-sm text-gray-200">
+                          <li key={index} className="text-sm text-gray-700">
                             {detail}
                           </li>
                         ))}

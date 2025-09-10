@@ -394,7 +394,7 @@ export function APIDocumentation() {
                 <Code className="h-8 w-8" />
                 API Documentation
               </h1>
-              <p className="text-blue-100">
+              <p className="text-blue-800">
                 Build powerful integrations with the NRP platform
               </p>
             </div>
@@ -417,21 +417,21 @@ export function APIDocumentation() {
           <div className="grid grid-cols-4 gap-4 mt-6">
             <div className="bg-white/10 rounded-lg p-4">
               <p className="text-2xl font-bold">{apiCategories.length}</p>
-              <p className="text-sm text-blue-100">API Categories</p>
+              <p className="text-sm text-blue-800">API Categories</p>
             </div>
             <div className="bg-white/10 rounded-lg p-4">
               <p className="text-2xl font-bold">
                 {apiCategories.reduce((sum, cat) => sum + cat.endpoints.length, 0)}
               </p>
-              <p className="text-sm text-blue-100">Endpoints</p>
+              <p className="text-sm text-blue-800">Endpoints</p>
             </div>
             <div className="bg-white/10 rounded-lg p-4">
               <p className="text-2xl font-bold">99.9%</p>
-              <p className="text-sm text-blue-100">Uptime SLA</p>
+              <p className="text-sm text-blue-800">Uptime SLA</p>
             </div>
             <div className="bg-white/10 rounded-lg p-4">
               <p className="text-2xl font-bold">100/s</p>
-              <p className="text-sm text-blue-100">Rate Limit</p>
+              <p className="text-sm text-blue-800">Rate Limit</p>
             </div>
           </div>
         </div>
@@ -449,7 +449,7 @@ export function APIDocumentation() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Quick Start</h3>
-                  <p className="text-sm text-gray-200">Get started in 5 minutes</p>
+                  <p className="text-sm text-gray-700">Get started in 5 minutes</p>
                 </div>
               </div>
             </CardContent>
@@ -463,7 +463,7 @@ export function APIDocumentation() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Authentication</h3>
-                  <p className="text-sm text-gray-200">API keys & OAuth2</p>
+                  <p className="text-sm text-gray-700">API keys & OAuth2</p>
                 </div>
               </div>
             </CardContent>
@@ -477,7 +477,7 @@ export function APIDocumentation() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Webhooks</h3>
-                  <p className="text-sm text-gray-200">Real-time events</p>
+                  <p className="text-sm text-gray-700">Real-time events</p>
                 </div>
               </div>
             </CardContent>
@@ -491,7 +491,7 @@ export function APIDocumentation() {
                 </div>
                 <div>
                   <h3 className="font-semibold">API Playground</h3>
-                  <p className="text-sm text-gray-200">Test endpoints live</p>
+                  <p className="text-sm text-gray-700">Test endpoints live</p>
                 </div>
               </div>
             </CardContent>
@@ -518,7 +518,7 @@ export function APIDocumentation() {
                   <CardHeader>
                     <CardTitle className="text-base">API Categories</CardTitle>
                     <div className="relative mt-2">
-                      <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-200" />
+                      <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-700" />
                       <Input
                         placeholder="Search endpoints..."
                         value={searchQuery}
@@ -541,7 +541,7 @@ export function APIDocumentation() {
                             {getCategoryIcon(category.icon)}
                             <div>
                               <p className="font-medium">{category.name}</p>
-                              <p className="text-xs text-gray-300">
+                              <p className="text-xs text-gray-700">
                                 {category.endpoints.length} endpoints
                               </p>
                             </div>
@@ -599,10 +599,10 @@ export function APIDocumentation() {
                               {endpoint.deprecated && (
                                 <Badge variant="destructive">Deprecated</Badge>
                               )}
-                              <ChevronRight className="h-4 w-4 text-gray-200" />
+                              <ChevronRight className="h-4 w-4 text-gray-700" />
                             </div>
                           </div>
-                          <p className="text-sm text-gray-200 mt-2">{endpoint.description}</p>
+                          <p className="text-sm text-gray-700 mt-2">{endpoint.description}</p>
                         </div>
                       ))}
                     </div>
@@ -689,15 +689,15 @@ export function APIDocumentation() {
             <div>
               <h4 className="font-semibold mb-3">Resources</h4>
               <div className="space-y-2">
-                <a href="#" className="text-sm text-gray-200 hover:text-blue-600 flex items-center gap-1">
+                <a href="#" className="text-sm text-gray-700 hover:text-blue-600 flex items-center gap-1">
                   <ExternalLink className="h-3 w-3" />
                   API Status
                 </a>
-                <a href="#" className="text-sm text-gray-200 hover:text-blue-600 flex items-center gap-1">
+                <a href="#" className="text-sm text-gray-700 hover:text-blue-600 flex items-center gap-1">
                   <ExternalLink className="h-3 w-3" />
                   Changelog
                 </a>
-                <a href="#" className="text-sm text-gray-200 hover:text-blue-600 flex items-center gap-1">
+                <a href="#" className="text-sm text-gray-700 hover:text-blue-600 flex items-center gap-1">
                   <ExternalLink className="h-3 w-3" />
                   Support
                 </a>
@@ -706,18 +706,18 @@ export function APIDocumentation() {
             <div>
               <h4 className="font-semibold mb-3">SDKs & Libraries</h4>
               <div className="space-y-2">
-                <a href="#" className="text-sm text-gray-200 hover:text-blue-600">JavaScript/TypeScript</a>
-                <a href="#" className="text-sm text-gray-200 hover:text-blue-600">Python</a>
-                <a href="#" className="text-sm text-gray-200 hover:text-blue-600">PHP</a>
+                <a href="#" className="text-sm text-gray-700 hover:text-blue-600">JavaScript/TypeScript</a>
+                <a href="#" className="text-sm text-gray-700 hover:text-blue-600">Python</a>
+                <a href="#" className="text-sm text-gray-700 hover:text-blue-600">PHP</a>
               </div>
             </div>
             <div>
               <h4 className="font-semibold mb-3">API Health</h4>
               <div className="flex items-center gap-2">
                 <Activity className="h-4 w-4 text-green-500" />
-                <span className="text-sm text-gray-200">All systems operational</span>
+                <span className="text-sm text-gray-700">All systems operational</span>
               </div>
-              <p className="text-xs text-gray-300 mt-2">
+              <p className="text-xs text-gray-700 mt-2">
                 Response time: 145ms | Uptime: 99.99%
               </p>
             </div>

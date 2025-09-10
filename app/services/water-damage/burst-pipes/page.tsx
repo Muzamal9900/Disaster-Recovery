@@ -171,7 +171,7 @@ export default function BurstPipesPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Burst Pipe Emergency Services Brisbane
             </h1>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-blue-800">
               24/7 emergency response for burst pipes and water damage. Fast water extraction, 
               professional drying, and complete restoration across Queensland.
             </p>
@@ -226,7 +226,7 @@ export default function BurstPipesPage() {
                     </div>
                     <div>
                       <h3 className="font-bold mb-1">{item.action}</h3>
-                      <p className="text-sm text-gray-200">{item.details}</p>
+                      <p className="text-sm text-gray-700">{item.details}</p>
                     </div>
                   </div>
                 </Card>
@@ -251,7 +251,7 @@ export default function BurstPipesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold mb-4">Common Burst Pipe Locations</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Understanding where pipes commonly fail helps with prevention and quick response
             </p>
           </div>
@@ -264,12 +264,12 @@ export default function BurstPipesPage() {
                 </div>
                 <div className="space-y-3">
                   <div>
-                    <p className="text-sm font-semibold text-gray-200 mb-1">Risk Areas:</p>
-                    <p className="text-sm text-gray-200">{item.risks}</p>
+                    <p className="text-sm font-semibold text-gray-700 mb-1">Risk Areas:</p>
+                    <p className="text-sm text-gray-700">{item.risks}</p>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-200 mb-1">Potential Damage:</p>
-                    <p className="text-sm text-gray-200">{item.damage}</p>
+                    <p className="text-sm font-semibold text-gray-700 mb-1">Potential Damage:</p>
+                    <p className="text-sm text-gray-700">{item.damage}</p>
                   </div>
                 </div>
               </Card>
@@ -283,7 +283,7 @@ export default function BurstPipesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold mb-4">Our Burst Pipe Restoration Process</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Systematic approach to minimize damage and restore your property quickly
             </p>
           </div>
@@ -296,28 +296,28 @@ export default function BurstPipesPage() {
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold">Immediate Dispatch</p>
-                      <p className="text-sm text-gray-200">24/7 teams ready for deployment</p>
+                      <p className="text-sm text-gray-700">24/7 teams ready for deployment</p>
                     </div>
                   </div>
                   <div className="flex gap-3">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold">Source Identification</p>
-                      <p className="text-sm text-gray-200">Locate and stop the water source</p>
+                      <p className="text-sm text-gray-700">Locate and stop the water source</p>
                     </div>
                   </div>
                   <div className="flex gap-3">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold">Water Extraction</p>
-                      <p className="text-sm text-gray-200">Industrial pumps remove standing water</p>
+                      <p className="text-sm text-gray-700">Industrial pumps remove standing water</p>
                     </div>
                   </div>
                   <div className="flex gap-3">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold">Damage Assessment</p>
-                      <p className="text-sm text-gray-200">Document all damage for insurance</p>
+                      <p className="text-sm text-gray-700">Document all damage for insurance</p>
                     </div>
                   </div>
                 </div>
@@ -329,28 +329,28 @@ export default function BurstPipesPage() {
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold">Structural Drying</p>
-                      <p className="text-sm text-gray-200">Dehumidifiers and air movers deployed</p>
+                      <p className="text-sm text-gray-700">Dehumidifiers and air movers deployed</p>
                     </div>
                   </div>
                   <div className="flex gap-3">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold">Antimicrobial Treatment</p>
-                      <p className="text-sm text-gray-200">Prevent mould and bacteria growth</p>
+                      <p className="text-sm text-gray-700">Prevent mould and bacteria growth</p>
                     </div>
                   </div>
                   <div className="flex gap-3">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold">Repairs & Reconstruction</p>
-                      <p className="text-sm text-gray-200">Fix damaged walls, floors, and fixtures</p>
+                      <p className="text-sm text-gray-700">Fix damaged walls, floors, and fixtures</p>
                     </div>
                   </div>
                   <div className="flex gap-3">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold">Final Inspection</p>
-                      <p className="text-sm text-gray-200">Ensure complete restoration quality</p>
+                      <p className="text-sm text-gray-700">Ensure complete restoration quality</p>
                     </div>
                   </div>
                 </div>
@@ -369,19 +369,19 @@ export default function BurstPipesPage() {
                 <Gauge className="inline-block h-8 w-8 text-blue-700 mr-2" />
                 Warning Signs of Pipe Problems
               </h2>
-              <p className="text-center text-gray-200 mb-6">
+              <p className="text-center text-gray-700 mb-6">
                 Early detection can prevent major burst pipe disasters
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 {warningSignsOfPipeFailure.map((sign, index) => (
                   <div key={index} className="flex items-center gap-2">
                     <XCircle className="h-5 w-5 text-blue-700 flex-shrink-0" />
-                    <span className="text-gray-200">{sign}</span>
+                    <span className="text-gray-700">{sign}</span>
                   </div>
                 ))}
               </div>
               <div className="mt-6 text-center">
-                <p className="text-sm text-gray-200 mb-4">
+                <p className="text-sm text-gray-700 mb-4">
                   Notice any of these signs? Get a professional inspection before disaster strikes.
                 </p>
                 <Button 
@@ -423,7 +423,7 @@ export default function BurstPipesPage() {
                     <span className="font-semibold">$15,000 - $40,000+</span>
                   </li>
                 </ul>
-                <p className="text-sm text-gray-200 mt-4">
+                <p className="text-sm text-gray-700 mt-4">
                   *Costs vary based on damage extent and property size
                 </p>
               </Card>
@@ -466,7 +466,7 @@ export default function BurstPipesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold mb-4">24/7 Burst Pipe Response Areas</h2>
-            <p className="text-xl text-gray-200">
+            <p className="text-xl text-gray-700">
               Rapid emergency response across Southeast Queensland
             </p>
           </div>
@@ -474,7 +474,7 @@ export default function BurstPipesPage() {
             {['Brisbane CBD', 'North Brisbane', 'South Brisbane', 'Eastern Suburbs', 'Western Suburbs', 'Gold Coast', 'Sunshine Coast', 'Ipswich', 'Logan', 'Redlands', 'Moreton Bay', 'Toowoomba'].map((area) => (
               <div key={area} className="bg-white p-3 rounded-lg text-center shadow-md hover:shadow-lg transition-shadow">
                 <h3 className="font-semibold">{area}</h3>
-                <p className="text-xs text-gray-200 mt-1">Emergency Response</p>
+                <p className="text-xs text-gray-700 mt-1">Emergency Response</p>
               </div>
             ))}
           </div>
@@ -490,7 +490,7 @@ export default function BurstPipesPage() {
               {faqs.map((faq, index) => (
                 <Card key={index} className="p-6">
                   <h3 className="text-lg font-bold mb-3 text-blue-900">{faq.question}</h3>
-                  <p className="text-gray-200 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                 </Card>
               ))}
             </div>

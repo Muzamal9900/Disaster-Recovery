@@ -68,7 +68,7 @@ export function SupportTickets({ tickets = [] }: SupportTicketsProps) {
       case 'RESOLVED':
         return <CheckCircle className="h-4 w-4 text-green-500" />;
       case 'CLOSED':
-        return <CheckCircle className="h-4 w-4 text-gray-200" />;
+        return <CheckCircle className="h-4 w-4 text-gray-700" />;
       default:
         return null;
     }
@@ -111,7 +111,7 @@ export function SupportTickets({ tickets = [] }: SupportTicketsProps) {
   const renderTicketList = (ticketList: Ticket[]) => (
     <div className="space-y-3">
       {ticketList.length === 0 ? (
-        <div className="text-center py-8 text-gray-300">
+        <div className="text-center py-8 text-gray-700">
           No tickets found
         </div>
       ) : (
@@ -124,9 +124,9 @@ export function SupportTickets({ tickets = [] }: SupportTicketsProps) {
                   <div className="space-y-2">
                     <div>
                       <h4 className="font-semibold text-sm">{ticket.subject}</h4>
-                      <p className="text-sm text-gray-200 mt-1">{ticket.description}</p>
+                      <p className="text-sm text-gray-700 mt-1">{ticket.description}</p>
                     </div>
-                    <div className="flex items-center gap-3 text-xs text-gray-300">
+                    <div className="flex items-center gap-3 text-xs text-gray-700">
                       <span>#{ticket.id}</span>
                       <span>•</span>
                       <span>{ticket.category}</span>
@@ -172,7 +172,7 @@ export function SupportTickets({ tickets = [] }: SupportTicketsProps) {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{mockTickets.length}</div>
-            <p className="text-xs text-gray-200">All time</p>
+            <p className="text-xs text-gray-700">All time</p>
           </CardContent>
         </Card>
 
@@ -182,7 +182,7 @@ export function SupportTickets({ tickets = [] }: SupportTicketsProps) {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{openTickets.length}</div>
-            <p className="text-xs text-gray-200">Awaiting response</p>
+            <p className="text-xs text-gray-700">Awaiting response</p>
           </CardContent>
         </Card>
 
@@ -192,7 +192,7 @@ export function SupportTickets({ tickets = [] }: SupportTicketsProps) {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{inProgressTickets.length}</div>
-            <p className="text-xs text-gray-200">Being resolved</p>
+            <p className="text-xs text-gray-700">Being resolved</p>
           </CardContent>
         </Card>
 
@@ -202,7 +202,7 @@ export function SupportTickets({ tickets = [] }: SupportTicketsProps) {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{resolvedTickets.length}</div>
-            <p className="text-xs text-gray-200">Completed</p>
+            <p className="text-xs text-gray-700">Completed</p>
           </CardContent>
         </Card>
       </div>

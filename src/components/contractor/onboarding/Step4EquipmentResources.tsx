@@ -215,7 +215,7 @@ export default function Step4EquipmentResources({ data, onNext, onBack }: Step4P
     <div className="space-y-8">
       <div>
         <h2 className="text-2xl font-bold text-gray-900">Equipment & Resources</h2>
-        <p className="mt-2 text-gray-200">
+        <p className="mt-2 text-gray-700">
           Detail your equipment inventory, team capabilities, and operational resources
         </p>
       </div>
@@ -562,7 +562,7 @@ export default function Step4EquipmentResources({ data, onNext, onBack }: Step4P
         {/* Facilities */}
         <div className="bg-white p-6 rounded-lg border border-gray-200">
           <h3 className="text-lg font-semibold mb-4 flex items-center">
-            <Home className="mr-2 h-5 w-5 text-gray-200" />
+            <Home className="mr-2 h-5 w-5 text-gray-700" />
             Facilities
           </h3>
           

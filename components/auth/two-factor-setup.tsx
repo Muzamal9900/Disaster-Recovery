@@ -468,7 +468,7 @@ export const TwoFactorSetup: React.FC<TwoFactorSetupProps> = ({
             >
               <Alert className="border-green-200 bg-green-50 dark:bg-green-900/20">
                 <Check className="w-4 h-4 text-green-600" />
-                <AlertDescription className="text-green-800 dark:text-green-200">
+                <AlertDescription className="text-green-800 dark:text-green-700">
                   2FA has been successfully enabled!
                 </AlertDescription>
               </Alert>

@@ -362,12 +362,12 @@ export default function StormDamageGuidePage() {
             className="text-center"
           >
             <div className="flex justify-center mb-6">
-              <Cloud className="w-20 h-20 text-sky-400" />
+              <Cloud className="w-20 h-20 text-sky-600" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Storm Damage Recovery Guide
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-sky-100">
+            <p className="text-xl md:text-2xl mb-8 text-sky-800">
               Comprehensive Storm, Cyclone & Severe Weather Damage Information
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -975,7 +975,7 @@ export default function StormDamageGuidePage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Need Storm Damage Assistance?
             </h2>
-            <p className="text-xl mb-8 text-sky-100">
+            <p className="text-xl mb-8 text-sky-800">
               Connect with certified storm damage restoration specialists across Australia
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

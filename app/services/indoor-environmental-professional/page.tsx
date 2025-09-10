@@ -235,7 +235,7 @@ export default function IndoorEnvironmentalProfessionalPage() {
             <h1 className="text-5xl font-bold mb-6">
               Indoor Environmental Professional Services
             </h1>
-            <p className="text-xl mb-8 text-emerald-100">
+            <p className="text-xl mb-8 text-emerald-800">
               Scientific assessment of your indoor environment. Identifying and resolving health hazards 
               in homes and workplaces through comprehensive testing and expert analysis.
             </p>
@@ -302,7 +302,7 @@ export default function IndoorEnvironmentalProfessionalPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Comprehensive IEP Services</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Scientific investigation of all factors affecting indoor environmental quality and human health
             </p>
           </div>
@@ -333,7 +333,7 @@ export default function IndoorEnvironmentalProfessionalPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">Environmental Health Impacts</h2>
-              <p className="text-xl text-gray-200">
+              <p className="text-xl text-gray-700">
                 Understanding how indoor environments affect human health systems
               </p>
             </div>
@@ -345,7 +345,7 @@ export default function IndoorEnvironmentalProfessionalPage() {
                     <h3 className="text-xl font-bold">{impact.system} System</h3>
                   </div>
                   <div className="mb-4">
-                    <p className="text-sm font-semibold text-gray-200 mb-2">Common Conditions:</p>
+                    <p className="text-sm font-semibold text-gray-700 mb-2">Common Conditions:</p>
                     <div className="flex flex-wrap gap-2">
                       {impact.conditions.map((condition, idx) => (
                         <span key={idx} className="text-xs bg-red-100 text-red-700 px-2 py-1 rounded">
@@ -355,7 +355,7 @@ export default function IndoorEnvironmentalProfessionalPage() {
                     </div>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-200 mb-2">Environmental Triggers:</p>
+                    <p className="text-sm font-semibold text-gray-700 mb-2">Environmental Triggers:</p>
                     <div className="flex flex-wrap gap-2">
                       {impact.triggers.map((trigger, idx) => (
                         <span key={idx} className="text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded">
@@ -376,7 +376,7 @@ export default function IndoorEnvironmentalProfessionalPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">IEP Assessment Process</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Systematic approach to identifying and resolving environmental health issues
             </p>
           </div>
@@ -400,7 +400,7 @@ export default function IndoorEnvironmentalProfessionalPage() {
                           {item.duration}
                         </span>
                       </div>
-                      <p className="text-gray-200">{item.description}</p>
+                      <p className="text-gray-700">{item.description}</p>
                     </Card>
                   </div>
                 </div>
@@ -478,7 +478,7 @@ export default function IndoorEnvironmentalProfessionalPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">IEP Case Studies</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Real examples of how IEP assessments have resolved complex environmental health issues
             </p>
           </div>
@@ -488,7 +488,7 @@ export default function IndoorEnvironmentalProfessionalPage() {
                 Sick Building Syndrome
               </div>
               <h3 className="text-xl font-bold mb-2">Office Building - Brisbane CBD</h3>
-              <p className="text-gray-200 mb-4">
+              <p className="text-gray-700 mb-4">
                 50+ employees experiencing headaches, fatigue, and respiratory issues. IEP assessment revealed 
                 inadequate ventilation, high CO2, and VOCs from new furniture.
               </p>
@@ -504,7 +504,7 @@ export default function IndoorEnvironmentalProfessionalPage() {
                 Hidden Mould
               </div>
               <h3 className="text-xl font-bold mb-2">Family Home - Gold Coast</h3>
-              <p className="text-gray-200 mb-4">
+              <p className="text-gray-700 mb-4">
                 Child with chronic asthma, no visible mould. IEP testing found toxic black mould 
                 (Stachybotrys) in wall cavities from historical water damage.
               </p>
@@ -520,7 +520,7 @@ export default function IndoorEnvironmentalProfessionalPage() {
                 EMF Sensitivity
               </div>
               <h3 className="text-xl font-bold mb-2">Residential Unit - Melbourne</h3>
-              <p className="text-gray-200 mb-4">
+              <p className="text-gray-700 mb-4">
                 Resident with electro-hypersensitivity experiencing sleep disruption and anxiety. 
                 IEP found extreme EMF from smart meters and nearby transformer.
               </p>
@@ -544,7 +544,7 @@ export default function IndoorEnvironmentalProfessionalPage() {
               {faqs.map((faq, index) => (
                 <Card key={index} className="p-6">
                   <h3 className="text-xl font-bold mb-3 text-emerald-900">{faq.question}</h3>
-                  <p className="text-gray-200 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                 </Card>
               ))}
             </div>
@@ -573,7 +573,7 @@ export default function IndoorEnvironmentalProfessionalPage() {
               Download Health Checklist
             </Button>
           </div>
-          <p className="mt-6 text-emerald-200">
+          <p className="mt-6 text-emerald-700">
             Certified Indoor Environmental Professionals - Protecting Australian Health
           </p>
         </div>

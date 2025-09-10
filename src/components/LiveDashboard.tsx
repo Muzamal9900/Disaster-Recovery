@@ -128,8 +128,8 @@ export default function LiveDashboard() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'pending': return 'text-blue-500';
-      case 'dispatched': return 'text-blue-400';
-      case 'in-progress': return 'text-purple-400';
+      case 'dispatched': return 'text-blue-600';
+      case 'in-progress': return 'text-purple-600';
       case 'completed': return 'text-emerald-600';
       default: return 'text-gray-200';
     }
@@ -176,10 +176,10 @@ export default function LiveDashboard() {
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
           {[
-            { label: 'Active Requests', value: stats.activeRequests, colour: 'text-red-400', icon: '🚨' },
-            { label: 'Avg Response', value: stats.avgResponseTime, colour: 'text-blue-400', icon: '⏱️' },
+            { label: 'Active Requests', value: stats.activeRequests, colour: 'text-red-600', icon: '🚨' },
+            { label: 'Avg Response', value: stats.avgResponseTime, colour: 'text-blue-600', icon: '⏱️' },
             { label: 'Techs Available', value: stats.techsAvailable, colour: 'text-emerald-600', icon: '👷' },
-            { label: 'Completed Today', value: stats.completedToday, colour: 'text-purple-400', icon: '✅' }
+            { label: 'Completed Today', value: stats.completedToday, colour: 'text-purple-600', icon: '✅' }
           ].map((stat, index) => (
             <div
               key={index}
@@ -231,7 +231,7 @@ export default function LiveDashboard() {
                       </span>
                       {request.eta && (
                         <span className="text-gray-200">
-                          ETA: <span className="text-blue-400">{request.eta}</span>
+                          ETA: <span className="text-blue-600">{request.eta}</span>
                         </span>
                       )}
                     </div>

@@ -94,7 +94,7 @@ export function KPIPerformanceDashboard() {
     switch (trend) {
       case 'up': return <TrendingUp className="h-4 w-4 text-green-500" />;
       case 'down': return <TrendingDown className="h-4 w-4 text-red-500" />;
-      case 'stable': return <Minus className="h-4 w-4 text-gray-300" />;
+      case 'stable': return <Minus className="h-4 w-4 text-gray-700" />;
     }
   };
 
@@ -175,8 +175,8 @@ export function KPIPerformanceDashboard() {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
         <div className="text-center">
-          <Activity className="h-8 w-8 animate-spin mx-auto text-gray-200" />
-          <p className="text-sm text-gray-300 mt-2">Loading KPI metrics...</p>
+          <Activity className="h-8 w-8 animate-spin mx-auto text-gray-700" />
+          <p className="text-sm text-gray-700 mt-2">Loading KPI metrics...</p>
         </div>
       </div>
     );
@@ -191,7 +191,7 @@ export function KPIPerformanceDashboard() {
             <Activity className="h-6 w-6" />
             KPI Performance Dashboard
           </h2>
-          <p className="text-gray-200 mt-1">
+          <p className="text-gray-700 mt-1">
             Track your performance metrics and quality indicators
           </p>
         </div>
@@ -231,12 +231,12 @@ export function KPIPerformanceDashboard() {
         <CardContent className="pt-6">
           <div className="flex justify-between items-start">
             <div>
-              <p className="text-sm text-gray-200">Overall Performance Score</p>
+              <p className="text-sm text-gray-700">Overall Performance Score</p>
               <div className="flex items-baseline gap-3 mt-2">
                 <span className={`text-5xl font-bold ${getPerformanceColor(metrics.performanceScore)}`}>
                   {metrics.performanceScore}
                 </span>
-                <span className="text-2xl text-gray-200">/100</span>
+                <span className="text-2xl text-gray-700">/100</span>
                 {getTrendIcon(metrics.trend)}
               </div>
               <Progress value={metrics.performanceScore} className="mt-4 h-3" />
@@ -245,7 +245,7 @@ export function KPIPerformanceDashboard() {
               <Badge className={metrics.trend === 'up' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}>
                 {metrics.periodComparison.change > 0 ? '+' : ''}{metrics.periodComparison.change}%
               </Badge>
-              <p className="text-xs text-gray-300 mt-1">vs last period</p>
+              <p className="text-xs text-gray-700 mt-1">vs last period</p>
             </div>
           </div>
         </CardContent>
@@ -262,7 +262,7 @@ export function KPIPerformanceDashboard() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold">{metrics.avgResponseTime}h</p>
-            <p className="text-xs text-gray-300">Target: &lt;2h</p>
+            <p className="text-xs text-gray-700">Target: &lt;2h</p>
             <div className="mt-2">
               {metrics.avgResponseTime <= 2 ? (
                 <Badge className="bg-green-100 text-green-800">On Target</Badge>
@@ -289,7 +289,7 @@ export function KPIPerformanceDashboard() {
                   className={`h-4 w-4 ${
                     i < Math.floor(metrics.customerSatisfactionScore)
                       ? 'fill-blue-500 text-blue-500'
-                      : 'text-gray-300'
+                      : 'text-gray-700'
                   }`}
                 />
               ))}
@@ -321,18 +321,18 @@ export function KPIPerformanceDashboard() {
             <div className="flex justify-between">
               <div>
                 <p className="text-sm text-green-600">${metrics.totalBonuses}</p>
-                <p className="text-xs text-gray-300">Bonuses</p>
+                <p className="text-xs text-gray-700">Bonuses</p>
               </div>
               <div>
                 <p className="text-sm text-red-600">${metrics.totalFines}</p>
-                <p className="text-xs text-gray-300">Fines</p>
+                <p className="text-xs text-gray-700">Fines</p>
               </div>
             </div>
             <div className="mt-2">
               <p className="text-lg font-bold">
                 ${metrics.totalBonuses - metrics.totalFines}
               </p>
-              <p className="text-xs text-gray-300">Net Impact</p>
+              <p className="text-xs text-gray-700">Net Impact</p>
             </div>
           </CardContent>
         </Card>
@@ -424,15 +424,15 @@ export function KPIPerformanceDashboard() {
               <div className="grid grid-cols-3 gap-4 mt-6">
                 <div className="text-center p-3 bg-gray-50 rounded-lg">
                   <p className="text-2xl font-bold text-green-600">92%</p>
-                  <p className="text-xs text-gray-200">Would Recommend</p>
+                  <p className="text-xs text-gray-700">Would Recommend</p>
                 </div>
                 <div className="text-center p-3 bg-gray-50 rounded-lg">
                   <p className="text-2xl font-bold">247</p>
-                  <p className="text-xs text-gray-200">Total Reviews</p>
+                  <p className="text-xs text-gray-700">Total Reviews</p>
                 </div>
                 <div className="text-center p-3 bg-gray-50 rounded-lg">
                   <p className="text-2xl font-bold">4.7</p>
-                  <p className="text-xs text-gray-200">Average Rating</p>
+                  <p className="text-xs text-gray-700">Average Rating</p>
                 </div>
               </div>
             </CardContent>
@@ -488,14 +488,14 @@ export function KPIPerformanceDashboard() {
                         <CheckCircle className="h-4 w-4 text-green-600" />
                         <span className="text-sm">Perfect report submitted - Job #1234</span>
                       </div>
-                      <span className="text-xs text-gray-300">2 hours ago</span>
+                      <span className="text-xs text-gray-700">2 hours ago</span>
                     </div>
                     <div className="flex items-center justify-between p-2 bg-yellow-50 rounded">
                       <div className="flex items-center gap-2">
                         <AlertTriangle className="h-4 w-4 text-yellow-600" />
                         <span className="text-sm">Missing photos - Job #1233</span>
                       </div>
-                      <span className="text-xs text-gray-300">1 day ago</span>
+                      <span className="text-xs text-gray-700">1 day ago</span>
                     </div>
                   </div>
                 </div>

@@ -277,7 +277,7 @@ export function AdminNotificationManager() {
             <Settings className="h-6 w-6" />
             Notification Manager
           </h2>
-          <p className="text-gray-200 mt-1">
+          <p className="text-gray-700 mt-1">
             Configure automated notifications and send manual alerts
           </p>
         </div>
@@ -324,10 +324,10 @@ export function AdminNotificationManager() {
                                 {rule.isActive ? (
                                   <CheckCircle className="h-3 w-3 text-green-500" />
                                 ) : (
-                                  <XCircle className="h-3 w-3 text-gray-200" />
+                                  <XCircle className="h-3 w-3 text-gray-700" />
                                 )}
                               </div>
-                              <p className="text-xs text-gray-300 mt-1">
+                              <p className="text-xs text-gray-700 mt-1">
                                 {rule.description || getTriggerDescription(rule.trigger)}
                               </p>
                               <div className="flex items-center gap-2 mt-2">
@@ -533,8 +533,8 @@ export function AdminNotificationManager() {
                 </Card>
               ) : (
                 <Card>
-                  <CardContent className="py-12 text-center text-gray-300">
-                    <Bell className="h-12 w-12 mx-auto mb-3 text-gray-300" />
+                  <CardContent className="py-12 text-center text-gray-700">
+                    <Bell className="h-12 w-12 mx-auto mb-3 text-gray-700" />
                     <p>Select a rule to view details</p>
                   </CardContent>
                 </Card>
@@ -720,7 +720,7 @@ export function AdminNotificationManager() {
                   value={manualNotification.scheduleFor}
                   onChange={(e) => setManualNotification({ ...manualNotification, scheduleFor: e.target.value })}
                 />
-                <p className="text-xs text-gray-300 mt-1">Leave empty to send immediately</p>
+                <p className="text-xs text-gray-700 mt-1">Leave empty to send immediately</p>
               </div>
 
               {/* Send Button */}
@@ -762,7 +762,7 @@ export function AdminNotificationManager() {
                     <div key={rule.id} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div>
                         <p className="font-medium text-sm">{rule.name}</p>
-                        <p className="text-xs text-gray-300">{getTriggerDescription(rule.trigger)}</p>
+                        <p className="text-xs text-gray-700">{getTriggerDescription(rule.trigger)}</p>
                       </div>
                       <div className="flex items-center gap-2">
                         <Badge variant="outline" className="text-xs">
@@ -791,19 +791,19 @@ export function AdminNotificationManager() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-sm">
                     <span>Compliance Reminder</span>
-                    <span className="text-gray-300">15 sent • 2m ago</span>
+                    <span className="text-gray-700">15 sent • 2m ago</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span>Job Alert</span>
-                    <span className="text-gray-300">8 sent • 15m ago</span>
+                    <span className="text-gray-700">8 sent • 15m ago</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span>Invoice Reminder</span>
-                    <span className="text-gray-300">23 sent • 1h ago</span>
+                    <span className="text-gray-700">23 sent • 1h ago</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span>System Announcement</span>
-                    <span className="text-gray-300">142 sent • 3h ago</span>
+                    <span className="text-gray-700">142 sent • 3h ago</span>
                   </div>
                 </div>
               </CardContent>
@@ -859,8 +859,8 @@ export function AdminNotificationManager() {
                       <XCircle className="h-4 w-4 text-red-500 mt-0.5" />
                       <div>
                         <p className="text-sm font-medium">SMS Delivery Failed</p>
-                        <p className="text-xs text-gray-200">Invalid phone number format</p>
-                        <p className="text-xs text-gray-300 mt-1">5 minutes ago</p>
+                        <p className="text-xs text-gray-700">Invalid phone number format</p>
+                        <p className="text-xs text-gray-700 mt-1">5 minutes ago</p>
                       </div>
                     </div>
                   </div>
@@ -869,8 +869,8 @@ export function AdminNotificationManager() {
                       <AlertCircle className="h-4 w-4 text-blue-600 mt-0.5" />
                       <div>
                         <p className="text-sm font-medium">Email Bounce</p>
-                        <p className="text-xs text-gray-200">Mailbox full</p>
-                        <p className="text-xs text-gray-300 mt-1">1 hour ago</p>
+                        <p className="text-xs text-gray-700">Mailbox full</p>
+                        <p className="text-xs text-gray-700 mt-1">1 hour ago</p>
                       </div>
                     </div>
                   </div>

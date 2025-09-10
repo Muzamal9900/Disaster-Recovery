@@ -61,7 +61,7 @@ const FooterLink: React.FC<FooterLinkProps> = ({
   external = false, 
   className = '' 
 }) => {
-  const linkClasses = `text-neutral-300 hover:text-white transition-colours duration-150 flex items-center gap-1 ${className}`;
+  const linkClasses = `text-neutral-700 hover:text-white transition-colours duration-150 flex items-center gap-1 ${className}`;
   
   if (external) {
     return (
@@ -210,7 +210,7 @@ const Footer: React.FC = () => {
                 <div className={`w-3 h-3 rounded-full animate-pulse ${isAvailable ? 'bg-emerald-500' : 'bg-red-400'}`}></div>
               </div>
               <p className="text-xl opacity-95">
-                Teams ready to respond within <strong className="text-yellow-300">60 minutes</strong> nationwide
+                Teams ready to respond within <strong className="text-yellow-700">60 minutes</strong> nationwide
               </p>
             </div>
             
@@ -269,14 +269,14 @@ const Footer: React.FC = () => {
             <div className="lg:col-span-4">
               <div className="mb-6">
                 <FooterLogos darkMode={true} />
-                <div className="mt-4 text-sm text-red-400 font-semibold">
+                <div className="mt-4 text-sm text-red-600 font-semibold">
                   Emergency Response Specialists
                 </div>
               </div>
               
               <div className="bg-gray-800 rounded-lg p-6 mb-6">
                 <h3 className="text-lg font-bold mb-4 flex items-center">
-                  <Building2 className="h-5 w-5 mr-2 text-blue-400" />
+                  <Building2 className="h-5 w-5 mr-2 text-blue-600" />
                   About Our Mission
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed mb-4">
@@ -286,7 +286,7 @@ const Footer: React.FC = () => {
                 
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-400">15+</div>
+                    <div className="text-2xl font-bold text-blue-600">15+</div>
                     <div className="text-xs text-gray-200">Years Experience</div>
                   </div>
                   <div className="text-center">
@@ -297,7 +297,7 @@ const Footer: React.FC = () => {
                 
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-sm">
-                    <Users className="h-4 w-4 text-blue-400" />
+                    <Users className="h-4 w-4 text-blue-600" />
                     <span>50+ Certified Technicians</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
@@ -336,8 +336,8 @@ const Footer: React.FC = () => {
                     { icon: Facebook, href: "https://facebook.com/DisasterRecoveryAustralia", colour: "hover:text-blue-500" },
                     { icon: Instagram, href: "https://instagram.com/disasterrecoveryau", colour: "hover:text-pink-500" },
                     { icon: Youtube, href: "https://youtube.com/c/DisasterRecoveryAustralia", colour: "hover:text-red-500" },
-                    { icon: Linkedin, href: "https://linkedin.com/company/disaster-recovery-australia", colour: "hover:text-blue-400" },
-                    { icon: Twitter, href: "https://twitter.com/DisasterRecovAU", colour: "hover:text-blue-400" }
+                    { icon: Linkedin, href: "https://linkedin.com/company/disaster-recovery-australia", colour: "hover:text-blue-600" },
+                    { icon: Twitter, href: "https://twitter.com/DisasterRecovAU", colour: "hover:text-blue-600" }
                   ].map(({ icon: Icon, href, colour }, index) => (
                     <a key={index} href={href} target="_blank" rel="noopener noreferrer" 
                        className={`p-2 bg-gray-700 rounded-lg transition-all duration-300 ${colour} hover:scale-110`}>
@@ -351,7 +351,7 @@ const Footer: React.FC = () => {
             {/* SERVICE AREAS GRID */}
             <div className="lg:col-span-3">
               <h3 className="text-lg font-bold mb-6 flex items-center">
-                <Wrench className="h-5 w-5 mr-2 text-red-400" />
+                <Wrench className="h-5 w-5 mr-2 text-red-600" />
                 Emergency Services
               </h3>
               
@@ -371,7 +371,7 @@ const Footer: React.FC = () => {
                     <div className="flex-1">
                       <div className="font-medium">{service.name}</div>
                       {service.urgent && (
-                        <div className="text-xs text-red-400 flex items-center gap-1">
+                        <div className="text-xs text-red-600 flex items-center gap-1">
                           <AlertTriangle className="h-3 w-3" />
                           24/7 Emergency
                         </div>
@@ -419,7 +419,7 @@ const Footer: React.FC = () => {
                       <div className="text-sm text-gray-200">Response: {location.time}</div>
                     </div>
                     <div className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      location.status === 'live' ? 'bg-green-500/30 text-emerald-600' : 'bg-blue-500/30 text-blue-400'
+                      location.status === 'live' ? 'bg-green-500/30 text-emerald-600' : 'bg-blue-500/30 text-blue-600'
                     }`}>
                       <div className="flex items-center gap-1">
                         <div className={`w-2 h-2 rounded-full ${
@@ -471,7 +471,7 @@ const Footer: React.FC = () => {
                     <div className="text-xs font-medium">IICRC Certified</div>
                   </div>
                   <div className="p-3 bg-blue-500/10 rounded-lg border border-blue-500/30">
-                    <Shield className="h-8 w-8 mx-auto mb-2 text-blue-400" />
+                    <Shield className="h-8 w-8 mx-auto mb-2 text-blue-600" />
                     <div className="text-xs font-medium">RIA Member</div>
                   </div>
                   <div className="p-3 bg-green-500/10 rounded-lg border border-green-500/30">
@@ -479,7 +479,7 @@ const Footer: React.FC = () => {
                     <div className="text-xs font-medium">ISO 9001</div>
                   </div>
                   <div className="p-3 bg-red-500/10 rounded-lg border border-red-600/30">
-                    <AlertTriangle className="h-8 w-8 mx-auto mb-2 text-red-400" />
+                    <AlertTriangle className="h-8 w-8 mx-auto mb-2 text-red-600" />
                     <div className="text-xs font-medium">HAZMAT Licensed</div>
                   </div>
                 </div>
@@ -562,7 +562,7 @@ const Footer: React.FC = () => {
               {/* Legal & Compliance */}
               <div>
                 <h4 className="text-white font-semibold mb-4 flex items-center">
-                  <FileText className="h-5 w-5 mr-2 text-blue-400" />
+                  <FileText className="h-5 w-5 mr-2 text-blue-600" />
                   Legal & Compliance
                 </h4>
                 
@@ -617,7 +617,7 @@ const Footer: React.FC = () => {
                     href="https://zenith.engineer" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                    className="text-blue-600 hover:text-blue-700 transition-colors"
                   >
                     Zenith
                   </a>

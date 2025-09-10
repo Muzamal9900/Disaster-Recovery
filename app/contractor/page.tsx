@@ -56,10 +56,10 @@ export default function ContractorPortalLanding() {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
-                <Home className="h-6 w-6 mr-2 text-gray-200" />
-                <span className="text-gray-200 hover:text-gray-900">Home</span>
+                <Home className="h-6 w-6 mr-2 text-gray-700" />
+                <span className="text-gray-700 hover:text-gray-900">Home</span>
               </Link>
-              <span className="mx-3 text-gray-200">/</span>
+              <span className="mx-3 text-gray-700">/</span>
               <span className="font-semibold text-gray-900">Contractor Portal</span>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function ContractorPortalLanding() {
                   <span className="block text-blue-600">Management Portal</span>
                 </h1>
                 
-                <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl">
+                <p className="mt-3 text-base text-gray-700 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl">
                   Access your dashboard, manage jobs, update certifications, and grow your restoration business.
                 </p>
                 
@@ -123,7 +123,7 @@ export default function ContractorPortalLanding() {
                       <Shield className="h-6 w-6 text-green-500 mr-2" />
                       <h3 className="text-lg font-semibold">Demo Access Available</h3>
                     </div>
-                    <p className="text-gray-200 mb-4">
+                    <p className="text-gray-700 mb-4">
                       Test the contractor portal with our demo account:
                     </p>
                     <div className="bg-gray-50 rounded p-4 text-left">
@@ -158,7 +158,7 @@ export default function ContractorPortalLanding() {
             <h2 className="text-3xl font-extrabold text-gray-900">
               Why Join Our Network?
             </h2>
-            <p className="mt-4 text-lg text-gray-200">
+            <p className="mt-4 text-lg text-gray-700">
               Be part of Leading disaster recovery contractor network
             </p>
           </div>
@@ -172,7 +172,7 @@ export default function ContractorPortalLanding() {
                     <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="mt-4 text-lg font-medium text-gray-900">{feature.title}</h3>
-                  <p className="mt-2 text-sm text-gray-200">{feature.description}</p>
+                  <p className="mt-2 text-sm text-gray-700">{feature.description}</p>
                 </div>
               );
             })}
@@ -192,7 +192,7 @@ export default function ContractorPortalLanding() {
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-200">{benefit}</span>
+                    <span className="text-gray-700">{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -207,7 +207,7 @@ export default function ContractorPortalLanding() {
           <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
             <span className="block">Ready to get started?</span>
           </h2>
-          <p className="mt-4 text-lg leading-6 text-blue-200">
+          <p className="mt-4 text-lg leading-6 text-blue-700">
             Join our network of professional restoration contractors today.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">

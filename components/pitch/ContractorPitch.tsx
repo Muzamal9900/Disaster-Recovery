@@ -92,24 +92,24 @@ export default function ContractorPitch() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="text-4xl font-bold text-green-400 mb-2">$550</div>
+                <div className="text-4xl font-bold text-green-600 mb-2">$550</div>
                 <div className="text-white font-semibold mb-1">KPI 01: First Contact</div>
                 <div className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Released instantly when you contact within 60 mins</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-emerald-400 mb-2">$550</div>
+                <div className="text-4xl font-bold text-emerald-600 mb-2">$550</div>
                 <div className="text-white font-semibold mb-1">KPI 02: Initial Report</div>
                 <div className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Released when report filed in Clean Claims</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">$1,100</div>
+                <div className="text-4xl font-bold text-cyan-600 mb-2">$1,100</div>
                 <div className="text-white font-semibold mb-1">KPI 03: Make Safe</div>
                 <div className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Released upon initial make safe completion</div>
               </div>
             </div>
             <div className="text-center mt-6">
               <p className="text-xl text-white font-semibold">
-                Total: <span className="text-green-400">$2,200</span> in your account within 24 hours
+                Total: <span className="text-green-600">$2,200</span> in your account within 24 hours
               </p>
             </div>
           </motion.div>
@@ -122,7 +122,7 @@ export default function ContractorPitch() {
             className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6"
           >
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-500/20">
-              <DollarSign className="w-10 h-10 text-green-400 mb-4" />
+              <DollarSign className="w-10 h-10 text-green-600 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">No More Waiting</h3>
               <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                 Get paid within 24 hours, not 90 days
@@ -130,7 +130,7 @@ export default function ContractorPitch() {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-emerald-500/20">
-              <Users className="w-10 h-10 text-emerald-400 mb-4" />
+              <Users className="w-10 h-10 text-emerald-600 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Quality Leads</h3>
               <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                 Pre-qualified insurance claims, not tire kickers
@@ -138,7 +138,7 @@ export default function ContractorPitch() {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
-              <FileCheck className="w-10 h-10 text-cyan-400 mb-4" />
+              <FileCheck className="w-10 h-10 text-cyan-600 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Clean Claims</h3>
               <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                 34% better approval rates with our system
@@ -146,7 +146,7 @@ export default function ContractorPitch() {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20">
-              <TrendingUp className="w-10 h-10 text-purple-400 mb-4" />
+              <TrendingUp className="w-10 h-10 text-purple-600 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Grow Your Business</h3>
               <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                 Focus on work, not chasing payments
@@ -163,20 +163,20 @@ export default function ContractorPitch() {
           >
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-gray-600">
               <h3 className="text-xl font-bold text-white mb-2">Lead Generation</h3>
-              <div className="text-3xl font-bold text-green-400 mb-4">$550<span className="text-lg text-white/80">/lead</span></div>
+              <div className="text-3xl font-bold text-green-600 mb-4">$550<span className="text-lg text-white/80">/lead</span></div>
               <p style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Qualified insurance claims delivered directly to you</p>
             </div>
 
             <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl p-6 border border-green-500/50">
               <div className="bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded inline-block mb-2">MOST POPULAR</div>
               <h3 className="text-xl font-bold text-white mb-2">Professional Platform</h3>
-              <div className="text-3xl font-bold text-green-400 mb-4">$299<span className="text-lg text-white/80">/month</span></div>
+              <div className="text-3xl font-bold text-green-600 mb-4">$299<span className="text-lg text-white/80">/month</span></div>
               <p style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Full platform access with Clean Claims integration</p>
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-gray-600">
               <h3 className="text-xl font-bold text-white mb-2">Enterprise</h3>
-              <div className="text-3xl font-bold text-green-400 mb-4">$999<span className="text-lg text-white/80">/month</span></div>
+              <div className="text-3xl font-bold text-green-600 mb-4">$999<span className="text-lg text-white/80">/month</span></div>
               <p style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Priority leads, dedicated support, custom integrations</p>
             </div>
           </motion.div>
@@ -213,19 +213,19 @@ export default function ContractorPitch() {
           >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div>
-                <div className="text-3xl font-bold text-green-400">127+</div>
+                <div className="text-3xl font-bold text-green-600">127+</div>
                 <div style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Active Contractors</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-emerald-400">3,450</div>
+                <div className="text-3xl font-bold text-emerald-600">3,450</div>
                 <div style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Leads Delivered</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-cyan-400">24hrs</div>
+                <div className="text-3xl font-bold text-cyan-600">24hrs</div>
                 <div style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Average Payment Time</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-purple-400">34%</div>
+                <div className="text-3xl font-bold text-purple-600">34%</div>
                 <div style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Better Approval Rate</div>
               </div>
             </div>

@@ -89,7 +89,7 @@ export default function FraudDetectionAdmin() {
       case 'LOW': return 'text-green-600 bg-green-100';
       case 'MEDIUM': return 'text-yellow-600 bg-yellow-100';
       case 'HIGH': return 'text-red-600 bg-red-100';
-      default: return 'text-gray-200 bg-gray-100';
+      default: return 'text-gray-700 bg-gray-100';
     }
   };
 
@@ -98,7 +98,7 @@ export default function FraudDetectionAdmin() {
       case 'COMPLETED': return 'text-green-600 bg-green-100';
       case 'PROCESSING': return 'text-blue-600 bg-blue-100';
       case 'FAILED': return 'text-red-600 bg-red-100';
-      default: return 'text-gray-200 bg-gray-100';
+      default: return 'text-gray-700 bg-gray-100';
     }
   };
 
@@ -107,8 +107,8 @@ export default function FraudDetectionAdmin() {
       case 'APPROVED': return 'text-green-600';
       case 'REJECTED': return 'text-red-600';
       case 'UNDER_REVIEW': return 'text-yellow-600';
-      case 'PENDING': return 'text-gray-200';
-      default: return 'text-gray-200';
+      case 'PENDING': return 'text-gray-700';
+      default: return 'text-gray-700';
     }
   };
 
@@ -120,7 +120,7 @@ export default function FraudDetectionAdmin() {
           <div className="flex justify-between items-start">
             <div>
               <h1 className="text-3xl font-bold text-gray-900 mb-2">Fraud Detection Dashboard</h1>
-              <p className="text-gray-200">
+              <p className="text-gray-700">
                 Monitor and review document authenticity analysis results
               </p>
             </div>
@@ -143,7 +143,7 @@ export default function FraudDetectionAdmin() {
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-200">Total Analysed</p>
+                <p className="text-sm font-medium text-gray-700">Total Analysed</p>
                 <p className="text-3xl font-bold text-gray-900">{statistics.total}</p>
               </div>
               <div className="p-3 bg-blue-100 rounded-full">
@@ -155,7 +155,7 @@ export default function FraudDetectionAdmin() {
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-200">High Risk</p>
+                <p className="text-sm font-medium text-gray-700">High Risk</p>
                 <p className="text-3xl font-bold text-red-600">{statistics.byRiskLevel.HIGH || 0}</p>
               </div>
               <div className="p-3 bg-red-100 rounded-full">
@@ -167,7 +167,7 @@ export default function FraudDetectionAdmin() {
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-200">Medium Risk</p>
+                <p className="text-sm font-medium text-gray-700">Medium Risk</p>
                 <p className="text-3xl font-bold text-yellow-600">{statistics.byRiskLevel.MEDIUM || 0}</p>
               </div>
               <div className="p-3 bg-yellow-100 rounded-full">
@@ -179,7 +179,7 @@ export default function FraudDetectionAdmin() {
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-200">Low Risk</p>
+                <p className="text-sm font-medium text-gray-700">Low Risk</p>
                 <p className="text-3xl font-bold text-green-600">{statistics.byRiskLevel.LOW || 0}</p>
               </div>
               <div className="p-3 bg-green-100 rounded-full">
@@ -191,7 +191,7 @@ export default function FraudDetectionAdmin() {
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-200">Needs Review</p>
+                <p className="text-sm font-medium text-gray-700">Needs Review</p>
                 <p className="text-3xl font-bold text-blue-700">
                   {logs.filter(log => log.reviewRequired).length}
                 </p>
@@ -207,7 +207,7 @@ export default function FraudDetectionAdmin() {
         <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
           <div className="grid md:grid-cols-4 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-200 mb-2">Risk Level</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Risk Level</label>
               <select
                 value={filters.riskLevel}
                 onChange={(e) => setFilters({...filters, riskLevel: e.target.value})}
@@ -221,7 +221,7 @@ export default function FraudDetectionAdmin() {
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-200 mb-2">Document Type</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Document Type</label>
               <select
                 value={filters.documentType}
                 onChange={(e) => setFilters({...filters, documentType: e.target.value})}
@@ -237,7 +237,7 @@ export default function FraudDetectionAdmin() {
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-200 mb-2">Review Status</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Review Status</label>
               <select
                 value={filters.reviewRequired}
                 onChange={(e) => setFilters({...filters, reviewRequired: e.target.value})}
@@ -250,9 +250,9 @@ export default function FraudDetectionAdmin() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-200 mb-2">Search</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Search</label>
               <div className="relative">
-                <Search className="w-4 h-4 text-gray-200 absolute left-3 top-3" />
+                <Search className="w-4 h-4 text-gray-700 absolute left-3 top-3" />
                 <input
                   type="text"
                   value={filters.search}
@@ -271,25 +271,25 @@ export default function FraudDetectionAdmin() {
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Contractor
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Document
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Risk Level
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Confidence
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Status
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Analysis Date
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Actions
                   </th>
                 </tr>
@@ -299,13 +299,13 @@ export default function FraudDetectionAdmin() {
                   <tr>
                     <td colSpan={7} className="px-6 py-12 text-center">
                       <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
-                      <p className="mt-2 text-gray-300">Loading fraud detection logs...</p>
+                      <p className="mt-2 text-gray-700">Loading fraud detection logs...</p>
                     </td>
                   </tr>
                 ) : logs.length === 0 ? (
                   <tr>
                     <td colSpan={7} className="px-6 py-12 text-center">
-                      <p className="text-gray-300">No fraud detection logs found</p>
+                      <p className="text-gray-700">No fraud detection logs found</p>
                     </td>
                   </tr>
                 ) : logs.map((log) => (
@@ -315,7 +315,7 @@ export default function FraudDetectionAdmin() {
                         <div className="text-sm font-medium text-gray-900">
                           {log.contractor.username || 'N/A'}
                         </div>
-                        <div className="text-sm text-gray-300">{log.contractor.email}</div>
+                        <div className="text-sm text-gray-700">{log.contractor.email}</div>
                         <div className={`text-xs font-medium ${getContractorStatusColor(log.contractor.status)}`}>
                           {log.contractor.status.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, l => l.toUpperCase())}
                         </div>
@@ -371,7 +371,7 @@ export default function FraudDetectionAdmin() {
                         )}
                       </div>
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-300">
+                    <td className="px-6 py-4 text-sm text-gray-700">
                       {new Date(log.createdAt).toLocaleDateString('en-AU', {
                         day: '2-digit',
                         month: '2-digit',
@@ -400,7 +400,7 @@ export default function FraudDetectionAdmin() {
           {pagination.pages > 1 && (
             <div className="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
               <div className="flex items-center justify-between">
-                <div className="text-sm text-gray-200">
+                <div className="text-sm text-gray-700">
                   Showing {((pagination.page - 1) * pagination.limit) + 1} to{' '}
                   {Math.min(pagination.page * pagination.limit, pagination.total)} of{' '}
                   {pagination.total} results

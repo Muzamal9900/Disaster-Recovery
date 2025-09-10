@@ -148,7 +148,7 @@ export default function LandingHeader({ demoMode = false, onToggleDemo }: Landin
                 <div className="absolute inset-0 bg-blue-500 rounded-full blur-xl opacity-0 group-hover:opacity-30 transition-opacity" />
               </div>
               <div>
-                <p className="text-xs text-blue-400">AI-Powered Restoration Network</p>
+                <p className="text-xs text-blue-600">AI-Powered Restoration Network</p>
               </div>
             </Link>
 
@@ -182,7 +182,7 @@ export default function LandingHeader({ demoMode = false, onToggleDemo }: Landin
                 }`}>
                   <div className="p-4 border-b border-white/10 bg-gradient-to-r from-blue-500 to-purple-600 bg-opacity-10">
                     <h3 className="font-bold text-white mb-1">Our Services</h3>
-                    <p className="text-sm text-blue-300">24/7 Online Emergency Response</p>
+                    <p className="text-sm text-blue-700">24/7 Online Emergency Response</p>
                   </div>
                   <div className="p-2 grid grid-cols-2 gap-1">
                     {services.map((service, idx) => (
@@ -191,8 +191,8 @@ export default function LandingHeader({ demoMode = false, onToggleDemo }: Landin
                         href={service.href}
                         className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-white/5 transition-colors group"
                       >
-                        <div className="text-blue-400">{service.icon}</div>
-                        <span className="text-sm text-white group-hover:text-blue-300 transition-colors">
+                        <div className="text-blue-600">{service.icon}</div>
+                        <span className="text-sm text-white group-hover:text-blue-700 transition-colors">
                           {service.label}
                         </span>
                       </Link>
@@ -245,7 +245,7 @@ export default function LandingHeader({ demoMode = false, onToggleDemo }: Landin
                         {option.icon}
                         <h3 className="font-bold text-white">{option.label}</h3>
                       </div>
-                      <p className="text-sm text-blue-300">{option.description}</p>
+                      <p className="text-sm text-blue-700">{option.description}</p>
                     </div>
 
                     {/* Dropdown Items */}
@@ -256,11 +256,11 @@ export default function LandingHeader({ demoMode = false, onToggleDemo }: Landin
                           href={item.href}
                           className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors group"
                         >
-                          <div className="text-blue-400">{item.icon}</div>
-                          <span className="text-white group-hover:text-blue-300 transition-colors">
+                          <div className="text-blue-600">{item.icon}</div>
+                          <span className="text-white group-hover:text-blue-700 transition-colors">
                             {item.label}
                           </span>
-                          <ArrowRight className="h-4 w-4 text-gray-300 ml-auto group-hover:text-blue-400 group-hover:translate-x-1 transition-all" />
+                          <ArrowRight className="h-4 w-4 text-gray-300 ml-auto group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
                         </Link>
                       ))}
                     </div>
@@ -287,12 +287,12 @@ export default function LandingHeader({ demoMode = false, onToggleDemo }: Landin
                 </div>
                 <div className="h-4 w-px bg-white/20" />
                 <div className="flex items-center gap-1">
-                  <Users className="h-4 w-4 text-blue-400" />
+                  <Users className="h-4 w-4 text-blue-600" />
                   <span className="text-xs text-white font-bold">115K+</span>
                 </div>
                 <div className="h-4 w-px bg-white/20" />
                 <div className="flex items-center gap-1">
-                  <MapPin className="h-4 w-4 text-purple-400" />
+                  <MapPin className="h-4 w-4 text-purple-600" />
                   <span className="text-xs text-white font-bold">AU-Wide</span>
                 </div>
               </div>
@@ -334,7 +334,7 @@ export default function LandingHeader({ demoMode = false, onToggleDemo }: Landin
             <div className="space-y-4">
               {/* Services Section for Mobile */}
               <div>
-                <h3 className="text-xs uppercase tracking-wider text-blue-400 mb-2 px-4">Services</h3>
+                <h3 className="text-xs uppercase tracking-wider text-blue-600 mb-2 px-4">Services</h3>
                 <div className="grid grid-cols-2 gap-2">
                   {services.map((service, idx) => (
                     <Link
@@ -343,7 +343,7 @@ export default function LandingHeader({ demoMode = false, onToggleDemo }: Landin
                       onClick={() => setMobileMenuOpen(false)}
                       className="flex items-center gap-2 p-3 rounded-lg bg-white/5 border border-white/10"
                     >
-                      <div className="text-blue-400">{service.icon}</div>
+                      <div className="text-blue-600">{service.icon}</div>
                       <span className="text-sm text-white">{service.label}</span>
                     </Link>
                   ))}
@@ -353,7 +353,7 @@ export default function LandingHeader({ demoMode = false, onToggleDemo }: Landin
               <div className="h-px bg-white/10" />
               
               {/* Main Options for Mobile */}
-              <h3 className="text-xs uppercase tracking-wider text-blue-400 mb-2 px-4">Quick Access</h3>
+              <h3 className="text-xs uppercase tracking-wider text-blue-600 mb-2 px-4">Quick Access</h3>
               {navigationOptions.map((option) => (
                 <div key={option.id}>
                   <Link
@@ -364,7 +364,7 @@ export default function LandingHeader({ demoMode = false, onToggleDemo }: Landin
                     <div className="text-white">{option.icon}</div>
                     <div className="flex-1">
                       <h3 className="font-bold text-white">{option.label}</h3>
-                      <p className="text-sm text-blue-300">{option.description}</p>
+                      <p className="text-sm text-blue-700">{option.description}</p>
                     </div>
                     <ArrowRight className="h-5 w-5 text-white/50" />
                   </Link>

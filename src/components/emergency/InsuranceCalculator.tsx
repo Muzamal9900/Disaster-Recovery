@@ -105,7 +105,7 @@ export default function InsuranceCalculator() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Insurance Coverage Calculator
             </h2>
-            <p className="text-xl text-blue-200">
+            <p className="text-xl text-blue-700">
               Check your estimated insurance coverage instantly
             </p>
           </div>

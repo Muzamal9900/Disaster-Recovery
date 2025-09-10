@@ -86,7 +86,7 @@ export default function FireDamageChecklistPage() {
                 Fire Damage Emergency Checklist
               </h1>
             </div>
-            <p className="text-xl text-orange-100">
+            <p className="text-xl text-orange-800">
               Critical safety and recovery steps after a fire incident
             </p>
             <div className="mt-6 bg-red-800 rounded-lg p-4">

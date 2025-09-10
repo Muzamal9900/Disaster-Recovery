@@ -92,8 +92,8 @@ export default function DisastersPage() {
                   </span>
                 </div>
                 <h2 className="text-2xl font-bold mb-3">{disaster.name}</h2>
-                <p className="text-gray-200 mb-4">{disaster.description}</p>
-                <div className="text-sm text-gray-300 mb-4">
+                <p className="text-gray-700 mb-4">{disaster.description}</p>
+                <div className="text-sm text-gray-700 mb-4">
                   Regions: {disaster.regions.slice(0, 2).join(', ')}
                   {disaster.regions.length > 2 && ` +${disaster.regions.length - 2} more`}
                 </div>

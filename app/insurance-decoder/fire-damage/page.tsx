@@ -172,7 +172,7 @@ export default function FireDamageInsurancePage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Fire Damage Insurance Guide
             </h1>
-            <p className="text-xl text-orange-100 max-w-3xl">
+            <p className="text-xl text-orange-800 max-w-3xl">
               Complete guide to fire insurance claims, coverage types, and maximizing your settlement
             </p>
           </motion.div>
@@ -216,7 +216,7 @@ export default function FireDamageInsurancePage() {
                 <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white p-6">
                   <Home className="w-10 h-10 mb-3" />
                   <h3 className="text-xl font-bold">{coverage.title}</h3>
-                  <p className="text-orange-100 text-sm mt-2">{coverage.description}</p>
+                  <p className="text-orange-800 text-sm mt-2">{coverage.description}</p>
                 </div>
                 <div className="p-6">
                   <ul className="space-y-2">
@@ -412,7 +412,7 @@ export default function FireDamageInsurancePage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Need Help with Your Fire Damage Claim?
           </h2>
-          <p className="text-xl mb-8 text-orange-100">
+          <p className="text-xl mb-8 text-orange-800">
             Our certified contractors work directly with insurance companies
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

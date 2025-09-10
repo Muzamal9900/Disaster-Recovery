@@ -196,7 +196,7 @@ export function Step3Compliance({ data, updateData, errors }: Step3CompliancePro
           <div className="flex items-center justify-between">
             <div>
               <h3 className="font-semibold text-lg">Compliance Score</h3>
-              <p className="text-sm text-gray-200 mt-1">
+              <p className="text-sm text-gray-700 mt-1">
                 Based on uploaded certifications
               </p>
             </div>
@@ -209,7 +209,7 @@ export function Step3Compliance({ data, updateData, errors }: Step3CompliancePro
                     className={`h-4 w-4 ${
                       i < Math.floor(complianceScore() / 20) 
                         ? 'fill-blue-500 text-blue-500' 
-                        : 'text-gray-300'
+                        : 'text-gray-700'
                     }`}
                   />
                 ))}
@@ -319,18 +319,18 @@ export function Step3Compliance({ data, updateData, errors }: Step3CompliancePro
                   <>
                     <CheckCircle className="h-8 w-8 text-green-600 mb-2" />
                     <span className="text-sm font-medium">{cpp40421File.name}</span>
-                    <span className="text-xs text-gray-300 mt-1">Click to replace</span>
+                    <span className="text-xs text-gray-700 mt-1">Click to replace</span>
                   </>
                 ) : (
                   <>
-                    <Upload className="h-8 w-8 text-gray-200 mb-2" />
-                    <span className="text-sm text-gray-200">Click to upload certificate</span>
-                    <span className="text-xs text-gray-200 mt-1">PDF or image file</span>
+                    <Upload className="h-8 w-8 text-gray-700 mb-2" />
+                    <span className="text-sm text-gray-700">Click to upload certificate</span>
+                    <span className="text-xs text-gray-700 mt-1">PDF or image file</span>
                   </>
                 )}
               </label>
             </div>
-            <p className="text-xs text-gray-300">
+            <p className="text-xs text-gray-700">
               Verifies the contractor meets national industry standards
             </p>
           </div>
@@ -364,7 +364,7 @@ export function Step3Compliance({ data, updateData, errors }: Step3CompliancePro
                   <ExternalLink className="h-3 w-3" />
                   Find IICRC Approved Training Schools
                 </a>
-                <p className="text-xs text-gray-200 mt-2">
+                <p className="text-xs text-gray-700 mt-2">
                   Access the official directory of IICRC approved training providers worldwide, 
                   including schools offering courses in Australia and New Zealand.
                 </p>
@@ -455,7 +455,7 @@ export function Step3Compliance({ data, updateData, errors }: Step3CompliancePro
                         </div>
                       ) : (
                         <div className="flex items-center gap-2">
-                          <Upload className="h-4 w-4 text-gray-200" />
+                          <Upload className="h-4 w-4 text-gray-700" />
                           <span className="text-xs">Upload</span>
                         </div>
                       )}
@@ -476,7 +476,7 @@ export function Step3Compliance({ data, updateData, errors }: Step3CompliancePro
             Add Another IICRC Certification
           </Button>
           
-          <p className="text-xs text-gray-300">
+          <p className="text-xs text-gray-700">
             Ensures advanced technical qualifications are held
           </p>
         </CardContent>
@@ -612,18 +612,18 @@ export function Step3Compliance({ data, updateData, errors }: Step3CompliancePro
                   <>
                     <CheckCircle className="h-8 w-8 text-green-600 mb-2" />
                     <span className="text-sm font-medium">{association.file.name}</span>
-                    <span className="text-xs text-gray-300 mt-1">Click to replace</span>
+                    <span className="text-xs text-gray-700 mt-1">Click to replace</span>
                   </>
                 ) : (
                   <>
-                    <Upload className="h-8 w-8 text-gray-200 mb-2" />
-                    <span className="text-sm text-gray-200">Click to upload membership certificate</span>
-                    <span className="text-xs text-gray-200 mt-1">PDF or image file</span>
+                    <Upload className="h-8 w-8 text-gray-700 mb-2" />
+                    <span className="text-sm text-gray-700">Click to upload membership certificate</span>
+                    <span className="text-xs text-gray-700 mt-1">PDF or image file</span>
                   </>
                 )}
               </label>
             </div>
-            <p className="text-xs text-gray-300">
+            <p className="text-xs text-gray-700">
               Verifies connection to established industry bodies
             </p>
           </div>
@@ -666,7 +666,7 @@ export function Step3Compliance({ data, updateData, errors }: Step3CompliancePro
                   <ExternalLink className="h-3 w-3" />
                   View Available CARSI Courses
                 </a>
-                <p className="text-xs text-gray-200 mt-2">
+                <p className="text-xs text-gray-700 mt-2">
                   CARSI provides AI-powered compliance training and continuing education units (CEUs) 
                   for restoration professionals.
                 </p>
@@ -713,18 +713,18 @@ export function Step3Compliance({ data, updateData, errors }: Step3CompliancePro
                   <>
                     <CheckCircle className="h-8 w-8 text-green-600 mb-2" />
                     <span className="text-sm font-medium">{carsiFile.name}</span>
-                    <span className="text-xs text-gray-300 mt-1">Click to replace</span>
+                    <span className="text-xs text-gray-700 mt-1">Click to replace</span>
                   </>
                 ) : (
                   <>
-                    <Upload className="h-8 w-8 text-gray-200 mb-2" />
-                    <span className="text-sm text-gray-200">Click to upload CARSI record</span>
-                    <span className="text-xs text-gray-200 mt-1">PDF or image file</span>
+                    <Upload className="h-8 w-8 text-gray-700 mb-2" />
+                    <span className="text-sm text-gray-700">Click to upload CARSI record</span>
+                    <span className="text-xs text-gray-700 mt-1">PDF or image file</span>
                   </>
                 )}
               </label>
             </div>
-            <p className="text-xs text-gray-300">
+            <p className="text-xs text-gray-700">
               Tracks ongoing continuing education
             </p>
           </div>
@@ -802,7 +802,7 @@ export function Step3Compliance({ data, updateData, errors }: Step3CompliancePro
                         </>
                       ) : (
                         <>
-                          <Upload className="h-6 w-6 text-gray-200 mb-1" />
+                          <Upload className="h-6 w-6 text-gray-700 mb-1" />
                           <span className="text-xs">Upload certificate</span>
                         </>
                       )}

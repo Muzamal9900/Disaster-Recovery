@@ -226,12 +226,12 @@ export default function BrisbaneLocationPage() {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Disaster Recovery Brisbane
-                <span className="block text-blue-300 text-3xl md:text-4xl mt-2">
+                <span className="block text-blue-700 text-3xl md:text-4xl mt-2">
                   Queensland&apos;s Flood & Storm Damage Specialists Since 1974
                 </span>
               </h1>
               
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              <p className="text-xl text-blue-800 mb-8 leading-relaxed">
                 From Brisbane River floods to severe storm cells - our IICRC-certified technicians 
                 provide <strong>45-minute emergency response</strong> across Greater Brisbane. 
                 With extensive experience in the 2011 and 2022 floods, we understand Brisbane&apos;s 

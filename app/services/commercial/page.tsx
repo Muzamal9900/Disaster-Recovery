@@ -27,7 +27,7 @@ export default function CommercialRestorationPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Commercial Restoration Services
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-blue-800 max-w-3xl mx-auto">
               Professional disaster recovery for businesses with minimal downtime. 
               Expert office, retail, and industrial restoration available 24/7.
             </p>
@@ -188,7 +188,7 @@ export default function CommercialRestorationPage() {
           <h2 className="text-3xl font-bold mb-4">
             Commercial Emergency? We're Here 24/7
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-800 mb-8 max-w-3xl mx-auto">
             Don't let disaster shut down your business. Our commercial restoration specialists 
             prioritize business continuity and rapid recovery.
           </p>

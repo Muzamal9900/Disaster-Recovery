@@ -243,12 +243,12 @@ export default function PerthLocationPage() {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Disaster Recovery Perth
-                <span className="block text-orange-300 text-3xl md:text-4xl mt-2">
+                <span className="block text-orange-700 text-3xl md:text-4xl mt-2">
                   Western Australia&apos;s Bushfire & Storm Damage Specialists
                 </span>
               </h1>
               
-              <p className="text-xl text-orange-100 mb-8 leading-relaxed">
+              <p className="text-xl text-orange-800 mb-8 leading-relaxed">
                 From Perth Hills bushfires to Indian Ocean storms - our IICRC-certified technicians 
                 provide <strong>60-minute emergency response</strong> across Greater Perth. 
                 Specialists in extreme heat damage, bushfire recovery, and coastal storm restoration 

@@ -59,7 +59,7 @@ export default function LocationServicePageComponent({ data }: LocationServicePa
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 {title}
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+              <p className="text-xl md:text-2xl mb-8 text-blue-800">
                 {description}
               </p>
               <div className="flex flex-wrap justify-center gap-4">
@@ -375,7 +375,7 @@ export default function LocationServicePageComponent({ data }: LocationServicePa
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Need {data.service.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')} in {data.city}?
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-blue-800">
               Available 24/7 for emergency response. Insurance approved contractors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

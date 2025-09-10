@@ -117,10 +117,10 @@ export default function EmergencyGuidePage() {
             {Object.entries(emergencySteps).map(([type, steps]) => (
               <div key={type} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  {type === 'water' && <Droplets className="w-6 h-6 text-blue-400" />}
-                  {type === 'fire' && <Flame className="w-6 h-6 text-red-400" />}
-                  {type === 'storm' && <Wind className="w-6 h-6 text-purple-400" />}
-                  {type === 'mould' && <Shield className="w-6 h-6 text-green-400" />}
+                  {type === 'water' && <Droplets className="w-6 h-6 text-blue-600" />}
+                  {type === 'fire' && <Flame className="w-6 h-6 text-red-600" />}
+                  {type === 'storm' && <Wind className="w-6 h-6 text-purple-600" />}
+                  {type === 'mould' && <Shield className="w-6 h-6 text-green-600" />}
                   <h3 className="text-xl font-semibold text-white capitalize">{type} Damage</h3>
                 </div>
                 <ol className="space-y-2">
@@ -129,7 +129,7 @@ export default function EmergencyGuidePage() {
                       <span className="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold">
                         {index + 1}
                       </span>
-                      <span className="text-gray-300">{step}</span>
+                      <span className="text-gray-700">{step}</span>
                     </li>
                   ))}
                 </ol>
@@ -145,8 +145,8 @@ export default function EmergencyGuidePage() {
             {emergencyContacts.map((contact, index) => (
               <div key={index} className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors">
                 <h3 className="text-white font-semibold mb-1">{contact.service}</h3>
-                <p className="text-2xl font-bold text-blue-400 mb-1">{contact.number}</p>
-                <p className="text-gray-200 text-sm">{contact.description}</p>
+                <p className="text-2xl font-bold text-blue-600 mb-1">{contact.number}</p>
+                <p className="text-gray-700 text-sm">{contact.description}</p>
               </div>
             ))}
           </div>
@@ -163,19 +163,19 @@ export default function EmergencyGuidePage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-white/20 rounded-lg p-4">
-              <Zap className="w-6 h-6 text-yellow-300 mb-2" />
+              <Zap className="w-6 h-6 text-yellow-700 mb-2" />
               <h3 className="text-white font-semibold mb-1">Mould Growth</h3>
-              <p className="text-gray-200 text-sm">Starts within 24-48 hours</p>
+              <p className="text-gray-700 text-sm">Starts within 24-48 hours</p>
             </div>
             <div className="bg-white/20 rounded-lg p-4">
-              <Zap className="w-6 h-6 text-yellow-300 mb-2" />
+              <Zap className="w-6 h-6 text-yellow-700 mb-2" />
               <h3 className="text-white font-semibold mb-1">Structural Damage</h3>
-              <p className="text-gray-200 text-sm">Wood swelling and warping</p>
+              <p className="text-gray-700 text-sm">Wood swelling and warping</p>
             </div>
             <div className="bg-white/20 rounded-lg p-4">
-              <Zap className="w-6 h-6 text-yellow-300 mb-2" />
+              <Zap className="w-6 h-6 text-yellow-700 mb-2" />
               <h3 className="text-white font-semibold mb-1">Secondary Damage</h3>
-              <p className="text-gray-200 text-sm">50% cost increase if delayed</p>
+              <p className="text-gray-700 text-sm">50% cost increase if delayed</p>
             </div>
           </div>
         </div>
@@ -186,13 +186,13 @@ export default function EmergencyGuidePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {preventionTips.map((category, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <category.icon className="w-8 h-8 text-blue-400 mb-3" />
+                <category.icon className="w-8 h-8 text-blue-600 mb-3" />
                 <h3 className="text-lg font-semibold text-white mb-3">{category.title}</h3>
                 <ul className="space-y-2">
                   {category.tips.map((tip, tipIndex) => (
                     <li key={tipIndex} className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">{tip}</span>
+                      <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">{tip}</span>
                     </li>
                   ))}
                 </ul>
@@ -210,8 +210,8 @@ export default function EmergencyGuidePage() {
               <ul className="space-y-2">
                 {['Insurance policies', 'Property documents', 'Medical records', 'Photo inventory'].map(item => (
                   <li key={item} className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400" />
-                    <span className="text-gray-300 text-sm">{item}</span>
+                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <span className="text-gray-700 text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -221,8 +221,8 @@ export default function EmergencyGuidePage() {
               <ul className="space-y-2">
                 {['First aid kit', 'Flashlights & batteries', 'Emergency water', 'Non-perishable food'].map(item => (
                   <li key={item} className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400" />
-                    <span className="text-gray-300 text-sm">{item}</span>
+                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <span className="text-gray-700 text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -232,8 +232,8 @@ export default function EmergencyGuidePage() {
               <ul className="space-y-2">
                 {['Battery radio', 'Phone chargers', 'Basic tools', 'Plastic sheeting'].map(item => (
                   <li key={item} className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400" />
-                    <span className="text-gray-300 text-sm">{item}</span>
+                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <span className="text-gray-700 text-sm">{item}</span>
                   </li>
                 ))}
               </ul>

@@ -214,7 +214,7 @@ export function DocumentVerification() {
         <h2 className="text-xl font-bold">Document Verification</h2>
         <div className="flex gap-3">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-700" />
             <Input
               placeholder="Search documents..."
               value={searchTerm}
@@ -272,7 +272,7 @@ export function DocumentVerification() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-xs text-gray-200">
+              <p className="text-xs text-gray-700">
                 {queue.priority === 'urgent' && 'Expiring within 7 days'}
                 {queue.priority === 'high' && 'Insurance & Licenses'}
                 {queue.priority === 'normal' && 'Certifications & ABN'}
@@ -315,12 +315,12 @@ export function DocumentVerification() {
                 {loading ? (
                   <tr>
                     <td colSpan={8} className="text-center p-8">
-                      <Loader2 className="h-8 w-8 animate-spin mx-auto text-gray-200" />
+                      <Loader2 className="h-8 w-8 animate-spin mx-auto text-gray-700" />
                     </td>
                   </tr>
                 ) : filteredDocuments.length === 0 ? (
                   <tr>
-                    <td colSpan={8} className="text-center p-8 text-gray-300">
+                    <td colSpan={8} className="text-center p-8 text-gray-700">
                       No documents found matching your criteria
                     </td>
                   </tr>
@@ -333,14 +333,14 @@ export function DocumentVerification() {
                           <div>
                             <p className="font-medium text-sm">{doc.name}</p>
                             {doc.metadata?.fileSize && (
-                              <p className="text-xs text-gray-300">{doc.metadata.fileSize}</p>
+                              <p className="text-xs text-gray-700">{doc.metadata.fileSize}</p>
                             )}
                           </div>
                         </div>
                       </td>
                       <td className="p-4">
                         <p className="font-medium text-sm">{doc.contractorName}</p>
-                        <p className="text-xs text-gray-200">{doc.companyName}</p>
+                        <p className="text-xs text-gray-700">{doc.companyName}</p>
                       </td>
                       <td className="p-4">
                         <Badge variant="outline" className="capitalize">
@@ -353,14 +353,14 @@ export function DocumentVerification() {
                         </Badge>
                       </td>
                       <td className="p-4">
-                        <p className="text-sm text-gray-200">
+                        <p className="text-sm text-gray-700">
                           {new Date(doc.uploadedAt).toLocaleDateString()}
                         </p>
                       </td>
                       <td className="p-4">
                         {doc.expiryDate ? (
                           <div>
-                            <p className="text-sm text-gray-200">
+                            <p className="text-sm text-gray-700">
                               {new Date(doc.expiryDate).toLocaleDateString()}
                             </p>
                             {new Date(doc.expiryDate) <= new Date(Date.now() + 30 * 24 * 60 * 60 * 1000) && (
@@ -370,7 +370,7 @@ export function DocumentVerification() {
                             )}
                           </div>
                         ) : (
-                          <span className="text-sm text-gray-200">N/A</span>
+                          <span className="text-sm text-gray-700">N/A</span>
                         )}
                       </td>
                       <td className="p-4">
@@ -445,19 +445,19 @@ export function DocumentVerification() {
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Label className="text-sm text-gray-200">Document</Label>
+                  <Label className="text-sm text-gray-700">Document</Label>
                   <p className="font-medium">{selectedDocument.name}</p>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-200">Type</Label>
+                  <Label className="text-sm text-gray-700">Type</Label>
                   <p className="font-medium capitalize">{selectedDocument.type}</p>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-200">Contractor</Label>
+                  <Label className="text-sm text-gray-700">Contractor</Label>
                   <p className="font-medium">{selectedDocument.contractorName}</p>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-200">Company</Label>
+                  <Label className="text-sm text-gray-700">Company</Label>
                   <p className="font-medium">{selectedDocument.companyName}</p>
                 </div>
               </div>
@@ -493,7 +493,7 @@ export function DocumentVerification() {
                     View Full Document
                   </Button>
                 </div>
-                <div className="h-64 bg-white rounded border flex items-center justify-center text-gray-200">
+                <div className="h-64 bg-white rounded border flex items-center justify-center text-gray-700">
                   Document preview would appear here
                 </div>
               </div>
@@ -589,11 +589,11 @@ export function DocumentVerification() {
               <TabsContent value="details" className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <Label className="text-sm text-gray-200">Document Name</Label>
+                    <Label className="text-sm text-gray-700">Document Name</Label>
                     <p className="font-medium">{selectedDocument.name}</p>
                   </div>
                   <div>
-                    <Label className="text-sm text-gray-200">Status</Label>
+                    <Label className="text-sm text-gray-700">Status</Label>
                     <Badge className={getStatusColor(selectedDocument.status)}>
                       {selectedDocument.status}
                     </Badge>
@@ -601,11 +601,11 @@ export function DocumentVerification() {
                   {selectedDocument.verifiedBy && (
                     <>
                       <div>
-                        <Label className="text-sm text-gray-200">Verified By</Label>
+                        <Label className="text-sm text-gray-700">Verified By</Label>
                         <p className="font-medium">{selectedDocument.verifiedBy}</p>
                       </div>
                       <div>
-                        <Label className="text-sm text-gray-200">Verified At</Label>
+                        <Label className="text-sm text-gray-700">Verified At</Label>
                         <p className="font-medium">
                           {new Date(selectedDocument.verifiedAt!).toLocaleString()}
                         </p>
@@ -614,7 +614,7 @@ export function DocumentVerification() {
                   )}
                   {selectedDocument.rejectionReason && (
                     <div className="col-span-2">
-                      <Label className="text-sm text-gray-200">Rejection Reason</Label>
+                      <Label className="text-sm text-gray-700">Rejection Reason</Label>
                       <p className="font-medium text-red-600">{selectedDocument.rejectionReason}</p>
                     </div>
                   )}
@@ -628,21 +628,21 @@ export function DocumentVerification() {
               <TabsContent value="metadata" className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <Label className="text-sm text-gray-200">File Size</Label>
+                    <Label className="text-sm text-gray-700">File Size</Label>
                     <p className="font-medium">{selectedDocument.metadata?.fileSize || 'Unknown'}</p>
                   </div>
                   <div>
-                    <Label className="text-sm text-gray-200">Checksum</Label>
+                    <Label className="text-sm text-gray-700">Checksum</Label>
                     <p className="font-mono text-xs">{selectedDocument.metadata?.checksum || 'N/A'}</p>
                   </div>
                   <div>
-                    <Label className="text-sm text-gray-200">OCR Extracted</Label>
+                    <Label className="text-sm text-gray-700">OCR Extracted</Label>
                     <p className="font-medium">
                       {selectedDocument.metadata?.ocrExtracted ? 'Yes' : 'No'}
                     </p>
                   </div>
                   <div>
-                    <Label className="text-sm text-gray-200">AI Analysed</Label>
+                    <Label className="text-sm text-gray-700">AI Analysed</Label>
                     <p className="font-medium">
                       {selectedDocument.metadata?.aiAnalyzed ? 'Yes' : 'No'}
                     </p>

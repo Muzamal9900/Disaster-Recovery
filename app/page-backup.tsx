@@ -535,7 +535,7 @@ export default function CleanLandingPage() {
             </h2>
             <div className="flex justify-center gap-1 mb-4">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
+                <Star key={i} className="h-6 w-6 text-yellow-600 fill-current" />
               ))}
             </div>
             <p className="text-lg text-gray-200">
@@ -556,7 +556,7 @@ export default function CleanLandingPage() {
                   <CardContent className="p-6">
                     <div className="flex gap-1 mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                        <Star key={i} className="h-4 w-4 text-yellow-600 fill-current" />
                       ))}
                     </div>
                     <p className="text-gray-200 mb-4 italic">
@@ -597,7 +597,7 @@ export default function CleanLandingPage() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6">
             Property Emergency? We're Here 24/7
           </h2>
-          <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-blue-800 mb-8 max-w-2xl mx-auto">
             Get connected with certified restoration professionals in minutes. 
             Insurance approved. National pricing guidelines implemented.
           </p>

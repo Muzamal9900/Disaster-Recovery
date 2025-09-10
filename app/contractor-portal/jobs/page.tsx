@@ -99,9 +99,9 @@ export default function ContractorPortalJobsPage() {
 
   const getUrgencyColor = (urgency: string) => {
     switch(urgency) {
-      case 'urgent': return 'text-red-400';
-      case 'high': return 'text-orange-400';
-      case 'medium': return 'text-yellow-400';
+      case 'urgent': return 'text-red-600';
+      case 'high': return 'text-orange-600';
+      case 'medium': return 'text-yellow-600';
       default: return 'text-gray-200';
     }
   };
@@ -205,7 +205,7 @@ export default function ContractorPortalJobsPage() {
                           <Briefcase className="w-4 h-4" />
                           <span>{job.client}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-green-400 font-semibold">
+                        <div className="flex items-center gap-2 text-green-600 font-semibold">
                           <DollarSign className="w-4 h-4" />
                           <span>{job.value}</span>
                         </div>

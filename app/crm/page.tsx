@@ -102,8 +102,8 @@ export default function CRMPortalPage() {
               </svg>
             </div>
             <h1 className="text-3xl font-bold text-white mb-2">NRP CRM Portal</h1>
-            <p className="text-blue-200">National Restoration Professionals</p>
-            <p className="text-sm text-blue-300 mt-2">Manage contractors, jobs, and leads across Australia</p>
+            <p className="text-blue-700">National Restoration Professionals</p>
+            <p className="text-sm text-blue-700 mt-2">Manage contractors, jobs, and leads across Australia</p>
           </div>
 
           {/* Login Form */}
@@ -149,14 +149,14 @@ export default function CRMPortalPage() {
                   />
                   <span className="ml-2 text-sm text-white">Remember me</span>
                 </label>
-                <Link href="/crm/forgot-password" className="text-sm text-blue-300 hover:text-blue-200">
+                <Link href="/crm/forgot-password" className="text-sm text-blue-700 hover:text-blue-700">
                   Forgot password?
                 </Link>
               </div>
 
               {error && (
                 <div className="p-3 bg-red-500/20 border border-red-500/30 rounded-lg">
-                  <p className="text-red-200 text-sm">{error}</p>
+                  <p className="text-red-700 text-sm">{error}</p>
                 </div>
               )}
 
@@ -175,9 +175,9 @@ export default function CRMPortalPage() {
 
             {/* Demo Credentials */}
             <div className="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/30 rounded-lg">
-              <h3 className="text-sm font-medium text-yellow-200 mb-2">Demo Credentials:</h3>
-              <p className="text-xs text-yellow-300">Email: admin@nrp.com.au</p>
-              <p className="text-xs text-yellow-300">Password: secret123</p>
+              <h3 className="text-sm font-medium text-yellow-700 mb-2">Demo Credentials:</h3>
+              <p className="text-xs text-yellow-700">Email: admin@nrp.com.au</p>
+              <p className="text-xs text-yellow-700">Password: secret123</p>
             </div>
           </div>
         </div>

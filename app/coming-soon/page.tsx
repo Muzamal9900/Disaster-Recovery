@@ -32,7 +32,7 @@ export default function ComingSoonPage() {
               <span className="block text-blue-500">Disaster Recovery Network</span>
             </h1>
             
-            <p className="text-2xl mb-8 text-blue-200">
+            <p className="text-2xl mb-8 text-blue-700">
               The Most Authoritative Restoration Knowledge Base in the World
             </p>
             
@@ -51,21 +51,21 @@ export default function ComingSoonPage() {
                   <CheckCircle2 className="h-5 w-5 text-emerald-600 mr-2 mt-1" />
                   <div>
                     <p className="font-bold">100% Verified Contractors</p>
-                    <p className="text-sm text-blue-200">IICRC certified only</p>
+                    <p className="text-sm text-blue-700">IICRC certified only</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle2 className="h-5 w-5 text-emerald-600 mr-2 mt-1" />
                   <div>
                     <p className="font-bold">Scientific Authority</p>
-                    <p className="text-sm text-blue-200">Peer-reviewed sources</p>
+                    <p className="text-sm text-blue-700">Peer-reviewed sources</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle2 className="h-5 w-5 text-emerald-600 mr-2 mt-1" />
                   <div>
                     <p className="font-bold">E.E.A.T Compliant</p>
-                    <p className="text-sm text-blue-200">Google's highest standards</p>
+                    <p className="text-sm text-blue-700">Google's highest standards</p>
                   </div>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default function ComingSoonPage() {
           <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             <Card className="p-6 bg-white/10 backdrop-blur text-white border-blue-400">
               <h3 className="font-bold mb-2">Government Standards</h3>
-              <ul className="text-sm space-y-1 text-blue-200">
+              <ul className="text-sm space-y-1 text-blue-700">
                 <li>• Australian Standards</li>
                 <li>• Building Codes</li>
                 <li>• EPA Guidelines</li>
@@ -92,7 +92,7 @@ export default function ComingSoonPage() {
             </Card>
             <Card className="p-6 bg-white/10 backdrop-blur text-white border-blue-400">
               <h3 className="font-bold mb-2">Scientific Research</h3>
-              <ul className="text-sm space-y-1 text-blue-200">
+              <ul className="text-sm space-y-1 text-blue-700">
                 <li>• University Papers</li>
                 <li>• CSIRO Research</li>
                 <li>• Chemistry Studies</li>
@@ -101,7 +101,7 @@ export default function ComingSoonPage() {
             </Card>
             <Card className="p-6 bg-white/10 backdrop-blur text-white border-blue-400">
               <h3 className="font-bold mb-2">Industry Standards</h3>
-              <ul className="text-sm space-y-1 text-blue-200">
+              <ul className="text-sm space-y-1 text-blue-700">
                 <li>• IICRC S500, S520</li>
                 <li>• RIA Guidelines</li>
                 <li>• ABRA Standards</li>
@@ -110,7 +110,7 @@ export default function ComingSoonPage() {
             </Card>
             <Card className="p-6 bg-white/10 backdrop-blur text-white border-blue-400">
               <h3 className="font-bold mb-2">Technical Data</h3>
-              <ul className="text-sm space-y-1 text-blue-200">
+              <ul className="text-sm space-y-1 text-blue-700">
                 <li>• BOM Weather Data</li>
                 <li>• Building Materials</li>
                 <li>• Psychrometric Charts</li>
@@ -279,7 +279,7 @@ export default function ComingSoonPage() {
                 <h3 className="text-xl font-bold mb-4 text-blue-500">
                   Unmatched Authority
                 </h3>
-                <p className="text-blue-200">
+                <p className="text-blue-700">
                   Every piece of content is backed by scientific research, government 
                   standards, and peer-reviewed studies. We don't guess - we know.
                 </p>
@@ -289,7 +289,7 @@ export default function ComingSoonPage() {
                 <h3 className="text-xl font-bold mb-4 text-blue-500">
                   Dual Language Approach
                 </h3>
-                <p className="text-blue-200">
+                <p className="text-blue-700">
                   Technical accuracy for professionals, plain English for property 
                   owners. Everyone understands, everyone trusts.
                 </p>
@@ -299,7 +299,7 @@ export default function ComingSoonPage() {
                 <h3 className="text-xl font-bold mb-4 text-blue-500">
                   Real-Time Verification
                 </h3>
-                <p className="text-blue-200">
+                <p className="text-blue-700">
                   Live contractor verification, real-time area activation, instant 
                   insurance validation. No outdated directories.
                 </p>
@@ -309,7 +309,7 @@ export default function ComingSoonPage() {
                 <h3 className="text-xl font-bold mb-4 text-blue-500">
                   Global Standards, Local Expertise
                 </h3>
-                <p className="text-blue-200">
+                <p className="text-blue-700">
                   IICRC international standards with local building codes, weather 
                   patterns, and regional requirements.
                 </p>
@@ -320,7 +320,7 @@ export default function ComingSoonPage() {
               <p className="text-2xl font-bold text-blue-500 mb-4">
                 "The Wikipedia of Disaster Recovery"
               </p>
-              <p className="text-lg text-blue-200">
+              <p className="text-lg text-blue-700">
                 But verified, actionable, and connected to real professionals
               </p>
             </div>
@@ -331,10 +331,10 @@ export default function ComingSoonPage() {
       {/* Footer */}
       <footer className="py-12 bg-black/20 text-white">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-sm text-blue-200 mb-2">
+          <p className="text-sm text-blue-700 mb-2">
             © 2024 Disaster Recovery - Building the Future of Restoration
           </p>
-          <p className="text-xs text-blue-300">
+          <p className="text-xs text-blue-700">
             Every fact verified. Every contractor certified. Every answer authoritative.
           </p>
         </div>

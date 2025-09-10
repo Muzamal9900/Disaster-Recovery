@@ -156,7 +156,7 @@ export default function ModernContactPage() {
               animate={{ scale: [1, 1.02, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <ExclamationTriangleIcon className="w-4 h-4 text-red-400" />
+              <ExclamationTriangleIcon className="w-4 h-4 text-red-600" />
               <span className="text-sm font-medium text-red-700">24/7 Online Emergency Response</span>
             </motion.div>
 
@@ -276,7 +276,7 @@ export default function ModernContactPage() {
                             animate={{ opacity: 1, y: 0 }}
                             className="absolute -top-2 left-2 bg-gray-900 px-2"
                           >
-                            <span className="text-xs text-purple-400">Full name</span>
+                            <span className="text-xs text-purple-600">Full name</span>
                           </motion.div>
                         )}
                       </motion.div>
@@ -537,7 +537,7 @@ export default function ModernContactPage() {
           className="max-w-4xl overflow-hidden mx-auto text-center"
         >
           <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-3xl p-12 border border-blue-500/30">
-            <ChatBubbleOvalLeftEllipsisIcon className="w-16 h-16 text-blue-400 mx-auto mb-6" />
+            <ChatBubbleOvalLeftEllipsisIcon className="w-16 h-16 text-blue-600 mx-auto mb-6" />
             <h2 className="text-3xl font-bold mb-4">
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Need Immediate Help?

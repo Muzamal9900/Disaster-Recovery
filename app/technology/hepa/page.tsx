@@ -109,7 +109,7 @@ export default function HEPAFiltrationPage() {
         <div className="relative container mx-auto px-6 py-24 lg:py-32">
           <div className="max-w-4xl">
             {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-sm text-gray-300 mb-8">
+            <nav className="flex items-center gap-2 text-sm text-gray-700 mb-8">
               <Link href="/" className="hover:text-white transition">Home</Link>
               <span>/</span>
               <Link href="/technology" className="hover:text-white transition">Technology</Link>
@@ -117,7 +117,7 @@ export default function HEPAFiltrationPage() {
               <span className="text-white">HEPA Filtration</span>
             </nav>
 
-            <Badge className="mb-4 bg-blue-500/20 text-blue-300 border-blue-500/30">
+            <Badge className="mb-4 bg-blue-500/20 text-blue-700 border-blue-500/30">
               <Wind className="h-3 w-3 mr-1" />
               Hospital-Grade Filtration
             </Badge>
@@ -126,7 +126,7 @@ export default function HEPAFiltrationPage() {
               HEPA Air Filtration Systems
             </h1>
             
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl lg:text-2xl text-gray-700 mb-8 leading-relaxed">
               Restore air quality to pristine conditions with our hospital-grade HEPA filtration systems. 
               Remove 99.97% of airborne contaminants including mould spores, allergens, and pathogens.
             </p>
@@ -134,20 +134,20 @@ export default function HEPAFiltrationPage() {
             {/* Key Stats */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
               <div className="text-center p-4 rounded-lg bg-white/10 backdrop-blur">
-                <div className="text-3xl font-bold text-blue-400">99.97%</div>
-                <div className="text-sm text-gray-300">Filtration Rate</div>
+                <div className="text-3xl font-bold text-blue-600">99.97%</div>
+                <div className="text-sm text-gray-700">Filtration Rate</div>
               </div>
               <div className="text-center p-4 rounded-lg bg-white/10 backdrop-blur">
-                <div className="text-3xl font-bold text-cyan-400">2000</div>
-                <div className="text-sm text-gray-300">CFM Airflow</div>
+                <div className="text-3xl font-bold text-cyan-600">2000</div>
+                <div className="text-sm text-gray-700">CFM Airflow</div>
               </div>
               <div className="text-center p-4 rounded-lg bg-white/10 backdrop-blur">
                 <div className="text-3xl font-bold text-emerald-600">0.3μm</div>
-                <div className="text-sm text-gray-300">Particle Size</div>
+                <div className="text-sm text-gray-700">Particle Size</div>
               </div>
               <div className="text-center p-4 rounded-lg bg-white/10 backdrop-blur">
-                <div className="text-3xl font-bold text-purple-400">H13</div>
-                <div className="text-sm text-gray-300">HEPA Grade</div>
+                <div className="text-3xl font-bold text-purple-600">H13</div>
+                <div className="text-sm text-gray-700">HEPA Grade</div>
               </div>
             </div>
             
@@ -177,7 +177,7 @@ export default function HEPAFiltrationPage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Comprehensive Air Purification
             </h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Multi-stage filtration system for complete air quality restoration
             </p>
           </div>
@@ -191,7 +191,7 @@ export default function HEPAFiltrationPage() {
                     <Icon className="h-7 w-7 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-200 mb-4">{feature.description}</p>
+                  <p className="text-gray-700 mb-4">{feature.description}</p>
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
                     <CheckCircle className="h-4 w-4" />
                     {feature.effectiveness} Effective
@@ -210,7 +210,7 @@ export default function HEPAFiltrationPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Air Quality Restoration Process
             </h2>
-            <p className="text-xl text-gray-200">
+            <p className="text-xl text-gray-700">
               Systematic approach to achieving pristine air quality
             </p>
           </div>
@@ -231,7 +231,7 @@ export default function HEPAFiltrationPage() {
                             <Icon className="h-5 w-5 text-blue-500" />
                             {step.phase}
                           </h3>
-                          <p className="text-gray-200">{step.description}</p>
+                          <p className="text-gray-700">{step.description}</p>
                         </div>
                         <Badge variant="outline" className="ml-4">
                           {step.duration}
@@ -256,7 +256,7 @@ export default function HEPAFiltrationPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               4-Stage Filtration System
             </h2>
-            <p className="text-xl text-gray-200">
+            <p className="text-xl text-gray-700">
               Each stage targets specific contaminants for complete purification
             </p>
           </div>
@@ -272,7 +272,7 @@ export default function HEPAFiltrationPage() {
                 <Card key={filter.stage} className="p-6 text-center">
                   <div className="text-3xl font-bold text-blue-500 mb-2">Stage {filter.stage}</div>
                   <h3 className="font-semibold text-gray-900 mb-2">{filter.name}</h3>
-                  <p className="text-sm text-gray-200 mb-3">{filter.target}</p>
+                  <p className="text-sm text-gray-700 mb-3">{filter.target}</p>
                   <Badge className="bg-blue-100 text-blue-800">
                     {filter.efficiency}
                   </Badge>
@@ -294,7 +294,7 @@ export default function HEPAFiltrationPage() {
               <div className="grid md:grid-cols-2 gap-6">
                 {Object.entries(specifications).map(([key, value]) => (
                   <div key={key} className="flex justify-between py-3 border-b border-gray-200">
-                    <span className="font-medium text-gray-200">{key}</span>
+                    <span className="font-medium text-gray-700">{key}</span>
                     <span className="text-gray-900 font-semibold">{value}</span>
                   </div>
                 ))}

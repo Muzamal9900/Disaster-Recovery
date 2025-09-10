@@ -77,8 +77,8 @@ export function ProtectedRoute({
     return (
       <div className="flex items-center justify-center min-h-[400px]">
         <div className="text-center">
-          <Loader2 className="h-8 w-8 animate-spin mx-auto text-gray-200" />
-          <p className="text-sm text-gray-300 mt-2">Checking permissions...</p>
+          <Loader2 className="h-8 w-8 animate-spin mx-auto text-gray-700" />
+          <p className="text-sm text-gray-700 mt-2">Checking permissions...</p>
         </div>
       </div>
     );
@@ -96,7 +96,7 @@ export function ProtectedRoute({
           <AlertDescription>
             <strong>Access Denied</strong>
             <p className="mt-2">You don't have permission to access this resource.</p>
-            <p className="text-sm text-gray-300 mt-1">
+            <p className="text-sm text-gray-700 mt-1">
               Required: {permissions.join(', ') || roles.join(', ') || resource}
             </p>
           </AlertDescription>
@@ -176,7 +176,7 @@ export function ProtectedComponent({
 
   return (
     <div className="p-4 bg-gray-50 rounded-lg border border-gray-200">
-      <div className="flex items-center gap-2 text-gray-200">
+      <div className="flex items-center gap-2 text-gray-700">
         <Lock className="h-4 w-4" />
         <p className="text-sm">{message}</p>
       </div>

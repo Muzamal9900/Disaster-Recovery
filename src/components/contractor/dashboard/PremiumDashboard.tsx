@@ -154,8 +154,8 @@ function PerformanceChart() {
 function AIInsights() {
   const insights = [
     { icon: TrendingUp, text: 'Revenue up 23% this month', colour: 'text-emerald-600' },
-    { icon: Clock, text: 'Response time improved by 15%', colour: 'text-blue-400' },
-    { icon: Target, text: '3 jobs near completion', colour: 'text-purple-400' },
+    { icon: Clock, text: 'Response time improved by 15%', colour: 'text-blue-600' },
+    { icon: Target, text: '3 jobs near completion', colour: 'text-purple-600' },
     { icon: AlertCircle, text: '2 invoices overdue', colour: 'text-blue-500' }
   ];
   
@@ -236,8 +236,8 @@ function JobCard({ job }: any) {
         initial={{ opacity: 0 }}
         whileHover={{ opacity: 1 }}
       >
-        <span className="text-xs text-blue-400">View Details</span>
-        <ChevronRight className="h-4 w-4 text-blue-400" />
+        <span className="text-xs text-blue-600">View Details</span>
+        <ChevronRight className="h-4 w-4 text-blue-600" />
       </motion.div>
     </motion.div>
   );
@@ -379,7 +379,7 @@ export default function PremiumDashboard() {
                 <AlertTriangle className="h-5 w-5 text-blue-500" />
               </div>
               <div>
-                <p className="text-sm font-semibold text-orange-300">Emergency Job Available</p>
+                <p className="text-sm font-semibold text-orange-700">Emergency Job Available</p>
                 <p className="text-xs text-gray-200">Water damage at 42 Emergency St - High priority</p>
               </div>
             </div>

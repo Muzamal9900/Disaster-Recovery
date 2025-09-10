@@ -414,7 +414,7 @@ const CoverageAreaMap: React.FC<MapProps> = ({
       {/* Search Bar */}
       <div className="absolute top-4 left-4 right-4 z-10 max-w-md">
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-200" />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-700" />
           <input
             type="text"
             placeholder="Search suburb, postcode, or city..."
@@ -447,7 +447,7 @@ const CoverageAreaMap: React.FC<MapProps> = ({
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="font-medium">{result.name}</p>
-                    <p className="text-sm text-gray-200">{result.type}</p>
+                    <p className="text-sm text-gray-700">{result.type}</p>
                   </div>
                   <div className="text-right">
                     <span className={`px-2 py-1 text-xs rounded-full ${
@@ -460,7 +460,7 @@ const CoverageAreaMap: React.FC<MapProps> = ({
                       {result.coverageStatus}
                     </span>
                     {result.estimatedResponseTime && (
-                      <p className="text-xs text-gray-300 mt-1">~{result.estimatedResponseTime}min</p>
+                      <p className="text-xs text-gray-700 mt-1">~{result.estimatedResponseTime}min</p>
                     )}
                   </div>
                 </div>
@@ -528,7 +528,7 @@ const CoverageAreaMap: React.FC<MapProps> = ({
               <h4 className="text-sm font-medium">Legend</h4>
               <button
                 onClick={() => setShowLegend(false)}
-                className="text-gray-200 hover:text-gray-200"
+                className="text-gray-700 hover:text-gray-700"
               >
                 <EyeOff className="h-4 w-4" />
               </button>
@@ -571,7 +571,7 @@ const CoverageAreaMap: React.FC<MapProps> = ({
               <h4 className="font-medium">Coverage Statistics</h4>
               <button
                 onClick={() => setShowStatistics(false)}
-                className="text-gray-200 hover:text-gray-200"
+                className="text-gray-700 hover:text-gray-700"
               >
                 <EyeOff className="h-4 w-4" />
               </button>
@@ -579,30 +579,30 @@ const CoverageAreaMap: React.FC<MapProps> = ({
             <div className="space-y-3">
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <p className="text-xs text-gray-300">National Coverage</p>
+                  <p className="text-xs text-gray-700">National Coverage</p>
                   <p className="text-lg font-semibold">{statistics.coveragePercentage.toFixed(1)}%</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-300">Active Contractors</p>
+                  <p className="text-xs text-gray-700">Active Contractors</p>
                   <p className="text-lg font-semibold">{statistics.activeContractors}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-300">Preferred Suppliers</p>
+                  <p className="text-xs text-gray-700">Preferred Suppliers</p>
                   <p className="text-lg font-semibold">{statistics.preferredSuppliers}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-300">Coverage Gaps</p>
+                  <p className="text-xs text-gray-700">Coverage Gaps</p>
                   <p className="text-lg font-semibold">{statistics.gapAreas}</p>
                 </div>
               </div>
 
               <div>
-                <p className="text-xs text-gray-300 mb-2">Coverage by State</p>
+                <p className="text-xs text-gray-700 mb-2">Coverage by State</p>
                 {statistics.byState.slice(0, 4).map((state) => (
                   <div key={state.state} className="flex items-center justify-between text-sm mb-1">
                     <span>{state.state}</span>
                     <div className="flex items-center space-x-2">
-                      <span className="text-gray-200">{state.contractors} contractors</span>
+                      <span className="text-gray-700">{state.contractors} contractors</span>
                       <span className="font-medium">{state.coveragePercentage}%</span>
                     </div>
                   </div>
@@ -621,27 +621,27 @@ const CoverageAreaMap: React.FC<MapProps> = ({
               <h4 className="font-medium">Coverage Details</h4>
               <button
                 onClick={() => setSelectedArea(null)}
-                className="text-gray-200 hover:text-gray-200"
+                className="text-gray-700 hover:text-gray-700"
               >
                 <EyeOff className="h-4 w-4" />
               </button>
             </div>
             <div className="space-y-3">
               <div>
-                <p className="text-xs text-gray-300">Company</p>
+                <p className="text-xs text-gray-700">Company</p>
                 <p className="font-medium">{selectedArea.companyName}</p>
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <p className="text-xs text-gray-300">Radius</p>
+                  <p className="text-xs text-gray-700">Radius</p>
                   <p className="font-medium">{selectedArea.radiusType}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-300">Type</p>
+                  <p className="text-xs text-gray-700">Type</p>
                   <p className="font-medium capitalize">{selectedArea.coverageType}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-300">Status</p>
+                  <p className="text-xs text-gray-700">Status</p>
                   <span className={`px-2 py-1 text-xs rounded-full ${
                     selectedArea.status === 'active'
                       ? 'bg-green-100 text-green-800'
@@ -651,12 +651,12 @@ const CoverageAreaMap: React.FC<MapProps> = ({
                   </span>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-300">Lead Count</p>
+                  <p className="text-xs text-gray-700">Lead Count</p>
                   <p className="font-medium">{selectedArea.leadCount}</p>
                 </div>
               </div>
               <div>
-                <p className="text-xs text-gray-300">Service Types</p>
+                <p className="text-xs text-gray-700">Service Types</p>
                 <div className="flex flex-wrap gap-1 mt-1">
                   {selectedArea.metadata.serviceTypes.map((type) => (
                     <span key={type} className="px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded">
@@ -668,15 +668,15 @@ const CoverageAreaMap: React.FC<MapProps> = ({
               <div className="pt-2 border-t">
                 <div className="grid grid-cols-3 gap-2 text-center">
                   <div>
-                    <p className="text-xs text-gray-300">Response</p>
+                    <p className="text-xs text-gray-700">Response</p>
                     <p className="text-sm font-medium">{selectedArea.metadata.responseTime}min</p>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-300">Capacity</p>
+                    <p className="text-xs text-gray-700">Capacity</p>
                     <p className="text-sm font-medium">{selectedArea.metadata.capacityUtilization}%</p>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-300">Quality</p>
+                    <p className="text-xs text-gray-700">Quality</p>
                     <p className="text-sm font-medium">{selectedArea.metadata.qualityScore}</p>
                   </div>
                 </div>

@@ -101,7 +101,7 @@ export function ContractorPricingInfo() {
         <div className="text-center">
           <Users className="h-8 w-8 mx-auto mb-3 opacity-90" />
           <h4 className="font-semibold mb-2">Independent Contractors</h4>
-          <p className="text-sm text-blue-100">
+          <p className="text-sm text-blue-800">
             Each contractor sets competitive rates based on their expertise and local market conditions
           </p>
         </div>
@@ -109,7 +109,7 @@ export function ContractorPricingInfo() {
         <div className="text-center">
           <TrendingUp className="h-8 w-8 mx-auto mb-3 opacity-90" />
           <h4 className="font-semibold mb-2">Guided Pricing</h4>
-          <p className="text-sm text-blue-100">
+          <p className="text-sm text-blue-800">
             NRP provides pricing guidelines to ensure rates fall within industry-acceptable ranges
           </p>
         </div>
@@ -117,14 +117,14 @@ export function ContractorPricingInfo() {
         <div className="text-center">
           <Shield className="h-8 w-8 mx-auto mb-3 opacity-90" />
           <h4 className="font-semibold mb-2">Client Protection</h4>
-          <p className="text-sm text-blue-100">
+          <p className="text-sm text-blue-800">
             Guidelines protect clients from overcharging while ensuring quality professional services
           </p>
         </div>
       </div>
       
       <div className="mt-6 text-center">
-        <p className="text-blue-100 text-sm">
+        <p className="text-blue-800 text-sm">
           All estimates include detailed breakdowns • Insurance-compliant documentation • Transparent pricing
         </p>
       </div>

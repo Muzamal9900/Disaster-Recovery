@@ -537,14 +537,14 @@ export default function UltraModernHeader() {
                                 <div className="text-white font-medium text-sm">
                                   {subItem.label}
                                 </div>
-                                <div className="text-gray-300 text-xs mt-0.5">
+                                <div className="text-gray-700 text-xs mt-0.5">
                                   {subItem.description}
                                 </div>
                               </div>
                               
                               {/* Arrow */}
                               <svg 
-                                className="w-4 h-4 text-gray-300 group-hover:text-purple-400 transition-all transform group-hover:translate-x-1"
+                                className="w-4 h-4 text-gray-700 group-hover:text-purple-600 transition-all transform group-hover:translate-x-1"
                                 fill="none" 
                                 stroke="currentColor" 
                                 viewBox="0 0 24 24"

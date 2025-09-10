@@ -123,7 +123,7 @@ const Hero = forwardRef(({
               'text-sm font-semibold uppercase tracking-wider mb-4',
               textAlign === 'centre' && 'mx-auto',
               variant === 'dark' || variant === 'gradient-dark' || variant === 'primary'
-                ? 'text-neutral-300'
+                ? 'text-neutral-700'
                 : 'text-primary'
             )}>
               {subtitle}
@@ -147,7 +147,7 @@ const Hero = forwardRef(({
               'text-lg sm:text-xl lg:text-2xl mb-8 leading-relaxed',
               textAlign === 'centre' && 'mx-auto max-w-3xl',
               variant === 'dark' || variant === 'gradient-dark' || variant === 'primary'
-                ? 'text-neutral-300'
+                ? 'text-neutral-700'
                 : 'text-neutral-600',
               'animate-slide-up [animation-delay:200ms]'
             )}>

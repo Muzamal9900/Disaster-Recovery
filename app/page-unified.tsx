@@ -61,7 +61,7 @@ export default function UnifiedHomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isLoaded ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: ANIMATION.normal / 1000, delay: 0.1 }}
-                className="text-xl text-gray-200 mb-8"
+                className="text-xl text-gray-700 mb-8"
               >
                 Connect instantly with <10,000 IICRC certified contractors.
                 100% online. Zero phone calls. Help in minutes.
@@ -81,7 +81,7 @@ export default function UnifiedHomePage() {
                       {key === 'FORM' && <Globe className="h-10 w-10 text-green-600 mx-auto mb-3" />}
                       {key === 'EMAIL' && <Mail className="h-10 w-10 text-purple-600 mx-auto mb-3" />}
                       <h3 className="font-semibold mb-1">{method.label}</h3>
-                      <p className="text-sm text-gray-200">{method.responseTime}</p>
+                      <p className="text-sm text-gray-700">{method.responseTime}</p>
                       {method.available && (
                         <p className="text-xs text-green-600 mt-2">Available Now</p>
                       )}
@@ -133,7 +133,7 @@ export default function UnifiedHomePage() {
                 >
                   <feature.icon className="h-12 w-12 text-blue-600 mb-4" />
                   <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-200">{feature.desc}</p>
+                  <p className="text-gray-700">{feature.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -195,7 +195,7 @@ export default function UnifiedHomePage() {
                   viewport={{ once: true }}
                 >
                   <div className="text-4xl font-bold">{stat.value}</div>
-                  <div className="text-blue-100">{stat.label}</div>
+                  <div className="text-blue-800">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -208,7 +208,7 @@ export default function UnifiedHomePage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
               Join thousands who've discovered the future of disaster recovery.
               100% digital. 100% transparent. 100% reliable.
             </p>

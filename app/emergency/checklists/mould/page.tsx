@@ -85,7 +85,7 @@ export default function MouldChecklistPage() {
                 Mould Discovery Emergency Checklist
               </h1>
             </div>
-            <p className="text-xl text-green-100">
+            <p className="text-xl text-green-800">
               Health safety protocols and remediation steps for mould discovery
             </p>
             <div className="mt-6 bg-green-800 rounded-lg p-4">

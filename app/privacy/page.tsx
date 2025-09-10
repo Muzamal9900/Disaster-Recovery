@@ -12,10 +12,10 @@ export default function PrivacyPolicy() {
         
         <div className="bg-white rounded-lg shadow-lg p-8 space-y-6">
           <section>
-            <p className="text-sm text-gray-200 mb-6">Effective Date: {new Date().toLocaleDateString('en-AU')}</p>
+            <p className="text-sm text-gray-700 mb-6">Effective Date: {new Date().toLocaleDateString('en-AU')}</p>
             
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Information We Collect</h2>
-            <div className="space-y-3 text-gray-200">
+            <div className="space-y-3 text-gray-700">
               <p>When you contact us for disaster recovery services, we collect:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Contact information (name, email, phone number, address)</li>
@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. How We Use Your Information</h2>
-            <div className="space-y-3 text-gray-200">
+            <div className="space-y-3 text-gray-700">
               <p>We use your information to:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Provide emergency disaster recovery services</li>
@@ -44,7 +44,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. Information Sharing</h2>
-            <div className="space-y-3 text-gray-200">
+            <div className="space-y-3 text-gray-700">
               <p>We may share your information with:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Our certified restoration technicians and contractors</li>
@@ -59,7 +59,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Lead Distribution for Partners</h2>
-            <div className="space-y-3 text-gray-200">
+            <div className="space-y-3 text-gray-700">
               <p>When you submit a service request:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Your information may be shared with qualified restoration partners in your area</li>
@@ -72,7 +72,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Data Security</h2>
-            <div className="space-y-3 text-gray-200">
+            <div className="space-y-3 text-gray-700">
               <p>We protect your information through:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>SSL encryption for all data transmission</li>
@@ -86,7 +86,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Your Rights</h2>
-            <div className="space-y-3 text-gray-200">
+            <div className="space-y-3 text-gray-700">
               <p>Under Australian Privacy Law, you have the right to:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Access your personal information we hold</li>
@@ -100,7 +100,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Cookies and Tracking</h2>
-            <div className="space-y-3 text-gray-200">
+            <div className="space-y-3 text-gray-700">
               <p>Our website uses:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Essential cookies for website functionality</li>
@@ -114,21 +114,21 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Children's Privacy</h2>
-            <p className="text-gray-200">
+            <p className="text-gray-700">
               Our services are not directed to individuals under 18. We do not knowingly collect personal information from children.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Changes to This Policy</h2>
-            <p className="text-gray-200">
+            <p className="text-gray-700">
               We may update this Privacy Policy periodically. Changes will be posted on this page with an updated effective date.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Contact Us</h2>
-            <div className="space-y-3 text-gray-200">
+            <div className="space-y-3 text-gray-700">
               <p>For privacy-related questions or concerns:</p>
               <div className="bg-gray-50 p-4 rounded-lg">
                 <p className="font-semibold">Disaster Recovery</p>
@@ -140,7 +140,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="pt-6 border-t border-gray-200">
-            <p className="text-sm text-gray-200">
+            <p className="text-sm text-gray-700">
               This Privacy Policy complies with the Australian Privacy Act 1988 and the Australian Privacy Principles (APPs).
             </p>
           </section>

@@ -48,7 +48,7 @@ export default function EarlyMorningEmergencyPage() {
                 <p className="text-sm">Total Minimum</p>
               </Card>
               <Card className="bg-white/10 backdrop-blur p-4">
-                <Shield className="h-8 w-8 text-blue-400 mx-auto mb-2" />
+                <Shield className="h-8 w-8 text-blue-600 mx-auto mb-2" />
                 <p className="text-lg font-bold">100%</p>
                 <p className="text-sm">Insurance Covered</p>
               </Card>

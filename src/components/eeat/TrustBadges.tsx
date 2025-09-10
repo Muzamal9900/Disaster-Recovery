@@ -60,7 +60,7 @@ export function TrustBadges({ variant = 'compact', showAll = false }: TrustBadge
             <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center">
               <span className="text-green-600 text-lg">✓</span>
             </div>
-            <span className="text-sm font-medium text-gray-200">{badge.name}</span>
+            <span className="text-sm font-medium text-gray-700">{badge.name}</span>
           </div>
         ))}
       </div>
@@ -91,7 +91,7 @@ export function TrustBadges({ variant = 'compact', showAll = false }: TrustBadge
                 Verify →
               </a>
             ) : (
-              <span className="text-xs text-gray-300">Verified</span>
+              <span className="text-xs text-gray-700">Verified</span>
             )}
           </div>
         ))}
@@ -121,7 +121,7 @@ export function TrustBadges({ variant = 'compact', showAll = false }: TrustBadge
               )}
             </div>
             <h4 className="font-bold text-lg mb-2">{badge.name}</h4>
-            <p className="text-sm text-gray-200 mb-4">{badge.description}</p>
+            <p className="text-sm text-gray-700 mb-4">{badge.description}</p>
             {badge.link && (
               <a href={badge.link} target="_blank" rel="noopener noreferrer" 
                  className="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium">
@@ -142,7 +142,7 @@ export function TrustBadges({ variant = 'compact', showAll = false }: TrustBadge
           </svg>
           <div className="text-left">
             <p className="font-semibold text-gray-900">All Certifications Verified</p>
-            <p className="text-sm text-gray-200">Last updated: {new Date().toLocaleDateString()}</p>
+            <p className="text-sm text-gray-700">Last updated: {new Date().toLocaleDateString()}</p>
           </div>
         </div>
       </div>
@@ -188,12 +188,12 @@ export function InsurancePartners() {
       <h3 className="text-lg font-semibold mb-4 text-center">Approved by Major Insurance Companies</h3>
       <div className="flex flex-wrap justify-center gap-4">
         {partners.map((partner, idx) => (
-          <div key={idx} className="px-4 py-2 bg-gray-50 rounded-lg text-sm font-medium text-gray-200">
+          <div key={idx} className="px-4 py-2 bg-gray-50 rounded-lg text-sm font-medium text-gray-700">
             {partner}
           </div>
         ))}
       </div>
-      <p className="text-center text-sm text-gray-300 mt-4">
+      <p className="text-center text-sm text-gray-700 mt-4">
         Direct billing available • Claims processed within 24 hours
       </p>
     </div>

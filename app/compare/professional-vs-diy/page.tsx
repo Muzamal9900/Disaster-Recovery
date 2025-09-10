@@ -139,7 +139,7 @@ export default function ProfessionalVsDIYPage() {
                           {item.diy}
                         </div>
                       </td>
-                      <td className={`p-4 text-center ${item.winner === 'professional' ? 'text-green-600 font-bold' : 'text-gray-200'}`}>
+                      <td className={`p-4 text-center ${item.winner === 'professional' ? 'text-green-600 font-bold' : 'text-gray-700'}`}>
                         <div className="flex items-center justify-center">
                           {item.winner === 'professional' && 
                             <CheckCircle2 className="h-5 w-5 mr-2" />
@@ -172,7 +172,7 @@ export default function ProfessionalVsDIYPage() {
               <Card key={index} className="p-6 border-red-200">
                 <AlertTriangle className="h-10 w-10 text-red-600 mb-4" />
                 <h3 className="font-bold text-lg mb-2">{risk.risk}</h3>
-                <p className="text-gray-200 mb-3">{risk.consequence}</p>
+                <p className="text-gray-700 mb-3">{risk.consequence}</p>
                 <p className="text-2xl font-bold text-red-600">{risk.cost}</p>
               </Card>
             ))}
@@ -285,7 +285,7 @@ export default function ProfessionalVsDIYPage() {
             <Card className="p-6">
               <Wrench className="h-10 w-10 text-blue-700 mb-4" />
               <h3 className="text-xl font-bold mb-3">Wrong Equipment</h3>
-              <ul className="space-y-2 text-gray-200">
+              <ul className="space-y-2 text-gray-700">
                 <li>• Home dehumidifiers too small</li>
                 <li>• Can't detect hidden moisture</li>
                 <li>• No thermal imaging capability</li>
@@ -295,7 +295,7 @@ export default function ProfessionalVsDIYPage() {
             <Card className="p-6">
               <Clock className="h-10 w-10 text-blue-700 mb-4" />
               <h3 className="text-xl font-bold mb-3">Time Critical Mistakes</h3>
-              <ul className="space-y-2 text-gray-200">
+              <ul className="space-y-2 text-gray-700">
                 <li>• 24-48 hour mould window missed</li>
                 <li>• Water spreads while learning</li>
                 <li>• Secondary damage occurs</li>
@@ -305,7 +305,7 @@ export default function ProfessionalVsDIYPage() {
             <Card className="p-6">
               <XCircle className="h-10 w-10 text-red-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Critical Errors</h3>
-              <ul className="space-y-2 text-gray-200">
+              <ul className="space-y-2 text-gray-700">
                 <li>• Cross-contamination spread</li>
                 <li>• Electrical hazards created</li>
                 <li>• Structural damage worsened</li>
@@ -315,7 +315,7 @@ export default function ProfessionalVsDIYPage() {
             <Card className="p-6">
               <DollarSign className="h-10 w-10 text-red-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Financial Disasters</h3>
-              <ul className="space-y-2 text-gray-200">
+              <ul className="space-y-2 text-gray-700">
                 <li>• Insurance claim voided</li>
                 <li>• Property value decreased</li>
                 <li>• Future premiums increased</li>
@@ -337,32 +337,32 @@ export default function ProfessionalVsDIYPage() {
               <Card className="p-6 border-green-200 bg-green-50">
                 <CheckCircle2 className="h-8 w-8 text-green-600 mb-3" />
                 <h3 className="font-bold mb-2">Guaranteed Results</h3>
-                <p className="text-gray-200">Lifetime warranty on all work with documented success</p>
+                <p className="text-gray-700">Lifetime warranty on all work with documented success</p>
               </Card>
               <Card className="p-6 border-green-200 bg-green-50">
                 <CheckCircle2 className="h-8 w-8 text-green-600 mb-3" />
                 <h3 className="font-bold mb-2">Insurance Approved</h3>
-                <p className="text-gray-200">Direct billing means you pay only your excess</p>
+                <p className="text-gray-700">Direct billing means you pay only your excess</p>
               </Card>
               <Card className="p-6 border-green-200 bg-green-50">
                 <CheckCircle2 className="h-8 w-8 text-green-600 mb-3" />
                 <h3 className="font-bold mb-2">Faster Recovery</h3>
-                <p className="text-gray-200">Back to normal in days, not weeks or months</p>
+                <p className="text-gray-700">Back to normal in days, not weeks or months</p>
               </Card>
               <Card className="p-6 border-green-200 bg-green-50">
                 <CheckCircle2 className="h-8 w-8 text-green-600 mb-3" />
                 <h3 className="font-bold mb-2">Health Protection</h3>
-                <p className="text-gray-200">Proper containment and safety protocols followed</p>
+                <p className="text-gray-700">Proper containment and safety protocols followed</p>
               </Card>
               <Card className="p-6 border-green-200 bg-green-50">
                 <CheckCircle2 className="h-8 w-8 text-green-600 mb-3" />
                 <h3 className="font-bold mb-2">Property Value</h3>
-                <p className="text-gray-200">Maintains value with professional documentation</p>
+                <p className="text-gray-700">Maintains value with professional documentation</p>
               </Card>
               <Card className="p-6 border-green-200 bg-green-50">
                 <CheckCircle2 className="h-8 w-8 text-green-600 mb-3" />
                 <h3 className="font-bold mb-2">Peace of Mind</h3>
-                <p className="text-gray-200">IICRC certified experts handle everything</p>
+                <p className="text-gray-700">IICRC certified experts handle everything</p>
               </Card>
             </div>
           </div>

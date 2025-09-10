@@ -209,7 +209,7 @@ export function MobileAppDashboard() {
           <div className="flex items-center justify-between mb-2">
             <div>
               <h2 className="text-lg font-semibold">Good Morning, John</h2>
-              <p className="text-sm text-blue-100">2 jobs scheduled today</p>
+              <p className="text-sm text-blue-800">2 jobs scheduled today</p>
             </div>
             <div className="text-right">
               <Badge className="bg-white/20 text-white">
@@ -220,11 +220,11 @@ export function MobileAppDashboard() {
           <div className="mt-4 grid grid-cols-2 gap-2">
             <div className="bg-white/10 rounded-lg p-2 text-center">
               <p className="text-2xl font-bold">92%</p>
-              <p className="text-xs text-blue-100">Compliance Score</p>
+              <p className="text-xs text-blue-800">Compliance Score</p>
             </div>
             <div className="bg-white/10 rounded-lg p-2 text-center">
               <p className="text-2xl font-bold">4.8</p>
-              <p className="text-xs text-blue-100">Rating</p>
+              <p className="text-xs text-blue-800">Rating</p>
             </div>
           </div>
         </div>
@@ -342,7 +342,7 @@ export function MobileAppDashboard() {
               <Smartphone className="h-8 w-8" />
               Mobile App Features
             </h1>
-            <p className="text-blue-100">
+            <p className="text-blue-800">
               Secure, mobile-optimised contractor portal for field technicians
             </p>
           </div>

@@ -128,7 +128,7 @@ export default function Step6BankingPayment({ data, onNext, onBack }: Step6Props
     <div className="space-y-8">
       <div>
         <h2 className="text-2xl font-bold text-gray-900">Banking & Payment Details</h2>
-        <p className="mt-2 text-gray-200">
+        <p className="mt-2 text-gray-700">
           Provide your banking information and payment preferences for seamless transactions
         </p>
       </div>
@@ -370,7 +370,7 @@ export default function Step6BankingPayment({ data, onNext, onBack }: Step6Props
             
             {insuranceDirectBilling && (
               <div>
-                <Label className="text-sm font-medium text-gray-200 mb-2 block">
+                <Label className="text-sm font-medium text-gray-700 mb-2 block">
                   Preferred Insurance Companies (Select all that apply)
                 </Label>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -485,7 +485,7 @@ export default function Step6BankingPayment({ data, onNext, onBack }: Step6Props
           <div className="space-y-4">
             <div className="p-4 bg-gray-50 rounded-lg">
               <h4 className="font-medium mb-2">NRP Platform Fees</h4>
-              <ul className="text-sm text-gray-200 space-y-1">
+              <ul className="text-sm text-gray-700 space-y-1">
                 <li>• Application Fee: $275 (one-time, non-refundable)</li>
                 <li>• Joining Fee: $2,200 (upon approval)</li>
                 <li>• Monthly Subscription: $495 (after 3-month ramp-up period)</li>

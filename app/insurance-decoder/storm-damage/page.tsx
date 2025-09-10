@@ -156,7 +156,7 @@ export default function StormDamageInsurancePage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Storm Damage Insurance Guide
             </h1>
-            <p className="text-xl text-purple-100 max-w-3xl">
+            <p className="text-xl text-purple-800 max-w-3xl">
               Navigate storm insurance claims and understand your coverage
             </p>
           </motion.div>
@@ -387,7 +387,7 @@ export default function StormDamageInsurancePage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Storm Damage? Act Fast!
           </h2>
-          <p className="text-xl mb-8 text-purple-100">
+          <p className="text-xl mb-8 text-purple-800">
             Get professional help to secure your property and maximize your claim
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

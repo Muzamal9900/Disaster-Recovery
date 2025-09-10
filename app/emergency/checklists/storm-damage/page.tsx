@@ -87,7 +87,7 @@ export default function StormDamageChecklistPage() {
                 Storm Damage Emergency Checklist
               </h1>
             </div>
-            <p className="text-xl text-purple-100">
+            <p className="text-xl text-purple-800">
               Critical safety and recovery steps for storm and wind damage
             </p>
             <div className="mt-6 bg-purple-800 rounded-lg p-4">

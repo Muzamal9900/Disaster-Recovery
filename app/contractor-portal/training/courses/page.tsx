@@ -215,7 +215,7 @@ export default function CourseCatalogPage() {
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-white mb-4">Course Catalog</h1>
-          <p className="text-gray-200">Access all NRP training courses and certifications</p>
+          <p className="text-gray-700">Access all NRP training courses and certifications</p>
         </div>
 
         {/* Search and Filters */}
@@ -223,7 +223,7 @@ export default function CourseCatalogPage() {
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-200 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-700 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search courses..."
@@ -286,9 +286,9 @@ export default function CourseCatalogPage() {
                 </div>
                 
                 <h3 className="text-lg font-semibold text-white mb-2">{course.title}</h3>
-                <p className="text-gray-300 text-sm mb-4">{course.description}</p>
+                <p className="text-gray-700 text-sm mb-4">{course.description}</p>
                 
-                <div className="flex items-center gap-3 text-sm text-gray-200 mb-4">
+                <div className="flex items-center gap-3 text-sm text-gray-700 mb-4">
                   <span className="flex items-center gap-1">
                     <Clock className="w-4 h-4" />
                     {course.duration}
@@ -302,19 +302,19 @@ export default function CourseCatalogPage() {
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
                     <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <Star className="w-4 h-4 text-yellow-600 fill-current" />
                       <span className="text-white text-sm font-semibold">{course.rating}</span>
                     </div>
-                    <span className="text-gray-200 text-sm">({course.enrolled.toLocaleString()} enrolled)</span>
+                    <span className="text-gray-700 text-sm">({course.enrolled.toLocaleString()} enrolled)</span>
                   </div>
-                  <span className="text-green-400 font-semibold">{course.price}</span>
+                  <span className="text-green-600 font-semibold">{course.price}</span>
                 </div>
                 
                 <div className="flex gap-2">
-                  <span className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded">
+                  <span className="px-2 py-1 bg-white/10 text-gray-700 text-xs rounded">
                     {course.category}
                   </span>
-                  <span className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded">
+                  <span className="px-2 py-1 bg-white/10 text-gray-700 text-xs rounded">
                     {course.level}
                   </span>
                 </div>
@@ -342,8 +342,8 @@ export default function CourseCatalogPage() {
 
         {filteredCourses.length === 0 && (
           <div className="text-center py-12">
-            <BookOpen className="w-16 h-16 text-gray-200 mx-auto mb-4" />
-            <p className="text-gray-300 text-lg">No courses found matching your criteria</p>
+            <BookOpen className="w-16 h-16 text-gray-700 mx-auto mb-4" />
+            <p className="text-gray-700 text-lg">No courses found matching your criteria</p>
           </div>
         )}
       </div>

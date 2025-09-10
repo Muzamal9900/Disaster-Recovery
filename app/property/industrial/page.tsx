@@ -532,7 +532,7 @@ export default function IndustrialPropertyPage() {
             className="text-center"
           >
             <div className="flex justify-center mb-6">
-              <Factory className="w-20 h-20 text-yellow-400" />
+              <Factory className="w-20 h-20 text-yellow-600" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Industrial Facility Disaster Recovery

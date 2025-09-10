@@ -184,7 +184,7 @@ export function RegistrationWizard() {
           <h1 className="text-3xl font-bold text-gray-900">
             NRP Contractor Onboarding Portal
           </h1>
-          <p className="text-gray-200 mt-2">
+          <p className="text-gray-700 mt-2">
             Complete your registration to become an NRP certified contractor partner
           </p>
         </div>
@@ -196,7 +196,7 @@ export function RegistrationWizard() {
               <span className="text-sm font-medium">
                 Step {currentStep} of {REGISTRATION_STEPS.length}
               </span>
-              <span className="text-sm text-gray-200">
+              <span className="text-sm text-gray-700">
                 {Math.round(progressPercentage)}% Complete
               </span>
             </div>
@@ -215,7 +215,7 @@ export function RegistrationWizard() {
                       ? 'bg-blue-600 text-white' 
                       : completedSteps.includes(step.id)
                         ? 'bg-green-100 text-green-700 cursor-pointer hover:bg-green-200'
-                        : 'bg-gray-100 text-gray-200 cursor-not-allowed'
+                        : 'bg-gray-100 text-gray-700 cursor-not-allowed'
                     }
                   `}
                 >
@@ -284,7 +284,7 @@ export function RegistrationWizard() {
         </div>
 
         {/* Help Text */}
-        <div className="mt-8 text-center text-sm text-gray-200">
+        <div className="mt-8 text-center text-sm text-gray-700">
           <p>
             Need help? Contact our support team at{' '}
             <a href="mailto:contractors@nrp.com.au" className="text-blue-600 hover:underline">

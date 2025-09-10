@@ -382,7 +382,7 @@ export const InteractiveContractorMap: React.FC = () => {
               <Badge variant={connected ? 'default' : 'destructive'}>
                 {connected ? 'Live' : 'Offline'}
               </Badge>
-              <span className="text-sm text-gray-300">
+              <span className="text-sm text-gray-700">
                 {filteredContractors.length} contractors, {emergencies.length} emergencies
               </span>
             </div>
@@ -394,7 +394,7 @@ export const InteractiveContractorMap: React.FC = () => {
             <div className="space-y-2">
               <label className="text-sm font-medium">Search Location</label>
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-200" />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-700" />
                 <Input
                   placeholder="Search address..."
                   value={searchQuery}
@@ -698,7 +698,7 @@ export const InteractiveContractorMap: React.FC = () => {
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-300">Total Contractors</p>
+                <p className="text-sm text-gray-700">Total Contractors</p>
                 <p className="text-2xl font-bold">{contractors.length}</p>
               </div>
               <Users className="w-8 h-8 text-blue-500 opacity-50" />
@@ -710,7 +710,7 @@ export const InteractiveContractorMap: React.FC = () => {
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-300">Active Emergencies</p>
+                <p className="text-sm text-gray-700">Active Emergencies</p>
                 <p className="text-2xl font-bold">{emergencies.filter(e => e.status === 'pending').length}</p>
               </div>
               <AlertTriangle className="w-8 h-8 text-red-500 opacity-50" />
@@ -722,7 +722,7 @@ export const InteractiveContractorMap: React.FC = () => {
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-300">Avg Response Time</p>
+                <p className="text-sm text-gray-700">Avg Response Time</p>
                 <p className="text-2xl font-bold">
                   {Math.round(contractors.reduce((acc, c) => acc + c.responseTime, 0) / contractors.length)} min
                 </p>
@@ -736,7 +736,7 @@ export const InteractiveContractorMap: React.FC = () => {
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-300">Coverage Area</p>
+                <p className="text-sm text-gray-700">Coverage Area</p>
                 <p className="text-2xl font-bold">
                   {Math.max(...contractors.map(c => c.serviceRadius))} km
                 </p>

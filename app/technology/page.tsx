@@ -101,7 +101,7 @@ export default function TechnologyPage() {
               </span>
             </h1>
             
-            <p className="text-xl text-gray-200 mb-8">
+            <p className="text-xl text-gray-700 mb-8">
               Combining cutting-edge AI, thermal imaging, and purification systems to deliver 
               the fastest, most accurate disaster recovery in Australia.
             </p>
@@ -135,7 +135,7 @@ export default function TechnologyPage() {
                   <stat.icon className="w-6 h-6 text-blue-600" />
                 </div>
                 <div className="text-3xl font-bold text-gray-900">{stat.value}</div>
-                <div className="text-sm text-gray-200">{stat.label}</div>
+                <div className="text-sm text-gray-700">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -149,7 +149,7 @@ export default function TechnologyPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Technology Suite
             </h2>
-            <p className="text-lg text-gray-200 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
               Three powerful systems working together to deliver unmatched restoration results
             </p>
           </div>
@@ -169,7 +169,7 @@ export default function TechnologyPage() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">
                     {tech.title}
                   </h3>
-                  <p className="text-gray-200 mb-6">
+                  <p className="text-gray-700 mb-6">
                     {tech.description}
                   </p>
 
@@ -178,7 +178,7 @@ export default function TechnologyPage() {
                     {tech.features.map((feature, fidx) => (
                       <li key={fidx} className="flex items-start gap-2">
                         <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-200">{feature}</span>
+                        <span className="text-sm text-gray-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -188,7 +188,7 @@ export default function TechnologyPage() {
                     {Object.entries(tech.stats).map(([key, value], sidx) => (
                       <div key={sidx} className="text-center">
                         <div className="text-lg font-bold text-gray-900">{value}</div>
-                        <div className="text-xs text-gray-300 capitalize">{key}</div>
+                        <div className="text-xs text-gray-700 capitalize">{key}</div>
                       </div>
                     ))}
                   </div>
@@ -214,7 +214,7 @@ export default function TechnologyPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Technology Advantages
             </h2>
-            <p className="text-lg text-gray-200 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
               How our advanced technology delivers superior results for every restoration project
             </p>
           </div>
@@ -228,7 +228,7 @@ export default function TechnologyPage() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-200">
+                <p className="text-gray-700">
                   {benefit.description}
                 </p>
               </div>
@@ -244,7 +244,7 @@ export default function TechnologyPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Experience the Technology Difference
             </h2>
-            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 text-blue-800 max-w-2xl mx-auto">
               See how our advanced technology can save your property and reduce restoration time by 60%
             </p>
             <div className="flex flex-wrap gap-4 justify-center">

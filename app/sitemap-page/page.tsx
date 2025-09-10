@@ -169,31 +169,31 @@ export default function SitemapPage() {
           <h2 className="text-xl font-bold text-gray-900 mb-4">Additional Information</h2>
           <div className="grid md:grid-cols-4 gap-4">
             <div>
-              <h3 className="font-semibold text-gray-200 mb-2">Legal</h3>
+              <h3 className="font-semibold text-gray-700 mb-2">Legal</h3>
               <ul className="space-y-1 text-sm">
                 <li><Link href="/privacy-policy" className="text-blue-600 hover:underline">Privacy Policy</Link></li>
                 <li><Link href="/terms-of-service" className="text-blue-600 hover:underline">Terms of Service</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-200 mb-2">Compare</h3>
+              <h3 className="font-semibold text-gray-700 mb-2">Compare</h3>
               <ul className="space-y-1 text-sm">
                 <li><Link href="/compare/cheap-vs-quality" className="text-blue-600 hover:underline">Cheap vs Quality</Link></li>
                 <li><Link href="/compare/diy-vs-professional" className="text-blue-600 hover:underline">DIY vs Professional</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-200 mb-2">Contractor Portal</h3>
+              <h3 className="font-semibold text-gray-700 mb-2">Contractor Portal</h3>
               <ul className="space-y-1 text-sm">
                 <li><Link href="/contractor/login" className="text-blue-600 hover:underline">Contractor Login</Link></li>
                 <li><Link href="/contractor/apply" className="text-blue-600 hover:underline">Become a Contractor</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-200 mb-2">Contact</h3>
+              <h3 className="font-semibold text-gray-700 mb-2">Contact</h3>
               <ul className="space-y-1 text-sm">
-                <li className="text-gray-200">24/7 Emergency: online support</li>
-                <li className="text-gray-200">Email: help@disasterrecovery.com.au</li>
+                <li className="text-gray-700">24/7 Emergency: online support</li>
+                <li className="text-gray-700">Email: help@disasterrecovery.com.au</li>
               </ul>
             </div>
           </div>

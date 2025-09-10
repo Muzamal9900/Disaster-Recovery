@@ -108,7 +108,7 @@ export default function NavigationIndicator() {
               </Link>
               {subsection && (
                 <>
-                  <ChevronRight className="h-4 w-4 text-gray-400" />
+                  <ChevronRight className="h-4 w-4 text-gray-600" />
                   <span className="text-gray-800 font-medium">{subsection.label}</span>
                 </>
               )}

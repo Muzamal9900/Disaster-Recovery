@@ -41,7 +41,7 @@ export default function LoadingSpinner({
         </div>
       </div>
       {text && (
-        <p className={`mt-4 text-gray-200 ${size === 'small' ? 'text-sm' : size === 'large' ? 'text-lg' : 'text-base'}`}>
+        <p className={`mt-4 text-gray-700 ${size === 'small' ? 'text-sm' : size === 'large' ? 'text-lg' : 'text-base'}`}>
           {text}
         </p>
       )}

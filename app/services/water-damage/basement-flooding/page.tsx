@@ -78,7 +78,7 @@ export default function BasementFloodingPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Basement Flooding Cleanup Brisbane
             </h1>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-blue-800">
               Emergency basement water extraction and restoration. Fast response for flooded basements, 
               sewage backup, and groundwater intrusion across Queensland.
             </p>

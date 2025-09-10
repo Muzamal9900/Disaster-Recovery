@@ -135,7 +135,7 @@ export function BackgroundChecks() {
   };
 
   const getRiskColor = (score?: number) => {
-    if (!score) return 'text-gray-200';
+    if (!score) return 'text-gray-700';
     if (score <= 30) return 'text-green-600';
     if (score <= 60) return 'text-yellow-600';
     return 'text-red-600';
@@ -226,7 +226,7 @@ export function BackgroundChecks() {
         <h2 className="text-xl font-bold">Background Checks & References</h2>
         <div className="flex gap-3">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-700" />
             <Input
               placeholder="Search contractors..."
               value={searchTerm}
@@ -262,7 +262,7 @@ export function BackgroundChecks() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold">{checks.length}</p>
-            <p className="text-xs text-gray-300 mt-1">All time</p>
+            <p className="text-xs text-gray-700 mt-1">All time</p>
           </CardContent>
         </Card>
         
@@ -274,7 +274,7 @@ export function BackgroundChecks() {
             <p className="text-2xl font-bold text-blue-600">
               {checks.filter(c => c.status === 'in_progress').length}
             </p>
-            <p className="text-xs text-gray-300 mt-1">Currently processing</p>
+            <p className="text-xs text-gray-700 mt-1">Currently processing</p>
           </CardContent>
         </Card>
 
@@ -286,7 +286,7 @@ export function BackgroundChecks() {
             <p className="text-2xl font-bold text-blue-700">
               {checks.filter(c => c.status === 'requires_review').length}
             </p>
-            <p className="text-xs text-gray-300 mt-1">Need attention</p>
+            <p className="text-xs text-gray-700 mt-1">Need attention</p>
           </CardContent>
         </Card>
 
@@ -298,7 +298,7 @@ export function BackgroundChecks() {
             <p className="text-2xl font-bold">
               ${checks.reduce((sum, c) => sum + c.cost, 0).toLocaleString()}
             </p>
-            <p className="text-xs text-gray-300 mt-1">This month</p>
+            <p className="text-xs text-gray-700 mt-1">This month</p>
           </CardContent>
         </Card>
       </div>
@@ -342,12 +342,12 @@ export function BackgroundChecks() {
                     {loading ? (
                       <tr>
                         <td colSpan={8} className="text-center p-8">
-                          <Loader2 className="h-8 w-8 animate-spin mx-auto text-gray-200" />
+                          <Loader2 className="h-8 w-8 animate-spin mx-auto text-gray-700" />
                         </td>
                       </tr>
                     ) : filteredChecks.length === 0 ? (
                       <tr>
-                        <td colSpan={8} className="text-center p-8 text-gray-300">
+                        <td colSpan={8} className="text-center p-8 text-gray-700">
                           No background checks found
                         </td>
                       </tr>
@@ -357,7 +357,7 @@ export function BackgroundChecks() {
                           <td className="p-4">
                             <div>
                               <p className="font-medium">{check.contractorName}</p>
-                              <p className="text-sm text-gray-200">{check.companyName}</p>
+                              <p className="text-sm text-gray-700">{check.companyName}</p>
                             </div>
                           </td>
                           <td className="p-4">
@@ -386,14 +386,14 @@ export function BackgroundChecks() {
                                 </span>
                               </div>
                             ) : (
-                              <span className="text-gray-200">Pending</span>
+                              <span className="text-gray-700">Pending</span>
                             )}
                           </td>
                           <td className="p-4">
                             <p className="font-medium">${check.cost}</p>
                           </td>
                           <td className="p-4">
-                            <p className="text-sm text-gray-200">
+                            <p className="text-sm text-gray-700">
                               {new Date(check.initiatedAt).toLocaleDateString()}
                             </p>
                           </td>
@@ -454,11 +454,11 @@ export function BackgroundChecks() {
                       <div className="flex justify-between items-start">
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-2">
-                            <User className="h-4 w-4 text-gray-200" />
+                            <User className="h-4 w-4 text-gray-700" />
                             <p className="font-medium">{ref.name}</p>
                             <Badge variant="outline">{ref.relationship}</Badge>
                           </div>
-                          <div className="grid grid-cols-2 gap-4 text-sm text-gray-200">
+                          <div className="grid grid-cols-2 gap-4 text-sm text-gray-700">
                             <div className="flex items-center gap-2">
                               <Building className="h-3 w-3" />
                               <span>{ref.company} - {ref.position}</span>
@@ -497,7 +497,7 @@ export function BackgroundChecks() {
                     </div>
                   ))}
                   {pendingReferences.length === 0 && (
-                    <div className="text-center py-8 text-gray-300">
+                    <div className="text-center py-8 text-gray-700">
                       <CheckCircle className="h-12 w-12 mx-auto mb-3 text-green-500" />
                       <p>All references have been contacted</p>
                     </div>
@@ -525,12 +525,12 @@ export function BackgroundChecks() {
                             <p className="font-medium">{ref.name}</p>
                             <Badge className="bg-green-100 text-green-800">Verified</Badge>
                           </div>
-                          <p className="text-sm text-gray-200 mb-2">
+                          <p className="text-sm text-gray-700 mb-2">
                             {ref.company} - {ref.position}
                           </p>
                           {ref.rating && (
                             <div className="flex items-center gap-2">
-                              <span className="text-sm text-gray-200">Rating:</span>
+                              <span className="text-sm text-gray-700">Rating:</span>
                               <div className="flex gap-1">
                                 {[...Array(5)].map((_, i) => (
                                   <div
@@ -544,13 +544,13 @@ export function BackgroundChecks() {
                             </div>
                           )}
                           {ref.response && (
-                            <p className="text-sm text-gray-200 mt-2 italic">
+                            <p className="text-sm text-gray-700 mt-2 italic">
                               "{ref.response}"
                             </p>
                           )}
                         </div>
                         <div className="text-right">
-                          <p className="text-xs text-gray-300">
+                          <p className="text-xs text-gray-700">
                             Contacted: {new Date(ref.contactedAt!).toLocaleDateString()}
                           </p>
                         </div>
@@ -643,11 +643,11 @@ export function BackgroundChecks() {
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Label className="text-sm text-gray-200">Contractor</Label>
+                  <Label className="text-sm text-gray-700">Contractor</Label>
                   <p className="font-medium">{selectedCheck.contractorName}</p>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-200">Check Type</Label>
+                  <Label className="text-sm text-gray-700">Check Type</Label>
                   <p className="font-medium capitalize">{selectedCheck.type}</p>
                 </div>
               </div>
@@ -702,21 +702,21 @@ export function BackgroundChecks() {
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Label className="text-sm text-gray-200">Check ID</Label>
+                  <Label className="text-sm text-gray-700">Check ID</Label>
                   <p className="font-mono text-sm">{selectedCheck.id}</p>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-200">Status</Label>
+                  <Label className="text-sm text-gray-700">Status</Label>
                   <Badge className={getStatusColor(selectedCheck.status)}>
                     {selectedCheck.status}
                   </Badge>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-200">Provider</Label>
+                  <Label className="text-sm text-gray-700">Provider</Label>
                   <p className="font-medium">{selectedCheck.provider}</p>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-200">Cost</Label>
+                  <Label className="text-sm text-gray-700">Cost</Label>
                   <p className="font-medium">${selectedCheck.cost}</p>
                 </div>
               </div>
@@ -726,25 +726,25 @@ export function BackgroundChecks() {
                   <h4 className="font-medium mb-3">Check Results</h4>
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-200">Criminal Record</span>
+                      <span className="text-sm text-gray-700">Criminal Record</span>
                       <Badge className={selectedCheck.results.criminalRecord ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'}>
                         {selectedCheck.results.criminalRecord ? 'Found' : 'Clear'}
                       </Badge>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-200">Financial Issues</span>
+                      <span className="text-sm text-gray-700">Financial Issues</span>
                       <Badge className={selectedCheck.results.financialIssues ? 'bg-yellow-100 text-yellow-800' : 'bg-green-100 text-green-800'}>
                         {selectedCheck.results.financialIssues ? 'Found' : 'Clear'}
                       </Badge>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-200">Identity Verified</span>
+                      <span className="text-sm text-gray-700">Identity Verified</span>
                       <Badge className={selectedCheck.results.identityVerified ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}>
                         {selectedCheck.results.identityVerified ? 'Verified' : 'Not Verified'}
                       </Badge>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-200">Risk Score</span>
+                      <span className="text-sm text-gray-700">Risk Score</span>
                       <span className={`font-medium ${getRiskColor(selectedCheck.results.riskScore)}`}>
                         {selectedCheck.results.riskScore}/100 - {getRiskLabel(selectedCheck.results.riskScore)}
                       </span>
@@ -756,7 +756,7 @@ export function BackgroundChecks() {
               {selectedCheck.notes && (
                 <div className="border-t pt-4">
                   <h4 className="font-medium mb-2">Notes</h4>
-                  <p className="text-sm text-gray-200">{selectedCheck.notes}</p>
+                  <p className="text-sm text-gray-700">{selectedCheck.notes}</p>
                 </div>
               )}
             </div>

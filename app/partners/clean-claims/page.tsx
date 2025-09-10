@@ -81,7 +81,7 @@ export default function CleanClaimsPartnershipPage() {
 
         <div className="relative z-10 container mx-auto px-6 py-24">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 rounded-full text-blue-300 text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 rounded-full text-blue-700 text-sm font-medium mb-6">
               <HandshakeIcon className="h-4 w-4" />
               Strategic Technology Partnership
             </div>
@@ -176,7 +176,7 @@ export default function CleanClaimsPartnershipPage() {
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20">
                 <div className="mb-6">
-                  <div className="text-sm text-blue-400 uppercase tracking-wider mb-2">Leadership</div>
+                  <div className="text-sm text-blue-600 uppercase tracking-wider mb-2">Leadership</div>
                   <h3 className="text-2xl font-bold text-white mb-4">Lane Larsen</h3>
                   <p className="text-gray-300">
                     Founder & President of Clean Claims
@@ -199,7 +199,7 @@ export default function CleanClaimsPartnershipPage() {
                 </div>
 
                 <div className="mt-8 p-4 bg-blue-500/10 rounded-lg">
-                  <p className="text-sm text-blue-300 italic">
+                  <p className="text-sm text-blue-700 italic">
                     "We're excited to partner with Disaster Recovery to bring 
                     our proven technology to the Asia-Pacific market."
                   </p>
@@ -230,7 +230,7 @@ export default function CleanClaimsPartnershipPage() {
                   key={index}
                   className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 backdrop-blur-sm rounded-xl p-6 border border-blue-500/20 hover:scale-105 transition-transform"
                 >
-                  <Icon className="h-12 w-12 text-blue-400 mb-4" />
+                  <Icon className="h-12 w-12 text-blue-600 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-2">
                     {benefit.title}
                   </h3>
@@ -347,23 +347,23 @@ export default function CleanClaimsPartnershipPage() {
               </h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-300">Field Documentation & Remote Monitoring</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-300">Wi-Fi Hubs & BLE Antennas</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-300">Wireless Moisture Meters</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-300">Process Enforcement Software</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-300">Integration APIs (magicplan, EcoClaim)</span>
                 </li>
               </ul>
@@ -371,28 +371,28 @@ export default function CleanClaimsPartnershipPage() {
 
             <div className="bg-gradient-to-br from-purple-900/30 to-purple-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                <Shield className="h-10 w-10 text-purple-400" />
+                <Shield className="h-10 w-10 text-purple-600" />
                 NRP Platform Technology
               </h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-300">AI-Powered Claims Matching</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-300">30,000+ SEO Location Pages</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-300">OpenAI Fraud Detection</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-300">Stripe Payment Processing</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-300">IICRC Compliance Systems</span>
                 </li>
               </ul>

@@ -94,7 +94,7 @@ export default function GeneralDisasterChecklistPage() {
                 Universal Disaster Response Checklist
               </h1>
             </div>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-blue-800">
               Comprehensive checklist for any disaster or emergency situation
             </p>
             <div className="mt-6 bg-blue-800 rounded-lg p-4">

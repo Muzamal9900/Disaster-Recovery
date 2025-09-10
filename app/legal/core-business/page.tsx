@@ -50,7 +50,7 @@ export default function CoreBusinessDocuments() {
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
             Core Business Structure Documents
           </h1>
-          <p className="text-xl text-gray-200">
+          <p className="text-xl text-gray-700">
             Foundation legal documents for business operations and governance
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function CoreBusinessDocuments() {
                     <h3 className="font-semibold text-lg mb-2 group-hover:text-blue-600 transition">
                       {doc.title}
                     </h3>
-                    <p className="text-sm text-gray-200">
+                    <p className="text-sm text-gray-700">
                       {doc.description}
                     </p>
                   </div>
@@ -84,12 +84,12 @@ export default function CoreBusinessDocuments() {
 
         <div className="mt-12 bg-blue-50 rounded-lg p-6">
           <h2 className="text-2xl font-bold mb-4">About These Documents</h2>
-          <p className="text-gray-200 mb-4">
+          <p className="text-gray-700 mb-4">
             These core business structure documents form the foundation of your organization's
             legal framework. Each document has been carefully crafted to comply with Australian
             business law and industry best practices.
           </p>
-          <p className="text-sm text-gray-200">
+          <p className="text-sm text-gray-700">
             <strong>Note:</strong> All documents should be reviewed by qualified legal counsel
             before implementation to ensure they meet your specific business requirements.
           </p>

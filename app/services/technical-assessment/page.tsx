@@ -24,7 +24,7 @@ export default function TechnicalAssessmentPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Technical Assessment & Damage Evaluation
             </h1>
-            <p className="text-xl text-gray-200 mb-8">
+            <p className="text-xl text-gray-700 mb-8">
               Comprehensive property damage assessment by certified technical specialists
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -56,37 +56,37 @@ export default function TechnicalAssessmentPage() {
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="text-3xl mb-4">📷</div>
                 <h3 className="text-xl font-semibold mb-3">Thermal Imaging Inspection</h3>
-                <p className="text-gray-200">Advanced infrared technology to detect hidden moisture, structural issues, and temperature variations.</p>
+                <p className="text-gray-700">Advanced infrared technology to detect hidden moisture, structural issues, and temperature variations.</p>
               </div>
               
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="text-3xl mb-4">💧</div>
                 <h3 className="text-xl font-semibold mb-3">Moisture Detection & Mapping</h3>
-                <p className="text-gray-200">Precise moisture measurement using calibrated meters and comprehensive mapping of affected areas.</p>
+                <p className="text-gray-700">Precise moisture measurement using calibrated meters and comprehensive mapping of affected areas.</p>
               </div>
               
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="text-3xl mb-4">🏗️</div>
                 <h3 className="text-xl font-semibold mb-3">Structural Damage Assessment</h3>
-                <p className="text-gray-200">Professional evaluation of structural integrity and safety concerns following water, fire, or storm damage.</p>
+                <p className="text-gray-700">Professional evaluation of structural integrity and safety concerns following water, fire, or storm damage.</p>
               </div>
               
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="text-3xl mb-4">🌬️</div>
                 <h3 className="text-xl font-semibold mb-3">Air Quality Testing</h3>
-                <p className="text-gray-200">Comprehensive testing for mould spores, bacteria, and other airborne contaminants.</p>
+                <p className="text-gray-700">Comprehensive testing for mould spores, bacteria, and other airborne contaminants.</p>
               </div>
               
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="text-3xl mb-4">📋</div>
                 <h3 className="text-xl font-semibold mb-3">Insurance Documentation</h3>
-                <p className="text-gray-200">Detailed reporting and photography for insurance claims and adjuster communication.</p>
+                <p className="text-gray-700">Detailed reporting and photography for insurance claims and adjuster communication.</p>
               </div>
               
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="text-3xl mb-4">📐</div>
                 <h3 className="text-xl font-semibold mb-3">Restoration Planning</h3>
-                <p className="text-gray-200">Technical specifications and scope development for restoration contractors and project management.</p>
+                <p className="text-gray-700">Technical specifications and scope development for restoration contractors and project management.</p>
               </div>
             </div>
 

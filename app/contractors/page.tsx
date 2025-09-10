@@ -135,7 +135,7 @@ export default function ContractorsPage() {
                 <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                   <Icon className="h-10 w-10 text-blue-600 mb-4" />
                   <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
-                  <p className="text-gray-200 mb-3">{benefit.description}</p>
+                  <p className="text-gray-700 mb-3">{benefit.description}</p>
                   <p className="text-green-600 font-bold">{benefit.value}</p>
                 </Card>
               );
@@ -181,7 +181,7 @@ export default function ContractorsPage() {
           <h2 className="text-3xl font-bold text-center mb-4">
             Membership Options
           </h2>
-          <p className="text-center text-gray-200 mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
             Choose the coverage area that matches your capacity. 
             Upgrade or downgrade anytime based on your needs.
           </p>
@@ -200,7 +200,7 @@ export default function ContractorsPage() {
                 )}
                 <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
                 <p className="text-4xl font-bold text-blue-600 mb-2">{tier.price}</p>
-                <p className="text-gray-200 mb-6">
+                <p className="text-gray-700 mb-6">
                   {tier.radius} radius • {tier.leads} expected
                 </p>
                 <ul className="space-y-3 mb-8">
@@ -240,7 +240,7 @@ export default function ContractorsPage() {
                   </span>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Customer Submits Request</h3>
-                    <p className="text-gray-200">
+                    <p className="text-gray-700">
                       Customer fills out detailed form with location, damage type, and urgency. 
                       System validates insurance and property details.
                     </p>
@@ -255,7 +255,7 @@ export default function ContractorsPage() {
                   </span>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Smart Radius Matching</h3>
-                    <p className="text-gray-200">
+                    <p className="text-gray-700">
                       System identifies all qualified contractors within the selected radius 
                       (20km, 25km, 50km, or 100km) of the property.
                     </p>
@@ -270,7 +270,7 @@ export default function ContractorsPage() {
                   </span>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Lead Notification</h3>
-                    <p className="text-gray-200">
+                    <p className="text-gray-700">
                       Qualified contractors receive instant notification with full job details. 
                       First to respond gets priority consideration.
                     </p>
@@ -285,7 +285,7 @@ export default function ContractorsPage() {
                   </span>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Direct Customer Connection</h3>
-                    <p className="text-gray-200">
+                    <p className="text-gray-700">
                       You quote directly to the customer. No middleman, no commission on jobs. 
                       You own the relationship.
                     </p>
@@ -310,12 +310,12 @@ export default function ContractorsPage() {
                   <Star key={i} className="h-5 w-5 text-blue-600 fill-current" />
                 ))}
               </div>
-              <p className="text-gray-200 mb-4">
+              <p className="text-gray-700 mb-4">
                 "Joined 6 months ago and now getting 40+ quality leads per month. 
                 The radius system means no competition from across town."
               </p>
               <p className="font-bold">- John's Restoration, Brisbane</p>
-              <p className="text-sm text-gray-300">Regional Partner - 50km</p>
+              <p className="text-sm text-gray-700">Regional Partner - 50km</p>
             </Card>
             
             <Card className="p-6">
@@ -324,12 +324,12 @@ export default function ContractorsPage() {
                   <Star key={i} className="h-5 w-5 text-blue-600 fill-current" />
                 ))}
               </div>
-              <p className="text-gray-200 mb-4">
+              <p className="text-gray-700 mb-4">
                 "Best decision for our business. Insurance-approved leads with 
                 realistic customers who understand the $2,200 minimum."
               </p>
               <p className="font-bold">- Premium Restore, Sydney</p>
-              <p className="text-sm text-gray-300">Premium Partner - 100km</p>
+              <p className="text-sm text-gray-700">Premium Partner - 100km</p>
             </Card>
             
             <Card className="p-6">
@@ -338,12 +338,12 @@ export default function ContractorsPage() {
                   <Star key={i} className="h-5 w-5 text-blue-600 fill-current" />
                 ))}
               </div>
-              <p className="text-gray-200 mb-4">
+              <p className="text-gray-700 mb-4">
                 "Growing steadily with the local partner plan. Perfect for our 
                 small team. Upgrade path is clear as we expand."
               </p>
               <p className="font-bold">- Rapid Dry Services, Adelaide</p>
-              <p className="text-sm text-gray-300">Local Partner - 20km</p>
+              <p className="text-sm text-gray-700">Local Partner - 20km</p>
             </Card>
           </div>
         </div>

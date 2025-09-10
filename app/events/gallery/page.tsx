@@ -121,7 +121,7 @@ export default function EventsGalleryPage() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="text-lg sm:text-xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto"
+              className="text-lg sm:text-xl text-blue-800 mb-8 leading-relaxed max-w-3xl mx-auto"
             >
               Visual documentation of our emergency response and restoration projects. 
               See how we help Queensland communities recover from disasters.

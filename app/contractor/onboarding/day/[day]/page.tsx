@@ -161,11 +161,11 @@ export default function DayTrainingPage() {
               </button>
               <div>
                 <h1 className="text-2xl font-bold">Day {day}: {module.title}</h1>
-                <p className="text-blue-100 mt-1">{module.description}</p>
+                <p className="text-blue-800 mt-1">{module.description}</p>
               </div>
             </div>
             <div className="text-right">
-              <p className="text-sm text-blue-100">Module Progress</p>
+              <p className="text-sm text-blue-800">Module Progress</p>
               <p className="text-2xl font-bold">{calculateModuleProgress()}%</p>
             </div>
           </div>

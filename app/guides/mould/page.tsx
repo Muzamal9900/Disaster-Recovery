@@ -380,12 +380,12 @@ export default function MouldRemediationGuidePage() {
             className="text-center"
           >
             <div className="flex justify-center mb-6">
-              <Droplets className="w-20 h-20 text-teal-400" />
+              <Droplets className="w-20 h-20 text-teal-600" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Mould Remediation Guide
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-teal-100">
+            <p className="text-xl md:text-2xl mb-8 text-teal-800">
               Complete Mould Identification, Health Risks & Professional Remediation
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -1011,7 +1011,7 @@ export default function MouldRemediationGuidePage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Concerned About Mould in Your Property?
             </h2>
-            <p className="text-xl mb-8 text-teal-100">
+            <p className="text-xl mb-8 text-teal-800">
               Get professional mould inspection and remediation services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -33,7 +33,7 @@ export default function DynamicSEOContent({ params }: DynamicPageProps) {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {pageTitle}
             </h1>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-blue-800">
               Professional disaster recovery services for {pageTitle.toLowerCase()}. 
               Available 24/7 with insurance approved solutions.
             </p>

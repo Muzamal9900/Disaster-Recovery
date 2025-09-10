@@ -149,7 +149,7 @@ export default function LeadManagement() {
       case 'accepted':
         return <CheckCircle className="h-4 w-4 text-green-600" />;
       default:
-        return <Clock className="h-4 w-4 text-gray-200" />;
+        return <Clock className="h-4 w-4 text-gray-700" />;
     }
   };
 
@@ -168,7 +168,7 @@ export default function LeadManagement() {
               </Link>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">Lead Management</h1>
-                <p className="text-sm text-gray-200">Manage and track your insurance claims</p>
+                <p className="text-sm text-gray-700">Manage and track your insurance claims</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -194,17 +194,17 @@ export default function LeadManagement() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <Card>
             <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium text-gray-200">Active Leads</CardTitle>
+              <CardTitle className="text-sm font-medium text-gray-700">Active Leads</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">4</div>
-              <p className="text-xs text-gray-300 mt-1">$72,800 potential value</p>
+              <p className="text-xs text-gray-700 mt-1">$72,800 potential value</p>
             </CardContent>
           </Card>
           
           <Card>
             <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium text-gray-200">Response Rate</CardTitle>
+              <CardTitle className="text-sm font-medium text-gray-700">Response Rate</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">94%</div>
@@ -214,21 +214,21 @@ export default function LeadManagement() {
           
           <Card>
             <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium text-gray-200">Avg Response Time</CardTitle>
+              <CardTitle className="text-sm font-medium text-gray-700">Avg Response Time</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">42 min</div>
-              <p className="text-xs text-gray-300 mt-1">Target: &lt;60 min</p>
+              <p className="text-xs text-gray-700 mt-1">Target: &lt;60 min</p>
             </CardContent>
           </Card>
           
           <Card>
             <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium text-gray-200">Conversion Rate</CardTitle>
+              <CardTitle className="text-sm font-medium text-gray-700">Conversion Rate</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">87%</div>
-              <p className="text-xs text-gray-300 mt-1">Industry avg: 65%</p>
+              <p className="text-xs text-gray-700 mt-1">Industry avg: 65%</p>
             </CardContent>
           </Card>
         </div>
@@ -273,34 +273,34 @@ export default function LeadManagement() {
                     <div className="flex items-start justify-between mb-4">
                       <div>
                         <div className="flex items-center gap-3 mb-2">
-                          <h3 className="font-mono text-sm text-gray-200">{lead.id}</h3>
+                          <h3 className="font-mono text-sm text-gray-700">{lead.id}</h3>
                           <Badge className={getUrgencyColor(lead.urgency)}>
                             {lead.urgency === 'urgent' ? 'URGENT' : lead.urgency.toUpperCase()}
                           </Badge>
                           <div className="flex items-center gap-1">
                             {getStatusIcon(lead.status)}
-                            <span className="text-sm text-gray-200 capitalize">{lead.status}</span>
+                            <span className="text-sm text-gray-700 capitalize">{lead.status}</span>
                           </div>
                         </div>
                         <h2 className="text-xl font-semibold mb-1">{lead.type}</h2>
-                        <p className="text-gray-200">{lead.customer} • {lead.property}</p>
+                        <p className="text-gray-700">{lead.customer} • {lead.property}</p>
                       </div>
                       <div className="text-right">
                         <p className="text-2xl font-bold">${lead.value.toLocaleString()}</p>
-                        <p className="text-sm text-gray-200">Est. value</p>
+                        <p className="text-sm text-gray-700">Est. value</p>
                       </div>
                     </div>
 
                     <div className="grid grid-cols-2 gap-4 mb-4">
                       <div>
-                        <p className="text-sm text-gray-200 mb-1">Location</p>
+                        <p className="text-sm text-gray-700 mb-1">Location</p>
                         <p className="text-sm font-medium flex items-center gap-1">
                           <MapPin className="h-3 w-3" />
                           {lead.address}
                         </p>
                       </div>
                       <div>
-                        <p className="text-sm text-gray-200 mb-1">Insurance</p>
+                        <p className="text-sm text-gray-700 mb-1">Insurance</p>
                         <p className="text-sm font-medium">
                           {lead.insuranceCompany} • {lead.claimNumber}
                         </p>
@@ -308,15 +308,15 @@ export default function LeadManagement() {
                     </div>
 
                     <div className="bg-gray-50 rounded-lg p-3 mb-4">
-                      <p className="text-sm text-gray-200">{lead.description}</p>
+                      <p className="text-sm text-gray-700">{lead.description}</p>
                       <div className="flex items-center gap-4 mt-2">
-                        <span className="text-sm text-gray-200">
+                        <span className="text-sm text-gray-700">
                           <strong>{lead.rooms}</strong> rooms affected
                         </span>
-                        <span className="text-sm text-gray-200">
+                        <span className="text-sm text-gray-700">
                           <strong>{lead.sqm}</strong> sqm area
                         </span>
-                        <span className="text-sm text-gray-200">
+                        <span className="text-sm text-gray-700">
                           Response needed: <strong className="text-orange-600">{lead.responseTime}</strong>
                         </span>
                       </div>
@@ -346,7 +346,7 @@ export default function LeadManagement() {
                   <div className="w-64 bg-gray-50 p-4 border-l">
                     <div className="space-y-4">
                       <div>
-                        <p className="text-xs font-semibold text-gray-200 uppercase mb-2">Quick Actions</p>
+                        <p className="text-xs font-semibold text-gray-700 uppercase mb-2">Quick Actions</p>
                         <div className="space-y-2">
                           <Button variant="outline" size="sm" className="w-full justify-start">
                             <Navigation className="h-3 w-3 mr-2" />
@@ -364,18 +364,18 @@ export default function LeadManagement() {
                       </div>
                       
                       <div>
-                        <p className="text-xs font-semibold text-gray-200 uppercase mb-2">Lead Score</p>
+                        <p className="text-xs font-semibold text-gray-700 uppercase mb-2">Lead Score</p>
                         <div className="flex items-center gap-2">
                           <TrendingUp className="h-4 w-4 text-green-600" />
                           <span className="text-lg font-bold">92/100</span>
                         </div>
-                        <p className="text-xs text-gray-200 mt-1">High conversion probability</p>
+                        <p className="text-xs text-gray-700 mt-1">High conversion probability</p>
                       </div>
                       
                       <div>
-                        <p className="text-xs font-semibold text-gray-200 uppercase mb-2">Time Remaining</p>
+                        <p className="text-xs font-semibold text-gray-700 uppercase mb-2">Time Remaining</p>
                         <p className="text-lg font-bold text-orange-600">28 min</p>
-                        <p className="text-xs text-gray-200">to meet response SLA</p>
+                        <p className="text-xs text-gray-700">to meet response SLA</p>
                       </div>
                     </div>
                   </div>
@@ -390,10 +390,10 @@ export default function LeadManagement() {
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="font-mono text-sm text-gray-200 mb-1">{lead.id}</p>
+                      <p className="font-mono text-sm text-gray-700 mb-1">{lead.id}</p>
                       <h3 className="text-lg font-semibold">{lead.type}</h3>
-                      <p className="text-sm text-gray-200">{lead.customer} • {lead.property}</p>
-                      <p className="text-sm text-gray-200 mt-1">{lead.address}</p>
+                      <p className="text-sm text-gray-700">{lead.customer} • {lead.property}</p>
+                      <p className="text-sm text-gray-700 mt-1">{lead.address}</p>
                     </div>
                     <div className="text-right">
                       <p className="text-xl font-bold">${lead.value.toLocaleString()}</p>
@@ -402,15 +402,15 @@ export default function LeadManagement() {
                         {[...Array(5)].map((_, i) => (
                           <svg
                             key={i}
-                            className={`h-4 w-4 ${i < Math.floor(lead.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                            className={`h-4 w-4 ${i < Math.floor(lead.rating) ? 'text-yellow-600 fill-current' : 'text-gray-700'}`}
                             viewBox="0 0 20 20"
                           >
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                           </svg>
                         ))}
-                        <span className="text-sm text-gray-200 ml-1">{lead.rating}</span>
+                        <span className="text-sm text-gray-700 ml-1">{lead.rating}</span>
                       </div>
-                      <p className="text-xs text-gray-300 mt-1">Completed: {lead.completedDate}</p>
+                      <p className="text-xs text-gray-700 mt-1">Completed: {lead.completedDate}</p>
                     </div>
                   </div>
                 </CardContent>

@@ -333,7 +333,7 @@ export default function CoverageChecker() {
             <Calculator className="w-10 h-10" />
             <h1 className="text-4xl md:text-5xl font-bold">Coverage Probability Checker</h1>
           </div>
-          <p className="text-xl text-blue-200">
+          <p className="text-xl text-blue-700">
             Answer a few questions to understand your coverage likelihood
           </p>
         </div>

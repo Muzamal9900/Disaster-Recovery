@@ -66,7 +66,7 @@ export default function PitchDeckPowerful() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-red-400">3:47 AM.</span> Brisbane. Category 4 Cyclone.
+              <span className="text-red-600">3:47 AM.</span> Brisbane. Category 4 Cyclone.
             </h1>
             <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
               Sarah Mitchell sat in her flooded living room, holding her two children, 
@@ -84,7 +84,7 @@ export default function PitchDeckPowerful() {
           >
             <p className="text-2xl text-white font-semibold mb-4">
               "In that moment, I realized the disaster recovery industry 
-              wasn't failing. It had <span className="text-red-400">already failed.</span>"
+              wasn't failing. It had <span className="text-red-600">already failed.</span>"
             </p>
             <p className="italic" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
               - Founder's personal experience, 2019
@@ -98,7 +98,7 @@ export default function PitchDeckPowerful() {
             className="text-center"
           >
             <p className="text-xl" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
-              That night, we discovered our <span className="text-blue-400 font-bold">WHY</span>:
+              That night, we discovered our <span className="text-blue-600 font-bold">WHY</span>:
             </p>
             <p className="text-3xl text-white font-bold mt-4">
               No family should ever feel abandoned in their darkest hour.
@@ -170,7 +170,7 @@ export default function PitchDeckPowerful() {
               We couldn't just build another restoration company.
             </p>
             <p className="text-xl text-white/90 mt-2">
-              We had to <span className="text-orange-400 font-bold">burn down the old system</span> and build something worthy of people's trust.
+              We had to <span className="text-orange-600 font-bold">burn down the old system</span> and build something worthy of people's trust.
             </p>
           </motion.div>
         </div>
@@ -206,7 +206,7 @@ export default function PitchDeckPowerful() {
                 We personally called every single one. Slept 3 hours in 5 days. 
                 Lost $180,000 and most of our credibility.
               </p>
-              <p className="text-orange-400 mt-2 font-semibold">
+              <p className="text-orange-600 mt-2 font-semibold">
                 Lesson: Technology without resilience is worthless.
               </p>
             </motion.div>
@@ -223,7 +223,7 @@ export default function PitchDeckPowerful() {
                 They were right. We were asking broken people to fix broken homes 
                 without fixing the broken system first.
               </p>
-              <p className="text-orange-400 mt-2 font-semibold">
+              <p className="text-orange-600 mt-2 font-semibold">
                 Lesson: Change requires healing, not just demands.
               </p>
             </motion.div>
@@ -240,7 +240,7 @@ export default function PitchDeckPowerful() {
                 "Too ambitious." "Unrealistic." "The industry doesn't want to change."
                 My co-founder sold his car. I mortgaged my house.
               </p>
-              <p className="text-orange-400 mt-2 font-semibold">
+              <p className="text-orange-600 mt-2 font-semibold">
                 Lesson: Conviction is measured in sacrifice, not words.
               </p>
             </motion.div>
@@ -253,7 +253,7 @@ export default function PitchDeckPowerful() {
             className="text-center bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl p-6"
           >
             <p className="text-xl text-white">
-              These failures weren't setbacks. They were <span className="text-green-400 font-bold">our education</span>.
+              These failures weren't setbacks. They were <span className="text-green-600 font-bold">our education</span>.
             </p>
             <p className="text-white mt-2" style={{ opacity: 0.8 }}>
               Each disaster taught us what truly mattered.
@@ -296,7 +296,7 @@ export default function PitchDeckPowerful() {
             <p className="text-lg text-white/90">
               She paused, then said something that changed everything:
             </p>
-            <p className="text-2xl text-blue-400 font-bold mt-4">
+            <p className="text-2xl text-blue-600 font-bold mt-4">
               "For the first time in my life, technology made me feel human."
             </p>
           </motion.div>
@@ -308,7 +308,7 @@ export default function PitchDeckPowerful() {
               transition={{ delay: 0.5 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
             >
-              <Brain className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+              <Brain className="h-12 w-12 text-purple-600 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">The AI Breakthrough</h3>
               <p className="text-white/90 text-sm">
                 Not replacing humans, but amplifying humanity
@@ -321,7 +321,7 @@ export default function PitchDeckPowerful() {
               transition={{ delay: 0.6 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
             >
-              <Heart className="h-12 w-12 text-red-400 mx-auto mb-4" />
+              <Heart className="h-12 w-12 text-red-600 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">The Human Touch</h3>
               <p className="text-white/90 text-sm">
                 Every algorithm designed around empathy
@@ -334,7 +334,7 @@ export default function PitchDeckPowerful() {
               transition={{ delay: 0.7 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
             >
-              <Shield className="h-12 w-12 text-green-400 mx-auto mb-4" />
+              <Shield className="h-12 w-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">The Trust Protocol</h3>
               <p className="text-white/90 text-sm">
                 Performance guaranteed or we pay
@@ -351,7 +351,7 @@ export default function PitchDeckPowerful() {
             <p className="text-2xl text-white font-semibold">
               That night, we stopped trying to fix the industry.
             </p>
-            <p className="text-xl text-blue-400 mt-2">
+            <p className="text-xl text-blue-600 mt-2">
               We started building its replacement.
             </p>
           </motion.div>
@@ -388,7 +388,7 @@ export default function PitchDeckPowerful() {
                   <p className="text-white/90 italic">
                     "You can't guarantee 60-minute response times nationwide"
                   </p>
-                  <p className="text-green-400 font-semibold mt-2">
+                  <p className="text-green-600 font-semibold mt-2">
                     → We now average 34 minutes
                   </p>
                 </div>
@@ -397,7 +397,7 @@ export default function PitchDeckPowerful() {
                   <p className="text-white/90 italic">
                     "Contractors won't accept performance-based pay"
                   </p>
-                  <p className="text-green-400 font-semibold mt-2">
+                  <p className="text-green-600 font-semibold mt-2">
                     → 1,847 contractors on waiting list
                   </p>
                 </div>
@@ -406,7 +406,7 @@ export default function PitchDeckPowerful() {
                   <p className="text-white/90 italic">
                     "AI can't handle complex disaster assessment"
                   </p>
-                  <p className="text-green-400 font-semibold mt-2">
+                  <p className="text-green-600 font-semibold mt-2">
                     → 94% accuracy, 12-second processing
                   </p>
                 </div>
@@ -423,19 +423,19 @@ export default function PitchDeckPowerful() {
               >
                 <ul className="space-y-4 text-white/90">
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-green-400 mt-1 flex-shrink-0" />
+                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
                     <span>Every disaster gets immediate response, regardless of location or time</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-green-400 mt-1 flex-shrink-0" />
+                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
                     <span>Contractors earn more by caring more (KPI-based instant payments)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-green-400 mt-1 flex-shrink-0" />
+                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
                     <span>Families never feel alone during recovery</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-green-400 mt-1 flex-shrink-0" />
+                    <CheckCircle2 className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
                     <span>Insurance companies become partners, not obstacles</span>
                   </li>
                 </ul>
@@ -534,7 +534,7 @@ export default function PitchDeckPowerful() {
                 The contractor refused payment, said it was already covered. 
                 I later learned your platform paid him double for the compassion he showed."
               </p>
-              <p className="text-blue-400 mt-4 font-semibold">
+              <p className="text-blue-600 mt-4 font-semibold">
                 - Margaret Thompson, Brisbane
               </p>
             </motion.div>
@@ -576,7 +576,7 @@ export default function PitchDeckPowerful() {
             <p className="text-2xl text-white font-semibold">
               We didn't just prove the model worked.
             </p>
-            <p className="text-xl text-green-400 mt-2">
+            <p className="text-xl text-green-600 mt-2">
               We proved humanity could scale.
             </p>
           </motion.div>
@@ -716,7 +716,7 @@ export default function PitchDeckPowerful() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-white/90">Average Response Time</span>
-                  <span className="text-2xl font-bold text-green-400">34 mins</span>
+                  <span className="text-2xl font-bold text-green-600">34 mins</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-white/90">Coverage Area</span>
@@ -735,7 +735,7 @@ export default function PitchDeckPowerful() {
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-white/90">Damage Prevented</span>
-                  <span className="text-2xl font-bold text-green-400">$127M</span>
+                  <span className="text-2xl font-bold text-green-600">$127M</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-white/90">Contractor Earnings</span>
@@ -747,7 +747,7 @@ export default function PitchDeckPowerful() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-white/90">Families Homeless</span>
-                  <span className="text-2xl font-bold text-green-400">0</span>
+                  <span className="text-2xl font-bold text-green-600">0</span>
                 </div>
               </div>
             </motion.div>
@@ -764,17 +764,17 @@ export default function PitchDeckPowerful() {
               <div className="text-center">
                 <p className="text-3xl font-bold text-white">$550</p>
                 <p className="text-sm text-white/80">Per claim platform fee</p>
-                <p className="text-xs text-green-400 mt-1">Only paid on success</p>
+                <p className="text-xs text-green-600 mt-1">Only paid on success</p>
               </div>
               <div className="text-center">
                 <p className="text-3xl font-bold text-white">$2,200</p>
                 <p className="text-sm text-white/80">Direct to contractor</p>
-                <p className="text-xs text-green-400 mt-1">80% of total value</p>
+                <p className="text-xs text-green-600 mt-1">80% of total value</p>
               </div>
               <div className="text-center">
                 <p className="text-3xl font-bold text-white">∞</p>
                 <p className="text-sm text-white/80">Contractor earning potential</p>
-                <p className="text-xs text-green-400 mt-1">No caps, pure performance</p>
+                <p className="text-xs text-green-600 mt-1">No caps, pure performance</p>
               </div>
             </div>
           </motion.div>
@@ -789,7 +789,7 @@ export default function PitchDeckPowerful() {
               But these aren't just numbers.
             </p>
             <p className="text-2xl text-white font-semibold mt-2">
-              They're <span className="text-blue-400">47,829 families</span> who didn't lose hope.
+              They're <span className="text-blue-600">47,829 families</span> who didn't lose hope.
             </p>
           </motion.div>
         </div>
@@ -825,16 +825,16 @@ export default function PitchDeckPowerful() {
                   <div>
                     <p className="text-white" style={{ opacity: 0.8 }}>Market Size</p>
                     <p className="text-3xl font-bold text-white">$1.2B Australia</p>
-                    <p className="text-sm text-green-400">$47B globally</p>
+                    <p className="text-sm text-green-600">$47B globally</p>
                   </div>
                   <div>
                     <p className="text-white" style={{ opacity: 0.8 }}>Current Capture</p>
                     <p className="text-3xl font-bold text-white">2.3%</p>
-                    <p className="text-sm text-orange-400">Doubling every 6 months</p>
+                    <p className="text-sm text-orange-600">Doubling every 6 months</p>
                   </div>
                   <div>
                     <p className="text-white" style={{ opacity: 0.8 }}>Path to Profitability</p>
-                    <p className="text-3xl font-bold text-green-400">Q3 2024</p>
+                    <p className="text-3xl font-bold text-green-600">Q3 2024</p>
                     <p className="text-sm text-white/80">Already cash-flow positive</p>
                   </div>
                 </div>
@@ -949,7 +949,7 @@ export default function PitchDeckPowerful() {
                 transition={{ delay: 0.5 }}
                 className="flex items-start gap-4"
               >
-                <Heart className="h-6 w-6 text-red-400 flex-shrink-0 mt-1" />
+                <Heart className="h-6 w-6 text-red-600 flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-white font-semibold">For the Forgotten</p>
                   <p className="text-white" style={{ opacity: 0.8 }}>
@@ -964,7 +964,7 @@ export default function PitchDeckPowerful() {
                 transition={{ delay: 0.6 }}
                 className="flex items-start gap-4"
               >
-                <Users className="h-6 w-6 text-blue-400 flex-shrink-0 mt-1" />
+                <Users className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-white font-semibold">For the Workers</p>
                   <p className="text-white" style={{ opacity: 0.8 }}>
@@ -979,7 +979,7 @@ export default function PitchDeckPowerful() {
                 transition={{ delay: 0.7 }}
                 className="flex items-start gap-4"
               >
-                <Globe className="h-6 w-6 text-green-400 flex-shrink-0 mt-1" />
+                <Globe className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-white font-semibold">For the Future</p>
                   <p className="text-white" style={{ opacity: 0.8 }}>
@@ -1030,7 +1030,7 @@ export default function PitchDeckPowerful() {
             <p className="text-3xl text-white font-bold">
               "The best time to plant a tree was 20 years ago.
             </p>
-            <p className="text-3xl text-blue-400 font-bold">
+            <p className="text-3xl text-blue-600 font-bold">
               The second best time is now."
             </p>
             <p className="text-xl text-white/80 mt-4">

@@ -78,7 +78,7 @@ export default function CleanHomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-gray-200 mb-8"
+              className="text-xl text-gray-700 mb-8"
             >
               Connect instantly with <10,000 IICRC certified contractors.
               100% online. No phone calls needed. Get help in minutes.
@@ -95,7 +95,7 @@ export default function CleanHomePage() {
                 <CardContent className="p-6 text-center">
                   <MessageCircle className="h-10 w-10 text-blue-600 mx-auto mb-3" />
                   <h3 className="font-semibold mb-1">Live Chat</h3>
-                  <p className="text-sm text-gray-200">Instant response</p>
+                  <p className="text-sm text-gray-700">Instant response</p>
                   <p className="text-xs text-green-600 mt-2">Available Now</p>
                 </CardContent>
               </Card>
@@ -104,7 +104,7 @@ export default function CleanHomePage() {
                 <CardContent className="p-6 text-center">
                   <Globe className="h-10 w-10 text-green-600 mx-auto mb-3" />
                   <h3 className="font-semibold mb-1">Online Claim</h3>
-                  <p className="text-sm text-gray-200">2-minute form</p>
+                  <p className="text-sm text-gray-700">2-minute form</p>
                   <p className="text-xs text-green-600 mt-2">Quick & Easy</p>
                 </CardContent>
               </Card>
@@ -113,7 +113,7 @@ export default function CleanHomePage() {
                 <CardContent className="p-6 text-center">
                   <Mail className="h-10 w-10 text-purple-600 mx-auto mb-3" />
                   <h3 className="font-semibold mb-1">Email Support</h3>
-                  <p className="text-sm text-gray-200">Detailed help</p>
+                  <p className="text-sm text-gray-700">Detailed help</p>
                   <p className="text-xs text-green-600 mt-2">< 1hr response</p>
                 </CardContent>
               </Card>
@@ -164,7 +164,7 @@ export default function CleanHomePage() {
                 )}
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-gray-200 mb-4">{service.description}</p>
+                <p className="text-gray-700 mb-4">{service.description}</p>
                 <button className="text-blue-600 font-semibold hover:text-blue-700">
                   Get Help Online →
                 </button>
@@ -199,9 +199,9 @@ export default function CleanHomePage() {
                 <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   {item.step}
                 </div>
-                <item.icon className="h-8 w-8 text-gray-200 mx-auto mb-3" />
+                <item.icon className="h-8 w-8 text-gray-700 mx-auto mb-3" />
                 <h3 className="font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-200">{item.desc}</p>
+                <p className="text-sm text-gray-700">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -214,19 +214,19 @@ export default function CleanHomePage() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold"><10,000</div>
-              <div className="text-blue-100">Certified Contractors</div>
+              <div className="text-blue-800">Certified Contractors</div>
             </div>
             <div>
               <div className="text-4xl font-bold">24/7</div>
-              <div className="text-blue-100">Online Support</div>
+              <div className="text-blue-800">Online Support</div>
             </div>
             <div>
               <div className="text-4xl font-bold">60min</div>
-              <div className="text-blue-100">Response Time</div>
+              <div className="text-blue-800">Response Time</div>
             </div>
             <div>
               <div className="text-4xl font-bold">100%</div>
-              <div className="text-blue-100">Digital Platform</div>
+              <div className="text-blue-800">Digital Platform</div>
             </div>
           </div>
         </div>
@@ -238,7 +238,7 @@ export default function CleanHomePage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Emergency? Get Help Now - 100% Online
           </h2>
-          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
             No phone calls needed. Connect instantly through our digital platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

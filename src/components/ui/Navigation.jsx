@@ -189,7 +189,7 @@ const NavLink = ({ href, children, variant = 'default', className, ...props }) =
   const variantClasses = {
     default: 'text-neutral-700 hover:text-primary hover:bg-neutral-50',
     transparent: 'text-neutral-700 hover:text-primary hover:bg-white/10',
-    dark: 'text-neutral-300 hover:text-white hover:bg-neutral-800' };
+    dark: 'text-neutral-700 hover:text-white hover:bg-neutral-800' };
   
   const linkClasses = clsx(
     baseClasses,

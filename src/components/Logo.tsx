@@ -71,7 +71,7 @@ export const Logo: React.FC<LogoProps> = ({
           {variant === 'combined' && (
             <span className={cn(
               'text-xs',
-              darkMode ? 'text-gray-300' : 'text-gray-200'
+              darkMode ? 'text-gray-700' : 'text-gray-700'
             )}>
               Powered by NRP
             </span>

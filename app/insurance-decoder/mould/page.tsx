@@ -142,7 +142,7 @@ export default function MouldInsurancePage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Mould Insurance Coverage Guide
             </h1>
-            <p className="text-xl text-green-100 max-w-3xl">
+            <p className="text-xl text-green-800 max-w-3xl">
               Understanding the complexities of mould coverage and maximizing your claim
             </p>
           </motion.div>
@@ -359,7 +359,7 @@ export default function MouldInsurancePage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Dealing with Mould Issues?
           </h2>
-          <p className="text-xl mb-8 text-green-100">
+          <p className="text-xl mb-8 text-green-800">
             Get professional help to maximize your insurance coverage
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

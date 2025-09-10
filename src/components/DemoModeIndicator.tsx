@@ -79,17 +79,17 @@ export default function DemoModeIndicator() {
             </div>
             
             <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-              <p className="text-sm text-blue-800 dark:text-blue-200">
+              <p className="text-sm text-blue-800 dark:text-blue-700">
                 <strong>Ready for Production:</strong> Add your API keys to .env.local or Vercel environment variables to instantly switch to live mode.
               </p>
             </div>
 
             <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3">
               <div className="p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                <h4 className="font-medium text-sm text-green-800 dark:text-green-200 mb-1">
+                <h4 className="font-medium text-sm text-green-800 dark:text-green-700 mb-1">
                   ✅ What Works in Demo
                 </h4>
-                <ul className="text-xs text-green-700 dark:text-green-300 space-y-1">
+                <ul className="text-xs text-green-700 dark:text-green-700 space-y-1">
                   <li>• Complete booking flow</li>
                   <li>• Contractor management</li>
                   <li>• Payment processing (simulated)</li>
@@ -99,10 +99,10 @@ export default function DemoModeIndicator() {
               </div>
               
               <div className="p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
-                <h4 className="font-medium text-sm text-yellow-800 dark:text-yellow-200 mb-1">
+                <h4 className="font-medium text-sm text-yellow-800 dark:text-yellow-700 mb-1">
                   🎭 Mock Data Includes
                 </h4>
-                <ul className="text-xs text-yellow-700 dark:text-yellow-300 space-y-1">
+                <ul className="text-xs text-yellow-700 dark:text-yellow-700 space-y-1">
                   <li>• 50 contractors across AU</li>
                   <li>• 200 sample leads</li>
                   <li>• 3 months of KPI data</li>
@@ -112,10 +112,10 @@ export default function DemoModeIndicator() {
               </div>
               
               <div className="p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-                <h4 className="font-medium text-sm text-purple-800 dark:text-purple-200 mb-1">
+                <h4 className="font-medium text-sm text-purple-800 dark:text-purple-700 mb-1">
                   🚀 Production Ready
                 </h4>
-                <ul className="text-xs text-purple-700 dark:text-purple-300 space-y-1">
+                <ul className="text-xs text-purple-700 dark:text-purple-700 space-y-1">
                   <li>• Stripe integration ready</li>
                   <li>• AI orchestration configured</li>
                   <li>• Email/SMS ready</li>

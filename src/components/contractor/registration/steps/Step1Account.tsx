@@ -235,7 +235,7 @@ export function Step1Account({ data, updateData, errors }: Step1AccountProps) {
             </div>
           )}
           
-          <p className="text-xs text-gray-300">Primary login, notifications, and verification</p>
+          <p className="text-xs text-gray-700">Primary login, notifications, and verification</p>
           {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
         </div>
       </div>
@@ -261,9 +261,9 @@ export function Step1Account({ data, updateData, errors }: Step1AccountProps) {
                 className="absolute right-3 top-1/2 -translate-y-1/2"
               >
                 {showPassword ? (
-                  <EyeOff className="w-4 h-4 text-gray-200" />
+                  <EyeOff className="w-4 h-4 text-gray-700" />
                 ) : (
-                  <Eye className="w-4 h-4 text-gray-200" />
+                  <Eye className="w-4 h-4 text-gray-700" />
                 )}
               </button>
             </div>
@@ -287,7 +287,7 @@ export function Step1Account({ data, updateData, errors }: Step1AccountProps) {
             </Alert>
           )}
           
-          <p className="text-xs text-gray-300">
+          <p className="text-xs text-gray-700">
             Minimum 8 characters with at least 1 uppercase, 1 lowercase, and 1 number
           </p>
           {errors.password && <p className="text-sm text-red-500">{errors.password}</p>}
@@ -350,7 +350,7 @@ export function Step1Account({ data, updateData, errors }: Step1AccountProps) {
             </div>
           )}
           
-          <p className="text-xs text-gray-300">Two-factor authentication and SMS alerts</p>
+          <p className="text-xs text-gray-700">Two-factor authentication and SMS alerts</p>
           {errors.mobileNumber && <p className="text-sm text-red-500">{errors.mobileNumber}</p>}
         </div>
       </div>
@@ -371,7 +371,7 @@ export function Step1Account({ data, updateData, errors }: Step1AccountProps) {
             className={errors.companyName ? 'border-red-600' : ''}
           />
           {isCheckingCompanyName && (
-            <p className="text-sm text-gray-300">Checking availability...</p>
+            <p className="text-sm text-gray-700">Checking availability...</p>
           )}
           {companyNameAvailable === false && (
             <p className="text-sm text-red-500">
@@ -384,7 +384,7 @@ export function Step1Account({ data, updateData, errors }: Step1AccountProps) {
               Company name is available
             </p>
           )}
-          <p className="text-xs text-gray-300">Identification and display across the platform</p>
+          <p className="text-xs text-gray-700">Identification and display across the platform</p>
           {errors.companyName && <p className="text-sm text-red-500">{errors.companyName}</p>}
         </div>
       </div>

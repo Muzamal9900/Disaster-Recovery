@@ -76,7 +76,7 @@ export default function FAQIndexPage() {
                     </span>
                   </div>
                   <h2 className="text-2xl font-bold mb-3">{category.name}</h2>
-                  <p className="text-gray-200 mb-4">{category.description}</p>
+                  <p className="text-gray-700 mb-4">{category.description}</p>
                   <div className="flex items-center text-blue-600 font-bold">
                     View Questions <ArrowRight className="ml-2 h-4 w-4" />
                   </div>
@@ -96,21 +96,21 @@ export default function FAQIndexPage() {
           <div className="max-w-4xl mx-auto space-y-6">
             <Card className="p-6">
               <h3 className="font-bold text-lg mb-2">How does your online system work?</h3>
-              <p className="text-gray-200">
+              <p className="text-gray-700">
                 Fill out our form, select your service radius (20-100km), and receive multiple 
                 quotes from IICRC certified contractors within 30-60 minutes.
               </p>
             </Card>
             <Card className="p-6">
               <h3 className="font-bold text-lg mb-2">Why is there a $2,200 minimum fee?</h3>
-              <p className="text-gray-200">
+              <p className="text-gray-700">
                 This covers emergency response, professional assessment, equipment, certified 
                 technicians, and insurance documentation - preventing thousands in secondary damage.
               </p>
             </Card>
             <Card className="p-6">
               <h3 className="font-bold text-lg mb-2">Is insurance coverage available?</h3>
-              <p className="text-gray-200">
+              <p className="text-gray-700">
                 Yes, most disasters are insurance covered. Our contractors bill insurance directly 
                 so you only pay your excess.
               </p>

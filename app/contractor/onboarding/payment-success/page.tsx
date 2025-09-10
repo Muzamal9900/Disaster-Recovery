@@ -40,7 +40,7 @@ function PaymentSuccessPageContent() {
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-green-600 mx-auto"></div>
-          <p className="mt-4 text-gray-200">Verifying your payment...</p>
+          <p className="mt-4 text-gray-700">Verifying your payment...</p>
         </div>
       </div>
     );
@@ -57,7 +57,7 @@ function PaymentSuccessPageContent() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Payment Successful!
           </h1>
-          <p className="text-xl text-gray-200">
+          <p className="text-xl text-gray-700">
             Welcome to National Recovery Partners
           </p>
         </div>
@@ -68,11 +68,11 @@ function PaymentSuccessPageContent() {
           
           <div className="space-y-4">
             <div className="flex justify-between py-3 border-b">
-              <span className="text-gray-200">Application Fee</span>
+              <span className="text-gray-700">Application Fee</span>
               <span className="font-semibold">$275.00</span>
             </div>
             <div className="flex justify-between py-3 border-b">
-              <span className="text-gray-200">Joining Fee</span>
+              <span className="text-gray-700">Joining Fee</span>
               <span className="font-semibold">$2,200.00</span>
             </div>
             <div className="flex justify-between py-3 text-lg font-bold">
@@ -100,7 +100,7 @@ function PaymentSuccessPageContent() {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900">Begin Your 14-Day Onboarding</h3>
-                <p className="text-gray-200 mt-1">
+                <p className="text-gray-700 mt-1">
                   Access your personalised training dashboard to start the comprehensive onboarding program.
                 </p>
               </div>
@@ -112,7 +112,7 @@ function PaymentSuccessPageContent() {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900">Complete Daily Modules</h3>
-                <p className="text-gray-200 mt-1">
+                <p className="text-gray-700 mt-1">
                   Each day unlocks new training content including videos, readings, and assessments.
                 </p>
               </div>
@@ -124,7 +124,7 @@ function PaymentSuccessPageContent() {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900">Submit Required Documentation</h3>
-                <p className="text-gray-200 mt-1">
+                <p className="text-gray-700 mt-1">
                   Upload certifications, insurance documents, and proof of work as you progress.
                 </p>
               </div>
@@ -136,7 +136,7 @@ function PaymentSuccessPageContent() {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900">Get Certified & Start Receiving Leads</h3>
-                <p className="text-gray-200 mt-1">
+                <p className="text-gray-700 mt-1">
                   Upon successful completion, you'll be certified and ready to receive high-value insurance claims.
                 </p>
               </div>
@@ -151,24 +151,24 @@ function PaymentSuccessPageContent() {
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-white rounded-lg p-4 text-center">
               <div className="text-2xl font-bold text-green-600">Month 1</div>
-              <div className="text-gray-200 mt-1">FREE</div>
-              <div className="text-sm text-gray-300 mt-2">100% off while you train</div>
+              <div className="text-gray-700 mt-1">FREE</div>
+              <div className="text-sm text-gray-700 mt-2">100% off while you train</div>
             </div>
             
             <div className="bg-white rounded-lg p-4 text-center">
               <div className="text-2xl font-bold text-blue-600">Month 2</div>
-              <div className="text-gray-200 mt-1">$198/month</div>
-              <div className="text-sm text-gray-300 mt-2">60% discount applied</div>
+              <div className="text-gray-700 mt-1">$198/month</div>
+              <div className="text-sm text-gray-700 mt-2">60% discount applied</div>
             </div>
             
             <div className="bg-white rounded-lg p-4 text-center">
               <div className="text-2xl font-bold text-purple-600">Month 3</div>
-              <div className="text-gray-200 mt-1">$247.50/month</div>
-              <div className="text-sm text-gray-300 mt-2">50% discount applied</div>
+              <div className="text-gray-700 mt-1">$247.50/month</div>
+              <div className="text-sm text-gray-700 mt-2">50% discount applied</div>
             </div>
           </div>
           
-          <p className="text-sm text-gray-200 mt-4 text-center">
+          <p className="text-sm text-gray-700 mt-4 text-center">
             Regular subscription rate of $495/month applies from month 4 onwards
           </p>
         </div>
@@ -187,12 +187,12 @@ function PaymentSuccessPageContent() {
               <ArrowRight className="w-4 h-4" />
             </button>
             
-            <button className="flex items-center justify-center space-x-2 bg-gray-100 text-gray-200 py-3 px-6 rounded-lg hover:bg-gray-200 transition">
+            <button className="flex items-center justify-center space-x-2 bg-gray-100 text-gray-700 py-3 px-6 rounded-lg hover:bg-gray-200 transition">
               <Download className="w-5 h-5" />
               <span>Download Receipt</span>
             </button>
             
-            <button className="flex items-center justify-center space-x-2 bg-gray-100 text-gray-200 py-3 px-6 rounded-lg hover:bg-gray-200 transition">
+            <button className="flex items-center justify-center space-x-2 bg-gray-100 text-gray-700 py-3 px-6 rounded-lg hover:bg-gray-200 transition">
               <Clock className="w-5 h-5" />
               <span>View Schedule</span>
             </button>
@@ -200,7 +200,7 @@ function PaymentSuccessPageContent() {
         </div>
 
         {/* Support Information */}
-        <div className="mt-8 text-center text-gray-200">
+        <div className="mt-8 text-center text-gray-700">
           <p>Need help? Contact our support team at</p>
           <a href="mailto:support@nrpaus.com.au" className="text-blue-600 hover:underline">
             support@nrpaus.com.au
@@ -217,7 +217,7 @@ export default function PaymentSuccessPage() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
-          <p className="mt-4 text-gray-200">Verifying payment...</p>
+          <p className="mt-4 text-gray-700">Verifying payment...</p>
         </div>
       </div>
     }>

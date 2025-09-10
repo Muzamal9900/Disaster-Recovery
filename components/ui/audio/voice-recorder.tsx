@@ -373,7 +373,7 @@ export const VoiceRecorder: React.FC<VoiceRecorderProps> = ({
             />
           )}
           {isRecording && isPaused && (
-            <p className="text-sm text-yellow-600 dark:text-yellow-400">
+            <p className="text-sm text-yellow-600 dark:text-yellow-600">
               Recording Paused
             </p>
           )}
@@ -442,7 +442,7 @@ export const VoiceRecorder: React.FC<VoiceRecorderProps> = ({
 
       {/* Error Display */}
       {error && (
-        <div className="p-3 bg-red-100 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-lg text-sm">
+        <div className="p-3 bg-red-100 dark:bg-red-900/20 text-red-600 dark:text-red-600 rounded-lg text-sm">
           {error}
         </div>
       )}

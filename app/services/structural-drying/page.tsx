@@ -219,7 +219,7 @@ export default function StructuralDryingPage() {
             </svg>
             <div>
               <h3 className="text-xl font-bold mb-2">Time is Critical for Effective Drying</h3>
-              <p className="text-blue-100">
+              <p className="text-blue-800">
                 Structural drying must begin within 24-48 hours to prevent mould growth and secondary damage. 
                 Call <strong className="text-white">Get Help Now</strong> immediately for professional water extraction and drying.
               </p>
@@ -752,7 +752,7 @@ export default function StructuralDryingPage() {
         <h2 className="text-3xl font-bold mb-4">
           Need Professional Structural Drying?
         </h2>
-        <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+        <p className="text-xl text-blue-800 mb-8 max-w-3xl mx-auto">
           Time is critical for effective structural drying. Our IICRC-certified specialists use industrial 
           equipment and proven techniques to remove moisture completely and prevent mould growth.
         </p>
@@ -775,10 +775,10 @@ export default function StructuralDryingPage() {
         </div>
         
         <div className="mt-8 pt-8 border-t border-blue-400">
-          <p className="text-blue-100 mb-2">
+          <p className="text-blue-800 mb-2">
             <strong>Time Critical:</strong> Begin drying within 24-48 hours to prevent mould growth
           </p>
-          <p className="text-blue-200 text-sm">
+          <p className="text-blue-700 text-sm">
             Professional structural drying with industry-leading equipment and certified technicians
           </p>
         </div>

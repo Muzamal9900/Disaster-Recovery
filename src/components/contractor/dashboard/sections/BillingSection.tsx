@@ -60,7 +60,7 @@ export function BillingSection({ subscription }: BillingSectionProps) {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">${subscription.accountBalance.toFixed(2)}</div>
-            <p className="text-xs text-gray-200 mt-1">Available credit</p>
+            <p className="text-xs text-gray-700 mt-1">Available credit</p>
           </CardContent>
         </Card>
 
@@ -71,7 +71,7 @@ export function BillingSection({ subscription }: BillingSectionProps) {
           <CardContent>
             <div className="text-2xl font-bold">{creditUsage.toFixed(0)}%</div>
             <Progress value={creditUsage} className="mt-2 h-2" />
-            <p className="text-xs text-gray-200 mt-1">
+            <p className="text-xs text-gray-700 mt-1">
               ${subscription.creditLimit - subscription.accountBalance} of ${subscription.creditLimit} used
             </p>
           </CardContent>
@@ -83,7 +83,7 @@ export function BillingSection({ subscription }: BillingSectionProps) {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">${subscription.amount}</div>
-            <p className="text-xs text-gray-200 mt-1">{subscription.tier} tier</p>
+            <p className="text-xs text-gray-700 mt-1">{subscription.tier} tier</p>
           </CardContent>
         </Card>
 
@@ -97,7 +97,7 @@ export function BillingSection({ subscription }: BillingSectionProps) {
                 ? new Date(subscription.nextBillingDate).toLocaleDateString()
                 : 'N/A'}
             </div>
-            <p className="text-xs text-gray-200 mt-1">
+            <p className="text-xs text-gray-700 mt-1">
               {subscription.billingCycle || 'MONTHLY'}
             </p>
           </CardContent>
@@ -115,22 +115,22 @@ export function BillingSection({ subscription }: BillingSectionProps) {
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div>
-              <p className="text-sm text-gray-200">Current Tier</p>
+              <p className="text-sm text-gray-700">Current Tier</p>
               <div className="flex items-center gap-2 mt-1">
                 <p className="font-semibold">{subscription.tier}</p>
                 <Badge variant="outline">Active</Badge>
               </div>
             </div>
             <div>
-              <p className="text-sm text-gray-200">Billing Cycle</p>
+              <p className="text-sm text-gray-700">Billing Cycle</p>
               <p className="font-semibold mt-1">{subscription.billingCycle || 'MONTHLY'}</p>
             </div>
             <div>
-              <p className="text-sm text-gray-200">Payment Method</p>
+              <p className="text-sm text-gray-700">Payment Method</p>
               <p className="font-semibold mt-1">{subscription.paymentMethod || 'Credit Card ****1234'}</p>
             </div>
             <div>
-              <p className="text-sm text-gray-200">Auto-Renewal</p>
+              <p className="text-sm text-gray-700">Auto-Renewal</p>
               <div className="flex items-center gap-2 mt-1">
                 {subscription.autoRenew ? (
                   <>
@@ -139,7 +139,7 @@ export function BillingSection({ subscription }: BillingSectionProps) {
                   </>
                 ) : (
                   <>
-                    <XCircle className="h-4 w-4 text-gray-200" />
+                    <XCircle className="h-4 w-4 text-gray-700" />
                     <span className="font-semibold">Disabled</span>
                   </>
                 )}
@@ -178,10 +178,10 @@ export function BillingSection({ subscription }: BillingSectionProps) {
                 {invoices.map(invoice => (
                   <div key={invoice.id} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <Receipt className="h-4 w-4 text-gray-200" />
+                      <Receipt className="h-4 w-4 text-gray-700" />
                       <div>
                         <p className="font-medium text-sm">{invoice.description}</p>
-                        <p className="text-xs text-gray-200">
+                        <p className="text-xs text-gray-700">
                           {new Date(invoice.date).toLocaleDateString()}
                         </p>
                       </div>
@@ -222,7 +222,7 @@ export function BillingSection({ subscription }: BillingSectionProps) {
                       )}
                       <div>
                         <p className="font-medium text-sm">{transaction.description}</p>
-                        <p className="text-xs text-gray-200">
+                        <p className="text-xs text-gray-700">
                           {new Date(transaction.date).toLocaleDateString()}
                         </p>
                       </div>
@@ -248,8 +248,8 @@ export function BillingSection({ subscription }: BillingSectionProps) {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="text-center py-8 text-gray-300">
-                <FileText className="h-12 w-12 mx-auto mb-4 text-gray-300" />
+              <div className="text-center py-8 text-gray-700">
+                <FileText className="h-12 w-12 mx-auto mb-4 text-gray-700" />
                 <p>Statements will be available here at the end of each billing period</p>
               </div>
             </CardContent>

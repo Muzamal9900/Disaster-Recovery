@@ -138,7 +138,7 @@ function PaymentPageContent() {
               </button>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">Secure Payment</h1>
-                <p className="text-sm text-gray-200">Complete your booking</p>
+                <p className="text-sm text-gray-700">Complete your booking</p>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -160,7 +160,7 @@ function PaymentPageContent() {
                 <div className="bg-blue-50 rounded-lg p-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-sm text-gray-200">Initial Assessment Fee</p>
+                      <p className="text-sm text-gray-700">Initial Assessment Fee</p>
                       <p className="text-3xl font-bold text-gray-900">${amount}.00</p>
                     </div>
                     <DollarSign className="h-12 w-12 text-blue-500" />
@@ -188,7 +188,7 @@ function PaymentPageContent() {
                         : 'border-gray-200 hover:border-gray-300'
                     }`}
                   >
-                    <CreditCard className="h-5 w-5 mx-auto mb-1 text-gray-200" />
+                    <CreditCard className="h-5 w-5 mx-auto mb-1 text-gray-700" />
                     <span className="text-sm font-medium">Credit/Debit Card</span>
                   </button>
                   <button
@@ -200,7 +200,7 @@ function PaymentPageContent() {
                         : 'border-gray-200 hover:border-gray-300'
                     }`}
                   >
-                    <Building2 className="h-5 w-5 mx-auto mb-1 text-gray-200" />
+                    <Building2 className="h-5 w-5 mx-auto mb-1 text-gray-700" />
                     <span className="text-sm font-medium">Bank Transfer</span>
                   </button>
                 </div>
@@ -208,7 +208,7 @@ function PaymentPageContent() {
                 {paymentMethod === 'card' ? (
                   <div className="space-y-4">
                     <div>
-                      <label htmlFor="cardNumber" className="block text-sm font-medium text-gray-200 mb-2">
+                      <label htmlFor="cardNumber" className="block text-sm font-medium text-gray-700 mb-2">
                         Card Number
                       </label>
                       <input
@@ -229,7 +229,7 @@ function PaymentPageContent() {
                     </div>
 
                     <div>
-                      <label htmlFor="cardName" className="block text-sm font-medium text-gray-200 mb-2">
+                      <label htmlFor="cardName" className="block text-sm font-medium text-gray-700 mb-2">
                         Cardholder Name
                       </label>
                       <input
@@ -247,7 +247,7 @@ function PaymentPageContent() {
 
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="expiry" className="block text-sm font-medium text-gray-200 mb-2">
+                        <label htmlFor="expiry" className="block text-sm font-medium text-gray-700 mb-2">
                           Expiry Date
                         </label>
                         <input
@@ -268,7 +268,7 @@ function PaymentPageContent() {
                       </div>
 
                       <div>
-                        <label htmlFor="cvv" className="block text-sm font-medium text-gray-200 mb-2">
+                        <label htmlFor="cvv" className="block text-sm font-medium text-gray-700 mb-2">
                           CVV
                         </label>
                         <input
@@ -294,19 +294,19 @@ function PaymentPageContent() {
                     <h3 className="font-medium text-gray-900 mb-3">Bank Transfer Instructions</h3>
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between">
-                        <span className="text-gray-200">Account Name:</span>
+                        <span className="text-gray-700">Account Name:</span>
                         <span className="font-mono">NRP Disaster Recovery</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-200">BSB:</span>
+                        <span className="text-gray-700">BSB:</span>
                         <span className="font-mono">123-456</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-200">Account Number:</span>
+                        <span className="text-gray-700">Account Number:</span>
                         <span className="font-mono">12345678</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-200">Reference:</span>
+                        <span className="text-gray-700">Reference:</span>
                         <span className="font-mono">BOOK-{Date.now()}</span>
                       </div>
                     </div>
@@ -327,7 +327,7 @@ function PaymentPageContent() {
                   
                   <div className="space-y-4">
                     <div>
-                      <label htmlFor="address" className="block text-sm font-medium text-gray-200 mb-2">
+                      <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-2">
                         Street Address
                       </label>
                       <input
@@ -344,7 +344,7 @@ function PaymentPageContent() {
 
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="city" className="block text-sm font-medium text-gray-200 mb-2">
+                        <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-2">
                           City
                         </label>
                         <input
@@ -360,7 +360,7 @@ function PaymentPageContent() {
                       </div>
 
                       <div>
-                        <label htmlFor="billingState" className="block text-sm font-medium text-gray-200 mb-2">
+                        <label htmlFor="billingState" className="block text-sm font-medium text-gray-700 mb-2">
                           State
                         </label>
                         <select
@@ -381,7 +381,7 @@ function PaymentPageContent() {
                     </div>
 
                     <div>
-                      <label htmlFor="billingPostcode" className="block text-sm font-medium text-gray-200 mb-2">
+                      <label htmlFor="billingPostcode" className="block text-sm font-medium text-gray-700 mb-2">
                         Postcode
                       </label>
                       <input
@@ -431,13 +431,13 @@ function PaymentPageContent() {
                 <div className="space-y-4">
                   <div className="pb-4 border-b">
                     <h3 className="font-medium text-gray-900 mb-2">Service Booking</h3>
-                    <p className="text-sm text-gray-200">Emergency Restoration Assessment</p>
-                    <p className="text-xs text-gray-300 mt-1">Includes on-site assessment and detailed quote</p>
+                    <p className="text-sm text-gray-700">Emergency Restoration Assessment</p>
+                    <p className="text-xs text-gray-700 mt-1">Includes on-site assessment and detailed quote</p>
                   </div>
 
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-gray-200">Assessment Fee:</span>
+                      <span className="text-gray-700">Assessment Fee:</span>
                       <span className="font-medium">$2,750.00</span>
                     </div>
                     <div className="flex justify-between text-green-600">
@@ -465,19 +465,19 @@ function PaymentPageContent() {
                     <div className="space-y-2">
                       <div className="flex items-start gap-2">
                         <CheckCircle className="h-4 w-4 text-green-500 mt-0.5" />
-                        <p className="text-xs text-gray-200">Contractor contacts you within 30 minutes</p>
+                        <p className="text-xs text-gray-700">Contractor contacts you within 30 minutes</p>
                       </div>
                       <div className="flex items-start gap-2">
                         <CheckCircle className="h-4 w-4 text-green-500 mt-0.5" />
-                        <p className="text-xs text-gray-200">On-site assessment scheduled</p>
+                        <p className="text-xs text-gray-700">On-site assessment scheduled</p>
                       </div>
                       <div className="flex items-start gap-2">
                         <CheckCircle className="h-4 w-4 text-green-500 mt-0.5" />
-                        <p className="text-xs text-gray-200">Detailed quote provided</p>
+                        <p className="text-xs text-gray-700">Detailed quote provided</p>
                       </div>
                       <div className="flex items-start gap-2">
                         <CheckCircle className="h-4 w-4 text-green-500 mt-0.5" />
-                        <p className="text-xs text-gray-200">$2,200 credited to final invoice</p>
+                        <p className="text-xs text-gray-700">$2,200 credited to final invoice</p>
                       </div>
                     </div>
                   </div>
@@ -485,11 +485,11 @@ function PaymentPageContent() {
                   {/* Security Badges */}
                   <div className="pt-4 border-t">
                     <div className="flex items-center justify-center gap-4">
-                      <Shield className="h-8 w-8 text-gray-200" />
-                      <Lock className="h-8 w-8 text-gray-200" />
-                      <CreditCard className="h-8 w-8 text-gray-200" />
+                      <Shield className="h-8 w-8 text-gray-700" />
+                      <Lock className="h-8 w-8 text-gray-700" />
+                      <CreditCard className="h-8 w-8 text-gray-700" />
                     </div>
-                    <p className="text-xs text-center text-gray-300 mt-2">
+                    <p className="text-xs text-center text-gray-700 mt-2">
                       Secure payment powered by Stripe
                     </p>
                   </div>
@@ -524,7 +524,7 @@ export default function PaymentPage() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
-          <p className="mt-4 text-gray-200">Loading payment...</p>
+          <p className="mt-4 text-gray-700">Loading payment...</p>
         </div>
       </div>
     }>

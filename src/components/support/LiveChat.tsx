@@ -244,7 +244,7 @@ export function LiveChat({ embedded = false }: LiveChatProps) {
           </Avatar>
           <div>
             <p className="font-medium">{session ? mockAgent.name : 'NRP Support'}</p>
-            <p className="text-xs text-blue-100 flex items-center gap-1">
+            <p className="text-xs text-blue-800 flex items-center gap-1">
               {session ? (
                 <>
                   <span className="h-2 w-2 bg-emerald-500 rounded-full animate-pulse" />
@@ -508,7 +508,7 @@ export function LiveChat({ embedded = false }: LiveChatProps) {
               </Avatar>
               <div>
                 <p className="font-medium text-sm">Chat with {mockAgent.name}</p>
-                <p className="text-xs text-blue-100">Click to expand</p>
+                <p className="text-xs text-blue-800">Click to expand</p>
               </div>
             </div>
             <Maximize2 className="h-4 w-4" />

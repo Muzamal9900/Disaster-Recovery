@@ -219,7 +219,7 @@ export default function StormDamagePage() {
             </svg>
             <div>
               <h3 className="text-xl font-bold mb-2">Storm Season Preparation</h3>
-              <p className="text-orange-100">
+              <p className="text-orange-800">
                 Australia's storm season runs October to April. Ensure you have our emergency number saved: 
                 <strong className="text-white"> Get Help Now</strong>. We're standing by during all weather events.
               </p>
@@ -323,7 +323,7 @@ export default function StormDamagePage() {
           
           <div className="bg-gradient-to-br from-gray-50 to-neutral-100 border border-gray-200 rounded-xl p-6">
             <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
-              <svg className="w-6 h-6 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
               </svg>
             </div>
@@ -700,7 +700,7 @@ export default function StormDamagePage() {
         <h2 className="text-3xl font-bold mb-4">
           Storm Damage? We're Ready to Respond
         </h2>
-        <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
+        <p className="text-xl text-orange-800 mb-8 max-w-3xl mx-auto">
           Don't let storm damage become worse. Our 24/7 emergency response teams are standing by 
           with specialised equipment and expertise to secure your property and begin restoration immediately.
         </p>
@@ -723,10 +723,10 @@ export default function StormDamagePage() {
         </div>
         
         <div className="mt-8 pt-8 border-t border-blue-500">
-          <p className="text-orange-100 mb-2">
+          <p className="text-orange-800 mb-2">
             <strong>Storm Season Tip:</strong> Save our number before severe weather arrives
           </p>
-          <p className="text-orange-200 text-sm">
+          <p className="text-orange-700 text-sm">
             We're monitoring weather patterns and ready to deploy immediately after storm events
           </p>
         </div>

@@ -339,12 +339,12 @@ export default function FireDamageGuidePage() {
             className="text-center"
           >
             <div className="flex justify-center mb-6">
-              <Flame className="w-20 h-20 text-orange-400" />
+              <Flame className="w-20 h-20 text-orange-600" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Complete Fire Damage Guide
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-orange-100">
+            <p className="text-xl md:text-2xl mb-8 text-orange-800">
               Expert Fire & Smoke Damage Restoration Information for Australia
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -877,7 +877,7 @@ export default function FireDamageGuidePage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Need Immediate Fire Damage Assistance?
             </h2>
-            <p className="text-xl mb-8 text-orange-100">
+            <p className="text-xl mb-8 text-orange-800">
               Connect with certified fire damage restoration specialists in your area
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

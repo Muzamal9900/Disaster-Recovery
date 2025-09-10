@@ -49,7 +49,7 @@ export function TerritoryManager({ territories = [] }: TerritoryManagerProps) {
       case 'PENDING':
         return <AlertCircle className="h-4 w-4 text-blue-600" />;
       case 'INACTIVE':
-        return <XCircle className="h-4 w-4 text-gray-300" />;
+        return <XCircle className="h-4 w-4 text-gray-700" />;
       default:
         return null;
     }
@@ -71,7 +71,7 @@ export function TerritoryManager({ territories = [] }: TerritoryManagerProps) {
   const renderTerritoryList = (territoryList: Territory[]) => (
     <div className="space-y-4">
       {territoryList.length === 0 ? (
-        <div className="text-center py-8 text-gray-300">
+        <div className="text-center py-8 text-gray-700">
           No territories found in this category
         </div>
       ) : (
@@ -80,7 +80,7 @@ export function TerritoryManager({ territories = [] }: TerritoryManagerProps) {
             <CardContent className="p-4">
               <div className="flex items-start justify-between">
                 <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-gray-200 mt-0.5" />
+                  <MapPin className="h-5 w-5 text-gray-700 mt-0.5" />
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <h4 className="font-semibold">{territory.name}</h4>
@@ -89,10 +89,10 @@ export function TerritoryManager({ territories = [] }: TerritoryManagerProps) {
                       </Badge>
                       <div className="flex items-center gap-1">
                         {getStatusIcon(territory.status)}
-                        <span className="text-sm text-gray-200">{territory.status}</span>
+                        <span className="text-sm text-gray-700">{territory.status}</span>
                       </div>
                     </div>
-                    <div className="text-sm text-gray-200 space-y-1">
+                    <div className="text-sm text-gray-700 space-y-1">
                       {territory.address && <p>{territory.address}</p>}
                       <p>{territory.postcode} {territory.state}</p>
                       <p>Coverage: {territory.coverage.radius} {territory.coverage.unit}</p>
@@ -128,7 +128,7 @@ export function TerritoryManager({ territories = [] }: TerritoryManagerProps) {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{territories.length}</div>
-            <p className="text-xs text-gray-200">Territories</p>
+            <p className="text-xs text-gray-700">Territories</p>
           </CardContent>
         </Card>
 
@@ -138,7 +138,7 @@ export function TerritoryManager({ territories = [] }: TerritoryManagerProps) {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{activeT.length}</div>
-            <p className="text-xs text-gray-200">Serving customers</p>
+            <p className="text-xs text-gray-700">Serving customers</p>
           </CardContent>
         </Card>
 
@@ -148,7 +148,7 @@ export function TerritoryManager({ territories = [] }: TerritoryManagerProps) {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{pendingT.length}</div>
-            <p className="text-xs text-gray-200">Awaiting approval</p>
+            <p className="text-xs text-gray-700">Awaiting approval</p>
           </CardContent>
         </Card>
 
@@ -213,7 +213,7 @@ export function TerritoryManager({ territories = [] }: TerritoryManagerProps) {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="h-96 bg-gray-100 rounded-lg flex items-center justify-center text-gray-300">
+          <div className="h-96 bg-gray-100 rounded-lg flex items-center justify-center text-gray-700">
             Interactive map will be displayed here
           </div>
         </CardContent>

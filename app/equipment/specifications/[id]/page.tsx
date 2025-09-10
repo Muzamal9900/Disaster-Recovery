@@ -65,18 +65,18 @@ export default function EquipmentSpecificationPage({ params }: EquipmentPageProp
       <div className="bg-white border-b">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center space-x-2 text-sm">
-            <Link href="/equipment" className="text-gray-200 hover:text-blue-600">
+            <Link href="/equipment" className="text-gray-700 hover:text-blue-600">
               Equipment
             </Link>
-            <span className="text-gray-200">/</span>
-            <Link href="/equipment/catalog" className="text-gray-200 hover:text-blue-600">
+            <span className="text-gray-700">/</span>
+            <Link href="/equipment/catalog" className="text-gray-700 hover:text-blue-600">
               Catalog
             </Link>
-            <span className="text-gray-200">/</span>
-            <Link href={`/equipment/${equipment.category.toLowerCase().replace(/\s+/g, '-')}`} className="text-gray-200 hover:text-blue-600">
+            <span className="text-gray-700">/</span>
+            <Link href={`/equipment/${equipment.category.toLowerCase().replace(/\s+/g, '-')}`} className="text-gray-700 hover:text-blue-600">
               {equipment.category}
             </Link>
-            <span className="text-gray-200">/</span>
+            <span className="text-gray-700">/</span>
             <span className="text-gray-900 font-medium">{equipment.name}</span>
           </nav>
         </div>
@@ -138,15 +138,15 @@ export default function EquipmentSpecificationPage({ params }: EquipmentPageProp
                     </h3>
                     <div className="space-y-2">
                       <div className="flex justify-between">
-                        <span className="text-gray-200">Daily Rate:</span>
+                        <span className="text-gray-700">Daily Rate:</span>
                         <span className="font-bold text-green-600">${equipment.rentalPrice.daily}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-200">Weekly Rate:</span>
+                        <span className="text-gray-700">Weekly Rate:</span>
                         <span className="font-bold text-green-600">${equipment.rentalPrice.weekly}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-200">Monthly Rate:</span>
+                        <span className="text-gray-700">Monthly Rate:</span>
                         <span className="font-bold text-green-600">${equipment.rentalPrice.monthly}</span>
                       </div>
                     </div>
@@ -178,7 +178,7 @@ export default function EquipmentSpecificationPage({ params }: EquipmentPageProp
                 <Badge variant="outline">Model: {equipment.model}</Badge>
                 <Badge variant="outline">{equipment.category}</Badge>
               </div>
-              <p className="text-gray-200 text-lg">{equipment.description}</p>
+              <p className="text-gray-700 text-lg">{equipment.description}</p>
             </div>
 
             {/* Detailed Tabs */}
@@ -225,25 +225,25 @@ export default function EquipmentSpecificationPage({ params }: EquipmentPageProp
                         <div className="grid grid-cols-2 gap-4">
                           {equipment.dimensions.length && (
                             <div>
-                              <span className="text-gray-200">Length:</span>
+                              <span className="text-gray-700">Length:</span>
                               <span className="ml-2 font-medium">{equipment.dimensions.length}</span>
                             </div>
                           )}
                           {equipment.dimensions.width && (
                             <div>
-                              <span className="text-gray-200">Width:</span>
+                              <span className="text-gray-700">Width:</span>
                               <span className="ml-2 font-medium">{equipment.dimensions.width}</span>
                             </div>
                           )}
                           {equipment.dimensions.height && (
                             <div>
-                              <span className="text-gray-200">Height:</span>
+                              <span className="text-gray-700">Height:</span>
                               <span className="ml-2 font-medium">{equipment.dimensions.height}</span>
                             </div>
                           )}
                           {equipment.dimensions.weight && (
                             <div>
-                              <span className="text-gray-200">Weight:</span>
+                              <span className="text-gray-700">Weight:</span>
                               <span className="ml-2 font-medium">{equipment.dimensions.weight}</span>
                             </div>
                           )}
@@ -258,7 +258,7 @@ export default function EquipmentSpecificationPage({ params }: EquipmentPageProp
                         <div className="grid grid-cols-2 gap-4">
                           {Object.entries(equipment.performance).map(([key, value]) => (
                             <div key={key}>
-                              <span className="text-gray-200 capitalize">
+                              <span className="text-gray-700 capitalize">
                                 {key.replace(/([A-Z])/g, ' $1').trim()}:
                               </span>
                               <span className="ml-2 font-medium">{String(value)}</span>
@@ -281,7 +281,7 @@ export default function EquipmentSpecificationPage({ params }: EquipmentPageProp
                       {equipment.features.map((feature, index) => (
                         <div key={index} className="flex items-start">
                           <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-200">{feature}</span>
+                          <span className="text-gray-700">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -299,7 +299,7 @@ export default function EquipmentSpecificationPage({ params }: EquipmentPageProp
                       {equipment.applications.map((application, index) => (
                         <div key={index} className="flex items-center p-3 bg-gray-50 rounded-lg">
                           <CheckCircle className="h-5 w-5 text-blue-500 mr-3" />
-                          <span className="text-gray-200">{application}</span>
+                          <span className="text-gray-700">{application}</span>
                         </div>
                       ))}
                     </div>
@@ -333,7 +333,7 @@ export default function EquipmentSpecificationPage({ params }: EquipmentPageProp
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-200 mb-6">{equipment.technicalDetails}</p>
+                    <p className="text-gray-700 mb-6">{equipment.technicalDetails}</p>
                     
                     {equipment.operationalRequirements && (
                       <div className="mb-6">
@@ -342,7 +342,7 @@ export default function EquipmentSpecificationPage({ params }: EquipmentPageProp
                           {equipment.operationalRequirements.map((req, index) => (
                             <div key={index} className="flex items-start">
                               <AlertCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                              <span className="text-gray-200">{req}</span>
+                              <span className="text-gray-700">{req}</span>
                             </div>
                           ))}
                         </div>
@@ -366,12 +366,12 @@ export default function EquipmentSpecificationPage({ params }: EquipmentPageProp
                         {equipment.safetyFeatures.map((feature, index) => (
                           <div key={index} className="flex items-center p-3 bg-green-50 rounded-lg">
                             <Shield className="h-5 w-5 text-green-600 mr-3" />
-                            <span className="text-gray-200">{feature}</span>
+                            <span className="text-gray-700">{feature}</span>
                           </div>
                         ))}
                       </div>
                     ) : (
-                      <p className="text-gray-200">Safety features information not available.</p>
+                      <p className="text-gray-700">Safety features information not available.</p>
                     )}
                   </CardContent>
                 </Card>
@@ -394,7 +394,7 @@ export default function EquipmentSpecificationPage({ params }: EquipmentPageProp
                         <Card className="hover:shadow-md transition-shadow cursor-pointer">
                           <CardContent className="p-4">
                             <h4 className="font-semibold text-sm mb-2">{item.name}</h4>
-                            <p className="text-xs text-gray-200">{item.model}</p>
+                            <p className="text-xs text-gray-700">{item.model}</p>
                             {item.rentalPrice && (
                               <p className="text-sm font-bold text-green-600 mt-2">
                                 ${item.rentalPrice.daily}/day

@@ -272,7 +272,7 @@ export default function SchedulePage() {
                   flex items-center justify-center w-10 h-10 rounded-full
                   ${currentStep === step ? 'bg-blue-600 text-white' : 
                     currentStep > step ? 'bg-green-500 text-white' : 
-                    'bg-gray-200 text-gray-300'}
+                    'bg-gray-200 text-gray-700'}
                 `}>
                   {currentStep > step ? (
                     <CheckCircle className="h-5 w-5" />
@@ -312,7 +312,7 @@ export default function SchedulePage() {
               {currentStep === 1 && (
                 <div className="space-y-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-200 mb-3">
+                    <label className="block text-sm font-medium text-gray-700 mb-3">
                       Select Service Type *
                     </label>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -336,7 +336,7 @@ export default function SchedulePage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-200 mb-3">
+                    <label className="block text-sm font-medium text-gray-700 mb-3">
                       Urgency Level *
                     </label>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -367,7 +367,7 @@ export default function SchedulePage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-200 mb-3">
+                    <label className="block text-sm font-medium text-gray-700 mb-3">
                       Property Type *
                     </label>
                     <div className="grid grid-cols-3 gap-4">
@@ -402,7 +402,7 @@ export default function SchedulePage() {
               {currentStep === 2 && (
                 <div className="space-y-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-200 mb-3">
+                    <label className="block text-sm font-medium text-gray-700 mb-3">
                       Select Date *
                     </label>
                     <div className="grid grid-cols-7 gap-2">
@@ -423,7 +423,7 @@ export default function SchedulePage() {
                                 ? 'border-blue-500 bg-blue-50 text-blue-700'
                                 : available
                                 ? 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
-                                : 'border-gray-100 bg-gray-50 text-gray-200 cursor-not-allowed'}
+                                : 'border-gray-100 bg-gray-50 text-gray-700 cursor-not-allowed'}
                             `}
                           >
                             <div className="text-xs font-medium">
@@ -443,7 +443,7 @@ export default function SchedulePage() {
 
                   {selectedDate && (
                     <div>
-                      <label className="block text-sm font-medium text-gray-200 mb-3">
+                      <label className="block text-sm font-medium text-gray-700 mb-3">
                         Select Time *
                       </label>
                       <div className="grid grid-cols-3 md:grid-cols-4 gap-3">
@@ -461,7 +461,7 @@ export default function SchedulePage() {
                                 ? slot.emergency
                                   ? 'border-red-300 hover:border-red-400 bg-red-50'
                                   : 'border-gray-200 hover:border-gray-300'
-                                : 'border-gray-100 bg-gray-50 text-gray-200 cursor-not-allowed'}
+                                : 'border-gray-100 bg-gray-50 text-gray-700 cursor-not-allowed'}
                             `}
                           >
                             <div className="flex items-center justify-center gap-2">
@@ -486,7 +486,7 @@ export default function SchedulePage() {
                 <div className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-200 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
                         Full Name *
                       </label>
                       <input
@@ -500,7 +500,7 @@ export default function SchedulePage() {
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium text-gray-200 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
                         Company (Optional)
                       </label>
                       <input
@@ -515,7 +515,7 @@ export default function SchedulePage() {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-200 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
                         Email Address *
                       </label>
                       <input
@@ -529,7 +529,7 @@ export default function SchedulePage() {
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium text-gray-200 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
                         Phone Number *
                       </label>
                       <input
@@ -545,7 +545,7 @@ export default function SchedulePage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-200 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
                       Property Address *
                     </label>
                     <input
@@ -560,7 +560,7 @@ export default function SchedulePage() {
 
                   <div className="grid md:grid-cols-3 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-200 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
                         Suburb *
                       </label>
                       <input
@@ -574,7 +574,7 @@ export default function SchedulePage() {
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium text-gray-200 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
                         State *
                       </label>
                       <select
@@ -596,7 +596,7 @@ export default function SchedulePage() {
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium text-gray-200 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
                         Postcode *
                       </label>
                       <input
@@ -618,7 +618,7 @@ export default function SchedulePage() {
               {currentStep === 4 && (
                 <div className="space-y-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-200 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
                       Describe the Damage (Optional)
                     </label>
                     <textarea
@@ -640,7 +640,7 @@ export default function SchedulePage() {
                         onChange={handleInputChange}
                         className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                       />
-                      <span className="text-sm font-medium text-gray-200">
+                      <span className="text-sm font-medium text-gray-700">
                         I have insurance coverage for this damage
                       </span>
                     </label>
@@ -648,7 +648,7 @@ export default function SchedulePage() {
 
                   {formData.hasInsurance && (
                     <div>
-                      <label className="block text-sm font-medium text-gray-200 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
                         Insurance Provider
                       </label>
                       <input
@@ -662,7 +662,7 @@ export default function SchedulePage() {
                   )}
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-200 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
                       Estimated Property Value (Optional)
                     </label>
                     <select
@@ -681,7 +681,7 @@ export default function SchedulePage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-200 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
                       Preferred Contact Method
                     </label>
                     <div className="grid grid-cols-3 gap-3">
@@ -718,27 +718,27 @@ export default function SchedulePage() {
                     </h3>
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between">
-                        <span className="text-gray-200">Service:</span>
+                        <span className="text-gray-700">Service:</span>
                         <span className="font-medium">
                           {services.find(s => s.id === formData.serviceType)?.label}
                         </span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-200">Date:</span>
+                        <span className="text-gray-700">Date:</span>
                         <span className="font-medium">
                           {formData.date && new Date(formData.date).toLocaleDateString('en-AU')}
                         </span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-200">Time:</span>
+                        <span className="text-gray-700">Time:</span>
                         <span className="font-medium">{formData.time}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-200">Property:</span>
+                        <span className="text-gray-700">Property:</span>
                         <span className="font-medium capitalize">{formData.propertyType}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-200">Urgency:</span>
+                        <span className="text-gray-700">Urgency:</span>
                         <span className="font-medium capitalize">{formData.urgency}</span>
                       </div>
                     </div>

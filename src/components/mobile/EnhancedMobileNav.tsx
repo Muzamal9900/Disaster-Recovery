@@ -194,7 +194,7 @@ export default function EnhancedMobileNav() {
               {/* Search Bar */}
               <div className="p-4 border-b border-gray-200">
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-600" />
                   <input
                     type="text"
                     placeholder="Search..."
@@ -227,7 +227,7 @@ export default function EnhancedMobileNav() {
                             animate={{ rotate: expandedItems.includes(item.title) ? 90 : 0 }}
                             transition={{ duration: 0.2 }}
                           >
-                            <ChevronRight className="h-4 w-4 text-gray-400" />
+                            <ChevronRight className="h-4 w-4 text-gray-600" />
                           </motion.div>
                         </button>
 

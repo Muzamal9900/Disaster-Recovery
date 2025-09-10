@@ -135,7 +135,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                 <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
                   {title}
                 </CardTitle>
-                <CardDescription className="text-gray-200 text-lg">
+                <CardDescription className="text-gray-700 text-lg">
                   {description}
                 </CardDescription>
                 
@@ -227,7 +227,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6 }}
-                  className="text-center text-sm text-gray-300 space-y-2"
+                  className="text-center text-sm text-gray-700 space-y-2"
                 >
                   <p>
                     If the problem persists, please contact our support team.
@@ -278,8 +278,8 @@ export function useErrorHandler() {
 export const SimpleErrorFallback = ({ error }: { error?: Error }) => (
   <div className="flex items-center justify-center p-8">
     <div className="text-center">
-      <FileX className="h-12 w-12 text-gray-200 mx-auto mb-4" />
-      <p className="text-gray-200">Something went wrong loading this component.</p>
+      <FileX className="h-12 w-12 text-gray-700 mx-auto mb-4" />
+      <p className="text-gray-700">Something went wrong loading this component.</p>
       <Button 
         onClick={() => window.location.reload()} 
         size="sm" 

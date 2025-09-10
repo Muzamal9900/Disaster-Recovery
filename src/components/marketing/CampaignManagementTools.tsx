@@ -349,7 +349,7 @@ export default function CampaignManagementTools() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-200">Active Campaigns</p>
+            <p className="text-sm font-medium text-gray-700">Active Campaigns</p>
             <p className="text-3xl font-bold text-gray-900 mt-1">
               {mockCampaigns.filter(c => c.status === 'active').length}
             </p>
@@ -363,7 +363,7 @@ export default function CampaignManagementTools() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-200">Total Budget</p>
+            <p className="text-sm font-medium text-gray-700">Total Budget</p>
             <p className="text-3xl font-bold text-gray-900 mt-1">
               {formatCurrency(mockCampaigns.reduce((sum, c) => sum + c.budget.total, 0))}
             </p>
@@ -377,7 +377,7 @@ export default function CampaignManagementTools() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-200">Total Spent</p>
+            <p className="text-sm font-medium text-gray-700">Total Spent</p>
             <p className="text-3xl font-bold text-gray-900 mt-1">
               {formatCurrency(mockCampaigns.reduce((sum, c) => sum + c.budget.spent, 0))}
             </p>
@@ -391,7 +391,7 @@ export default function CampaignManagementTools() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-200">Avg ROAS</p>
+            <p className="text-sm font-medium text-gray-700">Avg ROAS</p>
             <p className="text-3xl font-bold text-gray-900 mt-1">
               {(mockCampaigns.reduce((sum, c) => sum + (c.performance.roas || 0), 0) / mockCampaigns.length).toFixed(1)}x
             </p>
@@ -420,7 +420,7 @@ export default function CampaignManagementTools() {
         
         <div className="flex space-x-3">
           <div className="flex-1 relative">
-            <Search className="absolute left-3 top-3 w-4 h-4 text-gray-200" />
+            <Search className="absolute left-3 top-3 w-4 h-4 text-gray-700" />
             <input
               type="text"
               placeholder="Search campaigns..."
@@ -447,22 +447,22 @@ export default function CampaignManagementTools() {
         <table className="w-full">
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Campaign
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Status
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Budget
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Performance
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Timeline
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Actions
               </th>
             </tr>
@@ -481,11 +481,11 @@ export default function CampaignManagementTools() {
                   <td className="px-6 py-4">
                     <div>
                       <p className="text-sm font-medium text-gray-900">{campaign.name}</p>
-                      <p className="text-sm text-gray-300 line-clamp-1">{campaign.description}</p>
+                      <p className="text-sm text-gray-700 line-clamp-1">{campaign.description}</p>
                       <div className="flex items-center mt-1 space-x-2">
-                        <span className="text-xs text-gray-200">{campaign.manager}</span>
-                        <span className="text-xs text-gray-300">•</span>
-                        <span className="text-xs text-gray-200 capitalize">{campaign.type}</span>
+                        <span className="text-xs text-gray-700">{campaign.manager}</span>
+                        <span className="text-xs text-gray-700">•</span>
+                        <span className="text-xs text-gray-700 capitalize">{campaign.type}</span>
                       </div>
                     </div>
                   </td>
@@ -499,7 +499,7 @@ export default function CampaignManagementTools() {
                       <p className="text-sm font-medium text-gray-900">
                         {formatCurrency(campaign.budget.spent)}
                       </p>
-                      <p className="text-xs text-gray-300">
+                      <p className="text-xs text-gray-700">
                         of {formatCurrency(campaign.budget.total)}
                       </p>
                       <div className="w-full bg-gray-200 rounded-full h-1 mt-1">
@@ -515,16 +515,16 @@ export default function CampaignManagementTools() {
                       <p className="font-medium text-gray-900">
                         {formatNumber(campaign.performance.conversions)} conversions
                       </p>
-                      <p className="text-gray-300">
+                      <p className="text-gray-700">
                         ROAS: {campaign.performance.roas.toFixed(1)}x
                       </p>
-                      <p className="text-gray-300">
+                      <p className="text-gray-700">
                         CPA: {formatCurrency(campaign.performance.cpa)}
                       </p>
                     </div>
                   </td>
                   <td className="px-6 py-4">
-                    <div className="text-sm text-gray-200">
+                    <div className="text-sm text-gray-700">
                       <p>{campaign.timeline.startDate.toLocaleDateString('en-AU')}</p>
                       <p>to {campaign.timeline.endDate.toLocaleDateString('en-AU')}</p>
                     </div>
@@ -539,7 +539,7 @@ export default function CampaignManagementTools() {
                         <Eye className="w-4 h-4" />
                       </button>
                       <button
-                        className="text-gray-200 hover:text-gray-200"
+                        className="text-gray-700 hover:text-gray-700"
                         title="Edit Campaign"
                       >
                         <Edit className="w-4 h-4" />
@@ -557,7 +557,7 @@ export default function CampaignManagementTools() {
                         }
                       </button>
                       <button
-                        className="text-gray-200 hover:text-gray-200"
+                        className="text-gray-700 hover:text-gray-700"
                         title="Duplicate Campaign"
                       >
                         <Copy className="w-4 h-4" />
@@ -589,7 +589,7 @@ export default function CampaignManagementTools() {
               <h4 className="font-medium text-gray-900">{template.name}</h4>
               <span className="text-lg">{platformIcons[template.platform]}</span>
             </div>
-            <div className="space-y-2 text-sm text-gray-200">
+            <div className="space-y-2 text-sm text-gray-700">
               <div className="flex justify-between">
                 <span>Type:</span>
                 <span className="capitalize">{template.type}</span>
@@ -607,7 +607,7 @@ export default function CampaignManagementTools() {
               <button className="flex-1 px-3 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colours">
                 Use Template
               </button>
-              <button className="px-3 py-2 border border-gray-300 text-gray-200 text-sm rounded-lg hover:bg-gray-50 transition-colours">
+              <button className="px-3 py-2 border border-gray-300 text-gray-700 text-sm rounded-lg hover:bg-gray-50 transition-colours">
                 <Edit className="w-4 h-4" />
               </button>
             </div>
@@ -624,7 +624,7 @@ export default function CampaignManagementTools() {
           <div className="flex justify-between items-center mb-6">
             <div>
               <h3 className="text-lg font-semibold text-gray-900">{pool.name}</h3>
-              <p className="text-sm text-gray-300">
+              <p className="text-sm text-gray-700">
                 {pool.period.start.toLocaleDateString('en-AU')} - {pool.period.end.toLocaleDateString('en-AU')}
               </p>
             </div>
@@ -632,7 +632,7 @@ export default function CampaignManagementTools() {
               <p className="text-2xl font-bold text-gray-900">
                 {formatCurrency(pool.availableBudget)}
               </p>
-              <p className="text-sm text-gray-300">Available</p>
+              <p className="text-sm text-gray-700">Available</p>
             </div>
           </div>
 
@@ -641,19 +641,19 @@ export default function CampaignManagementTools() {
               <p className="text-2xl font-bold text-blue-600">
                 {formatCurrency(pool.totalBudget)}
               </p>
-              <p className="text-sm text-gray-200">Total Budget</p>
+              <p className="text-sm text-gray-700">Total Budget</p>
             </div>
             <div className="text-center p-4 bg-green-50 rounded-lg">
               <p className="text-2xl font-bold text-green-600">
                 {formatCurrency(pool.allocatedBudget)}
               </p>
-              <p className="text-sm text-gray-200">Allocated</p>
+              <p className="text-sm text-gray-700">Allocated</p>
             </div>
             <div className="text-center p-4 bg-orange-50 rounded-lg">
               <p className="text-2xl font-bold text-blue-700">
                 {formatPercentage((pool.allocatedBudget / pool.totalBudget) * 100)}
               </p>
-              <p className="text-sm text-gray-200">Utilization</p>
+              <p className="text-sm text-gray-700">Utilization</p>
             </div>
           </div>
 
@@ -668,7 +668,7 @@ export default function CampaignManagementTools() {
                     </div>
                     <div>
                       <p className="font-medium text-gray-900">{contractor.contractorName}</p>
-                      <p className="text-sm text-gray-300">{contractor.allocation}% allocation</p>
+                      <p className="text-sm text-gray-700">{contractor.allocation}% allocation</p>
                     </div>
                   </div>
                   <div className="text-right">
@@ -676,7 +676,7 @@ export default function CampaignManagementTools() {
                       {formatCurrency(contractor.spent)}
                     </p>
                     <div className="flex items-center space-x-2 text-sm">
-                      <span className="text-gray-300">ROI:</span>
+                      <span className="text-gray-700">ROI:</span>
                       <span className={`font-medium ${
                         contractor.performance.roi >= 300 ? 'text-green-600' :
                         contractor.performance.roi >= 200 ? 'text-yellow-600' :
@@ -696,7 +696,7 @@ export default function CampaignManagementTools() {
               <h4 className="font-medium text-gray-900 mb-3">Budget Restrictions</h4>
               <div className="space-y-2">
                 {pool.restrictions.map((restriction, index) => (
-                  <div key={index} className="flex items-center space-x-2 text-sm text-gray-200">
+                  <div key={index} className="flex items-center space-x-2 text-sm text-gray-700">
                     <AlertTriangle className="w-4 h-4 text-blue-600" />
                     <span>{restriction.description}</span>
                   </div>
@@ -718,14 +718,14 @@ export default function CampaignManagementTools() {
             <div className="flex items-start justify-between">
               <div className="flex-1">
                 <h4 className="font-medium text-gray-900">{campaign.name}</h4>
-                <p className="text-sm text-gray-200 mt-1">{campaign.description}</p>
-                <div className="flex items-center space-x-4 mt-2 text-sm text-gray-300">
+                <p className="text-sm text-gray-700 mt-1">{campaign.description}</p>
+                <div className="flex items-center space-x-4 mt-2 text-sm text-gray-700">
                   <span>Budget: {formatCurrency(campaign.budget.total)}</span>
                   <span>Duration: {Math.ceil((campaign.timeline.endDate.getTime() - campaign.timeline.startDate.getTime()) / (1000 * 60 * 60 * 24))} days</span>
                   <span>Manager: {campaign.manager}</span>
                 </div>
                 {campaign.approval.comments && (
-                  <p className="text-sm text-gray-200 mt-2 italic">
+                  <p className="text-sm text-gray-700 mt-2 italic">
                     "{campaign.approval.comments}"
                   </p>
                 )}
@@ -737,7 +737,7 @@ export default function CampaignManagementTools() {
                 <button className="px-3 py-2 bg-red-600 text-white text-sm rounded-lg hover:bg-red-700 transition-colours">
                   Reject
                 </button>
-                <button className="px-3 py-2 border border-gray-300 text-gray-200 text-sm rounded-lg hover:bg-gray-50 transition-colours">
+                <button className="px-3 py-2 border border-gray-300 text-gray-700 text-sm rounded-lg hover:bg-gray-50 transition-colours">
                   Review
                 </button>
               </div>
@@ -748,7 +748,7 @@ export default function CampaignManagementTools() {
         {mockCampaigns.filter(c => c.approval.status === 'pending').length === 0 && (
           <div className="text-center py-8">
             <CheckCircle className="w-12 h-12 text-green-500 mx-auto mb-4" />
-            <p className="text-gray-200">No campaigns pending approval</p>
+            <p className="text-gray-700">No campaigns pending approval</p>
           </div>
         )}
       </div>
@@ -760,12 +760,12 @@ export default function CampaignManagementTools() {
       <div className="flex justify-between items-center mb-8">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Campaign Management Tools</h1>
-          <p className="text-gray-200 mt-2">
+          <p className="text-gray-700 mt-2">
             Create, manage, and optimise advertising campaigns across all platforms
           </p>
         </div>
         <div className="flex space-x-3">
-          <button className="px-4 py-2 bg-gray-100 text-gray-200 rounded-lg hover:bg-gray-200 transition-colours">
+          <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colours">
             <RefreshCw className="w-4 h-4 mr-2 inline" />
             Refresh
           </button>
@@ -792,7 +792,7 @@ export default function CampaignManagementTools() {
                 className={`flex items-center px-1 py-4 border-b-2 font-medium text-sm transition-colours ${
                   selectedView === tab.key
                     ? 'border-blue-500 text-blue-600'
-                    : 'border-transparent text-gray-300 hover:text-gray-200 hover:border-gray-300'
+                    : 'border-transparent text-gray-700 hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
                 {tab.icon}

@@ -44,10 +44,10 @@ export default function GovernmentFundingDetails() {
           className="text-center mb-12"
         >
           <h1 className="text-5xl font-bold text-white mb-4 flex items-center justify-center gap-3">
-            <Shield className="h-12 w-12 text-yellow-400" />
+            <Shield className="h-12 w-12 text-yellow-600" />
             Government Funding Framework
           </h1>
-          <p className="text-xl text-blue-100 max-w-4xl mx-auto">
+          <p className="text-xl text-blue-800 max-w-4xl mx-auto">
             Comprehensive pathway to $2.4B in Australian government funding and industry recognition for 
             the specialty cleaning and restoration sector
           </p>
@@ -79,7 +79,7 @@ export default function GovernmentFundingDetails() {
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardHeader>
                   <CardTitle className="text-2xl text-white flex items-center gap-2">
-                    <Globe className="h-6 w-6 text-yellow-400" />
+                    <Globe className="h-6 w-6 text-yellow-600" />
                     Federal Funding Programs - $2.4B Available
                   </CardTitle>
                 </CardHeader>
@@ -95,30 +95,30 @@ export default function GovernmentFundingDetails() {
                       >
                         <div className="flex justify-between items-start mb-4">
                           <h3 className="font-bold text-white text-lg">{program.name}</h3>
-                          <Badge variant="outline" className="text-green-400 border-green-400">
+                          <Badge variant="outline" className="text-green-600 border-green-400">
                             {program.applicationStatus}
                           </Badge>
                         </div>
                         
                         <div className="space-y-2 mb-4">
                           <div className="flex justify-between">
-                            <span className="text-gray-300">Grant Range:</span>
-                            <span className="text-yellow-400 font-bold">
+                            <span className="text-gray-700">Grant Range:</span>
+                            <span className="text-yellow-600 font-bold">
                               {formatCurrency(program.minGrant)} - {formatCurrency(program.maxGrant)}
                             </span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-gray-300">Coverage:</span>
-                            <span className="text-blue-400">{program.coveragePercent}%</span>
+                            <span className="text-gray-700">Coverage:</span>
+                            <span className="text-blue-600">{program.coveragePercent}%</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-gray-300">Duration:</span>
-                            <span className="text-gray-200">{program.duration}</span>
+                            <span className="text-gray-700">Duration:</span>
+                            <span className="text-gray-700">{program.duration}</span>
                           </div>
                         </div>
 
                         <div className="mb-4">
-                          <h4 className="text-sm font-semibold text-gray-300 mb-2">Focus Areas:</h4>
+                          <h4 className="text-sm font-semibold text-gray-700 mb-2">Focus Areas:</h4>
                           <div className="flex flex-wrap gap-1">
                             {program.focusAreas.slice(0, 2).map((area, i) => (
                               <Badge key={i} variant="secondary" className="text-xs">
@@ -128,7 +128,7 @@ export default function GovernmentFundingDetails() {
                           </div>
                         </div>
 
-                        <div className="text-xs text-gray-200">
+                        <div className="text-xs text-gray-700">
                           Authority: {program.authority}
                         </div>
                       </motion.div>
@@ -141,7 +141,7 @@ export default function GovernmentFundingDetails() {
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardHeader>
                   <CardTitle className="text-2xl text-white flex items-center gap-2">
-                    <FileText className="h-6 w-6 text-blue-400" />
+                    <FileText className="h-6 w-6 text-blue-600" />
                     State & Territory Programs
                   </CardTitle>
                 </CardHeader>
@@ -156,10 +156,10 @@ export default function GovernmentFundingDetails() {
                         className="bg-white/5 rounded-lg p-4 border border-white/10"
                       >
                         <h3 className="font-bold text-white mb-2">{program.name}</h3>
-                        <div className="text-blue-400 font-bold mb-1">
+                        <div className="text-blue-600 font-bold mb-1">
                           {formatCurrency(program.minGrant)} - {formatCurrency(program.maxGrant)}
                         </div>
-                        <div className="text-xs text-gray-200">{program.authority}</div>
+                        <div className="text-xs text-gray-700">{program.authority}</div>
                       </motion.div>
                     ))}
                   </div>
@@ -174,7 +174,7 @@ export default function GovernmentFundingDetails() {
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardHeader>
                   <CardTitle className="text-2xl text-white flex items-center gap-2">
-                    <Award className="h-6 w-6 text-green-400" />
+                    <Award className="h-6 w-6 text-green-600" />
                     CPP40421 Certificate IV in Specialty Cleaning & Restoration
                   </CardTitle>
                 </CardHeader>
@@ -184,16 +184,16 @@ export default function GovernmentFundingDetails() {
                       <h3 className="text-lg font-bold text-white mb-4">Current Status</h3>
                       <div className="space-y-2">
                         <div className="flex justify-between">
-                          <span className="text-gray-300">National Recognition:</span>
+                          <span className="text-gray-700">National Recognition:</span>
                           <Badge className="bg-green-700 text-white">Active</Badge>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-300">Queensland Providers:</span>
-                          <span className="text-yellow-400 font-bold">{CPP40421_SPECIALISATIONS.currentProviders.queensland}</span>
+                          <span className="text-gray-700">Queensland Providers:</span>
+                          <span className="text-yellow-600 font-bold">{CPP40421_SPECIALISATIONS.currentProviders.queensland}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-300">National Providers:</span>
-                          <span className="text-yellow-400 font-bold">{CPP40421_SPECIALISATIONS.currentProviders.national}</span>
+                          <span className="text-gray-700">National Providers:</span>
+                          <span className="text-yellow-600 font-bold">{CPP40421_SPECIALISATIONS.currentProviders.national}</span>
                         </div>
                       </div>
                     </div>
@@ -203,8 +203,8 @@ export default function GovernmentFundingDetails() {
                       <div className="space-y-2">
                         {CPP40421_SPECIALISATIONS.specialisations[1].coverageAreas.map((area, index) => (
                           <div key={index} className="flex items-center gap-2">
-                            <CheckCircle className="h-4 w-4 text-green-400" />
-                            <span className="text-gray-300 text-sm">{area}</span>
+                            <CheckCircle className="h-4 w-4 text-green-600" />
+                            <span className="text-gray-700 text-sm">{area}</span>
                           </div>
                         ))}
                       </div>
@@ -235,30 +235,30 @@ export default function GovernmentFundingDetails() {
                           <h3 className="font-bold text-white mb-2">{step.phase}</h3>
                           <div className="grid md:grid-cols-3 gap-4 mb-3">
                             <div>
-                              <span className="text-xs text-gray-200">Duration:</span>
-                              <div className="text-blue-400">{step.duration}</div>
+                              <span className="text-xs text-gray-700">Duration:</span>
+                              <div className="text-blue-600">{step.duration}</div>
                             </div>
                             <div>
-                              <span className="text-xs text-gray-200">Cost:</span>
-                              <div className="text-yellow-400">{step.cost}</div>
+                              <span className="text-xs text-gray-700">Cost:</span>
+                              <div className="text-yellow-600">{step.cost}</div>
                             </div>
                             <div>
-                              <span className="text-xs text-gray-200">Authority:</span>
-                              <div className="text-gray-300 text-sm">{step.authority}</div>
+                              <span className="text-xs text-gray-700">Authority:</span>
+                              <div className="text-gray-700 text-sm">{step.authority}</div>
                             </div>
                           </div>
                           <div className="grid md:grid-cols-2 gap-4">
                             <div>
-                              <h4 className="text-sm font-semibold text-gray-300 mb-1">Requirements:</h4>
-                              <ul className="text-xs text-gray-200 space-y-1">
+                              <h4 className="text-sm font-semibold text-gray-700 mb-1">Requirements:</h4>
+                              <ul className="text-xs text-gray-700 space-y-1">
                                 {step.requirements.slice(0, 2).map((req, i) => (
                                   <li key={i}>• {req}</li>
                                 ))}
                               </ul>
                             </div>
                             <div>
-                              <h4 className="text-sm font-semibold text-gray-300 mb-1">Deliverables:</h4>
-                              <ul className="text-xs text-gray-200 space-y-1">
+                              <h4 className="text-sm font-semibold text-gray-700 mb-1">Deliverables:</h4>
+                              <ul className="text-xs text-gray-700 space-y-1">
                                 {step.deliverables.slice(0, 2).map((del, i) => (
                                   <li key={i}>• {del}</li>
                                 ))}
@@ -280,24 +280,24 @@ export default function GovernmentFundingDetails() {
               <Card className="bg-gradient-to-r from-yellow-900/20 to-blue-900/20 backdrop-blur-sm border-yellow-500/30">
                 <CardHeader>
                   <CardTitle className="text-2xl text-white flex items-center gap-2">
-                    <Target className="h-6 w-6 text-yellow-400" />
+                    <Target className="h-6 w-6 text-yellow-600" />
                     Primary Funding Strategy
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-yellow-400 mb-2">{FUNDING_STRATEGY.primaryTarget.amount}</div>
+                      <div className="text-3xl font-bold text-yellow-600 mb-2">{FUNDING_STRATEGY.primaryTarget.amount}</div>
                       <div className="text-white font-semibold mb-2">{FUNDING_STRATEGY.primaryTarget.program}</div>
-                      <div className="text-sm text-gray-300">{FUNDING_STRATEGY.primaryTarget.justification}</div>
+                      <div className="text-sm text-gray-700">{FUNDING_STRATEGY.primaryTarget.justification}</div>
                     </div>
                     <div className="col-span-2">
                       <h3 className="text-lg font-bold text-white mb-4">Economic Justification</h3>
                       <div className="space-y-2">
                         {FUNDING_STRATEGY.economicJustification.map((point, index) => (
                           <div key={index} className="flex items-center gap-2">
-                            <CheckCircle className="h-4 w-4 text-green-400 flex-shrink-0" />
-                            <span className="text-gray-300 text-sm">{point}</span>
+                            <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                            <span className="text-gray-700 text-sm">{point}</span>
                           </div>
                         ))}
                       </div>
@@ -310,7 +310,7 @@ export default function GovernmentFundingDetails() {
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardHeader>
                   <CardTitle className="text-2xl text-white flex items-center gap-2">
-                    <Clock className="h-6 w-6 text-blue-400" />
+                    <Clock className="h-6 w-6 text-blue-600" />
                     Implementation Timeline
                   </CardTitle>
                 </CardHeader>
@@ -330,14 +330,14 @@ export default function GovernmentFundingDetails() {
                           </div>
                           <div>
                             <h3 className="font-bold text-white">{phase}</h3>
-                            <div className="text-sm text-blue-400">{details.duration}</div>
+                            <div className="text-sm text-blue-600">{details.duration}</div>
                           </div>
                         </div>
                         <div className="grid md:grid-cols-2 gap-4">
                           {details.activities.map((activity, i) => (
                             <div key={i} className="flex items-start gap-2">
-                              <ArrowRight className="h-4 w-4 text-gray-200 mt-0.5 flex-shrink-0" />
-                              <span className="text-gray-300 text-sm">{activity}</span>
+                              <ArrowRight className="h-4 w-4 text-gray-700 mt-0.5 flex-shrink-0" />
+                              <span className="text-gray-700 text-sm">{activity}</span>
                             </div>
                           ))}
                         </div>
@@ -354,7 +354,7 @@ export default function GovernmentFundingDetails() {
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardHeader>
                   <CardTitle className="text-2xl text-white flex items-center gap-2">
-                    <Shield className="h-6 w-6 text-green-400" />
+                    <Shield className="h-6 w-6 text-green-600" />
                     Strategic Competitive Advantages
                   </CardTitle>
                 </CardHeader>
@@ -369,10 +369,10 @@ export default function GovernmentFundingDetails() {
                         className="bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg p-6 border border-green-500/30"
                       >
                         <h3 className="text-xl font-bold text-white mb-3">{advantage.title}</h3>
-                        <p className="text-gray-300 mb-4">{advantage.description}</p>
+                        <p className="text-gray-700 mb-4">{advantage.description}</p>
                         <div className="flex items-center gap-2">
-                          <TrendingUp className="h-4 w-4 text-green-400" />
-                          <span className="text-sm text-green-300">{advantage.impact}</span>
+                          <TrendingUp className="h-4 w-4 text-green-600" />
+                          <span className="text-sm text-green-700">{advantage.impact}</span>
                         </div>
                       </motion.div>
                     ))}
@@ -391,7 +391,7 @@ export default function GovernmentFundingDetails() {
                     <h2 className="text-3xl font-bold text-white mb-6">
                       Government Partnership = Market Domination
                     </h2>
-                    <p className="text-xl text-gray-300 mb-8">
+                    <p className="text-xl text-gray-700 mb-8">
                       This comprehensive framework transforms disaster recovery from a fragmented service industry 
                       into a government-recognised profession with regulatory barriers, funding support, and 
                       institutional credibility.

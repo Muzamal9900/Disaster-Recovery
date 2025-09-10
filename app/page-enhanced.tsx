@@ -85,7 +85,7 @@ export default function EnhancedLandingPage() {
                 />
                 <div>
                   <h1 className="text-4xl font-bold text-white">Disaster Recovery</h1>
-                  <p className="text-blue-300 text-sm">Powered by NRP Network</p>
+                  <p className="text-blue-700 text-sm">Powered by NRP Network</p>
                 </div>
               </div>
 
@@ -98,7 +98,7 @@ export default function EnhancedLandingPage() {
               </h2>
 
               {/* Value Proposition */}
-              <p className="text-xl text-blue-200 mb-8 leading-relaxed">
+              <p className="text-xl text-blue-700 mb-8 leading-relaxed">
                 Connecting insurance claims to verified contractors in minutes, not days.
                 Every disaster. Every location. Zero callbacks.
               </p>
@@ -172,7 +172,7 @@ export default function EnhancedLandingPage() {
                   <stat.icon className="h-8 w-8 text-white" />
                 </div>
                 <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-blue-300">{stat.label}</div>
+                <div className="text-blue-700">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -186,7 +186,7 @@ export default function EnhancedLandingPage() {
             <h3 className="text-4xl font-bold text-white mb-4">
               Complete Disaster Coverage
             </h3>
-            <p className="text-xl text-blue-300 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-700 max-w-3xl mx-auto">
               From water damage to biohazards, our network handles every emergency with certified professionals
             </p>
           </div>
@@ -205,15 +205,15 @@ export default function EnhancedLandingPage() {
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-3">
-                  <Droplets className="h-8 w-8 text-blue-400" />
+                  <Droplets className="h-8 w-8 text-blue-600" />
                   <h4 className="text-2xl font-bold text-white">Water & Flood</h4>
                 </div>
-                <p className="text-blue-200 mb-4">
+                <p className="text-blue-700 mb-4">
                   Immediate extraction, drying, and restoration. Insurance approved processes.
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-emerald-600 font-semibold">Available 24/7</span>
-                  <ArrowRight className="h-5 w-5 text-blue-400 group-hover:translate-x-2 transition-transform" />
+                  <ArrowRight className="h-5 w-5 text-blue-600 group-hover:translate-x-2 transition-transform" />
                 </div>
               </div>
             </div>
@@ -231,15 +231,15 @@ export default function EnhancedLandingPage() {
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-3">
-                  <Flame className="h-8 w-8 text-red-400" />
+                  <Flame className="h-8 w-8 text-red-600" />
                   <h4 className="text-2xl font-bold text-white">Fire & Smoke</h4>
                 </div>
-                <p className="text-red-200 mb-4">
+                <p className="text-red-700 mb-4">
                   Complete fire damage restoration, smoke removal, and structural repairs.
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-emerald-600 font-semibold">Rapid Response</span>
-                  <ArrowRight className="h-5 w-5 text-red-400 group-hover:translate-x-2 transition-transform" />
+                  <ArrowRight className="h-5 w-5 text-red-600 group-hover:translate-x-2 transition-transform" />
                 </div>
               </div>
             </div>
@@ -257,15 +257,15 @@ export default function EnhancedLandingPage() {
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-3">
-                  <AlertTriangle className="h-8 w-8 text-purple-400" />
+                  <AlertTriangle className="h-8 w-8 text-purple-600" />
                   <h4 className="text-2xl font-bold text-white">Biohazard</h4>
                 </div>
-                <p className="text-purple-200 mb-4">
+                <p className="text-purple-700 mb-4">
                   Certified biohazard, trauma, and contamination cleanup specialists.
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-emerald-600 font-semibold">Certified Teams</span>
-                  <ArrowRight className="h-5 w-5 text-purple-400 group-hover:translate-x-2 transition-transform" />
+                  <ArrowRight className="h-5 w-5 text-purple-600 group-hover:translate-x-2 transition-transform" />
                 </div>
               </div>
             </div>
@@ -280,7 +280,7 @@ export default function EnhancedLandingPage() {
             <h3 className="text-4xl font-bold text-white mb-4">
               Simple 3-Step Process
             </h3>
-            <p className="text-xl text-blue-300">
+            <p className="text-xl text-blue-700">
               From disaster to restoration in record time
             </p>
           </div>
@@ -293,9 +293,9 @@ export default function EnhancedLandingPage() {
                   1
                 </div>
                 <div className="mt-4">
-                  <MessageSquare className="h-12 w-12 text-blue-400 mb-4" />
+                  <MessageSquare className="h-12 w-12 text-blue-600 mb-4" />
                   <h4 className="text-xl font-bold text-white mb-3">Report Damage</h4>
-                  <p className="text-blue-200">
+                  <p className="text-blue-700">
                     Call or use our AI chat. Instant assessment and contractor matching.
                   </p>
                 </div>
@@ -311,7 +311,7 @@ export default function EnhancedLandingPage() {
                 <div className="mt-4">
                   <Users className="h-12 w-12 text-emerald-600 mb-4" />
                   <h4 className="text-xl font-bold text-white mb-3">Contractor Arrives</h4>
-                  <p className="text-green-200">
+                  <p className="text-green-700">
                     Certified professional on-site within hours. Insurance paperwork handled.
                   </p>
                 </div>
@@ -325,9 +325,9 @@ export default function EnhancedLandingPage() {
                   3
                 </div>
                 <div className="mt-4">
-                  <CheckCircle className="h-12 w-12 text-purple-400 mb-4" />
+                  <CheckCircle className="h-12 w-12 text-purple-600 mb-4" />
                   <h4 className="text-xl font-bold text-white mb-3">Restoration Complete</h4>
-                  <p className="text-purple-200">
+                  <p className="text-purple-700">
                     Property restored. Insurance claim processed. Zero hassle guarantee.
                   </p>
                 </div>
@@ -349,7 +349,7 @@ export default function EnhancedLandingPage() {
                 <Star key={i} className="h-6 w-6 text-blue-500 fill-current" />
               ))}
             </div>
-            <p className="text-xl text-blue-300">
+            <p className="text-xl text-blue-700">
               Real results from real Australians
             </p>
           </div>
@@ -365,7 +365,7 @@ export default function EnhancedLandingPage() {
                     <Star key={i} className="h-5 w-5 text-blue-500 fill-current" />
                   ))}
                 </div>
-                <p className="text-blue-300">
+                <p className="text-blue-700">
                   <span className="font-bold">{testimonials[activeTestimonial].author}</span>
                   {' - '}
                   {testimonials[activeTestimonial].location}
@@ -401,7 +401,7 @@ export default function EnhancedLandingPage() {
                 <Home className="h-10 w-10 text-emerald-600" />
                 <h3 className="text-2xl font-bold text-white">Property Owners</h3>
               </div>
-              <p className="text-blue-200 mb-6">
+              <p className="text-blue-700 mb-6">
                 Disaster struck? Get immediate help from certified professionals. Insurance approved.
               </p>
               <ul className="space-y-3 mb-8">
@@ -429,23 +429,23 @@ export default function EnhancedLandingPage() {
             {/* For Contractors */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <div className="flex items-center gap-3 mb-4">
-                <Briefcase className="h-10 w-10 text-blue-400" />
+                <Briefcase className="h-10 w-10 text-blue-600" />
                 <h3 className="text-2xl font-bold text-white">Contractors</h3>
               </div>
-              <p className="text-blue-200 mb-6">
+              <p className="text-blue-700 mb-6">
                 Join Australia's premier restoration network. Quality leads, fair pricing, instant payment.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-2 text-white">
-                  <CheckCircle className="h-5 w-5 text-blue-400" />
+                  <CheckCircle className="h-5 w-5 text-blue-600" />
                   Pre-Qualified Insurance Jobs
                 </li>
                 <li className="flex items-center gap-2 text-white">
-                  <CheckCircle className="h-5 w-5 text-blue-400" />
+                  <CheckCircle className="h-5 w-5 text-blue-600" />
                   Territory Protection
                 </li>
                 <li className="flex items-center gap-2 text-white">
-                  <CheckCircle className="h-5 w-5 text-blue-400" />
+                  <CheckCircle className="h-5 w-5 text-blue-600" />
                   Instant Payment System
                 </li>
               </ul>
@@ -463,7 +463,7 @@ export default function EnhancedLandingPage() {
       {/* Trust Badges Section */}
       <section className="relative py-16 bg-black/40 backdrop-blur-sm" style={{ zIndex: 2 }}>
         <div className="container mx-auto px-6">
-          <p className="text-center text-blue-300 mb-8">Trusted by Leading Insurance Companies</p>
+          <p className="text-center text-blue-700 mb-8">Trusted by Leading Insurance Companies</p>
           <div className="flex flex-wrap justify-center items-center gap-8">
             <Image
               src="/images/logos/3D CARSI Logo.png"
@@ -495,16 +495,16 @@ export default function EnhancedLandingPage() {
           <div className="relative w-full max-w-4xl mx-4">
             <button
               onClick={() => setVideoModalOpen(false)}
-              className="absolute -top-12 right-0 text-white hover:text-red-400 transition-colors"
+              className="absolute -top-12 right-0 text-white hover:text-red-600 transition-colors"
             >
               <X className="h-8 w-8" />
             </button>
             <div className="bg-slate-900 rounded-2xl p-2">
               <div className="aspect-video bg-slate-800 rounded-xl flex items-center justify-center">
                 <div className="text-center">
-                  <Play className="h-16 w-16 text-blue-400 mx-auto mb-4" />
+                  <Play className="h-16 w-16 text-blue-600 mx-auto mb-4" />
                   <p className="text-white text-xl">Demo Video Coming Soon</p>
-                  <p className="text-blue-300 mt-2">See how our AI matches you with the perfect contractor</p>
+                  <p className="text-blue-700 mt-2">See how our AI matches you with the perfect contractor</p>
                 </div>
               </div>
             </div>

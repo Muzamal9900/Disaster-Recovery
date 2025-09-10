@@ -197,7 +197,7 @@ function SearchPageContent() {
       case 'Mould Services': return <Wind className="h-5 w-5 text-green-500" />;
       case 'Storm Damage': return <Home className="h-5 w-5 text-purple-500" />;
       case 'Restoration Contractor': return <Building2 className="h-5 w-5 text-blue-600" />;
-      default: return <Shield className="h-5 w-5 text-gray-300" />;
+      default: return <Shield className="h-5 w-5 text-gray-700" />;
     }
   };
 
@@ -219,7 +219,7 @@ function SearchPageContent() {
         <div className="container mx-auto px-4 py-6">
           <form onSubmit={handleSearch} className="mb-4">
             <div className="relative max-w-2xl mx-auto">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-200" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-700" />
               <input
                 type="text"
                 value={query}
@@ -233,7 +233,7 @@ function SearchPageContent() {
                   onClick={() => setQuery('')}
                   className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 hover:bg-gray-100 rounded-full"
                 >
-                  <X className="h-4 w-4 text-gray-200" />
+                  <X className="h-4 w-4 text-gray-700" />
                 </button>
               )}
             </div>
@@ -288,7 +288,7 @@ function SearchPageContent() {
               <h3 className="font-semibold mb-3">Advanced Filters</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-200 mb-2">Service Type</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Service Type</label>
                   <div className="space-y-2">
                     {['Emergency Response', '24/7 Available', 'Insurance Approved', 'IICRC Certified'].map(option => (
                       <label key={option} className="flex items-center">
@@ -299,7 +299,7 @@ function SearchPageContent() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-200 mb-2">Response Time</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Response Time</label>
                   <div className="space-y-2">
                     {['< 30 minutes', '< 1 hour', '< 2 hours', 'Same day'].map(time => (
                       <label key={time} className="flex items-center">
@@ -310,7 +310,7 @@ function SearchPageContent() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-200 mb-2">Rating</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Rating</label>
                   <div className="space-y-2">
                     {['4.5+ stars', '4.0+ stars', '3.5+ stars', 'Any rating'].map(rating => (
                       <label key={rating} className="flex items-center">
@@ -334,7 +334,7 @@ function SearchPageContent() {
             <h1 className="text-2xl font-bold text-gray-900">
               {query ? `Search Results for "${query}"` : 'Browse Services'}
             </h1>
-            <p className="text-gray-200 mt-1">
+            <p className="text-gray-700 mt-1">
               {isLoading ? 'Searching...' : `${filteredResults.length} results found`}
             </p>
           </div>
@@ -344,7 +344,7 @@ function SearchPageContent() {
         {isLoading ? (
           <div className="flex items-center justify-center py-12">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-            <span className="ml-2 text-gray-200">Searching...</span>
+            <span className="ml-2 text-gray-700">Searching...</span>
           </div>
         ) : (
           /* Results Grid */
@@ -358,15 +358,15 @@ function SearchPageContent() {
                       <h3 className="text-lg font-semibold text-gray-900 hover:text-blue-600">
                         <a href={result.url}>{result.title}</a>
                       </h3>
-                      <p className="text-sm text-gray-300">{result.category}</p>
+                      <p className="text-sm text-gray-700">{result.category}</p>
                     </div>
                   </div>
                   {getPriorityBadge(result.priority)}
                 </div>
 
-                <p className="text-gray-200 mb-4">{result.description}</p>
+                <p className="text-gray-700 mb-4">{result.description}</p>
 
-                <div className="flex flex-wrap gap-4 mb-4 text-sm text-gray-300">
+                <div className="flex flex-wrap gap-4 mb-4 text-sm text-gray-700">
                   {result.location && (
                     <div className="flex items-center gap-1">
                       <MapPin className="h-4 w-4" />
@@ -406,7 +406,7 @@ function SearchPageContent() {
                     View Details
                   </a>
                   {result.type === 'service' && (
-                    <button className="px-4 py-2 border border-gray-300 text-gray-200 rounded-lg hover:bg-gray-50 transition-colours flex items-center gap-2">
+                    <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colours flex items-center gap-2">
                       <MessageSquare className="h-4 w-4" />
                       Contact
                     </button>
@@ -421,13 +421,13 @@ function SearchPageContent() {
         {!isLoading && filteredResults.length === 0 && query && (
           <div className="text-center py-12">
             <div className="max-w-md mx-auto">
-              <Search className="h-16 w-16 text-gray-300 mx-auto mb-4" />
+              <Search className="h-16 w-16 text-gray-700 mx-auto mb-4" />
               <h3 className="text-lg font-medium text-gray-900 mb-2">No results found</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-700 mb-4">
                 We couldn't find anything matching "{query}". Try adjusting your search or filters.
               </p>
               <div className="space-y-2">
-                <p className="text-sm text-gray-200">Try searching for:</p>
+                <p className="text-sm text-gray-700">Try searching for:</p>
                 <div className="flex flex-wrap gap-2 justify-center">
                   {['water damage', 'fire restoration', 'emergency services'].map(suggestion => (
                     <button
@@ -454,7 +454,7 @@ export default function SearchPage() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
-          <p className="mt-4 text-gray-200">Loading search...</p>
+          <p className="mt-4 text-gray-700">Loading search...</p>
         </div>
       </div>
     }>

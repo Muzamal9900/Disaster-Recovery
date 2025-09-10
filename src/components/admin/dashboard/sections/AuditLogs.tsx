@@ -112,7 +112,7 @@ export function AuditLogs() {
     if (action.includes('delete') || action.includes('remove')) return 'text-blue-700';
     if (action.includes('create') || action.includes('add')) return 'text-green-600';
     if (action.includes('update') || action.includes('modify')) return 'text-blue-600';
-    return 'text-gray-200';
+    return 'text-gray-700';
   };
 
   const exportLogs = () => {
@@ -157,7 +157,7 @@ export function AuditLogs() {
         <h2 className="text-xl font-bold">Audit Logs & Security Events</h2>
         <div className="flex gap-3">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-700" />
             <Input
               placeholder="Search logs..."
               value={searchTerm}
@@ -207,7 +207,7 @@ export function AuditLogs() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold">{logs.length}</p>
-            <p className="text-xs text-gray-300">{dateRange === 'today' ? 'Today' : dateRange}</p>
+            <p className="text-xs text-gray-700">{dateRange === 'today' ? 'Today' : dateRange}</p>
           </CardContent>
         </Card>
 
@@ -217,7 +217,7 @@ export function AuditLogs() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold text-red-600">{failedActions.length}</p>
-            <p className="text-xs text-gray-300">Require review</p>
+            <p className="text-xs text-gray-700">Require review</p>
           </CardContent>
         </Card>
 
@@ -227,7 +227,7 @@ export function AuditLogs() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold text-blue-700">{criticalLogs.length}</p>
-            <p className="text-xs text-gray-300">Security issues</p>
+            <p className="text-xs text-gray-700">Security issues</p>
           </CardContent>
         </Card>
 
@@ -239,7 +239,7 @@ export function AuditLogs() {
             <p className="text-2xl font-bold">
               {new Set(logs.map(l => l.userId)).size}
             </p>
-            <p className="text-xs text-gray-300">Unique users</p>
+            <p className="text-xs text-gray-700">Unique users</p>
           </CardContent>
         </Card>
       </div>
@@ -310,17 +310,17 @@ export function AuditLogs() {
                             <p className="font-medium">
                               {new Date(log.timestamp).toLocaleTimeString()}
                             </p>
-                            <p className="text-xs text-gray-300">
+                            <p className="text-xs text-gray-700">
                               {new Date(log.timestamp).toLocaleDateString()}
                             </p>
                           </div>
                         </td>
                         <td className="p-4">
                           <div className="flex items-center gap-2">
-                            <User className="h-4 w-4 text-gray-200" />
+                            <User className="h-4 w-4 text-gray-700" />
                             <div>
                               <p className="text-sm font-medium">{log.userName}</p>
-                              <p className="text-xs text-gray-300">{log.userRole}</p>
+                              <p className="text-xs text-gray-700">{log.userRole}</p>
                             </div>
                           </div>
                         </td>
@@ -343,7 +343,7 @@ export function AuditLogs() {
                           </Badge>
                         </td>
                         <td className="p-4">
-                          <p className="text-sm text-gray-200 truncate max-w-xs">
+                          <p className="text-sm text-gray-700 truncate max-w-xs">
                             {log.details}
                           </p>
                         </td>
@@ -389,8 +389,8 @@ export function AuditLogs() {
                               {log.severity}
                             </Badge>
                           </div>
-                          <p className="text-sm text-gray-200">{log.details}</p>
-                          <div className="flex items-center gap-4 mt-2 text-xs text-gray-300">
+                          <p className="text-sm text-gray-700">{log.details}</p>
+                          <div className="flex items-center gap-4 mt-2 text-xs text-gray-700">
                             <span>{log.userName}</span>
                             <span>{log.ipAddress}</span>
                             <span>{new Date(log.timestamp).toLocaleString()}</span>
@@ -424,8 +424,8 @@ export function AuditLogs() {
                       <div className="flex justify-between items-start">
                         <div>
                           <p className="font-medium mb-1">{log.action}</p>
-                          <p className="text-sm text-gray-200">{log.details}</p>
-                          <p className="text-xs text-gray-300 mt-2">
+                          <p className="text-sm text-gray-700">{log.details}</p>
+                          <p className="text-xs text-gray-700 mt-2">
                             {log.userName} • {new Date(log.timestamp).toLocaleString()}
                           </p>
                         </div>
@@ -454,11 +454,11 @@ export function AuditLogs() {
                       <div className="flex justify-between items-start">
                         <div>
                           <div className="flex items-center gap-2 mb-2">
-                            <CreditCard className="h-4 w-4 text-gray-200" />
+                            <CreditCard className="h-4 w-4 text-gray-700" />
                             <p className="font-medium">{log.action}</p>
                           </div>
-                          <p className="text-sm text-gray-200">{log.details}</p>
-                          <p className="text-xs text-gray-300 mt-2">
+                          <p className="text-sm text-gray-700">{log.details}</p>
+                          <p className="text-xs text-gray-700 mt-2">
                             {log.userName} • {new Date(log.timestamp).toLocaleString()}
                           </p>
                         </div>

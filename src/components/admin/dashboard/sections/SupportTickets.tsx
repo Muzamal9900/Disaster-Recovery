@@ -162,7 +162,7 @@ export function SupportTickets() {
         <h2 className="text-xl font-bold">Support Tickets</h2>
         <div className="flex gap-3">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-700" />
             <Input
               placeholder="Search tickets..."
               value={searchTerm}
@@ -206,7 +206,7 @@ export function SupportTickets() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold">{openTickets.length}</p>
-            <p className="text-xs text-gray-300">Awaiting response</p>
+            <p className="text-xs text-gray-700">Awaiting response</p>
           </CardContent>
         </Card>
 
@@ -216,7 +216,7 @@ export function SupportTickets() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold text-red-600">{urgentTickets.length}</p>
-            <p className="text-xs text-gray-300">Need immediate attention</p>
+            <p className="text-xs text-gray-700">Need immediate attention</p>
           </CardContent>
         </Card>
 
@@ -226,7 +226,7 @@ export function SupportTickets() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold">2.5h</p>
-            <p className="text-xs text-gray-300">Last 7 days</p>
+            <p className="text-xs text-gray-700">Last 7 days</p>
           </CardContent>
         </Card>
 
@@ -236,7 +236,7 @@ export function SupportTickets() {
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-bold text-green-600">94%</p>
-            <p className="text-xs text-gray-300">Last 30 days</p>
+            <p className="text-xs text-gray-700">Last 30 days</p>
           </CardContent>
         </Card>
       </div>
@@ -272,10 +272,10 @@ export function SupportTickets() {
                         {ticket.status.replace('_', ' ')}
                       </Badge>
                     </div>
-                    <p className="text-sm text-gray-200 line-clamp-2 mb-2">
+                    <p className="text-sm text-gray-700 line-clamp-2 mb-2">
                       {ticket.description}
                     </p>
-                    <div className="flex items-center gap-4 text-xs text-gray-300">
+                    <div className="flex items-center gap-4 text-xs text-gray-700">
                       <span className="flex items-center gap-1">
                         <User className="h-3 w-3" />
                         {ticket.contractorName}
@@ -296,7 +296,7 @@ export function SupportTickets() {
                       )}
                     </div>
                   </div>
-                  <ChevronRight className="h-5 w-5 text-gray-200" />
+                  <ChevronRight className="h-5 w-5 text-gray-700" />
                 </div>
               </div>
             ))}
@@ -325,11 +325,11 @@ export function SupportTickets() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Label className="text-sm text-gray-200">Contractor</Label>
+                  <Label className="text-sm text-gray-700">Contractor</Label>
                   <p className="font-medium">{selectedTicket.contractorName}</p>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-200">Created</Label>
+                  <Label className="text-sm text-gray-700">Created</Label>
                   <p className="font-medium">
                     {new Date(selectedTicket.createdAt).toLocaleString()}
                   </p>
@@ -337,13 +337,13 @@ export function SupportTickets() {
               </div>
 
               <div>
-                <Label className="text-sm text-gray-200">Description</Label>
+                <Label className="text-sm text-gray-700">Description</Label>
                 <p className="mt-1 text-sm">{selectedTicket.description}</p>
               </div>
 
               {/* Messages */}
               <div>
-                <Label className="text-sm text-gray-200 mb-2">Conversation</Label>
+                <Label className="text-sm text-gray-700 mb-2">Conversation</Label>
                 <div className="space-y-3 mt-2 max-h-64 overflow-y-auto border rounded-lg p-3">
                   {selectedTicket.messages.map(message => (
                     <div
@@ -356,7 +356,7 @@ export function SupportTickets() {
                     >
                       <div className="flex justify-between items-start mb-1">
                         <p className="font-medium text-sm">{message.sender}</p>
-                        <p className="text-xs text-gray-300">
+                        <p className="text-xs text-gray-700">
                           {new Date(message.timestamp).toLocaleString()}
                         </p>
                       </div>

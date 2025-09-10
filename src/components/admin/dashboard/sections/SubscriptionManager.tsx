@@ -263,7 +263,7 @@ export function SubscriptionManager() {
             <p className="text-2xl font-bold text-green-600">
               ${totalRevenue.toLocaleString()}
             </p>
-            <p className="text-xs text-gray-300 mt-1">
+            <p className="text-xs text-gray-700 mt-1">
               {subscriptions.filter(s => s.status === 'active').length} active subscriptions
             </p>
           </CardContent>
@@ -277,7 +277,7 @@ export function SubscriptionManager() {
             <p className="text-2xl font-bold text-red-600">
               ${totalOverdue.toLocaleString()}
             </p>
-            <p className="text-xs text-gray-300 mt-1">
+            <p className="text-xs text-gray-700 mt-1">
               {overdueSubscriptions.length} accounts
             </p>
           </CardContent>
@@ -291,7 +291,7 @@ export function SubscriptionManager() {
             <p className="text-2xl font-bold">
               ${(totalRevenue / (subscriptions.filter(s => s.status === 'active').length || 1)).toFixed(0)}
             </p>
-            <p className="text-xs text-gray-300 mt-1">Per contractor</p>
+            <p className="text-xs text-gray-700 mt-1">Per contractor</p>
           </CardContent>
         </Card>
 
@@ -360,7 +360,7 @@ export function SubscriptionManager() {
                         <td className="p-4">
                           <div>
                             <p className="font-medium">{subscription.contractorName}</p>
-                            <p className="text-sm text-gray-200">{subscription.companyName}</p>
+                            <p className="text-sm text-gray-700">{subscription.companyName}</p>
                           </div>
                         </td>
                         <td className="p-4">
@@ -473,7 +473,7 @@ export function SubscriptionManager() {
                       )}
                       <div>
                         <p className="font-medium">Invoice #{payment.invoiceNumber}</p>
-                        <p className="text-sm text-gray-200">
+                        <p className="text-sm text-gray-700">
                           {new Date(payment.date).toLocaleDateString()} • {payment.method}
                         </p>
                       </div>
@@ -537,31 +537,31 @@ export function SubscriptionManager() {
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Label className="text-sm text-gray-200">Contractor</Label>
+                  <Label className="text-sm text-gray-700">Contractor</Label>
                   <p className="font-medium">{selectedSubscription.contractorName}</p>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-200">Company</Label>
+                  <Label className="text-sm text-gray-700">Company</Label>
                   <p className="font-medium">{selectedSubscription.companyName}</p>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-200">Current Tier</Label>
+                  <Label className="text-sm text-gray-700">Current Tier</Label>
                   <Badge className={getTierColor(selectedSubscription.tier)}>
                     {selectedSubscription.tier}
                   </Badge>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-200">Monthly Amount</Label>
+                  <Label className="text-sm text-gray-700">Monthly Amount</Label>
                   <p className="font-medium">${selectedSubscription.amount}</p>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-200">Start Date</Label>
+                  <Label className="text-sm text-gray-700">Start Date</Label>
                   <p className="font-medium">
                     {new Date(selectedSubscription.startDate).toLocaleDateString()}
                   </p>
                 </div>
                 <div>
-                  <Label className="text-sm text-gray-200">Auto-Renew</Label>
+                  <Label className="text-sm text-gray-700">Auto-Renew</Label>
                   <Switch checked={selectedSubscription.autoRenew} />
                 </div>
               </div>
@@ -593,7 +593,7 @@ export function SubscriptionManager() {
             <div className="space-y-4">
               <div>
                 <Label>Contractor</Label>
-                <p className="text-sm text-gray-200">
+                <p className="text-sm text-gray-700">
                   {selectedSubscription.contractorName} - {selectedSubscription.companyName}
                 </p>
               </div>
@@ -608,7 +608,7 @@ export function SubscriptionManager() {
                   onChange={(e) => setRefundAmount(e.target.value)}
                   className="mt-2"
                 />
-                <p className="text-xs text-gray-300 mt-1">
+                <p className="text-xs text-gray-700 mt-1">
                   Current balance: ${selectedSubscription.amount}
                 </p>
               </div>

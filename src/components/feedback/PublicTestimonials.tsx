@@ -260,7 +260,7 @@ export default function PublicTestimonials({
         <Quote className="w-8 h-8 text-blue-500 opacity-30" />
       </div>
 
-      <blockquote className={`text-gray-200 mb-6 ${compact ? 'text-sm line-clamp-3' : 'text-base'}`}>
+      <blockquote className={`text-gray-700 mb-6 ${compact ? 'text-sm line-clamp-3' : 'text-base'}`}>
         {testimonial.testimonialText}
       </blockquote>
 
@@ -268,7 +268,7 @@ export default function PublicTestimonials({
         <div className="grid grid-cols-2 gap-2 mb-4">
           {testimonial.photos.slice(0, 2).map((photo, index) => (
             <div key={index} className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-              <Image className="w-6 h-6 text-gray-200" />
+              <Image className="w-6 h-6 text-gray-700" />
             </div>
           ))}
         </div>
@@ -282,12 +282,12 @@ export default function PublicTestimonials({
           <div className="flex-1 min-w-0">
             <p className="font-medium text-gray-900 truncate">{testimonial.customerName}</p>
             {testimonial.customerTitle && (
-              <p className="text-sm text-gray-200 truncate">{testimonial.customerTitle}</p>
+              <p className="text-sm text-gray-700 truncate">{testimonial.customerTitle}</p>
             )}
             {testimonial.customerCompany && (
-              <p className="text-sm text-gray-300 truncate">{testimonial.customerCompany}</p>
+              <p className="text-sm text-gray-700 truncate">{testimonial.customerCompany}</p>
             )}
-            <div className="flex items-center mt-1 text-sm text-gray-300">
+            <div className="flex items-center mt-1 text-sm text-gray-700">
               <MapPin className="w-3 h-3 mr-1" />
               {testimonial.customerLocation}
             </div>
@@ -297,7 +297,7 @@ export default function PublicTestimonials({
           <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
             {getJobTypeLabel(testimonial.jobType)}
           </span>
-          <p className="text-xs text-gray-300 mt-1">
+          <p className="text-xs text-gray-700 mt-1">
             {testimonial.publishedDate.toLocaleDateString('en-AU')}
           </p>
         </div>
@@ -306,7 +306,7 @@ export default function PublicTestimonials({
       {testimonial.tags.length > 0 && (
         <div className="flex flex-wrap gap-1 mt-3">
           {testimonial.tags.slice(0, 3).map(tag => (
-            <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-200 text-xs rounded-full">
+            <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
               {tag}
             </span>
           ))}
@@ -334,13 +334,13 @@ export default function PublicTestimonials({
         <>
           <button
             onClick={prevSlide}
-            className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white shadow-lg rounded-full flex items-center justify-center text-gray-200 hover:text-gray-900 hover:shadow-xl transition-all"
+            className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white shadow-lg rounded-full flex items-center justify-center text-gray-700 hover:text-gray-900 hover:shadow-xl transition-all"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white shadow-lg rounded-full flex items-center justify-center text-gray-200 hover:text-gray-900 hover:shadow-xl transition-all"
+            className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white shadow-lg rounded-full flex items-center justify-center text-gray-700 hover:text-gray-900 hover:shadow-xl transition-all"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
@@ -359,7 +359,7 @@ export default function PublicTestimonials({
             </div>
             <button
               onClick={() => setIsPlaying(!isPlaying)}
-              className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-gray-200 hover:bg-gray-200 transition-colours"
+              className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-200 transition-colours"
             >
               {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
             </button>
@@ -392,7 +392,7 @@ export default function PublicTestimonials({
           <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
             <div>
               <h2 className="text-2xl font-bold text-gray-900">Customer Testimonials</h2>
-              <p className="text-gray-200 mt-1">
+              <p className="text-gray-700 mt-1">
                 Real feedback from our satisfied customers
               </p>
             </div>
@@ -423,7 +423,7 @@ export default function PublicTestimonials({
                     className={`p-2 rounded-md transition-colours ${
                       selectedLayout === layoutOption.key
                         ? 'bg-white text-blue-600 shadow-sm'
-                        : 'text-gray-200 hover:text-gray-900'
+                        : 'text-gray-700 hover:text-gray-900'
                     }`}
                   >
                     {layoutOption.icon}
@@ -433,7 +433,7 @@ export default function PublicTestimonials({
             </div>
           </div>
 
-          <div className="flex items-center justify-between text-sm text-gray-200 mb-6">
+          <div className="flex items-center justify-between text-sm text-gray-700 mb-6">
             <span>
               Showing {sortedTestimonials.length} of {mockTestimonials.length} testimonials
             </span>
@@ -457,7 +457,7 @@ export default function PublicTestimonials({
                 <Star key={i} className="w-5 h-5 text-blue-500 fill-current" />
               ))}
             </div>
-            <span className="text-gray-200">
+            <span className="text-gray-700">
               Based on {mockTestimonials.length} verified reviews
             </span>
           </div>
@@ -467,10 +467,10 @@ export default function PublicTestimonials({
       {sortedTestimonials.length === 0 ? (
         <div className="text-center py-12">
           <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <MessageSquare className="w-12 h-12 text-gray-200" />
+            <MessageSquare className="w-12 h-12 text-gray-700" />
           </div>
           <h3 className="text-lg font-medium text-gray-900 mb-2">No testimonials found</h3>
-          <p className="text-gray-200">Try adjusting your filters or check back later for more reviews.</p>
+          <p className="text-gray-700">Try adjusting your filters or check back later for more reviews.</p>
         </div>
       ) : (
         <>
@@ -486,7 +486,7 @@ export default function PublicTestimonials({
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Join Premier Restoration Network
             </h3>
-            <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
               Become part of a trusted network of restoration professionals and 
               start building your own collection of customer testimonials.
             </p>

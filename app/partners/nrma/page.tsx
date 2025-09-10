@@ -233,12 +233,12 @@ export default function NRMAPartnershipPage() {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-center">
                 NRMA Insurance × Disaster Recovery
-                <span className="block text-blue-300 text-3xl md:text-4xl mt-2">
+                <span className="block text-blue-700 text-3xl md:text-4xl mt-2">
                   Approved Restoration Provider for NSW & ACT
                 </span>
               </h1>
               
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed text-center max-w-4xl mx-auto">
+              <p className="text-xl text-blue-800 mb-8 leading-relaxed text-center max-w-4xl mx-auto">
                 As an official NRMA Insurance partner, we provide priority emergency response and 
                 guaranteed restoration services to all NRMA policyholders. <strong>Direct billing</strong> means 
                 no upfront costs, while our <strong>60-minute response guarantee</strong> ensures your 
@@ -248,22 +248,22 @@ export default function NRMAPartnershipPage() {
               {/* Trust Indicators */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <HeartHandshake className="w-8 h-8 mx-auto mb-2 text-blue-300" />
+                  <HeartHandshake className="w-8 h-8 mx-auto mb-2 text-blue-700" />
                   <div className="text-2xl font-bold">10+ Years</div>
                   <div className="text-sm">NRMA Partnership</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <Users className="w-8 h-8 mx-auto mb-2 text-blue-300" />
+                  <Users className="w-8 h-8 mx-auto mb-2 text-blue-700" />
                   <div className="text-2xl font-bold">50,000+</div>
                   <div className="text-sm">Claims Handled</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <Star className="w-8 h-8 mx-auto mb-2 text-blue-300" />
+                  <Star className="w-8 h-8 mx-auto mb-2 text-blue-700" />
                   <div className="text-2xl font-bold">4.9★</div>
                   <div className="text-sm">Customer Rating</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <Shield className="w-8 h-8 mx-auto mb-2 text-blue-300" />
+                  <Shield className="w-8 h-8 mx-auto mb-2 text-blue-700" />
                   <div className="text-2xl font-bold">100%</div>
                   <div className="text-sm">Guaranteed</div>
                 </div>
@@ -529,7 +529,7 @@ export default function NRMAPartnershipPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <Shield className="w-16 h-16 mx-auto mb-6 text-green-300" />
+              <Shield className="w-16 h-16 mx-auto mb-6 text-green-700" />
               
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
                 NRMA Policyholders Get Priority Service

@@ -581,7 +581,7 @@ const EstimateGenerator: React.FC<EstimateGeneratorProps> = ({ jobId, assessment
             </div>
             <div>
               <h2 className="text-xl font-semibold">Automated Job Estimate</h2>
-              <p className="text-sm text-gray-300">IICRC Standards-Based Calculation</p>
+              <p className="text-sm text-gray-700">IICRC Standards-Based Calculation</p>
             </div>
           </div>
           <div className="flex items-center space-x-2">
@@ -618,19 +618,19 @@ const EstimateGenerator: React.FC<EstimateGeneratorProps> = ({ jobId, assessment
         {estimate?.assessment && (
           <div className="bg-gray-50 rounded-lg p-4 grid grid-cols-4 gap-4">
             <div>
-              <p className="text-xs text-gray-300">Property Type</p>
+              <p className="text-xs text-gray-700">Property Type</p>
               <p className="font-medium capitalize">{estimate.assessment.propertyDetails.propertyType}</p>
             </div>
             <div>
-              <p className="text-xs text-gray-300">Affected Area</p>
+              <p className="text-xs text-gray-700">Affected Area</p>
               <p className="font-medium">{estimate.assessment.propertyDetails.affectedArea} m²</p>
             </div>
             <div>
-              <p className="text-xs text-gray-300">Damage Type</p>
+              <p className="text-xs text-gray-700">Damage Type</p>
               <p className="font-medium capitalize">{estimate.assessment.damageAssessment.primaryCause.replace('_', ' ')}</p>
             </div>
             <div>
-              <p className="text-xs text-gray-300">Category/Class</p>
+              <p className="text-xs text-gray-700">Category/Class</p>
               <p className="font-medium">Cat {estimate.assessment.damageAssessment.category} / Class {estimate.assessment.damageAssessment.class}</p>
             </div>
           </div>
@@ -661,7 +661,7 @@ const EstimateGenerator: React.FC<EstimateGeneratorProps> = ({ jobId, assessment
               className={`px-3 py-1 rounded-lg whitespace-nowrap ${
                 selectedCategory === 'all'
                   ? 'bg-blue-100 text-blue-700'
-                  : 'text-gray-200 hover:bg-gray-100'
+                  : 'text-gray-700 hover:bg-gray-100'
               }`}
             >
               All Items
@@ -675,7 +675,7 @@ const EstimateGenerator: React.FC<EstimateGeneratorProps> = ({ jobId, assessment
                   className={`px-3 py-1 rounded-lg flex items-center space-x-1 whitespace-nowrap ${
                     selectedCategory === cat.value
                       ? `bg-${cat.colour}-100 text-${cat.colour}-700`
-                      : 'text-gray-200 hover:bg-gray-100'
+                      : 'text-gray-700 hover:bg-gray-100'
                   }`}
                 >
                   <Icon className="h-4 w-4" />
@@ -706,16 +706,16 @@ const EstimateGenerator: React.FC<EstimateGeneratorProps> = ({ jobId, assessment
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase">Item</th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase">Quantity</th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase">Unit Price</th>
+                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase">Item</th>
+                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase">Quantity</th>
+                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase">Unit Price</th>
                   {showComparison && (
                     <>
-                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase">NRP Guide</th>
-                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase">Industry Avg</th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase">NRP Guide</th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase">Industry Avg</th>
                     </>
                   )}
-                  <th className="px-4 py-3 text-right text-xs font-medium text-gray-300 uppercase">Total</th>
+                  <th className="px-4 py-3 text-right text-xs font-medium text-gray-700 uppercase">Total</th>
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
@@ -729,7 +729,7 @@ const EstimateGenerator: React.FC<EstimateGeneratorProps> = ({ jobId, assessment
                           <div>
                             <p className="font-medium text-sm">{item.description}</p>
                             {item.notes && (
-                              <p className="text-xs text-gray-300">{item.notes}</p>
+                              <p className="text-xs text-gray-700">{item.notes}</p>
                             )}
                             {item.standard && (
                               <p className="text-xs text-blue-600">{item.standard.standard} {item.standard.code}</p>
@@ -752,10 +752,10 @@ const EstimateGenerator: React.FC<EstimateGeneratorProps> = ({ jobId, assessment
                       </td>
                       {showComparison && (
                         <>
-                          <td className="px-4 py-3 text-sm text-gray-200">
+                          <td className="px-4 py-3 text-sm text-gray-700">
                             ${item.priceComparison.nrpGuideline?.toFixed(2) || '-'}
                           </td>
-                          <td className="px-4 py-3 text-sm text-gray-200">
+                          <td className="px-4 py-3 text-sm text-gray-700">
                             ${item.priceComparison.industryAverage?.toFixed(2) || '-'}
                           </td>
                         </>
@@ -807,9 +807,9 @@ const EstimateGenerator: React.FC<EstimateGeneratorProps> = ({ jobId, assessment
                 <div>
                   <p className="font-medium capitalize">{comparison.category.replace('_', ' ')}</p>
                   <div className="flex items-center space-x-4 mt-1 text-sm">
-                    <span className="text-gray-200">NRP: ${comparison.nrpTotal.toFixed(2)}</span>
-                    <span className="text-gray-200">Contractor: ${comparison.contractorTotal.toFixed(2)}</span>
-                    <span className="text-gray-200">Industry: ${comparison.industryAverage.toFixed(2)}</span>
+                    <span className="text-gray-700">NRP: ${comparison.nrpTotal.toFixed(2)}</span>
+                    <span className="text-gray-700">Contractor: ${comparison.contractorTotal.toFixed(2)}</span>
+                    <span className="text-gray-700">Industry: ${comparison.industryAverage.toFixed(2)}</span>
                   </div>
                 </div>
                 <div className="text-right">

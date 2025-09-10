@@ -77,7 +77,7 @@ export default function NewSouthWalesPage() {
               <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                 <AlertTriangle className="h-12 w-12 text-blue-700 mb-4" />
                 <h3 className="text-xl font-bold mb-2">{disaster}</h3>
-                <p className="text-gray-200 mb-4">
+                <p className="text-gray-700 mb-4">
                   Rapid response and complete restoration for {disaster.toLowerCase()} damage.
                 </p>
                 <Link href={`/services/${disaster.toLowerCase().replace(/\s+/g, '-')}`}>
@@ -104,7 +104,7 @@ export default function NewSouthWalesPage() {
             </Card>
             {cities.map((city, index) => (
               <Card key={index} className="p-4 hover:bg-gray-50 transition-colours">
-                <MapPin className="h-5 w-5 text-gray-200 inline mr-2" />
+                <MapPin className="h-5 w-5 text-gray-700 inline mr-2" />
                 <Link href={`/locations/nsw/${city.toLowerCase().replace(/\s+/g, '-')}`}>
                   <span className="hover:text-blue-600 cursor-pointer">{city}</span>
                 </Link>
@@ -122,28 +122,28 @@ export default function NewSouthWalesPage() {
             <h2 className="text-3xl font-bold mb-6">
               New South Wales Climate & Disaster Risks
             </h2>
-            <p className="text-xl text-gray-200 mb-8">
+            <p className="text-xl text-gray-700 mb-8">
               Increasing bushfire frequency and severe flooding events
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="p-6">
                 <Shield className="h-10 w-10 text-green-600 mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Preparedness Plans</h3>
-                <p className="text-sm text-gray-200">
+                <p className="text-sm text-gray-700">
                   Custom disaster preparedness for New South Wales conditions
                 </p>
               </Card>
               <Card className="p-6">
                 <Clock className="h-10 w-10 text-blue-600 mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Rapid Response</h3>
-                <p className="text-sm text-gray-200">
+                <p className="text-sm text-gray-700">
                   Teams stationed across NSW for immediate deployment
                 </p>
               </Card>
               <Card className="p-6">
                 <CheckCircle2 className="h-10 w-10 text-purple-600 mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Full Recovery</h3>
-                <p className="text-sm text-gray-200">
+                <p className="text-sm text-gray-700">
                   Complete restoration to pre-disaster condition
                 </p>
               </Card>

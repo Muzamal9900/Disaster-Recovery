@@ -117,19 +117,19 @@ export default function Step2InsuranceLicensing({ data, onNext, onBack }: Step2P
         {/* Progress Indicator */}
         <div className="mb-8">
           <div className="flex items-center justify-center mb-6">
-            <div className="flex items-center space-x-2 text-sm text-gray-200">
+            <div className="flex items-center space-x-2 text-sm text-gray-700">
               <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">1</div>
               <div className="w-8 h-1 bg-blue-600 rounded"></div>
               <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">2</div>
               <div className="w-8 h-1 bg-gray-300 rounded"></div>
-              <div className="w-8 h-8 bg-gray-300 text-gray-300 rounded-full flex items-center justify-center font-semibold">3</div>
+              <div className="w-8 h-8 bg-gray-300 text-gray-700 rounded-full flex items-center justify-center font-semibold">3</div>
             </div>
           </div>
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4">
               Insurance & Licensing
             </h2>
-            <p className="text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
               Secure your position by providing comprehensive insurance coverage and professional licensing details
             </p>
           </div>
@@ -156,7 +156,7 @@ export default function Step2InsuranceLicensing({ data, onNext, onBack }: Step2P
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               <div className="space-y-2">
-                <Label htmlFor="generalLiabilityInsurer" className="text-sm font-semibold text-gray-200">
+                <Label htmlFor="generalLiabilityInsurer" className="text-sm font-semibold text-gray-700">
                   Insurance Company
                 </Label>
                 <div className="relative">
@@ -183,7 +183,7 @@ export default function Step2InsuranceLicensing({ data, onNext, onBack }: Step2P
               </div>
             
               <div className="space-y-2">
-                <Label htmlFor="generalLiabilityPolicyNumber" className="text-sm font-semibold text-gray-200">
+                <Label htmlFor="generalLiabilityPolicyNumber" className="text-sm font-semibold text-gray-700">
                   Policy Number
                 </Label>
                 <Input
@@ -208,7 +208,7 @@ export default function Step2InsuranceLicensing({ data, onNext, onBack }: Step2P
               </div>
             
               <div className="space-y-2">
-                <Label htmlFor="generalLiabilityCoverage" className="text-sm font-semibold text-gray-200">
+                <Label htmlFor="generalLiabilityCoverage" className="text-sm font-semibold text-gray-700">
                   Coverage Amount
                 </Label>
                 <Input
@@ -233,7 +233,7 @@ export default function Step2InsuranceLicensing({ data, onNext, onBack }: Step2P
               </div>
             
               <div className="space-y-2">
-                <Label htmlFor="generalLiabilityExpiry" className="text-sm font-semibold text-gray-200">
+                <Label htmlFor="generalLiabilityExpiry" className="text-sm font-semibold text-gray-700">
                   Expiry Date
                 </Label>
                 <Input
@@ -408,7 +408,7 @@ export default function Step2InsuranceLicensing({ data, onNext, onBack }: Step2P
 
           {/* Specialised Licenses */}
           <div className="mt-4">
-            <Label className="text-sm font-medium text-gray-200">Specialised Licenses (Optional)</Label>
+            <Label className="text-sm font-medium text-gray-700">Specialised Licenses (Optional)</Label>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
               <div>
                 <Label htmlFor="asbestosLicense" className="text-sm">Asbestos License</Label>
@@ -584,7 +584,7 @@ export default function Step2InsuranceLicensing({ data, onNext, onBack }: Step2P
               type="button" 
               variant="outline" 
               onClick={onBack}
-              className="w-full sm:w-auto h-12 px-8 rounded-xl border-2 border-gray-300 hover:border-gray-400 text-gray-200 font-semibold transition-all duration-200 hover:shadow-md"
+              className="w-full sm:w-auto h-12 px-8 rounded-xl border-2 border-gray-300 hover:border-gray-400 text-gray-700 font-semibold transition-all duration-200 hover:shadow-md"
             >
               ← Back to Step 1
             </Button>

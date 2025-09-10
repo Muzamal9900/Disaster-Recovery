@@ -44,19 +44,19 @@ function TrainingDemoContent() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <BookOpen className="h-8 w-8 text-blue-400" />
+              <BookOpen className="h-8 w-8 text-blue-600" />
               <div>
                 <h1 className="text-xl font-bold text-white">NRP Training Academy</h1>
-                <p className="text-sm text-slate-400">Professional Development Portal</p>
+                <p className="text-sm text-slate-600">Professional Development Portal</p>
               </div>
             </div>
             <div className="flex items-center gap-6">
               <div className="text-right">
-                <div className="text-sm text-slate-400">Your Progress</div>
+                <div className="text-sm text-slate-600">Your Progress</div>
                 <div className="text-xl font-bold text-white">{progress.points} Points</div>
               </div>
               <div className="text-right">
-                <div className="text-sm text-slate-400">Rank</div>
+                <div className="text-sm text-slate-600">Rank</div>
                 <div className="text-sm font-semibold text-blue-500">{progress.rank}</div>
               </div>
             </div>
@@ -72,15 +72,15 @@ function TrainingDemoContent() {
               <CheckCircle className="h-8 w-8 text-emerald-600" />
               <span className="text-2xl font-bold text-white">{progress.completed}</span>
             </div>
-            <div className="text-slate-400">Completed</div>
+            <div className="text-slate-600">Completed</div>
           </div>
           
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
             <div className="flex items-center justify-between mb-2">
-              <Clock className="h-8 w-8 text-blue-400" />
+              <Clock className="h-8 w-8 text-blue-600" />
               <span className="text-2xl font-bold text-white">{progress.inProgress}</span>
             </div>
-            <div className="text-slate-400">In Progress</div>
+            <div className="text-slate-600">In Progress</div>
           </div>
           
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
@@ -88,15 +88,15 @@ function TrainingDemoContent() {
               <Award className="h-8 w-8 text-blue-500" />
               <span className="text-2xl font-bold text-white">{progress.certificates.length}</span>
             </div>
-            <div className="text-slate-400">Certificates</div>
+            <div className="text-slate-600">Certificates</div>
           </div>
           
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
             <div className="flex items-center justify-between mb-2">
-              <TrendingUp className="h-8 w-8 text-purple-400" />
+              <TrendingUp className="h-8 w-8 text-purple-600" />
               <span className="text-2xl font-bold text-white">89%</span>
             </div>
-            <div className="text-slate-400">Completion Rate</div>
+            <div className="text-slate-600">Completion Rate</div>
           </div>
         </div>
 
@@ -111,7 +111,7 @@ function TrainingDemoContent() {
               <div key={index} className="bg-slate-700/50 rounded-lg p-4 border border-slate-600/50">
                 <div className="flex items-start justify-between mb-2">
                   <CheckCircle className="h-5 w-5 text-emerald-600" />
-                  <span className="text-xs text-slate-400">Valid until 2026</span>
+                  <span className="text-xs text-slate-600">Valid until 2026</span>
                 </div>
                 <h3 className="font-semibold text-white text-sm">{cert}</h3>
                 <div className="flex items-center gap-1 mt-2">
@@ -132,7 +132,7 @@ function TrainingDemoContent() {
               <h2 className="text-xl font-bold text-white">
                 {TRAINING_MODULES.waterDamage.title}
               </h2>
-              <span className="text-sm text-slate-400">{TRAINING_MODULES.waterDamage.duration}</span>
+              <span className="text-sm text-slate-600">{TRAINING_MODULES.waterDamage.duration}</span>
             </div>
             
             <div className="space-y-3">
@@ -161,18 +161,18 @@ function TrainingDemoContent() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-white">{module.title}</h3>
-                        <p className="text-sm text-slate-400">{module.duration}</p>
+                        <p className="text-sm text-slate-600">{module.duration}</p>
                       </div>
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-white">{module.completionRate}%</div>
-                      <div className="text-xs text-slate-400">Complete</div>
+                      <div className="text-xs text-slate-600">Complete</div>
                     </div>
                   </div>
                   
                   {activeModule === module.id && (
                     <div className="mt-4 pt-4 border-t border-slate-600/50">
-                      <div className="text-sm text-slate-300 whitespace-pre-line">
+                      <div className="text-sm text-slate-700 whitespace-pre-line">
                         {module.content.substring(0, 300)}...
                       </div>
                       <button className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition flex items-center justify-center gap-2">
@@ -192,7 +192,7 @@ function TrainingDemoContent() {
               <h2 className="text-xl font-bold text-white">
                 {TRAINING_MODULES.moldRemediation.title}
               </h2>
-              <span className="text-sm text-slate-400">{TRAINING_MODULES.moldRemediation.duration}</span>
+              <span className="text-sm text-slate-600">{TRAINING_MODULES.moldRemediation.duration}</span>
             </div>
             
             <div className="space-y-3">
@@ -221,23 +221,23 @@ function TrainingDemoContent() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-white">{module.title}</h3>
-                        <p className="text-sm text-slate-400">{module.duration}</p>
+                        <p className="text-sm text-slate-600">{module.duration}</p>
                       </div>
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-white">{module.completionRate}%</div>
-                      <div className="text-xs text-slate-400">Complete</div>
+                      <div className="text-xs text-slate-600">Complete</div>
                     </div>
                   </div>
                   
                   {activeModule === module.id && (
                     <div className="mt-4 pt-4 border-t border-slate-600/50">
-                      <div className="text-sm text-slate-300 whitespace-pre-line">
+                      <div className="text-sm text-slate-700 whitespace-pre-line">
                         {module.content.substring(0, 300)}...
                       </div>
                       {module.safetyAlert && (
                         <div className="mt-3 p-3 bg-red-600/20 border border-red-600/50 rounded-lg">
-                          <p className="text-sm text-red-300 font-medium">⚠️ {module.safetyAlert}</p>
+                          <p className="text-sm text-red-700 font-medium">⚠️ {module.safetyAlert}</p>
                         </div>
                       )}
                       <button className="mt-4 w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition flex items-center justify-center gap-2">
@@ -260,13 +260,13 @@ function TrainingDemoContent() {
               <div key={index} className="bg-slate-700/30 rounded-lg p-4 border border-slate-600/50">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-8 h-8 bg-slate-600 rounded-full flex items-center justify-center">
-                    <FileText className="h-4 w-4 text-slate-300" />
+                    <FileText className="h-4 w-4 text-slate-700" />
                   </div>
                   <h3 className="font-medium text-white text-sm">{module}</h3>
                 </div>
                 <div className="flex items-center justify-between mt-3">
-                  <span className="text-xs text-slate-400">Prerequisite Met</span>
-                  <ChevronRight className="h-4 w-4 text-slate-400" />
+                  <span className="text-xs text-slate-600">Prerequisite Met</span>
+                  <ChevronRight className="h-4 w-4 text-slate-600" />
                 </div>
               </div>
             ))}

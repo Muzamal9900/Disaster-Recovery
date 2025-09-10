@@ -152,7 +152,7 @@ export default function SitemapPage() {
                         <li key={linkIndex}>
                           <Link 
                             href={link.href}
-                            className="text-gray-200 hover:text-blue-600 hover:underline text-sm"
+                            className="text-gray-700 hover:text-blue-600 hover:underline text-sm"
                           >
                             {link.label}
                           </Link>
@@ -170,7 +170,7 @@ export default function SitemapPage() {
       {/* Footer CTA */}
       <section className="py-12 bg-white border-t">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-200 mb-4">
+          <p className="text-gray-700 mb-4">
             Can't find what you're looking for?
           </p>
           <Link href="/get-help">

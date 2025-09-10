@@ -203,7 +203,7 @@ export default function LegalDocumentsPage() {
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-white mb-4">Legal Document Library</h1>
-          <p className="text-gray-200">Australian-compliant legal templates with NRP branding</p>
+          <p className="text-gray-700">Australian-compliant legal templates with NRP branding</p>
         </div>
 
         {/* Alert Banner */}
@@ -230,7 +230,7 @@ export default function LegalDocumentsPage() {
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-200 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-700 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search documents..."
@@ -291,7 +291,7 @@ export default function LegalDocumentsPage() {
           {filteredDocuments.filter(doc => !doc.featured).map(doc => (
             <div key={doc.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
               <div className="flex items-start justify-between mb-4">
-                <doc.icon className="w-8 h-8 text-blue-400" />
+                <doc.icon className="w-8 h-8 text-blue-600" />
                 <div className="flex gap-1">
                   {doc.australian && (
                     <span className="px-2 py-1 bg-green-600 text-white text-xs rounded-full" title="Australian Compliant">
@@ -306,8 +306,8 @@ export default function LegalDocumentsPage() {
                 </div>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{doc.title}</h3>
-              <p className="text-gray-300 text-sm mb-4">{doc.description}</p>
-              <div className="space-y-2 text-sm text-gray-200 mb-4">
+              <p className="text-gray-700 text-sm mb-4">{doc.description}</p>
+              <div className="space-y-2 text-sm text-gray-700 mb-4">
                 <div className="flex justify-between">
                   <span>Version:</span>
                   <span className="text-white">{doc.version}</span>
@@ -339,14 +339,14 @@ export default function LegalDocumentsPage() {
         {/* NRP Branding Note */}
         <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-lg p-6">
           <div className="flex items-start gap-4">
-            <Building className="w-8 h-8 text-blue-400 flex-shrink-0" />
+            <Building className="w-8 h-8 text-blue-600 flex-shrink-0" />
             <div>
               <h3 className="text-xl font-semibold text-white mb-2">NRP Branded Documents</h3>
-              <p className="text-gray-300 mb-3">
+              <p className="text-gray-700 mb-3">
                 All documents are professionally branded with the National Restoration Platform logo and corporate identity. 
                 Each template includes:
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-300">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-700">
                 <span className="flex items-center gap-2">• NRP logo and contact information</span>
                 <span className="flex items-center gap-2">• Professional formatting and layout</span>
                 <span className="flex items-center gap-2">• Digital signature fields where required</span>

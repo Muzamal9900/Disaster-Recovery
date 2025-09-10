@@ -424,12 +424,12 @@ export default function ResidentialPropertyPage() {
             className="text-center"
           >
             <div className="flex justify-center mb-6">
-              <Home className="w-20 h-20 text-blue-300" />
+              <Home className="w-20 h-20 text-blue-700" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Residential Property Disaster Recovery
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+            <p className="text-xl md:text-2xl mb-8 text-blue-800">
               Complete Guide for Homeowners, Tenants & Landlords
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -645,7 +645,7 @@ export default function ResidentialPropertyPage() {
                   </div>
                   {index < insuranceProcess.length - 1 && (
                     <div className="hidden md:block absolute top-1/2 -right-2 transform -translate-y-1/2">
-                      <ChevronRight className="w-6 h-6 text-blue-400" />
+                      <ChevronRight className="w-6 h-6 text-blue-600" />
                     </div>
                   )}
                 </motion.div>
@@ -857,7 +857,7 @@ export default function ResidentialPropertyPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Need Help with Residential Property Damage?
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-blue-800">
               Get immediate assistance from certified restoration specialists
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

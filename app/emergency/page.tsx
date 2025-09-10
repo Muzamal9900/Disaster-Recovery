@@ -128,7 +128,7 @@ export default function EmergencyTimesPage() {
                     </span>
                   </div>
                   <h2 className="text-2xl font-bold mb-2">{scenario.name}</h2>
-                  <div className="space-y-2 mb-4 text-gray-200">
+                  <div className="space-y-2 mb-4 text-gray-700">
                     <p className="flex items-center">
                       <Clock className="h-4 w-4 mr-2" />
                       {scenario.timeframe}
@@ -184,7 +184,7 @@ export default function EmergencyTimesPage() {
                         <td className="p-4">
                           <div>
                             <p className="font-bold">{scenario.name}</p>
-                            <p className="text-sm text-gray-200">{scenario.timeframe}</p>
+                            <p className="text-sm text-gray-700">{scenario.timeframe}</p>
                           </div>
                         </td>
                         <td className="p-4 text-center font-bold">{scenario.surcharge}</td>

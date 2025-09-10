@@ -76,7 +76,7 @@ export default function PitchDeckProductionV2() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="text-2xl text-gray-100 mb-8 max-w-4xl mx-auto"
+            className="text-2xl text-gray-800 mb-8 max-w-4xl mx-auto"
           >
             Transforming a $1B Australian market with AI orchestration,
             creating an unstoppable platform positioned for 10x growth.
@@ -86,7 +86,7 @@ export default function PitchDeckProductionV2() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 1 }}
-            className="flex items-center justify-center gap-2 text-blue-200"
+            className="flex items-center justify-center gap-2 text-blue-700"
           >
             <Rocket className="h-8 w-8" />
             <span className="text-xl font-semibold">Investment Opportunity</span>
@@ -106,7 +106,7 @@ export default function PitchDeckProductionV2() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl font-bold text-white mb-12 text-center flex items-center justify-center gap-3"
           >
-            <Target className="h-12 w-12 text-red-400" />
+            <Target className="h-12 w-12 text-red-600" />
             The Problem
           </motion.h2>
           
@@ -125,9 +125,9 @@ export default function PitchDeckProductionV2() {
                 className="flex items-start gap-4"
               >
                 <div className="bg-red-500/20 p-2 rounded-lg mt-1">
-                  <AlertCircle className="h-6 w-6 text-red-400" />
+                  <AlertCircle className="h-6 w-6 text-red-600" />
                 </div>
-                <p className="text-xl text-gray-100">{point}</p>
+                <p className="text-xl text-gray-800">{point}</p>
               </motion.div>
             ))}
           </div>
@@ -146,7 +146,7 @@ export default function PitchDeckProductionV2() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl font-bold text-white mb-12 text-center flex items-center justify-center gap-3"
           >
-            <Zap className="h-12 w-12 text-green-400" />
+            <Zap className="h-12 w-12 text-green-600" />
             Our Solution
           </motion.h2>
           
@@ -164,7 +164,7 @@ export default function PitchDeckProductionV2() {
                 transition={{ delay: index * 0.2 }}
                 className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-6 rounded-xl border border-blue-500/30"
               >
-                <item.icon className="h-10 w-10 text-blue-400 mb-4" />
+                <item.icon className="h-10 w-10 text-blue-600 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
                 <p className="text-gray-300">{item.desc}</p>
               </motion.div>
@@ -185,7 +185,7 @@ export default function PitchDeckProductionV2() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl font-bold text-white mb-12 text-center flex items-center justify-center gap-3"
           >
-            <TrendingUp className="h-12 w-12 text-green-400" />
+            <TrendingUp className="h-12 w-12 text-green-600" />
             Market Opportunity
           </motion.h2>
           
@@ -196,7 +196,7 @@ export default function PitchDeckProductionV2() {
               transition={{ delay: 0.2 }}
               className="bg-gradient-to-br from-green-900/30 to-blue-900/30 p-6 rounded-xl border border-green-500/30 text-center"
             >
-              <DollarSign className="h-10 w-10 text-green-400 mx-auto mb-3" />
+              <DollarSign className="h-10 w-10 text-green-600 mx-auto mb-3" />
               <h3 className="text-3xl font-bold text-white mb-2">$1B+</h3>
               <p className="text-gray-300">Australian Market Size</p>
             </motion.div>
@@ -207,7 +207,7 @@ export default function PitchDeckProductionV2() {
               transition={{ delay: 0.4 }}
               className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-6 rounded-xl border border-purple-500/30 text-center"
             >
-              <ChartBar className="h-10 w-10 text-purple-400 mx-auto mb-3" />
+              <ChartBar className="h-10 w-10 text-purple-600 mx-auto mb-3" />
               <h3 className="text-3xl font-bold text-white mb-2">15%</h3>
               <p className="text-gray-300">Annual Growth Rate</p>
             </motion.div>
@@ -218,7 +218,7 @@ export default function PitchDeckProductionV2() {
               transition={{ delay: 0.6 }}
               className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 p-6 rounded-xl border border-blue-500/30 text-center"
             >
-              <Globe className="h-10 w-10 text-blue-400 mx-auto mb-3" />
+              <Globe className="h-10 w-10 text-blue-600 mx-auto mb-3" />
               <h3 className="text-3xl font-bold text-white mb-2">100%</h3>
               <p className="text-gray-300">Digital Opportunity</p>
             </motion.div>
@@ -228,7 +228,7 @@ export default function PitchDeckProductionV2() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className="text-xl text-gray-100 text-center max-w-3xl mx-auto"
+            className="text-xl text-gray-800 text-center max-w-3xl mx-auto"
           >
             No dominant digital platform exists. The market is fragmented and ripe for disruption.
             We're positioned to capture significant market share with our AI-powered solution.
@@ -248,7 +248,7 @@ export default function PitchDeckProductionV2() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl font-bold text-white mb-12 text-center flex items-center justify-center gap-3"
           >
-            <DollarSign className="h-12 w-12 text-green-400" />
+            <DollarSign className="h-12 w-12 text-green-600" />
             Revenue Model
           </motion.h2>
           
@@ -287,7 +287,7 @@ export default function PitchDeckProductionV2() {
                   <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
                   <p className="text-gray-300">{item.desc}</p>
                 </div>
-                <div className="text-3xl font-bold text-green-400">
+                <div className="text-3xl font-bold text-green-600">
                   {item.price}
                 </div>
               </motion.div>
@@ -308,7 +308,7 @@ export default function PitchDeckProductionV2() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl font-bold text-white mb-12 text-center flex items-center justify-center gap-3"
           >
-            <Rocket className="h-12 w-12 text-purple-400" />
+            <Rocket className="h-12 w-12 text-purple-600" />
             Traction & Growth
           </motion.h2>
           
@@ -319,7 +319,7 @@ export default function PitchDeckProductionV2() {
               transition={{ delay: 0.2 }}
               className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 p-8 rounded-xl border border-green-500/30 text-center"
             >
-              <Users className="h-10 w-10 text-green-400 mx-auto mb-4" />
+              <Users className="h-10 w-10 text-green-600 mx-auto mb-4" />
               <h3 className="text-4xl font-bold text-white mb-2">200+</h3>
               <p className="text-xl text-gray-300">Active Contractors</p>
             </motion.div>
@@ -330,7 +330,7 @@ export default function PitchDeckProductionV2() {
               transition={{ delay: 0.4 }}
               className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 p-8 rounded-xl border border-blue-500/30 text-center"
             >
-              <DollarSign className="h-10 w-10 text-blue-400 mx-auto mb-4" />
+              <DollarSign className="h-10 w-10 text-blue-600 mx-auto mb-4" />
               <h3 className="text-4xl font-bold text-white mb-2">$50K+</h3>
               <p className="text-xl text-gray-300">Monthly Claims Volume</p>
             </motion.div>
@@ -341,7 +341,7 @@ export default function PitchDeckProductionV2() {
               transition={{ delay: 0.6 }}
               className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-8 rounded-xl border border-purple-500/30 text-center"
             >
-              <Zap className="h-10 w-10 text-purple-400 mx-auto mb-4" />
+              <Zap className="h-10 w-10 text-purple-600 mx-auto mb-4" />
               <h3 className="text-4xl font-bold text-white mb-2">90%</h3>
               <p className="text-xl text-gray-300">Faster Processing</p>
             </motion.div>
@@ -352,7 +352,7 @@ export default function PitchDeckProductionV2() {
               transition={{ delay: 0.8 }}
               className="bg-gradient-to-br from-orange-900/30 to-red-900/30 p-8 rounded-xl border border-orange-500/30 text-center"
             >
-              <Award className="h-10 w-10 text-orange-400 mx-auto mb-4" />
+              <Award className="h-10 w-10 text-orange-600 mx-auto mb-4" />
               <h3 className="text-4xl font-bold text-white mb-2">95%</h3>
               <p className="text-xl text-gray-300">Satisfaction Rate</p>
             </motion.div>
@@ -372,13 +372,13 @@ export default function PitchDeckProductionV2() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl font-bold text-white mb-12 text-center flex items-center justify-center gap-3"
           >
-            <Target className="h-12 w-12 text-yellow-400" />
+            <Target className="h-12 w-12 text-yellow-600" />
             Investment Opportunity
           </motion.h2>
           
           <div className="bg-gradient-to-br from-yellow-900/30 to-orange-900/30 p-8 rounded-xl border border-yellow-500/30 mb-8">
             <div className="text-center mb-8">
-              <h3 className="text-5xl font-bold text-yellow-400 mb-2">$2M</h3>
+              <h3 className="text-5xl font-bold text-yellow-600 mb-2">$2M</h3>
               <p className="text-2xl text-white">Seed Round</p>
               <p className="text-xl text-gray-300 mt-2">20% Equity • 10x Return Potential</p>
             </div>
@@ -397,7 +397,7 @@ export default function PitchDeckProductionV2() {
                   transition={{ delay: 0.2 + index * 0.1 }}
                   className="flex items-start gap-3"
                 >
-                  <ArrowRight className="h-6 w-6 text-yellow-400 mt-1" />
+                  <ArrowRight className="h-6 w-6 text-yellow-600 mt-1" />
                   <div>
                     <h4 className="text-lg font-bold text-white">{item.title}</h4>
                     <p className="text-gray-300">{item.desc}</p>
@@ -436,10 +436,10 @@ export default function PitchDeckProductionV2() {
             transition={{ delay: 0.5 }}
             className="space-y-4 mb-12"
           >
-            <p className="text-2xl text-gray-100">✓ $1B+ Market Opportunity</p>
-            <p className="text-2xl text-gray-100">✓ Proven AI Technology</p>
-            <p className="text-2xl text-gray-100">✓ Strong Early Traction</p>
-            <p className="text-2xl text-gray-100">✓ 10x Return Potential</p>
+            <p className="text-2xl text-gray-800">✓ $1B+ Market Opportunity</p>
+            <p className="text-2xl text-gray-800">✓ Proven AI Technology</p>
+            <p className="text-2xl text-gray-800">✓ Strong Early Traction</p>
+            <p className="text-2xl text-gray-800">✓ 10x Return Potential</p>
           </motion.div>
           
           <motion.div
@@ -449,7 +449,7 @@ export default function PitchDeckProductionV2() {
             className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-xl max-w-2xl mx-auto"
           >
             <h3 className="text-3xl font-bold text-white mb-4">Let's Build Together</h3>
-            <p className="text-xl text-gray-100">
+            <p className="text-xl text-gray-800">
               Contact us to learn more about this investment opportunity
             </p>
           </motion.div>

@@ -68,7 +68,7 @@ export function ComplianceOverview() {
           <CardTitle>Compliance Overview</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-center py-8 text-gray-300">
+          <div className="text-center py-8 text-gray-700">
             Loading compliance data...
           </div>
         </CardContent>
@@ -108,15 +108,15 @@ export function ComplianceOverview() {
           <Progress value={complianceRate} className="h-3" />
           <div className="grid grid-cols-3 gap-2 mt-2">
             <div className="text-center">
-              <p className="text-xs text-gray-300">Compliant</p>
+              <p className="text-xs text-gray-700">Compliant</p>
               <p className="text-sm font-bold text-green-600">{metrics.compliantContractors}</p>
             </div>
             <div className="text-center">
-              <p className="text-xs text-gray-300">Partial</p>
+              <p className="text-xs text-gray-700">Partial</p>
               <p className="text-sm font-bold text-yellow-600">{metrics.partiallyCompliant}</p>
             </div>
             <div className="text-center">
-              <p className="text-xs text-gray-300">Non-Compliant</p>
+              <p className="text-xs text-gray-700">Non-Compliant</p>
               <p className="text-sm font-bold text-red-600">{metrics.nonCompliant}</p>
             </div>
           </div>
@@ -173,7 +173,7 @@ export function ComplianceOverview() {
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-sm text-gray-200">
+                    <span className="text-sm text-gray-700">
                       {value.compliant}/{value.total}
                     </span>
                     <Badge 
@@ -198,7 +198,7 @@ export function ComplianceOverview() {
           <p className="text-sm font-medium mb-2">Compliance Trends</p>
           <div className="grid grid-cols-2 gap-4">
             <div className="flex items-center justify-between">
-              <span className="text-sm text-gray-200">Week over Week</span>
+              <span className="text-sm text-gray-700">Week over Week</span>
               <div className="flex items-center gap-1">
                 {metrics.trends.weekly > 0 ? (
                   <TrendingUp className="h-4 w-4 text-green-500" />
@@ -213,7 +213,7 @@ export function ComplianceOverview() {
               </div>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-sm text-gray-200">Month over Month</span>
+              <span className="text-sm text-gray-700">Month over Month</span>
               <div className="flex items-center gap-1">
                 {metrics.trends.monthly > 0 ? (
                   <TrendingUp className="h-4 w-4 text-green-500" />
@@ -234,18 +234,18 @@ export function ComplianceOverview() {
         <div className="border-t pt-4">
           <div className="grid grid-cols-2 gap-3">
             <div className="flex items-center gap-2">
-              <FileCheck className="h-4 w-4 text-gray-200" />
+              <FileCheck className="h-4 w-4 text-gray-700" />
               <div>
-                <p className="text-xs text-gray-300">Avg Score</p>
+                <p className="text-xs text-gray-700">Avg Score</p>
                 <p className="text-sm font-bold">
                   {metrics.averageComplianceScore.toFixed(1)}%
                 </p>
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <Clock className="h-4 w-4 text-gray-200" />
+              <Clock className="h-4 w-4 text-gray-700" />
               <div>
-                <p className="text-xs text-gray-300">Expiring Soon</p>
+                <p className="text-xs text-gray-700">Expiring Soon</p>
                 <p className="text-sm font-bold text-blue-700">
                   {metrics.expiringCertifications}
                 </p>

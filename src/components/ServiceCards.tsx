@@ -99,15 +99,15 @@ export default function ServiceCards() {
         {/* Section header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full">
-            <ShieldCheckIcon className="w-4 h-4 text-cyan-400" />
-            <span className="text-sm font-semibold text-cyan-400">Professional Services</span>
+            <ShieldCheckIcon className="w-4 h-4 text-cyan-600" />
+            <span className="text-sm font-semibold text-cyan-600">Professional Services</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               Complete Disaster Recovery
             </span>
           </h2>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Industry-leading restoration services with cutting-edge technology and certified experts
           </p>
         </div>
@@ -135,10 +135,10 @@ export default function ServiceCards() {
                   </div>
                   
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colours">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-600 transition-colours">
                     {service.title}
                   </h3>
-                  <p className="text-gray-200 mb-4 text-sm leading-relaxed">
+                  <p className="text-gray-700 mb-4 text-sm leading-relaxed">
                     {service.description}
                   </p>
                   
@@ -147,13 +147,13 @@ export default function ServiceCards() {
                     {service.features.map((feature, i) => (
                       <div key={i} className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
-                        <span className="text-xs text-gray-300">{feature}</span>
+                        <span className="text-xs text-gray-700">{feature}</span>
                       </div>
                     ))}
                   </div>
                   
                   {/* CTA */}
-                  <div className="flex items-center gap-2 text-cyan-400 font-medium group-hover:gap-3 transition-all">
+                  <div className="flex items-center gap-2 text-cyan-600 font-medium group-hover:gap-3 transition-all">
                     <span>Learn More</span>
                     <ArrowRightIcon className="w-4 h-4" />
                   </div>

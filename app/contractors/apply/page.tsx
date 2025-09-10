@@ -89,7 +89,7 @@ export default function ContractorApplicationPage() {
                 <li>5. Schedule your orientation call</li>
               </ol>
             </div>
-            <p className="mt-6 text-gray-200">
+            <p className="mt-6 text-gray-700">
               We'll contact you within 1-2 business days at {formData.email}
             </p>
           </Card>
@@ -515,7 +515,7 @@ export default function ContractorApplicationPage() {
                     <Award className="mr-2 h-5 w-5" />
                     Submit Application to Join Network
                   </Button>
-                  <p className="text-sm text-gray-200 text-center mt-4">
+                  <p className="text-sm text-gray-700 text-center mt-4">
                     Applications are reviewed within 1-2 business days
                   </p>
                 </div>

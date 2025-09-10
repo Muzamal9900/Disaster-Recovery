@@ -243,12 +243,12 @@ export default function AdelaideLocationPage() {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Disaster Recovery Adelaide
-                <span className="block text-amber-300 text-3xl md:text-4xl mt-2">
+                <span className="block text-amber-700 text-3xl md:text-4xl mt-2">
                   South Australia&apos;s Extreme Climate Restoration Experts
                 </span>
               </h1>
               
-              <p className="text-xl text-amber-100 mb-8 leading-relaxed">
+              <p className="text-xl text-amber-800 mb-8 leading-relaxed">
                 From record-breaking heatwaves to Adelaide Hills bushfires - our IICRC-certified technicians 
                 provide <strong>60-minute emergency response</strong> across Greater Adelaide. 
                 Specialists in extreme heat damage, flash flooding, and bushfire recovery 

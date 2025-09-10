@@ -132,7 +132,7 @@ export default function SEOPagesAdmin() {
           <div className="flex justify-between items-start">
             <div>
               <h1 className="text-3xl font-bold text-gray-900 mb-2">SEO Pages Management</h1>
-              <p className="text-gray-200">
+              <p className="text-gray-700">
                 Manage and monitor your location-based SEO pages nationwide
               </p>
             </div>
@@ -163,7 +163,7 @@ export default function SEOPagesAdmin() {
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-200">Total Pages</p>
+                <p className="text-sm font-medium text-gray-700">Total Pages</p>
                 <p className="text-3xl font-bold text-gray-900">{pagination.total.toLocaleString()}</p>
               </div>
               <div className="p-3 bg-blue-100 rounded-full">
@@ -175,7 +175,7 @@ export default function SEOPagesAdmin() {
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-200">Avg Priority</p>
+                <p className="text-sm font-medium text-gray-700">Avg Priority</p>
                 <p className="text-3xl font-bold text-gray-900">
                   {pages.length > 0 ? Math.round(pages.reduce((sum, p) => sum + p.priorityScore, 0) / pages.length) : 0}
                 </p>
@@ -189,7 +189,7 @@ export default function SEOPagesAdmin() {
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-200">Total Clicks</p>
+                <p className="text-sm font-medium text-gray-700">Total Clicks</p>
                 <p className="text-3xl font-bold text-gray-900">
                   {pages.reduce((sum, p) => sum + p.organicClicks, 0).toLocaleString()}
                 </p>
@@ -203,7 +203,7 @@ export default function SEOPagesAdmin() {
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-200">Est. Search Vol.</p>
+                <p className="text-sm font-medium text-gray-700">Est. Search Vol.</p>
                 <p className="text-3xl font-bold text-gray-900">
                   {pages.reduce((sum, p) => sum + p.estimatedSearchVolume, 0).toLocaleString()}
                 </p>
@@ -220,7 +220,7 @@ export default function SEOPagesAdmin() {
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Generate New Pages</h3>
           <div className="flex gap-4 items-end">
             <div>
-              <label className="block text-sm font-medium text-gray-200 mb-2">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Number of Pages
               </label>
               <input
@@ -233,7 +233,7 @@ export default function SEOPagesAdmin() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-200 mb-2">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Min Priority Score
               </label>
               <input
@@ -260,7 +260,7 @@ export default function SEOPagesAdmin() {
         <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
           <div className="flex flex-wrap gap-4 items-end">
             <div>
-              <label className="block text-sm font-medium text-gray-200 mb-2">State</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">State</label>
               <select
                 value={filters.state}
                 onChange={(e) => setFilters({...filters, state: e.target.value})}
@@ -274,7 +274,7 @@ export default function SEOPagesAdmin() {
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-200 mb-2">Service Type</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Service Type</label>
               <select
                 value={filters.serviceType}
                 onChange={(e) => setFilters({...filters, serviceType: e.target.value})}
@@ -297,25 +297,25 @@ export default function SEOPagesAdmin() {
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Page
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Location
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Service
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Priority
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Est. Volume
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Clicks
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                     Actions
                   </th>
                 </tr>
@@ -325,13 +325,13 @@ export default function SEOPagesAdmin() {
                   <tr>
                     <td colSpan={7} className="px-6 py-12 text-center">
                       <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
-                      <p className="mt-2 text-gray-300">Loading pages...</p>
+                      <p className="mt-2 text-gray-700">Loading pages...</p>
                     </td>
                   </tr>
                 ) : pages.length === 0 ? (
                   <tr>
                     <td colSpan={7} className="px-6 py-12 text-center">
-                      <p className="text-gray-300">No pages found</p>
+                      <p className="text-gray-700">No pages found</p>
                     </td>
                   </tr>
                 ) : pages.map((page) => (
@@ -341,23 +341,23 @@ export default function SEOPagesAdmin() {
                         <div className="text-sm font-medium text-gray-900 truncate max-w-xs">
                           {page.title}
                         </div>
-                        <div className="text-xs text-gray-300 truncate max-w-xs">
+                        <div className="text-xs text-gray-700 truncate max-w-xs">
                           /{page.slug}
                         </div>
                       </div>
                     </td>
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-1 text-sm text-gray-900">
-                        <MapPin className="w-3 h-3 text-gray-200" />
+                        <MapPin className="w-3 h-3 text-gray-700" />
                         {page.city}, {page.state} {page.postcode}
                       </div>
                       {page.suburb && (
-                        <div className="text-xs text-gray-300">{page.suburb}</div>
+                        <div className="text-xs text-gray-700">{page.suburb}</div>
                       )}
                     </td>
                     <td className="px-6 py-4">
                       <div className="text-sm text-gray-900">{page.serviceName}</div>
-                      <div className="text-xs text-gray-300">{page.propertyType}</div>
+                      <div className="text-xs text-gray-700">{page.propertyType}</div>
                       {page.businessType && (
                         <div className="text-xs text-blue-600">{page.businessType.replace(/-/g, ' ')}</div>
                       )}
@@ -365,7 +365,7 @@ export default function SEOPagesAdmin() {
                     <td className="px-6 py-4">
                       <div className={`text-sm font-medium ${
                         page.priorityScore >= 90 ? 'text-green-600' :
-                        page.priorityScore >= 75 ? 'text-yellow-600' : 'text-gray-200'
+                        page.priorityScore >= 75 ? 'text-yellow-600' : 'text-gray-700'
                       }`}>
                         {page.priorityScore}
                       </div>
@@ -397,7 +397,7 @@ export default function SEOPagesAdmin() {
           {pagination.pages > 1 && (
             <div className="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
               <div className="flex items-center justify-between">
-                <div className="text-sm text-gray-200">
+                <div className="text-sm text-gray-700">
                   Showing {((pagination.page - 1) * pagination.limit) + 1} to{' '}
                   {Math.min(pagination.page * pagination.limit, pagination.total)} of{' '}
                   {pagination.total} results

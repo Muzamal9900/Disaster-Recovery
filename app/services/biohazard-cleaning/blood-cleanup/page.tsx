@@ -62,7 +62,7 @@ export default function BloodSpillCleanupServicesPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Blood Spill Cleanup Services
             </h1>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-blue-800">
               Expert blood spill cleanup services services across Queensland. Fast response, professional restoration, insurance approved.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -84,7 +84,7 @@ export default function BloodSpillCleanupServicesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Professional Blood Spill Cleanup Services Services</h2>
-            <p className="text-lg text-gray-200 mb-8">
+            <p className="text-lg text-gray-700 mb-8">
               When you need expert blood spill cleanup services services, Disaster Recovery provides comprehensive solutions 
               with 24/7 emergency response across Southeast Queensland.
             </p>
@@ -147,7 +147,7 @@ export default function BloodSpillCleanupServicesPage() {
               {faqs.map((faq, index) => (
                 <Card key={index} className="p-6">
                   <h3 className="text-lg font-bold mb-3">{faq.question}</h3>
-                  <p className="text-gray-200">{faq.answer}</p>
+                  <p className="text-gray-700">{faq.answer}</p>
                 </Card>
               ))}
             </div>

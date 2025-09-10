@@ -10,7 +10,7 @@ export default function BrisbaneFloods2022RecoveryPage() {
     <div className="min-h-screen">
       <section className="bg-gradient-to-b from-green-900 to-green-800 text-white py-20">
         <div className="container mx-auto px-4">
-          <FileText className="h-16 w-16 text-green-300 mb-6" />
+          <FileText className="h-16 w-16 text-green-700 mb-6" />
           <h1 className="text-4xl font-bold mb-4">Case Study: Brisbane Floods 2022 Recovery</h1>
           <p className="text-xl">A Success Story in Disaster Recovery</p>
         </div>

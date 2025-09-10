@@ -58,19 +58,19 @@ export default function AnimatedCounters() {
     <div ref={countersRef} className="grid md:grid-cols-4 gap-8 mb-16">
       <div className="text-center scroll-reveal">
         <p className="text-5xl font-bold text-blue-600 counter" data-target="45">0</p>
-        <p className="text-gray-200 mt-2">Team Members</p>
+        <p className="text-gray-700 mt-2">Team Members</p>
       </div>
       <div className="text-center scroll-reveal" style={{animationDelay: '0.1s'}}>
         <p className="text-5xl font-bold text-blue-600 counter" data-target="15">0</p>
-        <p className="text-gray-200 mt-2">Years Experience</p>
+        <p className="text-gray-700 mt-2">Years Experience</p>
       </div>
       <div className="text-center scroll-reveal" style={{animationDelay: '0.2s'}}>
         <p className="text-5xl font-bold text-blue-600 counter" data-target="2500">0</p>
-        <p className="text-gray-200 mt-2">Projects Completed</p>
+        <p className="text-gray-700 mt-2">Projects Completed</p>
       </div>
       <div className="text-center scroll-reveal" style={{animationDelay: '0.3s'}}>
         <p className="text-5xl font-bold text-blue-600 counter" data-target="98">0</p>
-        <p className="text-gray-200 mt-2">% Satisfaction</p>
+        <p className="text-gray-700 mt-2">% Satisfaction</p>
       </div>
     </div>
   );

@@ -94,7 +94,7 @@ export function ComplianceReports() {
       case 'high': return 'text-red-600';
       case 'medium': return 'text-yellow-600';
       case 'low': return 'text-green-600';
-      default: return 'text-gray-200';
+      default: return 'text-gray-700';
     }
   };
 
@@ -130,8 +130,8 @@ export function ComplianceReports() {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
         <div className="text-center">
-          <Shield className="h-8 w-8 animate-spin mx-auto text-gray-200" />
-          <p className="text-sm text-gray-300 mt-2">Loading compliance data...</p>
+          <Shield className="h-8 w-8 animate-spin mx-auto text-gray-700" />
+          <p className="text-sm text-gray-700 mt-2">Loading compliance data...</p>
         </div>
       </div>
     );
@@ -151,7 +151,7 @@ export function ComplianceReports() {
             <Shield className="h-6 w-6" />
             Compliance & Certification Reports
           </h2>
-          <p className="text-gray-200 mt-1">
+          <p className="text-gray-700 mt-1">
             Monitor compliance status, certifications, and training requirements
           </p>
         </div>
@@ -172,7 +172,7 @@ export function ComplianceReports() {
         <CardContent className="pt-6">
           <div className="flex justify-between items-start">
             <div className="flex-1">
-              <p className="text-sm text-gray-200">Overall Compliance Score</p>
+              <p className="text-sm text-gray-700">Overall Compliance Score</p>
               <div className="flex items-baseline gap-3 mt-2">
                 <span className={`text-5xl font-bold ${
                   metrics.overallComplianceScore >= 90 ? 'text-green-600' :
@@ -237,7 +237,7 @@ export function ComplianceReports() {
               {metrics.certifications.filter(c => c.status === 'valid').length}/
               {metrics.certifications.length}
             </p>
-            <p className="text-xs text-gray-300">Valid certifications</p>
+            <p className="text-xs text-gray-700">Valid certifications</p>
           </CardContent>
         </Card>
 
@@ -253,7 +253,7 @@ export function ComplianceReports() {
               {metrics.insurance.filter(i => i.status === 'active').length}/
               {metrics.insurance.length}
             </p>
-            <p className="text-xs text-gray-300">Active policies</p>
+            <p className="text-xs text-gray-700">Active policies</p>
           </CardContent>
         </Card>
 
@@ -268,7 +268,7 @@ export function ComplianceReports() {
             <p className="text-2xl font-bold">
               {metrics.ceuCredits.earned}/{metrics.ceuCredits.required}
             </p>
-            <p className="text-xs text-gray-300">
+            <p className="text-xs text-gray-700">
               {metrics.ceuCredits.onTrack ? 'On track' : 'Behind schedule'}
             </p>
           </CardContent>
@@ -287,7 +287,7 @@ export function ComplianceReports() {
                 ? Math.ceil((new Date(metrics.upcomingDeadlines[0].dueDate).getTime() - Date.now()) / (1000 * 60 * 60 * 24))
                 : '—'} days
             </p>
-            <p className="text-xs text-gray-300">
+            <p className="text-xs text-gray-700">
               {metrics.upcomingDeadlines[0]?.item || 'No upcoming deadlines'}
             </p>
           </CardContent>
@@ -343,7 +343,7 @@ export function ComplianceReports() {
                         {deadline.type === 'audit' && <FileText className="h-4 w-4 text-blue-600" />}
                         <div>
                           <p className="font-medium text-sm">{deadline.item}</p>
-                          <p className="text-xs text-gray-300">
+                          <p className="text-xs text-gray-700">
                             Due: {new Date(deadline.dueDate).toLocaleDateString()}
                           </p>
                         </div>
@@ -384,7 +384,7 @@ export function ComplianceReports() {
                             {cert.status}
                           </Badge>
                         </div>
-                        <div className="grid grid-cols-3 gap-4 text-sm text-gray-200">
+                        <div className="grid grid-cols-3 gap-4 text-sm text-gray-700">
                           <div>
                             <p className="font-medium">Status</p>
                             <p className="capitalize">{cert.status}</p>
@@ -449,7 +449,7 @@ export function ComplianceReports() {
                             {policy.status}
                           </Badge>
                         </div>
-                        <div className="grid grid-cols-4 gap-4 text-sm text-gray-200">
+                        <div className="grid grid-cols-4 gap-4 text-sm text-gray-700">
                           <div>
                             <p className="font-medium">Provider</p>
                             <p>{policy.provider}</p>

@@ -100,7 +100,7 @@ export default function UltraModernFooter() {
           >
             24/7 Online Emergency Response
           </h3>
-          <p className="text-gray-200 mb-6">
+          <p className="text-gray-700 mb-6">
             Disaster doesn't wait. Neither do we. Get Help Now for immediate assistance.
           </p>
           <Link
@@ -173,7 +173,7 @@ export default function UltraModernFooter() {
               </div>
             </div>
             
-            <p className="text-gray-200 text-sm mb-6 max-w-sm">
+            <p className="text-gray-700 text-sm mb-6 max-w-sm">
               Leading the industry with cutting-edge restoration technology and unmatched expertise. 
               Available 24/7 for emergency response nationwide.
             </p>
@@ -183,7 +183,7 @@ export default function UltraModernFooter() {
               {['IICRC Certified', 'Licensed & Insured', 'Award Winning'].map((badge) => (
                 <div
                   key={badge}
-                  className="px-3 py-1.5 rounded-full text-xs font-medium text-purple-300"
+                  className="px-3 py-1.5 rounded-full text-xs font-medium text-purple-700"
                   style={{
                     background: 'rgba(99, 91, 255, 0.1)',
                     border: '1px solid rgba(99, 91, 255, 0.3)' }}
@@ -205,7 +205,7 @@ export default function UltraModernFooter() {
                 <li key={item.label}>
                   <Link 
                     href={item.href}
-                    className="text-gray-200 hover:text-white text-sm transition-colours relative group inline-flex items-center min-h-[44px] min-w-[44px] py-2 px-4"
+                    className="text-gray-700 hover:text-white text-sm transition-colours relative group inline-flex items-center min-h-[44px] min-w-[44px] py-2 px-4"
                   >
                     <span className="absolute left-0 w-0 h-[1px] bg-purple-500 transition-all group-hover:w-full" />
                     <span className="relative">{item.label}</span>
@@ -226,7 +226,7 @@ export default function UltraModernFooter() {
                 <li key={item.label}>
                   <Link 
                     href={item.href}
-                    className="text-gray-200 hover:text-white text-sm transition-colours relative group inline-flex items-center min-h-[44px] min-w-[44px] py-2 px-4"
+                    className="text-gray-700 hover:text-white text-sm transition-colours relative group inline-flex items-center min-h-[44px] min-w-[44px] py-2 px-4"
                   >
                     <span className="absolute left-0 w-0 h-[1px] bg-cyan-500 transition-all group-hover:w-full" />
                     <span className="relative">{item.label}</span>
@@ -247,7 +247,7 @@ export default function UltraModernFooter() {
                 <li key={item.label}>
                   <Link 
                     href={item.href}
-                    className="text-gray-200 hover:text-white text-sm transition-colours relative group inline-flex items-center min-h-[44px] min-w-[44px] py-2 px-4"
+                    className="text-gray-700 hover:text-white text-sm transition-colours relative group inline-flex items-center min-h-[44px] min-w-[44px] py-2 px-4"
                   >
                     <span className="absolute left-0 w-0 h-[1px] bg-emerald-500 transition-all group-hover:w-full" />
                     <span className="relative">{item.label}</span>
@@ -287,7 +287,7 @@ export default function UltraModernFooter() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             {/* Copyright */}
-            <div className="text-sm text-gray-300">
+            <div className="text-sm text-gray-700">
               © {new Date().getFullYear()} Disaster Recovery. All rights reserved.
             </div>
 
@@ -326,10 +326,10 @@ export default function UltraModernFooter() {
 
             {/* Legal links */}
             <div className="flex items-center gap-6 text-sm">
-              <Link href="/privacy" className="text-gray-300 hover:text-white transition-colours">
+              <Link href="/privacy" className="text-gray-700 hover:text-white transition-colours">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-300 hover:text-white transition-colours">
+              <Link href="/terms" className="text-gray-700 hover:text-white transition-colours">
                 Terms of Service
               </Link>
             </div>

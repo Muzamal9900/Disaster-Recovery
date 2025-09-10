@@ -59,8 +59,8 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
         {/* Emergency badge */}
         <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 bg-red-500/10 border border-red-600/30 rounded-full animate-pulse">
-          <BoltIcon className="w-4 h-4 text-red-400" />
-          <span className="text-sm font-semibold text-red-400">Emergency Services Available Now</span>
+          <BoltIcon className="w-4 h-4 text-red-600" />
+          <span className="text-sm font-semibold text-red-600">Emergency Services Available Now</span>
           <div className="w-2 h-2 bg-red-400 rounded-full animate-ping" />
         </div>
 
@@ -83,9 +83,9 @@ export default function HeroSection() {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
           Professional disaster recovery services with guaranteed 
-          <span className="text-cyan-400 font-semibold"> 60-minute response time</span> across 
+          <span className="text-cyan-600 font-semibold"> 60-minute response time</span> across 
           all major Australian cities
         </p>
 
@@ -116,8 +116,8 @@ export default function HeroSection() {
               key={index}
               className="flex items-center gap-3 px-6 py-3 bg-white/5 backdrop-blur-sm rounded-full border border-white/10"
             >
-              <feature.icon className="w-6 h-6 text-cyan-400" />
-              <span className="text-gray-300 font-medium">{feature.text}</span>
+              <feature.icon className="w-6 h-6 text-cyan-600" />
+              <span className="text-gray-700 font-medium">{feature.text}</span>
             </div>
           ))}
         </div>

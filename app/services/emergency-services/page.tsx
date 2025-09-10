@@ -185,7 +185,7 @@ export default function EmergencyServicesPage() {
             <h1 className="text-5xl font-bold mb-6">
               Emergency Disaster Response Queensland
             </h1>
-            <p className="text-xl mb-8 text-red-100">
+            <p className="text-xl mb-8 text-red-800">
               Immediate 24/7 response for all disaster emergencies. Water damage, fire, storms, hazmat - 
               we\'re your first call when disaster strikes anywhere in Queensland.
             </p>

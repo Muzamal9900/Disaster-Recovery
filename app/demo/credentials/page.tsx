@@ -184,7 +184,7 @@ export default function DemoCredentialsPage() {
                   <Clock className="h-5 w-5 text-gray-200" />
                 </div>
                 <p className="text-gray-300 mb-2">{demo.description}</p>
-                <p className="text-sm text-blue-400">Duration: {demo.duration}</p>
+                <p className="text-sm text-blue-600">Duration: {demo.duration}</p>
               </div>
 
               {/* Credentials */}
@@ -271,7 +271,7 @@ export default function DemoCredentialsPage() {
                       <td className="py-3 px-4">
                         <span className={`text-xs px-2 py-1 rounded-full ${
                           claim.status === 'Completed' ? 'bg-green-500/20 text-emerald-600' :
-                          claim.status === 'In Progress' ? 'bg-blue-500/20 text-blue-400' :
+                          claim.status === 'In Progress' ? 'bg-blue-500/20 text-blue-600' :
                           'bg-blue-600/20 text-blue-500'
                         }`}>
                           {claim.status}
@@ -317,7 +317,7 @@ export default function DemoCredentialsPage() {
                     <div className="pt-2 border-t border-gray-700">
                       <div className="flex flex-wrap gap-1">
                         {contractor.specialties.map((specialty) => (
-                          <span key={specialty} className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded">
+                          <span key={specialty} className="px-2 py-1 bg-blue-500/20 text-blue-600 text-xs rounded">
                             {specialty}
                           </span>
                         ))}
@@ -335,8 +335,8 @@ export default function DemoCredentialsPage() {
           <div className="flex items-start gap-3">
             <AlertCircle className="h-5 w-5 text-blue-500 mt-0.5" />
             <div>
-              <h3 className="font-semibold text-yellow-300 mb-2">Demo Mode Instructions</h3>
-              <ul className="text-sm text-yellow-200 space-y-1">
+              <h3 className="font-semibold text-yellow-700 mb-2">Demo Mode Instructions</h3>
+              <ul className="text-sm text-yellow-700 space-y-1">
                 <li>• All demos run with mock data - no real submissions are made</li>
                 <li>• Click "Launch Demo" to see automatic form filling and system navigation</li>
                 <li>• You can also manually explore each system using the provided credentials</li>

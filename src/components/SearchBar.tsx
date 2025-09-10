@@ -29,7 +29,7 @@ export default function SearchBar() {
         />
         <button
           type="submit"
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-gray-600"
           aria-label="Search"
         >
           <Search className="h-4 w-4" />

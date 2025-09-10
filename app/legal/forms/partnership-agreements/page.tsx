@@ -12,7 +12,7 @@ export default function PartnershipAgreements() {
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
           Partnership & Joint Venture Agreements
         </h1>
-        <p className="text-lg text-gray-200">
+        <p className="text-lg text-gray-700">
           Comprehensive legal framework for business partnerships and joint ventures
         </p>
       </div>
@@ -21,22 +21,22 @@ export default function PartnershipAgreements() {
         <div className="bg-blue-50 p-4 rounded-lg">
           <FaHandshake className="text-3xl text-blue-600 mb-2" />
           <h3 className="font-semibold">Partnership Structure</h3>
-          <p className="text-sm text-gray-200">Define roles and responsibilities</p>
+          <p className="text-sm text-gray-700">Define roles and responsibilities</p>
         </div>
         <div className="bg-green-50 p-4 rounded-lg">
           <FaFileContract className="text-3xl text-green-600 mb-2" />
           <h3 className="font-semibold">Legal Framework</h3>
-          <p className="text-sm text-gray-200">Compliant with Australian law</p>
+          <p className="text-sm text-gray-700">Compliant with Australian law</p>
         </div>
         <div className="bg-purple-50 p-4 rounded-lg">
           <FaUsers className="text-3xl text-purple-600 mb-2" />
           <h3 className="font-semibold">Profit Sharing</h3>
-          <p className="text-sm text-gray-200">Clear distribution models</p>
+          <p className="text-sm text-gray-700">Clear distribution models</p>
         </div>
         <div className="bg-orange-50 p-4 rounded-lg">
           <FaBalanceScale className="text-3xl text-blue-700 mb-2" />
           <h3 className="font-semibold">Dispute Resolution</h3>
-          <p className="text-sm text-gray-200">Fair resolution procedures</p>
+          <p className="text-sm text-gray-700">Fair resolution procedures</p>
         </div>
       </div>
 
@@ -125,7 +125,7 @@ export default function PartnershipAgreements() {
 
         <div className="bg-gray-50 p-6 rounded-lg mt-8">
           <h3 className="text-lg font-semibold mb-3">Important Notice</h3>
-          <p className="text-sm text-gray-200">
+          <p className="text-sm text-gray-700">
             This document is a template for partnership agreements. It should be reviewed and customized
             by qualified legal counsel to ensure compliance with current Australian partnership laws and
             regulations. Each partnership arrangement may require specific modifications based on the

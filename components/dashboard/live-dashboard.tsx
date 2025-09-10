@@ -197,7 +197,7 @@ export const LiveDashboard: React.FC = () => {
     <div className="space-y-6 p-6">
       {/* Connection Status */}
       {!connected && (
-        <div className="bg-yellow-100 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-400 p-3 rounded-lg flex items-center gap-2">
+        <div className="bg-yellow-100 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-600 p-3 rounded-lg flex items-center gap-2">
           <AlertTriangle className="w-5 h-5" />
           Disconnected from live updates. Attempting to reconnect...
         </div>

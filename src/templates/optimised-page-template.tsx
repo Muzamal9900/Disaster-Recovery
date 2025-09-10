@@ -337,7 +337,7 @@ export const DataVisualisation = ({
             {data.map((item: any, idx: number) => (
               <div key={idx}>
                 <div className="flex justify-between mb-2">
-                  <span className="text-blue-300">{item.label}</span>
+                  <span className="text-blue-700">{item.label}</span>
                   <span className="text-white font-bold">{item.value}%</span>
                 </div>
                 <div className="w-full bg-white/10 rounded-full h-3">
@@ -386,11 +386,11 @@ export const TrustIndicators = () => {
         <span className="text-white text-sm">Insurance Approved</span>
       </div>
       <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full">
-        <Award className="h-5 w-5 text-blue-400" />
+        <Award className="h-5 w-5 text-blue-600" />
         <span className="text-white text-sm">IICRC Certified</span>
       </div>
       <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full">
-        <GraduationCap className="h-5 w-5 text-purple-400" />
+        <GraduationCap className="h-5 w-5 text-purple-600" />
         <span className="text-white text-sm">CSIRO Approved</span>
       </div>
       <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full">

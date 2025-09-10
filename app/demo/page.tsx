@@ -91,7 +91,7 @@ export default function DemoPage() {
             <div className="flex items-center gap-3">
               <Link 
                 href="/demo/credentials"
-                className="px-6 py-3 bg-blue-600/20 hover:bg-blue-600/30 text-blue-300 rounded-lg transition flex items-center gap-2"
+                className="px-6 py-3 bg-blue-600/20 hover:bg-blue-600/30 text-blue-700 rounded-lg transition flex items-center gap-2"
               >
                 View Test Credentials
               </Link>
@@ -185,7 +185,7 @@ export default function DemoPage() {
             </p>
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
-                <div className="text-3xl font-bold text-blue-400">10,000+</div>
+                <div className="text-3xl font-bold text-blue-600">10,000+</div>
                 <div className="text-sm text-gray-200">Contractors</div>
               </div>
               <div>
@@ -193,7 +193,7 @@ export default function DemoPage() {
                 <div className="text-sm text-gray-200">Market Size</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-purple-400">24/7</div>
+                <div className="text-3xl font-bold text-purple-600">24/7</div>
                 <div className="text-sm text-gray-200">Response Time</div>
               </div>
             </div>

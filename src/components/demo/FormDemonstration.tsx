@@ -178,7 +178,7 @@ export default function FormDemonstration() {
           <h1 className="text-4xl font-bold text-white mb-4">
             Interactive Form Demonstration
           </h1>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-blue-800 mb-8">
             Experience how our AI-powered platform processes emergency restoration requests
           </p>
           
@@ -290,7 +290,7 @@ export default function FormDemonstration() {
                             ? 'bg-green-500 text-white'
                             : index === currentStep && isPlaying
                             ? 'bg-blue-500 text-white animate-pulse'
-                            : 'bg-slate-600 text-slate-300'
+                            : 'bg-slate-600 text-slate-700'
                         }`}>
                           {step.isCompleted ? (
                             <CheckCircle className="h-4 w-4" />
@@ -302,7 +302,7 @@ export default function FormDemonstration() {
                         </div>
                         <div>
                           <h4 className="font-semibold text-white">{step.title}</h4>
-                          <p className="text-sm text-slate-400">{step.description}</p>
+                          <p className="text-sm text-slate-600">{step.description}</p>
                         </div>
                       </div>
                     </motion.div>
@@ -355,15 +355,15 @@ export default function FormDemonstration() {
             <Card className="bg-green-900/20 border-green-500/30 backdrop-blur-sm">
               <CardContent className="py-6">
                 <div className="flex items-center justify-center gap-2 mb-2">
-                  <CheckCircle className="h-6 w-6 text-green-400" />
+                  <CheckCircle className="h-6 w-6 text-green-600" />
                   <h3 className="text-xl font-bold text-white">Demonstration Active</h3>
                 </div>
-                <p className="text-green-100">
+                <p className="text-green-800">
                   This demonstration shows how our AI-powered platform processes {demonstrationMode === 'lead' ? 'emergency restoration requests' : 'user feedback'} with 
                   realistic mock data. Watch the form fields populate automatically with professionally crafted responses.
                 </p>
                 {audioEnabled && (
-                  <p className="text-sm text-green-200 mt-2">
+                  <p className="text-sm text-green-700 mt-2">
                     🎧 Audio narration is enabled for enhanced demonstration experience
                   </p>
                 )}

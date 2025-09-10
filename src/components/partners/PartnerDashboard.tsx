@@ -181,7 +181,7 @@ export default function PartnerDashboard() {
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-sm font-medium text-gray-200">{title}</p>
+          <p className="text-sm font-medium text-gray-700">{title}</p>
           <p className="text-2xl font-bold text-gray-900 mt-1">
             {typeof value === 'number' ? formatCurrency(value) : value}
           </p>
@@ -197,7 +197,7 @@ export default function PartnerDashboard() {
               }`}>
                 {change.value}%
               </span>
-              <span className="text-sm text-gray-300 ml-1">vs last period</span>
+              <span className="text-sm text-gray-700 ml-1">vs last period</span>
             </div>
           )}
         </div>
@@ -213,10 +213,10 @@ export default function PartnerDashboard() {
       <div className="flex justify-between items-center mb-8">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Partner Dashboard</h1>
-          <p className="text-gray-200 mt-2">Welcome back! Here's your performance overview</p>
+          <p className="text-gray-700 mt-2">Welcome back! Here's your performance overview</p>
         </div>
         <div className="flex space-x-3">
-          <button className="px-4 py-2 bg-gray-100 text-gray-200 rounded-lg hover:bg-gray-200 transition-colours">
+          <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colours">
             <Download className="w-4 h-4 mr-2 inline" />
             Export Report
           </button>
@@ -234,14 +234,14 @@ export default function PartnerDashboard() {
             <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${tierColors[mockDashboard.overview.tier]} flex items-center justify-center`}>
               <Award className="w-6 h-6 text-white" />
             </div>
-            <span className="text-sm font-medium text-gray-200">Status</span>
+            <span className="text-sm font-medium text-gray-700">Status</span>
           </div>
           <p className="text-2xl font-bold text-gray-900 capitalize">
             {mockDashboard.overview.tier} Partner
           </p>
           <div className="mt-4">
             <div className="flex justify-between text-sm mb-1">
-              <span className="text-gray-200">Next Tier Progress</span>
+              <span className="text-gray-700">Next Tier Progress</span>
               <span className="font-medium">{mockDashboard.overview.nextTierProgress}%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
@@ -250,7 +250,7 @@ export default function PartnerDashboard() {
                 style={{ width: `${mockDashboard.overview.nextTierProgress}%` }}
               />
             </div>
-            <p className="text-xs text-gray-300 mt-1">
+            <p className="text-xs text-gray-700 mt-1">
               {100 - mockDashboard.overview.nextTierProgress}% to Platinum
             </p>
           </div>
@@ -303,32 +303,32 @@ export default function PartnerDashboard() {
                 <p className="text-2xl font-bold text-gray-900">
                   {formatCurrency(mockDashboard.performance.metrics.revenue)}
                 </p>
-                <p className="text-sm text-gray-200">Revenue</p>
+                <p className="text-sm text-gray-700">Revenue</p>
               </div>
               <div className="text-center">
                 <p className="text-2xl font-bold text-gray-900">
                   {mockDashboard.performance.metrics.leads}
                 </p>
-                <p className="text-sm text-gray-200">Leads</p>
+                <p className="text-sm text-gray-700">Leads</p>
               </div>
               <div className="text-center">
                 <p className="text-2xl font-bold text-gray-900">
                   {mockDashboard.performance.metrics.conversions}
                 </p>
-                <p className="text-sm text-gray-200">Conversions</p>
+                <p className="text-sm text-gray-700">Conversions</p>
               </div>
               <div className="text-center">
                 <p className="text-2xl font-bold text-gray-900">
                   {mockDashboard.performance.metrics.conversionRate}%
                 </p>
-                <p className="text-sm text-gray-200">Conv. Rate</p>
+                <p className="text-sm text-gray-700">Conv. Rate</p>
               </div>
             </div>
 
             <div className="h-64 bg-gray-50 rounded-lg flex items-center justify-center">
               <div className="text-center">
-                <BarChart3 className="w-12 h-12 text-gray-200 mx-auto mb-2" />
-                <p className="text-gray-300">Performance chart visualization</p>
+                <BarChart3 className="w-12 h-12 text-gray-700 mx-auto mb-2" />
+                <p className="text-gray-700">Performance chart visualization</p>
               </div>
             </div>
           </div>
@@ -340,17 +340,17 @@ export default function PartnerDashboard() {
               <button className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colours text-left">
                 <Plus className="w-6 h-6 text-blue-600 mb-2" />
                 <p className="font-medium text-gray-900">Create Campaign</p>
-                <p className="text-sm text-gray-300">Launch new marketing campaign</p>
+                <p className="text-sm text-gray-700">Launch new marketing campaign</p>
               </button>
               <button className="p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:bg-green-50 transition-colours text-left">
                 <Target className="w-6 h-6 text-green-600 mb-2" />
                 <p className="font-medium text-gray-900">View Analytics</p>
-                <p className="text-sm text-gray-300">Detailed performance insights</p>
+                <p className="text-sm text-gray-700">Detailed performance insights</p>
               </button>
               <button className="p-4 border border-gray-200 rounded-lg hover:border-purple-300 hover:bg-purple-50 transition-colours text-left">
                 <Share2 className="w-6 h-6 text-purple-600 mb-2" />
                 <p className="font-medium text-gray-900">Share Links</p>
-                <p className="text-sm text-gray-300">Get tracking links</p>
+                <p className="text-sm text-gray-700">Get tracking links</p>
               </button>
             </div>
           </div>
@@ -365,10 +365,10 @@ export default function PartnerDashboard() {
               <p className="text-3xl font-bold text-green-600 mb-2">
                 {formatCurrency(mockDashboard.earnings.nextPayout.amount)}
               </p>
-              <p className="text-sm text-gray-200 mb-4">
+              <p className="text-sm text-gray-700 mb-4">
                 Scheduled for {mockDashboard.earnings.nextPayout.date.toLocaleDateString('en-AU')}
               </p>
-              <div className="flex items-center justify-center text-sm text-gray-300">
+              <div className="flex items-center justify-center text-sm text-gray-700">
                 <CreditCard className="w-4 h-4 mr-2" />
                 EFT to account ending in 4567
               </div>
@@ -400,15 +400,15 @@ export default function PartnerDashboard() {
             </div>
             <div className="space-y-2 text-sm">
               <div className="flex items-center justify-between">
-                <span className="text-gray-200">Insurance Valid</span>
+                <span className="text-gray-700">Insurance Valid</span>
                 <CheckCircle className="w-4 h-4 text-green-500" />
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-gray-200">Licenses Current</span>
+                <span className="text-gray-700">Licenses Current</span>
                 <CheckCircle className="w-4 h-4 text-green-500" />
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-gray-200">Agreement Signed</span>
+                <span className="text-gray-700">Agreement Signed</span>
                 <CheckCircle className="w-4 h-4 text-green-500" />
               </div>
             </div>
@@ -421,7 +421,7 @@ export default function PartnerDashboard() {
                 <h3 className="text-lg font-semibold text-gray-900">Announcements</h3>
                 <button 
                   onClick={() => setShowAnnouncements(false)}
-                  className="text-gray-200 hover:text-gray-200"
+                  className="text-gray-700 hover:text-gray-700"
                 >
                   ×
                 </button>
@@ -443,7 +443,7 @@ export default function PartnerDashboard() {
                         <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                       )}
                     </div>
-                    <p className="text-sm text-gray-200 mb-3">{announcement.message}</p>
+                    <p className="text-sm text-gray-700 mb-3">{announcement.message}</p>
                     {announcement.actionUrl && (
                       <button className="text-sm font-medium text-blue-600 hover:text-blue-700">
                         {announcement.actionLabel} →
@@ -459,7 +459,7 @@ export default function PartnerDashboard() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-lg font-semibold text-gray-900">Recent Activity</h3>
-              <RefreshCw className="w-4 h-4 text-gray-200" />
+              <RefreshCw className="w-4 h-4 text-gray-700" />
             </div>
             <div className="space-y-4">
               {mockDashboard.activities.slice(0, 5).map(activity => (
@@ -471,7 +471,7 @@ export default function PartnerDashboard() {
                     <p className="text-sm font-medium text-gray-900 truncate">
                       {activity.description}
                     </p>
-                    <p className="text-xs text-gray-300">
+                    <p className="text-xs text-gray-700">
                       {activity.date.toLocaleDateString('en-AU')}
                     </p>
                     {activity.value && (

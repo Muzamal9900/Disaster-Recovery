@@ -145,13 +145,13 @@ export default function FeedbackAnalytics() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-200">Average Rating</p>
+            <p className="text-sm font-medium text-gray-700">Average Rating</p>
             <p className="text-3xl font-bold text-gray-900 mt-1">
               {mockAnalytics.metrics.averageRating}
             </p>
             <div className="flex items-center mt-2">
               <Star className="w-4 h-4 text-blue-500 fill-current mr-1" />
-              <span className="text-sm text-gray-200">
+              <span className="text-sm text-gray-700">
                 {mockAnalytics.metrics.totalFeedbacks} reviews
               </span>
             </div>
@@ -168,13 +168,13 @@ export default function FeedbackAnalytics() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-200">NPS Score</p>
+            <p className="text-sm font-medium text-gray-700">NPS Score</p>
             <p className="text-3xl font-bold text-gray-900 mt-1">
               {mockAnalytics.metrics.npsScore}
             </p>
             <div className="flex items-center mt-2">
-              <Target className="w-4 h-4 text-purple-400 mr-1" />
-              <span className="text-sm text-gray-200">
+              <Target className="w-4 h-4 text-purple-600 mr-1" />
+              <span className="text-sm text-gray-700">
                 {mockAnalytics.metrics.npsScore >= 50 ? 'Excellent' : 
                  mockAnalytics.metrics.npsScore >= 0 ? 'Good' : 'Needs Improvement'}
               </span>
@@ -189,13 +189,13 @@ export default function FeedbackAnalytics() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-200">Response Rate</p>
+            <p className="text-sm font-medium text-gray-700">Response Rate</p>
             <p className="text-3xl font-bold text-gray-900 mt-1">
               {formatPercentage(mockAnalytics.metrics.responseRate)}
             </p>
             <div className="flex items-center mt-2">
-              <MessageSquare className="w-4 h-4 text-blue-400 mr-1" />
-              <span className="text-sm text-gray-200">of completed jobs</span>
+              <MessageSquare className="w-4 h-4 text-blue-600 mr-1" />
+              <span className="text-sm text-gray-700">of completed jobs</span>
             </div>
           </div>
           <div className="p-3 bg-blue-100 rounded-lg">
@@ -207,13 +207,13 @@ export default function FeedbackAnalytics() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-200">Google Reviews</p>
+            <p className="text-sm font-medium text-gray-700">Google Reviews</p>
             <p className="text-3xl font-bold text-gray-900 mt-1">
               {formatPercentage(mockAnalytics.metrics.googleReviewRate)}
             </p>
             <div className="flex items-center mt-2">
               <Star className="w-4 h-4 text-emerald-600 mr-1" />
-              <span className="text-sm text-gray-200">conversion rate</span>
+              <span className="text-sm text-gray-700">conversion rate</span>
             </div>
           </div>
           <div className="p-3 bg-green-100 rounded-lg">
@@ -235,7 +235,7 @@ export default function FeedbackAnalytics() {
           return (
             <div key={key} className="flex items-center space-x-4">
               <div className="flex items-center w-20">
-                <span className="text-sm text-gray-200 mr-2">{starValue}</span>
+                <span className="text-sm text-gray-700 mr-2">{starValue}</span>
                 <Star className="w-4 h-4 text-blue-500 fill-current" />
               </div>
               <div className="flex-1">
@@ -248,7 +248,7 @@ export default function FeedbackAnalytics() {
               </div>
               <div className="w-16 text-right">
                 <span className="text-sm font-medium text-gray-900">{count}</span>
-                <span className="text-xs text-gray-300 ml-1">({percentage.toFixed(0)}%)</span>
+                <span className="text-xs text-gray-700 ml-1">({percentage.toFixed(0)}%)</span>
               </div>
             </div>
           );
@@ -269,13 +269,13 @@ export default function FeedbackAnalytics() {
                 <p className="font-medium text-gray-900 capitalize">{category.category}</p>
                 <div className="flex items-center space-x-2">
                   <Star className="w-4 h-4 text-blue-500 fill-current" />
-                  <span className="text-sm text-gray-200">{category.averageRating.toFixed(1)}/5</span>
+                  <span className="text-sm text-gray-700">{category.averageRating.toFixed(1)}/5</span>
                 </div>
               </div>
             </div>
             <div className="text-right">
               {formatTrend(category.trend)}
-              <p className="text-xs text-gray-300 mt-1">{category.feedbackCount} reviews</p>
+              <p className="text-xs text-gray-700 mt-1">{category.feedbackCount} reviews</p>
             </div>
           </div>
         ))}
@@ -290,19 +290,19 @@ export default function FeedbackAnalytics() {
         <table className="w-full">
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Job Type
               </th>
-              <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Count
               </th>
-              <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Avg Rating
               </th>
-              <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Satisfaction
               </th>
-              <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                 Top Issues
               </th>
             </tr>
@@ -313,7 +313,7 @@ export default function FeedbackAnalytics() {
                 <td className="px-4 py-4 text-sm font-medium text-gray-900 capitalize">
                   {jobType.jobType.replace('_', ' ')}
                 </td>
-                <td className="px-4 py-4 text-sm text-gray-200">
+                <td className="px-4 py-4 text-sm text-gray-700">
                   {jobType.count}
                 </td>
                 <td className="px-4 py-4">
@@ -322,7 +322,7 @@ export default function FeedbackAnalytics() {
                     <span className="text-sm font-medium">{jobType.averageRating.toFixed(1)}</span>
                   </div>
                 </td>
-                <td className="px-4 py-4 text-sm text-gray-200">
+                <td className="px-4 py-4 text-sm text-gray-700">
                   {formatPercentage(jobType.satisfactionRate)}
                 </td>
                 <td className="px-4 py-4">
@@ -349,10 +349,10 @@ export default function FeedbackAnalytics() {
         {mockAnalytics.geographicAnalytics.map(location => (
           <div key={location.location} className="flex items-center justify-between p-3 border border-gray-200 rounded-lg">
             <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-gray-200" />
+              <MapPin className="w-5 h-5 text-gray-700" />
               <div>
                 <p className="font-medium text-gray-900">{location.location}</p>
-                <p className="text-sm text-gray-300">{location.count} reviews</p>
+                <p className="text-sm text-gray-700">{location.count} reviews</p>
               </div>
             </div>
             <div className="text-right">
@@ -387,7 +387,7 @@ export default function FeedbackAnalytics() {
                   }`}>
                     {complaint.severity}
                   </span>
-                  <span className="text-xs text-gray-300">
+                  <span className="text-xs text-gray-700">
                     {complaint.commonJobTypes.join(', ')}
                   </span>
                 </div>
@@ -419,7 +419,7 @@ export default function FeedbackAnalytics() {
                   <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full capitalize">
                     {praise.category}
                   </span>
-                  <span className="text-xs text-gray-300">
+                  <span className="text-xs text-gray-700">
                     {praise.commonJobTypes.join(', ')}
                   </span>
                 </div>
@@ -427,7 +427,7 @@ export default function FeedbackAnalytics() {
             </div>
             <div className="text-right">
               <p className="font-medium text-gray-900">{praise.count}</p>
-              <p className="text-xs text-gray-300">mentions</p>
+              <p className="text-xs text-gray-700">mentions</p>
             </div>
           </div>
         ))}
@@ -440,7 +440,7 @@ export default function FeedbackAnalytics() {
       <div className="flex justify-between items-center mb-8">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Feedback Analytics</h1>
-          <p className="text-gray-200 mt-2">
+          <p className="text-gray-700 mt-2">
             Customer satisfaction insights and performance trends
           </p>
         </div>
@@ -455,7 +455,7 @@ export default function FeedbackAnalytics() {
             <option value="quarter">Last Quarter</option>
             <option value="year">Last Year</option>
           </select>
-          <button className="px-4 py-2 bg-gray-100 text-gray-200 rounded-lg hover:bg-gray-200 transition-colours">
+          <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colours">
             <RefreshCw className="w-4 h-4 mr-2 inline" />
             Refresh
           </button>

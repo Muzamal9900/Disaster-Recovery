@@ -85,7 +85,7 @@ export default function ClientPitch() {
             className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6"
           >
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/20">
-              <Clock className="w-10 h-10 text-blue-400 mb-4" />
+              <Clock className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">2-Hour Response</h3>
               <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                 Guaranteed contractor contact within 2 hours of your claim
@@ -93,7 +93,7 @@ export default function ClientPitch() {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
-              <Shield className="w-10 h-10 text-cyan-400 mb-4" />
+              <Shield className="w-10 h-10 text-cyan-600 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Insurance Direct</h3>
               <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                 We work directly with your insurance company for faster approvals
@@ -101,7 +101,7 @@ export default function ClientPitch() {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-500/20">
-              <CheckCircle2 className="w-10 h-10 text-green-400 mb-4" />
+              <CheckCircle2 className="w-10 h-10 text-green-600 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Verified Contractors</h3>
               <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                 All contractors are licensed, insured, and quality-verified
@@ -109,7 +109,7 @@ export default function ClientPitch() {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20">
-              <Phone className="w-10 h-10 text-purple-400 mb-4" />
+              <Phone className="w-10 h-10 text-purple-600 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>
               <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                 Real-time tracking and support throughout your recovery

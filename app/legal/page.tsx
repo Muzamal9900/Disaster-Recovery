@@ -117,28 +117,28 @@ export default function LegalDocumentsHub() {
               <FaFileContract className="text-2xl text-blue-600 mt-1" />
               <div>
                 <h3 className="font-semibold mb-1">Australian Compliant</h3>
-                <p className="text-sm text-gray-200">All documents comply with Australian law</p>
+                <p className="text-sm text-gray-700">All documents comply with Australian law</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <FaShieldAlt className="text-2xl text-green-600 mt-1" />
               <div>
                 <h3 className="font-semibold mb-1">Legally Reviewed</h3>
-                <p className="text-sm text-gray-200">Vetted by legal professionals</p>
+                <p className="text-sm text-gray-700">Vetted by legal professionals</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <FaCheckCircle className="text-2xl text-purple-600 mt-1" />
               <div>
                 <h3 className="font-semibold mb-1">Industry Standard</h3>
-                <p className="text-sm text-gray-200">Best practice frameworks</p>
+                <p className="text-sm text-gray-700">Best practice frameworks</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <FaBalanceScale className="text-2xl text-blue-700 mt-1" />
               <div>
                 <h3 className="font-semibold mb-1">Regular Updates</h3>
-                <p className="text-sm text-gray-200">Kept current with regulations</p>
+                <p className="text-sm text-gray-700">Kept current with regulations</p>
               </div>
             </div>
           </div>
@@ -166,7 +166,7 @@ export default function LegalDocumentsHub() {
                   <h3 className="font-bold text-lg mb-2 group-hover:text-blue-600 transition">
                     {category.title}
                   </h3>
-                  <p className="text-sm text-gray-200 mb-4">
+                  <p className="text-sm text-gray-700 mb-4">
                     {category.description}
                   </p>
                   <div className="flex justify-between items-center">

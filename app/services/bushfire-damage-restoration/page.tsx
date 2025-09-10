@@ -233,12 +233,12 @@ export default function BushfireDamageRestorationPage() {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Bushfire Damage Restoration
-                <span className="block text-orange-300 text-3xl md:text-4xl mt-2">
+                <span className="block text-orange-700 text-3xl md:text-4xl mt-2">
                   Australia&apos;s Specialist Wildfire Recovery Service
                 </span>
               </h1>
               
-              <p className="text-xl text-orange-100 mb-8 leading-relaxed">
+              <p className="text-xl text-orange-800 mb-8 leading-relaxed">
                 Expert bushfire restoration across Australia&apos;s fire-prone regions. 
                 Our IICRC-certified specialists understand the unique challenges of bushfire damage - 
                 from toxic smoke residue to structural compromise. <strong>Immediate response 

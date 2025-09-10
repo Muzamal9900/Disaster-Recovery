@@ -144,7 +144,7 @@ function PerformanceMeter({
   return (
     <div className="space-y-2">
       <div className="flex justify-between items-center">
-        <span className="text-sm text-gray-200">{label}</span>
+        <span className="text-sm text-gray-700">{label}</span>
         <span className="text-sm font-semibold">{value}%</span>
       </div>
       <div 
@@ -153,7 +153,7 @@ function PerformanceMeter({
         style={{ '--progress': `${value}%` } as React.CSSProperties}
       />
       {target && (
-        <p className="text-xs text-gray-300">Target: {target}%</p>
+        <p className="text-xs text-gray-700">Target: {target}%</p>
       )}
     </div>
   );
@@ -181,7 +181,7 @@ function MobileBottomNavigation({ activeTab, setActiveTab }: {
             onClick={() => setActiveTab(item.id)}
             className={cn(
               "flex flex-col items-center p-2 min-w-[44px] transition-colours touch-target",
-              activeTab === item.id ? "text-blue-600" : "text-gray-200"
+              activeTab === item.id ? "text-blue-600" : "text-gray-700"
             )}
           >
             <div className="relative">
@@ -261,12 +261,12 @@ function WeatherWidget() {
             <CloudRain className="h-8 w-8 text-blue-600" />
             <div>
               <p className="font-semibold">Heavy Rain</p>
-              <p className="text-xs text-gray-200">Next 4 hours</p>
+              <p className="text-xs text-gray-700">Next 4 hours</p>
             </div>
           </div>
           <div className="text-right">
             <p className="text-sm">25°C</p>
-            <p className="text-xs text-gray-200 flex items-center gap-1">
+            <p className="text-xs text-gray-700 flex items-center gap-1">
               <Wind className="h-3 w-3" />
               15 km/h
             </p>
@@ -293,13 +293,13 @@ function ActiveJobCard({ job }: { job: any }) {
             {job.id}
             <StatusIndicator status={job.priority} label="" />
           </h3>
-          <p className="text-xs text-gray-200 mt-1">{job.address}</p>
+          <p className="text-xs text-gray-700 mt-1">{job.address}</p>
         </div>
         <JobTypeBadge type={job.type} />
       </div>
       
       <div className="flex items-center justify-between mt-4">
-        <div className="flex items-center gap-4 text-xs text-gray-300">
+        <div className="flex items-center gap-4 text-xs text-gray-700">
           <span className="flex items-center gap-1">
             <Clock className="h-3 w-3" />
             {job.time}
@@ -309,7 +309,7 @@ function ActiveJobCard({ job }: { job: any }) {
             {job.distance}
           </span>
         </div>
-        <ChevronRight className="h-4 w-4 text-gray-200 group-hover:text-blue-600 transition-colours" />
+        <ChevronRight className="h-4 w-4 text-gray-700 group-hover:text-blue-600 transition-colours" />
       </div>
     </div>
   );
@@ -365,7 +365,7 @@ export function EnhancedDashboard() {
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
           <div>
             <h1 className="text-2xl md:text-3xl font-bold">Contractor Dashboard</h1>
-            <p className="text-gray-200 mt-1">Welcome back, Demo Restoration Services</p>
+            <p className="text-gray-700 mt-1">Welcome back, Demo Restoration Services</p>
           </div>
           <div className="flex items-center gap-2">
             <Badge className="bg-green-100 text-green-800">Active</Badge>
@@ -445,7 +445,7 @@ export function EnhancedDashboard() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <PriorityCard priority="high" title="Active Jobs">
             <div className="text-2xl font-bold">{kpiData.activeJobs}</div>
-            <p className="text-xs text-gray-200 mt-1">2 urgent</p>
+            <p className="text-xs text-gray-700 mt-1">2 urgent</p>
           </PriorityCard>
 
           <PriorityCard priority="normal" title="Avg Rating">
@@ -453,7 +453,7 @@ export function EnhancedDashboard() {
               {kpiData.avgRating}
               <Star className="h-4 w-4 text-blue-600" />
             </div>
-            <p className="text-xs text-gray-200 mt-1">89 reviews</p>
+            <p className="text-xs text-gray-700 mt-1">89 reviews</p>
           </PriorityCard>
 
           <PriorityCard priority="normal" title="Response Time">
@@ -463,7 +463,7 @@ export function EnhancedDashboard() {
 
           <PriorityCard priority="normal" title="Revenue YTD">
             <div className="text-2xl font-bold">${(kpiData.revenue / 1000).toFixed(0)}k</div>
-            <p className="text-xs text-gray-200 mt-1">↑ 23% vs last year</p>
+            <p className="text-xs text-gray-700 mt-1">↑ 23% vs last year</p>
           </PriorityCard>
         </div>
 
@@ -537,7 +537,7 @@ export function EnhancedDashboard() {
                 {['Assigned', 'En Route', 'On Site', 'In Progress', 'Completed'].map((stage, index) => (
                   <div key={stage} className="text-center">
                     <div className="text-2xl font-bold">{index === 2 ? 1 : index === 4 ? 47 : index === 0 ? 2 : 0}</div>
-                    <p className="text-xs text-gray-200">{stage}</p>
+                    <p className="text-xs text-gray-700">{stage}</p>
                   </div>
                 ))}
               </div>
@@ -580,7 +580,7 @@ export function EnhancedDashboard() {
                   <item.icon className="h-5 w-5 text-green-500" />
                   <div>
                     <p className="font-medium">{item.name}</p>
-                    <p className="text-xs text-gray-300">Expires: {item.expiry}</p>
+                    <p className="text-xs text-gray-700">Expires: {item.expiry}</p>
                   </div>
                 </div>
                 <Badge className="bg-green-100 text-green-800">{item.status}</Badge>
@@ -610,7 +610,7 @@ export function EnhancedDashboard() {
                   <div key={course.name} className="flex justify-between items-center p-3 border rounded">
                     <div>
                       <p className="font-medium text-sm">{course.name}</p>
-                      <p className="text-xs text-gray-300">Duration: {course.duration} | CEUs: {course.ceus}</p>
+                      <p className="text-xs text-gray-700">Duration: {course.duration} | CEUs: {course.ceus}</p>
                     </div>
                     <Button size="sm">Enroll</Button>
                   </div>
@@ -629,17 +629,17 @@ export function EnhancedDashboard() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <PriorityCard priority="high" title="Outstanding">
             <div className="text-2xl font-bold">$12,450</div>
-            <p className="text-xs text-gray-200">5 invoices</p>
+            <p className="text-xs text-gray-700">5 invoices</p>
           </PriorityCard>
 
           <PriorityCard priority="normal" title="Last Payment">
             <div className="text-2xl font-bold">$8,320</div>
-            <p className="text-xs text-gray-200">3 days ago</p>
+            <p className="text-xs text-gray-700">3 days ago</p>
           </PriorityCard>
 
           <PriorityCard priority="normal" title="Next Payout">
             <div className="text-2xl font-bold">$5,200</div>
-            <p className="text-xs text-gray-200">In 2 days</p>
+            <p className="text-xs text-gray-700">In 2 days</p>
           </PriorityCard>
         </div>
 
@@ -656,7 +656,7 @@ export function EnhancedDashboard() {
                 <div key={invoice.id} className="flex justify-between items-center p-3 border rounded">
                   <div>
                     <p className="font-medium">Invoice {invoice.id}</p>
-                    <p className="text-xs text-gray-300">{invoice.job}</p>
+                    <p className="text-xs text-gray-700">{invoice.job}</p>
                   </div>
                   <div className="text-right">
                     <p className="font-semibold">${invoice.amount}</p>
@@ -712,7 +712,7 @@ export function EnhancedDashboard() {
           <div className="space-y-4">
             <div>
               <p className="font-medium">Demo Restoration Services</p>
-              <p className="text-sm text-gray-200">demo@restoration.com</p>
+              <p className="text-sm text-gray-700">demo@restoration.com</p>
             </div>
             <Button className="w-full" variant="outline">
               <Settings className="h-4 w-4 mr-2" />
