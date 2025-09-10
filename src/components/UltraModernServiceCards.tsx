@@ -106,7 +106,7 @@ export default function UltraModernServiceCards() {
                  backdropFilter: 'blur(10px)'
                }}>
             <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" />
-            <span className="text-sm font-medium text-purple-300">Professional Services</span>
+            <span className="text-sm font-medium text-purple-700">Professional Services</span>
           </div>
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
             <span style={{
@@ -125,7 +125,7 @@ export default function UltraModernServiceCards() {
               Restoration Technology
             </span>
           </h2>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Industry-leading solutions powered by AI and advanced restoration systems
           </p>
         </div>
@@ -188,7 +188,7 @@ export default function UltraModernServiceCards() {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-200 text-sm mb-4 leading-relaxed">
+                  <p className="text-gray-700 text-sm mb-4 leading-relaxed">
                     {service.description}
                   </p>
 
@@ -202,7 +202,7 @@ export default function UltraModernServiceCards() {
                             background: hoveredIndex === index ? service.gradient : 'rgba(255, 255, 255, 0.3)',
                             boxShadow: hoveredIndex === index ? `0 0 10px ${service.colour}` : 'none' }}
                         />
-                        <span className="text-xs text-gray-300">{feature}</span>
+                        <span className="text-xs text-gray-700">{feature}</span>
                       </div>
                     ))}
                   </div>

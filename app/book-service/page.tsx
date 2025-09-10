@@ -92,7 +92,7 @@ const SERVICE_TYPES = [
   { value: 'fire', label: 'Fire & Smoke', icon: Flame, colour: 'text-red-500' },
   { value: 'mould', label: 'Mould Remediation', icon: Wind, colour: 'text-green-500' },
   { value: 'storm', label: 'Storm Damage', icon: Building2, colour: 'text-purple-500' },
-  { value: 'other', label: 'Other Damage', icon: Home, colour: 'text-gray-300' }
+  { value: 'other', label: 'Other Damage', icon: Home, colour: 'text-gray-700' }
 ];
 
 const STATES = ['NSW', 'VIC', 'QLD', 'WA', 'SA', 'TAS', 'ACT', 'NT'];
@@ -343,11 +343,11 @@ export default function BookServicePage() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold text-gray-900">Book Restoration Service</h1>
-              <p className="text-sm text-gray-200">Professional disaster recovery services nationwide</p>
+              <p className="text-sm text-gray-700">Professional disaster recovery services nationwide</p>
             </div>
             <div className="hidden lg:flex items-center gap-4">
               <div className="text-right">
-                <p className="text-sm text-gray-200">Initial Assessment Fee</p>
+                <p className="text-sm text-gray-700">Initial Assessment Fee</p>
                 <p className="text-2xl font-bold text-gray-900">$2,750</p>
               </div>
               <Shield className="h-10 w-10 text-blue-600" />
@@ -369,7 +369,7 @@ export default function BookServicePage() {
                         ? 'bg-green-500 text-white ring-2 ring-green-200'
                         : step === currentStep
                         ? 'bg-blue-600 text-white ring-4 ring-blue-200 scale-110'
-                        : 'bg-gray-200 text-gray-400'
+                        : 'bg-gray-200 text-gray-600'
                     }`}
                     role="progressbar"
                     aria-valuenow={step}
@@ -393,7 +393,7 @@ export default function BookServicePage() {
                 </div>
                 <p className={`text-xs mt-1 font-medium ${
                   step === currentStep ? 'text-blue-600' : 
-                  step < currentStep ? 'text-green-600' : 'text-gray-400'
+                  step < currentStep ? 'text-green-600' : 'text-gray-600'
                 }`}>
                   {step === 1 && 'Service Details'}
                   {step === 2 && 'Property Info'}
@@ -405,7 +405,7 @@ export default function BookServicePage() {
             ))}
           </div>
           <div className="mt-2 text-center">
-            <div className="text-sm text-gray-300">
+            <div className="text-sm text-gray-700">
               Step {currentStep} of 5
             </div>
             <div className="mt-2">
@@ -470,7 +470,7 @@ export default function BookServicePage() {
 
                 {/* Service Type */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-200 mb-3">
+                  <label className="block text-sm font-medium text-gray-700 mb-3">
                     What type of damage do you need help with?
                   </label>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -497,7 +497,7 @@ export default function BookServicePage() {
 
                 {/* Property Type */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-200 mb-3">Property Type</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">Property Type</label>
                   <div className="grid grid-cols-3 gap-3">
                     {[
                       { value: 'residential', label: 'Residential', icon: Home },
@@ -516,7 +516,7 @@ export default function BookServicePage() {
                               : 'border-gray-200 hover:border-gray-300'
                           }`}
                         >
-                          <Icon className="h-6 w-6 text-gray-200 mx-auto mb-1" />
+                          <Icon className="h-6 w-6 text-gray-700 mx-auto mb-1" />
                           <span className="text-sm">{type.label}</span>
                         </button>
                       );
@@ -526,7 +526,7 @@ export default function BookServicePage() {
 
                 {/* Urgency Level */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-200 mb-3">How urgent is this?</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">How urgent is this?</label>
                   <div className="space-y-3">
                     {[
                       { value: 'emergency', label: 'Emergency', desc: 'Immediate danger, active damage occurring' },
@@ -552,7 +552,7 @@ export default function BookServicePage() {
                         <div className="flex items-start">
                           <div className="flex-1">
                             <span className="font-medium">{urgency.label}</span>
-                            <p className="text-sm text-gray-200 mt-1">{urgency.desc}</p>
+                            <p className="text-sm text-gray-700 mt-1">{urgency.desc}</p>
                           </div>
                           {formData.urgencyLevel === urgency.value && (
                             <CheckCircle className="h-5 w-5 text-blue-600 ml-3" />
@@ -565,7 +565,7 @@ export default function BookServicePage() {
 
                 {/* Damage Description */}
                 <div>
-                  <label htmlFor="damage" className="block text-sm font-medium text-gray-200 mb-2">
+                  <label htmlFor="damage" className="block text-sm font-medium text-gray-700 mb-2">
                     Describe the damage <span className="text-red-500">*</span>
                   </label>
                   <textarea
@@ -593,7 +593,7 @@ export default function BookServicePage() {
                 <h2 className="text-xl font-semibold text-gray-900 mb-6">Step 2: Property Information</h2>
 
                 <div>
-                  <label htmlFor="address" className="block text-sm font-medium text-gray-200 mb-2">
+                  <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-2">
                     Property Address <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -617,7 +617,7 @@ export default function BookServicePage() {
 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="suburb" className="block text-sm font-medium text-gray-200 mb-2">
+                    <label htmlFor="suburb" className="block text-sm font-medium text-gray-700 mb-2">
                       Suburb <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -637,7 +637,7 @@ export default function BookServicePage() {
                   </div>
 
                   <div>
-                    <label htmlFor="postcode" className="block text-sm font-medium text-gray-200 mb-2">
+                    <label htmlFor="postcode" className="block text-sm font-medium text-gray-700 mb-2">
                       Postcode <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -662,7 +662,7 @@ export default function BookServicePage() {
                 </div>
 
                 <div>
-                  <label htmlFor="state" className="block text-sm font-medium text-gray-200 mb-2">
+                  <label htmlFor="state" className="block text-sm font-medium text-gray-700 mb-2">
                     State <span className="text-red-500">*</span>
                   </label>
                   <select
@@ -686,7 +686,7 @@ export default function BookServicePage() {
                 </div>
 
                 <div>
-                  <label htmlFor="propertySize" className="block text-sm font-medium text-gray-200 mb-2">
+                  <label htmlFor="propertySize" className="block text-sm font-medium text-gray-700 mb-2">
                     Property Size (approximate sqm)
                   </label>
                   <input
@@ -700,7 +700,7 @@ export default function BookServicePage() {
                 </div>
 
                 <div>
-                  <label htmlFor="affectedArea" className="block text-sm font-medium text-gray-200 mb-2">
+                  <label htmlFor="affectedArea" className="block text-sm font-medium text-gray-700 mb-2">
                     Affected Area Description <span className="text-red-500">*</span>
                   </label>
                   <textarea
@@ -727,7 +727,7 @@ export default function BookServicePage() {
 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-200 mb-2">
+                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
                       First Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -749,7 +749,7 @@ export default function BookServicePage() {
                   </div>
 
                   <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-200 mb-2">
+                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
                       Last Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -768,14 +768,14 @@ export default function BookServicePage() {
                       aria-describedby={errors.lastName ? 'lastName-error' : 'lastName-hint'}
                     />
                     {!errors.lastName && (
-                      <p className="mt-1 text-xs text-gray-300">As it appears on your insurance documents</p>
+                      <p className="mt-1 text-xs text-gray-700">As it appears on your insurance documents</p>
                     )}
                     {errors.lastName && <p className="mt-1 text-sm text-red-600">{errors.lastName}</p>}
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-200 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -801,7 +801,7 @@ export default function BookServicePage() {
                 <input type="hidden" id="phone" value="" required aria-required="true" pattern="[0-9]{10,14}" />
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-200 mb-2">Preferred Contact Method</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Contact Method</label>
                   <div className="grid grid-cols-3 gap-3">
                     {[
                       { value: 'email', label: 'Email', icon: Mail }
@@ -818,7 +818,7 @@ export default function BookServicePage() {
                               : 'border-gray-200 hover:border-gray-300'
                           }`}
                         >
-                          <Icon className="h-5 w-5 text-gray-200 mx-auto mb-1" />
+                          <Icon className="h-5 w-5 text-gray-700 mx-auto mb-1" />
                           <span className="text-sm">{method.label}</span>
                         </button>
                       );
@@ -836,7 +836,7 @@ export default function BookServicePage() {
                 <h2 className="text-xl font-semibold text-gray-900 mb-6">Step 4: Insurance & Additional Information</h2>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-200 mb-3">
+                  <label className="block text-sm font-medium text-gray-700 mb-3">
                     Do you have insurance that may cover this damage?
                   </label>
                   <div className="flex gap-4">
@@ -868,7 +868,7 @@ export default function BookServicePage() {
                 {formData.hasInsurance && (
                   <>
                     <div>
-                      <label htmlFor="insurer" className="block text-sm font-medium text-gray-200 mb-2">
+                      <label htmlFor="insurer" className="block text-sm font-medium text-gray-700 mb-2">
                         Insurance Company <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -886,7 +886,7 @@ export default function BookServicePage() {
                     </div>
 
                     <div>
-                      <label htmlFor="claimNumber" className="block text-sm font-medium text-gray-200 mb-2">
+                      <label htmlFor="claimNumber" className="block text-sm font-medium text-gray-700 mb-2">
                         Claim Number (if available)
                       </label>
                       <input
@@ -901,7 +901,7 @@ export default function BookServicePage() {
                 )}
 
                 <div>
-                  <label htmlFor="notes" className="block text-sm font-medium text-gray-200 mb-2">
+                  <label htmlFor="notes" className="block text-sm font-medium text-gray-700 mb-2">
                     Additional Notes
                   </label>
                   <textarea
@@ -915,12 +915,12 @@ export default function BookServicePage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-200 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
                     Upload Photos (Optional)
                   </label>
                   <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-400 transition-colours">
-                    <Camera className="h-12 w-12 text-gray-200 mx-auto mb-3" />
-                    <p className="text-sm text-gray-200">
+                    <Camera className="h-12 w-12 text-gray-700 mx-auto mb-3" />
+                    <p className="text-sm text-gray-700">
                       Drag & drop photos here, or click to select
                     </p>
                     <input
@@ -942,7 +942,7 @@ export default function BookServicePage() {
                     </button>
                   </div>
                   {formData.photos.length > 0 && (
-                    <p className="mt-2 text-sm text-gray-200">
+                    <p className="mt-2 text-sm text-gray-700">
                       {formData.photos.length} photo(s) selected
                     </p>
                   )}
@@ -961,19 +961,19 @@ export default function BookServicePage() {
                   
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-gray-200">Service Type:</span>
+                      <span className="text-gray-700">Service Type:</span>
                       <span className="font-medium">{SERVICE_TYPES.find(s => s.value === formData.serviceType)?.label}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-200">Property:</span>
+                      <span className="text-gray-700">Property:</span>
                       <span className="font-medium">{formData.propertyAddress}, {formData.suburb} {formData.state} {formData.postcode}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-200">Contact:</span>
+                      <span className="text-gray-700">Contact:</span>
                       <span className="font-medium">{formData.firstName} {formData.lastName}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-200">Urgency:</span>
+                      <span className="text-gray-700">Urgency:</span>
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getUrgencyBadge(formData.urgencyLevel).colour}`}>
                         {getUrgencyBadge(formData.urgencyLevel).label}
                       </span>
@@ -987,7 +987,7 @@ export default function BookServicePage() {
                   
                   <div className="space-y-3">
                     <div className="flex justify-between text-sm">
-                      <span className="text-gray-200">Initial Assessment Fee:</span>
+                      <span className="text-gray-700">Initial Assessment Fee:</span>
                       <span className="font-semibold">$2,750.00</span>
                     </div>
                     
@@ -999,11 +999,11 @@ export default function BookServicePage() {
                     </div>
                     
                     <div className="bg-white rounded p-3 text-sm">
-                      <p className="text-gray-200">
+                      <p className="text-gray-700">
                         <CheckCircle className="h-4 w-4 text-green-500 inline mr-1" />
                         $2,200 will be credited toward your restoration work
                       </p>
-                      <p className="text-gray-200 mt-1">
+                      <p className="text-gray-700 mt-1">
                         <Shield className="h-4 w-4 text-blue-500 inline mr-1" />
                         100% satisfaction guarantee
                       </p>
@@ -1020,7 +1020,7 @@ export default function BookServicePage() {
                       onChange={(e) => updateFormData('termsAccepted', e.target.checked)}
                       className="mt-1 mr-3"
                     />
-                    <span className="text-sm text-gray-200">
+                    <span className="text-sm text-gray-700">
                       I accept the <a href="/terms" className="text-blue-600 hover:underline">Terms and Conditions</a> and understand that the $2,750 initial assessment fee will be charged to secure my booking. $2,200 of this fee will be credited toward the final restoration work.
                     </span>
                   </label>
@@ -1035,7 +1035,7 @@ export default function BookServicePage() {
                       onChange={(e) => updateFormData('paymentAuthorized', e.target.checked)}
                       className="mt-1 mr-3"
                     />
-                    <span className="text-sm text-gray-200">
+                    <span className="text-sm text-gray-700">
                       I authorise the payment of $2,750 for the initial assessment and understand a qualified contractor will contact me within the specified timeframe.
                     </span>
                   </label>
@@ -1063,7 +1063,7 @@ export default function BookServicePage() {
                 <button
                   type="button"
                   onClick={handleBack}
-                  className="px-6 py-3 border border-gray-300 text-gray-200 rounded-lg hover:bg-gray-50 transition-colours flex items-center gap-2"
+                  className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colours flex items-center gap-2"
                 >
                   <ArrowLeft className="h-4 w-4" />
                   Back
@@ -1102,7 +1102,7 @@ export default function BookServicePage() {
           </form>
 
           {/* Trust Badges */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-200">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-700">
             <div className="flex items-center gap-2">
               <Shield className="h-5 w-5 text-green-600" />
               <span>SSL Secured</span>

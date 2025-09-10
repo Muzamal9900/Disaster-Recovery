@@ -83,7 +83,7 @@ export default function ModernAboutPage() {
               transition={{ duration: 2, repeat: Infinity }}
             >
               <SparklesIcon className="w-4 h-4 text-purple-400" />
-              <span className="text-sm font-medium text-purple-300">Trusted Since 2025</span>
+              <span className="text-sm font-medium text-purple-700">Trusted Since 2025</span>
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -96,7 +96,7 @@ export default function ModernAboutPage() {
               </span>
             </h1>
             
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Premier disaster recovery specialists, combining advanced technology 
               with compassionate service to restore properties and peace of mind.
             </p>
@@ -126,7 +126,7 @@ export default function ModernAboutPage() {
                 >
                   {stat.number}
                 </motion.div>
-                <div className="text-sm text-gray-200 mt-1">{stat.label}</div>
+                <div className="text-sm text-gray-700 mt-1">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -148,7 +148,7 @@ export default function ModernAboutPage() {
                   Our Story
                 </span>
               </h2>
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-gray-700">
                 <p>
                   Founded in 2025, Disaster Recovery Pro emerged from a simple mission: 
                   to provide rapid, professional disaster recovery services when people need them most.
@@ -219,7 +219,7 @@ export default function ModernAboutPage() {
                 Our Core Values
               </span>
             </h2>
-            <p className="text-gray-200 text-lg">
+            <p className="text-gray-700 text-lg">
               The principles that guide everything we do
             </p>
           </motion.div>
@@ -239,7 +239,7 @@ export default function ModernAboutPage() {
                 <div className="relative bg-gray-900/80 backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:border-gray-700 transition-all">
                   <div className={`w-2 h-2 bg-gradient-to-r ${value.colour} rounded-full mb-4`} />
                   <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-                  <p className="text-gray-200 text-sm">{value.description}</p>
+                  <p className="text-gray-700 text-sm">{value.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -262,7 +262,7 @@ export default function ModernAboutPage() {
                 Certifications & Accreditations
               </span>
             </h2>
-            <p className="text-gray-200 text-lg">
+            <p className="text-gray-700 text-lg">
               Industry-recognised certifications ensuring the highest standards
             </p>
           </motion.div>
@@ -280,7 +280,7 @@ export default function ModernAboutPage() {
               >
                 <TrophyIcon className="w-12 h-12 text-purple-400 mx-auto mb-3" />
                 <h3 className="text-xl font-bold mb-1">{cert.name}</h3>
-                <p className="text-gray-200 text-xs">{cert.desc}</p>
+                <p className="text-gray-700 text-xs">{cert.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -302,7 +302,7 @@ export default function ModernAboutPage() {
                 Our Expert Team
               </span>
             </h2>
-            <p className="text-gray-200 text-lg max-w-3xl mx-auto">
+            <p className="text-gray-700 text-lg max-w-3xl mx-auto">
               Highly trained professionals dedicated to restoring your property and peace of mind
             </p>
           </motion.div>
@@ -310,7 +310,7 @@ export default function ModernAboutPage() {
           <div className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-3xl p-12 border border-purple-500/30 text-center">
             <UserGroupIcon className="w-24 h-24 text-purple-400 mx-auto mb-6" />
             <h3 className="text-2xl font-bold mb-4">150+ Certified Professionals</h3>
-            <p className="text-gray-300 max-w-2xl mx-auto mb-8">
+            <p className="text-gray-700 max-w-2xl mx-auto mb-8">
               Our team includes IICRC-certified restoration specialists, project managers, 
               insurance coordinators, and customer support professionals all working together 
               to provide seamless disaster recovery services.
@@ -341,7 +341,7 @@ export default function ModernAboutPage() {
             </span>
           </h2>
           
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-700 mb-8">
             Join thousands of satisfied clients who trust us with their disaster recovery needs
           </p>
 

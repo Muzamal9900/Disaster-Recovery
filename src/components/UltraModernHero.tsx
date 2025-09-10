@@ -201,7 +201,7 @@ export default function UltraModernHero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
           </span>
-          <span className="text-sm font-medium text-purple-300">
+          <span className="text-sm font-medium text-purple-700">
             #1 Emergency Response
           </span>
         </div>
@@ -263,7 +263,7 @@ export default function UltraModernHero() {
 
         {/* Subtitle */}
         <p 
-          className={`text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-200 ${
+          className={`text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
@@ -350,7 +350,7 @@ export default function UltraModernHero() {
                 animationDelay: `${index * 100}ms` }}
             >
               <span className="text-xl">{badge.icon}</span>
-              <span className="text-sm text-gray-300 font-medium">{badge.text}</span>
+              <span className="text-sm text-gray-700 font-medium">{badge.text}</span>
             </div>
           ))}
         </div>
