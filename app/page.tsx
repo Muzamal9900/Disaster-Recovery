@@ -13,16 +13,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          .service-button {
-            height: 44px !important;
-            min-height: 44px !important;
-            line-height: 1 !important;
-            box-sizing: border-box !important;
-          }
-        `
-      }} />
       {/* Storm Effects - BACKGROUND ONLY with negative z-index */}
       <div 
         className="fixed inset-0 pointer-events-none"
@@ -182,8 +172,13 @@ export default function HomePage() {
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-sm text-gray-700 mb-3">{service.desc}</p>
                   <div 
-                    className="text-blue-600 font-semibold hover:text-blue-700 px-4 py-0 flex items-center justify-center rounded-lg transition-all hover:bg-blue-50 cursor-pointer service-button"
-                    style={{ height: '44px', minHeight: '44px' }}
+                    className="text-blue-600 font-semibold hover:text-blue-700 px-4 py-0 flex items-center justify-center rounded-lg transition-all hover:bg-blue-50 cursor-pointer"
+                    style={{ 
+                      height: '44px', 
+                      minHeight: '44px',
+                      lineHeight: '1',
+                      boxSizing: 'border-box'
+                    }}
                     onClick={() => window.location.href = '/services'}
                     role="button"
                     tabIndex={0}
