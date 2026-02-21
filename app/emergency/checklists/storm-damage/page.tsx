@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { CloudLightning } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: "Storm Damage Emergency Checklist | Disaster Recovery",
@@ -22,6 +24,8 @@ export default function StormDamageChecklistPage() {
         { label: "Emergency", href: "/emergency" },
         { label: "Storm Damage Emergency Checklist" },
       ]}
+      sections={getEmergencySections({ emergencyType: 'Storm Damage Checklist', context: 'after storm events' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

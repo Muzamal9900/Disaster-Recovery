@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Palmerston | Emergency Services Northern Territory',
@@ -22,6 +24,8 @@ export default function PalmerstonPage() {
         { label: 'NT', href: '/locations/nt' },
         { label: 'Palmerston' },
       ]}
+      sections={getLocationSections({ city: 'Palmerston', state: 'NT' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

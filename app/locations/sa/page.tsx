@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery South Australia | 24/7 Emergency Services | Adelaide & All Cities',
@@ -32,6 +34,8 @@ export default function SouthAustraliaPage() {
         { label: 'Locations', href: '/locations' },
         { label: 'South Australia' },
       ]}
+      sections={getLocationSections({ city: 'South Australia', state: 'SA' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

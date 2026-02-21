@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getPropertyTypeSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Government Facilities Disaster Recovery | Federal, state, local government | Australia',
@@ -21,6 +23,8 @@ export default function GovernmentFacilitiesPage() {
         { label: 'Property Types', href: '/property-types' },
         { label: 'Government Facilities Disaster Recovery' },
       ]}
+      sections={getPropertyTypeSections({ propertyType: 'Government Properties', description: 'Government facility disaster recovery meeting compliance requirements.' })}
+      relatedPages={getRelatedPages('commercial')}
     />
   );
 }

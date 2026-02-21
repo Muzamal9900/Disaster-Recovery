@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getPropertyTypeSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Warehouse & Storage Disaster Recovery | Industrial Properties | $2200 Minimum',
@@ -23,6 +25,8 @@ export default function WarehouseStoragePage() {
         { label: 'Property Types', href: '/property-types' },
         { label: 'Warehouse & Storage Disaster Recovery' },
       ]}
+      sections={getPropertyTypeSections({ propertyType: 'Warehouses', description: 'Large-format warehouse and distribution centre disaster recovery.' })}
+      relatedPages={getRelatedPages('commercial')}
     />
   );
 }

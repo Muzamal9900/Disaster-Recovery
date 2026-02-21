@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Woden Valley | Emergency Services Australian Capital Territory',
@@ -22,6 +24,8 @@ export default function WodenValleyPage() {
         { label: 'ACT', href: '/locations/act' },
         { label: 'Woden Valley' },
       ]}
+      sections={getLocationSections({ city: 'Woden Valley', state: 'ACT' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

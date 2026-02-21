@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getPropertyTypeSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Residential Home Disaster Recovery | Residential Properties | $2200 Minimum',
@@ -23,6 +25,8 @@ export default function ResidentialHomePage() {
         { label: 'Property Types', href: '/property-types' },
         { label: 'Residential Home Disaster Recovery' },
       ]}
+      sections={getPropertyTypeSections({ propertyType: 'Residential Homes', description: 'House-focused disaster recovery services Australia-wide.' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getPropertyTypeSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Government Facility Disaster Recovery | Government Properties | $2200 Minimum',
@@ -23,6 +25,8 @@ export default function GovernmentFacilityPage() {
         { label: 'Property Types', href: '/property-types' },
         { label: 'Government Facility Disaster Recovery' },
       ]}
+      sections={getPropertyTypeSections({ propertyType: 'Government Facilities', description: 'Specialised disaster recovery for government buildings and infrastructure.' })}
+      relatedPages={getRelatedPages('commercial')}
     />
   );
 }

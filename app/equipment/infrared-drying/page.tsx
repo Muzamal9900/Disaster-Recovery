@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Settings } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEquipmentSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Infrared Drying Systems | Targeted drying | Advanced Restoration Technology',
@@ -21,6 +23,8 @@ export default function InfraredDryingSystemsPage() {
         { label: 'Equipment', href: '/equipment' },
         { label: 'Infrared Drying Systems' },
       ]}
+      sections={getEquipmentSections({ equipmentName: 'Infrared Drying Systems', useCase: 'deep material drying without demolition' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

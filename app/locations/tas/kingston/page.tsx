@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Kingston | Emergency Services Tasmania',
@@ -22,6 +24,8 @@ export default function KingstonPage() {
         { label: 'TAS', href: '/locations/tas' },
         { label: 'Kingston' },
       ]}
+      sections={getLocationSections({ city: 'Kingston', state: 'TAS' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

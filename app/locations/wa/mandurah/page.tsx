@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Mandurah | Emergency Services Western Australia',
@@ -22,6 +24,8 @@ export default function MandurahPage() {
         { label: 'WA', href: '/locations/wa' },
         { label: 'Mandurah' },
       ]}
+      sections={getLocationSections({ city: 'Mandurah', state: 'WA' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

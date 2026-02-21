@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Western Australia | 24/7 Emergency Services | Perth & All Cities',
@@ -32,6 +34,8 @@ export default function WesternAustraliaPage() {
         { label: 'Locations', href: '/locations' },
         { label: 'Western Australia' },
       ]}
+      sections={getLocationSections({ city: 'Western Australia', state: 'WA' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

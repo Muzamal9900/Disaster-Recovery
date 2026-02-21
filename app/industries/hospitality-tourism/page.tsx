@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getIndustrySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Hospitality & Tourism Disaster Recovery | Specialised Industrial Restoration | Australia',
@@ -23,6 +25,8 @@ export default function HospitalityTourismPage() {
         { label: 'Industries', href: '/industries' },
         { label: 'Hospitality & Tourism Disaster Recovery' },
       ]}
+      sections={getIndustrySections({ industryName: 'Hospitality & Tourism', context: 'Disaster recovery for hotels, restaurants, and tourism facilities.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

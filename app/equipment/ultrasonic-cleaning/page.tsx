@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Settings } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEquipmentSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Ultrasonic Cleaning | Contents restoration | Advanced Restoration Technology',
@@ -21,6 +23,8 @@ export default function UltrasonicCleaningPage() {
         { label: 'Equipment', href: '/equipment' },
         { label: 'Ultrasonic Cleaning' },
       ]}
+      sections={getEquipmentSections({ equipmentName: 'Ultrasonic Cleaning', useCase: 'precision cleaning of fire and smoke damaged contents' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

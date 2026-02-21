@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getPropertyTypeSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Commercial Office Disaster Recovery | Commercial Properties | $2200 Minimum',
@@ -23,6 +25,8 @@ export default function CommercialOfficePage() {
         { label: 'Property Types', href: '/property-types' },
         { label: 'Commercial Office Disaster Recovery' },
       ]}
+      sections={getPropertyTypeSections({ propertyType: 'Commercial Offices', description: 'Office building disaster recovery with business continuity focus.' })}
+      relatedPages={getRelatedPages('commercial')}
     />
   );
 }

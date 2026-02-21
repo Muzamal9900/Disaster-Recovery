@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getIndustrySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Education & Schools Disaster Recovery | Specialised Industrial Restoration | Australia',
@@ -23,6 +25,8 @@ export default function EducationSchoolsPage() {
         { label: 'Industries', href: '/industries' },
         { label: 'Education & Schools Disaster Recovery' },
       ]}
+      sections={getIndustrySections({ industryName: 'Education & Schools', context: 'Disaster recovery for schools, universities, and educational facilities.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

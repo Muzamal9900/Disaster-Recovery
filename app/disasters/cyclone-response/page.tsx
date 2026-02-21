@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getDisasterSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Cyclone Damage Recovery Services | 24/7 Online Emergency Response | Disaster Recovery',
@@ -23,6 +25,8 @@ export default function CycloneDamageRecoveryPage() {
         { label: 'Disasters', href: '/disasters' },
         { label: 'Cyclone Damage Recovery' },
       ]}
+      sections={getDisasterSections({ disasterType: 'Cyclone', description: 'Cyclone damage response and restoration for wind, rain, and storm surge damage.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

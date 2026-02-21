@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'After Hours Emergency Services | 5PM - 9AM | 24/7 Disaster Recovery',
@@ -21,6 +23,8 @@ export default function AfterHoursEmergencyPage() {
         { label: 'Emergency', href: '/emergency' },
         { label: 'After Hours Emergency Services' },
       ]}
+      sections={getEmergencySections({ emergencyType: 'After Hours', context: '24/7 including evenings and nights' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

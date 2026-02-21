@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Service Locations | Disaster Recovery Australia-Wide',
@@ -21,6 +23,8 @@ export default function LocationsPage() {
         { label: 'Home', href: '/' },
         { label: 'Locations' },
       ]}
+      sections={getLocationSections({ city: 'Australia', state: 'National' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

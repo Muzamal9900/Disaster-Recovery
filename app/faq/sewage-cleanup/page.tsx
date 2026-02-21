@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { HelpCircle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getFAQSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'sewage cleanup FAQ | Common Questions Answered | Expert Guide',
@@ -21,6 +23,8 @@ export default function sewagecleanupFAQPage() {
         { label: 'FAQ', href: '/faq' },
         { label: 'Sewage Cleanup' },
       ]}
+      sections={getFAQSections({ topic: 'sewage-cleanup' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

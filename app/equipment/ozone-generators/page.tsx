@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Settings } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEquipmentSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Ozone Generators | Deodorization | Advanced Restoration Technology',
@@ -21,6 +23,8 @@ export default function OzoneGeneratorsPage() {
         { label: 'Equipment', href: '/equipment' },
         { label: 'Ozone Generators' },
       ]}
+      sections={getEquipmentSections({ equipmentName: 'Ozone Generators', useCase: 'eliminating odours and neutralising contaminants' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

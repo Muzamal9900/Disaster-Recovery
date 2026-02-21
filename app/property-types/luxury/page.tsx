@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getPropertyTypeSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Luxury Properties Disaster Recovery | High-value estates and homes | Australia',
@@ -21,6 +23,8 @@ export default function LuxuryPropertiesPage() {
         { label: 'Property Types', href: '/property-types' },
         { label: 'Luxury Properties Disaster Recovery' },
       ]}
+      sections={getPropertyTypeSections({ propertyType: 'Luxury Properties', description: 'Premium disaster recovery for high-value residential properties.' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'Perth water damage Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function PerthwaterdamageCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'Perth Water damage Cost' },
       ]}
+      sections={getCostSections({ city: 'Perth', serviceType: 'water-damage' })}
     />
   );
 }

@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Settings } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEquipmentSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'HEPA Air Scrubbers | Air purification | Advanced Restoration Technology',
@@ -21,6 +23,8 @@ export default function HEPAAirScrubbersPage() {
         { label: 'Equipment', href: '/equipment' },
         { label: 'HEPA Air Scrubbers' },
       ]}
+      sections={getEquipmentSections({ equipmentName: 'Air Scrubbers', useCase: 'filtering airborne contaminants during restoration' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

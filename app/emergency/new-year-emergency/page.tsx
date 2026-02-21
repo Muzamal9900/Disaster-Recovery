@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'New Year Emergency Service | December 31st - January 1st | $2200 Minimum + $1500 Surcharge',
@@ -23,6 +25,8 @@ export default function NewYearEmergencyServicePage() {
         { label: 'Emergency', href: '/emergency' },
         { label: 'New Year Emergency Service' },
       ]}
+      sections={getEmergencySections({ emergencyType: 'New Year', context: 'on New Year\'s Eve and New Year\'s Day' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

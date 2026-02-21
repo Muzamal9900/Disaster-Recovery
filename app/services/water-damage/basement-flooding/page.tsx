@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { Droplets } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Basement Flooding Cleanup Brisbane | Disaster Recovery',
@@ -23,6 +24,7 @@ export default function BasementFloodingPage() {
         { label: 'Water Damage', href: '/services/water-damage' },
         { label: 'Basement Flooding Cleanup Brisbane' },
       ]}
+      relatedPages={getRelatedPages('water-damage')}
     />
   );
 }

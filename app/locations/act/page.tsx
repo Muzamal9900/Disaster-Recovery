@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recoveryn Capital Territory | 24/7 Emergency Services | Canberra & All Cities',
@@ -32,6 +34,8 @@ export default function AustralianCapitalTerritoryPage() {
         { label: 'Locations', href: '/locations' },
         { label: 'Australian Capital Territory' },
       ]}
+      sections={getLocationSections({ city: 'Australian Capital Territory', state: 'ACT' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

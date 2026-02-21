@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'Perth fire damage Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function PerthfiredamageCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'Perth Fire damage Cost' },
       ]}
+      sections={getCostSections({ city: 'Perth', serviceType: 'fire-damage' })}
     />
   );
 }

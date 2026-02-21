@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Scale } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCompareSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Emergency vs Scheduled Service | Comparison Guide | Make the Right Choice',
@@ -21,6 +23,8 @@ export default function EmergencyvsScheduledServicePage() {
         { label: 'Compare', href: '/compare' },
         { label: 'Emergency vs Scheduled Service' },
       ]}
+      sections={getCompareSections({ option1: 'Emergency', option2: 'Scheduled' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

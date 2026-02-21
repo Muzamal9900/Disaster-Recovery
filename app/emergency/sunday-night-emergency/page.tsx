@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Sunday Night Emergency | Sunday 6PM - Monday 6AM | $2200 Minimum + $750 Surcharge',
@@ -23,6 +25,8 @@ export default function SundayNightEmergencyPage() {
         { label: 'Emergency', href: '/emergency' },
         { label: 'Sunday Night Emergency' },
       ]}
+      sections={getEmergencySections({ emergencyType: 'Sunday Night', context: 'on Sunday nights' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

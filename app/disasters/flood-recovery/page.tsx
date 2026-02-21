@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getDisasterSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Major Flood Recovery Services | 24/7 Online Emergency Response | Disaster Recovery',
@@ -23,6 +25,8 @@ export default function MajorFloodRecoveryPage() {
         { label: 'Disasters', href: '/disasters' },
         { label: 'Major Flood Recovery' },
       ]}
+      sections={getDisasterSections({ disasterType: 'Flood', description: 'Specialist flood recovery including water extraction, drying, and mould prevention.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

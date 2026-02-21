@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Settings } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEquipmentSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Drone Roof Inspection | Damage assessment | Advanced Restoration Technology',
@@ -21,6 +23,8 @@ export default function DroneRoofInspectionPage() {
         { label: 'Equipment', href: '/equipment' },
         { label: 'Drone Roof Inspection' },
       ]}
+      sections={getEquipmentSections({ equipmentName: 'Drone Inspection', useCase: 'aerial damage assessment for roofs and large structures' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

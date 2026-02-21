@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getDisasterSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Severe Storm Response Services | 24/7 Online Emergency Response | Disaster Recovery',
@@ -23,6 +25,8 @@ export default function SevereStormResponsePage() {
         { label: 'Disasters', href: '/disasters' },
         { label: 'Severe Storm Response' },
       ]}
+      sections={getDisasterSections({ disasterType: 'Storm', description: 'Comprehensive storm damage repair including roof, water ingress, and debris.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

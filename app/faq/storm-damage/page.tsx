@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { HelpCircle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getFAQSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'storm damage FAQ | Common Questions Answered | Expert Guide',
@@ -21,6 +23,8 @@ export default function stormdamageFAQPage() {
         { label: 'FAQ', href: '/faq' },
         { label: 'Storm Damage' },
       ]}
+      sections={getFAQSections({ topic: 'storm-damage' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

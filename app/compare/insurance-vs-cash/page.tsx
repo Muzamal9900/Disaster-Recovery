@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Scale } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCompareSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Insurance Claim vs Cash Payment | Comparison Guide | Make the Right Choice',
@@ -21,6 +23,8 @@ export default function InsuranceClaimvsCashPaymentPage() {
         { label: 'Compare', href: '/compare' },
         { label: 'Insurance Claim vs Cash Payment' },
       ]}
+      sections={getCompareSections({ option1: 'Insurance', option2: 'Cash' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

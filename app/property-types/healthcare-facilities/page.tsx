@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getPropertyTypeSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Healthcare Facility Disaster Recovery | Healthcare Properties | $2200 Minimum',
@@ -23,6 +25,8 @@ export default function HealthcareFacilityPage() {
         { label: 'Property Types', href: '/property-types' },
         { label: 'Healthcare Facility Disaster Recovery' },
       ]}
+      sections={getPropertyTypeSections({ propertyType: 'Healthcare Facilities', description: 'Critical disaster recovery for hospitals, clinics, and aged care.' })}
+      relatedPages={getRelatedPages('commercial')}
     />
   );
 }

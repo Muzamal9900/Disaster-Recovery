@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Shield } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getInsuranceSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'NAB Insurance Insurance Claims | Approved Restoration Provider | Direct Billing',
@@ -21,6 +23,8 @@ export default function NABInsuranceInsurancePage() {
         { label: 'Insurance', href: '/insurance' },
         { label: 'NAB Insurance Insurance Claims' },
       ]}
+      sections={getInsuranceSections({ insurerName: 'NAB Insurance', insurerSlug: 'nab-insurance' })}
+      relatedPages={getRelatedPages('insurance')}
     />
   );
 }

@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getPropertyTypeSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Strata Property Disaster Recovery | Strata Properties | $2200 Minimum',
@@ -23,6 +25,8 @@ export default function StrataPropertyPage() {
         { label: 'Property Types', href: '/property-types' },
         { label: 'Strata Property Disaster Recovery' },
       ]}
+      sections={getPropertyTypeSections({ propertyType: 'Strata Properties', description: 'Strata-titled property disaster recovery with body corporate coordination.' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

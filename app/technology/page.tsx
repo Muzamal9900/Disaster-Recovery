@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Cpu } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getTechnologySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Advanced Technology | Disaster Recovery',
@@ -20,6 +22,8 @@ export default function TechnologyPage() {
         { label: "Home", href: "/" },
         { label: "Advanced Technology" },
       ]}
+      sections={getTechnologySections({ techType: 'Restoration Technology', feature: 'Advanced technology for faster, more thorough disaster recovery.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

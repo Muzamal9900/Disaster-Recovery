@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Settings } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEquipmentSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Professional Moisture Meters | Water damage assessment | Advanced Restoration Technology',
@@ -21,6 +23,8 @@ export default function ProfessionalMoistureMetersPage() {
         { label: 'Equipment', href: '/equipment' },
         { label: 'Professional Moisture Meters' },
       ]}
+      sections={getEquipmentSections({ equipmentName: 'Moisture Meters', useCase: 'measuring moisture content in building materials' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

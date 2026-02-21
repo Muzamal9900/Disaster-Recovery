@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getRelatedPages } from '@/lib/internal-links';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'Sydney water damage Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +23,8 @@ export default function SydneywaterdamageCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'Sydney Water damage Cost' },
       ]}
+      relatedPages={getRelatedPages('cost-water')}
+      sections={getCostSections({ city: 'Sydney', serviceType: 'water-damage' })}
     />
   );
 }

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'Perth mould removal Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function PerthmouldremovalCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'Perth Mould removal Cost' },
       ]}
+      sections={getCostSections({ city: 'Perth', serviceType: 'mould-removal' })}
     />
   );
 }

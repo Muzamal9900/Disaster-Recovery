@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Shield } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getInsuranceSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Insurance Claims Assistance | All Major Australian Insurers | Direct Billing Available',
@@ -43,6 +45,8 @@ export default function InsurancePage() {
         { label: "Home", href: "/" },
         { label: "Insurance Claims Assistance" },
       ]}
+      sections={getInsuranceSections({ insurerName: 'Insurance Partners', insurerSlug: 'insurance' })}
+      relatedPages={getRelatedPages('insurance')}
     />
   );
 }

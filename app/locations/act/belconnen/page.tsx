@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Belconnen | Emergency Services Australian Capital Territory',
@@ -22,6 +24,8 @@ export default function BelconnenPage() {
         { label: 'ACT', href: '/locations/act' },
         { label: 'Belconnen' },
       ]}
+      sections={getLocationSections({ city: 'Belconnen', state: 'ACT' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

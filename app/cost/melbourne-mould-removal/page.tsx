@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getRelatedPages } from '@/lib/internal-links';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'Melbourne mould removal Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +23,8 @@ export default function MelbournemouldremovalCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'Melbourne Mould removal Cost' },
       ]}
+      relatedPages={getRelatedPages('cost-mould')}
+      sections={getCostSections({ city: 'Melbourne', serviceType: 'mould-removal' })}
     />
   );
 }

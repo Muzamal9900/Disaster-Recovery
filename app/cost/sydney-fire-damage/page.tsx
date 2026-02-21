@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getRelatedPages } from '@/lib/internal-links';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'Sydney fire damage Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +23,8 @@ export default function SydneyfiredamageCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'Sydney Fire damage Cost' },
       ]}
+      relatedPages={getRelatedPages('cost-fire')}
+      sections={getCostSections({ city: 'Sydney', serviceType: 'fire-damage' })}
     />
   );
 }

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'Canberra water damage Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function CanberrawaterdamageCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'Canberra Water damage Cost' },
       ]}
+      sections={getCostSections({ city: 'Canberra', serviceType: 'water-damage' })}
     />
   );
 }

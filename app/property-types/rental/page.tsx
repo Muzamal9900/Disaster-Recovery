@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getPropertyTypeSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Rental Properties Disaster Recovery | Investment and rental homes | Australia',
@@ -21,6 +23,8 @@ export default function RentalPropertiesPage() {
         { label: 'Property Types', href: '/property-types' },
         { label: 'Rental Properties Disaster Recovery' },
       ]}
+      sections={getPropertyTypeSections({ propertyType: 'Rental Properties', description: 'Disaster recovery coordinated between landlords, tenants, and insurers.' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

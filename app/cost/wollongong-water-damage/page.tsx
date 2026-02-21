@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'Wollongong water damage Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function WollongongwaterdamageCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'Wollongong Water damage Cost' },
       ]}
+      sections={getCostSections({ city: 'Wollongong', serviceType: 'water-damage' })}
     />
   );
 }

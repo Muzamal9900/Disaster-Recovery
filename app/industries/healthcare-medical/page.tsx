@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getIndustrySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Healthcare & Medical Facilities Disaster Recovery | Specialised Industrial Restoration | Australia',
@@ -23,6 +25,8 @@ export default function HealthcareMedicalFacilitiesPage() {
         { label: 'Industries', href: '/industries' },
         { label: 'Healthcare & Medical Facilities Disaster Recovery' },
       ]}
+      sections={getIndustrySections({ industryName: 'Healthcare & Medical', context: 'Critical disaster recovery for hospitals, clinics, and medical centres.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

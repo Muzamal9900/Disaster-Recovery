@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getIndustrySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Agriculture & Farming Disaster Recovery | Specialised Industrial Restoration | Australia',
@@ -23,6 +25,8 @@ export default function AgricultureFarmingPage() {
         { label: 'Industries', href: '/industries' },
         { label: 'Agriculture & Farming Disaster Recovery' },
       ]}
+      sections={getIndustrySections({ industryName: 'Agriculture & Farming', context: 'Disaster recovery for farms, agricultural buildings, and rural operations.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

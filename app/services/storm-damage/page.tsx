@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { CloudLightning } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Storm & Natural Disaster Recovery | Emergency Response | Roof Repair & Restoration',
@@ -61,6 +62,7 @@ export default function StormDamagePage() {
         { label: 'Services', href: '/services' },
         { label: 'Storm & Natural Disaster Recovery' },
       ]}
+      relatedPages={getRelatedPages('storm-damage')}
     />
   );
 }

@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Award } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCertificationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Australian Standards Compliant | AS/NZS compliance | Disaster Recovery',
@@ -21,6 +23,8 @@ export default function AustralianStandardsCompliantPage() {
         { label: 'Certifications', href: '/certifications' },
         { label: 'Australian Standards Compliant' },
       ]}
+      sections={getCertificationSections({ certName: 'Australian Standards Compliance', body: 'Meeting all relevant Australian Standards for restoration.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

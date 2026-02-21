@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Easter Emergency Services | Easter Long Weekend | 24/7 Disaster Recovery',
@@ -21,6 +23,8 @@ export default function EasterEmergencyPage() {
         { label: 'Emergency', href: '/emergency' },
         { label: 'Easter Emergency Services' },
       ]}
+      sections={getEmergencySections({ emergencyType: 'Easter', context: 'over the Easter long weekend' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

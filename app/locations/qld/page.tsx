@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Queensland | 24/7 Emergency Services | Brisbane & All Cities',
@@ -32,6 +34,8 @@ export default function QueenslandPage() {
         { label: 'Locations', href: '/locations' },
         { label: 'Queensland' },
       ]}
+      sections={getLocationSections({ city: 'Queensland', state: 'QLD' })}
+      relatedPages={getRelatedPages('location-brisbane')}
     />
   );
 }

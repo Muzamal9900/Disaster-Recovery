@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Award } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCertificationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'WorkSafe Certified | Safety compliance | Disaster Recovery',
@@ -21,6 +23,8 @@ export default function WorkSafeCertifiedPage() {
         { label: 'Certifications', href: '/certifications' },
         { label: 'WorkSafe Certified' },
       ]}
+      sections={getCertificationSections({ certName: 'WorkSafe Certification', body: 'Current workplace health and safety compliance.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

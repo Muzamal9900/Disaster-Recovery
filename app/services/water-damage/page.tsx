@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { Droplets } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Water Damage Restoration Services | 24/7 Online Emergency Response | IICRC S500 Certified',
@@ -30,6 +31,7 @@ export default function WaterDamageRestorationPage() {
         { label: 'Services', href: '/services' },
         { label: 'Water Damage Restoration Services' },
       ]}
+      relatedPages={getRelatedPages('water-damage')}
     />
   );
 }

@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 
 
@@ -20,6 +22,8 @@ export default function NewcastleLocationPage() {
         
         { label: 'Newcastle' },
       ]}
+      sections={getLocationSections({ city: 'Newcastle', state: 'NSW' })}
+      relatedPages={getRelatedPages('location-sydney')}
     />
   );
 }

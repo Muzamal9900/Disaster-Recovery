@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Shield } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getInsuranceSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Budget Direct Insurance Claims | Approved Restoration Provider | Direct Billing',
@@ -21,6 +23,8 @@ export default function BudgetDirectInsurancePage() {
         { label: 'Insurance', href: '/insurance' },
         { label: 'Budget Direct Insurance Claims' },
       ]}
+      sections={getInsuranceSections({ insurerName: 'Budget Direct', insurerSlug: 'budget-direct' })}
+      relatedPages={getRelatedPages('insurance')}
     />
   );
 }

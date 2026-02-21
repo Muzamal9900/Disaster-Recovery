@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Bug } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: "Mould Discovery Emergency Checklist | Disaster Recovery",
@@ -22,6 +24,8 @@ export default function MouldChecklistPage() {
         { label: "Emergency", href: "/emergency" },
         { label: "Mould Discovery Emergency Checklist" },
       ]}
+      sections={getEmergencySections({ emergencyType: 'Mould Emergency Checklist', context: 'when mould is discovered' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

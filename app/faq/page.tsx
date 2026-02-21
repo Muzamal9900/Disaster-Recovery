@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { HelpCircle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getFAQSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions | All FAQs | Disaster Recovery',
@@ -20,6 +22,8 @@ export default function FAQIndexPage() {
         { label: 'Home', href: '/' },
         { label: 'FAQ' },
       ]}
+      sections={getFAQSections({ topic: 'general' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

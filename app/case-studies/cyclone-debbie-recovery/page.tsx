@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { FileText } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCaseStudySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Cyclone Debbie Recovery | Case Study | Disaster Recovery Success Story',
@@ -21,6 +23,8 @@ export default function CycloneDebbieRecoveryPage() {
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Cyclone Debbie Recovery' },
       ]}
+      sections={getCaseStudySections({ incidentName: 'Cyclone Debbie Recovery', details: 'North Queensland cyclone damage restoration.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

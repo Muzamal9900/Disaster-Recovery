@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { FileText } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCaseStudySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Townsville Floods 2019 | Case Study | Disaster Recovery Success Story',
@@ -21,6 +23,8 @@ export default function TownsvilleFloods2019Page() {
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Townsville Floods 2019' },
       ]}
+      sections={getCaseStudySections({ incidentName: 'Townsville Floods 2019', details: 'Monsoonal flooding recovery in Townsville.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

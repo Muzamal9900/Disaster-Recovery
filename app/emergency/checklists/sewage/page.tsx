@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Droplets } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: "Sewage Backup Emergency Checklist | Disaster Recovery",
@@ -22,6 +24,8 @@ export default function SewageChecklistPage() {
         { label: "Emergency", href: "/emergency" },
         { label: "Sewage Backup Emergency Checklist" },
       ]}
+      sections={getEmergencySections({ emergencyType: 'Sewage Emergency Checklist', context: 'after a sewage overflow' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

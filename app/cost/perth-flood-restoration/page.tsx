@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'Perth flood restoration Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function PerthfloodrestorationCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'Perth Flood restoration Cost' },
       ]}
+      sections={getCostSections({ city: 'Perth', serviceType: 'flood-restoration' })}
     />
   );
 }

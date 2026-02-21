@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Flame } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: "Fire Damage Emergency Checklist | Disaster Recovery",
@@ -22,6 +24,8 @@ export default function FireDamageChecklistPage() {
         { label: "Emergency", href: "/emergency" },
         { label: "Fire Damage Emergency Checklist" },
       ]}
+      sections={getEmergencySections({ emergencyType: 'Fire Damage Checklist', context: 'after a fire event' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

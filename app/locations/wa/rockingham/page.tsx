@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Rockingham | Emergency Services Western Australia',
@@ -22,6 +24,8 @@ export default function RockinghamPage() {
         { label: 'WA', href: '/locations/wa' },
         { label: 'Rockingham' },
       ]}
+      sections={getLocationSections({ city: 'Rockingham', state: 'WA' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

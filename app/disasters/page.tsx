@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getDisasterSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Types & Emergency Response | All Australian Natural Disasters',
@@ -20,6 +22,8 @@ export default function DisastersPage() {
         { label: "Home", href: "/" },
         { label: "Disaster Types & Emergency Response" },
       ]}
+      sections={getDisasterSections({ disasterType: 'Natural Disaster', description: 'Comprehensive recovery services for all Australian disaster types.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

@@ -43,6 +43,12 @@ export interface ContentStat {
   value: string;
 }
 
+export interface RelatedPageLink {
+  title: string;
+  href: string;
+  description: string;
+}
+
 export interface AgContentPageTemplateProps {
   hero: ContentHero;
   cta?: ContentCTA;
@@ -52,6 +58,8 @@ export interface AgContentPageTemplateProps {
   stats?: ContentStat[];
   /** Main content sections rendered below the hero */
   sections?: ContentSection[];
+  /** Cross-category related pages for internal linking */
+  relatedPages?: RelatedPageLink[];
   /** Fallback content: rendered when ANTIGRAVITY_UI flag is OFF */
   fallback?: ReactNode;
 }
@@ -75,6 +83,7 @@ export function AgContentPageTemplate({
   breadcrumbs,
   stats,
   sections,
+  relatedPages,
   fallback,
 }: AgContentPageTemplateProps) {
   if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
@@ -189,6 +198,65 @@ export function AgContentPageTemplate({
           </section>
         );
       })}
+
+      {/* Related Pages — internal cross-linking */}
+      {relatedPages && relatedPages.length > 0 && (
+        <section style={{ padding: '4rem 1.5rem', background: 'var(--ag-background-light)' }}>
+          <div className="ag-container">
+            <h2 style={{
+              fontSize: '1.75rem',
+              fontWeight: 700,
+              color: 'var(--ag-primary-blue)',
+              marginBottom: '0.5rem',
+              letterSpacing: '-0.02em',
+            }}>
+              You May Also Need
+            </h2>
+            <p style={{ color: 'var(--ag-text-muted)', marginBottom: '2rem', fontSize: '1rem' }}>
+              Related services and resources for your situation
+            </p>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+              gap: '1.25rem',
+            }}>
+              {relatedPages.slice(0, 6).map((page, i) => (
+                <Link
+                  key={i}
+                  href={page.href}
+                  style={{
+                    display: 'block',
+                    padding: '1.25rem',
+                    background: 'var(--ag-surface-white)',
+                    borderRadius: '0.75rem',
+                    textDecoration: 'none',
+                    border: '1px solid rgba(0,0,0,0.06)',
+                    transition: 'box-shadow 0.2s, transform 0.2s',
+                  }}
+                >
+                  <span style={{
+                    display: 'block',
+                    fontWeight: 600,
+                    fontSize: '1rem',
+                    color: 'var(--ag-primary-blue)',
+                    marginBottom: '0.5rem',
+                  }}>
+                    {page.title}
+                  </span>
+                  <span style={{
+                    display: 'block',
+                    fontSize: '0.875rem',
+                    color: 'var(--ag-text-muted)',
+                    lineHeight: 1.5,
+                  }}>
+                    {page.description}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Bottom CTA */}
       {cta && (

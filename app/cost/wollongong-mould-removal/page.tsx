@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'Wollongong mould removal Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function WollongongmouldremovalCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'Wollongong Mould removal Cost' },
       ]}
+      sections={getCostSections({ city: 'Wollongong', serviceType: 'mould-removal' })}
     />
   );
 }

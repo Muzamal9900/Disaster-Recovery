@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'Canberra fire damage Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function CanberrafiredamageCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'Canberra Fire damage Cost' },
       ]}
+      sections={getCostSections({ city: 'Canberra', serviceType: 'fire-damage' })}
     />
   );
 }

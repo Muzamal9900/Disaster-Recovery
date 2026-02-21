@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'GoldCoast storm damage Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function GoldCoaststormdamageCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'GoldCoast Storm damage Cost' },
       ]}
+      sections={getCostSections({ city: 'Gold Coast', serviceType: 'storm-damage' })}
     />
   );
 }

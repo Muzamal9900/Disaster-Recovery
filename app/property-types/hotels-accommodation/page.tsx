@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getPropertyTypeSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Hotel & Accommodation Disaster Recovery | Hospitality Properties | $2200 Minimum',
@@ -23,6 +25,8 @@ export default function HotelAccommodationPage() {
         { label: 'Property Types', href: '/property-types' },
         { label: 'Hotel & Accommodation Disaster Recovery' },
       ]}
+      sections={getPropertyTypeSections({ propertyType: 'Hotels & Accommodation', description: 'Hospitality disaster recovery minimising guest disruption.' })}
+      relatedPages={getRelatedPages('commercial')}
     />
   );
 }

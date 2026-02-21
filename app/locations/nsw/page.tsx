@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery New South Wales | 24/7 Emergency Services | Sydney & All Cities',
@@ -32,6 +34,8 @@ export default function NewSouthWalesPage() {
         { label: 'Locations', href: '/locations' },
         { label: 'New South Wales' },
       ]}
+      sections={getLocationSections({ city: 'New South Wales', state: 'NSW' })}
+      relatedPages={getRelatedPages('location-sydney')}
     />
   );
 }

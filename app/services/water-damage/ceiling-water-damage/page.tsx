@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { Droplets } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Emergency Response | Disaster Recovery',
@@ -23,6 +24,7 @@ export default function CeilingWaterDamagePage() {
         { label: 'Water Damage', href: '/services/water-damage' },
         { label: 'Emergency Response' },
       ]}
+      relatedPages={getRelatedPages('water-damage')}
     />
   );
 }

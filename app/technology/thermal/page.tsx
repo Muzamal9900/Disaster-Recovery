@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Cpu } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getTechnologySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Certified Thermal Imaging Analysis | Level 1/2 Thermography | Disaster Recovery',
@@ -26,6 +28,8 @@ export default function ThermalImagingPage() {
         { label: 'Technology', href: '/technology' },
         { label: 'Certified Thermal Analysis' },
       ]}
+      sections={getTechnologySections({ techType: 'Certified Thermal Analysis', feature: 'Professional thermography by certified Level 1/2 specialists for moisture detection and electrical analysis.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

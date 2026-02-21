@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'Adelaide flood restoration Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function AdelaidefloodrestorationCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'Adelaide Flood restoration Cost' },
       ]}
+      sections={getCostSections({ city: 'Adelaide', serviceType: 'flood-restoration' })}
     />
   );
 }

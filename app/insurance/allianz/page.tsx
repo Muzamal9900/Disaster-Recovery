@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Shield } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getInsuranceSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Allianz Insurance Claims | Approved Restoration Provider | Direct Billing',
@@ -21,6 +23,8 @@ export default function AllianzInsurancePage() {
         { label: 'Insurance', href: '/insurance' },
         { label: 'Allianz Insurance Claims' },
       ]}
+      sections={getInsuranceSections({ insurerName: 'Allianz', insurerSlug: 'allianz' })}
+      relatedPages={getRelatedPages('insurance')}
     />
   );
 }

@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getPropertyTypeSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Industrial Facilities Disaster Recovery | Factories and warehouses | Australia',
@@ -21,6 +23,8 @@ export default function IndustrialFacilitiesPage() {
         { label: 'Property Types', href: '/property-types' },
         { label: 'Industrial Facilities Disaster Recovery' },
       ]}
+      sections={getPropertyTypeSections({ propertyType: 'Industrial Properties', description: 'Heavy-duty disaster recovery for industrial facilities.' })}
+      relatedPages={getRelatedPages('commercial')}
     />
   );
 }

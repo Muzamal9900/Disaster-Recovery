@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'After Hours Emergency Service | 5PM - 9AM Weekdays | $2200 Minimum + $500 Surcharge',
@@ -23,6 +25,8 @@ export default function AfterHoursEmergencyServicePage() {
         { label: 'Emergency', href: '/emergency' },
         { label: 'After Hours Emergency Service' },
       ]}
+      sections={getEmergencySections({ emergencyType: 'After Hours', context: '5PM to 9AM every night' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

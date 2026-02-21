@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Shield } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getInsuranceSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'RAC Insurance Claims | Approved Restoration Provider | Direct Billing',
@@ -21,6 +23,8 @@ export default function RACInsurancePage() {
         { label: 'Insurance', href: '/insurance' },
         { label: 'RAC Insurance Claims' },
       ]}
+      sections={getInsuranceSections({ insurerName: 'RAC', insurerSlug: 'rac' })}
+      relatedPages={getRelatedPages('insurance')}
     />
   );
 }

@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getPropertyTypeSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Rural Properties Disaster Recovery | Farms and country properties | Australia',
@@ -21,6 +23,8 @@ export default function RuralPropertiesPage() {
         { label: 'Property Types', href: '/property-types' },
         { label: 'Rural Properties Disaster Recovery' },
       ]}
+      sections={getPropertyTypeSections({ propertyType: 'Rural Properties', description: 'Remote and regional property disaster recovery services.' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

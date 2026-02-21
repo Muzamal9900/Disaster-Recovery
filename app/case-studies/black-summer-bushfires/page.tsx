@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { FileText } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCaseStudySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Black Summer Bushfire Restoration | Case Study | Disaster Recovery Success Story',
@@ -21,6 +23,8 @@ export default function BlackSummerBushfireRestorationPage() {
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Black Summer Bushfire Restoration' },
       ]}
+      sections={getCaseStudySections({ incidentName: 'Black Summer Bushfires', details: '2019-2020 bushfire recovery across multiple states.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Tuggeranong | Emergency Services Australian Capital Territory',
@@ -22,6 +24,8 @@ export default function TuggeranongPage() {
         { label: 'ACT', href: '/locations/act' },
         { label: 'Tuggeranong' },
       ]}
+      sections={getLocationSections({ city: 'Tuggeranong', state: 'ACT' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

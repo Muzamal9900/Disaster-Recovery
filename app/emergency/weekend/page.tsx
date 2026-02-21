@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Weekend Emergency Services | Saturday & Sunday | 24/7 Disaster Recovery',
@@ -21,6 +23,8 @@ export default function WeekendEmergencyPage() {
         { label: 'Emergency', href: '/emergency' },
         { label: 'Weekend Emergency Services' },
       ]}
+      sections={getEmergencySections({ emergencyType: 'Weekend', context: 'on Saturdays and Sundays' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

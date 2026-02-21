@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Public Holiday Emergency Services | All Australian Holidays | 24/7 Disaster Recovery',
@@ -21,6 +23,8 @@ export default function PublicHolidayEmergencyPage() {
         { label: 'Emergency', href: '/emergency' },
         { label: 'Public Holiday Emergency Services' },
       ]}
+      sections={getEmergencySections({ emergencyType: 'Public Holiday', context: 'on all Australian public holidays' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Early Morning Emergency | 4AM - 7AM | $2200 Minimum + $500 Surcharge',
@@ -23,6 +25,8 @@ export default function EarlyMorningEmergencyPage() {
         { label: 'Emergency', href: '/emergency' },
         { label: 'Early Morning Emergency' },
       ]}
+      sections={getEmergencySections({ emergencyType: 'Early Morning', context: 'before business hours' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

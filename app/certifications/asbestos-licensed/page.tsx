@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Award } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCertificationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Asbestos Removal Licensed | Class A & B asbestos | Disaster Recovery',
@@ -21,6 +23,8 @@ export default function AsbestosRemovalLicensedPage() {
         { label: 'Certifications', href: '/certifications' },
         { label: 'Asbestos Removal Licensed' },
       ]}
+      sections={getCertificationSections({ certName: 'Asbestos Licence', body: 'Licensed asbestos identification, management, and removal.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

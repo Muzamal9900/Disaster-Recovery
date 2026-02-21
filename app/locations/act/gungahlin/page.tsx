@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Gungahlin | Emergency Services Australian Capital Territory',
@@ -22,6 +24,8 @@ export default function GungahlinPage() {
         { label: 'ACT', href: '/locations/act' },
         { label: 'Gungahlin' },
       ]}
+      sections={getLocationSections({ city: 'Gungahlin', state: 'ACT' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

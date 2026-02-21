@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getDisasterSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Coastal & Storm Surge Damage Services | 24/7 Online Emergency Response | Disaster Recovery',
@@ -23,6 +25,8 @@ export default function CoastalStormSurgeDamagePage() {
         { label: 'Disasters', href: '/disasters' },
         { label: 'Coastal & Storm Surge Damage' },
       ]}
+      sections={getDisasterSections({ disasterType: 'Coastal Erosion', description: 'Property restoration and protection from coastal erosion damage.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

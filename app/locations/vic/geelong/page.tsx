@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Geelong | Emergency Services Victoria',
@@ -22,6 +24,8 @@ export default function GeelongPage() {
         { label: 'VIC', href: '/locations/vic' },
         { label: 'Geelong' },
       ]}
+      sections={getLocationSections({ city: 'Geelong', state: 'VIC' })}
+      relatedPages={getRelatedPages('location-melbourne')}
     />
   );
 }

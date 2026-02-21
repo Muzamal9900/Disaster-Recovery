@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Settings } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEquipmentSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Thermal Imaging Cameras | Moisture detection | Advanced Restoration Technology',
@@ -21,6 +23,8 @@ export default function ThermalImagingCamerasPage() {
         { label: 'Equipment', href: '/equipment' },
         { label: 'Thermal Imaging Cameras' },
       ]}
+      sections={getEquipmentSections({ equipmentName: 'Thermal Imaging Cameras', useCase: 'moisture detection and hidden damage identification' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

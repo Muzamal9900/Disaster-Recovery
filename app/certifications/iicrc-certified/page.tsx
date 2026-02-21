@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Award } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCertificationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'IICRC Certified | International restoration standard | Disaster Recovery',
@@ -21,6 +23,8 @@ export default function IICRCCertifiedPage() {
         { label: 'Certifications', href: '/certifications' },
         { label: 'IICRC Certified' },
       ]}
+      sections={getCertificationSections({ certName: 'IICRC Certification', body: 'The international gold standard for restoration professionals.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

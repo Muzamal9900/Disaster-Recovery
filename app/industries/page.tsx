@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getIndustrySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Industry-Specific Disaster Recovery | Commercial & Industrial Restoration',
@@ -20,6 +22,8 @@ export default function IndustriesPage() {
         { label: 'Home', href: '/' },
         { label: 'Industries' },
       ]}
+      sections={getIndustrySections({ industryName: 'All Industries', context: 'Disaster recovery services tailored to every industry sector.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

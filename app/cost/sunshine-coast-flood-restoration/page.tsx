@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'SunshineCoast flood restoration Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function SunshineCoastfloodrestorationCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'SunshineCoast Flood restoration Cost' },
       ]}
+      sections={getCostSections({ city: 'Sunshine Coast', serviceType: 'flood-restoration' })}
     />
   );
 }

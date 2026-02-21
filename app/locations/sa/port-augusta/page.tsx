@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Port Augusta | Emergency Services South Australia',
@@ -22,6 +24,8 @@ export default function PortAugustaPage() {
         { label: 'SA', href: '/locations/sa' },
         { label: 'Port Augusta' },
       ]}
+      sections={getLocationSections({ city: 'Port Augusta', state: 'SA' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

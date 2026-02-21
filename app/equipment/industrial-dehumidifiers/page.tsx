@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Settings } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEquipmentSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Industrial Dehumidifiers | Structural drying | Advanced Restoration Technology',
@@ -21,6 +23,8 @@ export default function IndustrialDehumidifiersPage() {
         { label: 'Equipment', href: '/equipment' },
         { label: 'Industrial Dehumidifiers' },
       ]}
+      sections={getEquipmentSections({ equipmentName: 'Industrial Dehumidifiers', useCase: 'accelerating drying and preventing mould growth' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

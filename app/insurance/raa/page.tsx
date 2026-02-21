@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Shield } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getInsuranceSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'RAA Insurance Claims | Approved Restoration Provider | Direct Billing',
@@ -21,6 +23,8 @@ export default function RAAInsurancePage() {
         { label: 'Insurance', href: '/insurance' },
         { label: 'RAA Insurance Claims' },
       ]}
+      sections={getInsuranceSections({ insurerName: 'RAA', insurerSlug: 'raa' })}
+      relatedPages={getRelatedPages('insurance')}
     />
   );
 }

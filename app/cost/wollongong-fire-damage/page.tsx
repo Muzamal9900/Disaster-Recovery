@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'Wollongong fire damage Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function WollongongfiredamageCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'Wollongong Fire damage Cost' },
       ]}
+      sections={getCostSections({ city: 'Wollongong', serviceType: 'fire-damage' })}
     />
   );
 }

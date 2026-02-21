@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Shield } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getInsuranceSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'SGIO Insurance Claims | Approved Restoration Provider | Direct Billing',
@@ -21,6 +23,8 @@ export default function SGIOInsurancePage() {
         { label: 'Insurance', href: '/insurance' },
         { label: 'SGIO Insurance Claims' },
       ]}
+      sections={getInsuranceSections({ insurerName: 'SGIO', insurerSlug: 'sgio' })}
+      relatedPages={getRelatedPages('insurance')}
     />
   );
 }

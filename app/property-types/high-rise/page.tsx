@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getPropertyTypeSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'High Rise Buildings Disaster Recovery | Apartments and office towers | Australia',
@@ -21,6 +23,8 @@ export default function HighRiseBuildingsPage() {
         { label: 'Property Types', href: '/property-types' },
         { label: 'High Rise Buildings Disaster Recovery' },
       ]}
+      sections={getPropertyTypeSections({ propertyType: 'High-Rise Buildings', description: 'Multi-storey disaster recovery from 2 to 80+ floors.' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

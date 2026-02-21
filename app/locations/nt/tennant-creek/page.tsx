@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Tennant Creek | Emergency Services Northern Territory',
@@ -22,6 +24,8 @@ export default function TennantCreekPage() {
         { label: 'NT', href: '/locations/nt' },
         { label: 'Tennant Creek' },
       ]}
+      sections={getLocationSections({ city: 'Tennant Creek', state: 'NT' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

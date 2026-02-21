@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'Wollongong storm damage Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function WollongongstormdamageCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'Wollongong Storm damage Cost' },
       ]}
+      sections={getCostSections({ city: 'Wollongong', serviceType: 'storm-damage' })}
     />
   );
 }

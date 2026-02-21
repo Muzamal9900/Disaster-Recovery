@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Wollongong | Emergency Services New South Wales',
@@ -22,6 +24,8 @@ export default function WollongongPage() {
         { label: 'NSW', href: '/locations/nsw' },
         { label: 'Wollongong' },
       ]}
+      sections={getLocationSections({ city: 'Wollongong', state: 'NSW' })}
+      relatedPages={getRelatedPages('location-sydney')}
     />
   );
 }

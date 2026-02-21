@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Frankston | Emergency Services Victoria',
@@ -22,6 +24,8 @@ export default function FrankstonPage() {
         { label: 'VIC', href: '/locations/vic' },
         { label: 'Frankston' },
       ]}
+      sections={getLocationSections({ city: 'Frankston', state: 'VIC' })}
+      relatedPages={getRelatedPages('location-melbourne')}
     />
   );
 }

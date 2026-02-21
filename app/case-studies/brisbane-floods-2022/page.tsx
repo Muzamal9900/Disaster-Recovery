@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { FileText } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCaseStudySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Brisbane Floods 2022 Recovery | Case Study | Disaster Recovery Success Story',
@@ -21,6 +23,8 @@ export default function BrisbaneFloods2022RecoveryPage() {
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Brisbane Floods 2022 Recovery' },
       ]}
+      sections={getCaseStudySections({ incidentName: 'Brisbane Floods 2022 Recovery', details: 'South East Queensland flood restoration.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

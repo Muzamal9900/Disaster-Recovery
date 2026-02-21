@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Burnie | Emergency Services Tasmania',
@@ -22,6 +24,8 @@ export default function BurniePage() {
         { label: 'TAS', href: '/locations/tas' },
         { label: 'Burnie' },
       ]}
+      sections={getLocationSections({ city: 'Burnie', state: 'TAS' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

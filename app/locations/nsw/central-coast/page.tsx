@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Central Coast | Emergency Services New South Wales',
@@ -22,6 +24,8 @@ export default function CentralCoastPage() {
         { label: 'NSW', href: '/locations/nsw' },
         { label: 'Central Coast' },
       ]}
+      sections={getLocationSections({ city: 'Central Coast', state: 'NSW' })}
+      relatedPages={getRelatedPages('location-sydney')}
     />
   );
 }

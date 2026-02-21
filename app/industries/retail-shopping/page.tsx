@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getIndustrySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Retail & Shopping Centres Disaster Recovery | Specialised Industrial Restoration | Australia',
@@ -23,6 +25,8 @@ export default function RetailShoppingCentersPage() {
         { label: 'Industries', href: '/industries' },
         { label: 'Retail & Shopping Centres Disaster Recovery' },
       ]}
+      sections={getIndustrySections({ industryName: 'Retail & Shopping', context: 'Disaster recovery for retail stores and shopping centres.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

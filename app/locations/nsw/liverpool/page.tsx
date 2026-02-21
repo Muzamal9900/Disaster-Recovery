@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Liverpool | Emergency Services New South Wales',
@@ -22,6 +24,8 @@ export default function LiverpoolPage() {
         { label: 'NSW', href: '/locations/nsw' },
         { label: 'Liverpool' },
       ]}
+      sections={getLocationSections({ city: 'Liverpool', state: 'NSW' })}
+      relatedPages={getRelatedPages('location-sydney')}
     />
   );
 }

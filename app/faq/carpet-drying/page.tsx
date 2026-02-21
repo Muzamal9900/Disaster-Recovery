@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { HelpCircle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getFAQSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'carpet drying FAQ | Common Questions Answered | Expert Guide',
@@ -21,6 +23,8 @@ export default function carpetdryingFAQPage() {
         { label: 'FAQ', href: '/faq' },
         { label: 'Carpet Drying' },
       ]}
+      sections={getFAQSections({ topic: 'carpet-drying' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

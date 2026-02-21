@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Public Holiday Emergency | All Public Holidays | $2200 Minimum + $1000 Surcharge',
@@ -23,6 +25,8 @@ export default function PublicHolidayEmergencyPage() {
         { label: 'Emergency', href: '/emergency' },
         { label: 'Public Holiday Emergency' },
       ]}
+      sections={getEmergencySections({ emergencyType: 'Public Holiday', context: 'on any public holiday' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

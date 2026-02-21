@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Cpu } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getTechnologySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'HEPA Air Filtration Systems | Hospital-Grade Air Scrubbing | Disaster Recovery',
@@ -26,6 +28,8 @@ export default function HEPAFiltrationPage() {
         { label: 'Technology', href: '/technology' },
         { label: 'HEPA Air Filtration Systems' },
       ]}
+      sections={getTechnologySections({ techType: 'HEPA Filtration', feature: 'Hospital-grade air filtration for contamination control during restoration.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

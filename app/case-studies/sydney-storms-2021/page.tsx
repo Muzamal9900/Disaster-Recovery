@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { FileText } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCaseStudySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Sydney Storms 2021 | Case Study | Disaster Recovery Success Story',
@@ -21,6 +23,8 @@ export default function SydneyStorms2021Page() {
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Sydney Storms 2021' },
       ]}
+      sections={getCaseStudySections({ incidentName: 'Sydney Storms 2021', details: 'Greater Sydney severe storm water damage restoration.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

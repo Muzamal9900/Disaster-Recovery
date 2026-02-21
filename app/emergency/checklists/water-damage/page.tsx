@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Droplets } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: "Water Damage Emergency Checklist | Disaster Recovery",
@@ -22,6 +24,8 @@ export default function WaterDamageChecklistPage() {
         { label: "Emergency", href: "/emergency" },
         { label: "Water Damage Emergency Checklist" },
       ]}
+      sections={getEmergencySections({ emergencyType: 'Water Damage Checklist', context: 'after water damage occurs' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

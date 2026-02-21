@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Award } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCertificationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: "Certifications | Disaster Recovery",
@@ -21,6 +23,8 @@ export default function CertificationsPage() {
         { label: "Home", href: "/" },
         { label: "Certifications" },
       ]}
+      sections={getCertificationSections({ certName: 'Professional Certifications', body: 'Our network maintains the highest industry certifications.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { FileText } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCaseStudySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Case studies | Disaster Recovery Case Study',
@@ -21,6 +23,8 @@ export default function CaseStudiesPage() {
         { label: 'Home', href: '/' },
         { label: 'Case Studies' },
       ]}
+      sections={getCaseStudySections({ incidentName: 'Disaster Recovery Case Studies', details: 'Real-world examples of our restoration work across Australia.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

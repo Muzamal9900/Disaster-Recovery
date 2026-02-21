@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Biohazard Cleaning Brisbane | Disaster Recovery',
@@ -22,6 +23,7 @@ export default function BiohazardCleaningPage() {
         { label: 'Services', href: '/services' },
         { label: 'Biohazard Cleaning Brisbane' },
       ]}
+      relatedPages={getRelatedPages('biohazard')}
     />
   );
 }

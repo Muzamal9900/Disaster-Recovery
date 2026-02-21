@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Shield } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getInsuranceSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Coles Insurance Insurance Claims | Approved Restoration Provider | Direct Billing',
@@ -21,6 +23,8 @@ export default function ColesInsuranceInsurancePage() {
         { label: 'Insurance', href: '/insurance' },
         { label: 'Coles Insurance Insurance Claims' },
       ]}
+      sections={getInsuranceSections({ insurerName: 'Coles Insurance', insurerSlug: 'coles-insurance' })}
+      relatedPages={getRelatedPages('insurance')}
     />
   );
 }

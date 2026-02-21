@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Shield } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getInsuranceSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'AAMI Insurance Claims | Approved Restoration Provider | Direct Billing',
@@ -21,6 +23,8 @@ export default function AAMIInsurancePage() {
         { label: 'Insurance', href: '/insurance' },
         { label: 'AAMI Insurance Claims' },
       ]}
+      sections={getInsuranceSections({ insurerName: 'AAMI', insurerSlug: 'aami' })}
+      relatedPages={getRelatedPages('insurance')}
     />
   );
 }

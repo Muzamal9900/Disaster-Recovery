@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Shield } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getInsuranceSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Vero Insurance Claims | Approved Restoration Provider | Direct Billing',
@@ -21,6 +23,8 @@ export default function VeroInsurancePage() {
         { label: 'Insurance', href: '/insurance' },
         { label: 'Vero Insurance Claims' },
       ]}
+      sections={getInsuranceSections({ insurerName: 'Vero', insurerSlug: 'vero' })}
+      relatedPages={getRelatedPages('insurance')}
     />
   );
 }

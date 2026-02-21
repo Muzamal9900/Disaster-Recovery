@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'GoldCoast flood restoration Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function GoldCoastfloodrestorationCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'GoldCoast Flood restoration Cost' },
       ]}
+      sections={getCostSections({ city: 'Gold Coast', serviceType: 'flood-restoration' })}
     />
   );
 }

@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
-
-
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export default function EmergencyChecklistsPage() {
   return (
@@ -19,6 +19,8 @@ export default function EmergencyChecklistsPage() {
         { label: 'Emergency', href: '/emergency' },
         { label: 'Emergency Response Checklists' },
       ]}
+      sections={getEmergencySections({ emergencyType: 'Emergency Checklist', context: 'for all types of property disasters' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getPropertyTypeSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'School & Education Disaster Recovery | Education Properties | $2200 Minimum',
@@ -23,6 +25,8 @@ export default function SchoolEducationPage() {
         { label: 'Property Types', href: '/property-types' },
         { label: 'School & Education Disaster Recovery' },
       ]}
+      sections={getPropertyTypeSections({ propertyType: 'Schools & Education', description: 'Disaster recovery for schools, universities, and educational facilities.' })}
+      relatedPages={getRelatedPages('commercial')}
     />
   );
 }

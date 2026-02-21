@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Townsville | Emergency Services Queensland',
@@ -22,6 +24,8 @@ export default function TownsvillePage() {
         { label: 'QLD', href: '/locations/qld' },
         { label: 'Townsville' },
       ]}
+      sections={getLocationSections({ city: 'Townsville', state: 'QLD' })}
+      relatedPages={getRelatedPages('location-brisbane')}
     />
   );
 }

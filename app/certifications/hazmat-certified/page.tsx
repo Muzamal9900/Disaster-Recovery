@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Award } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCertificationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'HAZMAT Certified | Hazardous materials | Disaster Recovery',
@@ -21,6 +23,8 @@ export default function HAZMATCertifiedPage() {
         { label: 'Certifications', href: '/certifications' },
         { label: 'HAZMAT Certified' },
       ]}
+      sections={getCertificationSections({ certName: 'Hazmat Certification', body: 'Certified handling of hazardous materials and contamination.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

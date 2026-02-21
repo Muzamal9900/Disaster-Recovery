@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Settings } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEquipmentSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Negative Air Machines | Containment | Advanced Restoration Technology',
@@ -21,6 +23,8 @@ export default function NegativeAirMachinesPage() {
         { label: 'Equipment', href: '/equipment' },
         { label: 'Negative Air Machines' },
       ]}
+      sections={getEquipmentSections({ equipmentName: 'Negative Air Machines', useCase: 'containing contamination with negative pressure' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

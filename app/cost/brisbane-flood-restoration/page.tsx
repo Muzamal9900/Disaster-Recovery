@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'Brisbane flood restoration Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function BrisbanefloodrestorationCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'Brisbane Flood restoration Cost' },
       ]}
+      sections={getCostSections({ city: 'Brisbane', serviceType: 'flood-restoration' })}
     />
   );
 }

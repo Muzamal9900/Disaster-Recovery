@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { ClipboardCheck } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: "Universal Disaster Response Checklist | Disaster Recovery",
@@ -22,6 +24,8 @@ export default function GeneralDisasterChecklistPage() {
         { label: "Emergency", href: "/emergency" },
         { label: "Universal Disaster Response Checklist" },
       ]}
+      sections={getEmergencySections({ emergencyType: 'General Emergency Checklist', context: 'for any disaster situation' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

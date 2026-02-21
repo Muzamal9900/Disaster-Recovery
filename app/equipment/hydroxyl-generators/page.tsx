@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Settings } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEquipmentSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Hydroxyl Generators | Odour elimination | Advanced Restoration Technology',
@@ -21,6 +23,8 @@ export default function HydroxylGeneratorsPage() {
         { label: 'Equipment', href: '/equipment' },
         { label: 'Hydroxyl Generators' },
       ]}
+      sections={getEquipmentSections({ equipmentName: 'Hydroxyl Generators', useCase: 'safe deodorisation in occupied spaces' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

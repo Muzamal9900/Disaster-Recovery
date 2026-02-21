@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'Canberra mould removal Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function CanberramouldremovalCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'Canberra Mould removal Cost' },
       ]}
+      sections={getCostSections({ city: 'Canberra', serviceType: 'mould-removal' })}
     />
   );
 }

@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Scale } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCompareSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Local vs National Companies | Comparison Guide | Make the Right Choice',
@@ -21,6 +23,8 @@ export default function LocalvsNationalCompaniesPage() {
         { label: 'Compare', href: '/compare' },
         { label: 'Local vs National Companies' },
       ]}
+      sections={getCompareSections({ option1: 'Local', option2: 'National' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

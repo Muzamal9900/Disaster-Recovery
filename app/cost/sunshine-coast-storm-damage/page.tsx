@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { DollarSign } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCostSections } from '@/lib/content-sections';
 
 export const metadata: Metadata = {
   title: 'SunshineCoast storm damage Cost | Pricing Guide 2024 | Free Quotes',
@@ -21,6 +22,7 @@ export default function SunshineCoaststormdamageCostPage() {
         { label: 'Cost Guides', href: '/cost' },
         { label: 'SunshineCoast Storm damage Cost' },
       ]}
+      sections={getCostSections({ city: 'Sunshine Coast', serviceType: 'storm-damage' })}
     />
   );
 }

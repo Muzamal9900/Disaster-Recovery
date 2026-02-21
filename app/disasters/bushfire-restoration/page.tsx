@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { AlertTriangle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getDisasterSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Bushfire & Smoke Damage Services | 24/7 Online Emergency Response | Disaster Recovery',
@@ -23,6 +25,8 @@ export default function BushfireSmokeDamagePage() {
         { label: 'Disasters', href: '/disasters' },
         { label: 'Bushfire & Smoke Damage' },
       ]}
+      sections={getDisasterSections({ disasterType: 'Bushfire', description: 'Complete bushfire recovery including smoke damage, soot removal, and structural restoration.' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

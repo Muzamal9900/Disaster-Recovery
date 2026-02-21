@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Shield } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getInsuranceSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'CommInsure Insurance Claims | Approved Restoration Provider | Direct Billing',
@@ -21,6 +23,8 @@ export default function CommInsureInsurancePage() {
         { label: 'Insurance', href: '/insurance' },
         { label: 'CommInsure Insurance Claims' },
       ]}
+      sections={getInsuranceSections({ insurerName: 'CommInsure', insurerSlug: 'comminsure' })}
+      relatedPages={getRelatedPages('insurance')}
     />
   );
 }

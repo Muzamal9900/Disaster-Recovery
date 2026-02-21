@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getLocationSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Toowoomba | Emergency Services Queensland',
@@ -22,6 +24,8 @@ export default function ToowoombaPage() {
         { label: 'QLD', href: '/locations/qld' },
         { label: 'Toowoomba' },
       ]}
+      sections={getLocationSections({ city: 'Toowoomba', state: 'QLD' })}
+      relatedPages={getRelatedPages('location-brisbane')}
     />
   );
 }

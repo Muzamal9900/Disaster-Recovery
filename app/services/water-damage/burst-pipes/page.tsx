@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { Droplets } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Burst Pipe Emergency Services Brisbane | Disaster Recovery',
@@ -23,6 +24,7 @@ export default function BurstPipesPage() {
         { label: 'Water Damage', href: '/services/water-damage' },
         { label: 'Burst Pipe Emergency Services Brisbane' },
       ]}
+      relatedPages={getRelatedPages('water-damage')}
     />
   );
 }

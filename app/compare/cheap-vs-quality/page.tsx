@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Scale } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getCompareSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Cheap vs Quality Restoration | Comparison Guide | Make the Right Choice',
@@ -21,6 +23,8 @@ export default function CheapvsQualityRestorationPage() {
         { label: 'Compare', href: '/compare' },
         { label: 'Cheap vs Quality Restoration' },
       ]}
+      sections={getCompareSections({ option1: 'Cheap', option2: 'Quality' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }

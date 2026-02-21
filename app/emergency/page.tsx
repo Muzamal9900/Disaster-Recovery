@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Siren } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEmergencySections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: '24/7 Online Emergency Response Times & Fees | After Hours, Weekends, Holidays',
@@ -20,6 +22,8 @@ export default function EmergencyTimesPage() {
         { label: "Home", href: "/" },
         { label: "24/7 Online Emergency Response Times ..." },
       ]}
+      sections={getEmergencySections({ emergencyType: 'Emergency', context: '24 hours a day, 7 days a week, 365 days a year' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

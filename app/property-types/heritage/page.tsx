@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Building2 } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getPropertyTypeSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Heritage Buildings Disaster Recovery | Protected and historical properties | Australia',
@@ -21,6 +23,8 @@ export default function HeritageBuildingsPage() {
         { label: 'Property Types', href: '/property-types' },
         { label: 'Heritage Buildings Disaster Recovery' },
       ]}
+      sections={getPropertyTypeSections({ propertyType: 'Heritage Properties', description: 'Conservation-grade disaster recovery for heritage-listed buildings.' })}
+      relatedPages={getRelatedPages('emergency')}
     />
   );
 }

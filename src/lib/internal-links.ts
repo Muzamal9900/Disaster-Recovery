@@ -1,0 +1,220 @@
+/**
+ * Internal cross-linking map for SEO link equity distribution.
+ * Returns related pages based on the current page's category/slug.
+ */
+
+export interface RelatedPage {
+  title: string;
+  href: string;
+  description: string;
+}
+
+type CategoryKey =
+  | 'water-damage'
+  | 'fire-damage'
+  | 'mould'
+  | 'storm-damage'
+  | 'biohazard'
+  | 'flood'
+  | 'structural-drying'
+  | 'location-sydney'
+  | 'location-melbourne'
+  | 'location-brisbane'
+  | 'cost-water'
+  | 'cost-fire'
+  | 'cost-mould'
+  | 'cost-storm'
+  | 'cost-flood'
+  | 'insurance'
+  | 'emergency'
+  | 'commercial'
+  | 'guides-general';
+
+const RELATED_PAGES_MAP: Record<CategoryKey, RelatedPage[]> = {
+  'water-damage': [
+    { title: 'Mould Remediation', href: '/services/mould-remediation', description: 'Water damage often leads to mould within 24-48 hours — get professional remediation.' },
+    { title: 'Flood Damage Restoration', href: '/services/flood-damage-restoration', description: 'Specialist flood recovery including extraction, drying and structural repair.' },
+    { title: 'Structural Drying', href: '/services/structural-drying', description: 'Industrial-grade drying to prevent long-term moisture damage to your property.' },
+    { title: 'Storm Damage Restoration', href: '/services/storm-damage-restoration', description: 'Comprehensive storm damage repair including roof, water and debris removal.' },
+    { title: 'Water Damage Cost Guide', href: '/cost/sydney-water-damage', description: 'Understand typical water damage restoration costs in your area.' },
+    { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'Navigate your insurance claim for water damage restoration.' },
+  ],
+  'fire-damage': [
+    { title: 'Biohazard Cleanup', href: '/services/biohazard-cleaning', description: 'Post-fire biohazard and smoke residue decontamination services.' },
+    { title: 'Commercial Fire Restoration', href: '/services/commercial-services', description: 'Minimise business downtime with commercial fire damage restoration.' },
+    { title: 'Emergency Response', href: '/services/emergency-response', description: '24/7 emergency response to secure and stabilise fire-damaged properties.' },
+    { title: 'Trauma Cleanup', href: '/services/trauma-cleanup', description: 'Sensitive and professional trauma scene restoration services.' },
+    { title: 'Fire Damage Cost Guide', href: '/cost/sydney-fire-damage', description: 'Typical fire damage restoration costs and what to expect.' },
+    { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'Step-by-step guide to filing your fire damage insurance claim.' },
+  ],
+  'mould': [
+    { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Fix the water source causing mould growth with professional restoration.' },
+    { title: 'Structural Drying', href: '/services/structural-drying', description: 'Eliminate moisture that feeds mould with industrial drying equipment.' },
+    { title: 'Mould Health Guide', href: '/guides/mould', description: 'Understand health risks of mould exposure and when to act.' },
+    { title: 'Indoor Environmental Assessment', href: '/services/indoor-environmental-professional', description: 'Professional air quality and mould testing for your property.' },
+    { title: 'Mould Removal Cost Guide', href: '/cost/sydney-mould-removal', description: 'What does professional mould remediation cost in Australia?' },
+    { title: 'Flood Damage Restoration', href: '/services/flood-damage-restoration', description: 'Post-flood restoration to prevent mould colonisation.' },
+  ],
+  'storm-damage': [
+    { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Storm water ingress requires immediate water damage response.' },
+    { title: 'Flood Damage Restoration', href: '/services/flood-damage-restoration', description: 'Flash flooding from storms needs specialist flood recovery.' },
+    { title: 'Emergency Response', href: '/services/emergency-response', description: '24/7 emergency board-up and tarping after storm damage.' },
+    { title: 'Cyclone Damage Restoration', href: '/services/cyclone-damage-restoration', description: 'Specialist cyclone and severe storm damage recovery.' },
+    { title: 'Storm Damage Cost Guide', href: '/cost/sydney-storm-damage', description: 'Understand storm damage repair costs across Australia.' },
+    { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'How to claim storm damage on your insurance policy.' },
+  ],
+  'biohazard': [
+    { title: 'Trauma Cleanup', href: '/services/trauma-cleanup', description: 'Compassionate and certified trauma scene restoration.' },
+    { title: 'Meth Lab Decontamination', href: '/services/meth-lab-decontamination', description: 'Certified methamphetamine contamination remediation.' },
+    { title: 'Fire Damage Restoration', href: '/services/fire-damage-restoration', description: 'Post-fire biohazard and smoke damage restoration.' },
+    { title: 'Sewage Cleanup', href: '/services/sewage-cleanup', description: 'Category 3 black water and sewage overflow cleanup.' },
+    { title: 'Commercial Services', href: '/services/commercial-services', description: 'Commercial-grade biohazard decontamination for businesses.' },
+    { title: 'Emergency Response', href: '/services/emergency-response', description: 'Immediate biohazard containment and response.' },
+  ],
+  'flood': [
+    { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Complete water extraction and drying after flood events.' },
+    { title: 'Mould Remediation', href: '/services/mould-remediation', description: 'Post-flood mould prevention and remediation services.' },
+    { title: 'Structural Drying', href: '/services/structural-drying', description: 'Industrial dehumidification to dry flood-affected structures.' },
+    { title: 'Sewage Cleanup', href: '/services/sewage-cleanup', description: 'Contaminated floodwater requires specialist sewage cleanup.' },
+    { title: 'Flood Restoration Cost Guide', href: '/cost/sydney-flood-restoration', description: 'What does flood damage restoration cost?' },
+    { title: 'Emergency Response', href: '/services/emergency-response', description: '24/7 emergency flood response and water extraction.' },
+  ],
+  'structural-drying': [
+    { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Full water damage restoration including structural drying.' },
+    { title: 'Mould Remediation', href: '/services/mould-remediation', description: 'Prevent mould with proper structural drying techniques.' },
+    { title: 'Flood Damage Restoration', href: '/services/flood-damage-restoration', description: 'Post-flood structural drying and dehumidification.' },
+    { title: 'Equipment Guide', href: '/guides/equipment', description: 'Learn about the industrial drying equipment we use.' },
+    { title: 'Technical Assessment', href: '/services/technical-assessment', description: 'Moisture mapping and technical drying assessment.' },
+  ],
+  'location-sydney': [
+    { title: 'Sydney Water Damage', href: '/cost/sydney-water-damage', description: 'Water damage restoration costs in Sydney.' },
+    { title: 'Sydney Fire Damage', href: '/cost/sydney-fire-damage', description: 'Fire damage restoration costs in Sydney.' },
+    { title: 'Sydney Mould Removal', href: '/cost/sydney-mould-removal', description: 'Mould remediation costs in Sydney.' },
+    { title: 'Melbourne Services', href: '/locations/melbourne', description: 'Disaster recovery services in Melbourne.' },
+    { title: 'Brisbane Services', href: '/locations/brisbane', description: 'Disaster recovery services in Brisbane.' },
+    { title: 'Newcastle Services', href: '/locations/newcastle', description: 'Disaster recovery services in Newcastle.' },
+  ],
+  'location-melbourne': [
+    { title: 'Melbourne Water Damage', href: '/cost/melbourne-water-damage', description: 'Water damage restoration costs in Melbourne.' },
+    { title: 'Melbourne Fire Damage', href: '/cost/melbourne-fire-damage', description: 'Fire damage restoration costs in Melbourne.' },
+    { title: 'Melbourne Mould Removal', href: '/cost/melbourne-mould-removal', description: 'Mould remediation costs in Melbourne.' },
+    { title: 'Sydney Services', href: '/locations/sydney', description: 'Disaster recovery services in Sydney.' },
+    { title: 'Brisbane Services', href: '/locations/brisbane', description: 'Disaster recovery services in Brisbane.' },
+    { title: 'Adelaide Services', href: '/locations/adelaide', description: 'Disaster recovery services in Adelaide.' },
+  ],
+  'location-brisbane': [
+    { title: 'Brisbane Water Damage', href: '/cost/brisbane-water-damage', description: 'Water damage restoration costs in Brisbane.' },
+    { title: 'Brisbane Fire Damage', href: '/cost/brisbane-fire-damage', description: 'Fire damage restoration costs in Brisbane.' },
+    { title: 'Brisbane Mould Removal', href: '/cost/brisbane-mould-removal', description: 'Mould remediation costs in Brisbane.' },
+    { title: 'Gold Coast Services', href: '/locations/gold-coast', description: 'Disaster recovery services on the Gold Coast.' },
+    { title: 'Sydney Services', href: '/locations/sydney', description: 'Disaster recovery services in Sydney.' },
+    { title: 'Melbourne Services', href: '/locations/melbourne', description: 'Disaster recovery services in Melbourne.' },
+  ],
+  'cost-water': [
+    { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Professional water damage restoration services.' },
+    { title: 'Structural Drying', href: '/services/structural-drying', description: 'Industrial drying to protect your property long-term.' },
+    { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'How to claim water damage on your insurance.' },
+    { title: 'Mould Remediation Costs', href: '/cost/sydney-mould-removal', description: 'Mould often follows water damage — know the costs.' },
+    { title: 'Emergency Response', href: '/services/emergency-response', description: '24/7 emergency water damage response.' },
+  ],
+  'cost-fire': [
+    { title: 'Fire Damage Restoration', href: '/services/fire-damage-restoration', description: 'Professional fire and smoke damage restoration.' },
+    { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'Filing your fire damage insurance claim.' },
+    { title: 'Commercial Services', href: '/services/commercial-services', description: 'Commercial fire damage restoration services.' },
+    { title: 'Emergency Response', href: '/services/emergency-response', description: '24/7 emergency fire damage response.' },
+    { title: 'Biohazard Cleanup', href: '/services/biohazard-cleaning', description: 'Post-fire biohazard cleanup services.' },
+  ],
+  'cost-mould': [
+    { title: 'Mould Remediation', href: '/services/mould-remediation', description: 'Professional mould removal and remediation.' },
+    { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Fix the water source causing mould.' },
+    { title: 'Mould Health Guide', href: '/guides/mould', description: 'Health risks of mould exposure.' },
+    { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'Is mould covered by insurance?' },
+    { title: 'Indoor Environmental Assessment', href: '/services/indoor-environmental-professional', description: 'Professional mould testing and air quality assessment.' },
+  ],
+  'cost-storm': [
+    { title: 'Storm Damage Restoration', href: '/services/storm-damage-restoration', description: 'Professional storm damage repair services.' },
+    { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Storm water ingress repair and drying.' },
+    { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'How to claim storm damage on insurance.' },
+    { title: 'Emergency Response', href: '/services/emergency-response', description: '24/7 storm damage emergency response.' },
+    { title: 'Flood Restoration Costs', href: '/cost/sydney-flood-restoration', description: 'Flash flood restoration costs.' },
+  ],
+  'cost-flood': [
+    { title: 'Flood Damage Restoration', href: '/services/flood-damage-restoration', description: 'Specialist flood recovery services.' },
+    { title: 'Structural Drying', href: '/services/structural-drying', description: 'Post-flood structural drying services.' },
+    { title: 'Mould Remediation Costs', href: '/cost/sydney-mould-removal', description: 'Mould often follows flooding — know the costs.' },
+    { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'Filing your flood damage insurance claim.' },
+    { title: 'Sewage Cleanup', href: '/services/sewage-cleanup', description: 'Contaminated floodwater cleanup.' },
+  ],
+  'insurance': [
+    { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Water damage services covered by most insurers.' },
+    { title: 'Fire Damage Restoration', href: '/services/fire-damage-restoration', description: 'Fire damage restoration insurance claims.' },
+    { title: 'Storm Damage Restoration', href: '/services/storm-damage-restoration', description: 'Storm damage insurance coverage guide.' },
+    { title: 'Cost Guides', href: '/guides/cost-guides', description: 'Understand restoration costs before you claim.' },
+    { title: 'Emergency Response', href: '/services/emergency-response', description: '24/7 emergency response for insured events.' },
+  ],
+  'emergency': [
+    { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Emergency water extraction and restoration.' },
+    { title: 'Fire Damage Restoration', href: '/services/fire-damage-restoration', description: 'Emergency fire damage response and restoration.' },
+    { title: 'Storm Damage Restoration', href: '/services/storm-damage-restoration', description: 'Emergency storm damage repair.' },
+    { title: 'Biohazard Cleanup', href: '/services/biohazard-cleaning', description: 'Emergency biohazard containment and cleanup.' },
+    { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'Start your insurance claim after an emergency.' },
+  ],
+  'commercial': [
+    { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Commercial water damage restoration services.' },
+    { title: 'Fire Damage Restoration', href: '/services/fire-damage-restoration', description: 'Commercial fire damage restoration.' },
+    { title: 'Mould Remediation', href: '/services/mould-remediation', description: 'Commercial mould inspection and removal.' },
+    { title: 'Emergency Response', href: '/services/emergency-response', description: '24/7 commercial emergency response.' },
+    { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'Commercial property insurance claims.' },
+  ],
+  'guides-general': [
+    { title: 'Water Damage Guide', href: '/guides/water-damage', description: 'Complete guide to water damage restoration.' },
+    { title: 'Fire Damage Guide', href: '/guides/fire-damage', description: 'What to do after fire damage.' },
+    { title: 'Mould Guide', href: '/guides/mould', description: 'Understanding mould risks and remediation.' },
+    { title: 'Insurance Guide', href: '/guides/insurance', description: 'Navigate your disaster insurance claim.' },
+    { title: 'Emergency Guide', href: '/guides/emergency', description: 'Emergency preparedness and response.' },
+    { title: 'Cost Guides', href: '/guides/cost-guides', description: 'Restoration cost guides by service and location.' },
+  ],
+};
+
+/**
+ * Get related pages for a given route slug.
+ * Matches the slug against known categories and returns cross-links.
+ */
+export function getRelatedPages(slug: string): RelatedPage[] {
+  // Direct category match
+  if (slug in RELATED_PAGES_MAP) {
+    return RELATED_PAGES_MAP[slug as CategoryKey];
+  }
+
+  // Pattern-based matching
+  if (slug.includes('water-damage')) return RELATED_PAGES_MAP['water-damage'];
+  if (slug.includes('fire-damage')) return RELATED_PAGES_MAP['fire-damage'];
+  if (slug.includes('mould') || slug.includes('mold')) return RELATED_PAGES_MAP['mould'];
+  if (slug.includes('storm-damage') || slug.includes('cyclone')) return RELATED_PAGES_MAP['storm-damage'];
+  if (slug.includes('biohazard') || slug.includes('trauma')) return RELATED_PAGES_MAP['biohazard'];
+  if (slug.includes('flood')) return RELATED_PAGES_MAP['flood'];
+  if (slug.includes('structural-drying')) return RELATED_PAGES_MAP['structural-drying'];
+  if (slug.includes('sewage')) return RELATED_PAGES_MAP['biohazard'];
+  if (slug.includes('insurance')) return RELATED_PAGES_MAP['insurance'];
+  if (slug.includes('emergency')) return RELATED_PAGES_MAP['emergency'];
+  if (slug.includes('commercial')) return RELATED_PAGES_MAP['commercial'];
+
+  // Cost page matching
+  if (slug.includes('cost')) {
+    if (slug.includes('water')) return RELATED_PAGES_MAP['cost-water'];
+    if (slug.includes('fire')) return RELATED_PAGES_MAP['cost-fire'];
+    if (slug.includes('mould') || slug.includes('mold')) return RELATED_PAGES_MAP['cost-mould'];
+    if (slug.includes('storm')) return RELATED_PAGES_MAP['cost-storm'];
+    if (slug.includes('flood')) return RELATED_PAGES_MAP['cost-flood'];
+  }
+
+  // Location matching
+  if (slug.includes('sydney')) return RELATED_PAGES_MAP['location-sydney'];
+  if (slug.includes('melbourne')) return RELATED_PAGES_MAP['location-melbourne'];
+  if (slug.includes('brisbane')) return RELATED_PAGES_MAP['location-brisbane'];
+
+  // Guide pages
+  if (slug.includes('guide')) return RELATED_PAGES_MAP['guides-general'];
+
+  return [];
+}

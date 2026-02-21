@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Shield } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getInsuranceSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Woolworths Insurance Insurance Claims | Approved Restoration Provider | Direct Billing',
@@ -21,6 +23,8 @@ export default function WoolworthsInsuranceInsurancePage() {
         { label: 'Insurance', href: '/insurance' },
         { label: 'Woolworths Insurance Insurance Claims' },
       ]}
+      sections={getInsuranceSections({ insurerName: 'Woolworths Insurance', insurerSlug: 'woolworths-insurance' })}
+      relatedPages={getRelatedPages('insurance')}
     />
   );
 }

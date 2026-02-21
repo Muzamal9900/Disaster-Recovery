@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { Settings } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
+import { getEquipmentSections } from '@/lib/content-sections';
+import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: 'Professional Equipment Catalog | Disaster Recovery Equipment & Specifications',
@@ -27,6 +29,8 @@ export default function EquipmentCatalogPage() {
         { label: 'Equipment', href: '/equipment' },
         { label: 'Disaster Recovery Equipment Catalog' },
       ]}
+      sections={getEquipmentSections({ equipmentName: 'Equipment Catalog', useCase: 'comprehensive disaster recovery equipment' })}
+      relatedPages={getRelatedPages('guides-general')}
     />
   );
 }
