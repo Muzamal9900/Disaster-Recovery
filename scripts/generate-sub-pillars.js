@@ -125,207 +125,36 @@ const subPillarPages = {
   ]
 };
 
-// Template for generating sub-pillar pages
+// Template for generating sub-pillar pages using AgContentPageTemplate
 const generatePageContent = (category, page) => {
-  return `'use client';
+  const safeName = page.title.replace(/\s+/g, '');
+  return `import { Metadata } from 'next';
+import { Wrench } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
 
-import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
-import { generateSEO, generateLocalBusinessSchema, generateServiceSchema, generateFAQSchema } from '@/lib/seo';
-import { Phone, Clock, Shield, AlertTriangle, CheckCircle2, ArrowRight } from 'lucide-react';
+export const metadata: Metadata = {
+  title: '${page.title} | Professional Services | Disaster Recovery',
+  description: 'Professional ${page.title.toLowerCase()} services in Queensland. 24/7 emergency response. Insurance approved.',
+  keywords: '${page.keywords}'
+};
 
-export default function ${page.title.replace(/\s+/g, '')}Page() {
-  const [showQuoteDialog, setShowQuoteDialog] = useState(false);
-
-  const businessInfo = {
-    name: 'Disaster Recovery - ${page.title}',
-    description: 'Professional ${page.title.toLowerCase()} services in Queensland. 24/7 emergency response for ${page.keywords}.',
-    tele
-    address: {
-      streetAddress: 'Servicing All Areas',
-      addressLocality: 'Brisbane',
-      addressRegion: 'QLD',
-      postalCode: '4000',
-      addressCountry: 'AU'
-    },
-    hours: '24/7 Online Emergency Response',
-    url: 'https://disasterrecovery.com.au/services/${category}/${page.slug}',
-    image: '/images/${page.slug}.jpg',
-    priceRange: '$$-$$$'
-  };
-
-  const faqs = [
-    {
-      question: 'How quickly can you respond to ${page.title.toLowerCase()} emergencies?',
-      answer: 'We offer 24/7 emergency response for ${page.title.toLowerCase()} with teams typically arriving within 2 hours in metro areas. Our rapid response helps minimize damage and reduce restoration costs.'
-    },
-    {
-      question: 'Is ${page.title.toLowerCase()} covered by insurance?',
-      answer: 'Most insurance policies cover ${page.title.toLowerCase()} damage when it\\'s sudden and accidental. We work directly with all major insurers and can help manage your claim from start to finish.'
-    },
-    {
-      question: 'What is the cost of ${page.title.toLowerCase()} services?',
-      answer: 'Costs vary based on the extent of damage and services required. We provide free assessments and quotes, and work with your insurance company for direct billing where applicable.'
-    }
-  ];
-
+export default function ${safeName}Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateLocalBusinessSchema(businessInfo)) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqs)) }}
-      />
-
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-centre">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              ${page.title}
-            </h1>
-            <p className="text-xl mb-8 text-blue-100">
-              Expert ${page.title.toLowerCase()} services across Queensland. Fast response, professional restoration, insurance approved.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-centre">
-              <Button 
-                size="lg" 
-                className="bg-orange-500 hover:bg-orange-600 text-white"
-                onClick={() => setShowQuoteDialog(true)}
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Use Our Online Form
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Professional ${page.title} Services</h2>
-            <p className="text-lg text-gray-700 mb-8">
-              When you need expert ${page.title.toLowerCase()} services, Disaster Recovery provides comprehensive solutions 
-              with 24/7 emergency response across Southeast Queensland.
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              <Card className="p-6">
-                <h3 className="text-xl font-bold mb-4">Our Services</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span>Emergency response 24/7</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span>Professional assessment</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span>Complete restoration</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span>Insurance assistance</span>
-                  </li>
-                </ul>
-              </Card>
-              
-              <Card className="p-6">
-                <h3 className="text-xl font-bold mb-4">Why Choose Us</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span>15+ years experience</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span>Certified technicians</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span>Latest equipment</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span>Guaranteed results</span>
-                  </li>
-                </ul>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQs */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-centre mb-10">${page.title} FAQs</h2>
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <Card key={index} className="p-6">
-                  <h3 className="text-lg font-bold mb-3">{faq.question}</h3>
-                  <p className="text-gray-700">{faq.answer}</p>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
-        <div className="container mx-auto px-4 text-centre">
-          <h2 className="text-3xl font-bold mb-6">Need ${page.title} Services?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Get professional help now. Available 24/7 for emergency response.
-          </p>
-          <Button 
-            size="lg" 
-            className="bg-orange-500 hover:bg-orange-600"
-            onClick={() => setShowQuoteDialog(true)}
-          >
-            <Phone className="mr-2" />
-            Use Our Online Form
-          </Button>
-        </div>
-      </section>
-
-      {/* Quote Dialog */}
-      <Dialog open={showQuoteDialog} onOpenChange={setShowQuoteDialog}>
-        <DialogContent className="max-w-md">
-          <DialogHeader>
-            <DialogTitle>${page.title} Services</DialogTitle>
-            <DialogDescription>
-              Get immediate assistance 24/7. Our team is ready to help.
-            </DialogDescription>
-          </DialogHeader>
-          <div className="space-y-4 pt-4">
-            <div className="flex items-centre gap-3 p-3 bg-orange-50 rounded-lg">
-              <Phone className="h-5 w-5 text-orange-600" />
-              <div>
-                <p className="font-semibold">Submit Form Now</p>
-                <p className="text-2xl font-bold text-orange-600">1300 814 870</p>
-              </div>
-            </div>
-            <Button className="w-full bg-blue-600 hover:bg-blue-700">
-              Request Service
-            </Button>
-          </div>
-        </DialogContent>
-      </Dialog>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)',
+        icon: <Wrench className="h-12 w-12" />,
+        title: '${page.title}',
+        subtitle: 'Expert ${page.title.toLowerCase()} services across Queensland. Fast response, professional restoration, insurance approved.',
+      }}
+      cta={{ text: 'Get Emergency Help', href: '/claim/start' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Services', href: '/services' },
+        { label: '${category.replace(/-/g, " ").replace(/\\b\\w/g, l => l.toUpperCase())}', href: '/services/${category}' },
+        { label: '${page.title}' },
+      ]}
+    />
   );
 }`;
 };
@@ -333,24 +162,16 @@ export default function ${page.title.replace(/\s+/g, '')}Page() {
 // Create directories and files
 Object.entries(subPillarPages).forEach(([category, pages]) => {
   pages.forEach(page => {
-    const dir = path.join(__dirname, '..', 'src', 'app', 'services', category, page.slug);
-    
-    // Create directory if it doesn't exist
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    
-    // Write the page file
+    const dir = path.join(__dirname, '..', 'app', 'services', category, page.slug);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+
     const content = generatePageContent(category, page);
-    const filePath = path.join(dir, 'page.tsx');
-    fs.writeFileSync(filePath, content);
-    
-    console.log(`Created: ${category}/${page.slug}/page.tsx`);
+    fs.writeFileSync(path.join(dir, 'page.tsx'), content);
+    console.log(`Created: ${category}/${page.slug}/page.tsx (AG)`);
   });
 });
 
-console.log('\n✅ Successfully generated 100 sub-pillar pages!');
-console.log('\nCategories created:');
+console.log('\n✅ Successfully generated 100 sub-pillar pages with Antigravity templates!');
 Object.keys(subPillarPages).forEach(category => {
   console.log(`- ${category}: ${subPillarPages[category].length} pages`);
 });

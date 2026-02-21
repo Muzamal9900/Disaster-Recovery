@@ -125,12 +125,12 @@ const propertyTypes = [
   }
 ];
 
-// Generate property type pages
+// Generate property type pages using AgContentPageTemplate
 propertyTypes.forEach(property => {
+  const safeName = property.name.replace(/[&\s]+/g, '');
   const pageContent = `import { Metadata } from 'next';
-import { Building, Home, Briefcase, Shield, Clock, DollarSign, CheckCircle2, Phone, AlertTriangle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
+import { Building2 } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
 
 export const metadata: Metadata = {
   title: '${property.name} Disaster Recovery | ${property.category} Properties | $2200 Minimum',
@@ -138,421 +138,62 @@ export const metadata: Metadata = {
   keywords: ${JSON.stringify(property.keywords)}
 };
 
-export default function ${property.name.replace(/[&\s]+/g, '')}Page() {
-  const commonIssues = ${JSON.stringify(property.commonIssues)};
-  
+export default function ${safeName}Page() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-centre mb-6">
-              <span className="bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-bold mr-3">
-                ${property.category.toUpperCase()}
-              </span>
-              <span className="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-bold">
-                ${property.insuranceCoverage} INSURANCE COVERED
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              ${property.name} Disaster Recovery
-            </h1>
-            <p className="text-xl mb-8">
-              ${property.description}
-            </p>
-            <div className="grid md:grid-cols-3 gap-4 mb-8">
-              <Card className="bg-white/10 backdrop-blur p-4 text-centre">
-                <Clock className="h-8 w-8 mx-auto mb-2" />
-                <p className="font-bold">${property.responseTime}</p>
-                <p className="text-sm">Response Time</p>
-              </Card>
-              <Card className="bg-white/10 backdrop-blur p-4 text-centre">
-                <DollarSign className="h-8 w-8 mx-auto mb-2" />
-                <p className="font-bold">${property.averageCost}</p>
-                <p className="text-sm">Typical Cost Range</p>
-              </Card>
-              <Card className="bg-white/10 backdrop-blur p-4 text-centre">
-                <Shield className="h-8 w-8 mx-auto mb-2" />
-                <p className="font-bold">${property.insuranceCoverage}</p>
-                <p className="text-sm">Insurance Coverage</p>
-              </Card>
-            </div>
-            <Button size="lg" className="bg-orange-600 hover:bg-orange-700">
-              <Phone className="mr-2 h-5 w-5" />
-              Emergency ${property.category} Response - Online Form Available 24/7
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Property-Specific Challenges */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-centre mb-12">
-            Common ${property.name} Disaster Scenarios
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {commonIssues.map((issue, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                <AlertTriangle className="h-10 w-10 text-orange-600 mb-4" />
-                <h3 className="font-bold text-lg mb-2">{issue}</h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Specialised response for ${property.category.toLowerCase()} properties
-                </p>
-                <p className="text-green-600 font-bold">✓ Covered by Insurance</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Service Process */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-centre mb-12">
-            Our ${property.name} Recovery Process
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-              <Card className="p-6">
-                <div className="flex items-start">
-                  <span className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-centre justify-centre mr-4 flex-shrink-0">
-                    1
-                  </span>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">Immediate Response</h3>
-                    <p className="text-gray-600">
-                      ${property.responseTime} arrival for ${property.category.toLowerCase()} emergencies. 
-                      Priority dispatch for ${property.name.toLowerCase()} disasters.
-                    </p>
-                  </div>
-                </div>
-              </Card>
-              
-              <Card className="p-6">
-                <div className="flex items-start">
-                  <span className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-centre justify-centre mr-4 flex-shrink-0">
-                    2
-                  </span>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">Property Assessment</h3>
-                    <p className="text-gray-600">
-                      Comprehensive evaluation of your ${property.averageSize} property. 
-                      Document all damage for insurance claims.
-                    </p>
-                  </div>
-                </div>
-              </Card>
-              
-              <Card className="p-6">
-                <div className="flex items-start">
-                  <span className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-centre justify-centre mr-4 flex-shrink-0">
-                    3
-                  </span>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">Emergency Mitigation</h3>
-                    <p className="text-gray-600">
-                      Immediate action to prevent further damage. 
-                      Specialised equipment for ${property.category.toLowerCase()} properties.
-                    </p>
-                  </div>
-                </div>
-              </Card>
-              
-              <Card className="p-6">
-                <div className="flex items-start">
-                  <span className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-centre justify-centre mr-4 flex-shrink-0">
-                    4
-                  </span>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">Full Restoration</h3>
-                    <p className="text-gray-600">
-                      Complete restoration to pre-disaster condition. 
-                      ${property.category} compliance and standards met.
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Structure */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-centre mb-12">
-            ${property.name} Disaster Recovery Pricing
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <Card className="p-8 border-2 border-blue-600">
-              <div className="text-centre mb-8">
-                <p className="text-4xl font-bold text-blue-600 mb-2">$2,200</p>
-                <p className="text-xl">Minimum Callout Fee</p>
-                <p className="text-gray-600">Includes complete assessment and emergency mitigation</p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="font-bold text-lg mb-4">Typical Cost Range:</h3>
-                  <p className="text-3xl font-bold text-green-600 mb-2">${property.averageCost}</p>
-                  <p className="text-gray-600">
-                    Based on ${property.averageSize} ${property.category.toLowerCase()} property
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-4">Insurance Coverage:</h3>
-                  <p className="text-3xl font-bold text-green-600 mb-2">${property.insuranceCoverage}</p>
-                  <p className="text-gray-600">
-                    Direct billing available for ${property.category.toLowerCase()} claims
-                  </p>
-                </div>
-              </div>
-              
-              <div className="mt-8 bg-green-50 rounded-lg p-6">
-                <p className="text-centre text-lg">
-                  <strong>No upfront payment required</strong> - We bill your insurance directly
-                </p>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-16 bg-blue-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-centre mb-12">
-            Why ${property.category} Properties Choose Us
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="p-6 text-centre">
-              <Building className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="font-bold text-lg mb-2">${property.category} Expertise</h3>
-              <p className="text-gray-600">
-                Specialised knowledge of ${property.name.toLowerCase()} requirements and regulations
-              </p>
-            </Card>
-            <Card className="p-6 text-centre">
-              <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="font-bold text-lg mb-2">Insurance Approved</h3>
-              <p className="text-gray-600">
-                Preferred vendor for all major ${property.category.toLowerCase()} insurers
-              </p>
-            </Card>
-            <Card className="p-6 text-centre">
-              <CheckCircle2 className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="font-bold text-lg mb-2">Compliance Guaranteed</h3>
-              <p className="text-gray-600">
-                Meet all ${property.category.toLowerCase()} standards and regulations
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
-        <div className="container mx-auto px-4 text-centre">
-          <Building className="h-16 w-16 mx-auto mb-6" />
-          <h2 className="text-4xl font-bold mb-6">
-            ${property.name} Disaster Emergency?
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Specialised ${property.category.toLowerCase()} disaster recovery with ${property.responseTime} response. 
-            ${property.insuranceCoverage} insurance coverage with direct billing available.
-          </p>
-          <div className="bg-white/10 backdrop-blur rounded-lg p-6 max-w-2xl mx-auto mb-8">
-            <p className="text-2xl font-bold mb-2">$2,200 Minimum Callout</p>
-            <p className="text-lg">Average Total: ${property.averageCost}</p>
-            <p className="text-lg mt-2">✓ ${property.insuranceCoverage} Insurance Covered</p>
-          </div>
-          <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100 text-lg px-8 py-6">
-            <Phone className="mr-2 h-6 w-6" />
-            Online Form Available 24/7 - ${property.category} Emergency
-          </Button>
-        </div>
-      </section>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #1E293B 0%, #334155 100%)',
+        icon: <Building2 className="h-12 w-12" />,
+        title: '${property.name} Disaster Recovery',
+        subtitle: '${property.description}. ${property.responseTime} response. ${property.insuranceCoverage} insurance coverage.',
+      }}
+      cta={{ text: 'Get Emergency Help', href: '/claim/start' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Property Types', href: '/property-types' },
+        { label: '${property.name} Disaster Recovery' },
+      ]}
+    />
   );
 }`;
 
-  // Create property type directory and page
-  const propertyDir = path.join(__dirname, '..', 'src', 'app', 'property-types', property.slug);
-  
-  if (!fs.existsSync(propertyDir)) {
-    fs.mkdirSync(propertyDir, { recursive: true });
-  }
-  
+  const propertyDir = path.join(__dirname, '..', 'app', 'property-types', property.slug);
+  if (!fs.existsSync(propertyDir)) fs.mkdirSync(propertyDir, { recursive: true });
   fs.writeFileSync(path.join(propertyDir, 'page.tsx'), pageContent);
-  console.log(`✅ Created ${property.name} page`);
+  console.log(`✅ Created ${property.name} page (AG)`);
 });
 
 // Create property types index page
 const indexContent = `import { Metadata } from 'next';
-import Link from 'next/link';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Building, Home, Briefcase, Building2, School, Hotel, Warehouse, Hospital, ArrowRight } from 'lucide-react';
+import { Building2 } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
 
 export const metadata: Metadata = {
   title: 'Property Type Disaster Recovery | Residential, Commercial, Strata | All Properties',
   description: 'Specialised disaster recovery for all property types. Residential homes, commercial offices, strata properties, government facilities.',
 };
 
-const properties = ${JSON.stringify(propertyTypes.map(p => ({ 
-  name: p.name, 
-  slug: p.slug, 
-  category: p.category,
-  description: p.description,
-  responseTime: p.responseTime,
-  insuranceCoverage: p.insuranceCoverage
-})), null, 2)};
-
 export default function PropertyTypesPage() {
-  const getIcon = (category: string) => {
-    switch(category) {
-      case 'Residential': return Home;
-      case 'Commercial': return Briefcase;
-      case 'Strata': return Building2;
-      case 'Government': return Building;
-      case 'Education': return School;
-      case 'Hospitality': return Hotel;
-      case 'Industrial': return Warehouse;
-      case 'Healthcare': return Hospital;
-      default: return Building;
-    }
-  };
-
-  const getCategoryColor = (category: string) => {
-    switch(category) {
-      case 'Residential': return 'bg-green-600';
-      case 'Commercial': return 'bg-blue-600';
-      case 'Strata': return 'bg-purple-600';
-      case 'Government': return 'bg-red-600';
-      case 'Healthcare': return 'bg-pink-600';
-      case 'Education': return 'bg-yellow-600';
-      case 'Industrial': return 'bg-gray-600';
-      case 'Hospitality': return 'bg-orange-600';
-      default: return 'bg-gray-600';
-    }
-  };
-
   return (
-    <div className="min-h-screen">
-      <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-20">
-        <div className="container mx-auto px-4 text-centre">
-          <Building className="h-16 w-16 mx-auto mb-6" />
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Disaster Recovery for All Property Types
-          </h1>
-          <p className="text-xl max-w-3xl mx-auto">
-            Specialised restoration services tailored to your property type. 
-            From residential homes to government facilities - we have you covered.
-          </p>
-        </div>
-      </section>
-      
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-centre mb-12">
-            Select Your Property Type
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {properties.map((property, index) => {
-              const IconComponent = getIcon(property.category);
-              const colorClass = getCategoryColor(property.category);
-              
-              return (
-                <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-centre justify-between mb-4">
-                    <IconComponent className="h-10 w-10 text-blue-600" />
-                    <span className={\`px-3 py-1 rounded-full text-white text-xs font-bold \${colorClass}\`}>
-                      {property.category}
-                    </span>
-                  </div>
-                  <h2 className="text-2xl font-bold mb-3">{property.name}</h2>
-                  <p className="text-gray-600 mb-4">{property.description}</p>
-                  <div className="space-y-2 mb-4">
-                    <p className="text-sm flex justify-between">
-                      <span>Response:</span>
-                      <span className="font-bold">{property.responseTime}</span>
-                    </p>
-                    <p className="text-sm flex justify-between">
-                      <span>Insurance:</span>
-                      <span className="font-bold text-green-600">{property.insuranceCoverage}</span>
-                    </p>
-                  </div>
-                  <Link href={\`/property-types/\${property.slug}\`}>
-                    <Button className="w-full" variant="outline">
-                      Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Property-Specific Matters */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-centre mb-12">
-            Why Property-Specific Recovery Matters
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-6">
-                <h3 className="text-xl font-bold mb-4">Residential Properties</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Family safety and health priority</li>
-                  <li>• Personal belongings protection</li>
-                  <li>• Temporary accommodation assistance</li>
-                  <li>• Emotional support and care</li>
-                </ul>
-              </Card>
-              <Card className="p-6">
-                <h3 className="text-xl font-bold mb-4">Commercial Properties</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Business continuity focus</li>
-                  <li>• Minimize revenue loss</li>
-                  <li>• Document and data recovery</li>
-                  <li>• Employee safety protocols</li>
-                </ul>
-              </Card>
-              <Card className="p-6">
-                <h3 className="text-xl font-bold mb-4">Strata Properties</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Multiple stakeholder coordination</li>
-                  <li>• Common area prioritization</li>
-                  <li>• Strata management liaison</li>
-                  <li>• Compliance with by-laws</li>
-                </ul>
-              </Card>
-              <Card className="p-6">
-                <h3 className="text-xl font-bold mb-4">Government Properties</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Public safety paramount</li>
-                  <li>• Regulatory compliance</li>
-                  <li>• Security clearance protocols</li>
-                  <li>• Continuity of services</li>
-                </ul>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #1E293B 0%, #334155 100%)',
+        icon: <Building2 className="h-12 w-12" />,
+        title: 'Disaster Recovery for All Property Types',
+        subtitle: 'Specialised restoration services tailored to your property type. From residential homes to government facilities.',
+      }}
+      cta={{ text: 'Get Emergency Help', href: '/claim/start' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Property Types' },
+      ]}
+    />
   );
 }`;
 
-const propertyTypesDir = path.join(__dirname, '..', 'src', 'app', 'property-types');
-if (!fs.existsSync(propertyTypesDir)) {
-  fs.mkdirSync(propertyTypesDir, { recursive: true });
-}
-fs.writeFileSync(path.join(propertyTypesDir, 'page.tsx'), indexContent);
+const dir = path.join(__dirname, '..', 'app', 'property-types');
+if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+fs.writeFileSync(path.join(dir, 'page.tsx'), indexContent);
 
-console.log('\n✅ All property type pages generated successfully!');
+console.log('\n✅ All property type pages generated with Antigravity templates!');
 console.log(`Generated ${propertyTypes.length} property type pages.`);

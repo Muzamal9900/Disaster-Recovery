@@ -1,7 +1,7 @@
 {
   "framework": "nextjs",
-  "installCommand": "npm install --force --legacy-peer-deps",
-  "buildCommand": "node scripts/force-build-pages.js && node scripts/generate-sitemap.js && next build",
+  "installCommand": "npm install --force --legacy-peer-deps --include=dev",
+  "buildCommand": "npx prisma@5 generate && node scripts/force-build-pages.js && node scripts/generate-sitemap.js && next build",
   "public": true,
   "env": {
     "NODE_OPTIONS": "--max-old-space-size=8192",
@@ -28,20 +28,6 @@
       "NEXT_PUBLIC_APP_URL": "https://disaster-recovery-seven.vercel.app",
       "NEXT_PUBLIC_DEMO_MODE": "false",
       "SKIP_BUILD_ERRORS": "true"
-    }
-  },
-  "functions": {
-    "src/app/api/**/*": {
-      "maxDuration": 30,
-      "memory": 1024
-    },
-    "src/app/**/route.ts": {
-      "maxDuration": 30,
-      "memory": 1024
-    },
-    "src/app/**/route.js": {
-      "maxDuration": 30,
-      "memory": 1024
     }
   },
   "regions": ["syd1"],

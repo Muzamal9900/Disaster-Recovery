@@ -1,9 +1,5 @@
 'use client';
 
-
-import { FEATURE_FLAGS } from '@/lib/feature-flags';
-import { AntigravityNavbar } from '@/components/antigravity';
-import { AntigravityFooter } from '@/components/antigravity';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence, useMotionValue, useTransform, animate } from 'framer-motion';
 import { 
@@ -1011,16 +1007,3 @@ ${slide.speakerNotes}
 }
 
 export default InvestorPitchProPage;
-export default function Page() {
-  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
-    return <PageOriginal />;
-  }
-
-  return (
-    <>
-      <AntigravityNavbar />
-      <PageOriginal />
-      <AntigravityFooter />
-    </>
-  );
-}

@@ -106,7 +106,17 @@ const nextConfig = {
         source: '/home',
         destination: '/',
         permanent: true,
-      }
+      },
+      {
+        source: '/portal/connect',
+        destination: '/claim/start',
+        permanent: false,
+      },
+      {
+        source: '/services/fire-smoke',
+        destination: '/services/fire-damage-restoration',
+        permanent: true,
+      },
     ];
   },
 

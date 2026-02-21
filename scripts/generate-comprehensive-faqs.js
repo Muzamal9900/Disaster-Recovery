@@ -167,236 +167,80 @@ const faqCategories = [
   }
 ];
 
-// Generate FAQ pages
+// Generate FAQ pages using AgFAQPageTemplate
 faqCategories.forEach(category => {
+  const safeName = category.name.replace(/[\s&]+/g, '');
+  const faqsJson = JSON.stringify(category.faqs, null, 2);
+  const relatedCats = faqCategories
+    .filter(c => c.slug !== category.slug)
+    .map(c => ({ name: c.name, slug: c.slug, description: c.description, questionCount: c.faqs.length }));
+
   const pageContent = `import { Metadata } from 'next';
-import { HelpCircle, ChevronDown, ChevronUp, AlertCircle, CheckCircle2, Info } from 'lucide-react';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { HelpCircle } from 'lucide-react';
+import { AgFAQPageTemplate } from '@/components/antigravity';
 
 export const metadata: Metadata = {
   title: '${category.name} | FAQ | Disaster Recovery',
-  description: '${category.description}. Get answers to common questions about disaster recovery services, insurance claims, and emergency response.',
-  keywords: ['disaster recovery FAQ', '${category.slug} questions', 'restoration help', 'insurance claims FAQ']
+  description: '${category.description}. Get answers to common questions about disaster recovery services.',
 };
 
-export default function ${category.name.replace(/[\s&]+/g, '')}Page() {
-  const faqs = ${JSON.stringify(category.faqs, null, 2)};
-
+export default function ${safeName}Page() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-centre">
-            <HelpCircle className="h-16 w-16 mx-auto mb-4" />
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              ${category.name}
-            </h1>
-            <p className="text-xl">
-              ${category.description}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Content */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                  <details className="group">
-                    <summary className="flex items-start justify-between cursor-pointer list-none">
-                      <div className="flex items-start">
-                        <div className="bg-blue-100 rounded-full p-2 mr-4">
-                          <HelpCircle className="h-5 w-5 text-blue-600" />
-                        </div>
-                        <h2 className="text-xl font-bold pr-4">{faq.question}</h2>
-                      </div>
-                      <ChevronDown className="h-5 w-5 text-gray-500 group-open:hidden" />
-                      <ChevronUp className="h-5 w-5 text-gray-500 hidden group-open:block" />
-                    </summary>
-                    <div className="mt-4 ml-14">
-                      <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                    </div>
-                  </details>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Related FAQs */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-centre mb-12">
-            More FAQ Categories
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            ${faqCategories.filter(c => c.slug !== category.slug).map(cat => `
-            <Link href="/faq/${cat.slug}">
-              <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer">
-                <HelpCircle className="h-8 w-8 text-blue-600 mb-3" />
-                <h3 className="font-bold mb-2">${cat.name}</h3>
-                <p className="text-sm text-gray-600">${cat.description}</p>
-              </Card>
-            </Link>`).join('')}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-        <div className="container mx-auto px-4 text-centre">
-          <AlertCircle className="h-16 w-16 mx-auto mb-6" />
-          <h2 className="text-3xl font-bold mb-6">
-            Need Emergency Help Now?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Don't wait - get connected with IICRC certified contractors in your area
-          </p>
-          <Link href="/get-help">
-            <Button size="lg" className="bg-white text-blue-800 hover:bg-gray-100">
-              Get Emergency Help Online
-            </Button>
-          </Link>
-        </div>
-      </section>
-    </div>
+    <AgFAQPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%)',
+        icon: <HelpCircle className="h-12 w-12" />,
+        title: '${category.name}',
+        subtitle: '${category.description}',
+      }}
+      faqs={${faqsJson}}
+      relatedCategories={${JSON.stringify(relatedCats, null, 2)}}
+      cta={{ text: 'Get Emergency Help', href: '/claim/start' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'FAQ', href: '/faq' },
+        { label: '${category.name}' },
+      ]}
+    />
   );
 }`;
 
-  // Create FAQ directory and page
-  const faqDir = path.join(__dirname, '..', 'src', 'app', 'faq', category.slug);
-  
-  if (!fs.existsSync(faqDir)) {
-    fs.mkdirSync(faqDir, { recursive: true });
-  }
-  
+  const faqDir = path.join(__dirname, '..', 'app', 'faq', category.slug);
+  if (!fs.existsSync(faqDir)) fs.mkdirSync(faqDir, { recursive: true });
   fs.writeFileSync(path.join(faqDir, 'page.tsx'), pageContent);
-  console.log(`✅ Created ${category.name} FAQ page`);
+  console.log(`✅ Created ${category.name} FAQ page (AG)`);
 });
 
-// Create main FAQ index page
+// Create main FAQ index page using AgContentPageTemplate
 const indexContent = `import { Metadata } from 'next';
-import Link from 'next/link';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { HelpCircle, ArrowRight } from 'lucide-react';
+import { HelpCircle } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions | All FAQs | Disaster Recovery',
   description: 'Find answers to all your questions about disaster recovery, water damage, fire restoration, mould removal, insurance claims, and emergency response.',
 };
 
-const categories = ${JSON.stringify(faqCategories.map(c => ({
-  name: c.name,
-  slug: c.slug,
-  description: c.description,
-  questionCount: c.faqs.length
-})), null, 2)};
-
 export default function FAQIndexPage() {
   return (
-    <div className="min-h-screen">
-      <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-20">
-        <div className="container mx-auto px-4 text-centre">
-          <HelpCircle className="h-16 w-16 mx-auto mb-6" />
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-xl max-w-3xl mx-auto">
-            Get answers to common questions about disaster recovery, 
-            insurance claims, and our contractor network.
-          </p>
-        </div>
-      </section>
-      
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {categories.map((category, index) => (
-              <Link key={index} href={\`/faq/\${category.slug}\`}>
-                <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer h-full">
-                  <div className="flex items-start justify-between mb-4">
-                    <HelpCircle className="h-10 w-10 text-blue-600" />
-                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm font-bold">
-                      {category.questionCount} Questions
-                    </span>
-                  </div>
-                  <h2 className="text-2xl font-bold mb-3">{category.name}</h2>
-                  <p className="text-gray-600 mb-4">{category.description}</p>
-                  <div className="flex items-centre text-blue-600 font-bold">
-                    View Questions <ArrowRight className="ml-2 h-4 w-4" />
-                  </div>
-                </Card>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Answers */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-centre mb-12">
-            Quick Answers to Top Questions
-          </h2>
-          <div className="max-w-4xl mx-auto space-y-6">
-            <Card className="p-6">
-              <h3 className="font-bold text-lg mb-2">How does your online system work?</h3>
-              <p className="text-gray-700">
-                Fill out our form, select your service radius (20-100km), and receive multiple 
-                quotes from IICRC certified contractors within 30-60 minutes.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <h3 className="font-bold text-lg mb-2">Why is there a $2,200 minimum fee?</h3>
-              <p className="text-gray-700">
-                This covers emergency response, professional assessment, equipment, certified 
-                technicians, and insurance documentation - preventing thousands in secondary damage.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <h3 className="font-bold text-lg mb-2">Is insurance coverage available?</h3>
-              <p className="text-gray-700">
-                Yes, most disasters are insurance covered. Our contractors bill insurance directly 
-                so you only pay your excess.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
-        <div className="container mx-auto px-4 text-centre">
-          <h2 className="text-3xl font-bold mb-6">
-            Can't Find Your Answer?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Get immediate help from certified professionals in your area
-          </p>
-          <Link href="/get-help">
-            <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100">
-              Get Help Now
-            </Button>
-          </Link>
-        </div>
-      </section>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%)',
+        icon: <HelpCircle className="h-12 w-12" />,
+        title: 'Frequently Asked Questions',
+        subtitle: 'Get answers to common questions about disaster recovery, insurance claims, and our contractor network.',
+      }}
+      cta={{ text: 'Get Emergency Help', href: '/claim/start' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'FAQ' },
+      ]}
+    />
   );
 }`;
 
-const faqDir = path.join(__dirname, '..', 'src', 'app', 'faq');
-if (!fs.existsSync(faqDir)) {
-  fs.mkdirSync(faqDir, { recursive: true });
-}
+const faqDir = path.join(__dirname, '..', 'app', 'faq');
+if (!fs.existsSync(faqDir)) fs.mkdirSync(faqDir, { recursive: true });
 fs.writeFileSync(path.join(faqDir, 'page.tsx'), indexContent);
 
-console.log('\n✅ All FAQ pages generated successfully!');
-console.log(`Generated ${faqCategories.length} FAQ category pages.`);
+console.log('\n✅ All FAQ pages generated with Antigravity templates!');
