@@ -3,6 +3,9 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Link from 'next/link';
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { 
   Flame, 
   AlertTriangle, 
@@ -29,7 +32,7 @@ import {
   HelpCircle
 } from 'lucide-react';
 
-export default function FireDamageGuidePage() {
+function FireDamageGuidePageOriginal() {
   const [selectedClass, setSelectedClass] = useState('structure');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
@@ -900,5 +903,18 @@ export default function FireDamageGuidePage() {
         </div>
       </section>
     </div>
+  );
+}
+export default function FireDamageGuidePage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <FireDamageGuidePageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <FireDamageGuidePageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

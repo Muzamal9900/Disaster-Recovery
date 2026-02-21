@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -15,7 +19,7 @@ import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
-export default function Day5EquipmentTechnology() {
+function Day5EquipmentTechnologyOriginal() {
   const [currentModule, setCurrentModule] = useState(0);
   const [selectedEquipment, setSelectedEquipment] = useState('moisture');
 
@@ -887,5 +891,18 @@ export default function Day5EquipmentTechnology() {
         </main>
       </div>
     </div>
+  );
+}
+export default function Day5EquipmentTechnology() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <Day5EquipmentTechnologyOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <Day5EquipmentTechnologyOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

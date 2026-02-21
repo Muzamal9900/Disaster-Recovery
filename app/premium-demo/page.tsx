@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React from 'react';
 import { PremiumSupportTickets } from '@/components/contractor/dashboard/sections/PremiumSupportTickets';
 import { Button } from '@/components/ui/button';
@@ -19,7 +23,7 @@ import {
   Search,
   Filter, MessageSquare} from 'lucide-react';
 
-export default function PremiumDemoPage() {
+function PremiumDemoPageOriginal() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
       {/* Premium Hero with Glass Effect */}
@@ -304,5 +308,18 @@ export default function PremiumDemoPage() {
         </div>
       </footer>
     </div>
+  );
+}
+export default function PremiumDemoPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <PremiumDemoPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <PremiumDemoPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

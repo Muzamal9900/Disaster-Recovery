@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import { Shield, FileCheck, MessageSquare} from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Shield } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
 
 export const metadata: Metadata = {
   title: 'RACT Insurance Claims | Approved Restoration Provider | Direct Billing',
@@ -8,17 +8,19 @@ export const metadata: Metadata = {
 
 export default function RACTInsurancePage() {
   return (
-    <div className="min-h-screen">
-      <section className="bg-gradient-to-r from-green-800 to-blue-800 text-white py-20">
-        <div className="container mx-auto px-4">
-          <Shield className="h-16 w-16 text-emerald-600 mb-6" />
-          <h1 className="text-4xl font-bold mb-4">RACT Insurance Claims</h1>
-          <p className="text-xl mb-8">Preferred Provider • Direct Billing • No Upfront Costs</p>
-          <Button size="lg" className="bg-green-600 hover:bg-green-800">
-            <MessageSquare className="mr-2" /> Start Your Claim
-          </Button>
-        </div>
-      </section>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #0F2942 0%, #1A4674 100%)',
+        icon: <Shield className="h-12 w-12" />,
+        title: 'RACT Insurance Claims',
+        subtitle: 'Preferred Provider • Direct Billing • No Upfront Costs',
+      }}
+      cta={{ text: 'Start Your Claim', href: '/claim' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Insurance', href: '/insurance' },
+        { label: 'RACT Insurance Claims' },
+      ]}
+    />
   );
 }

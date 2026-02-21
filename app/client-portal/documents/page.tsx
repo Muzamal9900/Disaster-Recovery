@@ -1,9 +1,13 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import { FileText, Download, Upload, Folder, Image, File, Search, Filter, Eye, Trash2 } from 'lucide-react';
 
-export default function ClientPortalDocumentsPage() {
+function ClientPortalDocumentsPageOriginal() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterType, setFilterType] = useState('all');
 
@@ -177,5 +181,18 @@ export default function ClientPortalDocumentsPage() {
         )}
       </div>
     </div>
+  );
+}
+export default function ClientPortalDocumentsPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ClientPortalDocumentsPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ClientPortalDocumentsPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

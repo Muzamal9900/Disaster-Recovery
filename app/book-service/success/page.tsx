@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { 
@@ -304,7 +308,7 @@ function BookingSuccessPageContent() {
   );
 }
 
-export default function BookingSuccessPage() {
+function BookingSuccessPageOriginal() {
   return (
     <Suspense fallback={
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -316,5 +320,18 @@ export default function BookingSuccessPage() {
     }>
       <BookingSuccessPageContent />
     </Suspense>
+  );
+}
+export default function BookingSuccessPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <BookingSuccessPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <BookingSuccessPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

@@ -9,6 +9,10 @@ import {
   BarChart3, PieChart, Activity, FileText, ExternalLink,
   Thermometer, Wind, Gauge, MessageSquare} from 'lucide-react';
 
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityServicePageTemplate } from '@/components/antigravity';
+import { waterDamageData } from '@/components/antigravity';
+
 import {
   generateAustralianMetadata,
   generateAustralianSchema,
@@ -72,6 +76,10 @@ const structuredData = {
 };
 
 export default function WaterDamageRestorationPage() {
+  if (FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <AntigravityServicePageTemplate data={waterDamageData} />;
+  }
+
   // Get real statistics
   const floodStats = AUSTRALIAN_DISASTER_STATISTICS.floodingStatistics.data;
   const climateData = AUSTRALIAN_DISASTER_STATISTICS.climateImpact.data;

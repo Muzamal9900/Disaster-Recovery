@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import { MapPin } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Liverpool | Emergency Services New South Wales',
@@ -6,9 +8,20 @@ export const metadata: Metadata = {
 
 export default function LiverpoolPage() {
   return (
-    <div className="min-h-screen p-8">
-      <h1 className="text-4xl font-bold mb-6">Disaster Recovery Liverpool</h1>
-      <p className="text-xl">24/7 Emergency Services in Liverpool, New South Wales</p>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #0F2942 0%, #1E3A5F 100%)',
+        icon: <MapPin className="h-12 w-12" />,
+        title: 'Disaster Recovery Liverpool',
+        subtitle: '24/7 Emergency Services in Liverpool',
+      }}
+      cta={{ text: 'Emergency Response', href: '/claim/start' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Locations', href: '/locations' },
+        { label: 'NSW', href: '/locations/nsw' },
+        { label: 'Liverpool' },
+      ]}
+    />
   );
 }

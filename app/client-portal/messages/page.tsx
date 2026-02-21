@@ -1,9 +1,13 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import { MessageSquare, Send, Paperclip, Search, User, Clock, CheckCheck } from 'lucide-react';
 
-export default function ClientPortalMessagesPage() {
+function ClientPortalMessagesPageOriginal() {
   const [selectedConversation, setSelectedConversation] = useState(1);
   const [messageText, setMessageText] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
@@ -212,5 +216,18 @@ export default function ClientPortalMessagesPage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function ClientPortalMessagesPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ClientPortalMessagesPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ClientPortalMessagesPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

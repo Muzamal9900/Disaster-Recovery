@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import { Clock, AlertTriangle, MessageSquare} from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { AlertTriangle } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
 
 export const metadata: Metadata = {
   title: 'New Year Emergency Services | December 31 - January 2 | 24/7 Disaster Recovery',
@@ -8,18 +8,19 @@ export const metadata: Metadata = {
 
 export default function NewYearEmergencyPage() {
   return (
-    <div className="min-h-screen">
-      <section className="bg-gradient-to-r from-red-900 to-orange-800 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <Clock className="h-16 w-16 mx-auto mb-6 animate-pulse" />
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">New Year Emergency Services</h1>
-          <p className="text-xl mb-2">Available December 31 - January 2</p>
-          <p className="text-2xl mb-8">No Extra Charges • Same Day Response</p>
-          <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100">
-            <MessageSquare className="mr-2" /> Call Online Form Available 24/7 Now
-          </Button>
-        </div>
-      </section>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #7F1D1D 0%, #D93025 50%, #B91C1C 100%)',
+        icon: <AlertTriangle className="h-12 w-12" />,
+        title: 'New Year Emergency Services',
+        subtitle: 'No Extra Charges • Same Day Response',
+      }}
+      cta={{ text: 'Emergency Response Now', href: '/claim/start' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Emergency', href: '/emergency' },
+        { label: 'New Year Emergency Services' },
+      ]}
+    />
   );
 }

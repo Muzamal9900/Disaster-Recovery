@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -14,7 +18,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
-export default function Day2WaterDamageRestoration() {
+function Day2WaterDamageRestorationOriginal() {
   const [currentModule, setCurrentModule] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState<'cat1' | 'cat2' | 'cat3'>('cat1');
 
@@ -734,5 +738,18 @@ export default function Day2WaterDamageRestoration() {
         </main>
       </div>
     </div>
+  );
+}
+export default function Day2WaterDamageRestoration() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <Day2WaterDamageRestorationOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <Day2WaterDamageRestorationOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

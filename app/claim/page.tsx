@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -26,7 +30,7 @@ import {
 
 const PLATFORM_FEE = 2750.00;
 
-export default function OnlineClaimPage() {
+function OnlineClaimPageOriginal() {
   const [step, setStep] = useState(1);
   const [submitting, setSubmitting] = useState(false);
   const [claimId, setClaimId] = useState<string | null>(null);
@@ -750,5 +754,18 @@ export default function OnlineClaimPage() {
         </Card>
       </div>
     </div>
+  );
+}
+export default function OnlineClaimPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <OnlineClaimPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <OnlineClaimPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

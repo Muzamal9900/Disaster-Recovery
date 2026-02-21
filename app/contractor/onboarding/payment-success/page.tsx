@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { CheckCircle, ArrowRight, Download, BookOpen, Clock } from 'lucide-react';
@@ -211,7 +215,7 @@ function PaymentSuccessPageContent() {
   );
 }
 
-export default function PaymentSuccessPage() {
+function PaymentSuccessPageOriginal() {
   return (
     <Suspense fallback={
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -223,5 +227,18 @@ export default function PaymentSuccessPage() {
     }>
       <PaymentSuccessPageContent />
     </Suspense>
+  );
+}
+export default function PaymentSuccessPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <PaymentSuccessPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <PaymentSuccessPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -13,7 +17,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 
-export default function ContractorPortal() {
+function ContractorPortalOriginal() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const router = useRouter();
 
@@ -300,5 +304,18 @@ export default function ContractorPortal() {
         </main>
       </div>
     </div>
+  );
+}
+export default function ContractorPortal() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ContractorPortalOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ContractorPortalOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

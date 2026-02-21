@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
-import { FileText, TrendingUp, Users } from 'lucide-react';
+import { FileText } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
 
 export const metadata: Metadata = {
   title: 'Brisbane Floods 2022 Recovery | Case Study | Disaster Recovery Success Story',
@@ -7,14 +8,19 @@ export const metadata: Metadata = {
 
 export default function BrisbaneFloods2022RecoveryPage() {
   return (
-    <div className="min-h-screen">
-      <section className="bg-gradient-to-b from-green-900 to-green-800 text-white py-20">
-        <div className="container mx-auto px-4">
-          <FileText className="h-16 w-16 text-green-700 mb-6" />
-          <h1 className="text-4xl font-bold mb-4">Case Study: Brisbane Floods 2022 Recovery</h1>
-          <p className="text-xl">A Success Story in Disaster Recovery</p>
-        </div>
-      </section>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #14532D 0%, #15803D 100%)',
+        icon: <FileText className="h-12 w-12" />,
+        title: 'Brisbane Floods 2022 Recovery',
+        subtitle: 'How we helped recover from Brisbane Floods 2022 Recovery. Real results, timelines, and restoration process.',
+      }}
+      cta={{ text: 'Get Emergency Help', href: '/claim/start' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Case Studies', href: '/case-studies' },
+        { label: 'Brisbane Floods 2022 Recovery' },
+      ]}
+    />
   );
 }

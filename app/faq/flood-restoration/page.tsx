@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import { HelpCircle, MessageCircle } from 'lucide-react';
-import { Card } from '@/components/ui/card';
+import { HelpCircle } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
 
 export const metadata: Metadata = {
   title: 'flood restoration FAQ | Common Questions Answered | Expert Guide',
@@ -8,14 +8,19 @@ export const metadata: Metadata = {
 
 export default function floodrestorationFAQPage() {
   return (
-    <div className="min-h-screen">
-      <section className="bg-gradient-to-b from-indigo-900 to-indigo-800 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <HelpCircle className="h-16 w-16 text-indigo-700 mx-auto mb-6" />
-          <h1 className="text-4xl font-bold mb-4">Flood restoration FAQ</h1>
-          <p className="text-xl">Expert Answers to Your Questions</p>
-        </div>
-      </section>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #0F2942 0%, #1A4674 100%)',
+        icon: <HelpCircle className="h-12 w-12" />,
+        title: 'Flood restoration FAQ',
+        subtitle: 'Common questions and expert answers',
+      }}
+      cta={{ text: 'Get Help Now', href: '/claim/start' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'FAQ', href: '/faq' },
+        { label: 'Flood Restoration' },
+      ]}
+    />
   );
 }

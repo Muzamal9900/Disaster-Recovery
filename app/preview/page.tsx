@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React from 'react';
 import PremiumHeader from '@/components/layout/PremiumHeader';
 import PremiumHero from '@/components/sections/PremiumHero';
@@ -18,7 +22,7 @@ import {
   Clock,
   Star, MessageSquare} from 'lucide-react';
 
-export default function PreviewPage() {
+function PreviewPageOriginal() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Premium Header */}
@@ -268,5 +272,18 @@ export default function PreviewPage() {
         }
       `}</style>
     </div>
+  );
+}
+export default function PreviewPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <PreviewPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <PreviewPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -48,7 +52,7 @@ interface Job {
   deadline: string;
 }
 
-export default function ContractorPortalPage() {
+function ContractorPortalPageOriginal() {
   const router = useRouter();
   const [contractor, setContractor] = useState<any>(null);
   const [jobs, setJobs] = useState<Job[]>([]);
@@ -416,5 +420,18 @@ export default function ContractorPortalPage() {
         </Tabs>
       </div>
     </div>
+  );
+}
+export default function ContractorPortalPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ContractorPortalPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ContractorPortalPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState, useEffect } from 'react';
 import { Search, Plus, Eye, BarChart3, MapPin, Filter, Download, RefreshCw } from 'lucide-react';
 import Link from 'next/link';
@@ -31,7 +35,7 @@ interface PaginationInfo {
   pages: number;
 }
 
-export default function SEOPagesAdmin() {
+function SEOPagesAdminOriginal() {
   const [pages, setPages] = useState<SEOPage[]>([]);
   const [loading, setLoading] = useState(true);
   const [pagination, setPagination] = useState<PaginationInfo>({
@@ -424,5 +428,18 @@ export default function SEOPagesAdmin() {
         </div>
       </div>
     </div>
+  );
+}
+export default function SEOPagesAdmin() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <SEOPagesAdminOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <SEOPagesAdminOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

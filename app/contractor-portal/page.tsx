@@ -1,5 +1,9 @@
 'use client'
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { 
@@ -22,7 +26,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 
-export default function ContractorPortalPage() {
+function ContractorPortalPageOriginal() {
   const [activeTab, setActiveTab] = useState('dashboard')
 
   const jobs = [
@@ -364,4 +368,17 @@ export default function ContractorPortalPage() {
       </div>
     </div>
   )
+}
+export default function ContractorPortalPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ContractorPortalPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ContractorPortalPageOriginal />
+      <AntigravityFooter />
+    </>
+  );
 }

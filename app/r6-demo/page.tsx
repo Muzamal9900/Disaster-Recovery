@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React from 'react';
 import { 
   Shield, 
@@ -16,7 +20,7 @@ import {
   Star,
   TrendingUp, MessageSquare} from 'lucide-react';
 
-export default function R6DemoPage() {
+function R6DemoPageOriginal() {
   const services = [
     {
       icon: Droplets,
@@ -330,5 +334,18 @@ export default function R6DemoPage() {
         </div>
       </footer>
     </div>
+  );
+}
+export default function R6DemoPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <R6DemoPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <R6DemoPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

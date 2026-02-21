@@ -1,10 +1,14 @@
 'use client'
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useSession } from 'next-auth/react'
 import { Card } from '@/components/ui/card'
 import { Users, FileText, FileCheck, DollarSign } from 'lucide-react'
 
-export default function DashboardPage() {
+function DashboardPageOriginal() {
   const { data: session } = useSession()
 
   const stats = [
@@ -99,4 +103,17 @@ export default function DashboardPage() {
       </div>
     </div>
   )
+}
+export default function DashboardPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <DashboardPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <DashboardPageOriginal />
+      <AntigravityFooter />
+    </>
+  );
 }

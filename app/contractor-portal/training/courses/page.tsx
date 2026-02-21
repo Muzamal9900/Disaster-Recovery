@@ -1,10 +1,14 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { BookOpen, Clock, Award, Users, Star, Filter, Search, PlayCircle, Lock, CheckCircle } from 'lucide-react';
 
-export default function CourseCatalogPage() {
+function CourseCatalogPageOriginal() {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState('');
   const [filterCategory, setFilterCategory] = useState('all');
@@ -348,5 +352,18 @@ export default function CourseCatalogPage() {
         )}
       </div>
     </div>
+  );
+}
+export default function CourseCatalogPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <CourseCatalogPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <CourseCatalogPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

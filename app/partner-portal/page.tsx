@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -59,7 +63,7 @@ interface BillingRecord {
   paidAt?: string;
 }
 
-export default function PartnerPortal() {
+function PartnerPortalOriginal() {
   const [dashboardData, setDashboardData] = useState<PartnerDashboardData | null>(null);
   const [loading, setLoading] = useState(true);
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null);
@@ -386,5 +390,18 @@ export default function PartnerPortal() {
         </Tabs>
       </div>
     </div>
+  );
+}
+export default function PartnerPortal() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <PartnerPortalOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <PartnerPortalOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

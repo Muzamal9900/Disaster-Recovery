@@ -1,10 +1,14 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, AlertCircle, Clock, Shield, CheckCircle, ArrowRight, Home, Building, Droplets, Flame, Wind, Heart } from 'lucide-react';
 
-export default function WhosFirstPage() {
+function WhosFirstPageOriginal() {
   const [selectedScenario, setSelectedScenario] = useState<string | null>(null);
   const [quizStep, setQuizStep] = useState(0);
   const [quizAnswers, setQuizAnswers] = useState<Record<string, string>>({});
@@ -371,5 +375,18 @@ export default function WhosFirstPage() {
         </div>
       </section>
     </div>
+  );
+}
+export default function WhosFirstPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <WhosFirstPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <WhosFirstPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

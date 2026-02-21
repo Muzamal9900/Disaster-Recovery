@@ -1,12 +1,16 @@
 'use client'
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react'
 import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 
-export default function LoginPage() {
+function LoginPageOriginal() {
   const router = useRouter()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -100,4 +104,17 @@ export default function LoginPage() {
       </div>
     </div>
   )
+}
+export default function LoginPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <LoginPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <LoginPageOriginal />
+      <AntigravityFooter />
+    </>
+  );
 }

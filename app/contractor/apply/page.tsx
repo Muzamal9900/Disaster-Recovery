@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 export const dynamic = 'force-dynamic';
 
 import { useState, useEffect, Suspense } from 'react';
@@ -450,10 +454,23 @@ function ContractorApplicationContent() {
   );
 }
 
-export default function ContractorApplicationPage() {
+function ContractorApplicationPageOriginal() {
   return (
     <Suspense fallback={<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 flex items-center justify-center"><div className="text-white">Loading...</div></div>}>
       <ContractorApplicationContent />
     </Suspense>
+  );
+}
+export default function ContractorApplicationPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ContractorApplicationPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ContractorApplicationPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

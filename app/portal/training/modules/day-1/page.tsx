@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -15,7 +19,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 
-export default function Day1PlatformOrientation() {
+function Day1PlatformOrientationOriginal() {
   const [currentModule, setCurrentModule] = useState(0);
   const [moduleProgress, setModuleProgress] = useState([100, 100, 75, 0, 0, 0]);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -531,5 +535,18 @@ export default function Day1PlatformOrientation() {
         </main>
       </div>
     </div>
+  );
+}
+export default function Day1PlatformOrientation() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <Day1PlatformOrientationOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <Day1PlatformOrientationOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

@@ -3,6 +3,9 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Link from 'next/link';
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { 
   Droplets, 
   AlertTriangle, 
@@ -31,7 +34,7 @@ import {
   Eye
 } from 'lucide-react';
 
-export default function MouldRemediationGuidePage() {
+function MouldRemediationGuidePageOriginal() {
   const [selectedMouldType, setSelectedMouldType] = useState('aspergillus');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
@@ -1034,5 +1037,18 @@ export default function MouldRemediationGuidePage() {
         </div>
       </section>
     </div>
+  );
+}
+export default function MouldRemediationGuidePage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <MouldRemediationGuidePageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <MouldRemediationGuidePageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

@@ -1,11 +1,15 @@
 'use client'
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 
-export default function SignupPage() {
+function SignupPageOriginal() {
   const router = useRouter()
   const [formData, setFormData] = useState({
     name: '',
@@ -172,4 +176,17 @@ export default function SignupPage() {
       </div>
     </div>
   )
+}
+export default function SignupPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <SignupPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <SignupPageOriginal />
+      <AntigravityFooter />
+    </>
+  );
 }

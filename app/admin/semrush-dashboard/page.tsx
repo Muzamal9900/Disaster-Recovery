@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -28,7 +32,7 @@ interface KeywordData {
   url?: string;
 }
 
-export default function SEMrushDashboard() {
+function SEMrushDashboardOriginal() {
   const [isConnected, setIsConnected] = useState(false);
   const [loading, setLoading] = useState(true);
   const [keywordData, setKeywordData] = useState<KeywordData[]>([]);
@@ -422,5 +426,18 @@ export default function SEMrushDashboard() {
         </div>
       </div>
     </div>
+  );
+}
+export default function SEMrushDashboard() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <SEMrushDashboardOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <SEMrushDashboardOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

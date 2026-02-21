@@ -1,9 +1,13 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import { Briefcase, MapPin, DollarSign, Clock, Filter, Search, CheckCircle, AlertCircle, Calendar } from 'lucide-react';
 
-export default function ContractorPortalJobsPage() {
+function ContractorPortalJobsPageOriginal() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterStatus, setFilterStatus] = useState('all');
   const [filterType, setFilterType] = useState('all');
@@ -252,5 +256,18 @@ export default function ContractorPortalJobsPage() {
         )}
       </div>
     </div>
+  );
+}
+export default function ContractorPortalJobsPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ContractorPortalJobsPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ContractorPortalJobsPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

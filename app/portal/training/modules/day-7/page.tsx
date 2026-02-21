@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -16,7 +20,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 
-export default function Day7Assessment() {
+function Day7AssessmentOriginal() {
   const [currentSection, setCurrentSection] = useState(0);
   const [examAnswers, setExamAnswers] = useState<Record<string, string>>({});
   const [showResults, setShowResults] = useState(false);
@@ -796,5 +800,18 @@ export default function Day7Assessment() {
         </main>
       </div>
     </div>
+  );
+}
+export default function Day7Assessment() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <Day7AssessmentOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <Day7AssessmentOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

@@ -1,8 +1,12 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { GraduationCap, Clock, Award, CheckCircle, PlayCircle, BookOpen, Target, TrendingUp } from 'lucide-react';
 
-export default function ContractorPortalTrainingPage() {
+function ContractorPortalTrainingPageOriginal() {
   const courses = [
     {
       id: 1,
@@ -220,5 +224,18 @@ export default function ContractorPortalTrainingPage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function ContractorPortalTrainingPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ContractorPortalTrainingPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ContractorPortalTrainingPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

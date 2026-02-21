@@ -1,5 +1,9 @@
 'use client'
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { 
@@ -18,7 +22,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 
-export default function ClientPortalPage() {
+function ClientPortalPageOriginal() {
   const [activeTab, setActiveTab] = useState('overview')
 
   const claims = [
@@ -276,4 +280,17 @@ export default function ClientPortalPage() {
       </div>
     </div>
   )
+}
+export default function ClientPortalPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ClientPortalPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ClientPortalPageOriginal />
+      <AntigravityFooter />
+    </>
+  );
 }

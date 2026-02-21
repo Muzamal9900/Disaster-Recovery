@@ -2,14 +2,20 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  ArrowRight, MessageCircle, Globe, CheckCircle, 
+import {
+  ArrowRight, MessageCircle, Globe, CheckCircle,
   Clock, Shield, Users, Zap, Star, Mail
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityHomePage } from '@/components/antigravity/AntigravityHomePage';
 
 export default function HomePage() {
+
+  if (FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <AntigravityHomePage />;
+  }
 
   return (
     <div className="min-h-screen">

@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React, { useState, useEffect, useMemo, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { 
@@ -448,7 +452,7 @@ function SearchPageContent() {
   );
 }
 
-export default function SearchPage() {
+function SearchPageOriginal() {
   return (
     <Suspense fallback={
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -460,5 +464,18 @@ export default function SearchPage() {
     }>
       <SearchPageContent />
     </Suspense>
+  );
+}
+export default function SearchPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <SearchPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <SearchPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

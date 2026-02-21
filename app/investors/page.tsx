@@ -1,11 +1,26 @@
+import { Metadata } from 'next';
+import { TrendingUp } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
+
+export const metadata: Metadata = {
+  title: "Investors | Disaster Recovery",
+  description: "",
+};
 
 export default function InvestorsPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">
-        Investors
-      </h1>
-      <p>Content for investors page.</p>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #14532D 0%, #15803D 100%)',
+        icon: <TrendingUp className="h-12 w-12" />,
+        title: "Investors",
+        subtitle: "",
+      }}
+      cta={{ text: 'Investor Contact', href: '/contact' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: "Investors" },
+      ]}
+    />
   );
 }

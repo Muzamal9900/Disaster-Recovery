@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import { MapPin } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Toowoomba | Emergency Services Queensland',
@@ -6,9 +8,20 @@ export const metadata: Metadata = {
 
 export default function ToowoombaPage() {
   return (
-    <div className="min-h-screen p-8">
-      <h1 className="text-4xl font-bold mb-6">Disaster Recovery Toowoomba</h1>
-      <p className="text-xl">24/7 Emergency Services in Toowoomba, Queensland</p>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #0F2942 0%, #1E3A5F 100%)',
+        icon: <MapPin className="h-12 w-12" />,
+        title: 'Disaster Recovery Toowoomba',
+        subtitle: '24/7 Emergency Services in Toowoomba',
+      }}
+      cta={{ text: 'Emergency Response', href: '/claim/start' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Locations', href: '/locations' },
+        { label: 'QLD', href: '/locations/qld' },
+        { label: 'Toowoomba' },
+      ]}
+    />
   );
 }

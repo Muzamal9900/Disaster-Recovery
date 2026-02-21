@@ -1,3 +1,6 @@
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { notFound } from 'next/navigation';
 import { PrismaClient } from '@prisma/client';
 import { Metadata } from 'next';
@@ -293,6 +296,19 @@ export default async function SEOLocationPage({ params }: { params: PageParams }
           </div>
         </div>
       </div>
+    </>
+  );
+}
+export default function Page() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <PageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <PageOriginal />
+      <AntigravityFooter />
     </>
   );
 }

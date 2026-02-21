@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   Play, Pause, SkipForward, SkipBack, Volume2, VolumeX,
@@ -179,7 +183,7 @@ const slides = [
   }
 ];
 
-export default function InvestorPitchPage() {
+function InvestorPitchPageOriginal() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
@@ -487,5 +491,18 @@ CONFIDENTIAL - NOT FOR DISTRIBUTION
         }
       `}</style>
     </div>
+  );
+}
+export default function InvestorPitchPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <InvestorPitchPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <InvestorPitchPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

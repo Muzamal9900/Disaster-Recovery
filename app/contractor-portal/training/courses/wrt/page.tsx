@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import { ArrowLeft, PlayCircle, CheckCircle, Lock, Clock, BookOpen, Award, Download, ChevronRight, Eye } from 'lucide-react';
 import { useRouter } from 'next/navigation';
@@ -7,7 +11,7 @@ import dynamic from 'next/dynamic';
 
 const Certificate = dynamic(() => import('@/components/contractor/Certificate'), { ssr: false });
 
-export default function WRTCoursePage() {
+function WRTCoursePageOriginal() {
   const router = useRouter();
   const [currentModule, setCurrentModule] = useState(0);
   const [completedModules, setCompletedModules] = useState<number[]>([]);
@@ -390,5 +394,18 @@ export default function WRTCoursePage() {
         </div>
       )}
     </div>
+  );
+}
+export default function WRTCoursePage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <WRTCoursePageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <WRTCoursePageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

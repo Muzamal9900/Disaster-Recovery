@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { FileText, ArrowRight, Clock, Shield, Users } from 'lucide-react';
@@ -7,7 +11,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Link from 'next/link';
 
-export default function QuotePage() {
+function QuotePageOriginal() {
   const router = useRouter();
 
   // Auto-redirect after showing brief info
@@ -188,5 +192,18 @@ export default function QuotePage() {
         </div>
       </section>
     </div>
+  );
+}
+export default function QuotePage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <QuotePageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <QuotePageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

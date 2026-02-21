@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
-import { Award, CheckCircle, Shield } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
 
 export const metadata: Metadata = {
   title: 'IICRC Certified | International restoration standard | Disaster Recovery',
@@ -7,14 +8,19 @@ export const metadata: Metadata = {
 
 export default function IICRCCertifiedPage() {
   return (
-    <div className="min-h-screen">
-      <section className="bg-gradient-to-b from-purple-900 to-purple-800 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <Award className="h-16 w-16 text-blue-500 mx-auto mb-6" />
-          <h1 className="text-4xl font-bold mb-4">IICRC Certified</h1>
-          <p className="text-xl">International restoration standard</p>
-        </div>
-      </section>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #312E81 0%, #4338CA 100%)',
+        icon: <Award className="h-12 w-12" />,
+        title: 'IICRC Certified',
+        subtitle: 'International restoration standard',
+      }}
+      cta={{ text: 'View Services', href: '/services' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Certifications', href: '/certifications' },
+        { label: 'IICRC Certified' },
+      ]}
+    />
   );
 }

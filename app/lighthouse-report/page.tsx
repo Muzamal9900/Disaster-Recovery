@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -13,7 +17,7 @@ interface AuditResult {
   details: string[];
 }
 
-export default function LighthouseReportPage() {
+function LighthouseReportPageOriginal() {
   const [auditing, setAuditing] = useState(false);
   const [results, setResults] = useState<AuditResult[]>([]);
 
@@ -301,5 +305,18 @@ export default function LighthouseReportPage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function LighthouseReportPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <LighthouseReportPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <LighthouseReportPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

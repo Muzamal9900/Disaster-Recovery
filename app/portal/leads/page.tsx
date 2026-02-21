@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -15,7 +19,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
-export default function LeadManagement() {
+function LeadManagementOriginal() {
   const [selectedTab, setSelectedTab] = useState('active');
   const [filterStatus, setFilterStatus] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -420,5 +424,18 @@ export default function LeadManagement() {
         </Tabs>
       </main>
     </div>
+  );
+}
+export default function LeadManagement() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <LeadManagementOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <LeadManagementOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

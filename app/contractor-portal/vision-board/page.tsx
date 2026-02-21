@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState, useEffect } from 'react';
 import { Award, Target, TrendingUp, Star, Trophy, Calendar, Download, Trash2, Plus, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
@@ -22,7 +26,7 @@ interface Goal {
   completed: boolean;
 }
 
-export default function VisionBoardPage() {
+function VisionBoardPageOriginal() {
   const [certificates, setCertificates] = useState<Certificate[]>([]);
   const [goals, setGoals] = useState<Goal[]>([
     {
@@ -337,5 +341,18 @@ export default function VisionBoardPage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function VisionBoardPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <VisionBoardPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <VisionBoardPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

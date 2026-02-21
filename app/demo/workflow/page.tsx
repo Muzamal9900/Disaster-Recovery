@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -35,7 +39,7 @@ interface WorkflowStep {
   details?: any;
 }
 
-export default function WorkflowDemonstration() {
+function WorkflowDemonstrationOriginal() {
   const [ticketId, setTicketId] = useState<string | null>(null);
   const [ticketData, setTicketData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
@@ -892,5 +896,18 @@ export default function WorkflowDemonstration() {
         </Alert>
       )}
     </div>
+  );
+}
+export default function WorkflowDemonstration() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <WorkflowDemonstrationOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <WorkflowDemonstrationOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

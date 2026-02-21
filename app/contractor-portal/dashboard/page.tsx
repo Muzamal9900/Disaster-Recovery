@@ -1,8 +1,12 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { DollarSign, Briefcase, TrendingUp, Clock, Star, Calendar, MapPin, Award } from 'lucide-react';
 
-export default function ContractorPortalDashboardPage() {
+function ContractorPortalDashboardPageOriginal() {
   const stats = [
     { label: 'Total Earnings', value: '$125,450', icon: DollarSign, color: 'bg-green-600', trend: '+12%' },
     { label: 'Active Jobs', value: '8', icon: Briefcase, color: 'bg-blue-600', trend: '+2' },
@@ -183,5 +187,18 @@ export default function ContractorPortalDashboardPage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function ContractorPortalDashboardPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ContractorPortalDashboardPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ContractorPortalDashboardPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

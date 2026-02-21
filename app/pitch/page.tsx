@@ -1,11 +1,15 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Users, Building2, TrendingUp, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
-export default function PitchSelection() {
+function PitchSelectionOriginal() {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   const pitchOptions = [
@@ -190,5 +194,18 @@ export default function PitchSelection() {
         </div>
       </div>
     </div>
+  );
+}
+export default function PitchSelection() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <PitchSelectionOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <PitchSelectionOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

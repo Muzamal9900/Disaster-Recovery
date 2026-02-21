@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -21,7 +25,7 @@ import {
 } from 'lucide-react';
 import { useMagneticEffect } from '@/hooks/useMagneticEffect';
 
-export default function ContractorLoginPage() {
+function ContractorLoginPageOriginal() {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -411,5 +415,18 @@ export default function ContractorLoginPage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function ContractorLoginPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ContractorLoginPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ContractorLoginPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState, useEffect } from 'react';
 import { Search, Filter, Eye, CheckCircle, X, Clock, AlertTriangle, FileText, Image, MapPin, Calendar, DollarSign, MessageSquare} from 'lucide-react';
 import Link from 'next/link';
@@ -42,7 +46,7 @@ interface Statistics {
   byWorkType: Record<string, number>;
 }
 
-export default function ProofOfWorkAdmin() {
+function ProofOfWorkAdminOriginal() {
   const [claims, setClaims] = useState<ProofOfWorkClaim[]>([]);
   const [loading, setLoading] = useState(true);
   const [statistics, setStatistics] = useState<Statistics>({ 
@@ -633,5 +637,18 @@ function ClaimReviewModal({
         </div>
       </div>
     </div>
+  );
+}
+export default function ProofOfWorkAdmin() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ProofOfWorkAdminOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ProofOfWorkAdminOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

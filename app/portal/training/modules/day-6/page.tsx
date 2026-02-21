@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -14,7 +18,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
-export default function Day6CustomerService() {
+function Day6CustomerServiceOriginal() {
   const [currentModule, setCurrentModule] = useState(0);
   const [selectedScenario, setSelectedScenario] = useState(0);
 
@@ -1006,5 +1010,18 @@ export default function Day6CustomerService() {
         </main>
       </div>
     </div>
+  );
+}
+export default function Day6CustomerService() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <Day6CustomerServiceOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <Day6CustomerServiceOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

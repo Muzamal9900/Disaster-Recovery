@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -77,7 +81,7 @@ const timeSlots: TimeSlot[] = [
   { time: 'Emergency', available: true, emergency: true }
 ];
 
-export default function SchedulePage() {
+function SchedulePageOriginal() {
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -807,5 +811,18 @@ export default function SchedulePage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function SchedulePage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <SchedulePageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <SchedulePageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

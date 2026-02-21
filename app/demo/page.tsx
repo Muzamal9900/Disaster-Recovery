@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React from 'react';
 import Link from 'next/link';
 import { 
@@ -73,7 +77,7 @@ const demos = [
   }
 ];
 
-export default function DemoPage() {
+function DemoPageOriginal() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
       {/* Header */}
@@ -201,5 +205,18 @@ export default function DemoPage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function DemoPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <DemoPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <DemoPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

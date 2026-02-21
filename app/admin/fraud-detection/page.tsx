@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState, useEffect } from 'react';
 import { AlertTriangle, Shield, Eye, Search, Filter, Download, RefreshCw, CheckCircle, Clock, X } from 'lucide-react';
 import Link from 'next/link';
@@ -26,7 +30,7 @@ interface Statistics {
   byRiskLevel: Record<string, number>;
 }
 
-export default function FraudDetectionAdmin() {
+function FraudDetectionAdminOriginal() {
   const [logs, setLogs] = useState<FraudDetectionLog[]>([]);
   const [loading, setLoading] = useState(true);
   const [statistics, setStatistics] = useState<Statistics>({ total: 0, byRiskLevel: {} });
@@ -427,5 +431,18 @@ export default function FraudDetectionAdmin() {
         </div>
       </div>
     </div>
+  );
+}
+export default function FraudDetectionAdmin() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <FraudDetectionAdminOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <FraudDetectionAdminOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

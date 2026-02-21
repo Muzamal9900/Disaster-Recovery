@@ -1,11 +1,15 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 
-export default function WorkflowDemoPage() {
+function WorkflowDemoPageOriginal() {
   const [step, setStep] = useState(0);
 
   const steps = [
@@ -70,5 +74,18 @@ export default function WorkflowDemoPage() {
         </CardContent>
       </Card>
     </div>
+  );
+}
+export default function WorkflowDemoPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <WorkflowDemoPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <WorkflowDemoPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

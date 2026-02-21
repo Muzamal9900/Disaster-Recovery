@@ -1,3 +1,6 @@
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
@@ -74,7 +77,7 @@ const getServiceIcon = (slug: string) => {
   return icons[slug] || icons.default;
 };
 
-export default function GMBCategoryPage({ params }: { params: { category: string } }) {
+function GMBCategoryPageOriginal({ params }: { params: { category: string } }) {
   const category = getCategoryBySlug(params.category);
 
   if (!category) {
@@ -328,6 +331,19 @@ export default function GMBCategoryPage({ params }: { params: { category: string
           </div>
         </section>
       </div>
+    </>
+  );
+}
+export default function GMBCategoryPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <GMBCategoryPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <GMBCategoryPageOriginal />
+      <AntigravityFooter />
     </>
   );
 }

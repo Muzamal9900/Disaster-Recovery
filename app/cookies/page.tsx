@@ -1,11 +1,26 @@
+import { Metadata } from 'next';
+import { FileText } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
+
+export const metadata: Metadata = {
+  title: "Cookies | Disaster Recovery",
+  description: "",
+};
 
 export default function CookiesPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">
-        Cookies
-      </h1>
-      <p>Content for cookies page.</p>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #1E293B 0%, #334155 100%)',
+        icon: <FileText className="h-12 w-12" />,
+        title: "Cookies",
+        subtitle: "",
+      }}
+      cta={{ text: 'Contact Us', href: '/contact' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: "Cookies" },
+      ]}
+    />
   );
 }

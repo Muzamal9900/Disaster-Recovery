@@ -1,11 +1,15 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import styles from '../training.module.css';
 
-export default function Day11Module() {
+function Day11ModuleOriginal() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState('overview');
   const [completedSections, setCompletedSections] = useState<string[]>([]);
@@ -1241,5 +1245,18 @@ export default function Day11Module() {
         )}
       </main>
     </div>
+  );
+}
+export default function Day11Module() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <Day11ModuleOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <Day11ModuleOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

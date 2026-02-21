@@ -1,9 +1,13 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import { DollarSign, TrendingUp, Download, Calendar, Filter, ArrowUp, ArrowDown, CreditCard } from 'lucide-react';
 
-export default function ContractorPortalEarningsPage() {
+function ContractorPortalEarningsPageOriginal() {
   const [timeRange, setTimeRange] = useState('month');
   const [filterStatus, setFilterStatus] = useState('all');
 
@@ -208,5 +212,18 @@ export default function ContractorPortalEarningsPage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function ContractorPortalEarningsPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ContractorPortalEarningsPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ContractorPortalEarningsPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

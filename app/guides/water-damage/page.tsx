@@ -4,8 +4,11 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Droplets, AlertTriangle, Clock, Shield, FileText, Phone, CheckCircle, XCircle, Info, Home, Building, Factory, ArrowRight, AlertCircle, Zap } from 'lucide-react';
 import Link from 'next/link';
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 
-export default function WaterDamageGuidePage() {
+function WaterDamageGuidePageOriginal() {
   const [selectedCategory, setSelectedCategory] = useState<'clean' | 'grey' | 'black' | null>(null);
 
   const waterCategories = {
@@ -554,5 +557,18 @@ export default function WaterDamageGuidePage() {
         </div>
       </section>
     </div>
+  );
+}
+export default function WaterDamageGuidePage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <WaterDamageGuidePageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <WaterDamageGuidePageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

@@ -1,3 +1,6 @@
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { Suspense } from 'react'
 import FormDemonstration from '@/components/demo/FormDemonstration'
 
@@ -6,7 +9,7 @@ export const metadata = {
   description: 'Watch our HRM-powered platform demonstrate intelligent form processing with realistic mock data for emergency restoration requests.',
 }
 
-export default function FormDemoPage() {
+function FormDemoPageOriginal() {
   return (
     <Suspense fallback={
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex items-center justify-center">
@@ -19,4 +22,17 @@ export default function FormDemoPage() {
       <FormDemonstration />
     </Suspense>
   )
+}
+export default function FormDemoPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <FormDemoPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <FormDemoPageOriginal />
+      <AntigravityFooter />
+    </>
+  );
 }

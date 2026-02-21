@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -15,7 +19,7 @@ import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
-export default function Day3InsuranceClaims() {
+function Day3InsuranceClaimsOriginal() {
   const [currentModule, setCurrentModule] = useState(0);
   const [selectedInsurer, setSelectedInsurer] = useState('aami');
 
@@ -727,5 +731,18 @@ export default function Day3InsuranceClaims() {
         </main>
       </div>
     </div>
+  );
+}
+export default function Day3InsuranceClaims() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <Day3InsuranceClaimsOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <Day3InsuranceClaimsOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React from 'react';
 import Link from 'next/link';
 import { 
@@ -15,7 +19,7 @@ import {
   Home
 } from 'lucide-react';
 
-export default function ContractorPortalLanding() {
+function ContractorPortalLandingOriginal() {
   const features = [
     {
       icon: Shield,
@@ -228,5 +232,18 @@ export default function ContractorPortalLanding() {
         </div>
       </div>
     </div>
+  );
+}
+export default function ContractorPortalLanding() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ContractorPortalLandingOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ContractorPortalLandingOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

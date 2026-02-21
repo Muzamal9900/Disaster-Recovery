@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import { Settings, Zap, CheckCircle } from 'lucide-react';
-import { Card } from '@/components/ui/card';
+import { Settings } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
 
 export const metadata: Metadata = {
   title: 'Infrared Drying Systems | Targeted drying | Advanced Restoration Technology',
@@ -8,14 +8,19 @@ export const metadata: Metadata = {
 
 export default function InfraredDryingSystemsPage() {
   return (
-    <div className="min-h-screen">
-      <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-20">
-        <div className="container mx-auto px-4">
-          <Settings className="h-16 w-16 text-blue-500 mb-6 animate-spin-slow" />
-          <h1 className="text-4xl font-bold mb-4">Infrared Drying Systems</h1>
-          <p className="text-xl">Professional Equipment for Targeted drying</p>
-        </div>
-      </section>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #1E293B 0%, #334155 100%)',
+        icon: <Settings className="h-12 w-12" />,
+        title: 'Infrared Drying Systems',
+        subtitle: 'Professional Equipment for Targeted drying',
+      }}
+      cta={{ text: 'Learn More', href: '/services' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Equipment', href: '/equipment' },
+        { label: 'Infrared Drying Systems' },
+      ]}
+    />
   );
 }

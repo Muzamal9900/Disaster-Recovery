@@ -1,9 +1,13 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import { FileText, Clock, CheckCircle, AlertCircle, Filter, Search, Download } from 'lucide-react';
 
-export default function ClientPortalClaimsPage() {
+function ClientPortalClaimsPageOriginal() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterStatus, setFilterStatus] = useState('all');
 
@@ -159,5 +163,18 @@ export default function ClientPortalClaimsPage() {
         )}
       </div>
     </div>
+  );
+}
+export default function ClientPortalClaimsPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ClientPortalClaimsPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ClientPortalClaimsPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

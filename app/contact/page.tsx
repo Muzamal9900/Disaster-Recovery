@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -16,7 +20,7 @@ import {
   BoltIcon
 } from '@heroicons/react/24/outline';
 
-export default function ModernContactPage() {
+function ModernContactPageOriginal() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -558,5 +562,18 @@ export default function ModernContactPage() {
         </motion.div>
       </section>
     </div>
+  );
+}
+export default function ModernContactPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ModernContactPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ModernContactPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

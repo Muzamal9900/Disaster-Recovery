@@ -1,11 +1,26 @@
+import { Metadata } from 'next';
+import { Award } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
+
+export const metadata: Metadata = {
+  title: "Certifications | Disaster Recovery",
+  description: "",
+};
 
 export default function CertificationsPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">
-        Certifications
-      </h1>
-      <p>Content for certifications page.</p>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #1E3A5F 0%, #2563EB 100%)',
+        icon: <Award className="h-12 w-12" />,
+        title: "Certifications",
+        subtitle: "",
+      }}
+      cta={{ text: 'Get Emergency Help', href: '/claim/start' }}
+      breadcrumbs={[
+        { label: "Home", href: "/" },
+        { label: "Certifications" },
+      ]}
+    />
   );
 }

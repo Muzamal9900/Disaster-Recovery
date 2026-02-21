@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { 
@@ -518,7 +522,7 @@ function PaymentPageContent() {
   );
 }
 
-export default function PaymentPage() {
+function PaymentPageOriginal() {
   return (
     <Suspense fallback={
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -530,5 +534,18 @@ export default function PaymentPage() {
     }>
       <PaymentPageContent />
     </Suspense>
+  );
+}
+export default function PaymentPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <PaymentPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <PaymentPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

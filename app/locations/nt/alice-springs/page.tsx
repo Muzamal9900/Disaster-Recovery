@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import { MapPin } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
 
 export const metadata: Metadata = {
   title: 'Disaster Recovery Alice Springs | Emergency Services Northern Territory',
@@ -6,9 +8,20 @@ export const metadata: Metadata = {
 
 export default function AliceSpringsPage() {
   return (
-    <div className="min-h-screen p-8">
-      <h1 className="text-4xl font-bold mb-6">Disaster Recovery Alice Springs</h1>
-      <p className="text-xl">24/7 Emergency Services in Alice Springs, Northern Territory</p>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #0F2942 0%, #1E3A5F 100%)',
+        icon: <MapPin className="h-12 w-12" />,
+        title: 'Disaster Recovery Alice Springs',
+        subtitle: '24/7 Emergency Services in Alice Springs',
+      }}
+      cta={{ text: 'Emergency Response', href: '/claim/start' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Locations', href: '/locations' },
+        { label: 'NT', href: '/locations/nt' },
+        { label: 'Alice Springs' },
+      ]}
+    />
   );
 }

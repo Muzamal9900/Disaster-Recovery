@@ -1,8 +1,12 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { BarChart3, FileText, Clock, CheckCircle, TrendingUp, Calendar, DollarSign, AlertCircle } from 'lucide-react';
 
-export default function ClientPortalDashboardPage() {
+function ClientPortalDashboardPageOriginal() {
   const stats = [
     { label: 'Active Claims', value: '3', icon: FileText, color: 'bg-blue-600' },
     { label: 'Completed', value: '12', icon: CheckCircle, color: 'bg-green-600' },
@@ -115,5 +119,18 @@ export default function ClientPortalDashboardPage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function ClientPortalDashboardPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ClientPortalDashboardPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ClientPortalDashboardPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

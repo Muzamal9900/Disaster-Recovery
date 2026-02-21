@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { 
@@ -97,7 +101,7 @@ const SERVICE_TYPES = [
 
 const STATES = ['NSW', 'VIC', 'QLD', 'WA', 'SA', 'TAS', 'ACT', 'NT'];
 
-export default function BookServicePage() {
+function BookServicePageOriginal() {
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState<FormData>(INITIAL_FORM_DATA);
@@ -1119,5 +1123,18 @@ export default function BookServicePage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function BookServicePage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <BookServicePageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <BookServicePageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

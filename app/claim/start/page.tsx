@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Shield, Home, Mail, FileText, Calendar, Camera, AlertCircle, CheckCircle, Loader2, Send, Upload, Image, X, Info } from 'lucide-react';
@@ -539,10 +543,23 @@ function ClaimStartContent() {
   );
 }
 
-export default function ClaimStartPage() {
+function ClaimStartPageOriginal() {
   return (
     <Suspense fallback={<div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center"><div className="text-gray-200">Loading...</div></div>}>
       <ClaimStartContent />
     </Suspense>
+  );
+}
+export default function ClaimStartPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ClaimStartPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ClaimStartPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { 
@@ -284,7 +288,7 @@ function TrainingDemoContent() {
   );
 }
 
-export default function TrainingDemoPage() {
+function TrainingDemoPageOriginal() {
   return (
     <Suspense fallback={
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 flex items-center justify-center">
@@ -293,5 +297,18 @@ export default function TrainingDemoPage() {
     }>
       <TrainingDemoContent />
     </Suspense>
+  );
+}
+export default function TrainingDemoPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <TrainingDemoPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <TrainingDemoPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

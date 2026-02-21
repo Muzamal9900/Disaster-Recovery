@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -17,7 +21,7 @@ interface Stats {
   completedJobs: number;
 }
 
-export default function CRMPortalPage() {
+function CRMPortalPageOriginal() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loginForm, setLoginForm] = useState<LoginFormData>({
     email: '',
@@ -599,5 +603,18 @@ export default function CRMPortalPage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function CRMPortalPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <CRMPortalPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <CRMPortalPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

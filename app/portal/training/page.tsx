@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -16,7 +20,7 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { trainingModules, getAvailableModules, isModuleAccessible } from './config/moduleConfig';
 
-export default function TrainingHub() {
+function TrainingHubOriginal() {
   const [selectedWeek, setSelectedWeek] = useState<'week1' | 'week2'>('week1');
 
   // 2-Week Training Program Structure
@@ -526,5 +530,18 @@ export default function TrainingHub() {
         </Card>
       </main>
     </div>
+  );
+}
+export default function TrainingHub() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <TrainingHubOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <TrainingHubOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

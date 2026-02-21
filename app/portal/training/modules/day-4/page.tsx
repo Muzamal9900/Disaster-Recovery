@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -14,7 +18,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
-export default function Day4HealthSafety() {
+function Day4HealthSafetyOriginal() {
   const [currentModule, setCurrentModule] = useState(0);
   const [completedSections, setCompletedSections] = useState<number[]>([]);
 
@@ -878,5 +882,18 @@ export default function Day4HealthSafety() {
         </main>
       </div>
     </div>
+  );
+}
+export default function Day4HealthSafety() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <Day4HealthSafetyOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <Day4HealthSafetyOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

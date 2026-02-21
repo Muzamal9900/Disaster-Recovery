@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -17,7 +21,7 @@ interface Contractor {
   created_at: string;
 }
 
-export default function ContractorsPage() {
+function ContractorsPageOriginal() {
   const [contractors, setContractors] = useState<Contractor[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
@@ -400,5 +404,18 @@ export default function ContractorsPage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function ContractorsPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ContractorsPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ContractorsPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

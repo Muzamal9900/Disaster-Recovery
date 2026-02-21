@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -27,7 +31,7 @@ interface AuditItem {
   recommendation?: string;
 }
 
-export default function SiteAuditPage() {
+function SiteAuditPageOriginal() {
   const [auditing, setAuditing] = useState(false);
   const [auditResults, setAuditResults] = useState<AuditItem[]>([]);
   const [overallHealth, setOverallHealth] = useState(0);
@@ -500,5 +504,18 @@ export default function SiteAuditPage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function SiteAuditPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <SiteAuditPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <SiteAuditPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

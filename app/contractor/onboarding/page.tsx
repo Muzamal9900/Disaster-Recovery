@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { ChevronRight, Lock, CheckCircle, Clock, AlertCircle, BookOpen, Video, Headphones, FileText, Award } from 'lucide-react';
@@ -22,7 +26,7 @@ interface OnboardingState {
   certificateNumber?: string;
 }
 
-export default function ContractorOnboardingPage() {
+function ContractorOnboardingPageOriginal() {
   const router = useRouter();
   const [onboardingState, setOnboardingState] = useState<OnboardingState | null>(null);
   const [selectedDay, setSelectedDay] = useState(1);
@@ -505,5 +509,18 @@ export default function ContractorOnboardingPage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function ContractorOnboardingPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ContractorOnboardingPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ContractorOnboardingPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

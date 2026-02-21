@@ -1,11 +1,26 @@
+import { Metadata } from 'next';
+import { MapPin } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
+
+export const metadata: Metadata = {
+  title: 'Service Locations | Disaster Recovery Australia-Wide',
+  description: 'Find disaster recovery services across all Australian states and territories. 24/7 emergency response nationwide.',
+};
 
 export default function LocationsPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">
-        /locations
-      </h1>
-      <p>Content for /locations page.</p>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #0F2942 0%, #1E3A5F 100%)',
+        icon: <MapPin className="h-12 w-12" />,
+        title: 'Service Locations',
+        subtitle: 'Find disaster recovery services across all Australian states and territories',
+      }}
+      cta={{ text: 'Emergency Response', href: '/claim/start' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Locations' },
+      ]}
+    />
   );
 }

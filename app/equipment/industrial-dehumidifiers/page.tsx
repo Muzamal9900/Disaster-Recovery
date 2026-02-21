@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import { Settings, Zap, CheckCircle } from 'lucide-react';
-import { Card } from '@/components/ui/card';
+import { Settings } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
 
 export const metadata: Metadata = {
   title: 'Industrial Dehumidifiers | Structural drying | Advanced Restoration Technology',
@@ -8,14 +8,19 @@ export const metadata: Metadata = {
 
 export default function IndustrialDehumidifiersPage() {
   return (
-    <div className="min-h-screen">
-      <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-20">
-        <div className="container mx-auto px-4">
-          <Settings className="h-16 w-16 text-blue-500 mb-6 animate-spin-slow" />
-          <h1 className="text-4xl font-bold mb-4">Industrial Dehumidifiers</h1>
-          <p className="text-xl">Professional Equipment for Structural drying</p>
-        </div>
-      </section>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #1E293B 0%, #334155 100%)',
+        icon: <Settings className="h-12 w-12" />,
+        title: 'Industrial Dehumidifiers',
+        subtitle: 'Professional Equipment for Structural drying',
+      }}
+      cta={{ text: 'Learn More', href: '/services' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Equipment', href: '/equipment' },
+        { label: 'Industrial Dehumidifiers' },
+      ]}
+    />
   );
 }

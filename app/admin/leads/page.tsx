@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React, { useState, useEffect } from 'react';
 import { 
   Search,
@@ -82,7 +86,7 @@ interface LeadStats {
   avgResponseTime: number;
 }
 
-export default function LeadManagementDashboard() {
+function LeadManagementDashboardOriginal() {
   const [leads, setLeads] = useState<Lead[]>([]);
   const [filteredLeads, setFilteredLeads] = useState<Lead[]>([]);
   const [stats, setStats] = useState<LeadStats | null>(null);
@@ -621,5 +625,18 @@ export default function LeadManagementDashboard() {
         </div>
       )}
     </div>
+  );
+}
+export default function LeadManagementDashboard() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <LeadManagementDashboardOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <LeadManagementDashboardOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

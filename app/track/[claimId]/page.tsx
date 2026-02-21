@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { useState, useEffect, use } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -71,7 +75,7 @@ const workflowSteps = [
   { key: 'claimFinalized', label: 'Claim Complete', icon: Home }
 ];
 
-export default function TrackClaimPage({ params }: { params: Promise<{ claimId: string }> }) {
+function TrackClaimPageOriginal({ params }: { params: Promise<{ claimId: string }> }) {
   const resolvedParams = use(params);
   const [claimData, setClaimData] = useState<ClaimData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -391,5 +395,18 @@ export default function TrackClaimPage({ params }: { params: Promise<{ claimId: 
         </Alert>
       </div>
     </div>
+  );
+}
+export default function TrackClaimPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <TrackClaimPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <TrackClaimPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

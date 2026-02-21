@@ -1,10 +1,14 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import PremiumDashboard from '@/components/contractor/dashboard/PremiumDashboard';
 
-export default function ContractorDashboardPage() {
+function ContractorDashboardPageOriginal() {
   const router = useRouter();
   const [auth, setAuth] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -44,4 +48,17 @@ export default function ContractorDashboardPage() {
   }
 
   return <PremiumDashboard />;
+}
+export default function ContractorDashboardPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ContractorDashboardPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ContractorDashboardPageOriginal />
+      <AntigravityFooter />
+    </>
+  );
 }

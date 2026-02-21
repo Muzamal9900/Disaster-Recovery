@@ -1,5 +1,9 @@
 'use client'
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import dynamic from 'next/dynamic'
 
 // Dynamically import the production pitch deck to avoid SSR issues
@@ -15,7 +19,7 @@ const PitchDeckProductionV2 = dynamic(
   }
 )
 
-export default function PitchProductionPage() {
+function PitchProductionPageOriginal() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 p-8">
       <div className="max-w-7xl mx-auto">
@@ -37,4 +41,17 @@ export default function PitchProductionPage() {
       </div>
     </div>
   )
+}
+export default function PitchProductionPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <PitchProductionPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <PitchProductionPageOriginal />
+      <AntigravityFooter />
+    </>
+  );
 }

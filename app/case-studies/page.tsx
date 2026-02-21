@@ -1,11 +1,26 @@
+import { Metadata } from 'next';
+import { FileText } from 'lucide-react';
+import { AgContentPageTemplate } from '@/components/antigravity';
+
+export const metadata: Metadata = {
+  title: 'Case studies | Disaster Recovery Case Study',
+  description: '',
+};
 
 export default function CaseStudiesPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">
-        Case studies
-      </h1>
-      <p>Content for case-studies page.</p>
-    </div>
+    <AgContentPageTemplate
+      hero={{
+        gradient: 'linear-gradient(135deg, #14532D 0%, #15803D 100%)',
+        icon: <FileText className="h-12 w-12" />,
+        title: 'Case studies',
+        subtitle: '',
+      }}
+      cta={{ text: 'Get Emergency Help', href: '/claim/start' }}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Case Studies' },
+      ]}
+    />
   );
 }

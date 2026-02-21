@@ -1,4 +1,7 @@
 import { Metadata } from 'next'
+import { FEATURE_FLAGS } from '@/lib/feature-flags'
+import { AntigravityServicePageTemplate } from '@/components/antigravity'
+import { mouldRemediationData } from '@/components/antigravity'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
@@ -85,6 +88,10 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export default function MouldRemediationPage() {
+  if (FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <AntigravityServicePageTemplate data={mouldRemediationData} />;
+  }
+
   return (
     <div className="min-h-screen">
       {/* Structured Data for SEO */}

@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React, { useState, useEffect } from 'react';
 import { 
   TrendingUp, 
@@ -70,7 +74,7 @@ interface JobKPI {
   paymentReleased: number;
 }
 
-export default function KPITrackingPage() {
+function KPITrackingPageOriginal() {
   const [timeRange, setTimeRange] = useState('month');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [kpiMetrics, setKpiMetrics] = useState<KPIMetric[]>([]);
@@ -545,5 +549,18 @@ export default function KPITrackingPage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function KPITrackingPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <KPITrackingPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <KPITrackingPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

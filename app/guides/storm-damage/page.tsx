@@ -3,6 +3,9 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Link from 'next/link';
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import { 
   Cloud, 
   AlertTriangle, 
@@ -32,7 +35,7 @@ import {
   Waves
 } from 'lucide-react';
 
-export default function StormDamageGuidePage() {
+function StormDamageGuidePageOriginal() {
   const [selectedStormType, setSelectedStormType] = useState('cyclone');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
@@ -998,5 +1001,18 @@ export default function StormDamageGuidePage() {
         </div>
       </section>
     </div>
+  );
+}
+export default function StormDamageGuidePage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <StormDamageGuidePageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <StormDamageGuidePageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

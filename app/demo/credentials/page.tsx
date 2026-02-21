@@ -1,5 +1,9 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React from 'react';
 import Link from 'next/link';
 import { 
@@ -140,7 +144,7 @@ const MOCK_DATA_EXAMPLES = {
   ]
 };
 
-export default function DemoCredentialsPage() {
+function DemoCredentialsPageOriginal() {
   const [copiedItem, setCopiedItem] = React.useState<string | null>(null);
 
   const copyToClipboard = (text: string, item: string) => {
@@ -348,5 +352,18 @@ export default function DemoCredentialsPage() {
         </div>
       </div>
     </div>
+  );
+}
+export default function DemoCredentialsPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <DemoCredentialsPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <DemoCredentialsPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }

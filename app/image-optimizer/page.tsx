@@ -1,9 +1,13 @@
 'use client';
 
+
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { AntigravityNavbar } from '@/components/antigravity';
+import { AntigravityFooter } from '@/components/antigravity';
 import React, { useState, useCallback } from 'react';
 import imageCompression from 'browser-image-compression';
 
-export default function ImageOptimizerPage() {
+function ImageOptimizerPageOriginal() {
   const [files, setFiles] = useState<File[]>([]);
   const [processing, setProcessing] = useState(false);
   const [results, setResults] = useState<any[]>([]);
@@ -229,5 +233,18 @@ export default function ImageOptimizerPage() {
         )}
       </div>
     </div>
+  );
+}
+export default function ImageOptimizerPage() {
+  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
+    return <ImageOptimizerPageOriginal />;
+  }
+
+  return (
+    <>
+      <AntigravityNavbar />
+      <ImageOptimizerPageOriginal />
+      <AntigravityFooter />
+    </>
   );
 }
