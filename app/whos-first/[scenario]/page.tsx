@@ -1,6 +1,3 @@
-import { FEATURE_FLAGS } from '@/lib/feature-flags';
-import { AntigravityNavbar } from '@/components/antigravity';
-import { AntigravityFooter } from '@/components/antigravity';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import ScenarioPageComponent from '../../../components/whos-first/scenario-page';
@@ -80,7 +77,7 @@ export async function generateStaticParams() {
   }));
 }
 
-function WhosFirstScenarioPageOriginal({ params }: PageProps) {
+export default function WhosFirstScenarioPage({ params }: PageProps) {
   // Parse scenario ID to extract components
   const parts = params.scenario.split('-');
   
@@ -98,17 +95,4 @@ function WhosFirstScenarioPageOriginal({ params }: PageProps) {
   }
 
   return <ScenarioPageComponent scenario={scenario} />;
-}
-export default function WhosFirstScenarioPage() {
-  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
-    return <WhosFirstScenarioPageOriginal />;
-  }
-
-  return (
-    <>
-      <AntigravityNavbar />
-      <WhosFirstScenarioPageOriginal />
-      <AntigravityFooter />
-    </>
-  );
 }

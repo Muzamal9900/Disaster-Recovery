@@ -1,6 +1,3 @@
-import { FEATURE_FLAGS } from '@/lib/feature-flags';
-import { AntigravityNavbar } from '@/components/antigravity';
-import { AntigravityFooter } from '@/components/antigravity';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
@@ -55,7 +52,7 @@ export async function generateStaticParams() {
     id: equipment.id }));
 }
 
-function EquipmentSpecificationPageOriginal({ params }: EquipmentPageProps) {
+export default function EquipmentSpecificationPage({ params }: EquipmentPageProps) {
   const equipment = getEquipmentById(params.id);
 
   if (!equipment) {
@@ -439,16 +436,3 @@ function EquipmentSpecificationPageOriginal({ params }: EquipmentPageProps) {
   );
 }
 
-export default function EquipmentSpecificationPage() {
-  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
-    return <EquipmentSpecificationPageOriginal />;
-  }
-
-  return (
-    <>
-      <AntigravityNavbar />
-      <EquipmentSpecificationPageOriginal />
-      <AntigravityFooter />
-    </>
-  );
-}

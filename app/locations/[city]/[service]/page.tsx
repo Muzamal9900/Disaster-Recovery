@@ -1,6 +1,3 @@
-import { FEATURE_FLAGS } from '@/lib/feature-flags';
-import { AntigravityNavbar } from '@/components/antigravity';
-import { AntigravityFooter } from '@/components/antigravity';
 import { notFound } from 'next/navigation';
 import { LocationServiceGenerator } from '../../../../lib/location-service-generator';
 import LocationServicePageComponent from '../../../../components/location-service-page-simple';
@@ -61,7 +58,7 @@ export async function generateMetadata({ params }: { params: { city: string; ser
   };
 }
 
-function LocationServicePageOriginal({ params }: { params: { city: string; service: string } }) {
+export default function LocationServicePage({ params }: { params: { city: string; service: string } }) {
   // Validate params
   const validCities = ['sydney', 'melbourne', 'brisbane', 'perth', 'adelaide', 'darwin', 'hobart', 'canberra', 'newcastle', 'wollongong', 'gold-coast', 'sunshine-coast', 'geelong', 'townsville', 'cairns'];
   const validServices = ['water-damage-restoration', 'fire-damage-restoration', 'storm-damage-repairs', 'mould-remediation', 'flood-recovery', 'emergency-restoration'];
@@ -74,17 +71,4 @@ function LocationServicePageOriginal({ params }: { params: { city: string; servi
   const pageData = LocationServiceGenerator.generateLocationServicePage(params.city, params.service);
   
   return <LocationServicePageComponent data={pageData} />;
-}
-export default function LocationServicePage() {
-  if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
-    return <LocationServicePageOriginal />;
-  }
-
-  return (
-    <>
-      <AntigravityNavbar />
-      <LocationServicePageOriginal />
-      <AntigravityFooter />
-    </>
-  );
 }
