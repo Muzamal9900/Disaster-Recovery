@@ -28,7 +28,8 @@ type CategoryKey =
   | 'insurance'
   | 'emergency'
   | 'commercial'
-  | 'guides-general';
+  | 'guides-general'
+  | 'knowledge-base';
 
 const RELATED_PAGES_MAP: Record<CategoryKey, RelatedPage[]> = {
   'water-damage': [
@@ -174,6 +175,14 @@ const RELATED_PAGES_MAP: Record<CategoryKey, RelatedPage[]> = {
     { title: 'Emergency Guide', href: '/guides/emergency', description: 'Emergency preparedness and response.' },
     { title: 'Cost Guides', href: '/guides/cost-guides', description: 'Restoration cost guides by service and location.' },
   ],
+  'knowledge-base': [
+    { title: 'Water Damage Science', href: '/knowledge/water-damage-restoration-science', description: 'IICRC S500 water damage categories, classes, and psychrometric drying science.' },
+    { title: 'Mould Remediation Standards', href: '/knowledge/mould-remediation-standards', description: 'IICRC S520 mould remediation protocols and Australian health guidelines.' },
+    { title: 'Fire Damage Restoration', href: '/knowledge/fire-damage-restoration-process', description: 'Four-phase fire restoration process including smoke and soot science.' },
+    { title: 'Insurance Claims Guide', href: '/knowledge/insurance-claims-process-australia', description: 'Australian insurance claims process, AFCA, and legal frameworks.' },
+    { title: 'IICRC Certification', href: '/knowledge/iicrc-certification-standards', description: 'IICRC certification requirements, standards, and why they matter.' },
+    { title: 'Emergency Protocols', href: '/knowledge/emergency-response-protocols', description: 'PPRR emergency response framework and the golden hour principle.' },
+  ],
 };
 
 /**
@@ -212,6 +221,9 @@ export function getRelatedPages(slug: string): RelatedPage[] {
   if (slug.includes('sydney')) return RELATED_PAGES_MAP['location-sydney'];
   if (slug.includes('melbourne')) return RELATED_PAGES_MAP['location-melbourne'];
   if (slug.includes('brisbane')) return RELATED_PAGES_MAP['location-brisbane'];
+
+  // Knowledge pages
+  if (slug.includes('knowledge') || slug.includes('iicrc') || slug.includes('psychrometric')) return RELATED_PAGES_MAP['knowledge-base'];
 
   // Guide pages
   if (slug.includes('guide')) return RELATED_PAGES_MAP['guides-general'];
