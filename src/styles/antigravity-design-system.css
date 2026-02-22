@@ -802,7 +802,8 @@
 /* Water — cool blue ripples */
 .ag-bento-water {
   background:
-    linear-gradient(135deg, rgba(212,232,247,0.85) 0%, rgba(168,212,240,0.85) 50%, rgba(232,244,253,0.85) 100%),
+    linear-gradient(135deg, rgba(212,232,247,0.7) 0%, rgba(168,212,240,0.6) 50%, rgba(232,244,253,0.7) 100%),
+    url('/images/generated/disaster-recovery/card-bg-water.webp'),
     url('/images/antigravity/bg-water.svg');
   background-size: cover;
   background-position: center;
@@ -831,7 +832,8 @@
 /* Fire — charcoal amber embers */
 .ag-bento-fire {
   background:
-    linear-gradient(135deg, rgba(45,34,38,0.85) 0%, rgba(74,48,40,0.85) 50%, rgba(107,58,31,0.85) 100%),
+    linear-gradient(135deg, rgba(45,34,38,0.7) 0%, rgba(74,48,40,0.6) 50%, rgba(107,58,31,0.7) 100%),
+    url('/images/generated/disaster-recovery/card-bg-fire.webp'),
     url('/images/antigravity/bg-fire.svg');
   background-size: cover;
   background-position: center;
@@ -860,7 +862,8 @@
 /* Mould — muted grey-green organic */
 .ag-bento-mould {
   background:
-    linear-gradient(135deg, rgba(200,212,198,0.85) 0%, rgba(168,184,164,0.85) 50%, rgba(212,221,208,0.85) 100%),
+    linear-gradient(135deg, rgba(200,212,198,0.7) 0%, rgba(168,184,164,0.6) 50%, rgba(212,221,208,0.7) 100%),
+    url('/images/generated/disaster-recovery/card-bg-mould.webp'),
     url('/images/antigravity/bg-mould.svg');
   background-size: cover;
   background-position: center;
@@ -889,7 +892,8 @@
 /* Storm — moody slate-blue with rain lines */
 .ag-bento-storm {
   background:
-    linear-gradient(135deg, rgba(90,106,122,0.85) 0%, rgba(122,138,154,0.85) 50%, rgba(74,90,106,0.85) 100%),
+    linear-gradient(135deg, rgba(90,106,122,0.7) 0%, rgba(122,138,154,0.6) 50%, rgba(74,90,106,0.7) 100%),
+    url('/images/generated/disaster-recovery/card-bg-storm.webp'),
     url('/images/antigravity/bg-storm.svg');
   background-size: cover;
   background-position: center;
@@ -923,7 +927,8 @@
 /* Biohazard — dark navy with yellow accent */
 .ag-bento-biohazard {
   background:
-    linear-gradient(135deg, rgba(26,32,48,0.85) 0%, rgba(42,48,64,0.85) 50%, rgba(26,37,53,0.85) 100%),
+    linear-gradient(135deg, rgba(26,32,48,0.7) 0%, rgba(42,48,64,0.6) 50%, rgba(26,37,53,0.7) 100%),
+    url('/images/generated/disaster-recovery/card-bg-biohazard.webp'),
     url('/images/antigravity/bg-biohazard.svg');
   background-size: cover;
   background-position: center;

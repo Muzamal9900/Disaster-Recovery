@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <filter id="stormBase" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018 0.025" numOctaves="3" seed="9" result="noise"/>
+      <feColorMatrix type="matrix" in="noise"
+        values="0.15 0.1 0 0 0.32
+                0.18 0.12 0 0 0.38
+                0.22 0.15 0 0 0.45
+                0 0 0 0.35 0" result="cloudNoise"/>
+    </filter>
+    <filter id="debrisBlur">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="#5a6a7a"/>
+  <rect width="800" height="600" filter="url(#stormBase)"/>
+  <!-- Diagonal rain streaks -->
+  <g opacity="0.12" stroke="rgba(255,255,255,1)" stroke-width="0.8">
+    <line x1="50" y1="0" x2="20" y2="600"/>
+    <line x1="130" y1="0" x2="100" y2="600"/>
+    <line x1="200" y1="0" x2="170" y2="600"/>
+    <line x1="290" y1="0" x2="260" y2="600"/>
+    <line x1="370" y1="0" x2="340" y2="600"/>
+    <line x1="460" y1="0" x2="430" y2="600"/>
+    <line x1="530" y1="0" x2="500" y2="600"/>
+    <line x1="610" y1="0" x2="580" y2="600"/>
+    <line x1="700" y1="0" x2="670" y2="600"/>
+    <line x1="770" y1="0" x2="740" y2="600"/>
+  </g>
+  <!-- Finer rain streaks (shorter) -->
+  <g opacity="0.08" stroke="rgba(255,255,255,1)" stroke-width="0.5">
+    <line x1="80" y1="50" x2="65" y2="250"/>
+    <line x1="160" y1="100" x2="145" y2="350"/>
+    <line x1="250" y1="30" x2="235" y2="280"/>
+    <line x1="330" y1="150" x2="315" y2="450"/>
+    <line x1="420" y1="80" x2="405" y2="320"/>
+    <line x1="500" y1="200" x2="485" y2="500"/>
+    <line x1="580" y1="40" x2="565" y2="290"/>
+    <line x1="660" y1="120" x2="645" y2="400"/>
+    <line x1="740" y1="180" x2="725" y2="480"/>
+  </g>
+  <!-- Scattered debris shapes -->
+  <rect x="200" y="250" width="4" height="2" rx="1" fill="rgba(180,195,210,0.15)" transform="rotate(35 202 251)" filter="url(#debrisBlur)"/>
+  <rect x="550" y="180" width="5" height="2" rx="1" fill="rgba(170,185,200,0.12)" transform="rotate(45 552 181)" filter="url(#debrisBlur)"/>
+  <rect x="380" y="400" width="3" height="1.5" rx="0.75" fill="rgba(175,190,205,0.14)" transform="rotate(30 381 401)" filter="url(#debrisBlur)"/>
+  <rect x="650" y="450" width="4" height="2" rx="1" fill="rgba(165,180,195,0.1)" transform="rotate(50 652 451)" filter="url(#debrisBlur)"/>
+  <rect x="100" y="350" width="3.5" height="1.8" rx="0.9" fill="rgba(175,190,205,0.12)" transform="rotate(40 101 351)" filter="url(#debrisBlur)"/>
+</svg>

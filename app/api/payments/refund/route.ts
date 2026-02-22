@@ -3,6 +3,7 @@ import Stripe from 'stripe';
 import { getMockStripe } from '@/lib/services/mock/mockStripe';
 import { mockEmailService } from '@/lib/services/mock/mockEmail';
 import { calculateCoolingOffPeriod } from '@/lib/utils/australian-compliance';
+import { prisma } from '@/lib/prisma';
 
 // Initialize Stripe or use mock
 const stripe = process.env.STRIPE_SECRET_KEY 
@@ -60,6 +61,22 @@ export async function POST(request: NextRequest) {
       }
     });
     
+    // Update payment record with refund info
+    try {
+      await prisma.payment.updateMany({
+        where: { stripePaymentId: refundData.paymentIntentId },
+        data: {
+          status: 'REFUNDED',
+          refundAmount: refundAmount / 100,
+          refundReason: refundData.reason,
+          refundedAt: new Date(),
+        },
+      });
+    } catch (dbError) {
+      console.error('Failed to update payment record:', dbError);
+      // Don't fail the request — Stripe refund already processed
+    }
+
     // Send confirmation email
     if (emailService) {
       await emailService.sendEmail({

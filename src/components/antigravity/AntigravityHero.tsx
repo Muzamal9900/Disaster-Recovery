@@ -20,7 +20,7 @@ export function AntigravityHero() {
         <div className="ag-environmental-overlay" />
         <div className="ag-hero-image-wrap">
           <Image
-            src="/images/antigravity/hero-aussie-tech-van.webp"
+            src="/images/generated/disaster-recovery/hero-dawn-response.webp"
             alt="Professional disaster recovery technician arriving at an Australian property"
             fill
             priority

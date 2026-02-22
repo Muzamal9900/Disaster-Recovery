@@ -4,7 +4,7 @@
  * No health or legal advice - only factual information from approved sources
  */
 
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '../../lib/prisma';
 
 // ============================================
 // LEGAL COMPLIANCE CONFIGURATION
@@ -50,12 +50,8 @@ export const COMPLIANCE_CONFIG = {
 // ============================================
 
 export class DataVerificationService {
-  private prisma: PrismaClient;
+  private prisma = prisma;
   private verifiedDataCache: Map<string, any> = new Map();
-  
-  constructor() {
-    this.prisma = new PrismaClient();
-  }
   
   /**
    * Verify and filter response to ensure compliance
@@ -277,11 +273,7 @@ export class DataVerificationService {
 // ============================================
 
 export class StepByStepGuideService {
-  private prisma: PrismaClient;
-  
-  constructor() {
-    this.prisma = new PrismaClient();
-  }
+  private prisma = prisma;
   
   /**
    * Get verified step-by-step guide from database

@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
 import { generateLocationCombinations, calculatePagePriority, getEstimatedSearchVolume } from '@/lib/seo/locations';
 import { generateSEOContent } from '@/lib/seo/content-generator';
-
-const prisma = new PrismaClient();
 
 export async function POST(req: NextRequest) {
   try {

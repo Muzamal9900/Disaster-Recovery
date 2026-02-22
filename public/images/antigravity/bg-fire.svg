@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <filter id="flameTurbulence" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="turbulence" baseFrequency="0.02 0.035" numOctaves="5" seed="12" result="noise"/>
+      <feColorMatrix type="matrix" in="noise"
+        values="0.8 0.3 0 0 0.12
+                0.4 0.15 0 0 0.06
+                0.1 0.05 0 0 0.04
+                0 0 0 0.5 0" result="warmNoise"/>
+    </filter>
+    <radialGradient id="emberGlow1" cx="30%" cy="60%" r="35%">
+      <stop offset="0%" stop-color="rgba(255,160,50,0.2)"/>
+      <stop offset="100%" stop-color="rgba(255,160,50,0)"/>
+    </radialGradient>
+    <radialGradient id="emberGlow2" cx="70%" cy="40%" r="30%">
+      <stop offset="0%" stop-color="rgba(255,120,30,0.15)"/>
+      <stop offset="100%" stop-color="rgba(255,120,30,0)"/>
+    </radialGradient>
+    <radialGradient id="spark" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(255,200,100,0.8)"/>
+      <stop offset="60%" stop-color="rgba(255,160,50,0.3)"/>
+      <stop offset="100%" stop-color="rgba(255,120,30,0)"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="#2d1a1a"/>
+  <rect width="800" height="600" filter="url(#flameTurbulence)"/>
+  <rect width="800" height="600" fill="url(#emberGlow1)"/>
+  <rect width="800" height="600" fill="url(#emberGlow2)"/>
+  <circle cx="180" cy="420" r="3" fill="url(#spark)" opacity="0.9"/>
+  <circle cx="520" cy="150" r="2.5" fill="url(#spark)" opacity="0.7"/>
+  <circle cx="650" cy="380" r="2" fill="url(#spark)" opacity="0.8"/>
+  <circle cx="340" cy="280" r="1.8" fill="url(#spark)" opacity="0.6"/>
+  <circle cx="100" cy="200" r="2.2" fill="url(#spark)" opacity="0.5"/>
+  <circle cx="720" cy="520" r="3" fill="url(#spark)" opacity="0.7"/>
+  <circle cx="420" cy="100" r="1.5" fill="url(#spark)" opacity="0.6"/>
+  <circle cx="280" cy="500" r="2.5" fill="url(#spark)" opacity="0.8"/>
+</svg>

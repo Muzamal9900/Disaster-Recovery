@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <filter id="mouldTexture" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.025 0.03" numOctaves="4" seed="5" result="noise"/>
+      <feColorMatrix type="matrix" in="noise"
+        values="0.2 0.1 0 0 0.68
+                0.3 0.2 0 0 0.75
+                0.15 0.1 0 0 0.65
+                0 0 0 0.45 0" result="greenNoise"/>
+    </filter>
+    <filter id="sporeBlur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="#b8c8b4"/>
+  <rect width="800" height="600" filter="url(#mouldTexture)"/>
+  <!-- Spore clusters at various sizes -->
+  <circle cx="150" cy="200" r="35" fill="rgba(140,170,130,0.2)" filter="url(#sporeBlur)"/>
+  <circle cx="160" cy="190" r="20" fill="rgba(120,155,115,0.25)"/>
+  <circle cx="140" cy="215" r="15" fill="rgba(130,165,125,0.2)"/>
+  <circle cx="500" cy="350" r="45" fill="rgba(140,175,135,0.18)" filter="url(#sporeBlur)"/>
+  <circle cx="510" cy="340" r="25" fill="rgba(125,160,120,0.22)"/>
+  <circle cx="490" cy="370" r="18" fill="rgba(135,170,130,0.2)"/>
+  <circle cx="680" cy="150" r="28" fill="rgba(145,175,140,0.15)" filter="url(#sporeBlur)"/>
+  <circle cx="690" cy="145" r="16" fill="rgba(130,165,125,0.2)"/>
+  <circle cx="300" cy="480" r="38" fill="rgba(140,170,135,0.17)" filter="url(#sporeBlur)"/>
+  <circle cx="310" cy="470" r="22" fill="rgba(125,158,118,0.22)"/>
+  <circle cx="285" cy="495" r="14" fill="rgba(135,168,130,0.18)"/>
+  <!-- Small scattered spores -->
+  <circle cx="400" cy="120" r="8" fill="rgba(120,155,115,0.25)"/>
+  <circle cx="250" cy="350" r="6" fill="rgba(130,165,125,0.2)"/>
+  <circle cx="600" cy="480" r="10" fill="rgba(125,160,118,0.22)"/>
+  <circle cx="100" cy="400" r="7" fill="rgba(140,172,135,0.2)"/>
+  <circle cx="720" cy="300" r="9" fill="rgba(130,168,125,0.18)"/>
+  <!-- Green tint overlay -->
+  <rect width="800" height="600" fill="rgba(100,140,90,0.06)"/>
+</svg>

@@ -4,9 +4,7 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    // Dynamically import Prisma to avoid build-time issues
-    const { PrismaClient } = await import('@prisma/client');
-    const prisma = new PrismaClient();
+    const { prisma } = await import('@/lib/prisma');
     
     // TODO: Fetch all published SEO pages when sEOLocationPage model is added
     // const pages = await prisma.sEOLocationPage.findMany({

@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { mockEmailService } from '@/lib/services/mock/mockEmail';
-import { mockDatabaseService } from '@/lib/services/mock/mockDatabase';
+import { prisma } from '@/lib/prisma';
 
 export interface DisputeRequest {
   bookingId: string;
@@ -38,81 +37,106 @@ export async function GET(request: NextRequest) {
       { status: 400 }
     );
   }
-  
-  // Mock dispute retrieval
-  const dispute = {
-    disputeId: disputeId || `DISP-${Date.now()}`,
-    bookingId: bookingId || 'NRP-2024-XXXXX',
-    status: 'under_review',
-    priority: 'high',
-    createdAt: new Date().toISOString(),
-    lastUpdated: new Date().toISOString(),
-    timeline: [
-      {
-        date: new Date().toISOString(),
-        action: 'Dispute created',
-        by: 'Customer'
-      },
-      {
-        date: new Date().toISOString(),
-        action: 'Assigned to resolution team',
-        by: 'System'
-      }
-    ],
-    estimatedResolution: '2-3 business days',
-    assignedTo: 'Sarah Johnson - Senior Resolution Specialist'
-  };
-  
-  return NextResponse.json(dispute);
+
+  try {
+    // Query Enquiry records with source: 'dispute'
+    const enquiry = disputeId
+      ? await prisma.enquiry.findFirst({ where: { id: disputeId, source: 'dispute' } })
+      : await prisma.enquiry.findFirst({ where: { source: 'dispute', metadata: { contains: bookingId! } } });
+
+    if (!enquiry) {
+      return NextResponse.json(
+        { error: 'Dispute not found' },
+        { status: 404 }
+      );
+    }
+
+    // Parse stored metadata to reconstruct dispute response
+    const meta = JSON.parse(enquiry.metadata || '{}');
+
+    const dispute = {
+      disputeId: enquiry.id,
+      bookingId: meta.bookingId || bookingId || '',
+      status: meta.status || 'open',
+      priority: meta.priority || 'medium',
+      createdAt: enquiry.createdAt.toISOString(),
+      lastUpdated: meta.lastUpdated || enquiry.createdAt.toISOString(),
+      timeline: [
+        {
+          date: enquiry.createdAt.toISOString(),
+          action: 'Dispute created',
+          by: enquiry.name
+        },
+        {
+          date: enquiry.createdAt.toISOString(),
+          action: 'Assigned to resolution team',
+          by: 'System'
+        }
+      ],
+      estimatedResolution: getEstimatedResolution(meta.priority || 'medium'),
+      assignedTo: meta.assignedTo || 'Support Team'
+    };
+
+    return NextResponse.json(dispute);
+  } catch (error) {
+    console.error('Dispute retrieval error:', error);
+    return NextResponse.json(
+      { error: 'Failed to retrieve dispute' },
+      { status: 500 }
+    );
+  }
 }
 
 // POST - Create new dispute
 export async function POST(request: NextRequest) {
   try {
     const disputeData: DisputeRequest = await request.json();
-    
-    // Generate dispute ID
-    const disputeId = `DISP-${new Date().getFullYear()}-${Math.random().toString(36).substr(2, 9).toUpperCase()}`;
-    
+
     // Determine priority and resolution timeline
     const priority = calculatePriority(disputeData.severity, disputeData.disputeType);
     const estimatedResolution = getEstimatedResolution(priority);
-    
+
     // Assign to appropriate team member
     const assignedTo = assignDispute(disputeData.disputeType, priority);
-    
+
     // Define next steps based on dispute type
     const nextSteps = getNextSteps(disputeData.disputeType);
-    
-    // Store dispute (in production, this would go to database)
-    const dispute = {
-      ...disputeData,
-      disputeId,
-      status: 'open' as const,
-      priority,
-      estimatedResolution,
-      assignedTo,
-      createdAt: new Date().toISOString(),
-      lastUpdated: new Date().toISOString()
-    };
-    
-    // Send confirmation email to customer
-    const emailService = process.env.EMAIL_SERVER_HOST ? null : mockEmailService;
-    if (emailService) {
-      await emailService.sendEmail({
-        to: disputeData.customerEmail,
-        subject: `Dispute Received - ${disputeId}`,
-        html: generateDisputeConfirmationEmail(dispute, nextSteps),
-        text: `Your dispute ${disputeId} has been received and is being reviewed.`
-      });
-    }
-    
+
+    // Store dispute as an Enquiry record with source: 'dispute'
+    const enquiry = await prisma.enquiry.create({
+      data: {
+        name: disputeData.customerName,
+        email: disputeData.customerEmail,
+        phone: disputeData.customerPhone,
+        message: disputeData.description,
+        source: 'dispute',
+        metadata: JSON.stringify({
+          bookingId: disputeData.bookingId,
+          contractorId: disputeData.contractorId,
+          disputeType: disputeData.disputeType,
+          severity: disputeData.severity,
+          desiredResolution: disputeData.desiredResolution,
+          evidenceUrls: disputeData.evidenceUrls,
+          dateOfService: disputeData.dateOfService,
+          amountInDispute: disputeData.amountInDispute,
+          status: 'open',
+          priority,
+          assignedTo,
+          lastUpdated: new Date().toISOString(),
+        }),
+      },
+    });
+
+    const disputeId = enquiry.id;
+
+    // Log email send (email service integration can be added later)
+    console.log(`Dispute confirmation email would be sent to ${disputeData.customerEmail} for dispute ${disputeId}`);
+
     // If contractor involved, notify them
     if (disputeData.contractorId) {
-      // In production, lookup contractor email and send notification
       console.log(`Notifying contractor ${disputeData.contractorId} of dispute ${disputeId}`);
     }
-    
+
     // Log for audit trail
     console.log('Dispute created:', {
       disputeId,
@@ -121,7 +145,7 @@ export async function POST(request: NextRequest) {
       priority,
       assignedTo
     });
-    
+
     const response: DisputeResponse = {
       disputeId,
       status: 'open',
@@ -130,16 +154,16 @@ export async function POST(request: NextRequest) {
       assignedTo,
       nextSteps
     };
-    
+
     return NextResponse.json({
       success: true,
       ...response,
       message: 'Your dispute has been logged and will be reviewed within 24 hours'
     });
-    
+
   } catch (error: any) {
     console.error('Dispute creation error:', error);
-    
+
     return NextResponse.json(
       {
         success: false,
@@ -153,15 +177,39 @@ export async function POST(request: NextRequest) {
 export async function PUT(request: NextRequest) {
   try {
     const { disputeId, status, resolution, notes } = await request.json();
-    
+
     if (!disputeId || !status) {
       return NextResponse.json(
         { error: 'disputeId and status required' },
         { status: 400 }
       );
     }
-    
-    // Update dispute status (in production, update database)
+
+    // Fetch existing enquiry
+    const enquiry = await prisma.enquiry.findUnique({ where: { id: disputeId } });
+    if (!enquiry || enquiry.source !== 'dispute') {
+      return NextResponse.json(
+        { error: 'Dispute not found' },
+        { status: 404 }
+      );
+    }
+
+    // Merge new status into existing metadata
+    const existingMeta = JSON.parse(enquiry.metadata || '{}');
+    await prisma.enquiry.update({
+      where: { id: disputeId },
+      data: {
+        responded: status === 'resolved',
+        metadata: JSON.stringify({
+          ...existingMeta,
+          status,
+          resolution,
+          notes,
+          lastUpdated: new Date().toISOString(),
+        }),
+      },
+    });
+
     const updatedDispute = {
       disputeId,
       status,
@@ -170,22 +218,21 @@ export async function PUT(request: NextRequest) {
       lastUpdated: new Date().toISOString(),
       updatedBy: 'Resolution Team'
     };
-    
-    // If resolved, send resolution email
+
+    // If resolved, log resolution
     if (status === 'resolved' && resolution) {
-      // Send resolution notification
       console.log(`Dispute ${disputeId} resolved: ${resolution}`);
     }
-    
+
     return NextResponse.json({
       success: true,
       ...updatedDispute,
       message: `Dispute ${disputeId} updated to ${status}`
     });
-    
+
   } catch (error: any) {
     console.error('Dispute update error:', error);
-    
+
     return NextResponse.json(
       {
         success: false,

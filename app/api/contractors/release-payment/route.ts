@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
+import { prisma } from '@/lib/prisma';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
   apiVersion: '2024-06-20' as const });
@@ -189,20 +190,42 @@ export async function POST(request: NextRequest) {
     // Ensure we don't release more than the total
     releaseAmount = Math.min(releaseAmount, contractorTotalAmount);
 
-    // In production, fetch contractor's Stripe Connect account
-    // const contractor = await getContractor(releaseRequest.contractorId);
-    // const stripeAccountId = contractor.stripeConnectAccountId;
+    // Look up contractor's Stripe Connect account from DB
+    const contractor = await prisma.contractor.findUnique({
+      where: { id: releaseRequest.contractorId },
+      include: { companyProfile: true },
+    });
 
-    // For demo purposes, we'll simulate the contractor's Stripe account
-    const mockStripeAccountId = 'acct_1234567890'; // This would be the contractor's Connect account
+    // Also check ContractorProfile (Supabase platform model) for stripeConnectAccountId
+    let stripeAccountId: string | null | undefined = null;
+    if (contractor?.companyProfile) {
+      // ContractorCompany doesn't have stripeAccountId, check ContractorProfile
+      const contractorProfile = await prisma.contractorProfile.findFirst({
+        where: { userId: releaseRequest.contractorId },
+        select: { stripeConnectAccountId: true },
+      });
+      stripeAccountId = contractorProfile?.stripeConnectAccountId;
+    } else {
+      // Try ContractorProfile directly
+      const contractorProfile = await prisma.contractorProfile.findFirst({
+        where: { userId: releaseRequest.contractorId },
+        select: { stripeConnectAccountId: true },
+      });
+      stripeAccountId = contractorProfile?.stripeConnectAccountId;
+    }
+
+    if (!stripeAccountId) {
+      return NextResponse.json({
+        success: false,
+        message: 'Contractor has no connected payment account' }, { status: 400 });
+    }
 
     try {
       // Create a transfer to the contractor's Stripe Connect account
-      // In production, this would transfer from your platform account to the contractor's account
       const transfer = await stripe.transfers.create({
         amount: releaseAmount,
         currency: 'aud',
-        destination: mockStripeAccountId,
+        destination: stripeAccountId,
         transfer_group: releaseRequest.bookingId,
         description: `Payment release for job ${releaseRequest.bookingId}`,
         metadata: {
@@ -232,13 +255,30 @@ export async function POST(request: NextRequest) {
         authorizedBy: releaseRequest.authorizedBy,
         notes: releaseRequest.adminNotes };
 
-      // In production, update database records
-      // await updateJobPaymentStatus(releaseRequest.bookingId, paymentRelease);
-      // await notifyContractor(releaseRequest.contractorId, paymentRelease);
+      // Record the payment in the database
+      await prisma.payment.create({
+        data: {
+          bookingId: releaseRequest.bookingId,
+          clientId: releaseRequest.bookingId, // Will be resolved from booking context
+          contractorId: releaseRequest.contractorId,
+          amountAUD: releaseAmount / 100,
+          platformFeeAUD: 0,
+          platformFeePercentage: 0,
+          gstAUD: 0,
+          netAmountAUD: releaseAmount / 100,
+          paymentMethod: 'stripe_transfer',
+          stripePaymentIntentId: transfer.id,
+          transactionId: transfer.id,
+          status: 'COMPLETED',
+          processedAt: new Date(),
+          invoiceNumber: `REL-${Date.now()}`,
+        },
+      });
 
       // Send notification to contractor
+      const contractorEmail = contractor?.email || 'contractor@example.com';
       const contractorNotification = {
-        to: 'contractor@example.com', // Would be fetched from contractor record
+        to: contractorEmail,
         subject: `Payment Released - Job ${releaseRequest.bookingId}`,
         message: `Good news! A payment of $${(releaseAmount / 100).toFixed(2)} has been released for job ${releaseRequest.bookingId}.`,
         paymentDetails: {
@@ -294,56 +334,75 @@ export async function GET(request: NextRequest) {
       message: 'Either bookingId or contractorId is required' }, { status: 400 });
   }
 
-  // Mock payment history
-  const mockPaymentHistory: JobPaymentDetails = {
-    bookingId: bookingId || 'NRP-2024-ABC123',
-    contractorId: contractorId || 'CONT-001',
-    totalAmount: 220000,
-    amountReleased: 110000,
-    amountPending: 110000,
-    serviceFee: 55000,
-    status: 'partial_released',
-    stripePaymentIntentId: 'pi_1234567890',
-    contractorStripeAccountId: 'acct_1234567890',
-    releases: [
-      {
-        id: 'REL-001',
-        amount: 66000,
-        type: 'emergency',
-        releasedAt: new Date(Date.now() - 86400000).toISOString(),
-        stripeTransferId: 'tr_1234567890',
-        kpisCompleted: ['kpi-001', 'kpi-002'],
-        authorizedBy: 'admin@nrp.com.au',
-        notes: 'Emergency release for immediate work commencement' },
-      {
-        id: 'REL-002',
-        amount: 44000,
-        type: 'partial',
-        releasedAt: new Date(Date.now() - 43200000).toISOString(),
-        stripeTransferId: 'tr_',
-        kpisCompleted: ['kpi-003', 'kpi-004'],
-        authorizedBy: 'admin@nrp.com.au',
-        notes: 'Partial release after damage assessment completed' },
-    ] };
+  try {
+    // Query real payment records from the database
+    const payments = await prisma.payment.findMany({
+      where: bookingId
+        ? { bookingId }
+        : { contractorId: contractorId! },
+      orderBy: { createdAt: 'desc' },
+    });
 
-  // Also return current KPI status
-  const currentKPIs = defaultKPIs.map(kpi => ({
-    ...kpi,
-    status: ['kpi-001', 'kpi-002', 'kpi-003', 'kpi-004'].includes(kpi.id) ? 'completed' : 'pending',
-    completedAt: ['kpi-001', 'kpi-002', 'kpi-003', 'kpi-004'].includes(kpi.id) 
-      ? new Date(Date.now() - Math.random() * 86400000).toISOString() 
-      : undefined }));
+    // Calculate totals from real data
+    const totalReleased = payments
+      .filter(p => p.status === 'COMPLETED')
+      .reduce((sum, p) => sum + p.amountAUD, 0);
 
-  return NextResponse.json({
-    success: true,
-    data: {
-      paymentDetails: mockPaymentHistory,
-      kpiStatus: currentKPIs,
-      summary: {
-        totalAmount: `$${(mockPaymentHistory.totalAmount / 100).toFixed(2)}`,
-        released: `$${(mockPaymentHistory.amountReleased / 100).toFixed(2)}`,
-        pending: `$${(mockPaymentHistory.amountPending / 100).toFixed(2)}`,
-        releaseCount: mockPaymentHistory.releases.length,
-        completedKPIs: currentKPIs.filter(k => k.status === 'completed').length,
-        totalKPIs: currentKPIs.length } } });
+    // Look up the booking to get estimated cost as total amount
+    const booking = bookingId
+      ? await prisma.booking.findUnique({ where: { id: bookingId }, select: { estimatedCostAUD: true } })
+      : null;
+
+    const totalAmount = booking?.estimatedCostAUD || totalReleased;
+    const amountPending = Math.max(0, totalAmount - totalReleased);
+
+    // Build releases from payment records
+    const releases: PaymentRelease[] = payments.map(p => ({
+      id: p.id,
+      amount: Math.round(p.amountAUD * 100), // Convert to cents for consistency
+      type: 'partial' as const,
+      releasedAt: p.processedAt?.toISOString() || p.createdAt.toISOString(),
+      stripeTransferId: p.transactionId || p.stripePaymentIntentId || undefined,
+      kpisCompleted: [],
+      authorizedBy: 'system',
+      notes: p.invoiceNumber || undefined,
+    }));
+
+    const paymentDetails: JobPaymentDetails = {
+      bookingId: bookingId || payments[0]?.bookingId || '',
+      contractorId: contractorId || payments[0]?.contractorId || '',
+      totalAmount: Math.round(totalAmount * 100),
+      amountReleased: Math.round(totalReleased * 100),
+      amountPending: Math.round(amountPending * 100),
+      serviceFee: 0,
+      status: totalReleased === 0 ? 'held' : amountPending > 0 ? 'partial_released' : 'fully_released',
+      releases,
+    };
+
+    // Return current KPI status (default, since KPI tracking is per-release)
+    const currentKPIs = defaultKPIs.map(kpi => ({
+      ...kpi,
+      status: kpi.status as string,
+      completedAt: undefined as string | undefined,
+    }));
+
+    return NextResponse.json({
+      success: true,
+      data: {
+        paymentDetails,
+        kpiStatus: currentKPIs,
+        summary: {
+          totalAmount: `$${totalAmount.toFixed(2)}`,
+          released: `$${totalReleased.toFixed(2)}`,
+          pending: `$${amountPending.toFixed(2)}`,
+          releaseCount: releases.length,
+          completedKPIs: currentKPIs.filter(k => k.status === 'completed').length,
+          totalKPIs: currentKPIs.length } } });
+  } catch (error) {
+    console.error('Payment history fetch error:', error);
+    return NextResponse.json({
+      success: false,
+      message: 'Failed to fetch payment history',
+      error: error instanceof Error ? error.message : 'Unknown error' }, { status: 500 });
+  }
 }

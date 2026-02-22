@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import { prisma } from '@/lib/prisma';
 
 interface ProofOfWorkEvidence {
   type: 'BEFORE_PHOTO' | 'AFTER_PHOTO' | 'INVOICE' | 'COMPLETION_CERTIFICATE' | 'CLIENT_TESTIMONIAL' | 'INSURANCE_REPORT';

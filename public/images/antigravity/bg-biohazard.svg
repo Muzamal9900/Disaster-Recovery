@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <filter id="bioNoise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04 0.04" numOctaves="2" seed="15" result="noise"/>
+      <feColorMatrix type="matrix" in="noise"
+        values="0.05 0 0 0 0.1
+                0.06 0 0 0 0.12
+                0.08 0 0 0 0.18
+                0 0 0 0.15 0" result="darkNoise"/>
+    </filter>
+    <linearGradient id="bioAccent" x1="0" y1="100%" x2="0" y2="70%">
+      <stop offset="0%" stop-color="rgba(200,220,50,0.12)"/>
+      <stop offset="100%" stop-color="rgba(200,220,50,0)"/>
+    </linearGradient>
+    <!-- Hexagon pattern -->
+    <pattern id="hexGrid" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
+      <polygon points="30,2 55,15 55,37 30,50 5,37 5,15" fill="none" stroke="rgba(100,130,170,0.1)" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="hexGridOffset" x="30" y="26" width="60" height="52" patternUnits="userSpaceOnUse">
+      <polygon points="30,2 55,15 55,37 30,50 5,37 5,15" fill="none" stroke="rgba(100,130,170,0.08)" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="#1a2030"/>
+  <rect width="800" height="600" filter="url(#bioNoise)"/>
+  <!-- Hexagonal grid -->
+  <rect width="800" height="600" fill="url(#hexGrid)"/>
+  <rect width="800" height="600" fill="url(#hexGridOffset)"/>
+  <!-- Biohazard trefoil watermark (centered, large, very low opacity) -->
+  <g transform="translate(400,280)" opacity="0.12">
+    <!-- Three crescents of the biohazard symbol -->
+    <g fill="rgba(200,210,50,0.4)" stroke="rgba(200,210,50,0.2)" stroke-width="0.5">
+      <!-- Top crescent -->
+      <path d="M0,-90 A45,45 0 0,1 39,-45 A90,90 0 0,0 0,-90Z"/>
+      <path d="M0,-90 A45,45 0 0,0 -39,-45 A90,90 0 0,1 0,-90Z"/>
+      <!-- Bottom-right crescent -->
+      <path d="M78,45 A45,45 0 0,1 39,90 A90,90 0 0,0 78,45Z"/>
+      <path d="M78,45 A45,45 0 0,0 39,-0 A90,90 0 0,1 78,45Z"/>
+      <!-- Bottom-left crescent -->
+      <path d="M-78,45 A45,45 0 0,0 -39,90 A90,90 0 0,1 -78,45Z"/>
+      <path d="M-78,45 A45,45 0 0,1 -39,-0 A90,90 0 0,0 -78,45Z"/>
+    </g>
+    <!-- Center ring -->
+    <circle cx="0" cy="0" r="18" fill="none" stroke="rgba(200,210,50,0.3)" stroke-width="4"/>
+    <circle cx="0" cy="0" r="10" fill="rgba(26,32,48,0.8)"/>
+  </g>
+  <!-- Yellow-green accent gradient at bottom -->
+  <rect width="800" height="600" fill="url(#bioAccent)"/>
+</svg>

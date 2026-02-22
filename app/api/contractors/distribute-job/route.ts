@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { prisma } from '@/lib/prisma';
+import type { Contractor, ContractorTerritory, ContractorCompany, ContractorKPI } from '@prisma/client';
 
 interface JobDistributionRequest {
   bookingId: string;
@@ -15,7 +17,6 @@ interface JobDistributionRequest {
   };
   customerDetails: {
     name: string;
-    
     email: string;
     address: string;
   };
@@ -29,177 +30,116 @@ interface JobDistributionRequest {
   };
 }
 
-interface Contractor {
-  id: string;
-  username: string;
-  email: string;
-  
-  services: string[];
-  serviceAreas: {
-    suburbs: string[];
-    postcodes: string[];
-    states: string[];
-    maxRadius: number; // km from base
-  };
-  certifications: string[];
-  rating: number;
-  completedJobs: number;
-  responseTime: number; // average in minutes
-  availability: {
-    emergency: boolean;
-    urgent: boolean;
-    standard: boolean;
-  };
-  preferences: {
-    minJobValue: number;
-    maxActiveJobs: number;
-    insuranceWorkOnly: boolean;
-  };
-  performance: {
-    acceptanceRate: number;
-    completionRate: number;
-    customerSatisfaction: number;
-    kpiScore: number;
-  };
-  currentActiveJobs: number;
-  lastNotified?: Date;
+// Contractor with included relations from the database query
+type ContractorWithRelations = Contractor & {
+  territories: ContractorTerritory[];
+  companyProfile: (ContractorCompany & Record<string, unknown>) | null;
+  kpiMetrics: ContractorKPI[];
+  _count: { jobs: number };
+};
+
+// Parse a JSON-encoded string field into a string array (territories store postcodes/suburbs as JSON strings)
+function parseJsonArray(value: string | null | undefined): string[] {
+  if (!value) return [];
+  try {
+    const parsed = JSON.parse(value);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
 }
 
-// Mock contractor database - in production this would be from your database
-const mockContractors: Contractor[] = [
-  {
-    id: 'CONT-001',
-    username: 'Elite Water Damage Restoration',
-    email: 'contact@elitewater.com.au',
-    
-    services: ['water-damage', 'flood-restoration', 'mold-remediation'],
-    serviceAreas: {
-      suburbs: ['Brisbane', 'Gold Coast', 'Ipswich'],
-      postcodes: ['4000', '4001', '4002', '4217', '4218'],
-      states: ['QLD'],
-      maxRadius: 50 },
-    certifications: ['IICRC', 'WRT', 'ASD'],
-    rating: 4.9,
-    completedJobs: 234,
-    responseTime: 25,
-    availability: {
-      emergency: true,
-      urgent: true,
-      standard: true },
-    preferences: {
-      minJobValue: 1000,
-      maxActiveJobs: 10,
-      insuranceWorkOnly: false },
-    performance: {
-      acceptanceRate: 0.85,
-      completionRate: 0.98,
-      customerSatisfaction: 4.9,
-      kpiScore: 95 },
-    currentActiveJobs: 3 },
-  {
-    id: 'CONT-002',
-    username: 'Rapid Response Restorations',
-    email: 'jobs@rapidresponse.com.au',
-    
-    services: ['water-damage', 'fire-damage', 'storm-damage'],
-    serviceAreas: {
-      suburbs: ['Sydney', 'Parramatta', 'Penrith'],
-      postcodes: ['2000', '2001', '2150', '2750'],
-      states: ['NSW'],
-      maxRadius: 75 },
-    certifications: ['IICRC', 'FSRT'],
-    rating: 4.7,
-    completedJobs: 156,
-    responseTime: 35,
-    availability: {
-      emergency: true,
-      urgent: true,
-      standard: false },
-    preferences: {
-      minJobValue: 2000,
-      maxActiveJobs: 5,
-      insuranceWorkOnly: true },
-    performance: {
-      acceptanceRate: 0.75,
-      completionRate: 0.95,
-      customerSatisfaction: 4.7,
-      kpiScore: 88 },
-    currentActiveJobs: 2 },
-];
-
 // Calculate contractor score for job matching
-function calculateContractorScore(contractor: Contractor, job: JobDistributionRequest): number {
+function calculateContractorScore(
+  contractor: ContractorWithRelations,
+  job: JobDistributionRequest
+): number {
   let score = 0;
 
-  // Service match (must have)
-  const serviceTypeMap: Record<string, string> = {
-    'Water Damage': 'water-damage',
-    'Fire Damage': 'fire-damage',
-    'Storm Damage': 'storm-damage',
-    'Mold Services': 'mold-remediation' };
-  
-  const mappedService = serviceTypeMap[job.serviceType] || job.serviceType.toLowerCase().replace(/\s+/g, '-');
-  if (!contractor.services.includes(mappedService)) {
-    return 0; // Contractor doesn't offer this service
-  }
-  score += 100;
+  // Location match — check across all active territories
+  let locationScore = 0;
+  let hasEmergency = false;
+  let hasAfterHours = false;
+  let maxJobsCapacity = 0;
+  let currentActiveJobs = 0;
 
-  // Location match
-  if (contractor.serviceAreas.postcodes.includes(job.location.postcode)) {
-    score += 50;
-  } else if (contractor.serviceAreas.suburbs.includes(job.location.suburb)) {
-    score += 40;
-  } else if (contractor.serviceAreas.states.includes(job.location.state)) {
-    score += 20;
-  } else {
-    return 0; // Outside service area
+  for (const territory of contractor.territories) {
+    if (!territory.active) continue;
+
+    const postcodes = parseJsonArray(territory.postcodes);
+    const suburbs = parseJsonArray(territory.suburbs);
+
+    if (postcodes.includes(job.location.postcode)) {
+      locationScore = Math.max(locationScore, 50);
+    } else if (suburbs.some(s => s.toLowerCase() === job.location.suburb.toLowerCase())) {
+      locationScore = Math.max(locationScore, 40);
+    }
+
+    if (territory.emergencyResponse) hasEmergency = true;
+    if (territory.afterHours) hasAfterHours = true;
+    maxJobsCapacity += territory.maxJobsPerDay;
+    currentActiveJobs += territory.currentActiveJobs;
   }
+
+  if (locationScore === 0) {
+    return 0; // Outside all service areas
+  }
+  score += locationScore;
 
   // Urgency availability
-  if (job.urgencyLevel === 'emergency' && contractor.availability.emergency) {
+  if (job.urgencyLevel === 'emergency') {
+    if (!hasEmergency) return 0;
     score += 30;
-  } else if (job.urgencyLevel === 'urgent' && contractor.availability.urgent) {
+  } else if (job.urgencyLevel === 'urgent') {
+    if (!hasEmergency && !hasAfterHours) return 0;
     score += 20;
-  } else if (job.urgencyLevel === 'standard' && contractor.availability.standard) {
-    score += 10;
   } else {
-    return 0; // Not available for this urgency level
+    score += 10;
   }
 
-  // Performance metrics
-  score += contractor.performance.kpiScore * 0.5;
-  score += contractor.rating * 10;
-  score += (contractor.performance.acceptanceRate * 20);
+  // Performance metrics from latest KPI record
+  const latestKpi = contractor.kpiMetrics.length > 0
+    ? contractor.kpiMetrics.reduce((latest, kpi) =>
+        kpi.periodEnd > latest.periodEnd ? kpi : latest, contractor.kpiMetrics[0])
+    : null;
 
-  // Response time bonus (lower is better)
-  if (contractor.responseTime <= 30) {
-    score += 25;
-  } else if (contractor.responseTime <= 60) {
-    score += 15;
+  if (latestKpi) {
+    score += (latestKpi.qualityScore ?? 0) * 0.5;
+    score += (latestKpi.customerSatisfaction ?? 0) * 10;
+    score += (latestKpi.complianceScore ?? 0) * 0.2;
+
+    // Response time bonus (lower is better, measured in hours)
+    const avgResponse = latestKpi.averageResponseTime ?? 999;
+    if (avgResponse <= 0.5) {
+      score += 25;
+    } else if (avgResponse <= 1) {
+      score += 15;
+    }
   }
 
   // Capacity check (penalty if near max jobs)
-  const capacityRatio = contractor.currentActiveJobs / contractor.preferences.maxActiveJobs;
-  if (capacityRatio < 0.5) {
-    score += 20;
-  } else if (capacityRatio < 0.8) {
-    score += 10;
-  } else if (capacityRatio >= 1) {
-    return 0; // At capacity
-  }
-
-  // Insurance preference
-  if (job.insuranceDetails?.hasInsurance) {
-    if (contractor.preferences.insuranceWorkOnly) {
-      score += 15;
+  if (maxJobsCapacity > 0) {
+    const capacityRatio = currentActiveJobs / maxJobsCapacity;
+    if (capacityRatio < 0.5) {
+      score += 20;
+    } else if (capacityRatio < 0.8) {
+      score += 10;
+    } else if (capacityRatio >= 1) {
+      return 0; // At capacity
     }
-  } else if (contractor.preferences.insuranceWorkOnly) {
-    score -= 30; // Penalty if contractor only wants insurance work
   }
 
-  // Job value check
-  if (job.estimatedValue < contractor.preferences.minJobValue) {
-    score -= 20;
+  // Active job count penalty — contractors with fewer pending/in-progress jobs are preferred
+  const activeJobCount = contractor._count.jobs;
+  if (activeJobCount === 0) {
+    score += 15;
+  } else if (activeJobCount <= 3) {
+    score += 5;
+  }
+
+  // Insurance preference bonus
+  if (job.insuranceDetails?.hasInsurance) {
+    score += 10;
   }
 
   return Math.max(0, score);
@@ -209,11 +149,48 @@ export async function POST(request: NextRequest) {
   try {
     const jobData: JobDistributionRequest = await request.json();
 
-    // Find eligible contractors
-    const eligibleContractors = mockContractors
+    // Find approved contractors with active territories in the job's area
+    const contractors = await prisma.contractor.findMany({
+      where: {
+        status: 'APPROVED',
+        territories: {
+          some: {
+            active: true,
+          },
+        },
+      },
+      include: {
+        territories: {
+          where: { active: true },
+        },
+        companyProfile: {
+          select: {
+            companyName: true,
+            tradingName: true,
+          },
+        },
+        kpiMetrics: {
+          orderBy: { periodEnd: 'desc' },
+          take: 1,
+        },
+        _count: {
+          select: {
+            jobs: {
+              where: {
+                status: { in: ['pending', 'assigned', 'in_progress'] },
+              },
+            },
+          },
+        },
+      },
+    }) as ContractorWithRelations[];
+
+    // Score and rank contractors
+    const eligibleContractors = contractors
       .map(contractor => ({
         contractor,
-        score: calculateContractorScore(contractor, jobData) }))
+        score: calculateContractorScore(contractor, jobData),
+      }))
       .filter(item => item.score > 0)
       .sort((a, b) => b.score - a.score);
 
@@ -223,13 +200,15 @@ export async function POST(request: NextRequest) {
         message: 'No contractors available for this job',
         data: {
           bookingId: jobData.bookingId,
-          notifiedCount: 0 } }, { status: 404 });
+          notifiedCount: 0,
+        },
+      }, { status: 404 });
     }
 
     // Notification strategy based on urgency
-    let notificationLimit = 3; // Default for standard
+    let notificationLimit = 3;
     if (jobData.urgencyLevel === 'emergency') {
-      notificationLimit = 5; // Notify more contractors for emergencies
+      notificationLimit = 5;
     } else if (jobData.urgencyLevel === 'urgent') {
       notificationLimit = 4;
     }
@@ -239,79 +218,111 @@ export async function POST(request: NextRequest) {
       .slice(0, notificationLimit)
       .map(item => item.contractor);
 
-    // Send notifications (in production, this would be actual email/SMS)
+    // Assign job to the top-scoring contractor
+    const topContractor = contractorsToNotify[0];
+    const companyName = topContractor.companyProfile?.companyName
+      ?? topContractor.companyProfile?.tradingName
+      ?? topContractor.username;
+
+    // Create Job record in the database
+    const job = await prisma.job.create({
+      data: {
+        contractorId: topContractor.id,
+        serviceType: jobData.serviceType,
+        urgency: jobData.urgencyLevel,
+        status: 'pending',
+        address: jobData.customerDetails.address,
+        suburb: jobData.location.suburb,
+        state: jobData.location.state,
+        postcode: jobData.location.postcode,
+        coordinates: jobData.location.coordinates
+          ? { lat: jobData.location.coordinates.lat, lng: jobData.location.coordinates.lng }
+          : undefined,
+        customerName: jobData.customerDetails.name,
+        customerEmail: jobData.customerDetails.email,
+        customerPhone: '',
+        insuranceClaim: jobData.insuranceDetails?.hasInsurance ?? false,
+        insurerName: jobData.insuranceDetails?.company ?? null,
+        claimNumber: jobData.insuranceDetails?.claimNumber ?? null,
+        description: jobData.damageDescription,
+        internalNotes: `Booking: ${jobData.bookingId} | Property: ${jobData.propertyType} | Est. value: $${jobData.estimatedValue}`,
+        assignedAt: new Date(),
+      },
+    });
+
+    // Create notifications for each contractor
     const notifications = await Promise.all(
       contractorsToNotify.map(async (contractor) => {
-        // Simulate notification sending
-        const notification = {
+        const contractorCompanyName = contractor.companyProfile?.companyName
+          ?? contractor.companyProfile?.tradingName
+          ?? contractor.username;
+
+        // Create a contractor notification record
+        await prisma.contractorNotification.create({
+          data: {
+            contractorId: contractor.id,
+            type: 'JOB',
+            priority: jobData.urgencyLevel === 'emergency' ? 'URGENT' : 'NORMAL',
+            subject: `New ${jobData.urgencyLevel} job: ${jobData.serviceType} in ${jobData.location.suburb}`,
+            message: `A new ${jobData.serviceType} job is available in ${jobData.location.suburb}, ${jobData.location.state} ${jobData.location.postcode}. ${jobData.damageDescription}`,
+            actionRequired: true,
+            actionUrl: `/contractor/jobs/${job.id}/accept`,
+            actionDeadline: new Date(Date.now() + (jobData.urgencyLevel === 'emergency' ? 30 : 120) * 60000),
+          },
+        });
+
+        console.log(`Notifying ${contractorCompanyName} about job ${job.id}`);
+
+        return {
           contractorId: contractor.id,
-          username: contractor.username,
+          companyName: contractorCompanyName,
           notificationMethod: 'email',
           sentAt: new Date().toISOString(),
           jobDetails: {
             bookingId: jobData.bookingId,
+            jobId: job.id,
             serviceType: jobData.serviceType,
             urgency: jobData.urgencyLevel,
             location: `${jobData.location.suburb}, ${jobData.location.state}`,
             estimatedValue: jobData.estimatedValue,
-            customeremail: jobData.customerDetails.email,
-            description: jobData.damageDescription },
-          acceptanceUrl: `https://portal.disasterrecovery.com.au/jobs/${jobData.bookingId}/accept`,
-          expiresIn: jobData.urgencyLevel === 'emergency' ? '30 minutes' : '2 hours' };
-
-        // In production, you would:
-        // 1. Send actual email via SendGrid/AWS SES
-        // 2. Send SMS via Twilio for emergency jobs
-        // 3. Push notification to contractor mobile app
-        // 4. Update contractor's last notified timestamp
-        // 5. Log notification in database
-
-        console.log(`Notifying ${contractor.username} about job ${jobData.bookingId}`);
-        
-        return notification;
+            description: jobData.damageDescription,
+          },
+          acceptanceUrl: `/contractor/jobs/${job.id}/accept`,
+          expiresIn: jobData.urgencyLevel === 'emergency' ? '30 minutes' : '2 hours',
+        };
       })
     );
 
-    // Create job record in database
-    const jobRecord = {
-      bookingId: jobData.bookingId,
-      status: 'pending_acceptance',
-      serviceType: jobData.serviceType,
-      urgencyLevel: jobData.urgencyLevel,
-      location: jobData.location,
-      customerDetails: jobData.customerDetails,
-      estimatedValue: jobData.estimatedValue,
-      notifiedContractors: contractorsToNotify.map(c => ({
-        id: c.id,
-        username: c.username,
-        notifiedAt: new Date().toISOString(),
-        score: eligibleContractors.find(e => e.contractor.id === c.id)?.score || 0 })),
-      createdAt: new Date().toISOString(),
-      expiresAt: new Date(Date.now() + (jobData.urgencyLevel === 'emergency' ? 30 : 120) * 60000).toISOString() };
-
-    // In production, save jobRecord to database
-    // await saveJobRecord(jobRecord);
+    const expiresAt = new Date(Date.now() + (jobData.urgencyLevel === 'emergency' ? 30 : 120) * 60000).toISOString();
 
     return NextResponse.json({
       success: true,
       message: `Job distributed to ${contractorsToNotify.length} contractors`,
       data: {
         bookingId: jobData.bookingId,
+        jobId: job.id,
         notifiedCount: contractorsToNotify.length,
+        assignedTo: {
+          id: topContractor.id,
+          companyName,
+        },
         contractors: contractorsToNotify.map(c => ({
           id: c.id,
-          username: c.username,
-          responseTime: c.responseTime,
-          rating: c.rating })),
+          companyName: c.companyProfile?.companyName ?? c.companyProfile?.tradingName ?? c.username,
+          score: eligibleContractors.find(e => e.contractor.id === c.id)?.score ?? 0,
+        })),
         notifications,
-        jobExpiresAt: jobRecord.expiresAt } });
+        jobExpiresAt: expiresAt,
+      },
+    });
 
   } catch (error) {
     console.error('Job distribution error:', error);
     return NextResponse.json({
       success: false,
       message: 'Failed to distribute job to contractors',
-      error: error instanceof Error ? error.message : 'Unknown error' }, { status: 500 });
+      error: error instanceof Error ? error.message : 'Unknown error',
+    }, { status: 500 });
   }
 }
 
@@ -319,36 +330,61 @@ export async function POST(request: NextRequest) {
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const bookingId = searchParams.get('bookingId');
+  const jobId = searchParams.get('jobId');
 
-  if (!bookingId) {
+  if (!bookingId && !jobId) {
     return NextResponse.json({
       success: false,
-      message: 'Booking ID is required' }, { status: 400 });
+      message: 'Booking ID or Job ID is required',
+    }, { status: 400 });
   }
 
-  // In production, fetch from database
-  // const job = await getJobByBookingId(bookingId);
+  // Query the job from the database
+  const job = await prisma.job.findFirst({
+    where: jobId
+      ? { id: jobId }
+      : { internalNotes: { contains: bookingId! } },
+    include: {
+      contractor: {
+        select: {
+          id: true,
+          username: true,
+          email: true,
+          companyProfile: {
+            select: { companyName: true, tradingName: true },
+          },
+        },
+      },
+    },
+  });
 
-  // Mock response
-  const mockJobStatus = {
-    bookingId,
-    status: 'pending_acceptance',
-    notifiedContractors: 3,
-    responses: [
-      {
-        contractorId: 'CONT-001',
-        username: 'Elite Water Damage Restoration',
-        status: 'viewed',
-        viewedAt: new Date(Date.now() - 5 * 60000).toISOString() },
-      {
-        contractorId: 'CONT-002',
-        username: 'Rapid Response Restorations',
-        status: 'pending' },
-    ],
-    acceptedBy: null,
-    expiresAt: new Date(Date.now() + 25 * 60000).toISOString() };
+  if (!job) {
+    return NextResponse.json({
+      success: false,
+      message: 'Job not found',
+    }, { status: 404 });
+  }
+
+  const companyName = job.contractor?.companyProfile?.companyName
+    ?? job.contractor?.companyProfile?.tradingName
+    ?? job.contractor?.username
+    ?? 'Unassigned';
 
   return NextResponse.json({
     success: true,
-    data: mockJobStatus });
+    data: {
+      jobId: job.id,
+      status: job.status,
+      serviceType: job.serviceType,
+      urgency: job.urgency,
+      location: `${job.suburb}, ${job.state} ${job.postcode}`,
+      assignedTo: job.contractor ? {
+        contractorId: job.contractor.id,
+        companyName,
+      } : null,
+      assignedAt: job.assignedAt?.toISOString() ?? null,
+      acceptedAt: job.acceptedAt?.toISOString() ?? null,
+      createdAt: job.createdAt.toISOString(),
+    },
+  });
 }

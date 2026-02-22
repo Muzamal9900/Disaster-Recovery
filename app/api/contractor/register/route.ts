@@ -1,11 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
 import bcrypt from 'bcryptjs';
 import { z } from 'zod';
 import { withSecurityHeaders, withRateLimit, withValidation, combineMiddleware } from '@/lib/auth-middleware';
 import { PaymentAuditLogger } from '@/lib/payment-security';
-
-const prisma = new PrismaClient();
 
 // SECURITY: Enhanced validation schema for registration with sanitization
 const registrationSchema = z.object({

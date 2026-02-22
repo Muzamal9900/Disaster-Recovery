@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
 import FraudDetectionService, { DocumentAnalysisInput } from '@/lib/ai/fraud-detection';
-
-const prisma = new PrismaClient();
 
 export async function POST(req: NextRequest) {
   try {

@@ -38,30 +38,9 @@ function executeCommand(command, options = {}) {
 // Setup build environment
 console.log('🔧 Setting up build environment...\n');
 
-// Ensure DATABASE_URL is set for Prisma
+// DATABASE_URL should be set via environment variables (Vercel Dashboard or .env.local)
 if (!process.env.DATABASE_URL) {
-  // Use SQLite for build process
-  process.env.DATABASE_URL = 'file:./build.db';
-  console.log('📌 Using temporary SQLite database for build');
-}
-
-// Create the build database file if using SQLite
-if (process.env.DATABASE_URL.startsWith('file:')) {
-  const dbPath = process.env.DATABASE_URL.replace('file:', '');
-  const fullDbPath = path.resolve(dbPath);
-  const dbDir = path.dirname(fullDbPath);
-  
-  // Ensure directory exists
-  if (!fs.existsSync(dbDir)) {
-    fs.mkdirSync(dbDir, { recursive: true });
-    console.log(`📁 Created database directory: ${dbDir}`);
-  }
-  
-  // Create empty database file if it doesn't exist
-  if (!fs.existsSync(fullDbPath)) {
-    fs.writeFileSync(fullDbPath, '');
-    console.log(`📄 Created database file: ${fullDbPath}`);
-  }
+  console.warn('⚠️ DATABASE_URL is not set. Prisma generate will still work (no DB connection needed), but db push will fail.');
 }
 
 // Clean previous builds
@@ -93,7 +72,6 @@ try {
   
   const prismaEnv = {
     ...process.env,
-    DATABASE_URL: process.env.DATABASE_URL || 'file:./build.db',
     PRISMA_SCHEMA_PATH: schemaFile
   };
   
@@ -130,7 +108,6 @@ try {
   const buildEnv = {
     ...process.env,
     NODE_OPTIONS: '--max-old-space-size=4096',
-    DATABASE_URL: process.env.DATABASE_URL || 'file:./build.db',
     NEXT_TELEMETRY_DISABLED: '1',
     // Force production build on Vercel
     NODE_ENV: isVercel ? 'production' : (process.env.NODE_ENV || 'production')
@@ -201,16 +178,6 @@ try {
   }
   
   process.exit(1);
-}
-
-// Clean up temporary build database if created
-if (process.env.DATABASE_URL === 'file:./build.db' && fs.existsSync('./build.db')) {
-  try {
-    fs.unlinkSync('./build.db');
-    console.log('🧹 Cleaned up temporary build database');
-  } catch (error) {
-    console.warn('⚠️ Could not clean up build database:', error.message);
-  }
 }
 
 console.log('\n=====================================');

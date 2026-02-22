@@ -3,16 +3,14 @@
  * Processes customer messages with compliance and data source verification
  */
 
-import { PrismaClient } from '@prisma/client';
-import { 
-  DataVerificationService, 
+import { prisma } from '../../lib/prisma';
+import {
+  DataVerificationService,
   StepByStepGuideService,
   ResponseAttributionService,
-  COMPLIANCE_CONFIG 
+  COMPLIANCE_CONFIG
 } from '../compliance/data-verification-layer';
 import { MasterOrchestrator } from '../orchestration/agent-hierarchy';
-
-const prisma = new PrismaClient();
 const verificationService = new DataVerificationService();
 const guideService = new StepByStepGuideService();
 

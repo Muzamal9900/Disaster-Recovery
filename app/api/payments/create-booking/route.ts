@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { getMockStripe } from '@/lib/services/mock/mockStripe';
 import { isProductionMode } from '@/lib/services/mock';
+import { prisma } from '@/lib/prisma';
 
 // Initialize Stripe with your secret key or use mock in demo mode
 const stripe = process.env.STRIPE_SECRET_KEY 
@@ -117,11 +118,28 @@ export async function POST(request: NextRequest) {
         // Set up for future contractor payout
         transfer_group: bookingId });
 
-      // In production, you would also:
-      // 1. Store booking details in database
-      // 2. Create a job record for contractor assignment
-      // 3. Send confirmation emails
-      // 4. Trigger contractor notification system
+      // Persist payment record to database
+      await prisma.payment.create({
+        data: {
+          bookingId,
+          amount: totalAmount / 100,
+          currency: 'AUD',
+          status: 'PENDING',
+          stripePaymentId: paymentIntent.id,
+          stripeCustomerId: customer.id,
+          method: 'card',
+          description: `Disaster Recovery Service - ${bookingData.serviceType}`,
+          metadata: JSON.stringify({
+            serviceType: bookingData.serviceType,
+            urgencyLevel: bookingData.urgencyLevel,
+            propertyType: bookingData.propertyType,
+            suburb: bookingData.suburb,
+            state: bookingData.state,
+            serviceFee: serviceFee / 100,
+            contractorAmount: contractorAmount / 100,
+          }),
+        },
+      });
 
       return NextResponse.json({
         success: true,
@@ -155,9 +173,32 @@ export async function POST(request: NextRequest) {
 
       // Finalize and send the invoice
       const finalizedInvoice = await stripe.invoices.finalizeInvoice(invoice.id);
-      
+
       // Get the hosted invoice URL for the customer to view
       const hostedInvoiceUrl = finalizedInvoice.hosted_invoice_url;
+
+      // Persist payment record to database
+      await prisma.payment.create({
+        data: {
+          bookingId,
+          amount: totalAmount / 100,
+          currency: 'AUD',
+          status: 'PENDING',
+          stripePaymentId: invoice.id,
+          stripeCustomerId: customer.id,
+          method: 'bank_transfer',
+          description: `Disaster Recovery Service - ${bookingData.serviceType}`,
+          metadata: JSON.stringify({
+            serviceType: bookingData.serviceType,
+            urgencyLevel: bookingData.urgencyLevel,
+            propertyType: bookingData.propertyType,
+            suburb: bookingData.suburb,
+            state: bookingData.state,
+            serviceFee: serviceFee / 100,
+            contractorAmount: contractorAmount / 100,
+          }),
+        },
+      });
 
       return NextResponse.json({
         success: true,

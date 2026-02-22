@@ -1,7 +1,5 @@
 import { OpenAI } from 'openai';
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import { prisma } from '@/lib/prisma';
 
 // Initialize OpenAI client only if API key is available
 const openai = process.env.OPENAI_API_KEY 

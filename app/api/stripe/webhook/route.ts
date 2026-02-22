@@ -1,11 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { stripe, handleStripeWebhook } from '@/lib/stripe';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
 import Stripe from 'stripe';
 import { PaymentValidator, PaymentAuditLogger } from '@/lib/payment-security';
 import { withSecurityHeaders, withRateLimit } from '@/lib/auth-middleware';
-
-const prisma = new PrismaClient();
 
 async function handleWebhook(req: NextRequest) {
   // TODO: Implement when onboardingPayment model is added

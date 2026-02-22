@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
+import { prisma } from '@/lib/prisma';
 import { calculateLeadScore, getLeadPriority, assignLeadToTeam } from '@/lib/lead-scoring';
 import { sendEmail, emailTemplates } from '@/lib/email';
 
@@ -31,10 +32,30 @@ export async function POST(request: NextRequest) {
     
     const priority = getLeadPriority(leadScore);
     const assignment = assignLeadToTeam(leadScore, validatedData.service);
-    
-    // Generate unique submission ID
-    const submissionId = `CONTACT-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-    
+
+    // Save enquiry to database
+    const enquiry = await prisma.enquiry.create({
+      data: {
+        name: validatedData.name,
+        email: validatedData.email,
+        phone: validatedData.phone,
+        message: validatedData.message,
+        source: 'contact_form',
+        metadata: JSON.stringify({
+          service: validatedData.service,
+          urgency: validatedData.urgency,
+          propertyType: validatedData.propertyType,
+          hasInsurance: validatedData.hasInsurance,
+          preferredContact: validatedData.preferredContact,
+          leadScore,
+          priority,
+          assignment,
+        }),
+      },
+    });
+
+    const submissionId = enquiry.id;
+
     // Send notification email to team
     const notificationEmail = emailTemplates.leadNotification({
       id: submissionId,
@@ -73,26 +94,9 @@ export async function POST(request: NextRequest) {
       console.error('Email sending error:', error);
     });
     
-    // In production, also:
-    // 1. Save to database
-    // 2. Trigger SMS alerts for emergency cases
-    
-    // For now, we'll simulate a successful submission
-    const submission = {
-      id: submissionId,
-      ...validatedData,
-      leadScore,
-      priority,
-      assignment,
-      submittedAt: new Date().toISOString(),
-      status: 'pending' };
-    
     // Log submission for monitoring
-    console.log('Contact form submission:', submission);
-    
-    // Simulate async processing delay
-    await new Promise(resolve => setTimeout(resolve, 500));
-    
+    console.log('Contact form submission:', { id: submissionId, leadScore, priority, assignment });
+
     // Return success response
     return NextResponse.json({
       success: true,

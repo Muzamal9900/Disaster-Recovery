@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { prisma } from '@/lib/prisma';
 
 interface TimeSlot {
   time: string;
@@ -31,18 +32,38 @@ export async function GET(request: NextRequest) {
   const slots: TimeSlot[] = [];
   const startHour = 7; // 7 AM
   const endHour = 19; // 7 PM
-  
+  const MAX_CAPACITY_PER_SLOT = 5;
+
   const requestedDate = new Date(date);
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   requestedDate.setHours(0, 0, 0, 0);
-  
+
   const isToday = requestedDate.getTime() === today.getTime();
   const currentHour = new Date().getHours();
-  
+
+  // Query existing bookings for this date from the database
+  let existingBookings: { scheduledDate: Date | null }[] = [];
+  try {
+    existingBookings = await prisma.booking.findMany({
+      where: {
+        scheduledDate: {
+          gte: new Date(`${date}T00:00:00`),
+          lt: new Date(`${date}T23:59:59`),
+        },
+        status: { not: 'CANCELLED' },
+      },
+      select: { scheduledDate: true },
+    });
+  } catch (error) {
+    // If DB query fails, default to empty (all slots available)
+    console.error('Failed to query bookings for availability:', error);
+    existingBookings = [];
+  }
+
   for (let hour = startHour; hour < endHour; hour += 2) {
     const timeString = `${hour.toString().padStart(2, '0')}:00`;
-    
+
     // Check if slot is in the past
     if (isToday && hour <= currentHour) {
       slots.push({
@@ -51,28 +72,22 @@ export async function GET(request: NextRequest) {
         reason: 'Past time' });
       continue;
     }
-    
-    // Simulate random availability (80% available)
-    const isAvailable = Math.random() > 0.2;
-    
+
+    // Count bookings in this 2-hour slot window
+    const slotStart = hour;
+    const slotEnd = hour + 2;
+    const bookingsInSlot = existingBookings.filter(b => {
+      if (!b.scheduledDate) return false;
+      const bookingHour = b.scheduledDate.getHours();
+      return bookingHour >= slotStart && bookingHour < slotEnd;
+    }).length;
+
+    const isAvailable = bookingsInSlot < MAX_CAPACITY_PER_SLOT;
+
     slots.push({
       time: timeString,
       available: isAvailable,
       reason: isAvailable ? undefined : 'Fully booked' });
-  }
-  
-  // Always ensure at least 2 slots are available
-  const availableCount = slots.filter(s => s.available).length;
-  if (availableCount < 2) {
-    // Make the next 2 unavailable slots available
-    let made = 0;
-    for (const slot of slots) {
-      if (!slot.available && slot.reason === 'Fully booked' && made < 2) {
-        slot.available = true;
-        delete slot.reason;
-        made++;
-      }
-    }
   }
   
   return NextResponse.json({

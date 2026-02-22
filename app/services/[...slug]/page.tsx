@@ -1,10 +1,8 @@
 import { notFound } from 'next/navigation';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
 import { Metadata } from 'next';
 import {  MapPin, Clock, CheckCircle, Star, Shield, MessageSquare} from 'lucide-react';
 import Link from 'next/link';
-
-const prisma = new PrismaClient();
 
 interface PageParams {
   slug: string[];

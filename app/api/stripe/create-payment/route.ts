@@ -1,11 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createOnboardingCheckoutSession, createStripeCustomer, isStripeConfigured } from '@/lib/stripe';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
 import { withAuth, withRateLimit, withValidation, withSecurityHeaders, withCors, combineMiddleware } from '@/lib/auth-middleware';
 import { PaymentValidator, PaymentAuditLogger, paymentValidationSchema } from '@/lib/payment-security';
 import { z } from 'zod';
-
-const prisma = new PrismaClient();
 
 // SECURITY: Strict validation schema for payment creation
 const createPaymentSchema = z.object({

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyAuth, hasRole, UserRole } from '@/lib/jwt-auth';
 import { handleAPIError, successResponse, APIError, validateRequired } from '@/lib/api-error-handler';
+import { prisma } from '@/lib/prisma';
 import { z } from 'zod';
 
 const profileUpdateSchema = z.object({
@@ -27,83 +28,177 @@ const profileUpdateSchema = z.object({
 export async function GET(request: NextRequest) {
   try {
     const user = await verifyAuth(request);
-    
+
     if (!user || !hasRole(user.role as UserRole, [UserRole.CONTRACTOR, UserRole.ADMIN])) {
       throw new APIError('Contractor authentication required', 401);
     }
-    
-    // Mock profile data (in production, fetch from database)
+
+    // Query ContractorProfile by userId
+    const contractorProfile = await prisma.contractorProfile.findFirst({
+      where: { userId: user.id }
+    });
+
+    // Query Contractor record for extended data (company, certs, insurance, KPIs)
+    const contractor = await prisma.contractor.findFirst({
+      where: { email: user.email },
+      include: {
+        companyProfile: true,
+        certifications: {
+          where: { status: 'VERIFIED' },
+          select: {
+            certificationName: true,
+            certificationType: true,
+            expiryDate: true
+          }
+        },
+        insurance: {
+          where: { status: 'ACTIVE' },
+          select: {
+            insuranceType: true,
+            coverageAmount: true,
+            expiryDate: true,
+            verified: true
+          }
+        },
+        territories: {
+          where: { active: true },
+          select: {
+            name: true,
+            radiusKm: true,
+            emergencyResponse: true,
+            afterHours: true,
+            maxJobsPerDay: true,
+            currentActiveJobs: true
+          }
+        },
+        kpiMetrics: {
+          orderBy: { periodStart: 'desc' },
+          take: 1,
+          select: {
+            totalJobs: true,
+            completedJobs: true,
+            customerSatisfaction: true,
+            averageResponseTime: true,
+            totalRevenue: true,
+            averageJobValue: true
+          }
+        },
+        subscription: {
+          select: {
+            tier: true,
+            status: true,
+            baseRadius: true
+          }
+        },
+        availability: true
+      }
+    });
+
+    // Count completed jobs for this contractor
+    const completedJobsCount = contractor ? await prisma.job.count({
+      where: { contractorId: contractor.id, status: 'completed' }
+    }) : 0;
+
+    // Get average rating from Rating table
+    const ratingAgg = contractorProfile ? await prisma.rating.aggregate({
+      where: { contractorId: contractorProfile.userId },
+      _avg: { rating: true },
+      _count: { rating: true }
+    }) : null;
+
+    // Build insurance summary from ContractorInsurance records
+    const insuranceMap: Record<string, boolean> = {};
+    const insuranceAmounts: Record<string, number> = {};
+    const insuranceExpiry: Record<string, string> = {};
+    if (contractor?.insurance) {
+      for (const ins of contractor.insurance) {
+        const key = ins.insuranceType === 'PUBLIC_LIABILITY' ? 'publicLiability'
+          : ins.insuranceType === 'PROFESSIONAL_INDEMNITY' ? 'professionalIndemnity'
+          : ins.insuranceType === 'WORKERS_COMP' ? 'workCover'
+          : ins.insuranceType.toLowerCase();
+        insuranceMap[key] = ins.verified;
+        insuranceAmounts[`${key}Amount`] = ins.coverageAmount;
+        if (ins.expiryDate) {
+          insuranceExpiry[key] = ins.expiryDate.toISOString().split('T')[0];
+        }
+      }
+    }
+
+    // Determine service radius from subscription or territory
+    const serviceRadius = contractor?.subscription?.baseRadius
+      ?? (contractor?.territories?.[0]?.radiusKm ? Math.round(contractor.territories[0].radiusKm) : null);
+
+    // Latest KPI data
+    const latestKPI = contractor?.kpiMetrics?.[0] ?? null;
+
+    // Build the profile response, matching the original response structure
     const profile = {
       id: user.id,
-      companyName: 'Rapid Response Restoration',
-      contactName: 'John Smith',
+      companyName: contractor?.companyProfile?.companyName ?? contractorProfile?.businessName ?? null,
+      contactName: contractor?.companyProfile
+        ? (() => { try { const dirs = JSON.parse(contractor.companyProfile.directors); return dirs?.[0]?.name ?? null; } catch { return null; } })()
+        : null,
       email: user.email,
-      phone: '0412 345 678',
-      abn: '12 345 678 901',
-      address: '123 Industrial Dr, Eagle Farm, QLD 4009',
-      serviceRadius: 50,
-      services: [
-        'Water Damage Restoration',
-        'Fire Damage Restoration',
-        'Mould Remediation',
-        'Storm Damage',
-        'Sewage Cleanup'
-      ],
+      phone: contractor?.mobileNumber ?? contractorProfile?.phone ?? null,
+      abn: contractor?.companyProfile?.abn ?? null,
+      address: contractor?.companyProfile
+        ? `${contractor.companyProfile.registeredAddress}, ${contractor.companyProfile.registeredCity}, ${contractor.companyProfile.registeredState} ${contractor.companyProfile.registeredPostcode}`
+        : contractorProfile?.address
+          ? `${contractorProfile.address}${contractorProfile.city ? ', ' + contractorProfile.city : ''}${contractorProfile.state ? ', ' + contractorProfile.state : ''} ${contractorProfile.zipCode ?? ''}`
+          : null,
+      serviceRadius: serviceRadius ?? null,
+      services: contractorProfile?.services ?? [],
       availability: {
-        247: true,
-        emergencyResponse: true,
-        responseTime: 60,
+        247: contractor?.availability?.some(a => a.available) ?? false,
+        emergencyResponse: contractor?.territories?.some(t => t.emergencyResponse) ?? false,
+        responseTime: latestKPI?.averageResponseTime ? Math.round(latestKPI.averageResponseTime * 60) : null,
         blackoutDates: []
       },
       insurance: {
-        publicLiability: true,
-        publicLiabilityAmount: 20000000,
-        professionalIndemnity: true,
-        professionalIndemnityAmount: 5000000,
-        workCover: true,
-        expiryDates: {
-          publicLiability: '2024-12-31',
-          professionalIndemnity: '2024-12-31',
-          workCover: '2024-12-31'
-        }
+        publicLiability: insuranceMap.publicLiability ?? false,
+        publicLiabilityAmount: insuranceAmounts.publicLiabilityAmount ?? null,
+        professionalIndemnity: insuranceMap.professionalIndemnity ?? false,
+        professionalIndemnityAmount: insuranceAmounts.professionalIndemnityAmount ?? null,
+        workCover: insuranceMap.workCover ?? false,
+        expiryDates: insuranceExpiry
       },
-      certifications: [
-        'IICRC Water Damage Restoration',
-        'IICRC Fire & Smoke Restoration',
-        'IICRC Applied Structural Drying',
-        'Asbestos Removal License',
-        'Queensland Building License'
-      ],
+      certifications: contractor?.certifications?.map(c => c.certificationName) ?? [],
       performance: {
-        totalJobs: 342,
-        completionRate: 98.5,
-        averageRating: 4.8,
-        responseTime: '45 minutes',
-        memberSince: '2023-01-15',
-        tier: 'PLATINUM'
+        totalJobs: latestKPI?.totalJobs ?? contractorProfile?.totalJobs ?? completedJobsCount,
+        completionRate: latestKPI && latestKPI.totalJobs > 0
+          ? parseFloat(((latestKPI.completedJobs / latestKPI.totalJobs) * 100).toFixed(1))
+          : null,
+        averageRating: ratingAgg?._avg?.rating
+          ? parseFloat(ratingAgg._avg.rating.toFixed(1))
+          : contractorProfile?.rating ?? null,
+        responseTime: latestKPI?.averageResponseTime
+          ? `${Math.round(latestKPI.averageResponseTime * 60)} minutes`
+          : null,
+        memberSince: contractor?.createdAt?.toISOString().split('T')[0]
+          ?? contractorProfile?.createdAt?.toISOString().split('T')[0]
+          ?? null,
+        tier: contractor?.subscription?.tier ?? null
       },
-      bankDetails: {
-        accountName: 'Rapid Response Restoration Pty Ltd',
-        bsb: '***-***',
-        accountNumber: '****1234'
-      },
+      bankDetails: null,
       preferences: {
         notifications: {
           email: true,
           sms: true,
           push: false
         },
-        leadTypes: ['emergency', 'insurance', 'commercial'],
-        minJobValue: 500,
-        maxActiveJobs: 10
+        leadTypes: [],
+        minJobValue: null,
+        maxActiveJobs: contractor?.territories?.[0]?.maxJobsPerDay ?? null
       },
-      status: 'ACTIVE',
-      verificationStatus: 'VERIFIED',
-      lastUpdated: '2024-01-29T10:00:00Z'
+      status: contractor?.status ?? contractorProfile?.availability ?? null,
+      verificationStatus: contractorProfile?.isVerified ? 'VERIFIED' : (contractor?.status === 'APPROVED' ? 'VERIFIED' : 'UNVERIFIED'),
+      lastUpdated: contractor?.updatedAt?.toISOString()
+        ?? contractorProfile?.updatedAt?.toISOString()
+        ?? null
     };
-    
+
     return successResponse(profile);
-    
+
   } catch (error) {
     return handleAPIError(error);
   }
@@ -112,26 +207,90 @@ export async function GET(request: NextRequest) {
 export async function PATCH(request: NextRequest) {
   try {
     const user = await verifyAuth(request);
-    
+
     if (!user || !hasRole(user.role as UserRole, [UserRole.CONTRACTOR, UserRole.ADMIN])) {
       throw new APIError('Contractor authentication required', 401);
     }
-    
+
     const body = await request.json();
     const validatedData = profileUpdateSchema.parse(body);
-    
-    // In production, update database
-    const updatedProfile = {
-      ...validatedData,
-      id: user.id,
-      lastUpdated: new Date().toISOString()
-    };
-    
+
+    // Find or create the ContractorProfile
+    const existingProfile = await prisma.contractorProfile.findFirst({
+      where: { userId: user.id }
+    });
+
+    if (!existingProfile) {
+      // Create a new profile if none exists
+      const newProfile = await prisma.contractorProfile.create({
+        data: {
+          userId: user.id,
+          businessName: validatedData.companyName ?? null,
+          phone: validatedData.phone ?? null,
+          address: validatedData.address ?? null,
+          services: validatedData.services ?? [],
+          serviceAreas: [],
+        }
+      });
+
+      return successResponse({
+        message: 'Profile created successfully',
+        profile: {
+          ...newProfile,
+          lastUpdated: newProfile.updatedAt.toISOString()
+        }
+      });
+    }
+
+    // Build update payload from validated data
+    const updateData: Record<string, any> = {};
+
+    if (validatedData.companyName !== undefined) {
+      updateData.businessName = validatedData.companyName;
+    }
+    if (validatedData.phone !== undefined) {
+      updateData.phone = validatedData.phone;
+    }
+    if (validatedData.address !== undefined) {
+      updateData.address = validatedData.address;
+    }
+    if (validatedData.services !== undefined) {
+      updateData.services = validatedData.services;
+    }
+    if (validatedData.email !== undefined) {
+      // Email is on the User model, not ContractorProfile -- skip or handle separately
+    }
+
+    const updatedProfile = await prisma.contractorProfile.update({
+      where: { id: existingProfile.id },
+      data: updateData
+    });
+
+    // If there is a linked Contractor record, update the company profile too
+    const contractor = await prisma.contractor.findFirst({
+      where: { email: user.email },
+      include: { companyProfile: true }
+    });
+
+    if (contractor?.companyProfile && validatedData.companyName !== undefined) {
+      await prisma.contractorCompany.update({
+        where: { id: contractor.companyProfile.id },
+        data: { companyName: validatedData.companyName }
+      });
+    }
+
     return successResponse({
       message: 'Profile updated successfully',
-      profile: updatedProfile
+      profile: {
+        id: user.id,
+        businessName: updatedProfile.businessName,
+        phone: updatedProfile.phone,
+        address: updatedProfile.address,
+        services: updatedProfile.services,
+        lastUpdated: updatedProfile.updatedAt.toISOString()
+      }
     });
-    
+
   } catch (error) {
     return handleAPIError(error);
   }
