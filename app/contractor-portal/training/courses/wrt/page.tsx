@@ -137,13 +137,13 @@ function WRTCoursePageOriginal() {
     },
     {
       id: 10,
-      title: 'Documentation & Xactimate',
+      title: 'Documentation & RestoreAssist.app',
       duration: '120 min',
       lessons: [
         'Photo documentation',
         'Moisture mapping',
         'Daily drying logs',
-        'Xactimate line items'
+        'RestoreAssist.app line items'
       ],
       completed: false,
       locked: true

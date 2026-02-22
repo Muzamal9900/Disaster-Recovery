@@ -139,8 +139,8 @@ function CourseCatalogPageOriginal() {
     
     // Software Training
     {
-      id: 'xactimate',
-      title: 'Xactimate Fundamentals',
+      id: 'restoreassist',
+      title: 'RestoreAssist.app Fundamentals',
       category: 'Software Training',
       level: 'Foundation',
       duration: '2 days',
@@ -148,7 +148,7 @@ function CourseCatalogPageOriginal() {
       enrolled: 1432,
       rating: 4.6,
       modules: 9,
-      description: 'Master insurance estimating with Xactimate',
+      description: 'Master insurance estimating with RestoreAssist.app',
       thumbnail: '💻',
       locked: false,
       popular: true

@@ -296,7 +296,7 @@ function Day2WaterDamageRestorationOriginal() {
           "Dehumidifier grain depression",
           "Customer communication log"
         ],
-        xactimateItems: {
+        restoreAssistItems: {
           extraction: "WTR_EXTR+ (per SF)",
           equipment: "EQUIP_DH (per day), EQUIP_AFAN (per day)",
           monitoring: "WTR_MONITOR (per day)",

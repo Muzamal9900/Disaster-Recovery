@@ -172,7 +172,7 @@ export const equipmentCatalog: EquipmentSpecification[] = [
       monthly: 3750
     },
     description: 'High-performance LGR dehumidifier designed for the most challenging water damage restoration projects.',
-    technicalDetails: 'Features advanced low grain refrigerant technology for maximum moisture extraction in extreme conditions. Includes Xactimate code for insurance billing.',
+    technicalDetails: 'Features advanced low grain refrigerant technology for maximum moisture extraction in extreme conditions. Includes RestoreAssist.app code for insurance billing.',
     operationalRequirements: [
       'Dedicated 15A circuit recommended',
       'Drainage setup required',

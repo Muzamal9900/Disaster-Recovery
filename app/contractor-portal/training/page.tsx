@@ -50,13 +50,13 @@ function ContractorPortalTrainingPageOriginal() {
     },
     {
       id: 5,
-      title: 'Xactimate Fundamentals',
+      title: 'RestoreAssist.app Fundamentals',
       category: 'Software',
       duration: '8 hours',
       progress: 50,
       status: 'in-progress',
       certificate: false,
-      description: 'Learn to create accurate estimates using Xactimate software'
+      description: 'Learn to create accurate estimates using RestoreAssist.app software'
     }
   ];
 

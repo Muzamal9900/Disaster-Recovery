@@ -68,7 +68,7 @@ function Day7AssessmentOriginal() {
             module: "Insurance Claims",
             keyPoints: [
               "Major Australian insurers",
-              "Xactimate line items",
+              "RestoreAssist.app line items",
               "Photo documentation standards",
               "Scope writing requirements",
               "Direct billing procedures"
@@ -150,7 +150,7 @@ function Day7AssessmentOriginal() {
             explanation: "AAMI requires 24-hour initial report as per their preferred vendor requirements"
           },
           {
-            question: "The Xactimate line item code for water extraction is:",
+            question: "The RestoreAssist.app line item code for water extraction is:",
             options: [
               "WTR_DRY",
               "WTR_EXTRACT",
@@ -277,7 +277,7 @@ function Day7AssessmentOriginal() {
             items: [
               "Complete initial assessment",
               "Take required photos",
-              "Create Xactimate estimate",
+              "Create RestoreAssist.app estimate",
               "Write scope of work",
               "Complete moisture log"
             ],
@@ -315,7 +315,7 @@ function Day7AssessmentOriginal() {
             },
             {
               q: "What about difficult access properties?",
-              a: "Add access charges in Xactimate, document challenges, arrange special equipment"
+              a: "Add access charges in RestoreAssist.app, document challenges, arrange special equipment"
             },
             {
               q: "How do I know when drying is complete?",

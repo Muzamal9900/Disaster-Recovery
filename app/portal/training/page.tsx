@@ -65,7 +65,7 @@ function TrainingHubOriginal() {
           modules: [
             "Understanding insurance policies",
             "Claim documentation requirements",
-            "Xactimate basics and line items",
+            "RestoreAssist.app basics and line items",
             "Photo documentation standards",
             "Scope writing fundamentals",
             "Direct billing procedures"

@@ -169,7 +169,7 @@ function Day1PlatformOrientationOriginal() {
               "Daily progress reports",
               "Photo documentation standards",
               "Scope change procedures",
-              "Xactimate integration",
+              "RestoreAssist.app integration",
               "Completion certificates"
             ]
           },

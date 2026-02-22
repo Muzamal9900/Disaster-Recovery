@@ -58,7 +58,7 @@ function ContractorPortalResourcesPageOriginal() {
       color: 'bg-red-600',
       items: [
         { title: 'Insurance Claim Documentation', type: 'PDF', size: '4.5 MB' },
-        { title: 'Xactimate Estimating Guide', type: 'PDF', size: '7.2 MB' },
+        { title: 'RestoreAssist.app Estimating Guide', type: 'PDF', size: '7.2 MB' },
         { title: 'WorkSafe Compliance Checklist', type: 'PDF', size: '2.3 MB' },
         { title: 'Quality Assurance Standards', type: 'PDF', size: '3.8 MB' }
       ]

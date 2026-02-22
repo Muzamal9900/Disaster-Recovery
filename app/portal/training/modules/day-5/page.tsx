@@ -390,7 +390,7 @@ function Day5EquipmentTechnologyOriginal() {
             "FLIR Tools - Thermal image analysis"
           ],
           business: [
-            "Xactimate Mobile - Estimating",
+            "RestoreAssist.app Mobile - Estimating",
             "QuickBooks - Invoicing",
             "Google Maps - Navigation"
           ]

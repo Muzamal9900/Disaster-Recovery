@@ -236,7 +236,7 @@ export interface EstimateCalculations {
 
 export type CalculationMethod = 
   | 'iicrc_standard'
-  | 'xactimate'
+  | 'restoreassist'
   | 'contractor_custom'
   | 'industry_average';
 

@@ -39,7 +39,7 @@ function Day3InsuranceClaimsOriginal() {
             requirements: [
               "24-hour initial report",
               "Photos within 48 hours",
-              "Xactimate estimate required",
+              "RestoreAssist.app estimate required",
               "Daily progress reports",
               "Moisture logs mandatory"
             ],
@@ -181,7 +181,7 @@ function Day3InsuranceClaimsOriginal() {
           ],
           bestPractices: [
             "Use insurance company template if provided",
-            "Match line items to Xactimate exactly",
+            "Match line items to RestoreAssist.app exactly",
             "Include all labor and materials",
             "Document pre-existing damage separately",
             "Separate emergency from repairs",
@@ -192,7 +192,7 @@ function Day3InsuranceClaimsOriginal() {
     },
     {
       id: 3,
-      title: "Xactimate Fundamentals",
+      title: "RestoreAssist.app Fundamentals",
       duration: "180 min",
       content: {
         basics: {
@@ -361,7 +361,7 @@ function Day3InsuranceClaimsOriginal() {
             content6: "What is not included and why"
           },
           attachments: [
-            "Xactimate estimate",
+            "RestoreAssist.app estimate",
             "Photo documentation",
             "Moisture logs",
             "Thermal imaging report",
@@ -382,7 +382,7 @@ function Day3InsuranceClaimsOriginal() {
             "Certificate of Currency (insurance)",
             "ABN and business registration",
             "Bank account for EFT",
-            "Xactimate license",
+            "RestoreAssist.app license",
             "Quality certifications"
           ],
           process: [
@@ -408,7 +408,7 @@ function Day3InsuranceClaimsOriginal() {
             "Missing documentation - delays payment",
             "Scope creep - get written approval",
             "Customer complaints - address immediately",
-            "Incorrect line items - match Xactimate",
+            "Incorrect line items - match RestoreAssist.app",
             "No authorization - never proceed without",
             "Poor photo quality - retake before leaving"
           ]
@@ -417,7 +417,7 @@ function Day3InsuranceClaimsOriginal() {
     }
   ];
 
-  const xactimateExercise = {
+  const restoreAssistExercise = {
     scenario: "Kitchen water damage from dishwasher leak. 100 SF affected, carpet in adjoining dining room wet (150 SF), Category 1 water, discovered within 2 hours.",
     task: "Create estimate including extraction, drying equipment for 3 days, and carpet cleaning.",
     lineItems: [
@@ -600,7 +600,7 @@ function Day3InsuranceClaimsOriginal() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Calculator className="h-5 w-5" />
-                  Xactimate Fundamentals
+                  RestoreAssist.app Fundamentals
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -608,7 +608,7 @@ function Day3InsuranceClaimsOriginal() {
                   <AlertCircle className="h-4 w-4" />
                   <AlertTitle>Critical Skill</AlertTitle>
                   <AlertDescription>
-                    95% of insurance claims require Xactimate estimates. Master this for success.
+                    95% of insurance claims require RestoreAssist.app estimates. Master this for success.
                   </AlertDescription>
                 </Alert>
 
@@ -664,7 +664,7 @@ function Day3InsuranceClaimsOriginal() {
                         <Alert className="mb-4">
                           <Info className="h-4 w-4" />
                           <AlertDescription>
-                            <strong>Scenario:</strong> {xactimateExercise.scenario}
+                            <strong>Scenario:</strong> {restoreAssistExercise.scenario}
                           </AlertDescription>
                         </Alert>
                         
@@ -681,7 +681,7 @@ function Day3InsuranceClaimsOriginal() {
                             </TableRow>
                           </TableHeader>
                           <TableBody>
-                            {xactimateExercise.lineItems.map((item, idx) => (
+                            {restoreAssistExercise.lineItems.map((item, idx) => (
                               <TableRow key={idx}>
                                 <TableCell className="font-mono text-sm">{item.code}</TableCell>
                                 <TableCell>{item.qty}</TableCell>
@@ -695,7 +695,7 @@ function Day3InsuranceClaimsOriginal() {
                                 Total Estimate:
                               </TableCell>
                               <TableCell className="font-bold text-lg">
-                                ${xactimateExercise.lineItems.reduce((sum, item) => sum + item.total, 0).toLocaleString()}
+                                ${restoreAssistExercise.lineItems.reduce((sum, item) => sum + item.total, 0).toLocaleString()}
                               </TableCell>
                             </TableRow>
                           </TableBody>

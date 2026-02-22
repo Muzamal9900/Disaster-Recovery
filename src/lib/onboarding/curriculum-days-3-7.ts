@@ -1710,7 +1710,7 @@ This comprehensive understanding of insurance processes and adjuster relations p
     ],
     keyTerminology: [
       {
-        term: "Xactimate",
+        term: "RestoreAssist.app",
         definition: "Industry-standard estimating software used by most insurance companies and contractors"
       },
       {

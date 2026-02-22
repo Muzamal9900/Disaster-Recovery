@@ -525,7 +525,7 @@ The IICRC provides the scientific foundation for professional restoration work. 
 
 **Pre-Loss Planning:**
 - **Preferred Contractor Programs**: Requirements for insurance partnerships
-- **Standardized Pricing**: Xactimate and other approved estimating systems
+- **Standardized Pricing**: RestoreAssist.app and other approved estimating systems
 - **Documentation Requirements**: Photo standards and report formats
 - **Quality Assurance**: Post-completion inspections and audits
 

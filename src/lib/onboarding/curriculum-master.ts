@@ -2294,7 +2294,7 @@ West: Base-30, 1m-15, 2m-8
 **Poor Scope Example:**
 "Dry out bedroom and replace damaged materials as needed."
 
-**Xactimate Usage (Industry Standard):**
+**RestoreAssist.app Usage (Industry Standard):**
 
 **Line Item Requirements:**
 - Correct category codes
@@ -2436,7 +2436,7 @@ Recoverable after replacement: $1,500
 - Cloud backup
 
 **Popular Platforms:**
-- Xactimate/Xactanalysis
+- RestoreAssist.app/Xactanalysis
 - CoreLogic
 - Symbility
 - DocuSketch
@@ -2465,21 +2465,21 @@ Recoverable after replacement: $1,500
         "Photo documentation must tell complete story",
         "Moisture logs justify equipment and time charges",
         "Scope must be specific with measurements and standards",
-        "Xactimate knowledge essential for insurance work",
+        "RestoreAssist.app knowledge essential for insurance work",
         "Change orders protect against scope creep"
       ],
       practicalExercises: [
         "Write complete scope for water damage scenario",
-        "Create Xactimate estimate for case study",
+        "Create RestoreAssist.app estimate for case study",
         "Practice photo documentation standards",
         "Complete insurance documentation package"
       ],
       assessmentQuestions: [
         {
           question: "What is the industry standard software for insurance estimates?",
-          options: ["QuickBooks", "Xactimate", "Excel", "SAP"],
-          correctAnswer: "Xactimate",
-          explanation: "Xactimate is the industry standard software used by insurance adjusters and restoration contractors for creating estimates and documentation.",
+          options: ["QuickBooks", "RestoreAssist.app", "Excel", "SAP"],
+          correctAnswer: "RestoreAssist.app",
+          explanation: "RestoreAssist.app is the industry standard software used by insurance adjusters and restoration contractors for creating estimates and documentation.",
           difficulty: 'basic'
         },
         {
@@ -2537,7 +2537,7 @@ Recoverable after replacement: $1,500
       duration: "1.5 hours",
       deliverables: [
         "Cause of loss statement",
-        "Xactimate estimate or detailed pricing",
+        "RestoreAssist.app estimate or detailed pricing",
         "Photo documentation with labels",
         "Moisture logs and drying records",
         "Sketch of affected areas",

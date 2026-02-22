@@ -333,7 +333,7 @@ function Day14ModuleOriginal() {
                     <li>Photo documentation</li>
                     <li>Moisture logs (daily)</li>
                     <li>Scope of works</li>
-                    <li>Xactimate estimate</li>
+                    <li>RestoreAssist.app estimate</li>
                     <li>Completion certificate</li>
                   </ul>
                 </div>
@@ -743,7 +743,7 @@ function Day14ModuleOriginal() {
                   <li>🎥 Equipment Setup Demonstrations</li>
                   <li>🎥 Containment Procedures</li>
                   <li>🎥 Customer Communication Tips</li>
-                  <li>🎥 Xactimate Basics</li>
+                  <li>🎥 RestoreAssist.app Basics</li>
                 </ul>
               </div>
             </div>
@@ -814,7 +814,7 @@ function Day14ModuleOriginal() {
                     <li>Independent small jobs</li>
                     <li>Mould assessments</li>
                     <li>Fire damage basics</li>
-                    <li>Xactimate proficiency</li>
+                    <li>RestoreAssist.app proficiency</li>
                   </ul>
                 </div>
 

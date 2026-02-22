@@ -341,7 +341,7 @@ function Day13ModuleOriginal() {
                   <div className={styles.taskSteps}>
                     <label>
                       <input type="checkbox" />
-                      Create Xactimate estimate for each unit
+                      Create RestoreAssist.app estimate for each unit
                     </label>
                     <label>
                       <input type="checkbox" />

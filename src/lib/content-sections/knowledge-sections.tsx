@@ -1186,7 +1186,7 @@ const ENTRIES: Record<string, KnowledgeEntry> = {
         <ul>
           <li><strong>Scope of works</strong> — Detailed, line-item scope document that insurers can assess directly, eliminating back-and-forth disputes over what needs to be done.</li>
           <li><strong>Scientific justification</strong> — Every recommendation backed by IICRC standards, Australian Building Codes, and psychrometric data — making it virtually impossible for an assessor to reject on technical grounds.</li>
-          <li><strong>Cost estimation</strong> — Market-rate pricing aligned with insurer expectations, prepared in formats compatible with major insurer claim systems (Xactimate, MICA).</li>
+          <li><strong>Cost estimation</strong> — Market-rate pricing aligned with insurer expectations, prepared in formats compatible with major insurer claim systems (RestoreAssist.app).</li>
           <li><strong>Liability transfer</strong> — The report formally documents that reasonable mitigation steps have been taken under the Insurance Contracts Act 1984 &quot;Duty of Utmost Good Faith&quot;, transferring ongoing liability risk from the property owner to the professional restoration process.</li>
         </ul>
         <ProTip>
@@ -1235,7 +1235,7 @@ const ENTRIES: Record<string, KnowledgeEntry> = {
         'Fixed-price $2,750 service — no hidden costs or scope creep',
         'Liability transfer documentation under Insurance Contracts Act 1984',
         'Emergency stabilisation with commercial-grade HEPA, dehumidifiers, and containment',
-        'Insurer-compatible cost estimation (Xactimate/MICA format)',
+        'Insurer-compatible cost estimation (RestoreAssist.app format)',
       ],
       unvetted: [
         'Visual inspection only — no thermal imaging or moisture mapping',

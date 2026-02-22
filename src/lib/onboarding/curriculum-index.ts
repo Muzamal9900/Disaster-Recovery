@@ -114,7 +114,7 @@ export const MASTER_CURRICULUM: Record<number, {
   },
   8: {
     title: "Documentation and Technology Systems",
-    focus: "Digital documentation, Xactimate, insurance processes, CRM systems",
+    focus: "Digital documentation, RestoreAssist.app, insurance processes, CRM systems",
     duration: "8 hours",
     modules: 4,
     assessmentQuestions: 12,
@@ -257,7 +257,7 @@ export const COMPETENCY_FRAMEWORK = {
     objectives: [
       "Create detailed scope of work documents",
       "Photograph and document losses comprehensively",
-      "Use Xactimate for estimating",
+      "Use RestoreAssist.app for estimating",
       "Complete insurance paperwork accurately",
       "Maintain job files and records",
       "Track equipment and time",
@@ -507,7 +507,7 @@ export const TRAINING_RESOURCES = {
     "Customer satisfaction survey"
   ],
   guides: [
-    "Xactimate user guide",
+    "RestoreAssist.app user guide",
     "Insurance claim process",
     "Customer communication scripts",
     "Marketing toolkit",

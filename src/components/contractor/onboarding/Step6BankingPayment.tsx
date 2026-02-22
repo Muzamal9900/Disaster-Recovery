@@ -39,8 +39,8 @@ interface BankingPaymentData {
   // Insurance Claim Experience
   insuranceDirectBilling: boolean;
   preferredInsurers: string[];
-  xactimateAccess: boolean;
-  xactimateEmail?: string;
+  restoreAssistAccess: boolean;
+  restoreAssistEmail?: string;
   
   // Financial Information
   creditLimit: string;
@@ -102,7 +102,7 @@ export default function Step6BankingPayment({ data, onNext, onBack }: Step6Props
 
   const gstRegistered = watch('gstRegistered');
   const insuranceDirectBilling = watch('insuranceDirectBilling');
-  const xactimateAccess = watch('xactimateAccess');
+  const restoreAssistAccess = watch('restoreAssistAccess');
   const acceptCreditCards = watch('acceptCreditCards');
   const agreeToTerms = watch('agreeToTerms');
   const agreeToFees = watch('agreeToFees');
@@ -398,21 +398,21 @@ export default function Step6BankingPayment({ data, onNext, onBack }: Step6Props
             
             <div className="flex items-center space-x-2">
               <Checkbox 
-                id="xactimateAccess"
-                checked={xactimateAccess}
-                onCheckedChange={(checked) => setValue('xactimateAccess', checked as boolean)}
+                id="restoreAssistAccess"
+                checked={restoreAssistAccess}
+                onCheckedChange={(checked) => setValue('restoreAssistAccess', checked as boolean)}
               />
-              <Label htmlFor="xactimateAccess">We have Xactimate access for estimating</Label>
+              <Label htmlFor="restoreAssistAccess">We have RestoreAssist.app access for estimating</Label>
             </div>
             
-            {xactimateAccess && (
+            {restoreAssistAccess && (
               <div className="ml-6">
-                <Label htmlFor="xactimateEmail">Xactimate Account Email</Label>
+                <Label htmlFor="restoreAssistEmail">RestoreAssist.app Account Email</Label>
                 <Input
-                  id="xactimateEmail"
+                  id="restoreAssistEmail"
                   type="email"
-                  {...register('xactimateEmail')}
-                  placeholder="xactimate@example.com"
+                  {...register('restoreAssistEmail')}
+                  placeholder="restore@example.com"
                 />
               </div>
             )}

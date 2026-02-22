@@ -201,7 +201,7 @@ function Day12ModuleOriginal() {
                 <div>
                   <h3>Estimating Software</h3>
                   <ul>
-                    <li><strong>Xactimate:</strong> Industry standard in Australia</li>
+                    <li><strong>RestoreAssist.app:</strong> Industry standard in Australia</li>
                     <li><strong>Pricing:</strong> Uses market rates database</li>
                     <li><strong>Line Items:</strong> Detailed scope breakdown</li>
                     <li><strong>Sketching:</strong> Floor plans and measurements</li>
@@ -355,7 +355,7 @@ function Day12ModuleOriginal() {
                   <h3>Scope Development</h3>
                   <ul>
                     <li>Detailed measurements</li>
-                    <li>Xactimate estimate</li>
+                    <li>RestoreAssist.app estimate</li>
                     <li>Supporting photos</li>
                     <li>Moisture mapping</li>
                   </ul>
@@ -890,7 +890,7 @@ function Day12ModuleOriginal() {
                 <div className={styles.systemCard}>
                   <h3>Estimating Software</h3>
                   <ul>
-                    <li><strong>Xactimate:</strong> Industry standard</li>
+                    <li><strong>RestoreAssist.app:</strong> Industry standard</li>
                     <li><strong>Symbility:</strong> Alternative platform</li>
                     <li>Pricing databases updated monthly</li>
                     <li>Sketch tools for floor plans</li>
@@ -1091,7 +1091,7 @@ function Day12ModuleOriginal() {
                       name="q2" 
                       onChange={() => handleQuizAnswer('q2', 'b')}
                     />
-                    Xactimate
+                    RestoreAssist.app
                   </label>
                   <label>
                     <input 
@@ -1196,7 +1196,7 @@ function Day12ModuleOriginal() {
               <ul>
                 <li>The restoration industry operates on an insurance-funded model with extended payment terms</li>
                 <li>Cash flow management is critical with 30-90 day payment cycles</li>
-                <li>Xactimate is the industry standard for estimating and must be mastered</li>
+                <li>RestoreAssist.app is the industry standard for estimating and must be mastered</li>
                 <li>Customer service during trauma requires empathy and professionalism</li>
                 <li>Documentation is essential for insurance claims and legal compliance</li>
                 <li>Technology adoption provides competitive advantage</li>
