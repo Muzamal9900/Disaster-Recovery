@@ -1,430 +1,176 @@
 import { MetadataRoute } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+/**
+ * Recursively find all page.tsx files under a directory,
+ * excluding dynamic routes (containing [param]).
+ * Returns URL paths relative to the app directory.
+ */
+function discoverPages(dir: string, basePath = ''): string[] {
+  const pages: string[] = [];
+
+  if (!fs.existsSync(dir)) return pages;
+
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+
+  for (const entry of entries) {
+    // Skip dynamic route segments, node_modules, and hidden dirs
+    if (entry.name.startsWith('[') || entry.name.startsWith('.') || entry.name === 'node_modules') {
+      continue;
+    }
+
+    const fullPath = path.join(dir, entry.name);
+
+    if (entry.isDirectory()) {
+      pages.push(...discoverPages(fullPath, `${basePath}/${entry.name}`));
+    } else if (entry.name === 'page.tsx' || entry.name === 'page.ts') {
+      pages.push(basePath || '/');
+    }
+  }
+
+  return pages;
+}
+
+// Directories to exclude from the public sitemap (internal/admin/auth pages)
+const EXCLUDED_PREFIXES = [
+  '/admin',
+  '/client',
+  '/client-portal',
+  '/coming-soon',
+  '/contractor',
+  '/contractor-portal',
+  '/contractors',
+  '/crm',
+  '/dashboard',
+  '/demo',
+  '/image-optimizer',
+  '/investors',
+  '/lighthouse-report',
+  '/login',
+  '/minimal',
+  '/partner-portal',
+  '/pitch',
+  '/portal',
+  '/premium-demo',
+  '/preview',
+  '/r6-demo',
+  '/signup',
+  '/simple',
+  '/sitemap-page',
+  '/test',
+  '/workflow-demo',
+];
+
+// Priority mapping by route prefix
+const PRIORITY_MAP: Record<string, number> = {
+  '/': 1,
+  '/get-help': 1,
+  '/services/emergency': 1,
+  '/emergency': 0.9,
+  '/services/water-damage': 0.95,
+  '/services/fire-damage': 0.95,
+  '/services/mould': 0.95,
+  '/services/storm': 0.95,
+  '/services': 0.85,
+  '/insurance': 0.85,
+  '/insurance-claims': 0.9,
+  '/locations': 0.8,
+  '/cost': 0.8,
+  '/property-types': 0.75,
+  '/equipment': 0.7,
+  '/guides': 0.7,
+  '/faq': 0.65,
+  '/case-studies': 0.65,
+  '/certifications': 0.65,
+  '/compare': 0.6,
+  '/disasters': 0.7,
+  '/industries': 0.7,
+  '/technology': 0.7,
+  '/about': 0.8,
+  '/contact': 0.8,
+  '/assessment': 0.9,
+  '/standards': 0.7,
+  '/resources': 0.7,
+  '/book-service': 0.8,
+  '/quote': 0.8,
+  '/careers': 0.5,
+  '/privacy': 0.3,
+  '/terms': 0.3,
+  '/cookies': 0.3,
+  '/legal': 0.3,
+};
+
+// Change frequency mapping by route prefix
+const FREQUENCY_MAP: Record<string, MetadataRoute.Sitemap[0]['changeFrequency']> = {
+  '/': 'daily',
+  '/get-help': 'daily',
+  '/emergency': 'daily',
+  '/services/emergency': 'daily',
+  '/services': 'weekly',
+  '/locations': 'weekly',
+  '/cost': 'weekly',
+  '/insurance': 'weekly',
+  '/property-types': 'monthly',
+  '/equipment': 'monthly',
+  '/guides': 'monthly',
+  '/faq': 'monthly',
+  '/case-studies': 'yearly',
+  '/certifications': 'monthly',
+  '/compare': 'monthly',
+  '/disasters': 'monthly',
+  '/industries': 'monthly',
+  '/technology': 'monthly',
+  '/standards': 'monthly',
+  '/resources': 'monthly',
+  '/privacy': 'yearly',
+  '/terms': 'yearly',
+  '/cookies': 'yearly',
+  '/legal': 'yearly',
+};
+
+function getPriority(route: string): number {
+  // Check exact match first
+  if (PRIORITY_MAP[route] !== undefined) return PRIORITY_MAP[route];
+
+  // Check prefix matches (longest prefix wins)
+  const prefixes = Object.keys(PRIORITY_MAP)
+    .filter(p => route.startsWith(p) && p !== '/')
+    .sort((a, b) => b.length - a.length);
+
+  return prefixes.length > 0 ? PRIORITY_MAP[prefixes[0]] : 0.5;
+}
+
+function getChangeFrequency(route: string): MetadataRoute.Sitemap[0]['changeFrequency'] {
+  // Check exact match first
+  if (FREQUENCY_MAP[route]) return FREQUENCY_MAP[route];
+
+  // Check prefix matches (longest prefix wins)
+  const prefixes = Object.keys(FREQUENCY_MAP)
+    .filter(p => route.startsWith(p) && p !== '/')
+    .sort((a, b) => b.length - a.length);
+
+  return prefixes.length > 0 ? FREQUENCY_MAP[prefixes[0]] : 'weekly';
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://disasterrecovery.com.au';
   const currentDate = new Date().toISOString();
 
-  // Main pages
-  const mainPages = [
-    {
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: 'daily' as const,
-      priority: 1 },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8 },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8 },
-    {
-      url: `${baseUrl}/get-help`,
-      lastModified: currentDate,
-      changeFrequency: 'daily' as const,
-      priority: 1 },
-    {
-      url: `${baseUrl}/assessment`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9 },
-    {
-      url: `${baseUrl}/insurance-claims`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9 },
-  ];
+  // Discover all static pages from the app directory
+  const appDir = path.join(process.cwd(), 'app');
+  const allRoutes = discoverPages(appDir);
 
-  // Core Restoration Services - High Priority
-  const coreServices = [
-    {
-      url: `${baseUrl}/services/water-damage`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.95 },
-    {
-      url: `${baseUrl}/services/fire-damage`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.95 },
-    {
-      url: `${baseUrl}/services/mould-remediation`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.95 },
-  ];
+  // Filter out excluded routes
+  const publicRoutes = allRoutes.filter(
+    route => !EXCLUDED_PREFIXES.some(prefix => route.startsWith(prefix))
+  );
 
-  // Emergency Services
-  const emergencyServices = [
-    {
-      url: `${baseUrl}/services/emergency-response`,
-      lastModified: currentDate,
-      changeFrequency: 'daily' as const,
-      priority: 1 },
-    {
-      url: `${baseUrl}/services/biohazard`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9 },
-    {
-      url: `${baseUrl}/services/storm-damage`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.95 },
-    {
-      url: `${baseUrl}/services/sewage-cleanup`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9 },
-    {
-      url: `${baseUrl}/services/trauma-cleanup`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85 },
-  ];
-
-  // Specialised Restoration Services
-  const specializedServices = [
-    {
-      url: `${baseUrl}/services/content-restoration`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85 },
-    {
-      url: `${baseUrl}/services/structural-services`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85 },
-    {
-      url: `${baseUrl}/services/structural-drying`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9 },
-    {
-      url: `${baseUrl}/services/dehumidification`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85 },
-    {
-      url: `${baseUrl}/services/hvac-remediation`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85 },
-  ];
-
-  // Commercial Services
-  const commercialServices = [
-    {
-      url: `${baseUrl}/services/commercial`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9 },
-    {
-      url: `${baseUrl}/services/commercial/large-loss`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85 },
-    {
-      url: `${baseUrl}/services/commercial/healthcare`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85 },
-    {
-      url: `${baseUrl}/services/commercial/education`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85 },
-    {
-      url: `${baseUrl}/services/commercial/hospitality`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85 },
-    {
-      url: `${baseUrl}/services/commercial/retail`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85 },
-  ];
-
-  // Technical & Assessment Services
-  const technicalServices = [
-    {
-      url: `${baseUrl}/services/technical-assessment`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85 },
-    {
-      url: `${baseUrl}/services/insurance-documentation`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9 },
-    {
-      url: `${baseUrl}/services/moisture-mapping`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85 },
-    {
-      url: `${baseUrl}/services/thermal-imaging`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85 },
-    {
-      url: `${baseUrl}/services/air-quality-testing`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85 },
-    {
-      url: `${baseUrl}/services/odour-removal`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85 },
-  ];
-
-  // Standards & Compliance Pages
-  const standardsPages = [
-    {
-      url: `${baseUrl}/standards/iicrc-s500`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7 },
-    {
-      url: `${baseUrl}/standards/iicrc-s520`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7 },
-    {
-      url: `${baseUrl}/standards/iicrc-s540`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7 },
-    {
-      url: `${baseUrl}/standards/iicrc-s700`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7 },
-    {
-      url: `${baseUrl}/standards/australian-standards`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7 },
-  ];
-
-  // Location Pages
-  const locationPages = [
-    {
-      url: `${baseUrl}/locations/brisbane`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8 },
-    {
-      url: `${baseUrl}/locations/gold-coast`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8 },
-    {
-      url: `${baseUrl}/locations/sunshine-coast`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8 },
-    {
-      url: `${baseUrl}/locations/ipswich`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.75 },
-    {
-      url: `${baseUrl}/locations/logan`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.75 },
-    {
-      url: `${baseUrl}/locations/toowoomba`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.75 },
-  ];
-
-  // Case Studies
-  const caseStudies = [
-    {
-      url: `${baseUrl}/case-studies`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7 },
-    {
-      url: `${baseUrl}/case-studies/brisbane-floods-2022`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.6 },
-    {
-      url: `${baseUrl}/case-studies/black-summer-bushfires`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.6 },
-    {
-      url: `${baseUrl}/case-studies/cyclone-debbie-recovery`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.6 },
-    {
-      url: `${baseUrl}/case-studies/sydney-storms-2021`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.6 },
-    {
-      url: `${baseUrl}/case-studies/townsville-floods-2019`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.6 },
-  ];
-
-  // Certifications
-  const certificationPages = [
-    {
-      url: `${baseUrl}/certifications`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7 },
-    {
-      url: `${baseUrl}/certifications/iicrc-certified`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.65 },
-    {
-      url: `${baseUrl}/certifications/australian-standards`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.65 },
-    {
-      url: `${baseUrl}/certifications/iso-certified`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.65 },
-    {
-      url: `${baseUrl}/certifications/worksafe-certified`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.65 },
-    {
-      url: `${baseUrl}/certifications/asbestos-licensed`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.65 },
-    {
-      url: `${baseUrl}/certifications/hazmat-certified`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.65 },
-  ];
-
-  // Resources & Guides
-  const resourcePages = [
-    {
-      url: `${baseUrl}/resources`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.7 },
-    {
-      url: `${baseUrl}/resources/water-damage-guide`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.65 },
-    {
-      url: `${baseUrl}/resources/mould-prevention`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.65 },
-    {
-      url: `${baseUrl}/resources/insurance-claims-guide`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7 },
-    {
-      url: `${baseUrl}/resources/emergency-preparedness`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.65 },
-  ];
-
-  // Comparison Pages
-  const comparisonPages = [
-    {
-      url: `${baseUrl}/compare/cheap-vs-quality`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6 },
-    {
-      url: `${baseUrl}/compare/diy-vs-professional`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6 },
-    {
-      url: `${baseUrl}/compare/emergency-vs-scheduled`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6 },
-    {
-      url: `${baseUrl}/compare/local-vs-national`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6 },
-  ];
-
-  // Legal & Policy Pages
-  const legalPages = [
-    {
-      url: `${baseUrl}/privacy-policy`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.3 },
-    {
-      url: `${baseUrl}/terms-of-service`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.3 },
-    {
-      url: `${baseUrl}/sitemap`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.5 },
-  ];
-
-  // Contractor Portal
-  const contractorPages = [
-    {
-      url: `${baseUrl}/contractor/login`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.5 },
-    {
-      url: `${baseUrl}/contractor/dashboard`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.4 },
-    {
-      url: `${baseUrl}/contractor/apply`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6 },
-  ];
-
-  // Combine all pages
-  return [
-    ...mainPages,
-    ...coreServices,
-    ...emergencyServices,
-    ...specializedServices,
-    ...commercialServices,
-    ...technicalServices,
-    ...standardsPages,
-    ...locationPages,
-    ...caseStudies,
-    ...certificationPages,
-    ...resourcePages,
-    ...comparisonPages,
-    ...legalPages,
-    ...contractorPages,
-  ];
+  // Generate sitemap entries
+  return publicRoutes.map(route => ({
+    url: route === '/' ? baseUrl : `${baseUrl}${route}`,
+    lastModified: currentDate,
+    changeFrequency: getChangeFrequency(route),
+    priority: getPriority(route),
+  }));
 }
