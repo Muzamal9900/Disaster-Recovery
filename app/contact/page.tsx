@@ -6,19 +6,19 @@ import { AntigravityNavbar } from '@/components/antigravity';
 import { AntigravityFooter } from '@/components/antigravity';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ChatBubbleLeftRightIcon,
-  EnvelopeIcon, 
-  MapPinIcon, 
-  ClockIcon,
-  ChatBubbleOvalLeftEllipsisIcon,
-  CheckCircleIcon,
-  ExclamationTriangleIcon,
-  ArrowRightIcon,
-  SparklesIcon,
-  ShieldCheckIcon,
-  BoltIcon
-} from '@heroicons/react/24/outline';
+import {
+  MessageSquare,
+  Mail,
+  MapPin,
+  Clock,
+  MessageCircle,
+  CheckCircle,
+  AlertTriangle,
+  ArrowRight,
+  Sparkles,
+  ShieldCheck,
+  Zap
+} from 'lucide-react';
 
 function ModernContactPageOriginal() {
   const [formData, setFormData] = useState({
@@ -53,28 +53,28 @@ function ModernContactPageOriginal() {
 
   const contactInfo = [
     {
-      icon: <ChatBubbleLeftRightIcon className="w-6 h-6" />,
+      icon: <MessageSquare className="w-6 h-6" />,
       title: '24/7 Online Support',
       value: 'Chat & Form Available',
       subtext: 'Immediate response',
       colour: 'from-red-500 to-blue-600'
     },
     {
-      icon: <EnvelopeIcon className="w-6 h-6" />,
+      icon: <Mail className="w-6 h-6" />,
       title: 'Email Support',
       value: 'help@disasterrecoverypro.com.au',
       subtext: 'Response within 2 hours',
       colour: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: <MapPinIcon className="w-6 h-6" />,
+      icon: <MapPin className="w-6 h-6" />,
       title: 'Service Areas',
       value: 'Australia Wide',
       subtext: 'All major cities & regions',
       colour: 'from-green-500 to-emerald-500'
     },
     {
-      icon: <ClockIcon className="w-6 h-6" />,
+      icon: <Clock className="w-6 h-6" />,
       title: 'Response Time',
       value: '< 60 Minutes',
       subtext: 'For emergency calls',
@@ -160,7 +160,7 @@ function ModernContactPageOriginal() {
               animate={{ scale: [1, 1.02, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <ExclamationTriangleIcon className="w-4 h-4 text-red-600" />
+              <AlertTriangle className="w-4 h-4 text-red-600" />
               <span className="text-sm font-medium text-red-700">24/7 Online Emergency Response</span>
             </motion.div>
 
@@ -422,9 +422,9 @@ function ModernContactPageOriginal() {
                           </>
                         ) : (
                           <>
-                            <BoltIcon className="w-5 h-5" />
+                            <Zap className="w-5 h-5" />
                             Submit Emergency Request
-                            <ArrowRightIcon className="w-5 h-5" />
+                            <ArrowRight className="w-5 h-5" />
                           </>
                         )}
                       </div>
@@ -433,15 +433,15 @@ function ModernContactPageOriginal() {
                     {/* Trust Indicators */}
                     <div className="flex items-center justify-center gap-6 text-xs text-gray-700">
                       <div className="flex items-center gap-1">
-                        <ShieldCheckIcon className="w-4 h-4" />
+                        <ShieldCheck className="w-4 h-4" />
                         SSL Secured
                       </div>
                       <div className="flex items-center gap-1">
-                        <CheckCircleIcon className="w-4 h-4" />
+                        <CheckCircle className="w-4 h-4" />
                         IICRC Certified
                       </div>
                       <div className="flex items-center gap-1">
-                        <SparklesIcon className="w-4 h-4" />
+                        <Sparkles className="w-4 h-4" />
                         Instant Response
                       </div>
                     </div>
@@ -460,7 +460,7 @@ function ModernContactPageOriginal() {
                     animate={{ scale: 1 }}
                     transition={{ type: "spring", delay: 0.2 }}
                   >
-                    <CheckCircleIcon className="w-24 h-24 text-emerald-600 mx-auto mb-6" />
+                    <CheckCircle className="w-24 h-24 text-emerald-600 mx-auto mb-6" />
                   </motion.div>
                   
                   <motion.h2
@@ -541,7 +541,7 @@ function ModernContactPageOriginal() {
           className="max-w-4xl overflow-hidden mx-auto text-center"
         >
           <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-3xl p-12 border border-blue-500/30">
-            <ChatBubbleOvalLeftEllipsisIcon className="w-16 h-16 text-blue-600 mx-auto mb-6" />
+            <MessageCircle className="w-16 h-16 text-blue-600 mx-auto mb-6" />
             <h2 className="text-3xl font-bold mb-4">
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Need Immediate Help?
@@ -555,7 +555,7 @@ function ModernContactPageOriginal() {
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-cyan-600 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2"
             >
-              <ChatBubbleOvalLeftEllipsisIcon className="w-5 h-5" />
+              <MessageCircle className="w-5 h-5" />
               Start Live Chat
             </motion.button>
           </div>

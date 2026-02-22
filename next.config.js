@@ -202,8 +202,7 @@ const nextConfig = {
       'framer-motion',
       'recharts',
       'date-fns',
-      '@headlessui/react',
-      '@heroicons/react'
+      '@headlessui/react'
     ],
     webVitalsAttribution: ['CLS', 'LCP'],
   },
