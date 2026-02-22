@@ -23,12 +23,30 @@ import { generateVisual, buildCinematicPrompt } from '../src/lib/visual-generato
 import type { VisualRequest } from '../src/lib/visual-generator';
 import type { AspectRatio, Resolution, BrandKey, AssetType } from '../src/lib/visual-prompts';
 
-// Load .env if dotenv is available
-try {
-  require('dotenv').config();
-} catch {
-  // dotenv not installed — rely on process.env
+// Load environment variables — .env.local first (Next.js convention), then .env
+// Uses native fs to avoid dotenv dependency
+function loadEnvFile(filePath: string): void {
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8');
+    for (const line of content.split('\n')) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('#')) continue;
+      const eqIndex = trimmed.indexOf('=');
+      if (eqIndex === -1) continue;
+      const key = trimmed.slice(0, eqIndex).trim();
+      let value = trimmed.slice(eqIndex + 1).trim();
+      // Strip surrounding quotes
+      if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+        value = value.slice(1, -1);
+      }
+      if (!process.env[key]) process.env[key] = value;
+    }
+  } catch {
+    // File not found — skip
+  }
 }
+loadEnvFile(path.join(process.cwd(), '.env.local'));
+loadEnvFile(path.join(process.cwd(), '.env'));
 
 const VALID_BRANDS: BrandKey[] = ['disaster-recovery', 'synthex', 'restore-assist', 'unite-hub'];
 const VALID_TYPES: AssetType[] = ['hero-image', 'card-background', 'logo-render', 'service-visual'];

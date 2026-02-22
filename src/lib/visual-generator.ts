@@ -31,11 +31,11 @@ interface GenerationResult {
 }
 
 function getClient(): GoogleGenAI {
-  const apiKey = process.env.GOOGLE_GENAI_API_KEY;
+  const apiKey = process.env.GOOGLE_GENAI_API_KEY || process.env.GEMINI_API_KEY;
   if (!apiKey) {
     throw new Error(
-      'GOOGLE_GENAI_API_KEY is not set. ' +
-      'Add it to your .env or Vercel environment variables.'
+      'GOOGLE_GENAI_API_KEY (or GEMINI_API_KEY) is not set. ' +
+      'Add it to your .env.local or Vercel environment variables.'
     );
   }
   return new GoogleGenAI({ apiKey });
