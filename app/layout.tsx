@@ -127,11 +127,11 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
         <meta name="msvalidate.01" content="B3F4D7E8C9A2B1C3D4E5F6A7B8C9D0E1" />
-        <link rel="icon" type="image/png" href="/logos/disaster-recovery-logo.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/logos/disaster-recovery-logo.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/logos/disaster-recovery-logo.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/logos/disaster-recovery-logo.png" />
-        <link rel="shortcut icon" href="/logos/disaster-recovery-logo.png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-colour" content="#0052CC" />
         <Script
