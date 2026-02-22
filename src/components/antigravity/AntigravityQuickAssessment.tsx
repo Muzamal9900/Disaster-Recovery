@@ -92,17 +92,17 @@ export function AntigravityQuickAssessment() {
           <button
             key={card.id}
             ref={(el) => { if (el) cardRefs.current.set(card.id, el); }}
-            className={`ag-bento-card ${card.wide ? 'ag-bento-wide' : ''}`}
+            className={`ag-bento-card ag-bento-${card.id} ${card.wide ? 'ag-bento-wide' : ''}`}
             onMouseMove={(e) => handleMouseMove(e, card.id)}
             onClick={() => handleCardClick(card.id)}
             type="button"
           >
-            <div className="ag-icon-glass">
+            <div className="ag-icon-glass ag-icon-glass-premium">
               <Image
                 src={card.icon}
                 alt={card.iconAlt}
-                width={44}
-                height={44}
+                width={64}
+                height={64}
                 className="ag-custom-icon"
                 draggable={false}
               />
