@@ -17,8 +17,7 @@ debug-screenshots/
 # demo/  # Commented out - we need demo/workflow for the workflow demonstration
 docker/
 docs/
-generated/
-!public/images/generated/
+# generated/ — removed: was blocking public/images/generated/ card backgrounds
 health-check/
 health-reports/
 Mass-WebPage-Creations/
