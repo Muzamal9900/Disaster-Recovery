@@ -2,13 +2,12 @@
 
 /**
  * AntigravityQuickAssessment — Bento grid with mouse-tracking glow effect
- * Converted from QuickAssessment.astro
  *
- * Each card navigates to /claim/start?service={type}&urgency=emergency
+ * Each card links directly to its service pillar page.
  */
 
 import { useCallback, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import Image from 'next/image';
 
 interface AssessmentCard {
@@ -17,6 +16,7 @@ interface AssessmentCard {
   description: string;
   icon: string;
   iconAlt: string;
+  href: string;
   wide?: boolean;
 }
 
@@ -27,6 +27,7 @@ const cards: AssessmentCard[] = [
     description: 'Category 1-3 water mitigation, structural drying, and advanced dehumidification.',
     icon: '/images/antigravity/logo_3d_water.webp',
     iconAlt: 'Water Emergency',
+    href: '/services/water-damage-restoration',
     wide: true,
   },
   {
@@ -35,6 +36,7 @@ const cards: AssessmentCard[] = [
     description: 'Soot removal, thermal fogging, and odour neutralization.',
     icon: '/images/antigravity/logo_3d_fire.webp',
     iconAlt: 'Fire Emergency',
+    href: '/services/fire-damage-restoration',
   },
   {
     id: 'mould',
@@ -42,6 +44,7 @@ const cards: AssessmentCard[] = [
     description: 'Air scrubbing, containment, and ATP testing protocols.',
     icon: '/images/antigravity/logo_3d_mould.webp',
     iconAlt: 'Mould Emergency',
+    href: '/services/mould-remediation',
   },
   {
     id: 'storm',
@@ -49,6 +52,7 @@ const cards: AssessmentCard[] = [
     description: 'Make-safe tarping, debris removal, and weather proofing.',
     icon: '/images/antigravity/logo_3d_storm.webp',
     iconAlt: 'Storm Emergency',
+    href: '/services/storm-damage-restoration',
   },
   {
     id: 'biohazard',
@@ -56,6 +60,7 @@ const cards: AssessmentCard[] = [
     description: 'Discreet, compliant decontamination and trauma scene recovery operations.',
     icon: '/images/antigravity/logo_3d_trauma.webp',
     iconAlt: 'Biohazard Emergency',
+    href: '/services/biohazard-cleanup',
   },
   {
     id: 'sewage',
@@ -63,25 +68,21 @@ const cards: AssessmentCard[] = [
     description: 'Category 3 contamination response, extraction, sanitisation, and compliant remediation protocols.',
     icon: '/images/antigravity/logo_3d_trauma.webp',
     iconAlt: 'Sewage Emergency',
+    href: '/services/sewage-cleanup',
     wide: true,
   },
 ];
 
 export function AntigravityQuickAssessment() {
-  const router = useRouter();
-  const cardRefs = useRef<Map<string, HTMLButtonElement>>(new Map());
+  const cardRefs = useRef<Map<string, HTMLAnchorElement>>(new Map());
 
-  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLButtonElement>, id: string) => {
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     const card = cardRefs.current.get(id);
     if (!card) return;
     const rect = card.getBoundingClientRect();
     card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
     card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
   }, []);
-
-  const handleCardClick = (serviceId: string) => {
-    router.push(`/claim/start?service=${serviceId}&urgency=emergency`);
-  };
 
   return (
     <section className="ag-assessment-section ag-container">
@@ -96,13 +97,12 @@ export function AntigravityQuickAssessment() {
 
       <div className="ag-bento-grid">
         {cards.map((card) => (
-          <button
+          <Link
             key={card.id}
+            href={card.href}
             ref={(el) => { if (el) cardRefs.current.set(card.id, el); }}
             className={`ag-bento-card ag-bento-${card.id} ${card.wide ? 'ag-bento-wide' : ''}`}
             onMouseMove={(e) => handleMouseMove(e, card.id)}
-            onClick={() => handleCardClick(card.id)}
-            type="button"
           >
             <div className="ag-icon-glass ag-icon-glass-premium">
               <Image
@@ -119,7 +119,7 @@ export function AntigravityQuickAssessment() {
               <p>{card.description}</p>
             </div>
             <div className="ag-hover-glow" />
-          </button>
+          </Link>
         ))}
       </div>
     </section>
