@@ -18,6 +18,7 @@ debug-screenshots/
 docker/
 docs/
 generated/
+!public/images/generated/
 health-check/
 health-reports/
 Mass-WebPage-Creations/

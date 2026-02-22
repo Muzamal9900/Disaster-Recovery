@@ -56,6 +56,13 @@ const cards: AssessmentCard[] = [
     description: 'Discreet, compliant decontamination and trauma scene recovery operations.',
     icon: '/images/antigravity/logo_3d_trauma.webp',
     iconAlt: 'Biohazard Emergency',
+  },
+  {
+    id: 'sewage',
+    title: 'Sewage Sanitisation',
+    description: 'Category 3 contamination response, extraction, sanitisation, and compliant remediation protocols.',
+    icon: '/images/antigravity/logo_3d_trauma.webp',
+    iconAlt: 'Sewage Emergency',
     wide: true,
   },
 ];
@@ -101,8 +108,8 @@ export function AntigravityQuickAssessment() {
               <Image
                 src={card.icon}
                 alt={card.iconAlt}
-                width={64}
-                height={64}
+                width={80}
+                height={80}
                 className="ag-custom-icon"
                 draggable={false}
               />

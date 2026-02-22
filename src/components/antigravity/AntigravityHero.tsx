@@ -20,7 +20,7 @@ export function AntigravityHero() {
         <div className="ag-environmental-overlay" />
         <div className="ag-hero-image-wrap">
           <Image
-            src="/images/generated/disaster-recovery/hero-dawn-response.webp"
+            src="/images/antigravity/hero-aussie-tech-van.webp"
             alt="Professional disaster recovery technician arriving at an Australian property"
             fill
             priority
@@ -38,10 +38,38 @@ export function AntigravityHero() {
             Automating immediate contractor connections across ANZ
           </div>
 
+          <p className="ag-coming-soon-badge ag-slide-up-1" style={{
+            display: 'inline-block',
+            background: 'linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05))',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+            border: '1px solid rgba(255,255,255,0.2)',
+            borderRadius: '12px',
+            padding: '0.75rem 1.5rem',
+            color: '#fff',
+            fontSize: '1rem',
+            fontWeight: 600,
+            letterSpacing: '0.05em',
+            marginBottom: '0.5rem',
+            textTransform: 'uppercase' as const,
+          }}>
+            Coming Soon &rarr; 2026
+          </p>
+
           <h1 className="ag-hero-h1 ag-slide-up-2">
             Restore Your Property. <br />
             <span className="ag-gradient-text">Reclaim Your Life.</span>
           </h1>
+
+          <p className="ag-hero-national-tagline ag-slide-up-2" style={{
+            fontSize: '1.15rem',
+            fontWeight: 700,
+            color: '#fff',
+            letterSpacing: '0.03em',
+            marginBottom: '0.25rem',
+          }}>
+            National Vetted Professional Restoration Services Australia Wide
+          </p>
 
           <p className="ag-hero-subtext ag-slide-up-3">
             When disaster strikes, every minute counts. Connect instantly with the NRPG

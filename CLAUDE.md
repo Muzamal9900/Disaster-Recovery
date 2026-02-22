@@ -3,19 +3,14 @@
 ## ⚠️ CRITICAL ENVIRONMENT CONFIGURATION ⚠️
 
 ### **NEVER MODIFY WITHOUT APPROVAL**
-- **Production URL**: https://disaster-recovery-seven-virid.vercel.app
-- **Staging URL**: https://disaster-recovery-staging.vercel.app
-- **FORBIDDEN**: disasterrecovery.com.au (DO NOT USE IN ENV VARIABLES)
+- **Production URL**: https://disasterrecovery.com.au
+- **Vercel Project**: dr-nrpg (team: unite-group)
 
 ### **Environment Variable Requirements**
 ```bash
 # CORRECT Configuration
-NEXT_PUBLIC_APP_URL=https://disaster-recovery-seven-virid.vercel.app
-NEXTAUTH_URL=https://disaster-recovery-seven-virid.vercel.app
-
-# INCORRECT - NEVER USE
-NEXT_PUBLIC_APP_URL=https://disasterrecovery.com.au  # ❌ WRONG
-NEXTAUTH_URL=https://www.disasterrecovery.com.au     # ❌ WRONG
+NEXT_PUBLIC_APP_URL=https://disasterrecovery.com.au
+NEXTAUTH_URL=https://disasterrecovery.com.au
 ```
 
 ### **Validation**
