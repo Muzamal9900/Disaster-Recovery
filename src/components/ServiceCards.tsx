@@ -2,15 +2,15 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { 
-  BeakerIcon,
-  FireIcon,
-  HomeIcon,
-  BuildingOfficeIcon,
-  ArrowRightIcon,
-  SparklesIcon,
-  ShieldCheckIcon
-} from '@heroicons/react/24/outline';
+import {
+  FlaskConical,
+  Flame,
+  Home,
+  Building2,
+  ArrowRight,
+  Sparkles,
+  ShieldCheck
+} from 'lucide-react';
 
 interface ServiceCard {
   title: string;
@@ -26,7 +26,7 @@ const services: ServiceCard[] = [
   {
     title: 'Water Damage Restoration',
     description: 'Rapid water extraction and structural drying with advanced equipment',
-    icon: BeakerIcon,
+    icon: FlaskConical,
     colour: 'blue',
     gradient: 'from-blue-500 to-cyan-500',
     href: '/services/water-damage',
@@ -35,7 +35,7 @@ const services: ServiceCard[] = [
   {
     title: 'Fire & Smoke Recovery',
     description: 'Complete restoration from fire, smoke, and soot damage',
-    icon: FireIcon,
+    icon: Flame,
     colour: 'orange',
     gradient: 'from-blue-600 to-red-500',
     href: '/services/fire-damage',
@@ -44,7 +44,7 @@ const services: ServiceCard[] = [
   {
     title: 'Mould Remediation',
     description: 'Safe and thorough mould removal with prevention strategies',
-    icon: SparklesIcon,
+    icon: Sparkles,
     colour: 'green',
     gradient: 'from-green-500 to-teal-500',
     href: '/services/mould-remediation',
@@ -53,7 +53,7 @@ const services: ServiceCard[] = [
   {
     title: 'Commercial Services',
     description: 'Minimize downtime with our rapid commercial restoration',
-    icon: BuildingOfficeIcon,
+    icon: Building2,
     colour: 'purple',
     gradient: 'from-purple-500 to-pink-500',
     href: '/services/commercial',
@@ -99,7 +99,7 @@ export default function ServiceCards() {
         {/* Section header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full">
-            <ShieldCheckIcon className="w-4 h-4 text-cyan-600" />
+            <ShieldCheck className="w-4 h-4 text-cyan-600" />
             <span className="text-sm font-semibold text-cyan-600">Professional Services</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -155,7 +155,7 @@ export default function ServiceCards() {
                   {/* CTA */}
                   <div className="flex items-center gap-2 text-cyan-600 font-medium group-hover:gap-3 transition-all">
                     <span>Learn More</span>
-                    <ArrowRightIcon className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4" />
                   </div>
                   
                   {/* Hover border gradient */}
@@ -173,7 +173,7 @@ export default function ServiceCards() {
             className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-white font-semibold transition-all hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
           >
             <span>View All Services</span>
-            <ArrowRightIcon className="w-5 h-5" />
+            <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </div>

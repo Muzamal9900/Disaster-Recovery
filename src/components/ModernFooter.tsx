@@ -2,17 +2,17 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { 
-  PhoneIcon, 
-  EnvelopeIcon, 
-  MapPinIcon,
-  ClockIcon,
-  ShieldCheckIcon,
-  ArrowUpIcon,
-  ChevronRightIcon,
-  GlobeAltIcon,
-  BoltIcon
-} from '@heroicons/react/24/outline';
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  ShieldCheck,
+  ArrowUp,
+  ChevronRight,
+  Globe,
+  Zap
+} from 'lucide-react';
 
 export default function UltraModernFooter() {
   const [isVisible, setIsVisible] = useState(false);
@@ -100,7 +100,7 @@ export default function UltraModernFooter() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-3 mb-6">
                 <div className="animate-spin-slow">
-                  <ShieldCheckIcon className="w-16 h-16 text-cyan-600" />
+                  <ShieldCheck className="w-16 h-16 text-cyan-600" />
                 </div>
                 <div className="text-left">
                   <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -115,7 +115,7 @@ export default function UltraModernFooter() {
                 <div className="relative rounded-full border border-red-600/30 bg-gradient-to-r from-red-900/20 to-orange-900/20">
                   <div className="backdrop-blur-sm rounded-full px-8 py-4 flex items-center gap-4">
                     <div className="relative">
-                      <BoltIcon className="w-8 h-8 text-blue-500 animate-pulse" />
+                      <Zap className="w-8 h-8 text-blue-500 animate-pulse" />
                     </div>
                     <div>
                       <p className="text-sm text-gray-200 uppercase tracking-wider">24/7 Emergency Response</p>
@@ -176,7 +176,7 @@ export default function UltraModernFooter() {
                     key={cert}
                     className="bg-slate-800/50 backdrop-blur-sm px-4 py-2 rounded-lg flex items-center gap-2 transition-transform hover:-translate-y-1"
                   >
-                    <ShieldCheckIcon className="w-5 h-5 text-emerald-600" />
+                    <ShieldCheck className="w-5 h-5 text-emerald-600" />
                     <span className="text-sm font-medium text-gray-300">{cert}</span>
                   </div>
                 ))}
@@ -187,21 +187,21 @@ export default function UltraModernFooter() {
             <div className="grid md:grid-cols-3 gap-6 py-8 border-t border-white/10">
               {[
                 {
-                  icon: ShieldCheckIcon,
+                  icon: ShieldCheck,
                   label: 'Emergency Response',
                   value: 'Online Support 24/7',
                   href: '/emergency',
                   colour: 'text-red-600'
                 },
                 {
-                  icon: EnvelopeIcon,
+                  icon: Mail,
                   label: 'Email Support',
                   value: 'help@disasterrecovery.com.au',
                   href: 'mailto:help@disasterrecovery.com.au',
                   colour: 'text-blue-600'
                 },
                 {
-                  icon: ClockIcon,
+                  icon: Clock,
                   label: 'Response Time',
                   value: '24/7 • 365 Days',
                   href: '#',
@@ -273,7 +273,7 @@ export default function UltraModernFooter() {
           isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
         } hover:scale-110`}
       >
-        <ArrowUpIcon className="w-6 h-6 text-cyan-600" />
+        <ArrowUp className="w-6 h-6 text-cyan-600" />
         <div className="absolute inset-0 rounded-full border-2 border-cyan-400 animate-ping" />
       </button>
     </>

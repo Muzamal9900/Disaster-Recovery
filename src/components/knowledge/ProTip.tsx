@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { Lightbulb, AlertTriangle, Scale } from 'lucide-react';
 
 interface ProTipProps {
   title?: string;
@@ -8,27 +9,21 @@ interface ProTipProps {
 
 const VARIANT_CONFIG = {
   tip: {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
-    ),
+    icon: Lightbulb,
     defaultTitle: 'Pro Tip',
     borderColour: '#2563eb',
     bgColour: '#eff6ff',
     iconColour: '#2563eb',
   },
   warning: {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-    ),
+    icon: AlertTriangle,
     defaultTitle: 'Important Warning',
     borderColour: '#dc2626',
     bgColour: '#fef2f2',
     iconColour: '#dc2626',
   },
   legal: {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m17 2-4 4-4-4"/><path d="M12 6v16"/><path d="M3 10h18"/><path d="M5 14h2"/><path d="M17 14h2"/><path d="M7 18h2"/><path d="M15 18h2"/></svg>
-    ),
+    icon: Scale,
     defaultTitle: 'Legal Requirement',
     borderColour: '#7c3aed',
     bgColour: '#f5f3ff',
@@ -38,6 +33,7 @@ const VARIANT_CONFIG = {
 
 export function ProTip({ title, variant = 'tip', children }: ProTipProps) {
   const config = VARIANT_CONFIG[variant];
+  const Icon = config.icon;
 
   return (
     <div
@@ -55,7 +51,7 @@ export function ProTip({ title, variant = 'tip', children }: ProTipProps) {
       }}
     >
       <span style={{ color: config.iconColour, flexShrink: 0, marginTop: '2px' }}>
-        {config.icon}
+        <Icon size={20} />
       </span>
       <div>
         <strong style={{ display: 'block', marginBottom: '0.25rem', color: config.iconColour }}>

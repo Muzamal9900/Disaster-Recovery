@@ -2,18 +2,18 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { 
-  ShieldCheckIcon, 
-  Bars3Icon, 
-  XMarkIcon,
-  ChevronDownIcon,
-  PhoneIcon,
-  BoltIcon,
-  HomeIcon,
-  UserGroupIcon,
-  MapPinIcon,
-  ChatBubbleLeftRightIcon
-} from '@heroicons/react/24/outline';
+import {
+  ShieldCheck,
+  Menu,
+  X,
+  ChevronDown,
+  Phone,
+  Zap,
+  Home,
+  Users,
+  MapPin,
+  MessageSquare
+} from 'lucide-react';
 
 export default function UltraModernHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,7 +35,7 @@ export default function UltraModernHeader() {
     { 
       label: 'Services', 
       href: '/services',
-      icon: HomeIcon,
+      icon: Home,
       dropdown: [
         { label: 'Water Damage', href: '/services/water-damage', colour: 'from-blue-500 to-cyan-500' },
         { label: 'Fire & Smoke', href: '/services/fire-damage', colour: 'from-blue-600 to-red-500' },
@@ -46,7 +46,7 @@ export default function UltraModernHeader() {
     { 
       label: 'About', 
       href: '/about',
-      icon: UserGroupIcon,
+      icon: Users,
       dropdown: [
         { label: 'Our Team', href: '/about/team', colour: 'from-indigo-500 to-purple-500' },
         { label: 'Technology', href: '/about/technology', colour: 'from-cyan-500 to-blue-500' },
@@ -57,17 +57,17 @@ export default function UltraModernHeader() {
     { 
       label: 'Locations', 
       href: '/locations',
-      icon: MapPinIcon
+      icon: MapPin
     },
     { 
       label: 'Contact', 
       href: '/contact',
-      icon: ChatBubbleLeftRightIcon
+      icon: MessageSquare
     },
     { 
       label: 'AI Demo', 
       href: '/ai-demo',
-      icon: BoltIcon,
+      icon: Zap,
       highlight: true
     }
   ];
@@ -93,7 +93,7 @@ export default function UltraModernHeader() {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-md opacity-50" />
                   <div className="relative">
-                    <ShieldCheckIcon className="h-12 w-12 text-cyan-600" />
+                    <ShieldCheck className="h-12 w-12 text-cyan-600" />
                   </div>
                 </div>
                 
@@ -132,7 +132,7 @@ export default function UltraModernHeader() {
                     <span className="relative z-10 font-medium">{item.label}</span>
                     
                     {item.dropdown && (
-                      <ChevronDownIcon className={`relative z-10 w-4 h-4 transition-transform ${
+                      <ChevronDown className={`relative z-10 w-4 h-4 transition-transform ${
                         activeDropdown === item.label ? 'rotate-180' : ''
                       }`} />
                     )}
@@ -181,9 +181,9 @@ export default function UltraModernHeader() {
                 <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-blue-700 rounded-full" />
                 <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-blue-700 rounded-full blur-lg opacity-50 group-hover:opacity-80 transition-opacity" />
                 <div className="relative px-6 py-3 flex items-center gap-2 text-white font-bold">
-                  <BoltIcon className="w-5 h-5 animate-pulse" />
+                  <Zap className="w-5 h-5 animate-pulse" />
                   <span>Emergency</span>
-                  <PhoneIcon className="w-5 h-5" />
+                  <Phone className="w-5 h-5" />
                 </div>
               </button>
             </div>
@@ -194,9 +194,9 @@ export default function UltraModernHeader() {
               className="md:hidden relative p-3 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-white/10"
             >
               {mobileMenuOpen ? (
-                <XMarkIcon className="h-6 w-6 text-white" />
+                <X className="h-6 w-6 text-white" />
               ) : (
-                <Bars3Icon className="h-6 w-6 text-white" />
+                <Menu className="h-6 w-6 text-white" />
               )}
             </button>
           </div>
@@ -243,9 +243,9 @@ export default function UltraModernHeader() {
                 <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-blue-700" />
                 <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-blue-700 blur-xl opacity-50" />
                 <div className="relative px-6 py-4 flex items-center justify-center gap-3 text-white font-bold">
-                  <BoltIcon className="w-6 h-6 animate-pulse" />
+                  <Zap className="w-6 h-6 animate-pulse" />
                   <span>24/7 Emergency Response</span>
-                  <PhoneIcon className="w-6 h-6" />
+                  <Phone className="w-6 h-6" />
                 </div>
               </button>
             </div>
@@ -262,7 +262,7 @@ export default function UltraModernHeader() {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-blue-700 rounded-full blur-lg animate-pulse" />
             <div className="relative w-16 h-16 bg-gradient-to-r from-red-600 to-blue-700 rounded-full flex items-center justify-center shadow-2xl">
-              <PhoneIcon className="w-8 h-8 text-white" />
+              <Phone className="w-8 h-8 text-white" />
             </div>
           </a>
         </div>

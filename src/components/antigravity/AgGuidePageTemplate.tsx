@@ -127,8 +127,10 @@ export function AgGuidePageTemplate({
           )}
 
           {icon && (
-            <div className="ag-slide-up-1" style={{ marginBottom: '1rem', color: 'rgba(255,255,255,0.8)' }}>
-              {icon}
+            <div className="ag-slide-up-1" style={{ marginBottom: '1rem' }}>
+              <div className="ag-icon-hero">
+                {icon}
+              </div>
             </div>
           )}
 

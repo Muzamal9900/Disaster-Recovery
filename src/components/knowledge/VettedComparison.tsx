@@ -1,3 +1,5 @@
+import { ShieldCheck, Check, XCircle, X } from 'lucide-react';
+
 interface VettedComparisonProps {
   topic: string;
   vetted: string[];
@@ -40,13 +42,15 @@ export function VettedComparison({ topic, vetted, unvetted }: VettedComparisonPr
             fontWeight: 700,
             fontSize: '1.1rem',
           }}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            <ShieldCheck size={24} strokeWidth={2.5} />
             NRPG-Vetted Contractor
           </div>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
             {vetted.map((item, i) => (
               <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', fontSize: '0.9375rem', lineHeight: 1.5 }}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: '2px' }}><polyline points="20 6 9 17 4 12"/></svg>
+                <span style={{ flexShrink: 0, marginTop: '2px', color: '#16a34a' }}>
+                  <Check size={18} strokeWidth={2.5} />
+                </span>
                 {item}
               </li>
             ))}
@@ -72,13 +76,15 @@ export function VettedComparison({ topic, vetted, unvetted }: VettedComparisonPr
             fontWeight: 700,
             fontSize: '1.1rem',
           }}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+            <XCircle size={24} strokeWidth={2.5} />
             Unvetted Contractor
           </div>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
             {unvetted.map((item, i) => (
               <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', fontSize: '0.9375rem', lineHeight: 1.5, color: '#991b1b' }}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: '2px' }}><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                <span style={{ flexShrink: 0, marginTop: '2px', color: '#dc2626' }}>
+                  <X size={18} strokeWidth={2.5} />
+                </span>
                 {item}
               </li>
             ))}

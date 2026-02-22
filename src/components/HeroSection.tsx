@@ -2,14 +2,14 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { 
-  BoltIcon, 
-  CheckCircleIcon,
-  ClockIcon,
-  ShieldCheckIcon,
-  ArrowRightIcon
-} from '@heroicons/react/24/outline';
-import { AlertCircle } from 'lucide-react';
+import {
+  Zap,
+  CheckCircle,
+  Clock,
+  ShieldCheck,
+  ArrowRight,
+  AlertCircle
+} from 'lucide-react';
 
 export default function HeroSection() {
   const [currentWord, setCurrentWord] = useState(0);
@@ -23,9 +23,9 @@ export default function HeroSection() {
   }, []);
 
   const features = [
-    { icon: ClockIcon, text: '24/7 Response' },
-    { icon: ShieldCheckIcon, text: 'Fully Certified' },
-    { icon: CheckCircleIcon, text: 'Insurance Approved' }
+    { icon: Clock, text: '24/7 Response' },
+    { icon: ShieldCheck, text: 'Fully Certified' },
+    { icon: CheckCircle, text: 'Insurance Approved' }
   ];
 
   return (
@@ -59,7 +59,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
         {/* Emergency badge */}
         <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 bg-red-500/10 border border-red-600/30 rounded-full animate-pulse">
-          <BoltIcon className="w-4 h-4 text-red-600" />
+          <Zap className="w-4 h-4 text-red-600" />
           <span className="text-sm font-semibold text-red-600">Emergency Services Available Now</span>
           <div className="w-2 h-2 bg-red-400 rounded-full animate-ping" />
         </div>
@@ -105,7 +105,7 @@ export default function HeroSection() {
             className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white font-semibold text-lg transition-all hover:bg-white/20 hover:scale-105"
           >
             <span>Get Instant Quote</span>
-            <ArrowRightIcon className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
 

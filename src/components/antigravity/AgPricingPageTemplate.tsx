@@ -79,7 +79,7 @@ export function AgPricingPageTemplate({
           </nav>
 
           <div className="ag-slide-up-1" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.8)', marginBottom: '0.5rem' }}>
-            <MapPin size={20} /> {cityName}, {stateName}
+            <span className="ag-icon-inline" style={{ color: 'rgba(255,255,255,0.8)' }}><MapPin size={20} /></span> {cityName}, {stateName}
           </div>
 
           <h1 className="ag-slide-up-2">{serviceName} Cost in {cityName}</h1>
@@ -95,7 +95,9 @@ export function AgPricingPageTemplate({
         <div className="ag-container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem', maxWidth: '800px', margin: '0 auto' }}>
             <div className="ag-card-stat" style={{ textAlign: 'center' }}>
-              <DollarSign size={24} style={{ color: 'var(--ag-secondary-blue)', marginBottom: '0.25rem' }} />
+              <div className="ag-card-feature-icon" style={{ marginBottom: '0.25rem' }}>
+                <DollarSign size={24} style={{ color: 'var(--ag-secondary-blue)' }} />
+              </div>
               <span className="ag-stat-value">{minimumCallout}</span>
               <span className="ag-stat-label">Minimum Callout</span>
             </div>
@@ -189,7 +191,9 @@ export function AgPricingPageTemplate({
       <section className="ag-network-cta">
         <div className="ag-cta-background" />
         <div className="ag-container" style={{ position: 'relative', zIndex: 2, textAlign: 'center', padding: '2rem 1.5rem' }}>
-          <DollarSign size={48} style={{ color: 'rgba(255,255,255,0.8)', marginBottom: '1rem' }} />
+          <div className="ag-icon-hero" style={{ margin: '0 auto 1rem' }}>
+            <DollarSign size={48} style={{ color: 'rgba(255,255,255,0.9)' }} />
+          </div>
           <h2 style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--ag-surface-white)', marginBottom: '1rem' }}>
             Get Your Free {serviceName} Quote for {cityName}
           </h2>

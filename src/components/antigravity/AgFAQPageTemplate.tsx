@@ -82,7 +82,9 @@ export function AgFAQPageTemplate({
             <Link href="/">Home</Link> / <Link href="/faq">FAQ</Link> / <span>{category}</span>
           </nav>
 
-          <HelpCircle size={48} style={{ color: 'rgba(255,255,255,0.8)', margin: '0 auto 1rem' }} />
+          <div className="ag-icon-hero" style={{ margin: '0 auto 1rem' }}>
+            <HelpCircle size={48} style={{ color: 'rgba(255,255,255,0.9)' }} />
+          </div>
           <h1 className="ag-slide-up-2">{title}</h1>
           {subtitle && (
             <p className="ag-hero-subtext ag-slide-up-3" style={{ maxWidth: '600px', margin: '0 auto' }}>
@@ -110,7 +112,9 @@ export function AgFAQPageTemplate({
               {relatedCategories.map((cat, i) => (
                 <Link key={i} href={cat.href} style={{ textDecoration: 'none' }}>
                   <div className="ag-card-feature" style={{ cursor: 'pointer' }}>
-                    <HelpCircle size={28} style={{ color: 'var(--ag-secondary-blue)' }} />
+                    <div className="ag-card-feature-icon">
+                      <HelpCircle size={24} style={{ color: 'var(--ag-secondary-blue)' }} />
+                    </div>
                     <h3>{cat.label}</h3>
                     {cat.description && <p>{cat.description}</p>}
                   </div>

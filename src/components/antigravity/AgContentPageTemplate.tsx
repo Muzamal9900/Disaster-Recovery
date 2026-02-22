@@ -113,8 +113,10 @@ export function AgContentPageTemplate({
             </nav>
           )}
 
-          <div className="ag-slide-up-1" style={{ marginBottom: '1rem', color: 'rgba(255,255,255,0.8)' }}>
-            {hero.icon}
+          <div className="ag-slide-up-1" style={{ marginBottom: '1rem' }}>
+            <div className="ag-icon-hero">
+              {hero.icon}
+            </div>
           </div>
 
           <h1 className="ag-slide-up-2">{hero.title}</h1>
@@ -263,8 +265,10 @@ export function AgContentPageTemplate({
         <section className="ag-network-cta">
           <div className="ag-cta-background" />
           <div className="ag-container" style={{ position: 'relative', zIndex: 2, textAlign: 'center', padding: '2rem 1.5rem' }}>
-            <div style={{ marginBottom: '1rem', color: 'rgba(255,255,255,0.8)' }}>
-              {hero.icon}
+            <div style={{ marginBottom: '1rem' }}>
+              <div className="ag-icon-hero" style={{ margin: '0 auto' }}>
+                {hero.icon}
+              </div>
             </div>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--ag-surface-white)', marginBottom: '1rem' }}>
               Need Help? Get Started Now

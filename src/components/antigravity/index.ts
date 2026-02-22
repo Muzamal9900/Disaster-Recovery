@@ -46,6 +46,9 @@ export type { FAQRelatedCategory, AgFAQPageTemplateProps } from './AgFAQPageTemp
 export { AgLegalPageTemplate } from './AgLegalPageTemplate';
 export type { LegalDocument, LegalSection, AgLegalPageTemplateProps } from './AgLegalPageTemplate';
 
+// Icon System
+export { AgIcon } from './AgIcon';
+
 // Shared Utility Components
 export { AgPageWrapper } from './AgPageWrapper';
 export { AgHeroSection } from './AgHeroSection';

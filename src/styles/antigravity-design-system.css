@@ -2810,3 +2810,29 @@ details.ag-accordion-item > summary::marker {
     grid-template-columns: 1fr;
   }
 }
+
+/* ========================================================================== */
+/* 28. Icon System — Universal AG icon containers                              */
+/* ========================================================================== */
+
+/* Hero icon — glass pill with blur backdrop for hero sections */
+.ag-icon-hero {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform var(--ag-transition-smooth);
+}
+
+/* Inline icon helpers — lightweight wrappers without a container box */
+.ag-icon-inline         { display: inline-flex; align-items: center; flex-shrink: 0; color: var(--ag-secondary-blue); }
+.ag-icon-inline-success { display: inline-flex; align-items: center; flex-shrink: 0; color: #16a34a; }
+.ag-icon-inline-danger  { display: inline-flex; align-items: center; flex-shrink: 0; color: var(--ag-emergency-red); }
