@@ -394,3 +394,25 @@ Every code modification MUST include:
 5. **Rule Compliance Statement**: Explicit confirmation rules were followed
 
 **FAILURE TO FOLLOW THESE RULES WILL RESULT IN IMMEDIATE ROLLBACK**
+
+## Visual Generation Pipeline
+
+### Required Tools
+- **Nano Banana Pro** (Gemini 3 Pro Image): `@google/genai` SDK
+- Model ID: `gemini-3-pro-image-preview`
+- Requires: `GOOGLE_GENAI_API_KEY` environment variable
+
+### Skills Reference
+- Visual generation: `~/.claude/skills/visual-generator/SKILL.md`
+- v3 Framework: `~/.claude/projects/C--Disaster-Recovery/memory/visual-framework-v3.md`
+
+### Agents Reference
+- Visual Design Agent: `~/.claude/agents/visual-design-agent.md`
+
+### Mandatory Visual Generation Procedure
+ALL frontend visual assets MUST be generated using the Nano Banana Pro pipeline:
+1. Use `src/lib/visual-prompts.ts` for brand-specific prompt templates
+2. Use `src/lib/visual-generator.ts` for generation execution
+3. Follow v3 Global Visual Framework for all brand theming
+4. Output format: .webp or .avif only
+5. Australian English in all text content

@@ -70,6 +70,23 @@
   background-color: #B3271E;
 }
 
+.ag-glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.37),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+.ag-glass-card:hover {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 12px 40px 0 rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
 
 /* -------------------------------------------------------------------------- */
 /* 3. Antigravity Navbar Styles                                               */
@@ -750,11 +767,35 @@
 }
 
 
+/* --- Frosted glass top band for bento cards --- */
+.ag-bento-water::after,
+.ag-bento-fire::after,
+.ag-bento-mould::after,
+.ag-bento-storm::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.15), transparent);
+  backdrop-filter: blur(2px) saturate(120%);
+  -webkit-backdrop-filter: blur(2px) saturate(120%);
+  border-radius: 24px 24px 0 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
 /* --- Service-Themed Glassmorphism Cards ---------------------------------- */
 
 /* Water — cool blue ripples */
 .ag-bento-water {
-  background: linear-gradient(135deg, #d4e8f7 0%, #a8d4f0 50%, #e8f4fd 100%);
+  background:
+    linear-gradient(135deg, rgba(212,232,247,0.85) 0%, rgba(168,212,240,0.85) 50%, rgba(232,244,253,0.85) 100%),
+    url('/images/antigravity/bg-water.svg');
+  background-size: cover;
+  background-position: center;
   border-color: rgba(168, 212, 240, 0.5);
 }
 .ag-bento-water::before {
@@ -779,7 +820,11 @@
 
 /* Fire — charcoal amber embers */
 .ag-bento-fire {
-  background: linear-gradient(135deg, #2d2226 0%, #4a3028 50%, #6b3a1f 100%);
+  background:
+    linear-gradient(135deg, rgba(45,34,38,0.85) 0%, rgba(74,48,40,0.85) 50%, rgba(107,58,31,0.85) 100%),
+    url('/images/antigravity/bg-fire.svg');
+  background-size: cover;
+  background-position: center;
   border-color: rgba(180, 100, 40, 0.4);
 }
 .ag-bento-fire::before {
@@ -804,7 +849,11 @@
 
 /* Mould — muted grey-green organic */
 .ag-bento-mould {
-  background: linear-gradient(135deg, #c8d4c6 0%, #a8b8a4 50%, #d4ddd0 100%);
+  background:
+    linear-gradient(135deg, rgba(200,212,198,0.85) 0%, rgba(168,184,164,0.85) 50%, rgba(212,221,208,0.85) 100%),
+    url('/images/antigravity/bg-mould.svg');
+  background-size: cover;
+  background-position: center;
   border-color: rgba(160, 185, 155, 0.5);
 }
 .ag-bento-mould::before {
@@ -829,7 +878,11 @@
 
 /* Storm — moody slate-blue with rain lines */
 .ag-bento-storm {
-  background: linear-gradient(135deg, #5a6a7a 0%, #7a8a9a 50%, #4a5a6a 100%);
+  background:
+    linear-gradient(135deg, rgba(90,106,122,0.85) 0%, rgba(122,138,154,0.85) 50%, rgba(74,90,106,0.85) 100%),
+    url('/images/antigravity/bg-storm.svg');
+  background-size: cover;
+  background-position: center;
   border-color: rgba(120, 140, 160, 0.4);
 }
 .ag-bento-storm::before {
@@ -859,7 +912,11 @@
 
 /* Biohazard — dark navy with yellow accent */
 .ag-bento-biohazard {
-  background: linear-gradient(135deg, #1a2030 0%, #2a3040 50%, #1a2535 100%);
+  background:
+    linear-gradient(135deg, rgba(26,32,48,0.85) 0%, rgba(42,48,64,0.85) 50%, rgba(26,37,53,0.85) 100%),
+    url('/images/antigravity/bg-biohazard.svg');
+  background-size: cover;
+  background-position: center;
   border-color: rgba(60, 80, 100, 0.5);
 }
 .ag-bento-biohazard::before {
@@ -877,19 +934,30 @@
 .ag-bento-biohazard::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 10%;
-  right: 10%;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, rgba(240, 220, 50, 0.6), transparent);
-  border-radius: 0 0 24px 24px;
-  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1), transparent);
+  backdrop-filter: blur(1px) saturate(120%);
+  -webkit-backdrop-filter: blur(1px) saturate(120%);
+  border-radius: 24px 24px 0 0;
+  pointer-events: none;
+  z-index: 1;
+}
+/* Yellow accent line (separate element via box-shadow on ::before) */
+.ag-bento-biohazard {
+  box-shadow:
+    0 4px 24px -8px rgba(15, 41, 66, 0.05),
+    inset 0 -3px 0 0 rgba(240, 220, 50, 0.5);
+}
+.ag-bento-biohazard:hover {
+  box-shadow:
+    0 20px 40px -12px rgba(240, 220, 50, 0.3),
+    inset 0 -3px 0 0 rgba(240, 220, 50, 0.7);
 }
 .ag-bento-biohazard .ag-hover-glow {
   background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(240, 220, 50, 0.08), transparent 40%);
-}
-.ag-bento-biohazard:hover {
-  box-shadow: 0 20px 40px -12px rgba(240, 220, 50, 0.3);
 }
 
 /* --- Text overrides for dark-background cards --- */
@@ -1043,17 +1111,22 @@
   text-align: center;
   position: relative;
   padding: 2rem;
-  background: var(--ag-surface-white);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
   border-radius: 16px;
-  border: 1px solid var(--ag-border-grey);
-  box-shadow: var(--ag-shadow-sm);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
+              inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .ag-process-step:hover {
   transform: translateY(-8px);
-  box-shadow: var(--ag-shadow-hover);
-  border-color: rgba(26, 70, 116, 0.2);
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.42),
+              inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .ag-step-icon {
@@ -1108,21 +1181,26 @@
 /* -------------------------------------------------------------------------- */
 
 .ag-service-card {
-  background: var(--ag-surface-white);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  border: 1px solid var(--ag-border-grey);
-  box-shadow: var(--ag-shadow-sm);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
+              inset 0 1px 0 rgba(255, 255, 255, 0.5);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .ag-service-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--ag-shadow-hover);
-  border-color: rgba(26, 70, 116, 0.2);
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.42),
+              inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .ag-card-image-wrapper {
@@ -1400,17 +1478,24 @@
 }
 
 .ag-equipment-card {
-  background: var(--ag-surface-white);
-  border: 1px solid var(--ag-border-grey);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
   overflow: hidden;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
+              inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 .ag-equipment-card:hover {
-  box-shadow: var(--ag-shadow-hover);
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.42),
+              inset 0 1px 0 rgba(255, 255, 255, 0.7);
   transform: translateY(-4px);
 }
 
@@ -1676,16 +1761,22 @@
 }
 
 .ag-tech-card {
-  background: var(--ag-surface-white);
-  border: 1px solid var(--ag-border-grey);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
   padding: 2rem;
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
+              inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .ag-tech-card:hover {
-  box-shadow: var(--ag-shadow-md);
-  border-color: rgba(26, 70, 116, 0.2);
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.42),
+              inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .ag-tech-icon {
@@ -1847,13 +1938,17 @@
 }
 
 .ag-sidebar-trust {
-  background: var(--ag-surface-white);
-  border: 1px solid var(--ag-border-grey);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
   padding: 1.5rem;
   display: flex;
   align-items: center;
   gap: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
+              inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .ag-trust-badge-img {
@@ -2705,22 +2800,31 @@ details.ag-accordion-item > summary::marker {
 /* -------------------------------------------------------------------------- */
 
 .ag-card-pricing {
-  background: var(--ag-surface-white);
-  border: 1px solid var(--ag-border-grey);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
   padding: 2rem;
   text-align: center;
-  transition: transform var(--ag-transition-smooth), box-shadow var(--ag-transition-smooth);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
+              inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: transform var(--ag-transition-smooth), box-shadow var(--ag-transition-smooth), background var(--ag-transition-smooth);
 }
 
 .ag-card-pricing:hover {
   transform: translateY(-4px);
-  box-shadow: var(--ag-shadow-hover);
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.42),
+              inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .ag-card-pricing-featured {
-  border-color: var(--ag-secondary-blue);
-  box-shadow: var(--ag-shadow-md);
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(26, 70, 116, 0.3);
+  box-shadow: 0 8px 32px -8px rgba(15, 41, 66, 0.12),
+              inset 0 1px 0 rgba(255, 255, 255, 0.7);
   position: relative;
 }
 
@@ -2761,13 +2865,18 @@ details.ag-accordion-item > summary::marker {
 }
 
 .ag-card-stat {
-  background: var(--ag-surface-white);
-  border: 1px solid var(--ag-border-grey);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
+              inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transition: background 0.3s ease;
 }
 
 .ag-stat-value {
@@ -2797,19 +2906,26 @@ details.ag-accordion-item > summary::marker {
 }
 
 .ag-card-feature {
-  background: var(--ag-surface-white);
-  border: 1px solid var(--ag-border-grey);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  transition: transform var(--ag-transition-smooth), box-shadow var(--ag-transition-smooth);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
+              inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transition: transform var(--ag-transition-smooth), box-shadow var(--ag-transition-smooth), background var(--ag-transition-smooth);
 }
 
 .ag-card-feature:hover {
   transform: translateY(-4px);
-  box-shadow: var(--ag-shadow-hover);
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.42),
+              inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .ag-card-feature-icon {
