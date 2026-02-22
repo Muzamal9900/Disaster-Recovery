@@ -29,7 +29,8 @@ type CategoryKey =
   | 'emergency'
   | 'commercial'
   | 'guides-general'
-  | 'knowledge-base';
+  | 'knowledge-base'
+  | 'operational-excellence';
 
 const RELATED_PAGES_MAP: Record<CategoryKey, RelatedPage[]> = {
   'water-damage': [
@@ -183,6 +184,14 @@ const RELATED_PAGES_MAP: Record<CategoryKey, RelatedPage[]> = {
     { title: 'IICRC Certification', href: '/knowledge/iicrc-certification-standards', description: 'IICRC certification requirements, standards, and why they matter.' },
     { title: 'Emergency Protocols', href: '/knowledge/emergency-response-protocols', description: 'PPRR emergency response framework and the golden hour principle.' },
   ],
+  'operational-excellence': [
+    { title: 'Command Ecosystem', href: '/operational-excellence/command-ecosystem', description: 'Integrated technology for claims management, GPS dispatch and IICRC-compliant digital workflows.' },
+    { title: 'Safety & PPE', href: '/operational-excellence/safety-ppe', description: 'Rigorous safety standards, hazmat suits, respirators and WHS-compliant protective equipment.' },
+    { title: 'Field Essentials', href: '/operational-excellence/field-essentials', description: 'Battle-tested deployment kits with flashlights, power banks and weatherproof gear.' },
+    { title: 'Executive Partners', href: '/operational-excellence/executive-partners', description: 'IICRC, CARSI, RestoreAssist and NRPG industry-leading affiliations.' },
+    { title: 'Chemical & Remediation Assets', href: '/operational-excellence/chemical-remediation-assets', description: 'Negative air machines, antimicrobial treatments and branded containment systems.' },
+    { title: 'Emergency Response', href: '/services/emergency-response', description: '24/7 emergency disaster response across Australia and New Zealand.' },
+  ],
 };
 
 /**
@@ -196,6 +205,7 @@ export function getRelatedPages(slug: string): RelatedPage[] {
   }
 
   // Pattern-based matching
+  if (slug.includes('operational-excellence')) return RELATED_PAGES_MAP['operational-excellence'];
   if (slug.includes('water-damage')) return RELATED_PAGES_MAP['water-damage'];
   if (slug.includes('fire-damage')) return RELATED_PAGES_MAP['fire-damage'];
   if (slug.includes('mould') || slug.includes('mold')) return RELATED_PAGES_MAP['mould'];
