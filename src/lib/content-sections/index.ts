@@ -13,3 +13,4 @@ export { getCaseStudySections } from './case-study-sections';
 export { getTechnologySections } from './technology-sections';
 export { getKnowledgeBaseSections, getKnowledgeEntryFaqs, getKnowledgeEntrySlugs } from './knowledge-sections';
 export { getOperationalExcellenceSections, getOperationalExcellenceFaqs, getOperationalExcellenceStats } from './operational-excellence-sections';
+export { getEmergencyMakeSafeSections } from './emergency-make-safe-sections';

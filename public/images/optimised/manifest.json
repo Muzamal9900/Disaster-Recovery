@@ -1,12 +1,13 @@
 {
   "version": "1.0.0",
   "generated": "2025-08-30T07:50:39.433Z",
-  "totalImages": 23,
+  "totalImages": 27,
   "categories": {
     "damage": 8,
     "equipment": 7,
     "process": 6,
-    "branding": 2
+    "branding": 2,
+    "insurance": 4
   },
   "images": [
     {
@@ -146,6 +147,30 @@
       "title": "3D Hazardous Cleaning Services",
       "filename": "3D Hazardous Cleaning.png",
       "category": "process"
+    },
+    {
+      "id": "insurance-make-safe-001",
+      "title": "3D Emergency Make-Safe Operation",
+      "filename": "3D Emergency Make-Safe.png",
+      "category": "insurance"
+    },
+    {
+      "id": "insurance-reimbursement-001",
+      "title": "3D Insurance Reimbursement Process",
+      "filename": "3D Insurance Reimbursement.png",
+      "category": "insurance"
+    },
+    {
+      "id": "insurance-authority-commence-001",
+      "title": "3D Authority to Commence Document",
+      "filename": "3D Authority to Commence.png",
+      "category": "insurance"
+    },
+    {
+      "id": "insurance-nrpg-contractor-001",
+      "title": "3D NRPG Contractor Comparison",
+      "filename": "3D NRPG Contractor.png",
+      "category": "insurance"
     }
   ]
 }

@@ -20,6 +20,13 @@ type CategoryKey =
   | 'location-sydney'
   | 'location-melbourne'
   | 'location-brisbane'
+  | 'location-perth'
+  | 'location-adelaide'
+  | 'location-canberra'
+  | 'location-hobart'
+  | 'location-darwin'
+  | 'location-gold-coast'
+  | 'location-newcastle'
   | 'cost-water'
   | 'cost-fire'
   | 'cost-mould'
@@ -112,6 +119,62 @@ const RELATED_PAGES_MAP: Record<CategoryKey, RelatedPage[]> = {
     { title: 'Sydney Services', href: '/locations/sydney', description: 'Disaster recovery services in Sydney.' },
     { title: 'Melbourne Services', href: '/locations/melbourne', description: 'Disaster recovery services in Melbourne.' },
   ],
+  'location-perth': [
+    { title: 'Perth Water Damage', href: '/cost/perth-water-damage', description: 'Water damage restoration costs in Perth.' },
+    { title: 'Perth Fire Damage', href: '/cost/perth-fire-damage', description: 'Fire damage restoration costs in Perth.' },
+    { title: 'Perth Mould Removal', href: '/cost/perth-mould-removal', description: 'Mould remediation costs in Perth.' },
+    { title: 'WA State Services', href: '/locations/wa', description: 'Disaster recovery services across Western Australia.' },
+    { title: 'Fremantle Services', href: '/locations/wa/fremantle', description: 'Disaster recovery services in Fremantle.' },
+    { title: 'Adelaide Services', href: '/locations/adelaide', description: 'Disaster recovery services in Adelaide.' },
+  ],
+  'location-adelaide': [
+    { title: 'Adelaide Water Damage', href: '/cost/adelaide-water-damage', description: 'Water damage restoration costs in Adelaide.' },
+    { title: 'Adelaide Fire Damage', href: '/cost/adelaide-fire-damage', description: 'Fire damage restoration costs in Adelaide.' },
+    { title: 'Adelaide Mould Removal', href: '/cost/adelaide-mould-removal', description: 'Mould remediation costs in Adelaide.' },
+    { title: 'SA State Services', href: '/locations/sa', description: 'Disaster recovery services across South Australia.' },
+    { title: 'Melbourne Services', href: '/locations/melbourne', description: 'Disaster recovery services in Melbourne.' },
+    { title: 'Perth Services', href: '/locations/perth', description: 'Disaster recovery services in Perth.' },
+  ],
+  'location-canberra': [
+    { title: 'ACT State Services', href: '/locations/act', description: 'Disaster recovery services across the ACT.' },
+    { title: 'Belconnen Services', href: '/locations/act/belconnen', description: 'Disaster recovery services in Belconnen.' },
+    { title: 'Tuggeranong Services', href: '/locations/act/tuggeranong', description: 'Disaster recovery services in Tuggeranong.' },
+    { title: 'Sydney Services', href: '/locations/sydney', description: 'Disaster recovery services in Sydney.' },
+    { title: 'Melbourne Services', href: '/locations/melbourne', description: 'Disaster recovery services in Melbourne.' },
+    { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'Navigate your insurance claim for restoration.' },
+  ],
+  'location-hobart': [
+    { title: 'TAS State Services', href: '/locations/tas', description: 'Disaster recovery services across Tasmania.' },
+    { title: 'Launceston Services', href: '/locations/tas/launceston', description: 'Disaster recovery services in Launceston.' },
+    { title: 'Burnie Services', href: '/locations/tas/burnie', description: 'Disaster recovery services in Burnie.' },
+    { title: 'Melbourne Services', href: '/locations/melbourne', description: 'Disaster recovery services in Melbourne.' },
+    { title: 'Adelaide Services', href: '/locations/adelaide', description: 'Disaster recovery services in Adelaide.' },
+    { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'Navigate your insurance claim for restoration.' },
+  ],
+  'location-darwin': [
+    { title: 'NT State Services', href: '/locations/nt', description: 'Disaster recovery services across the Northern Territory.' },
+    { title: 'Palmerston Services', href: '/locations/nt/palmerston', description: 'Disaster recovery services in Palmerston.' },
+    { title: 'Alice Springs Services', href: '/locations/nt/alice-springs', description: 'Disaster recovery services in Alice Springs.' },
+    { title: 'Brisbane Services', href: '/locations/brisbane', description: 'Disaster recovery services in Brisbane.' },
+    { title: 'Perth Services', href: '/locations/perth', description: 'Disaster recovery services in Perth.' },
+    { title: 'Cairns Services', href: '/locations/qld/cairns', description: 'Disaster recovery services in Cairns.' },
+  ],
+  'location-gold-coast': [
+    { title: 'Gold Coast Water Damage', href: '/cost/gold-coast-water-damage', description: 'Water damage restoration costs on the Gold Coast.' },
+    { title: 'Gold Coast Mould Removal', href: '/cost/gold-coast-mould-removal', description: 'Mould remediation costs on the Gold Coast.' },
+    { title: 'QLD State Services', href: '/locations/qld', description: 'Disaster recovery services across Queensland.' },
+    { title: 'Brisbane Services', href: '/locations/brisbane', description: 'Disaster recovery services in Brisbane.' },
+    { title: 'Sunshine Coast Services', href: '/locations/qld/sunshine-coast', description: 'Disaster recovery services on the Sunshine Coast.' },
+    { title: 'Sydney Services', href: '/locations/sydney', description: 'Disaster recovery services in Sydney.' },
+  ],
+  'location-newcastle': [
+    { title: 'Newcastle Water Damage', href: '/cost/newcastle-water-damage', description: 'Water damage restoration costs in Newcastle.' },
+    { title: 'Newcastle Mould Removal', href: '/cost/newcastle-mould-removal', description: 'Mould remediation costs in Newcastle.' },
+    { title: 'NSW State Services', href: '/locations/nsw', description: 'Disaster recovery services across New South Wales.' },
+    { title: 'Sydney Services', href: '/locations/sydney', description: 'Disaster recovery services in Sydney.' },
+    { title: 'Central Coast Services', href: '/locations/nsw/central-coast', description: 'Disaster recovery services on the Central Coast.' },
+    { title: 'Wollongong Services', href: '/locations/nsw/wollongong', description: 'Disaster recovery services in Wollongong.' },
+  ],
   'cost-water': [
     { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Professional water damage restoration services.' },
     { title: 'Structural Drying', href: '/services/structural-drying', description: 'Industrial drying to protect your property long-term.' },
@@ -148,6 +211,7 @@ const RELATED_PAGES_MAP: Record<CategoryKey, RelatedPage[]> = {
     { title: 'Sewage Cleanup', href: '/services/sewage-cleanup', description: 'Contaminated floodwater cleanup.' },
   ],
   'insurance': [
+    { title: 'Emergency Make-Safe Guide', href: '/insurance/emergency-make-safe-guide', description: '$2,750 emergency service, insurance reimbursement, and your right to choose a contractor.' },
     { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Water damage services covered by most insurers.' },
     { title: 'Fire Damage Restoration', href: '/services/fire-damage-restoration', description: 'Fire damage restoration insurance claims.' },
     { title: 'Storm Damage Restoration', href: '/services/storm-damage-restoration', description: 'Storm damage insurance coverage guide.' },
@@ -155,6 +219,7 @@ const RELATED_PAGES_MAP: Record<CategoryKey, RelatedPage[]> = {
     { title: 'Emergency Response', href: '/services/emergency-response', description: '24/7 emergency response for insured events.' },
   ],
   'emergency': [
+    { title: 'Emergency Make-Safe Guide', href: '/insurance/emergency-make-safe-guide', description: 'Understand the $2,750 make-safe cost and how to claim reimbursement from your insurer.' },
     { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Emergency water extraction and restoration.' },
     { title: 'Fire Damage Restoration', href: '/services/fire-damage-restoration', description: 'Emergency fire damage response and restoration.' },
     { title: 'Storm Damage Restoration', href: '/services/storm-damage-restoration', description: 'Emergency storm damage repair.' },
@@ -231,6 +296,13 @@ export function getRelatedPages(slug: string): RelatedPage[] {
   if (slug.includes('sydney')) return RELATED_PAGES_MAP['location-sydney'];
   if (slug.includes('melbourne')) return RELATED_PAGES_MAP['location-melbourne'];
   if (slug.includes('brisbane')) return RELATED_PAGES_MAP['location-brisbane'];
+  if (slug.includes('perth')) return RELATED_PAGES_MAP['location-perth'];
+  if (slug.includes('adelaide')) return RELATED_PAGES_MAP['location-adelaide'];
+  if (slug.includes('canberra') || slug.includes('act')) return RELATED_PAGES_MAP['location-canberra'];
+  if (slug.includes('hobart') || slug.includes('tas')) return RELATED_PAGES_MAP['location-hobart'];
+  if (slug.includes('darwin')) return RELATED_PAGES_MAP['location-darwin'];
+  if (slug.includes('gold-coast')) return RELATED_PAGES_MAP['location-gold-coast'];
+  if (slug.includes('newcastle')) return RELATED_PAGES_MAP['location-newcastle'];
 
   // Knowledge pages
   if (slug.includes('knowledge') || slug.includes('iicrc') || slug.includes('psychrometric')) return RELATED_PAGES_MAP['knowledge-base'];

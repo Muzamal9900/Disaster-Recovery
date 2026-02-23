@@ -25,14 +25,7 @@ export function HomepageStructuredData() {
       "https://www.facebook.com/DisasterRecoveryAU",
       "https://www.linkedin.com/company/disaster-recovery-australia",
       "https://twitter.com/DisasterRecovAU"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "1247",
-      "bestRating": "5",
-      "worstRating": "1"
-    }
+    ]
   };
 
   const localBusinessSchema = {
