@@ -399,7 +399,7 @@ function ContractorLoginPageOriginal() {
           {/* Footer links */}
           <div className="mt-6 text-center space-y-2">
             <Link
-              href="/contractor/register"
+              href="/contractor/apply"
               className="text-sm text-gray-300 hover:text-white transition-colours block"
             >
               Don't have an account? <span className="text-blue-600">Register as a contractor</span>

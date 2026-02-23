@@ -403,7 +403,7 @@ export function Step1Account({ data, updateData, errors }: Step1AccountProps) {
             <Label htmlFor="privacy" className="font-normal cursor-pointer">
               I have read and accept the{' '}
               <a 
-                href="/privacy-policy" 
+                href="/privacy"
                 target="_blank" 
                 className="text-blue-600 hover:underline font-medium"
               >
@@ -427,7 +427,7 @@ export function Step1Account({ data, updateData, errors }: Step1AccountProps) {
             <Label htmlFor="terms" className="font-normal cursor-pointer">
               I have read and accept the{' '}
               <a 
-                href="/terms-conditions" 
+                href="/terms"
                 target="_blank" 
                 className="text-blue-600 hover:underline font-medium"
               >

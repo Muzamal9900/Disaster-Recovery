@@ -112,7 +112,7 @@ function ContractorPortalLandingOriginal() {
                   </Link>
                   
                   <Link
-                    href="/contractor/register"
+                    href="/contractor/apply"
                     className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10 transition-colours"
                   >
                     <UserPlus className="h-5 w-5 mr-2" />
@@ -216,7 +216,7 @@ function ContractorPortalLandingOriginal() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contractor/register"
+              href="/contractor/apply"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 transition-colours"
             >
               Apply Now
