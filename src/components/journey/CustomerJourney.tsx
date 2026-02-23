@@ -248,11 +248,11 @@ export function CustomerJourneyWizard() {
                     <ArrowRight className="inline ml-2 h-5 w-5" />
                   </button>
                   <a
-                    href="tel:1300347278"
+                    href="/claim"
                     className="flex-1 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors text-center"
                   >
                     <Phone className="inline mr-2 h-5 w-5" />
-                    Call 1300-DISASTER
+                    Make a Claim
                   </a>
                 </div>
               </div>

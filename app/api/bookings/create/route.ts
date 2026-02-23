@@ -227,7 +227,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: false,
-      message: 'Failed to create booking. Please try again or call 1800 DISASTER.',
+      message: 'Failed to create booking. Please try again or lodge a claim at disasterrecovery.com.au/claim.',
     }, { status: 500 });
   }
 }

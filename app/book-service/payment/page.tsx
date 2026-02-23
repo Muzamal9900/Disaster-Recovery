@@ -506,7 +506,7 @@ function PaymentPageContent() {
                 <div className="space-y-2 text-sm">
                   <a href="/contact" className="flex items-center gap-2 text-blue-700 hover:text-blue-800">
                     <MessageSquare className="h-4 w-4" />
-                    1800 DISASTER
+                    Contact Support
                   </a>
                   <a href="mailto:support@nrp.com.au" className="flex items-center gap-2 text-blue-700 hover:text-blue-800">
                     <Mail className="h-4 w-4" />

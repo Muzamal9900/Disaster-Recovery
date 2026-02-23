@@ -41,7 +41,7 @@ export default function MobileEmergencyCTA() {
           className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-gradient-to-t from-black/90 to-transparent"
         >
           <Link
-            href="/contact"
+            href="/claim"
             className="block w-full bg-gradient-to-r from-red-600 to-blue-700 text-white rounded-full py-4 px-6 font-bold text-lg shadow-2xl"
           >
             <div className="flex items-center justify-center gap-3">

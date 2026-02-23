@@ -133,7 +133,7 @@ function progressWorkflow(ticketId: string, stepIndex: number) {
       workflow.contractor = {
         id: `CTR-${Math.random().toString(36).substr(2, 9).toUpperCase()}`,
         name: 'Premium Restoration Services',
-        phone: '1300 RESTORE'
+        contact: 'disasterrecovery.com.au/contact'
       };
       break;
     case 5: // Contractor accepts

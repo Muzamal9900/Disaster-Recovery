@@ -541,11 +541,11 @@ function WaterDamageGuidePageOriginal() {
           
           <div className="flex flex-wrap gap-4 justify-center">
             <a
-              href="tel:1800000000"
+              href="/claim"
               className="bg-green-500 hover:bg-green-800 text-white px-10 py-5 rounded-lg font-bold text-xl flex items-center gap-3 shadow-2xl transition-all hover:scale-105"
             >
               <Phone className="w-7 h-7" />
-              Emergency: 1800 000 000
+              Emergency? Make a Claim
             </a>
             <Link
               href="/emergency/water-damage"

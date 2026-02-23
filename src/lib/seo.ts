@@ -131,10 +131,7 @@ export const generateLocalBusinessSchema = (businessInfo: any) => ({
           name: 'Mould Remediation',
           description: 'Professional mould inspection, removal, and prevention' } },
     ] },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '487' } })
+ })
 
 export const generateServiceSchema = (service: {
   name: string
@@ -157,7 +154,7 @@ export const generateServiceSchema = (service: {
   availableChannel: service.availableChannel || {
     '@type': 'ServiceChannel',
     serviceUrl: 'https://disasterrecovery.com.au/emergency-service',
-    servicePhone: '1300 309 361',
+    serviceUrl: 'https://disasterrecovery.com.au/claim',
     availableLanguage: {
       '@type': 'Language',
       name: 'English' } },

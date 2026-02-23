@@ -184,7 +184,7 @@ export function generateTestimonial(location: LocationData): string {
 }
 
 export function generateContactSection(location: LocationData): string {
-  return `For immediate ${location.city} disaster recovery assistance, call 1300 814 870 or complete our online emergency form. Our ${location.state}-based team provides rapid response across all ${location.city} areas including ${location.suburbs.slice(0, 3).join(', ')} and surrounding regions.`;
+  return `For immediate ${location.city} disaster recovery assistance, lodge a claim online at disasterrecovery.com.au/claim. Our ${location.state}-based team provides rapid response across all ${location.city} areas including ${location.suburbs.slice(0, 3).join(', ')} and surrounding regions.`;
 }
 
 // Main Content Assembly Function
@@ -202,7 +202,7 @@ export function generateLocationContent(
   
   return {
     title: `${serviceData.service} ${location.city} ${location.state} | 24/7 Emergency Response`,
-    metaDescription: `Professional ${serviceData.service.toLowerCase()} in ${location.city}, ${location.state}. 24/7 emergency service, insurance approved, rapid response across all ${location.city} suburbs. Call 1300 814 870.`,
+    metaDescription: `Professional ${serviceData.service.toLowerCase()} in ${location.city}, ${location.state}. 24/7 emergency service, insurance approved, rapid response across all ${location.city} suburbs. Lodge a claim online.`,
     h1: `${serviceData.service} Services in ${location.city}, ${location.state}`,
     sections: {
       intro: generateLocationIntro(location),
@@ -233,8 +233,7 @@ export function generateLocalSchema(location: LocationData, service: string) {
       "postalCode": location.postcode,
       "addressCountry": "AU"
     },
-    "telephone": "1300814870",
-    "url": `https://disaster-recovery.vercel.app/locations/${location.city.toLowerCase().replace(' ', '-')}`,
+    "url": `https://disasterrecovery.com.au/locations/${location.city.toLowerCase().replace(' ', '-')}`,
     "openingHours": "Mo-Su 00:00-23:59",
     "serviceArea": {
       "@type": "GeoCircle",

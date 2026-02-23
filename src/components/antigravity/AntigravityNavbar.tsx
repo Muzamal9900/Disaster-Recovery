@@ -70,7 +70,7 @@ export function AntigravityNavbar() {
         <div className="ag-emergency-action">
           <Link href="/claim/start" className="ag-btn-emergency">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
-            Secure Connect ($2,750)
+            Make a Claim
           </Link>
         </div>
 
@@ -97,7 +97,7 @@ export function AntigravityNavbar() {
         <Link href="/contractor/login" onClick={() => setMobileOpen(false)}>Contractor Portal</Link>
         <Link href="/claim" onClick={() => setMobileOpen(false)}>Report a Claim</Link>
         <Link href="/claim/start" className="ag-btn-emergency" onClick={() => setMobileOpen(false)}>
-          Secure Connect ($2,750)
+          Make a Claim
         </Link>
       </div>
     </header>

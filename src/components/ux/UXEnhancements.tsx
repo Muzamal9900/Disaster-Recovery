@@ -19,13 +19,13 @@ export function FloatingEmergencyCTA() {
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <a 
-                href="tel:1300347278" 
+              <a
+                href="/claim"
                 className="bg-white text-red-600 px-3 py-1.5 rounded-full font-bold text-sm hover:bg-yellow-400 transition-all transform hover:scale-105"
               >
                 <Phone className="inline h-4 w-4 mr-1" />
-                <span className="hidden sm:inline">1300-DISASTER</span>
-                <span className="sm:hidden">Call Now</span>
+                <span className="hidden sm:inline">Make a Claim</span>
+                <span className="sm:hidden">Claim</span>
               </a>
               <button 
                 onClick={() => setIsVisible(false)}
@@ -47,12 +47,12 @@ export function QuickActionBar() {
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-2xl z-[9990] md:hidden">
       <div className="grid grid-cols-3 gap-1 p-2">
-        <a 
-          href="tel:1300347278"
+        <a
+          href="/claim"
           className="flex flex-col items-center justify-center py-3 bg-red-50 hover:bg-red-100 rounded-lg transition-colors"
         >
           <Phone className="h-5 w-5 text-red-600 mb-1" />
-          <span className="text-xs font-medium">Call Now</span>
+          <span className="text-xs font-medium">Make a Claim</span>
         </a>
         <button 
           onClick={() => {

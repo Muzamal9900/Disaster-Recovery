@@ -65,7 +65,7 @@ export const fireSmokeData: ServicePageData = {
     heading: 'Deploy Fire Specialists',
     description: 'Trigger immediate dispatch of certified FSRT crews to your disaster zone.',
     ctaHref: '/claim/start?service=fire-damage',
-    ctaText: 'Connect Now ($2,750)',
+    ctaText: 'Make a Claim',
     footerNote: 'Approved and trusted by top tier insurers across Australia and New Zealand.',
     trustText: 'Operating strictly under IICRC FSRT Standards for Fire & Smoke Damage Restoration.',
   },

@@ -48,7 +48,7 @@ export function AntigravityFooter() {
           <Link href="/about">About NRPG</Link>
           <Link href="/how-it-works">How It Works</Link>
           <Link href="/blog">Blog &amp; Resources</Link>
-          <Link href="/contact">Contact Us</Link>
+          <Link href="/claim">Make a Claim</Link>
         </div>
 
         {/* Services column */}

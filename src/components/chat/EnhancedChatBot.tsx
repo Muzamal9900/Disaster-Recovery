@@ -100,7 +100,7 @@ export function EnhancedChatBot() {
 
     if (input.includes('water') || input.includes('flood')) {
       response.text = "Water damage requires immediate action! I'm connecting you with the nearest certified contractor. They'll arrive within 60 minutes.";
-      response.options = ['Share Property Details', 'Upload Photos', 'Call 1300-DISASTER'];
+      response.options = ['Share Property Details', 'Upload Photos', 'Lodge Claim Online'];
     } else if (input.includes('fire') || input.includes('smoke')) {
       response.text = "Fire damage restoration specialist needed. Our network handles everything from assessment to complete restoration.";
       response.options = ['Get Emergency Response', 'Insurance Help', 'Speak to Expert'];
@@ -176,9 +176,9 @@ export function EnhancedChatBot() {
 
           {/* Emergency Bar */}
           <div className="bg-red-50 border-b border-red-200 px-4 py-2">
-            <a href="tel:1300347278" className="flex items-center justify-center gap-2 text-red-700 font-semibold hover:text-red-900">
+            <a href="/claim" className="flex items-center justify-center gap-2 text-red-700 font-semibold hover:text-red-900">
               <Phone size={16} />
-              <span>Emergency? Call 1300-DISASTER</span>
+              <span>Emergency? Make a Claim</span>
             </a>
           </div>
 

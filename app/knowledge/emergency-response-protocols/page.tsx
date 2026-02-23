@@ -30,7 +30,7 @@ export default function EmergencyResponseProtocolsPage() {
           subtitle: 'PPRR framework, the golden hour, and professional emergency response sequence',
         }}
         cta={{ text: 'Get Emergency Help', href: '/emergency' }}
-        secondaryCta={{ text: 'Call 24/7', href: 'tel:1300000000' }}
+        secondaryCta={{ text: 'Make a Claim', href: '/claim' }}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Knowledge Base', href: '/knowledge' },

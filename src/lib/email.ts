@@ -260,7 +260,7 @@ export const emailTemplates = {
         
         <div style="background: #f5f5f5; padding: 20px; text-align: centre; colour: #666; font-size: 12px;">
           <p>Partner Portal: <a href="${SITE_URL}/partner-portal">Login Here</a></p>
-          <p>Support: partners@disasterrecovery.com.au | 1300 PARTNER</p>
+          <p>Support: partners@disasterrecovery.com.au</p>
         </div>
       </div>
     ` }) };

@@ -65,7 +65,7 @@ export const waterDamageData: ServicePageData = {
     heading: 'Deploy Water Techs',
     description: 'Automated dispatch to the nearest available water extraction fleet.',
     ctaHref: '/claim/start?service=water-damage',
-    ctaText: 'Connect Now ($2,750)',
+    ctaText: 'Make a Claim',
     footerNote: 'Direct insurance billing available. IICRC S500 compliant reporting provided to all adjusters.',
     trustText: 'Operating strictly under IICRC S500 Standard for Professional Water Damage Restoration.',
   },

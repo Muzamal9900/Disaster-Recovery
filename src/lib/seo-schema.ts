@@ -1,37 +1,30 @@
 // Comprehensive SEO Schema Generator for #1 Google Rankings
 
-export const generateLocalBusinessSchema = (location: string, postalCode: string) => ({
+export const generateLocationServiceSchema = (location: string, postalCode: string) => ({
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": `https://disasterrecovery.com.au/${location}`,
+  "@type": "Service",
+  "@id": `https://disasterrecovery.com.au/locations/${location.toLowerCase()}/#service`,
   "name": `Disaster Recovery ${location} - 24/7 Emergency Restoration`,
-  "image": "https://disasterrecovery.com.au/logos/disaster-recovery-logo.png",
-  "logo": "https://disasterrecovery.com.au/logos/disaster-recovery-logo.png",
-  "url": `https://disasterrecovery.com.au/${location}`,
-  "telephone": "1300-DISASTER",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": location,
-    "addressRegion": getRegionFromLocation(location),
-    "postalCode": postalCode,
-    "addressCountry": "AU"
+  "url": `https://disasterrecovery.com.au/locations/${location.toLowerCase()}`,
+  "description": `Professional disaster recovery and emergency restoration services in ${location}. IICRC-certified contractors available 24/7 for water damage, fire damage, mould remediation, and storm damage.`,
+  "serviceType": "Damage Restoration Service",
+  "provider": {
+    "@id": "https://disasterrecovery.com.au/#organisation"
   },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": getLatitude(location),
-    "longitude": getLongitude(location)
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": getLatitude(location),
+      "longitude": getLongitude(location)
+    },
+    "geoRadius": "100000"
   },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": `https://disasterrecovery.com.au/claim/start`,
+    "availableLanguage": "English"
   },
-  "sameAs": [
-    "https://www.facebook.com/DisasterRecoveryAU",
-    "https://www.linkedin.com/company/disaster-recovery-au"
-  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Disaster Recovery Services",
@@ -61,28 +54,7 @@ export const generateLocalBusinessSchema = (location: string, postalCode: string
         }
       }
     ]
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "2847",
-    "bestRating": "5"
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Sarah Mitchell"
-      },
-      "reviewBody": "Incredible response time. Water damage fixed within hours. Highly recommend!"
-    }
-  ]
+  }
 });
 
 export const generateEmergencyServiceSchema = () => ({
@@ -97,7 +69,7 @@ export const generateEmergencyServiceSchema = () => ({
   "availableChannel": {
     "@type": "ServiceChannel",
     "serviceUrl": "https://disasterrecovery.com.au/emergency",
-    "servicePhone": "1300-DISASTER",
+    "serviceUrl": "https://disasterrecovery.com.au/claim",
     "availableLanguage": ["English", "Mandarin", "Arabic", "Vietnamese", "Spanish"]
   },
   "termsOfService": "https://disasterrecovery.com.au/terms",
@@ -181,7 +153,7 @@ export const generateHowToSchema = () => ({
     {
       "@type": "HowToStep",
       "name": "Report Damage",
-      "text": "Call 1300-DISASTER or use our online form to report your emergency",
+      "text": "Lodge your claim online at disasterrecovery.com.au/claim to report your emergency",
       "url": "https://disasterrecovery.com.au/emergency",
       "image": "https://disasterrecovery.com.au/images/step1.jpg"
     },
@@ -280,7 +252,7 @@ export function generateAllSchemas(pageType: string, location?: string, postalCo
       break;
     case 'location':
       if (location && postalCode) {
-        schemas.push(generateLocalBusinessSchema(location, postalCode));
+        schemas.push(generateLocationServiceSchema(location, postalCode));
       }
       schemas.push(generateFAQSchema());
       break;

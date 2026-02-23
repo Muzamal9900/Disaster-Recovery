@@ -364,7 +364,7 @@ export function generateEmergencyServiceSchema(): EmergencyServiceSchema {
     availableChannel: {
       '@type': 'ServiceChannel',
       serviceUrl: 'https://disasterrecovery.com.au/emergency',
-      servicePhone: '+61-1300-DISASTER',
+      serviceUrl: 'https://disasterrecovery.com.au/claim',
       availableLanguage: {
         '@type': 'Language',
         name: 'English'

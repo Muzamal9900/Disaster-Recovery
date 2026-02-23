@@ -64,7 +64,7 @@ export const methLabDecontaminationData: ServicePageData = {
     heading: 'Secure Decontamination Connection',
     description: 'Discreet, compliance-certified teams ready to deploy Australia-wide.',
     ctaHref: '/claim/start?service=meth-lab-decontamination',
-    ctaText: 'Connect Now ($2,750)',
+    ctaText: 'Make a Claim',
     footerNote: 'Discreet, unmarked vehicles available upon request to protect property reputation.',
     trustText: 'Adhering strictly to Australian National Guidelines for Clandestine Drug Laboratories.',
   },

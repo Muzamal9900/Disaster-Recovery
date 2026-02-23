@@ -299,7 +299,7 @@ function WhosFirstPageOriginal() {
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <span className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
-                    <p>Call us immediately at 1800 000 000 for 24/7 response</p>
+                    <p>Lodge your claim online for immediate 24/7 response</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
@@ -320,11 +320,11 @@ function WhosFirstPageOriginal() {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="tel:1800000000"
+                  href="/claim"
                   className="bg-green-700 text-white px-8 py-3 rounded-lg font-bold flex items-center gap-2 shadow-lg hover:bg-green-800"
                 >
                   <Phone className="w-5 h-5" />
-                  Call Now
+                  Get Help Now
                 </motion.a>
                 <button
                   onClick={resetQuiz}
@@ -365,11 +365,11 @@ function WhosFirstPageOriginal() {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="tel:1800000000"
+            href="/claim"
             className="inline-flex items-center gap-3 bg-white text-blue-800 px-10 py-4 rounded-lg font-bold text-xl shadow-2xl hover:bg-gray-100"
           >
             <Phone className="w-6 h-6" />
-            Make Us Your First Call
+            Make Us Your First Choice
             <ArrowRight className="w-6 h-6" />
           </motion.a>
         </div>

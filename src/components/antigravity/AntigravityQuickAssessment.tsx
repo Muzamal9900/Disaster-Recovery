@@ -66,7 +66,7 @@ const cards: AssessmentCard[] = [
     id: 'sewage',
     title: 'Sewage Sanitisation',
     description: 'Category 3 contamination response, extraction, sanitisation, and compliant remediation protocols.',
-    icon: '/images/antigravity/logo_3d_trauma.webp',
+    icon: '/images/antigravity/logo_3d_water.webp',
     iconAlt: 'Sewage Emergency',
     href: '/services/sewage-cleanup',
     wide: true,
@@ -90,7 +90,7 @@ export function AntigravityQuickAssessment() {
         <div className="ag-badge-pulse">Live Network Connection</div>
         <h2>Emergency Rapid Assessment</h2>
         <p style={{ color: 'var(--ag-text-muted)', fontSize: '1.125rem', maxWidth: 600, margin: 0 }}>
-          Select your emergency to initiate your $2750 automated connection to
+          Select your emergency type to connect with
           certified specialists across ANZ.
         </p>
       </div>

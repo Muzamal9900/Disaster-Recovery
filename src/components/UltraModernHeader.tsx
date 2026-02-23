@@ -607,12 +607,12 @@ export default function UltraModernHeader() {
                 NRP CRM Portal
               </Link>
               
-              {/* Contact Button */}
+              {/* Claim Button */}
               <Link
-                href="/contact"
+                href="/claim"
                 className="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-red-600 to-blue-700 rounded-full hover:from-red-700 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl min-h-[44px] inline-flex items-center justify-center px-4 py-3"
               >
-                📱 Contact
+                🚨 Make a Claim
               </Link>
             </div>
 
@@ -728,19 +728,19 @@ export default function UltraModernHeader() {
                 </div>
               </Link>
               
-              {/* Contact Button */}
+              {/* Claim Button */}
               <Link
-                href="/contact"
+                href="/claim"
                 className="block w-full text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <div 
+                <div
                   className="px-6 py-4 rounded-full font-bold text-white"
                   style={{
                     background: 'linear-gradient(135deg, #ff4545 0%, #ff8845 100%)',
                     boxShadow: '0 10px 40px rgba(255, 69, 69, 0.3)' }}
                 >
-                  🚨 Emergency Response
+                  🚨 Make a Claim
                 </div>
               </Link>
             </div>

@@ -106,7 +106,7 @@ export function ComprehensiveSEO({ location = 'Australia', service, pageType = '
       {/* Hidden content for SEO crawlers */}
       <div className="sr-only" aria-hidden="true">
         <h2>24/7 Emergency Contact</h2>
-        <p>Call 1300-DISASTER (1300 347 278) for immediate emergency response</p>
+        <p>Visit disasterrecovery.com.au/claim for immediate emergency response</p>
         <h2>Service Areas</h2>
         <p>Servicing all of Australia including Sydney, Melbourne, Brisbane, Perth, Adelaide, Gold Coast, Newcastle, Canberra, and all regional areas</p>
         <h2>Services Offered</h2>
@@ -133,12 +133,12 @@ export function EmergencyContactBar() {
           <span className="animate-pulse">🚨</span>
           <span className="font-semibold">24/7 Emergency Response</span>
         </div>
-        <a 
-          href="tel:1300347278" 
+        <a
+          href="/claim"
           className="flex items-center gap-2 bg-white text-red-600 px-4 py-1 rounded-full font-bold hover:bg-yellow-400 hover:text-black transition-colors"
         >
-          <span>📞</span>
-          <span>1300-DISASTER</span>
+          <span>🚨</span>
+          <span>Make a Claim</span>
         </a>
       </div>
     </div>

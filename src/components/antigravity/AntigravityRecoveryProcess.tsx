@@ -11,7 +11,7 @@ const steps = [
     iconAlt: 'Secure Connection',
     title: '1. Secure Connection',
     description:
-      'Immediate, automated routing to the nearest certified NRPG response team following the $2750 network fee.',
+      'Immediate, automated routing to the nearest certified NRPG response team via our online claim system.',
     hasConnector: true,
   },
   {

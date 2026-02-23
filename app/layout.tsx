@@ -45,7 +45,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://disaster-recovery-seven.vercel.app'),
+  metadataBase: new URL('https://disasterrecovery.com.au'),
   title: {
     default: 'Disaster Recovery Australia | 24/7 Emergency Restoration Services | IICRC Certified',
     template: '%s | Disaster Recovery Australia'
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_AU',
-    url: 'https://disaster-recovery-seven.vercel.app',
+    url: 'https://disasterrecovery.com.au',
     siteName: 'Disaster Recovery Australia',
     title: 'Disaster Recovery Australia | 24/7 IICRC-Certified Emergency Restoration',
     description: 'Australia\'s elite network of <10,000 IICRC-certified restoration professionals. 24/7 emergency response prevents 50% of secondary damage. Trusted by major insurers.',
@@ -102,9 +102,9 @@ export const metadata: Metadata = {
       'msvalidate.01': 'B3F4D7E8C9A2B1C3D4E5F6A7B8C9D0E1',
       'facebook-domain-verification': 'abcdef123456789' } },
   alternates: {
-    canonical: 'https://disaster-recovery-seven.vercel.app',
+    canonical: 'https://disasterrecovery.com.au',
     languages: {
-      'en-AU': 'https://disaster-recovery-seven.vercel.app' } },
+      'en-AU': 'https://disasterrecovery.com.au' } },
   category: 'Disaster Recovery Services' }
 
 export const viewport: Viewport = {
@@ -143,8 +143,8 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Disaster Recovery Australia",
               "alternateName": "NRP - National Restoration Platform",
-              "url": "https://disaster-recovery-seven.vercel.app",
-              "logo": "https://disaster-recovery-seven.vercel.app/logos/3D%20Disaster%20Recovery%20Logo%20Image.png",
+              "url": "https://disasterrecovery.com.au",
+              "logo": "https://disasterrecovery.com.au/logos/3D%20Disaster%20Recovery%20Logo%20Image.png",
               "description": "Australia's elite network of IICRC-certified disaster restoration specialists. 24/7 emergency response preventing secondary damage across all major cities and regional areas.",
               "areaServed": {
                 "@type": "Country",
@@ -167,11 +167,10 @@ export default function RootLayout({
               ],
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+61-1300-DISASTER",
-                "contactType": "Emergency Service",
+                "url": "https://disasterrecovery.com.au/claim",
+                "contactType": "Online Claims",
                 "availableLanguage": "English",
                 "areaServed": "AU",
-                "contactOption": "TollFree",
                 "availableHours": "Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59"
               },
               "address": {
@@ -217,12 +216,6 @@ export default function RootLayout({
                     }
                   }
                 ]
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "reviewCount": "1247",
-                "bestRating": "5"
               }
             })
           }}
