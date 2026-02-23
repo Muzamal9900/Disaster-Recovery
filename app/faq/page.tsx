@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { HelpCircle } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
 import { getFAQSections } from '@/lib/content-sections';
@@ -22,7 +23,39 @@ export default function FAQIndexPage() {
         { label: 'Home', href: '/' },
         { label: 'FAQ' },
       ]}
-      sections={getFAQSections({ topic: 'general' })}
+      sections={[
+        {
+          heading: 'Browse FAQ Categories',
+          body: (
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '1rem' }}>
+              {[
+                { name: 'Water Damage', href: '/faq/water-damage' },
+                { name: 'Fire Damage', href: '/faq/fire-damage' },
+                { name: 'Flood Restoration', href: '/faq/flood-restoration' },
+                { name: 'Storm Damage', href: '/faq/storm-damage' },
+                { name: 'Mould Removal', href: '/faq/mould-removal' },
+                { name: 'Insurance Claims', href: '/faq/insurance-claims' },
+                { name: 'Emergency Response', href: '/faq/emergency-response' },
+                { name: 'Biohazard Cleanup', href: '/faq/biohazard-cleanup' },
+                { name: 'Sewage Cleanup', href: '/faq/sewage-cleanup' },
+                { name: 'Carpet Drying', href: '/faq/carpet-drying' },
+                { name: 'Ceiling Repairs', href: '/faq/ceiling-repairs' },
+                { name: 'Contents Restoration', href: '/faq/contents-restoration' },
+                { name: 'Document Drying', href: '/faq/document-drying' },
+                { name: 'Electronics Restoration', href: '/faq/electronics-restoration' },
+                { name: 'Emergency Plumbing', href: '/faq/emergency-plumbing' },
+                { name: 'Odour Removal', href: '/faq/odour-removal' },
+                { name: 'General FAQs', href: '/faq/general' },
+              ].map((cat) => (
+                <Link key={cat.href} href={cat.href} style={{ display: 'block', padding: '1rem', background: 'white', borderRadius: '0.75rem', textDecoration: 'none', border: '1px solid rgba(0,0,0,0.08)', fontWeight: 600, color: 'var(--ag-primary-blue, #0052CC)' }}>
+                  {cat.name}
+                </Link>
+              ))}
+            </div>
+          ),
+        },
+        ...getFAQSections({ topic: 'general' }),
+      ]}
       relatedPages={getRelatedPages('guides-general')}
     />
   );

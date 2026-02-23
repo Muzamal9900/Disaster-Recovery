@@ -1,3 +1,10 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Legal Forms & Agreements | Disaster Recovery Australia',
+  description: 'Legal forms, contractor agreements, compliance documents, and business policies for the Disaster Recovery Australia platform.',
+};
+
 export default function LegalFormsLayout({
   children }: {
   children: React.ReactNode
