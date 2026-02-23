@@ -1255,6 +1255,144 @@ const ENTRIES: Record<string, KnowledgeEntry> = {
       { question: 'Why should I pay $2,750 upfront instead of waiting for my insurer?', answer: 'Every hour of delay increases restoration costs by 10–15% and increases mould risk. The Make Safe fee is recovered through your insurance claim in most cases. More importantly, the forensic assessment and Paperwork Assurance Report typically recover 30–50% more in total claim value by providing documented, scientific evidence that insurers cannot easily dispute.' },
     ],
   },
+  'insurance-payout-settlement': {
+    slug: 'insurance-payout-settlement',
+    title: 'Insurance Payouts & Cash Settlements',
+    snippetAnswer: (
+      <>
+        <p>
+          An <strong>insurance cash settlement</strong> (payout) is when your insurer offers a lump sum instead of managing repairs directly. Cash settlements can work in your favour in specific situations — when contents loss exceeds the sum insured and you want to preserve your full contents claim, when you know the replacement costs and can organise repairs faster yourself, or when you do not want to replace the compromised item. However, payouts frequently work against property owners when hidden damage — water behind walls, mould in concealed cavities, smoke residue distributed through HVAC systems, sewage contamination wicked into sub-floor structures — turns out to be far more extensive than the initial assessment suggested. Roof damage, fire damage, water damage, mould, clandestine contamination, and crime scene damage are almost always under-assessed at first inspection. Once you accept a cash settlement, the claim is typically closed and additional costs become your responsibility. Before accepting any cash offer, get an independent assessment from an IICRC-certified restoration professional who can identify concealed damage through moisture mapping, thermal imaging, and invasive investigation that a general insurer assessor will not perform.
+        </p>
+      </>
+    ),
+    technicalSections: (
+      <>
+        <p>
+          Insurance cash settlements in Australia are governed by the <em>Insurance Contracts Act 1984</em> (Cth) and the <em>General Insurance Code of Practice</em>. Understanding the mechanics, risks, and strategies is essential before accepting or rejecting any offer.
+        </p>
+        <h3>How Cash Settlement Offers Are Calculated</h3>
+        <p>
+          After you lodge a claim, the insurer sends an assessor (loss adjuster) to inspect the property. The assessor produces a scope of works based on visible damage and calculates a cost estimate using the insurer&apos;s pricing schedule. This estimate typically uses the lowest available labour rates, builder&apos;s-grade materials (not necessarily matching your existing finishes), and accounts only for damage visible at the time of inspection. The insurer then presents this figure as a cash-in-lieu offer — take the money and organise repairs yourself, or opt for the insurer&apos;s managed repair pathway.
+        </p>
+        <p>
+          <strong>The core problem:</strong> the offer is based on what the assessor can see during a non-invasive visual inspection. There is no moisture mapping, no thermal imaging, no invasive investigation behind wall linings or under floor coverings. For damage types where concealed damage is common — which includes nearly all water, fire, mould, sewage, and contamination events — this means the scope of works is almost certainly incomplete.
+        </p>
+
+        <h3>When Payouts Work in Your Favour</h3>
+        <ul>
+          <li><strong>Contents loss exceeding the sum insured</strong> — Your policy has separate building and contents covers. If your contents damage is significant (furniture, electronics, clothing, personal items — a typical family home contains $80,000&ndash;$150,000 in contents), taking a cash payout for the building repair means the repair costs are <em>not subtracted from your contents claim</em>. This split strategy can maximise your total claim value by tens of thousands of dollars. Example: a kitchen fire with $30,000 building damage and $45,000 contents damage — taking a building payout preserves your full contents entitlement.</li>
+          <li><strong>Known replacement costs with reliable quotes</strong> — If you have genuine quotes from qualified tradespeople, understand the full scope, and can manage the project yourself, a cash settlement bypasses the managed repair timeline (assessor visit, scope approval, panel builder allocation, builder scheduling — typically 6&ndash;12 weeks before work even begins).</li>
+          <li><strong>Items you planned to replace or upgrade</strong> — If the damaged area was due for renovation, a payout gives flexibility to direct funds toward what you actually want rather than a like-for-like restoration of something you intended to change anyway.</li>
+          <li><strong>Genuinely cosmetic or surface-level damage</strong> — A stain, a cracked tile, a damaged benchtop with no underlying moisture or structural concern. When damage is truly what-you-see-is-what-you-get, a payout for straightforward repair is practical.</li>
+        </ul>
+
+        <h3>When Payouts Work Against You — Hidden Damage by Type</h3>
+        <p>
+          Each type of property damage has characteristic patterns of concealed damage that insurer assessors routinely miss because they do not perform invasive investigation:
+        </p>
+        <ul>
+          <li><strong>Water damage</strong> — Water wicks into timber framing, travels along pipework and electrical cables, and pools in the lowest accessible cavity. A 2m&sup2; ceiling stain may indicate 10m&sup2; of saturated framing, insulation, and wiring behind the plasterboard. Moisture mapping with thermal imaging frequently reveals 3&ndash;5 times more affected area than visible. Without professional drying within 24&ndash;48 hours, mould colonisation begins in concealed spaces.</li>
+          <li><strong>Fire and smoke damage</strong> — Visible fire damage is often the smaller cost. Smoke residue (soot, PAHs, VOCs) penetrates every porous surface and is distributed throughout the property via HVAC ducts — not just the room where the fire occurred. Charred structural timber concealed behind wall linings may be weakened. Soft furnishings, carpet underlay, and insulation absorb combustion byproducts requiring specialist cleaning or removal.</li>
+          <li><strong>Roof and storm damage</strong> — Roof damage creates progressive water ingress that is not visible for weeks or months. Water enters through damaged tiles, flashing, or sarking, tracks along roof timbers, and saturates insulation. Hail creates hundreds of micro-perforations admitting water during subsequent rain. By the time ceiling staining appears, the roof cavity may have significant mould growth and timber damage.</li>
+          <li><strong>Mould</strong> — Visible mould is the tip. Colonies grow on the back side of wall linings, under floor coverings, and inside ceiling cavities where moisture and organic material meet low airflow. A visible mould patch almost always indicates a much larger colony behind the surface. Remediation that addresses only visible growth without investigating concealed areas will fail — the mould returns within weeks.</li>
+          <li><strong>Sewage and contaminated water (Category 3)</strong> — Black water contamination from sewage overflow requires complete removal of all porous materials the water contacted — carpet, underlay, plasterboard to 300mm above waterline, insulation, absorbent contents. Contamination zone is always larger than the visible waterline because water wicks upward through porous materials (capillary action) and seeps through joints and gaps.</li>
+          <li><strong>Clandestine contamination</strong> — Former drug laboratories (methamphetamine) and undisclosed chemical contamination may only appear during demolition when residue is found on concealed internal surfaces. Scope increases dramatically once invasive investigation begins. Specialist decontamination to safe residue levels is legally required.</li>
+          <li><strong>Crime scene and biohazard</strong> — Blood-borne pathogens and biological material penetrate porous surfaces (timber, carpet, concrete) and migrate along joints and gaps. Visual cleanup is insufficient — biological contamination must be verified clear through ATP testing. Sub-floor, wall cavity, and ceiling contamination is common and frequently missed.</li>
+        </ul>
+
+        <h3>Building vs Contents — The Split Strategy</h3>
+        <p>
+          Building insurance covers the structure and fixed fittings (walls, floors, ceilings, plumbing, electrical, built-in cabinetry, ducted air conditioning). Contents insurance covers moveable possessions (furniture, clothing, electronics, portable appliances, artwork). These are separate covers with separate claim pathways. When a disaster damages both, the total claim is split between building and contents components.
+        </p>
+        <p>
+          If you accept a cash settlement for the building portion, those repair costs are settled separately and your contents claim remains fully intact. This matters most when contents damage is extensive — after significant water, fire, or storm events, contents replacement costs frequently approach or exceed the sum insured. Preserving the full contents entitlement by settling building damage separately can be worth tens of thousands of dollars.
+        </p>
+        <p>
+          <strong>Caution:</strong> This strategy is only safe when the building damage is genuinely understood and the cash offer is fair. If there is hidden damage risk, an inadequate building payout becomes your problem after claim closure.
+        </p>
+
+        <h3>What a Professional Assessment Includes</h3>
+        <p>
+          An independent assessment by an IICRC-certified restoration professional includes: visual inspection and documentation of all visible damage; moisture mapping using pin-type and pinless moisture meters across all potentially affected surfaces; thermal imaging to reveal concealed moisture, missing insulation, and thermal bridging; air quality testing where mould or contamination is suspected; a comprehensive scope of works with line-item costings for every remediation and repair task; and full photographic documentation with readings. This is the document you compare against the insurer&apos;s cash offer — and the evidence you use if you need to negotiate or dispute.
+        </p>
+      </>
+    ),
+    legalSections: (
+      <>
+        <h3>Insurance Contracts Act 1984</h3>
+        <p>
+          The ICA 1984 provides the legal framework for all insurance contracts in Australia. Key sections relevant to cash settlements include:
+        </p>
+        <ul>
+          <li><strong>Section 54</strong> — Prevents insurers from refusing claims on technical grounds when the policyholder has acted reasonably. This is particularly relevant if you engaged emergency restoration services before the insurer&apos;s assessor arrived — the insurer cannot reduce your claim because you took reasonable steps to mitigate further damage.</li>
+          <li><strong>Section 13</strong> — Imposes a duty of utmost good faith on both insurer and insured. The insurer must provide fair and accurate settlement offers. A cash offer calculated using inadequate scope, below-market labour rates, or cheapest-available materials (when your property had premium finishes) may breach this duty.</li>
+          <li><strong>Section 57</strong> — Addresses subrogation rights, relevant if you accept a payout and later discover the damage was caused by a third party (e.g., a neighbour&apos;s plumbing, a builder&apos;s defect).</li>
+          <li><strong>Section 14</strong> — Requires contracts to be interpreted in a way that gives effect to the reasonable expectations of the insured. If your policy says &ldquo;like-for-like replacement&rdquo;, the settlement should reflect actual like-for-like costs, not the cheapest alternative.</li>
+        </ul>
+
+        <h3>General Insurance Code of Practice</h3>
+        <p>
+          The Code of Practice is an industry self-regulation framework that all major Australian insurers subscribe to. Relevant obligations include:
+        </p>
+        <ul>
+          <li>Insurers must handle claims in an honest, fair, transparent, and timely manner</li>
+          <li>Insurers must provide reasons for settlement amounts when requested</li>
+          <li>Policyholders must be given reasonable time to consider cash settlement offers</li>
+          <li>Insurers must not pressure policyholders into accepting settlements before they have had time to obtain independent advice</li>
+          <li>Cash settlement offers must be based on fair and reasonable assessment of the loss</li>
+        </ul>
+
+        <h3>AFCA Dispute Resolution</h3>
+        <p>
+          If you believe a cash settlement offer is unfair or does not reflect the true cost of restoration, you have a clear escalation pathway:
+        </p>
+        <ol>
+          <li><strong>Negotiate directly</strong> — Present your independent scope of works and request a revised offer. Show line-item comparisons between the insurer&apos;s scope and yours.</li>
+          <li><strong>Internal Dispute Resolution (IDR)</strong> — Lodge a formal complaint through the insurer&apos;s internal complaints process. The insurer must respond within 30 calendar days. Reference specific policy terms, ICA 1984 sections, and your independent documentation.</li>
+          <li><strong>AFCA</strong> — If IDR does not resolve the dispute, lodge a complaint with the Australian Financial Complaints Authority. AFCA provides free, independent dispute resolution for insurance complaints up to $1.085 million. AFCA&apos;s determinations are binding on the insurer.</li>
+        </ol>
+        <p>
+          <strong>Critical point:</strong> The documentation from a professional assessment — scope of works, moisture mapping data, thermal images, air quality results, photographic evidence — becomes your evidence at every stage of this process. Without it, you are disputing on opinion. With it, you are disputing on evidence.
+        </p>
+
+        <h3>Your Right to a Fair Settlement</h3>
+        <p>
+          Under Australian law, you are entitled to a settlement that reflects the actual cost of restoring your property to its pre-loss condition using like-for-like materials and finishes. An insurer offering a cash settlement based on cheaper materials, lower labour rates than local market rates, or an incomplete scope of works may not be meeting their obligations under the ICA 1984 or the General Insurance Code of Practice. You do not have to accept it.
+        </p>
+      </>
+    ),
+    vettedComparison: {
+      topic: 'Cash Settlement Assessment',
+      vetted: [
+        'Independent scope of works with line-item costings before you commit',
+        'Invasive investigation — moisture mapping, thermal imaging, air quality testing',
+        'Like-for-like replacement costing matching your actual materials and finishes',
+        'Documentation package that supports AFCA dispute if settlement is inadequate',
+        'IICRC-certified assessment identifying concealed damage an insurer assessor cannot see',
+        'Contents claims strategy advice to maximise your total claim value',
+        'Honest assessment of whether a payout or managed repair is better for your situation',
+      ],
+      unvetted: [
+        'Reliance on insurer assessor scope — non-invasive inspection that misses concealed damage',
+        'No moisture mapping or thermal imaging — hidden damage discovered after claim closure',
+        'Cash offer based on cheapest materials and below-market labour rates',
+        'No independent documentation to support a dispute or reopened claim',
+        'General assessor without restoration-specific qualifications or IICRC certification',
+        'No contents claims strategy — building and contents costs mixed, reducing total payout',
+        'Acceptance pressure without adequate time to get independent professional advice',
+      ],
+    },
+    faqs: [
+      { question: 'Can I reopen my claim after accepting a cash settlement?', answer: 'Generally, accepting a cash settlement closes the claim. However, if you discover damage that could not reasonably have been identified at the time of settlement (e.g., concealed water damage behind walls, mould in ceiling cavities, contamination under flooring), you may be able to request the insurer reopen the claim or lodge a complaint with AFCA. This is significantly harder than negotiating before acceptance, which is why we always recommend getting an independent assessment with moisture mapping and thermal imaging before committing to a cash settlement.' },
+      { question: 'Should I get an independent assessment before accepting a payout?', answer: 'Yes, always — particularly if the damage involves water, fire, smoke, mould, sewage, or any form of contamination. An independent assessment by an IICRC-certified restoration professional includes moisture mapping, thermal imaging, and potentially invasive investigation that identifies concealed damage a general insurer assessor will miss. The cost of an independent assessment is minimal compared to the risk of accepting an under-scoped payout. This assessment can be the difference between a $15,000 offer and a $40,000–$60,000 actual restoration cost.' },
+      { question: 'How do I know if the cash settlement offer is fair?', answer: 'Request the insurer provide a detailed, line-item breakdown of how the cash settlement was calculated — what labour rates, what materials, what scope items are included and excluded. Then get independent quotes from qualified restoration professionals for the full scope of works required. Compare the two documents line by line. If there is a significant gap — particularly if the insurer used below-market rates, builder\'s-grade materials replacing premium finishes, or excluded concealed damage areas — the offer may not be fair under the General Insurance Code of Practice.' },
+      { question: 'What is the contents claims strategy and when should I use it?', answer: 'Your building and contents insurance are separate covers with separate claim pathways. If contents damage is significant (a typical family home has $80,000–$150,000 in contents), taking a cash settlement for the building repair means building costs are settled separately and your full contents entitlement is preserved. This is most valuable when contents loss is close to or exceeds the sum insured. However, it only works safely when the building damage is genuinely understood — if hidden building damage appears after you accept the building payout, those costs are yours.' },
+      { question: 'What types of damage are most commonly under-assessed?', answer: 'Water damage, fire and smoke damage, roof/storm damage, mould, sewage contamination, clandestine contamination, and crime scene/biohazard damage are all consistently under-assessed at first inspection. These damage types share a common characteristic: the concealed damage is significantly greater than what is visible. Water wicks behind walls, smoke distributes through HVAC systems, mould grows on the back of surfaces, sewage contaminates sub-floor structures. An insurer assessor performing a visual-only inspection will miss all of this.' },
+      { question: 'Can I negotiate a higher cash settlement?', answer: 'Yes. Cash settlement offers are negotiable. Present the insurer with your independent scope of works, line-item costings from qualified professionals, moisture mapping data, thermal images, and any air quality test results. Show the specific gap between their scope and the actual scope. Many insurers increase the offer when presented with documented evidence. If they refuse, escalate through Internal Dispute Resolution (30-day response requirement) and then to AFCA if necessary.' },
+      { question: 'How long do I have to decide on a cash settlement offer?', answer: 'There is no legislated deadline, but insurers may propose a response timeframe. You are entitled to reasonable time to consider the offer and obtain independent advice. Under the General Insurance Code of Practice, insurers must not pressure policyholders into hasty decisions. If you feel rushed, request an extension in writing and document the request. Take the time to get a professional assessment — a few days of delay is far less costly than accepting an inadequate settlement.' },
+      { question: 'What if I accept a payout and the repair costs more than expected?', answer: 'If you accepted the settlement and the claim is closed, costs above the settlement amount are generally your responsibility. This is the primary risk of accepting a cash settlement without a thorough independent assessment. If the additional costs are due to damage that could not reasonably have been identified at settlement (truly concealed damage), you may have grounds to request the claim be reopened or to lodge an AFCA complaint — but this is difficult and not guaranteed. Prevention (independent assessment before acceptance) is always better than remedy.' },
+    ],
+  },
 };
 
 /* -------------------------------------------------------------------------- */

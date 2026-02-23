@@ -95,6 +95,14 @@ const KNOWLEDGE_ENTRIES = [
     gradient: 'from-violet-600 to-purple-500',
     icon: '🏆',
   },
+  {
+    slug: 'insurance-payout-settlement',
+    title: 'Insurance Payouts & Cash Settlements',
+    description:
+      'When to accept an insurance payout, when to refuse, contents claims strategy, and your rights under Australian insurance law.',
+    gradient: 'from-amber-600 to-orange-500',
+    icon: '💰',
+  },
 ];
 
 export default function KnowledgeHubPage() {

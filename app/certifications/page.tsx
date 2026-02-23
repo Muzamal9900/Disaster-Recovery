@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import { Award } from 'lucide-react';
 import { AgContentPageTemplate } from '@/components/antigravity';
 import { getCertificationSections } from '@/lib/content-sections';
-import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
   title: "Certifications | Disaster Recovery",
@@ -24,7 +23,14 @@ export default function CertificationsPage() {
         { label: "Certifications" },
       ]}
       sections={getCertificationSections({ certName: 'Professional Certifications', body: 'Our network maintains the highest industry certifications.' })}
-      relatedPages={getRelatedPages('guides-general')}
+      relatedPages={[
+        { title: 'Minimum Training Requirements', href: '/certifications/minimum-training-requirements', description: 'Mandatory OH&S training courses for all site technicians.' },
+        { title: 'IICRC Certification', href: '/certifications/iicrc-certified', description: 'The international gold standard for restoration professionals.' },
+        { title: 'HAZMAT Certification', href: '/certifications/hazmat-certified', description: 'Hazardous materials handling credentials and requirements.' },
+        { title: 'WorkSafe Certification', href: '/certifications/worksafe-certified', description: 'State-specific workplace health and safety accreditation.' },
+        { title: 'Asbestos Licensing', href: '/certifications/asbestos-licensed', description: 'Asbestos handling and removal licensing requirements.' },
+        { title: 'Australian Standards', href: '/certifications/australian-standards', description: 'Compliance with AS/NZS standards for restoration work.' },
+      ]}
     />
   );
 }
