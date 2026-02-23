@@ -4,7 +4,7 @@ const { Client } = require('pg');
 
 async function main() {
   const client = new Client({
-    connectionString: 'postgresql://postgres.lccqasmurmsisnnjqqmr:FK6Rv7u6vrX6Wgvl@aws-1-ap-southeast-2.pooler.supabase.com:6543/postgres',
+    connectionString: process.env.DATABASE_URL,
     ssl: { rejectUnauthorized: false }
   });
 

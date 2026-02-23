@@ -1,9 +1,22 @@
 const fs = require('fs');
 const path = require('path');
 
+// Load credentials from .env.production
+const envPath2 = path.join(__dirname, '..', '.env.production');
+const envContent = fs.readFileSync(envPath2, 'utf-8');
+const env = {};
+for (const line of envContent.split('\n')) {
+  const trimmed = line.trim();
+  if (!trimmed || trimmed.startsWith('#')) continue;
+  const eqIdx = trimmed.indexOf('=');
+  if (eqIdx === -1) continue;
+  env[trimmed.slice(0, eqIdx).trim()] = trimmed.slice(eqIdx + 1).trim().replace(/^"|"$/g, '');
+}
+
 async function main() {
-  const url = 'https://lccqasmurmsisnnjqqmr.supabase.co';
-  const key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxjY3Fhc211cm1zaXNubmpxcW1yIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MDEwNjYwNCwiZXhwIjoyMDg1NDY2NjA0fQ.9z0GOSpOqAQQc00ABduxKoncxntjc9tNlKf03RYd20c';
+  const url = env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !key) { console.error('Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY in .env.production'); process.exit(1); }
 
   // Read the SQL file
   const sql = fs.readFileSync(path.join(__dirname, 'migration-reddit-orchestrator.sql'), 'utf-8');

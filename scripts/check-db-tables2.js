@@ -15,7 +15,8 @@ for (const line of envContent.split('\n')) {
 }
 
 async function main() {
-  const url = 'https://lccqasmurmsisnnjqqmr.supabase.co';
+  const url = env.NEXT_PUBLIC_SUPABASE_URL;
+  if (!url) { console.error('NEXT_PUBLIC_SUPABASE_URL not set in .env.production'); process.exit(1); }
   const key = env.SUPABASE_SERVICE_ROLE_KEY;
 
   // Fetch the OpenAPI/Swagger spec — lists all tables exposed via PostgREST

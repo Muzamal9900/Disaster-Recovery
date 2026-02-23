@@ -2,7 +2,7 @@
 
 **Date**: 2026-02-22
 **Project**: Disaster Recovery Platform (DR-NRPG)
-**Supabase Project**: `lccqasmurmsisnnjqqmr` (Disaster Recovery Qld.au — Pro Plan)
+**Supabase Project**: `[SUPABASE_PROJECT_REF]` (Disaster Recovery Qld.au — Pro Plan)
 
 ---
 
@@ -19,8 +19,8 @@ The project has **three separate database systems that are NOT connected to each
 - **PROBLEM**: SQLite is ephemeral on Vercel — database resets every deployment
 
 ### 2. Supabase PostgreSQL (91 tables, ZERO app connections)
-- **Project**: `lccqasmurmsisnnjqqmr` (Sydney ap-southeast-2)
-- **URL**: `https://lccqasmurmsisnnjqqmr.supabase.co`
+- **Project**: `[SUPABASE_PROJECT_REF]` (Sydney ap-southeast-2)
+- **URL**: `https://[SUPABASE_PROJECT_REF].supabase.co`
 - **Tables**: 91 in public schema
 - **App code connections**: **ZERO** — no `@supabase/supabase-js` installed
 - **Security issues**: 57 (all tables have RLS disabled)

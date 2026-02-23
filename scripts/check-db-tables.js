@@ -16,7 +16,8 @@ for (const line of envContent.split('\n')) {
 }
 
 async function main() {
-  const url = env.NEXT_PUBLIC_SUPABASE_URL || 'https://lccqasmurmsisnnjqqmr.supabase.co';
+  const url = env.NEXT_PUBLIC_SUPABASE_URL;
+  if (!url) { console.error('NEXT_PUBLIC_SUPABASE_URL not set in .env.production'); process.exit(1); }
   const key = env.SUPABASE_SERVICE_ROLE_KEY;
 
   // Use PostgREST to query information_schema

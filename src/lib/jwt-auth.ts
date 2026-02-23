@@ -4,7 +4,10 @@ import bcrypt from 'bcryptjs';
 
 // Secret key for JWT signing (in production, use environment variable)
 const getJwtSecretKey = () => {
-  const secret = process.env.JWT_SECRET_KEY || 'disaster-recovery-australia-secret-key-2024';
+  const secret = process.env.JWT_SECRET_KEY;
+  if (!secret) {
+    throw new Error('JWT_SECRET_KEY environment variable is not set');
+  }
   return new TextEncoder().encode(secret);
 };
 

@@ -2,8 +2,8 @@
 
 ## Required Values (Already Retrieved)
 
-- **VERCEL_ORG_ID**: `team_KMZACI5rIltoCRhAtGCXlxUf`
-- **VERCEL_PROJECT_ID**: `prj_a776Ydu6bNc7va8zrGfwXosp2xif`
+- **VERCEL_ORG_ID**: [set in GitHub Secrets — do not commit]
+- **VERCEL_PROJECT_ID**: [set in GitHub Secrets — do not commit]
 
 ## Steps to Create Vercel Token
 
@@ -31,9 +31,9 @@
    | Secret Name | Value |
    |------------|-------|
    | VERCEL_TOKEN | [Your generated token from step 3] |
-   | VERCEL_ORG_ID | team_KMZACI5rIltoCRhAtGCXlxUf |
-   | VERCEL_PROJECT_ID | prj_a776Ydu6bNc7va8zrGfwXosp2xif |
-   | NEXTAUTH_SECRET | LMUDdvl91SzvH84on2RBx820GPJX33z+ICkk66EQMpg= |
+   | VERCEL_ORG_ID | [set in Vercel Dashboard → Settings → General] |
+   | VERCEL_PROJECT_ID | [set in Vercel Dashboard → Settings → General] |
+   | NEXTAUTH_SECRET | [generate with: `openssl rand -base64 32`] |
 
 ## Enable GitHub Actions Workflow
 

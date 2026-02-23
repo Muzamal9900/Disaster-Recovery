@@ -1,7 +1,8 @@
 const { execSync } = require('child_process');
 const fetch = require('node-fetch');
 
-const VERCEL_PROJECT_ID = 'prj_a776Ydu6bNc7va8zrGfwXosp2xif'; // Actual Vercel project ID provided by user
+const VERCEL_PROJECT_ID = process.env.VERCEL_PROJECT_ID;
+if (!VERCEL_PROJECT_ID) { console.error('VERCEL_PROJECT_ID env var required'); process.exit(1); }
 
 // Accept token override from command line argument for testing
 const args = process.argv.slice(2);
