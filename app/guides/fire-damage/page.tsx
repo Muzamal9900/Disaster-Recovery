@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { FEATURE_FLAGS } from '@/lib/feature-flags';
 import { AntigravityNavbar } from '@/components/antigravity';
 import { AntigravityFooter } from '@/components/antigravity';
+import { generateArticleSchema } from '@/lib/seo';
+import { StructuredData } from '@/components/seo/StructuredData';
 import { 
   Flame, 
   AlertTriangle, 
@@ -905,13 +907,28 @@ function FireDamageGuidePageOriginal() {
     </div>
   );
 }
+const fireDamageArticleSchema = generateArticleSchema({
+  headline: 'Fire Damage Restoration Guide Australia',
+  description: 'Comprehensive guide to fire and smoke damage restoration including emergency steps, restoration process, insurance claims, and safety information.',
+  image: '/images/guides/fire-damage.webp',
+  author: 'Disaster Recovery Team',
+  datePublished: '2024-11-15',
+  dateModified: '2025-06-01',
+});
+
 export default function FireDamageGuidePage() {
   if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
-    return <FireDamageGuidePageOriginal />;
+    return (
+      <>
+        <StructuredData data={fireDamageArticleSchema} />
+        <FireDamageGuidePageOriginal />
+      </>
+    );
   }
 
   return (
     <>
+      <StructuredData data={fireDamageArticleSchema} />
       <AntigravityNavbar />
       <FireDamageGuidePageOriginal />
       <AntigravityFooter />

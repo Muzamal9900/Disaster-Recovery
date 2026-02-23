@@ -54,7 +54,18 @@ export function generateSEO(config: SEOConfig): Metadata {
 }
 
 // Schema.org structured data generators
-export const generateLocalBusinessSchema = (businessInfo: any) => ({
+export interface BusinessLocationInfo {
+  streetAddress?: string
+  postalCode?: string
+  city: string
+  state: string
+  stateFullName: string
+  latitude: number
+  longitude: number
+  areaServed: string[]
+}
+
+export const generateLocalBusinessSchema = (businessInfo: BusinessLocationInfo) => ({
   '@context': 'https://schema.org',
   '@type': 'DamageRestorationService',
   '@id': 'https://disasterrecovery.com.au/#organisation',
@@ -66,37 +77,21 @@ export const generateLocalBusinessSchema = (businessInfo: any) => ({
     width: 250,
     height: 60 },
   image: 'https://disasterrecovery.com.au/hero-image.jpg',
-  description: 'Queensland\'s trusted 24/7 emergency disaster recovery and restoration specialists. Water damage, fire damage, mould remediation, and biohazard cleaning services.',
+  description: `${businessInfo.city}, ${businessInfo.stateFullName}'s trusted 24/7 emergency disaster recovery and restoration specialists. Water damage, fire damage, mould remediation, and biohazard cleaning services.`,
   telephone: "",
   email: 'info@disasterrecovery.com.au',
   address: {
     '@type': 'PostalAddress',
     streetAddress: businessInfo.streetAddress,
-    addressLocality: 'Brisbane',
-    addressRegion: 'QLD',
+    addressLocality: businessInfo.city,
+    addressRegion: businessInfo.state,
     postalCode: businessInfo.postalCode,
     addressCountry: 'AU' },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: -27.4689682,
-    longitude: 153.0234991 },
-  areaServed: [
-    {
-      '@type': 'City',
-      name: 'Brisbane' },
-    {
-      '@type': 'City',
-      name: 'Gold Coast' },
-    {
-      '@type': 'City',
-      name: 'Ipswich' },
-    {
-      '@type': 'City',
-      name: 'Logan City' },
-    {
-      '@type': 'City',
-      name: 'Toowoomba' },
-  ],
+    latitude: businessInfo.latitude,
+    longitude: businessInfo.longitude },
+  areaServed: businessInfo.areaServed.map(name => ({ '@type': 'City', name })),
   priceRange: '$$',
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
@@ -104,9 +99,9 @@ export const generateLocalBusinessSchema = (businessInfo: any) => ({
     opens: '00:00',
     closes: '23:59' },
   sameAs: [
-    'https://www.facebook.com/DisasterRecoveryQLD',
-    'https://www.linkedin.com/company/disaster-recovery-qld',
-    'https://www.instagram.com/disasterrecoveryqld',
+    'https://www.facebook.com/DisasterRecoveryAU',
+    'https://www.linkedin.com/company/disaster-recovery-au',
+    'https://www.instagram.com/disasterrecoveryau',
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -150,10 +145,9 @@ export const generateServiceSchema = (service: {
     '@type': 'Organisation',
     name: 'Disaster Recovery',
     url: 'https://disasterrecovery.com.au' },
-  areaServed: service.areaServed || ['Brisbane', 'Gold Coast', 'Ipswich', 'Logan City', 'Toowoomba'],
+  areaServed: service.areaServed || ['Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide', 'Gold Coast', 'Canberra', 'Hobart', 'Darwin', 'Newcastle'],
   availableChannel: service.availableChannel || {
     '@type': 'ServiceChannel',
-    serviceUrl: 'https://disasterrecovery.com.au/emergency-service',
     serviceUrl: 'https://disasterrecovery.com.au/claim',
     availableLanguage: {
       '@type': 'Language',

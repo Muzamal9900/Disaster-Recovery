@@ -7,7 +7,8 @@ import { getRelatedPages } from '@/lib/internal-links';
 export const metadata: Metadata = {
   title: 'Weekend Emergency Response | Saturday & Sunday | $2200 Minimum + $750 Surcharge',
   description: 'Immediate weekend disaster recovery when you need it most. 30 minutes response time. Available Saturday & Sunday. Insurance approved.',
-  keywords: ["weekend emergency","saturday disaster recovery","sunday emergency service"]
+  keywords: ["weekend emergency","saturday disaster recovery","sunday emergency service"],
+  alternates: { canonical: 'https://disasterrecovery.com.au/emergency/weekend' },
 };
 
 export default function WeekendEmergencyResponsePage() {

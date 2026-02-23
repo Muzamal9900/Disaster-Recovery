@@ -7,6 +7,8 @@ import Link from 'next/link';
 import { FEATURE_FLAGS } from '@/lib/feature-flags';
 import { AntigravityNavbar } from '@/components/antigravity';
 import { AntigravityFooter } from '@/components/antigravity';
+import { generateArticleSchema } from '@/lib/seo';
+import { StructuredData } from '@/components/seo/StructuredData';
 
 function WaterDamageGuidePageOriginal() {
   const [selectedCategory, setSelectedCategory] = useState<'clean' | 'grey' | 'black' | null>(null);
@@ -559,13 +561,28 @@ function WaterDamageGuidePageOriginal() {
     </div>
   );
 }
+const waterDamageArticleSchema = generateArticleSchema({
+  headline: 'Water Damage Restoration Guide Australia',
+  description: 'Complete guide to water damage restoration including emergency response, drying science, insurance claims, and professional restoration process.',
+  image: '/images/guides/water-damage.webp',
+  author: 'Disaster Recovery Team',
+  datePublished: '2024-11-15',
+  dateModified: '2025-06-01',
+});
+
 export default function WaterDamageGuidePage() {
   if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
-    return <WaterDamageGuidePageOriginal />;
+    return (
+      <>
+        <StructuredData data={waterDamageArticleSchema} />
+        <WaterDamageGuidePageOriginal />
+      </>
+    );
   }
 
   return (
     <>
+      <StructuredData data={waterDamageArticleSchema} />
       <AntigravityNavbar />
       <WaterDamageGuidePageOriginal />
       <AntigravityFooter />

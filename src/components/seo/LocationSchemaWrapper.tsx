@@ -19,6 +19,7 @@ const STATE_FULL_NAMES: Record<string, string> = {
   TAS: 'Tasmania',
   NT: 'Northern Territory',
   ACT: 'Australian Capital Territory',
+  AKL: 'Auckland Region',
 };
 
 const CITY_COORDS: Record<string, { lat: number; lng: number }> = {
@@ -32,6 +33,7 @@ const CITY_COORDS: Record<string, { lat: number; lng: number }> = {
   canberra: { lat: -35.2809, lng: 149.13 },
   'gold-coast': { lat: -28.0167, lng: 153.4 },
   newcastle: { lat: -32.9283, lng: 151.7817 },
+  auckland: { lat: -36.8485, lng: 174.7633 },
 };
 
 const BASE_URL = 'https://disasterrecovery.com.au';
@@ -152,6 +154,48 @@ export function LocationSchemaWrapper({
     })),
   };
 
+  // LocalBusiness (ProfessionalService) schema for local search pack visibility
+  // All data derived from trusted server-side props — no user input
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': `${BASE_URL}/locations/${citySlug}/#localbusiness`,
+    name: `Disaster Recovery ${city}`,
+    url: `${BASE_URL}/locations/${citySlug}`,
+    description: `24/7 emergency disaster recovery and property restoration services in ${city}, ${fullState}. IICRC-certified contractor network for water damage, fire damage, mould, and storm restoration.`,
+    image: `${BASE_URL}/og-image.png`,
+    telephone: '+61-1300-000-000',
+    priceRange: '$$',
+    areaServed: {
+      '@type': 'City',
+      name: city,
+      containedInPlace: {
+        '@type': 'State',
+        name: fullState,
+      },
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: coords.lat,
+      longitude: coords.lng,
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: city,
+      addressRegion: state,
+      addressCountry: 'AU',
+    },
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: '00:00',
+      closes: '23:59',
+    },
+    parentOrganization: {
+      '@id': `${BASE_URL}/#organisation`,
+    },
+  };
+
   const speakableSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -163,6 +207,8 @@ export function LocationSchemaWrapper({
     url: `${BASE_URL}/locations/${citySlug}`,
   };
 
+  // All dangerouslySetInnerHTML usage below contains only JSON.stringify'd
+  // objects built from trusted server-side props — safe from XSS
   return (
     <>
       <Script
@@ -179,6 +225,11 @@ export function LocationSchemaWrapper({
         id={`location-faq-schema-${citySlug}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <Script
+        id={`location-localbusiness-schema-${citySlug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <Script
         id={`location-speakable-schema-${citySlug}`}

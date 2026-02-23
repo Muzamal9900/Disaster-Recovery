@@ -104,7 +104,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://disasterrecovery.com.au',
     languages: {
-      'en-AU': 'https://disasterrecovery.com.au' } },
+      'en-AU': 'https://disasterrecovery.com.au',
+      'en-NZ': 'https://disasterrecovery.com.au',
+      'x-default': 'https://disasterrecovery.com.au',
+    } },
   category: 'Disaster Recovery Services' }
 
 export const viewport: Viewport = {
@@ -216,6 +219,27 @@ export default function RootLayout({
                     }
                   }
                 ]
+              }
+            })
+          }}
+        />
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "url": "https://disasterrecovery.com.au",
+              "name": "Disaster Recovery Australia",
+              "description": "Australia's leading disaster recovery and restoration platform. 24/7 emergency response for water damage, fire damage, mould remediation, and more.",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://disasterrecovery.com.au/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
               }
             })
           }}

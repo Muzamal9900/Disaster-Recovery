@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { generateBreadcrumbSchema } from '@/lib/seo';
 import { AntigravityNavbar } from './AntigravityNavbar';
 import { AntigravityFooter } from './AntigravityFooter';
 
@@ -93,6 +94,24 @@ export function AgContentPageTemplate({
   return (
     <>
       <AntigravityNavbar />
+
+      {breadcrumbs && breadcrumbs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              generateBreadcrumbSchema(
+                breadcrumbs
+                  .filter((crumb): crumb is ContentBreadcrumb & { href: string } => !!crumb.href)
+                  .map((crumb) => ({
+                    name: crumb.label,
+                    url: `https://disasterrecovery.com.au${crumb.href}`,
+                  }))
+              )
+            ),
+          }}
+        />
+      )}
 
       {/* Hero */}
       <header className="ag-service-header">

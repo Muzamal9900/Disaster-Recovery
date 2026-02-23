@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { FEATURE_FLAGS } from '@/lib/feature-flags';
 import { AntigravityNavbar } from '@/components/antigravity';
 import { AntigravityFooter } from '@/components/antigravity';
+import { generateArticleSchema } from '@/lib/seo';
+import { StructuredData } from '@/components/seo/StructuredData';
 import { 
   Droplets, 
   AlertTriangle, 
@@ -1039,13 +1041,28 @@ function MouldRemediationGuidePageOriginal() {
     </div>
   );
 }
+const mouldArticleSchema = generateArticleSchema({
+  headline: 'Mould Remediation Guide Australia',
+  description: 'Expert guide to mould remediation including health risks, removal process, prevention strategies, and insurance coverage information.',
+  image: '/images/guides/mould.webp',
+  author: 'Disaster Recovery Team',
+  datePublished: '2024-11-15',
+  dateModified: '2025-06-01',
+});
+
 export default function MouldRemediationGuidePage() {
   if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
-    return <MouldRemediationGuidePageOriginal />;
+    return (
+      <>
+        <StructuredData data={mouldArticleSchema} />
+        <MouldRemediationGuidePageOriginal />
+      </>
+    );
   }
 
   return (
     <>
+      <StructuredData data={mouldArticleSchema} />
       <AntigravityNavbar />
       <MouldRemediationGuidePageOriginal />
       <AntigravityFooter />

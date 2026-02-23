@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { FEATURE_FLAGS } from '@/lib/feature-flags';
 import { AntigravityNavbar } from '@/components/antigravity';
 import { AntigravityFooter } from '@/components/antigravity';
+import { generateArticleSchema } from '@/lib/seo';
+import { StructuredData } from '@/components/seo/StructuredData';
 import { 
   Cloud, 
   AlertTriangle, 
@@ -1003,13 +1005,28 @@ function StormDamageGuidePageOriginal() {
     </div>
   );
 }
+const stormDamageArticleSchema = generateArticleSchema({
+  headline: 'Storm Damage Restoration Guide Australia',
+  description: 'Complete guide to storm damage restoration including emergency response, types of storm damage, insurance claims, and professional repair services.',
+  image: '/images/guides/storm-damage.webp',
+  author: 'Disaster Recovery Team',
+  datePublished: '2024-11-15',
+  dateModified: '2025-06-01',
+});
+
 export default function StormDamageGuidePage() {
   if (!FEATURE_FLAGS.ANTIGRAVITY_UI) {
-    return <StormDamageGuidePageOriginal />;
+    return (
+      <>
+        <StructuredData data={stormDamageArticleSchema} />
+        <StormDamageGuidePageOriginal />
+      </>
+    );
   }
 
   return (
     <>
+      <StructuredData data={stormDamageArticleSchema} />
       <AntigravityNavbar />
       <StormDamageGuidePageOriginal />
       <AntigravityFooter />

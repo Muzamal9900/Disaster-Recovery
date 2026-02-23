@@ -7,7 +7,8 @@ import { getRelatedPages } from '@/lib/internal-links';
 export const metadata: Metadata = {
   title: 'New Year Emergency Service | December 31st - January 1st | $2200 Minimum + $1500 Surcharge',
   description: 'New Year disaster response when others are celebrating. 60 minutes response time. Available December 31st - January 1st. Insurance approved.',
-  keywords: ["new year emergency","nye disaster recovery","january 1 emergency"]
+  keywords: ["new year emergency","nye disaster recovery","january 1 emergency"],
+  alternates: { canonical: 'https://disasterrecovery.com.au/emergency/new-year' },
 };
 
 export default function NewYearEmergencyServicePage() {
