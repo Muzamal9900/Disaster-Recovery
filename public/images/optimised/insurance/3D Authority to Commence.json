@@ -1,0 +1,34 @@
+{
+  "id": "insurance-authority-commence-001",
+  "title": "3D Authority to Commence Document",
+  "filename": "3D Authority to Commence.png",
+  "category": "insurance",
+  "seo": {
+    "altText": "3D Authority to Commence Document - Professional property restoration contract and assessment paperwork",
+    "description": "High-quality 3D render of the Authority to Commence document with hard hat, blueprints, and inspection reports",
+    "keywords": [
+      "authority to commence",
+      "restoration contract",
+      "property assessment",
+      "insurance documentation",
+      "disaster recovery",
+      "building inspection",
+      "claims process"
+    ],
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "name": "3D Authority to Commence Document",
+      "contentUrl": "/images/optimised/insurance/3D Authority to Commence.png",
+      "thumbnail": "/images/optimised/thumbnails/3D Authority to Commence.png",
+      "description": "3D Authority to Commence Document - Professional property restoration contract and assessment paperwork",
+      "keywords": "authority to commence, restoration contract, property assessment, insurance documentation, disaster recovery, building inspection, claims process"
+    }
+  },
+  "technical": {
+    "format": "png",
+    "optimisation": "web-ready",
+    "responsive": true
+  },
+  "created": "2026-02-23T06:25:42.868Z"
+}

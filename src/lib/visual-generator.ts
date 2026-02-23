@@ -64,6 +64,11 @@ export async function generateVisual(request: VisualRequest): Promise<Generation
     contents: [{ role: 'user', parts: [{ text: prompt }] }],
     config: {
       responseModalities: ['IMAGE', 'TEXT'],
+      // @ts-expect-error — image_config is supported by the API but not yet in SDK types
+      image_config: {
+        aspect_ratio: request.aspectRatio || '16:9',
+        image_size: request.resolution || '2K',
+      },
     },
   });
 
