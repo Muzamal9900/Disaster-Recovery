@@ -144,6 +144,20 @@ function getProcessFlowSteps(postId: string): { step: string; description: strin
       { step: 'Dry', description: 'Floor-by-floor structural drying with monitoring' },
       { step: 'Restore', description: 'Repair affected common areas and individual lots' },
     ],
+    'biohazard-cleaning-australia': [
+      { step: 'Assess', description: 'Hazard identification and contamination mapping' },
+      { step: 'Contain', description: 'Full PPE deployment, isolation barriers erected' },
+      { step: 'Remove', description: 'Strip all contaminated porous materials and bag for disposal' },
+      { step: 'Decontaminate', description: 'Hospital-grade biocide treatment to retained surfaces' },
+      { step: 'Verify', description: 'ATP swab testing and clearance certificate issued' },
+    ],
+    'storm-damage-insurance-claim-steps': [
+      { step: 'Make-Safe', description: 'Tarp roof, board windows, prevent secondary damage' },
+      { step: 'Document', description: 'Photos, video, BOM weather data within first 6 hours' },
+      { step: 'Report', description: 'Call insurer, get claim number, follow up in writing' },
+      { step: 'Scope', description: 'Professional assessment with digital estimating tools' },
+      { step: 'Settle', description: 'Review scope, negotiate if needed, approve restoration' },
+    ],
   };
 
   return flowMap[postId] || [
@@ -176,6 +190,14 @@ function getCostBreakdownItems(postId: string): { label: string; cost: string; p
       { label: 'Content Restoration', cost: '$800–$2,500', percentage: 10 },
       { label: 'Repairs & Rebuild', cost: '$3,000–$12,000', percentage: 30 },
       { label: 'Reports & Compliance', cost: '$500–$1,500', percentage: 5 },
+    ],
+    'sewage-cleanup-cost-australia': [
+      { label: 'Sewage Extraction & Disposal', cost: '$2,000–$5,000', percentage: 15 },
+      { label: 'Contaminated Material Strip-Out', cost: '$3,000–$8,000', percentage: 25 },
+      { label: 'Decontamination & Antimicrobial', cost: '$2,000–$6,000', percentage: 20 },
+      { label: 'Structural Drying', cost: '$2,500–$5,000', percentage: 15 },
+      { label: 'Rebuild & Replacement', cost: '$4,000–$15,000', percentage: 20 },
+      { label: 'Clearance Testing & Reports', cost: '$1,000–$3,000', percentage: 5 },
     ],
   };
 
@@ -259,6 +281,48 @@ function getComparisonTableData(config: RedditPostConfig): { headers: string[]; 
         ['Scope of Works', 'Required', 'Defines approved works'],
         ['Cost Estimate', 'Required ($2,750)', 'Substantiates amount'],
         ['Signatures', 'Both parties', 'Legal binding'],
+      ],
+    },
+    'sewage-cleanup-cost-australia': {
+      headers: ['Scenario', 'Cost Range', 'Timeline'],
+      rows: [
+        ['Toilet overflow (contained)', '$3,000–$8,000', '2–4 days'],
+        ['Sewer line backup (ground floor)', '$8,000–$20,000', '5–10 days'],
+        ['Sewer main failure (multi-room)', '$20,000–$50,000', '10–21 days'],
+        ['Stormwater/sewage flooding', '$40,000–$80,000+', '14–30 days'],
+        ['Commercial premises', '$25,000–$150,000+', '14–45 days'],
+      ],
+    },
+    'biohazard-cleaning-australia': {
+      headers: ['Regulation', 'Authority', 'Requirement'],
+      rows: [
+        ['AS/NZS 3816:2018', 'Standards Australia', 'Clinical & related waste management'],
+        ['WHS Regulations', 'Safe Work Australia', 'Hazardous biological work protocols'],
+        ['EPA waste guidelines', 'State EPAs', 'Licensed transport & disposal'],
+        ['Infectious disease notification', 'State Health Depts', 'Mandatory pathogen reporting'],
+        ['Building clearance', 'Local council', 'Habitation certificate post-decontamination'],
+      ],
+    },
+    'storm-damage-insurance-claim-steps': {
+      headers: ['Event Type', 'Typically Covered', 'Key Distinction'],
+      rows: [
+        ['Hailstorm', 'Roof, windows, vehicles', 'Must be "functional" damage'],
+        ['Wind damage', 'Structural, fallen trees on building', 'Trees not hitting structure varies'],
+        ['Storm surge', 'Flood-included policies only', 'Check flood vs storm in PDS'],
+        ['Lightning strike', 'Structure, electrical', 'Appliance surge cover varies'],
+        ['Cyclone', 'Full structural', 'Maintenance exclusion applies'],
+        ['Tornado', 'Full structural', 'Covered under storm definition'],
+      ],
+    },
+    'strata-water-damage-who-pays': {
+      headers: ['State', 'Legislation', 'Waterproofing Liability'],
+      rows: [
+        ['NSW', 'Strata Schemes Management Act 2015', 'Common property — body corporate'],
+        ['QLD', 'BCCM Act 1997', 'Depends on CMS — varies by scheme'],
+        ['VIC', 'Owners Corporations Act 2006', 'Typically lot owner responsibility'],
+        ['WA', 'Strata Titles Act 1985', 'Depends on survey plan boundary'],
+        ['SA', 'Strata Titles Act 1988', 'Building fabric — body corporate'],
+        ['TAS', 'Strata Titles Act 1998', 'Structural — body corporate'],
       ],
     },
   };

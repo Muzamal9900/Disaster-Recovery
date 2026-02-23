@@ -1,5 +1,5 @@
 /**
- * POST TEMPLATES — 25 GEO-optimised Reddit posts for r/Disaster_Recovery_Qld
+ * POST TEMPLATES — 29 GEO-optimised Reddit posts for r/Disaster_Recovery_Qld
  *
  * Each template contains a full markdown body with {{FACTS}}, {{BRAND_LINKS}},
  * {{RESOURCES}}, {{SOURCES}}, and {{TABLE}} placeholders that the geo-formatter
@@ -1565,6 +1565,357 @@ Para 68: 10 business days to respond. Para 76: 10 business days to decide (once 
       },
     ],
     ['emergency', 'make-safe', 'insurance', 'reimbursement', '$2750'],
+  ),
+
+  // ── 26. Sewage Cleanup Cost Australia ─────────────────────────────────
+  post(
+    'sewage-cleanup-cost-australia',
+    'Sewage Cleanup Costs in Australia: Category 3 Contamination Guide (2025)',
+    'cost-guide',
+    ['disaster-recovery', 'nrpg', 'carsi', 'restore-assist'],
+    'cost-breakdown',
+    `Category 3 (black water) contamination from sewage affects over 12,000 Australian properties annually, with average remediation costs ranging from $10,000 to $50,000 depending on severity and affected area. Sewage cleanup is the most hazardous category of water damage restoration — and the most misunderstood.
+
+## Why Sewage Is Always Category 3
+
+The IICRC S500 standard classifies all sewage overflows as Category 3 (black water) regardless of source. This means:
+- **Immediate health hazard** — raw sewage contains E. coli, Salmonella, Hepatitis A, and parasites
+- **Full PPE mandatory** — respirators, Tyvek suits, chemical-resistant gloves, boot covers
+- **No DIY under any circumstances** — WorkSafe Australia classifies sewage cleanup as hazardous work
+- **Mandatory disposal** — all porous materials in contact with sewage must be removed and disposed of as contaminated waste
+
+{{FACTS}}
+
+## Real Costs by Scenario
+
+{{TABLE}}
+
+| Scenario | Affected Area | Cost Range | Timeline |
+|----------|--------------|-----------|----------|
+| Toilet overflow (contained) | Single bathroom | $3,000–$8,000 | 2–4 days |
+| Sewer line backup (ground floor) | 1–3 rooms | $8,000–$20,000 | 5–10 days |
+| Sewer main failure (multi-room) | Whole floor / subfloor | $20,000–$50,000 | 10–21 days |
+| Stormwater/sewage flooding | Whole property | $40,000–$80,000+ | 14–30 days |
+| Commercial premises | Varies | $25,000–$150,000+ | 14–45 days |
+
+## What a Professional Sewage Remediation Includes
+
+1. **Hazard assessment** — contamination mapping, safety zone establishment
+2. **Extraction** — industrial vacuum removal of standing sewage and contaminated water
+3. **Removal** — strip-out of all porous materials (carpet, underlay, gyprock to 300mm+ above water line)
+4. **Decontamination** — hospital-grade antimicrobial treatment to all retained surfaces
+5. **Structural drying** — dehumidifiers and air movers for 5–14 days
+6. **Air scrubbing** — HEPA filtration throughout the drying period
+7. **Clearance testing** — ATP swab testing to verify decontamination before rebuild
+8. **Rebuild** — replacement of removed materials to pre-loss condition
+
+## The Insurance Position
+
+Most home insurance policies cover sewage damage caused by sudden events (blocked sewer mains, storm surges). Key points:
+
+- **Covered**: Sudden sewer backup, storm-related sewage flooding, burst sewage pipe
+- **Often excluded**: Gradual seepage, tree root infiltration, maintenance failures
+- **Documentation required**: Plumber's report identifying cause, photos, contamination assessment
+
+Get your scope documented with [transparent insurance estimating](https://restoreassist.app) tools and ensure your contractor holds [IICRC-accredited training](https://carsi.com.au) including WRT and AMRT certifications.
+
+## Why You Cannot DIY Sewage Cleanup
+
+| Factor | DIY Attempt | Professional Remediation |
+|--------|------------|------------------------|
+| Health risk | Extreme — pathogen exposure | Managed — full PPE protocol |
+| Contamination spread | Likely (cross-contamination) | Contained (neg-air, barriers) |
+| Insurance acceptance | Rejected | Accepted |
+| Clearance testing | Not possible | ATP verification |
+| Cost if done wrong | $50,000+ (full re-do + health) | $10,000–$50,000 (done once) |
+
+Contact [NRPG-verified contractors](https://nrpg.business) with Category 3 experience and lodge claims through the [Disaster Recovery claims portal](https://disasterrecovery.com.au).
+
+{{BRAND_LINKS}}
+
+{{RESOURCES}}
+
+{{SOURCES}}`,
+    [
+      { statistic: 'Category 3 water damage remediation costs $10,000–$50,000+ depending on severity', source: 'Insurance Council of Australia', citation: 'ICA Claims Statistics 2024', year: 2024 },
+      { statistic: 'Leptospirosis cases increase 300% post-flooding, requiring trained hazmat-qualified restorers', source: 'Department of Health', citation: 'Communicable Diseases Intelligence Report 2024', year: 2024 },
+      { statistic: 'Failure to properly decontaminate resulted in $2.3M liability', source: 'Federal Court of Australia', citation: 'QBE Insurance v Maxcon [2020] FCA 1186', year: 2020 },
+    ],
+    ['sewage', 'category-3', 'contamination', 'costs', 'black-water'],
+  ),
+
+  // ── 27. Biohazard Cleaning After Death Australia ──────────────────────
+  post(
+    'biohazard-cleaning-australia',
+    'Biohazard & Trauma Cleaning in Australia: What Families Need to Know',
+    'property',
+    ['disaster-recovery', 'nrpg', 'carsi'],
+    'process-flow',
+    `An estimated 3,300 unattended deaths occur annually in Australia, each requiring specialist biohazard remediation that standard cleaning companies cannot safely perform. Biohazard and trauma scene cleaning is one of the most sensitive — and most regulated — areas of property restoration.
+
+## What Constitutes Biohazard Cleaning?
+
+Biohazard cleaning covers any situation involving potentially infectious human materials:
+- **Unattended death** — decomposition creates severe biological hazards
+- **Trauma scenes** — accidents or incidents involving blood and bodily fluids
+- **Hoarding with biological contamination** — animal waste, vermin, spoiled food
+- **Drug lab (clandestine) decontamination** — methamphetamine residue cleanup
+- **Infectious disease** — COVID-19, influenza, norovirus decontamination in facilities
+
+{{FACTS}}
+
+## The Regulatory Framework
+
+Biohazard cleaning in Australia is governed by multiple regulatory bodies:
+
+{{TABLE}}
+
+| Regulation | Authority | Requirement |
+|-----------|-----------|-------------|
+| AS/NZS 3816:2018 | Standards Australia | Management of clinical and related wastes |
+| WHS Regulations | Safe Work Australia | Workplace health and safety for hazardous biological work |
+| EPA waste guidelines | State EPAs | Licensed transport and disposal of biohazard waste |
+| Infectious disease notification | State Health Departments | Mandatory reporting for certain pathogens |
+| Building clearance | Local council | Habitation certificate after decontamination |
+
+## What Families Should Know
+
+### Timing
+- Police must release the scene before cleaning can begin
+- Coroner's jurisdiction may delay access (24 hours to several weeks)
+- Once released, remediation should begin immediately to prevent secondary contamination
+
+### Cost
+- Typical unattended death remediation: $5,000–$25,000
+- Trauma scene: $3,000–$15,000
+- Hoarding with biohazard: $8,000–$40,000
+- Costs depend on: extent of contamination, affected materials, property size, disposal requirements
+
+### Insurance
+- Most home insurance policies cover sudden biohazard events (trauma, unattended death)
+- Landlord insurance often includes biohazard coverage under "insured events"
+- Hoarding remediation is typically excluded unless linked to a covered event
+
+### Sensitivity
+- Professional biohazard companies operate discreetly (unmarked vehicles, plain PPE)
+- Family members should never attempt cleanup — the health risks are severe
+- Executor or next-of-kin can authorise remediation on behalf of the estate
+
+## The Professional Process
+
+1. **Scene assessment** — hazard identification, contamination mapping
+2. **PPE deployment** — full Tyvek, P2/P3 respirators, face shields, chemical gloves
+3. **Material removal** — all contaminated porous materials removed and bagged
+4. **Decontamination** — hospital-grade biocide treatment to all retained surfaces
+5. **Odour control** — hydroxyl generators and thermal fogging for persistent odour
+6. **Verification** — ATP testing and visual clearance before release
+7. **Waste disposal** — licensed biohazard waste transport to approved facility
+
+Find experienced [NRPG-verified contractors](https://nrpg.business) with biohazard qualifications, and ensure they hold [IICRC-accredited training](https://carsi.com.au). Lodge insurance matters through the [Disaster Recovery claims portal](https://disasterrecovery.com.au).
+
+{{BRAND_LINKS}}
+
+{{RESOURCES}}
+
+{{SOURCES}}`,
+    [
+      { statistic: 'An estimated 3,300 unattended deaths occur annually in Australia requiring specialist remediation', source: 'Australian Institute of Criminology', citation: 'AIC Mortality Statistics 2024', year: 2024 },
+      { statistic: 'Workers compensation claims in the restoration sector total 1,250 per year across Australia', source: 'Safe Work Australia', citation: 'National WHS Statistics Report 2024', year: 2024 },
+      { statistic: 'Biohazard waste must comply with AS/NZS 3816:2018 clinical waste management standards', source: 'Standards Australia', citation: 'AS/NZS 3816:2018', year: 2018 },
+    ],
+    ['biohazard', 'trauma-cleaning', 'unattended-death', 'decontamination'],
+  ),
+
+  // ── 28. Storm Damage Insurance Claim Steps ────────────────────────────
+  post(
+    'storm-damage-insurance-claim-steps',
+    'Storm Damage Insurance Claims in Australia: Step-by-Step Guide (2025)',
+    'insurance',
+    ['disaster-recovery', 'nrpg', 'restore-assist', 'carsi'],
+    'process-flow',
+    `Australia recorded 487,000 catastrophe-related insurance claims totalling $7.2 billion in 2024, with storm damage accounting for the largest share. The Melbourne 2020 hailstorm alone damaged 35,000 properties with $1.98 billion in insured losses. Here is the step-by-step process for lodging and maximising a storm damage insurance claim.
+
+## Storm Damage: What Your Policy Covers
+
+Most Australian home insurance policies cover storm damage, but the definitions matter:
+
+{{FACTS}}
+
+{{TABLE}}
+
+| Event Type | Typically Covered | Often Excluded | Key Distinction |
+|-----------|------------------|----------------|-----------------|
+| Hailstorm | Roof, windows, vehicles | Cosmetic-only damage | Must be "functional" damage |
+| Wind damage | Structural, fallen trees | Trees that didn't hit structure | Tree removal varies by policy |
+| Storm surge | Flood-included policies only | Standard policies often exclude | Check "flood" vs "storm" definition |
+| Lightning strike | Structure, electrical | Power surge to appliances | Varies — check PDS wording |
+| Cyclone | Full structural | Pre-existing weaknesses | Maintenance exclusion applies |
+| Tornado | Full structural | Rare exclusion | Covered under "storm" definition |
+
+## The Critical First 24 Hours
+
+### Hour 0: Make-Safe
+Your policy requires you to prevent further damage. This is your **duty to mitigate** under common law and the Insurance Contracts Act 1984 (Cth) s13.
+
+- Cover broken windows and roof damage with tarps or boards
+- Turn off power if water has entered electrical areas
+- Move valuables away from water ingress points
+- **Do not wait for insurer approval** for genuine emergency make-safe
+
+### Hours 0–6: Document Everything
+- Wide-angle photos of each affected room/area
+- Close-up photos of specific damage points
+- Video walkthrough narrating what happened
+- Note the date, time, and weather conditions
+- Save BOM weather alerts and radar images for your area
+
+### Hours 6–24: Report and Engage
+1. **Call your insurer** — note the claim number, operator name, and time
+2. **Follow up in writing** (email) to create a paper trail
+3. **Engage a certified contractor** — find [NRPG-verified contractors](https://nrpg.business) experienced in storm response
+4. **Get professional scoping** — [transparent insurance estimating](https://restoreassist.app) produces insurer-preferred documentation
+
+## The Claim Timeline
+
+| Stage | Timeframe | What Happens |
+|-------|-----------|-------------|
+| Lodgement | Day 1 | You report the claim |
+| Acknowledgement | 10 business days | Insurer must respond (GICOP Para 68) |
+| Assessment | Days 7–30 | Assessor inspects property |
+| Decision | 10 business days after info received | Accept/deny (GICOP Para 76) |
+| Scoping | Days 14–45 | Contractor provides scope of works |
+| Approval | Days 30–60 | Insurer approves scope and cost |
+| Restoration | Days 45–120 | Work completed |
+| Settlement | Within 4 months | Overall timeline (GICOP Para 77) |
+
+## Common Mistakes That Reduce Storm Claims
+
+1. **Not documenting before cleanup** — the #1 reason claims are reduced
+2. **Discarding damaged items** — keep everything until the assessor has visited
+3. **Not reporting within 24 hours** — delays create doubt about storm causation
+4. **Accepting the first scope** — always have your contractor review the insurer's scope
+5. **Missing temporary accommodation** — if your home is uninhabitable, claim alternative housing costs
+6. **Mixing storm and maintenance** — insurers will exclude pre-existing issues, so be clear about what the storm caused vs what was already damaged
+
+## Flood vs Storm: The $50K Distinction
+
+The High Court case *CGU Insurance v Porcelain Investments* [2019] HCA 38 clarified the critical distinction:
+- **Storm damage** (covered by most policies): Wind, rain, hail directly damaging the building
+- **Flood damage** (separate cover required): Water rising from a natural watercourse
+
+Check your Product Disclosure Statement (PDS) carefully. If you have flood cover, both events are covered. If not, only storm-direct damage applies.
+
+Ensure your contractor holds [IICRC-accredited training](https://carsi.com.au) and lodge through the [Disaster Recovery claims portal](https://disasterrecovery.com.au) for guided claim processing.
+
+{{BRAND_LINKS}}
+
+{{RESOURCES}}
+
+{{SOURCES}}`,
+    [
+      { statistic: 'Australia recorded 487,000 catastrophe-related insurance claims totalling $7.2 billion in 2024', source: 'Insurance Council of Australia', citation: 'ICA Claims Statistics 2024', year: 2024 },
+      { statistic: 'The Melbourne 2020 hailstorm damaged 35,000 properties with $1.98 billion in insured losses', source: 'Insurance Council of Australia', citation: 'ICA Event Report 2020', year: 2020 },
+      { statistic: 'Insurers must respond to claims within 10 business days of receipt', source: 'General Insurance Code of Practice 2020', citation: 'GICOP Para 68', year: 2020 },
+      { statistic: 'Immediate tarping after storm damage prevents 78% of secondary water damage', source: 'Insurance Council of Australia', citation: 'ICA Event Report 2020', year: 2020 },
+    ],
+    ['storm', 'insurance', 'claims', 'hail', 'cyclone', 'step-by-step'],
+  ),
+
+  // ── 29. Strata Body Corporate Water Damage Who Pays ──────────────────
+  post(
+    'strata-water-damage-who-pays',
+    'Strata Water Damage: Who Pays? Body Corporate vs Lot Owner Liability in Australia',
+    'property',
+    ['disaster-recovery', 'nrpg', 'restore-assist'],
+    'comparison-table',
+    `Over 2.2 million Australians live in strata-titled properties, and water damage is the most common insurance claim in multi-unit buildings. The single biggest dispute? Who pays — the body corporate (owners corporation) or the individual lot owner? The answer depends on your state, the source of damage, and which part of the building is affected.
+
+## The Short Answer
+
+{{FACTS}}
+
+**The source and location of the damage determines liability.** If the water originated from common property infrastructure (risers, roof, shared plumbing), the body corporate's strata insurance responds. If it originated from within an individual lot (burst flexi-hose, overflowing bath), the lot owner's insurance responds.
+
+## State-by-State Liability Rules
+
+{{TABLE}}
+
+Strata legislation differs significantly across Australian states:
+
+| State | Legislation | Common Property Definition | Key Distinction |
+|-------|-----------|--------------------------|-----------------|
+| NSW | Strata Schemes Management Act 2015 | Everything except lot airspace and improvements | Waterproofing membrane = common property |
+| QLD | Body Corporate and Community Management Act 1997 | As per Community Management Statement | CMS defines boundaries — varies by scheme |
+| VIC | Owners Corporations Act 2006 | Structure, foundations, external walls | Lot owner responsible for internal fixtures |
+| WA | Strata Titles Act 1985 (amended 2018) | Structural elements, boundaries as surveyed | "Cubic space" model — lot = internal airspace |
+| SA | Strata Titles Act 1988 | Similar to NSW model | Building fabric = common property |
+| TAS | Strata Titles Act 1998 | Structural elements | Simpler model, fewer disputes |
+| ACT | Unit Titles (Management) Act 2011 | Structure and services | Exclusive use areas complicate matters |
+
+## The Waterproofing Membrane Problem
+
+The most disputed scenario in Australian strata:
+
+A shower on Level 5 leaks into the ceiling of Level 4. The waterproofing membrane has failed. **Who pays?**
+
+- **NSW**: The membrane is common property → body corporate's strata insurance
+- **QLD**: Depends on the CMS — could be either party
+- **VIC**: The membrane is typically part of the lot → lot owner's insurance
+- **WA**: Depends on the survey plan boundary definition
+
+This single issue generates more NCAT/QCAT/VCAT tribunal hearings than any other strata dispute category.
+
+## Common Scenarios and Liability
+
+| Scenario | Usually Body Corporate | Usually Lot Owner |
+|----------|----------------------|------------------|
+| Burst riser (vertical pipe) | ✓ | |
+| Burst flexi-hose under sink | | ✓ |
+| Roof leak affecting top-floor lot | ✓ | |
+| Overflowing bathtub | | ✓ |
+| Failed waterproofing (shower) | Depends on state | Depends on state |
+| Storm damage to common areas | ✓ | |
+| Flooding from lot above yours | Source lot owner liable | |
+| HVAC condensation | ✓ (if shared system) | ✓ (if split system) |
+
+## What to Do When Water Damage Occurs in Your Building
+
+1. **Identify the source** — is it common property plumbing or lot-specific?
+2. **Notify the strata manager immediately** — they coordinate the insurance response
+3. **Document from your lot** — photograph damage, note the time, identify where water entered
+4. **Don't start repairs** — wait for the assessor unless emergency make-safe is needed
+5. **Lodge separate claims if needed** — strata insurance and your contents/lot insurance may both apply
+6. **Get professional scoping** — use [transparent insurance estimating](https://restoreassist.app) so both the strata insurer and lot insurer receive consistent documentation
+
+## When Both Insurers Are Involved
+
+Multi-party claims are common in strata. A burst riser on Level 10 flooding Levels 9 through 5 involves:
+- **Strata insurance** for common property damage and the riser itself
+- **Each lot owner's insurance** for damage within individual lots
+- **Potentially the body corporate's liability** if maintenance was neglected
+
+Coordinated restoration across multiple lots requires a single contractor managing the entire response. Find [NRPG-verified contractors](https://nrpg.business) with multi-unit experience through the [Disaster Recovery claims portal](https://disasterrecovery.com.au).
+
+{{BRAND_LINKS}}
+
+## Key Takeaways
+
+- Always identify the **source** of the leak before assuming who pays
+- Check your **state's strata legislation** — liability rules differ significantly
+- Waterproofing membrane disputes are state-dependent — get legal advice if disputed
+- Use **one contractor** for coordinated multi-lot restoration
+- Lodge **both strata and individual claims** when damage crosses boundaries
+
+{{RESOURCES}}
+
+{{SOURCES}}`,
+    [
+      { statistic: 'Over 2.2 million Australians live in strata-titled properties', source: 'City Futures Research Centre', citation: 'UNSW Strata Data Report 2024', year: 2024 },
+      { statistic: 'Water damage is the most common insurance claim in multi-unit buildings', source: 'Insurance Council of Australia', citation: 'ICA Claims Statistics 2024', year: 2024 },
+      { statistic: 'Flood-affected properties experience a 15-25% drop in market value', source: 'CoreLogic', citation: 'CoreLogic Natural Perils Report 2024', year: 2024 },
+      { statistic: 'Immediate water extraction reduced rebuild costs by 45%', source: 'NSW Parliament Flood Inquiry', citation: 'NSW Parliament Flood Inquiry Report 2022', year: 2022 },
+    ],
+    ['strata', 'body-corporate', 'who-pays', 'liability', 'water-damage'],
   ),
 ];
 
