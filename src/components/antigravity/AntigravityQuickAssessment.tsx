@@ -66,7 +66,7 @@ const cards: AssessmentCard[] = [
     id: 'sewage',
     title: 'Sewage Sanitisation',
     description: 'Category 3 contamination response, extraction, sanitisation, and compliant remediation protocols.',
-    icon: '/images/antigravity/logo_3d_water.webp',
+    icon: '/images/antigravity/logo_3d_sewage.webp',
     iconAlt: 'Sewage Emergency',
     href: '/services/sewage-cleanup',
     wide: true,
