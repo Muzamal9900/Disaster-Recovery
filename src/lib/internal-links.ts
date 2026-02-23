@@ -37,7 +37,8 @@ type CategoryKey =
   | 'commercial'
   | 'guides-general'
   | 'knowledge-base'
-  | 'operational-excellence';
+  | 'operational-excellence'
+  | 'cost-estimator';
 
 const RELATED_PAGES_MAP: Record<CategoryKey, RelatedPage[]> = {
   'water-damage': [
@@ -45,14 +46,14 @@ const RELATED_PAGES_MAP: Record<CategoryKey, RelatedPage[]> = {
     { title: 'Flood Damage Restoration', href: '/services/flood-damage-restoration', description: 'Specialist flood recovery including extraction, drying and structural repair.' },
     { title: 'Structural Drying', href: '/services/structural-drying', description: 'Industrial-grade drying to prevent long-term moisture damage to your property.' },
     { title: 'Storm Damage Restoration', href: '/services/storm-damage-restoration', description: 'Comprehensive storm damage repair including roof, water and debris removal.' },
-    { title: 'Water Damage Cost Guide', href: '/cost/sydney-water-damage', description: 'Understand typical water damage restoration costs in your area.' },
+    { title: 'Cost Estimator', href: '/tools/cost-estimator', description: 'Get an instant cost estimate for water damage restoration based on your property.' },
     { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'Navigate your insurance claim for water damage restoration.' },
   ],
   'fire-damage': [
     { title: 'Biohazard Cleanup', href: '/services/biohazard-cleaning', description: 'Post-fire biohazard and smoke residue decontamination services.' },
     { title: 'Commercial Fire Restoration', href: '/services/commercial-services', description: 'Minimise business downtime with commercial fire damage restoration.' },
     { title: 'Emergency Response', href: '/services/emergency-response', description: '24/7 emergency response to secure and stabilise fire-damaged properties.' },
-    { title: 'Trauma Cleanup', href: '/services/trauma-cleanup', description: 'Sensitive and professional trauma scene restoration services.' },
+    { title: 'Cost Estimator', href: '/tools/cost-estimator', description: 'Get an instant cost estimate for fire damage restoration based on your property.' },
     { title: 'Fire Damage Cost Guide', href: '/cost/sydney-fire-damage', description: 'Typical fire damage restoration costs and what to expect.' },
     { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'Step-by-step guide to filing your fire damage insurance claim.' },
   ],
@@ -212,10 +213,10 @@ const RELATED_PAGES_MAP: Record<CategoryKey, RelatedPage[]> = {
   ],
   'insurance': [
     { title: 'Emergency Make-Safe Guide', href: '/insurance/emergency-make-safe-guide', description: '$2,750 emergency service, insurance reimbursement, and your right to choose a contractor.' },
+    { title: 'Cost Estimator', href: '/tools/cost-estimator', description: 'Instant cost estimate with insurance coverage likelihood for any damage type.' },
     { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Water damage services covered by most insurers.' },
     { title: 'Fire Damage Restoration', href: '/services/fire-damage-restoration', description: 'Fire damage restoration insurance claims.' },
     { title: 'Storm Damage Restoration', href: '/services/storm-damage-restoration', description: 'Storm damage insurance coverage guide.' },
-    { title: 'Cost Guides', href: '/guides/cost-guides', description: 'Understand restoration costs before you claim.' },
     { title: 'Emergency Response', href: '/services/emergency-response', description: '24/7 emergency response for insured events.' },
   ],
   'emergency': [
@@ -257,6 +258,14 @@ const RELATED_PAGES_MAP: Record<CategoryKey, RelatedPage[]> = {
     { title: 'Chemical & Remediation Assets', href: '/operational-excellence/chemical-remediation-assets', description: 'Negative air machines, antimicrobial treatments and branded containment systems.' },
     { title: 'Emergency Response', href: '/services/emergency-response', description: '24/7 emergency disaster response across Australia and New Zealand.' },
   ],
+  'cost-estimator': [
+    { title: 'Water Damage Cost Guide', href: '/cost/sydney-water-damage', description: 'Detailed water damage restoration costs by city across Australia.' },
+    { title: 'Fire Damage Cost Guide', href: '/cost/sydney-fire-damage', description: 'Fire and smoke damage restoration pricing and insurance coverage.' },
+    { title: 'Emergency Make-Safe Guide', href: '/insurance/emergency-make-safe-guide', description: '$2,750 emergency service, insurance reimbursement, and your rights.' },
+    { title: 'Is It Covered?', href: '/is-it-covered', description: 'Check if your damage type is covered by your insurance policy.' },
+    { title: 'Lodge a Claim', href: '/claim/start', description: 'Start your insurance claim with free assessment and direct billing.' },
+    { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Professional water damage restoration services across Australia.' },
+  ],
 };
 
 /**
@@ -282,6 +291,9 @@ export function getRelatedPages(slug: string): RelatedPage[] {
   if (slug.includes('insurance')) return RELATED_PAGES_MAP['insurance'];
   if (slug.includes('emergency')) return RELATED_PAGES_MAP['emergency'];
   if (slug.includes('commercial')) return RELATED_PAGES_MAP['commercial'];
+
+  // Cost estimator tool
+  if (slug.includes('cost-estimator')) return RELATED_PAGES_MAP['cost-estimator'];
 
   // Cost page matching
   if (slug.includes('cost')) {

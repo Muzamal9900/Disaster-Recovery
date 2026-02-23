@@ -14,3 +14,4 @@ export { getTechnologySections } from './technology-sections';
 export { getKnowledgeBaseSections, getKnowledgeEntryFaqs, getKnowledgeEntrySlugs } from './knowledge-sections';
 export { getOperationalExcellenceSections, getOperationalExcellenceFaqs, getOperationalExcellenceStats } from './operational-excellence-sections';
 export { getEmergencyMakeSafeSections } from './emergency-make-safe-sections';
+export { getCostEstimatorSections } from './cost-estimator-sections';
