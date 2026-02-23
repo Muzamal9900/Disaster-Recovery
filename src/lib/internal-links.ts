@@ -27,6 +27,7 @@ type CategoryKey =
   | 'location-darwin'
   | 'location-gold-coast'
   | 'location-newcastle'
+  | 'location-auckland'
   | 'cost-water'
   | 'cost-fire'
   | 'cost-mould'
@@ -38,7 +39,9 @@ type CategoryKey =
   | 'guides-general'
   | 'knowledge-base'
   | 'operational-excellence'
-  | 'cost-estimator';
+  | 'cost-estimator'
+  | 'how-it-works'
+  | 'blog';
 
 const RELATED_PAGES_MAP: Record<CategoryKey, RelatedPage[]> = {
   'water-damage': [
@@ -176,6 +179,14 @@ const RELATED_PAGES_MAP: Record<CategoryKey, RelatedPage[]> = {
     { title: 'Central Coast Services', href: '/locations/nsw/central-coast', description: 'Disaster recovery services on the Central Coast.' },
     { title: 'Wollongong Services', href: '/locations/nsw/wollongong', description: 'Disaster recovery services in Wollongong.' },
   ],
+  'location-auckland': [
+    { title: 'Sydney Services', href: '/locations/sydney', description: 'Disaster recovery services in Sydney.' },
+    { title: 'Melbourne Services', href: '/locations/melbourne', description: 'Disaster recovery services in Melbourne.' },
+    { title: 'Brisbane Services', href: '/locations/brisbane', description: 'Disaster recovery services in Brisbane.' },
+    { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Professional water damage restoration services.' },
+    { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'Navigate your insurance claim for restoration.' },
+    { title: 'Emergency Response', href: '/services/emergency-response', description: '24/7 emergency disaster response.' },
+  ],
   'cost-water': [
     { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Professional water damage restoration services.' },
     { title: 'Structural Drying', href: '/services/structural-drying', description: 'Industrial drying to protect your property long-term.' },
@@ -266,6 +277,20 @@ const RELATED_PAGES_MAP: Record<CategoryKey, RelatedPage[]> = {
     { title: 'Lodge a Claim', href: '/claim/start', description: 'Start your insurance claim with free assessment and direct billing.' },
     { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Professional water damage restoration services across Australia.' },
   ],
+  'how-it-works': [
+    { title: 'Lodge a Claim', href: '/claim/start', description: 'Start your insurance claim online with 24/7 availability.' },
+    { title: 'Cost Estimator', href: '/tools/cost-estimator', description: 'Get an instant cost estimate for any type of restoration.' },
+    { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'Navigate your insurance claim step by step.' },
+    { title: 'Emergency Response', href: '/services/emergency-response', description: '24/7 emergency disaster response across Australia.' },
+    { title: 'About NRPG', href: '/about', description: 'Learn about the National Recovery Platform Group.' },
+  ],
+  'blog': [
+    { title: 'Water Damage Guide', href: '/guides/water-damage', description: 'Complete guide to water damage restoration.' },
+    { title: 'Insurance Claims Guide', href: '/guides/insurance', description: 'Navigate your insurance claim step by step.' },
+    { title: 'Water Damage Science', href: '/knowledge/water-damage-restoration-science', description: 'IICRC S500 water damage science and standards.' },
+    { title: 'Cost Estimator', href: '/tools/cost-estimator', description: 'Get an instant restoration cost estimate.' },
+    { title: 'How It Works', href: '/how-it-works', description: 'Learn how our platform connects you with contractors.' },
+  ],
 };
 
 /**
@@ -279,6 +304,8 @@ export function getRelatedPages(slug: string): RelatedPage[] {
   }
 
   // Pattern-based matching
+  if (slug.includes('how-it-works')) return RELATED_PAGES_MAP['how-it-works'];
+  if (slug.includes('blog')) return RELATED_PAGES_MAP['blog'];
   if (slug.includes('operational-excellence')) return RELATED_PAGES_MAP['operational-excellence'];
   if (slug.includes('water-damage')) return RELATED_PAGES_MAP['water-damage'];
   if (slug.includes('fire-damage')) return RELATED_PAGES_MAP['fire-damage'];
@@ -315,6 +342,7 @@ export function getRelatedPages(slug: string): RelatedPage[] {
   if (slug.includes('darwin')) return RELATED_PAGES_MAP['location-darwin'];
   if (slug.includes('gold-coast')) return RELATED_PAGES_MAP['location-gold-coast'];
   if (slug.includes('newcastle')) return RELATED_PAGES_MAP['location-newcastle'];
+  if (slug.includes('auckland')) return RELATED_PAGES_MAP['location-auckland'];
 
   // Knowledge pages
   if (slug.includes('knowledge') || slug.includes('iicrc') || slug.includes('psychrometric')) return RELATED_PAGES_MAP['knowledge-base'];

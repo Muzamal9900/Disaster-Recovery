@@ -8,40 +8,45 @@ try {
   });
 } catch (e) {
   // Bundle analyzer not installed, continue without it
-  console.log('Note: @next/bundle-analyzer not installed, skipping bundle analysis');
 }
 
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  
-  // Skip type checking and linting in production builds
+
+  // Build checks
+  // NOTE: ignoreBuildErrors kept true — ~200+ pre-existing TS errors across src/ need
+  // a dedicated cleanup sprint before this can be set to false. See tsconfig excludes.
   typescript: {
     ignoreBuildErrors: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
-  
+
   // Performance optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
 
-  // Image optimization
+  // Image optimization (merged from .mjs + .js)
   images: {
     domains: [
+      'disasterrecovery.com.au',
       'disaster-recovery-seven.vercel.app',
       'images.unsplash.com',
-      'cloudinary.com'
+      'cloudinary.com',
     ],
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
-  // Headers for caching and security
+  // Headers for caching and security (merged from .mjs security + .js caching)
   async headers() {
     return [
       {
@@ -49,53 +54,78 @@ const nextConfig = {
         headers: [
           {
             key: 'X-DNS-Prefetch-Control',
-            value: 'on'
+            value: 'on',
           },
           {
             key: 'X-XSS-Protection',
-            value: '1; mode=block'
+            value: '1; mode=block',
           },
           {
             key: 'X-Frame-Options',
-            value: 'SAMEORIGIN'
+            value: 'SAMEORIGIN',
           },
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff'
+            value: 'nosniff',
           },
           {
             key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin'
-          }
-        ]
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(self), payment=()',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.vercel-insights.com https://*.googletagmanager.com https://*.google-analytics.com https://*.clarity.ms",
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+              "img-src 'self' data: https: blob: https://*.google-analytics.com https://*.googletagmanager.com",
+              "font-src 'self' data: https://fonts.gstatic.com",
+              "connect-src 'self' https://vitals.vercel-insights.com https://*.google-analytics.com https://*.clarity.ms https://*.googletagmanager.com",
+              "frame-src 'self' https://*.googletagmanager.com https://www.youtube.com https://youtube.com",
+              "object-src 'none'",
+              "base-uri 'self'",
+              "form-action 'self'",
+              "frame-ancestors 'self'",
+              "upgrade-insecure-requests",
+            ].join('; '),
+          },
+        ],
       },
       {
         source: '/static/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
-          }
-        ]
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
       },
       {
         source: '/:all*(svg|jpg|jpeg|png|gif|ico|webp|avif)',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, must-revalidate'
-          }
-        ]
+            value: 'public, max-age=31536000, must-revalidate',
+          },
+        ],
       },
       {
         source: '/_next/static/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
-          }
-        ]
-      }
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
     ];
   },
 
@@ -124,12 +154,11 @@ const nextConfig = {
   async rewrites() {
     return {
       beforeFiles: [
-        // API rewrites
         {
           source: '/api/v1/:path*',
           destination: '/api/:path*',
-        }
-      ]
+        },
+      ],
     };
   },
 
@@ -140,9 +169,9 @@ const nextConfig = {
     NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
   },
 
-  // Webpack configuration
+  // Webpack configuration (chunk-splitting from .js + node fallbacks from .mjs)
   webpack: (config, { isServer, dev }) => {
-    // Optimize chunks
+    // Optimize chunks for production client builds
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
@@ -187,12 +216,21 @@ const nextConfig = {
         ...config.resolve.alias,
         'lodash': 'lodash-es',
       };
+      // Node module fallbacks for client
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
+        dns: false,
+        child_process: false,
+      };
     }
 
     return config;
   },
 
-  // Experimental features
+  // Experimental features (merged)
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
@@ -202,9 +240,14 @@ const nextConfig = {
       'framer-motion',
       'recharts',
       'date-fns',
-      '@headlessui/react'
+      '@headlessui/react',
+      'gsap',
+      'chart.js',
     ],
     webVitalsAttribution: ['CLS', 'LCP'],
+    serverActions: {
+      bodySizeLimit: '2mb',
+    },
   },
 
   // Production optimizations
@@ -212,9 +255,6 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
-
-  // Output configuration
-  // Removed 'standalone' as it can cause issues with Vercel
   distDir: '.next',
 };
 

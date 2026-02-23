@@ -7,22 +7,36 @@
     "NODE_OPTIONS": "--max-old-space-size=8192",
     "SKIP_ENV_VALIDATION": "true",
     "NEXT_TELEMETRY_DISABLED": "1",
-    "NEXT_PUBLIC_DEMO_MODE": "false",
-    "SKIP_BUILD_ERRORS": "true"
+    "NEXT_PUBLIC_DEMO_MODE": "false"
   },
   "build": {
     "env": {
       "NODE_OPTIONS": "--max-old-space-size=8192",
       "NEXT_TELEMETRY_DISABLED": "1",
       "SKIP_ENV_VALIDATION": "true",
-      "CI": "false",
-      "SKIP_BUILD_ERRORS": "true"
+      "CI": "false"
     }
   },
   "regions": ["syd1"],
   "github": {
     "silent": true
   },
+  "functions": {
+    "app/api/cron/reddit-orchestrator/route.ts": {
+      "maxDuration": 120,
+      "memory": 1024
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/cron/reddit-orchestrator",
+      "schedule": "0 20 * * *"
+    },
+    {
+      "path": "/api/cron/reddit-performance",
+      "schedule": "0 */6 * * *"
+    }
+  ],
   "rewrites": [
     {
       "source": "/pitch-deck/presentation",
@@ -31,17 +45,6 @@
     {
       "source": "/pitch-deck",
       "destination": "/pitch"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
     }
   ]
 }

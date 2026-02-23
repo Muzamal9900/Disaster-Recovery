@@ -1614,3 +1614,140 @@ model Payment {
   updatedAt             DateTime  @updatedAt
   tenantId              String?
 }
+
+// =============================================================================
+// Reddit Orchestrator Models — Phase 8.3 Content Velocity
+// =============================================================================
+
+model RedditContentPillar {
+  id          String   @id @default(cuid())
+  code        String   @unique // A, B, C, D, E
+  name        String   // e.g. "Indoor Environmental Health"
+  description String?
+  categories  String[] // PostCategory values mapped to this pillar
+  lastUsedAt  DateTime @default(now())
+  usageCount  Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  posts RedditPost[]
+}
+
+model RedditPost {
+  id        String @id @default(cuid())
+  title     String
+  body      String @db.Text
+  tldr      String?
+  category  String // PostCategory value
+  brands    String // JSON string of BrandId[]
+  geoSignals String @db.Text // JSON of GEOSignal[]
+
+  // Targeting
+  subreddit String @default("Disaster_Recovery_Qld")
+
+  // AI metadata
+  aiModel        String?
+  aiPromptVersion String?
+  generationTokens Int?
+
+  // Safety
+  safetyStatus     String  @default("PENDING") // PENDING | PASSED | FAILED
+  safetyGateResults String? @db.Text // JSON of SafetyGateResult[]
+
+  // GEO compliance
+  geoCompliant Boolean @default(false)
+  geoIssues    String? // JSON of string[]
+
+  // Visual
+  imageGenerated Boolean @default(false)
+  imageUrl       String?
+  imagePrompt    String? @db.Text
+  imageFormat    String? // e.g. "infographic", "before-after", "comparison-table"
+
+  // Lifecycle
+  status       String   @default("SCHEDULED") // SCHEDULED | GENERATED | VALIDATED | POSTED | FAILED
+  scheduledFor DateTime?
+  generatedAt  DateTime?
+  validatedAt  DateTime?
+  postedAt     DateTime?
+  failedAt     DateTime?
+  failureReason String?
+
+  // Reddit IDs
+  redditId  String?
+  redditUrl String?
+
+  // Performance metrics
+  upvotes      Int    @default(0)
+  downvotes    Int    @default(0)
+  commentCount Int    @default(0)
+  upvoteRatio  Float  @default(0)
+  isRemoved    Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  contentPillarId String?
+  contentPillar   RedditContentPillar? @relation(fields: [contentPillarId], references: [id])
+  safetyAudits    RedditSafetyAudit[]
+  performanceLogs RedditPerformanceLog[]
+  orchestratorRunId String?
+  orchestratorRun   RedditOrchestratorRun? @relation(fields: [orchestratorRunId], references: [id])
+}
+
+model RedditSafetyAudit {
+  id         String  @id @default(cuid())
+  gateName   String  // claim-labelling | hallucination | spam | mod-safety
+  gateModel  String  // e.g. "claude-haiku-4-5-20251001"
+  passed     Boolean
+  confidence Float
+  findings   String  @db.Text // JSON of findings
+  tokensUsed Int?
+  durationMs Int?
+  createdAt  DateTime @default(now())
+
+  postId String
+  post   RedditPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+}
+
+model RedditPerformanceLog {
+  id           String   @id @default(cuid())
+  upvotes      Int
+  downvotes    Int
+  commentCount Int
+  upvoteRatio  Float
+  isRemoved    Boolean  @default(false)
+  sampledAt    DateTime @default(now())
+
+  postId String
+  post   RedditPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+}
+
+model RedditOrchestratorRun {
+  id              String   @id @default(cuid())
+  triggerType     String   // CRON | MANUAL | API
+  command         String?  // e.g. "DAILY-AUTO", "CATEGORY:water-damage"
+  status          String   @default("RUNNING") // RUNNING | COMPLETED | FAILED
+  postsGenerated  Int      @default(0)
+  postsValidated  Int      @default(0)
+  postsPosted     Int      @default(0)
+  postsFailed     Int      @default(0)
+  totalTokensUsed Int      @default(0)
+  totalDurationMs Int      @default(0)
+  errorMessage    String?
+  startedAt       DateTime @default(now())
+  completedAt     DateTime?
+
+  posts RedditPost[]
+}
+
+model RedditSystemPrompt {
+  id         String   @id @default(cuid())
+  version    String   @unique
+  promptText String   @db.Text
+  isActive   Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}

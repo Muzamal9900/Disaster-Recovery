@@ -65,7 +65,7 @@ const EXCLUDED_PREFIXES = [
 // Priority mapping by route prefix
 const PRIORITY_MAP: Record<string, number> = {
   '/': 1,
-  '/get-help': 1,
+  '/claim': 1,
   '/services/emergency': 1,
   '/emergency': 0.9,
   '/services/water-damage': 0.95,
@@ -94,8 +94,11 @@ const PRIORITY_MAP: Record<string, number> = {
   '/standards': 0.7,
   '/resources': 0.7,
   '/book-service': 0.8,
-  '/quote': 0.8,
+  '/how-it-works': 0.8,
+  '/blog': 0.7,
   '/careers': 0.5,
+  '/accessibility': 0.3,
+  '/disclaimer': 0.3,
   '/privacy': 0.3,
   '/terms': 0.3,
   '/cookies': 0.3,
@@ -105,7 +108,7 @@ const PRIORITY_MAP: Record<string, number> = {
 // Change frequency mapping by route prefix
 const FREQUENCY_MAP: Record<string, MetadataRoute.Sitemap[0]['changeFrequency']> = {
   '/': 'daily',
-  '/get-help': 'daily',
+  '/claim': 'daily',
   '/emergency': 'daily',
   '/services/emergency': 'daily',
   '/services': 'weekly',
@@ -125,6 +128,10 @@ const FREQUENCY_MAP: Record<string, MetadataRoute.Sitemap[0]['changeFrequency']>
   '/operational-excellence': 'monthly',
   '/standards': 'monthly',
   '/resources': 'monthly',
+  '/how-it-works': 'monthly',
+  '/blog': 'weekly',
+  '/accessibility': 'yearly',
+  '/disclaimer': 'yearly',
   '/privacy': 'yearly',
   '/terms': 'yearly',
   '/cookies': 'yearly',
