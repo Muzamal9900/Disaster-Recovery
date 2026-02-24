@@ -82,7 +82,7 @@ export function getCompareSections({ option1, option2 }: CompareSectionParams): 
         <>
           <p>Here is a direct comparison across the factors that matter most:</p>
           <ul>
-            <li><strong>Cost:</strong> {option1} may seem cheaper initially, but hidden damage and rework can increase total cost. {option2} involves professional pricing but with insurance direct billing, your out-of-pocket is often just the excess.</li>
+            <li><strong>Cost:</strong> {option1} may seem cheaper initially, but hidden damage and rework can increase total cost. {option2} involves professional pricing with flexible payment options and full documentation for your insurance reimbursement claim.</li>
             <li><strong>Quality:</strong> {option2} delivers certified, documented results that meet Australian Standards. {option1} quality depends entirely on individual capability and equipment access.</li>
             <li><strong>Timeline:</strong> {option1} may start sooner but take longer overall. {option2} uses industrial equipment that significantly accelerates drying, cleaning, and restoration.</li>
             <li><strong>Insurance:</strong> {option2} from an approved provider simplifies claims and is accepted by all major insurers. {option1} work may not meet insurer documentation or quality requirements.</li>

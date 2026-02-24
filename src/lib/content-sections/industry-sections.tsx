@@ -24,9 +24,10 @@ export function getIndustrySections({ industryName, context }: IndustrySectionPa
             non-compliance, safety risks, and reputational damage.
           </p>
           <p>
-            We work with all major Australian insurers and provide 24/7 emergency response with
-            direct billing for covered events. Our project managers coordinate with your operations
-            team to minimise business disruption while ensuring thorough, compliant restoration.
+            We work with clients insured by all major Australian providers and offer 24/7 emergency
+            response. We bill you directly so work begins immediately, and provide full documentation
+            for your insurance claim. Our project managers coordinate with your operations team to
+            minimise business disruption while ensuring thorough, compliant restoration.
           </p>
         </>
       ),

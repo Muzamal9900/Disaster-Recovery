@@ -101,7 +101,7 @@ export function TrustIndicatorBanner() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const indicators = [
     "✓ 115,000+ Certified Contractors",
-    "✓ Insurance Approved & Direct Billing",
+    "✓ Insurance Claims Documentation Provided",
     "✓ 60 Minute Response Time",
     "✓ 500,000+ Properties Restored",
     "✓ Available 24/7 Nationwide"

@@ -5,8 +5,8 @@ import { getInsuranceSections } from '@/lib/content-sections';
 import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
-  title: 'Budget Direct Insurance Claims | Approved Restoration Provider | Direct Billing',
-  description: 'Preferred Budget Direct insurance restoration provider. Direct billing, no upfront costs, claim assistance. Call Online Form Available 24/7.' };
+  title: 'Budget Direct Insurance Claims | Approved Restoration Provider | Claims Assistance',
+  description: 'Preferred Budget Direct insurance restoration provider. Full claims documentation, flexible payment options, and 24/7 claims assistance.' };
 
 export default function BudgetDirectInsurancePage() {
   return (
@@ -15,7 +15,7 @@ export default function BudgetDirectInsurancePage() {
         gradient: 'linear-gradient(135deg, #0F2942 0%, #1A4674 100%)',
         icon: <Shield className="h-12 w-12" />,
         title: 'Budget Direct Insurance Claims',
-        subtitle: 'Preferred Provider • Direct Billing • No Upfront Costs',
+        subtitle: 'Preferred Provider • Flexible Payment Options • Full Claims Documentation',
       }}
       cta={{ text: 'Start Your Claim', href: '/claim' }}
       breadcrumbs={[

@@ -71,7 +71,7 @@ function Day7AssessmentOriginal() {
               "RestoreAssist.app line items",
               "Photo documentation standards",
               "Scope writing requirements",
-              "Direct billing procedures"
+              "Client billing and claims documentation procedures"
             ],
             criticalKnowledge: [
               "Insurer-specific requirements",

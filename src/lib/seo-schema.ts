@@ -97,7 +97,7 @@ export const generateFAQSchema = () => ({
       "name": "Do you work directly with insurance companies?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we work with all major Australian insurance companies. We assist you throughout the claims process, providing detailed documentation and direct billing to simplify your restoration experience."
+        "text": "Yes, we work with clients insured by all major Australian insurance companies. We bill you directly so work begins immediately, and provide all documentation your insurer needs to process your reimbursement claim."
       }
     },
     {

@@ -219,8 +219,8 @@ export default function LocationServicePageComponent({ data }: LocationServicePa
                   <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="w-8 h-8" />
                   </div>
-                  <h3 className="font-semibold mb-2">Direct Billing</h3>
-                  <p className="text-sm text-gray-200">We work directly with all major insurers</p>
+                  <h3 className="font-semibold mb-2">Claims Support</h3>
+                  <p className="text-sm text-gray-200">Full documentation for your insurance claim</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">

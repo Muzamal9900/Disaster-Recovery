@@ -24,7 +24,7 @@ export function getPropertyTypeSections({ propertyType, description }: PropertyT
           </p>
           <p>
             As approved providers for all major insurers, we handle the entire claims process —
-            direct-billing your insurer so there are no upfront costs for covered events. Our
+            billing you directly so work begins immediately, with full documentation provided for your insurance claim. Our
             project managers coordinate with building managers, body corporates, tenants, and
             insurers to minimise disruption and downtime.
           </p>
@@ -113,7 +113,7 @@ export function getPropertyTypeSections({ propertyType, description }: PropertyT
           <p>
             We work with all major Australian insurers and understand the specific claims processes
             for {propertyType.toLowerCase()} properties, including strata insurance, landlord
-            policies, and commercial cover. We direct-bill insurers so there are no upfront costs.
+            policies, and commercial cover. We bill you directly and provide complete documentation to support your insurance reimbursement claim. Payment plans are available.
           </p>
           <h3>What certifications do your contractors hold?</h3>
           <p>

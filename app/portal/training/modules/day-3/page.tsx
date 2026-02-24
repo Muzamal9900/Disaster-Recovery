@@ -373,7 +373,7 @@ function Day3InsuranceClaimsOriginal() {
     },
     {
       id: 6,
-      title: "Direct Billing Procedures",
+      title: "Client Billing & Claims Documentation",
       duration: "75 min",
       content: {
         setup: {

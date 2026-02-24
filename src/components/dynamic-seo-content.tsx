@@ -89,7 +89,7 @@ export default function DynamicSEOContent({ params }: DynamicPageProps) {
                 <Card className="p-6">
                   <CheckCircle2 className="h-8 w-8 text-green-500 mb-3" />
                   <h3 className="font-bold mb-2">Insurance Claims</h3>
-                  <p className="text-gray-200">Direct billing with all major insurers</p>
+                  <p className="text-gray-200">Full claims documentation for your insurer</p>
                 </Card>
                 <Card className="p-6">
                   <CheckCircle2 className="h-8 w-8 text-green-500 mb-3" />

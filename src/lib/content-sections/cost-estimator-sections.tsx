@@ -116,10 +116,10 @@ export function getCostEstimatorSections(): ContentSection[] {
             </tbody>
           </table>
           <p>
-            <strong>Important:</strong> As insurance-approved providers, our contractors
-            direct-bill your insurer for covered events. You typically pay nothing out of pocket
-            beyond your policy excess. Our team reviews your policy at no cost during the initial
-            assessment.
+            <strong>Important:</strong> Our contractors bill you directly, allowing work to begin
+            immediately without waiting for insurer approval. We provide all documentation your
+            insurer requires to process your reimbursement claim. Payment plans are available through
+            our finance partner.
           </p>
         </>
       ),

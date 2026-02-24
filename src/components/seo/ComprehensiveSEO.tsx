@@ -117,7 +117,7 @@ export function ComprehensiveSEO({ location = 'Australia', service, pageType = '
           <li>Storm damage emergency repairs</li>
           <li>Sewage cleanup and biohazard removal</li>
           <li>Commercial and residential restoration</li>
-          <li>Insurance claim assistance and direct billing</li>
+          <li>Insurance claim documentation and payment options</li>
         </ul>
       </div>
     </>

@@ -468,7 +468,7 @@ export default function FireDamageRestorationPage() {
               Our team assists you throughout the insurance claim process, helping ensure you receive maximum coverage for your fire damage restoration.
             </p>
             <div className="grid md:grid-cols-4 gap-4">
-              {['Documentation', 'Claim Filing', 'Adjuster Meeting', 'Direct Billing'].map((service) => (
+              {['Documentation', 'Claim Filing', 'Adjuster Meeting', 'Payment Options'].map((service) => (
                 <div key={service} className="bg-white p-4 rounded-lg text-center">
                   <CheckCircle className="h-8 w-8 text-green-600 mx-auto mb-2" />
                   <p className="font-medium">{service}</p>

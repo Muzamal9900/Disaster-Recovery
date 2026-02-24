@@ -5,15 +5,15 @@ import { getInsuranceSections } from '@/lib/content-sections';
 import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
-  title: 'Insurance Claims Assistance | All Major Australian Insurers | Direct Billing Available',
-  description: 'Expert insurance claims assistance for disaster recovery. Work with NRMA, Suncorp, AAMI, QBE, Allianz and all major Australian insurers. Direct billing available.',
+  title: 'Insurance Claims Assistance | All Major Australian Insurers | Disaster Recovery Australia',
+  description: 'Expert insurance claims assistance for disaster recovery. Work with NRMA, Suncorp, AAMI, QBE, Allianz and all major Australian insurers. Full claims documentation provided.',
   keywords: [
     'insurance claims assistance',
     'disaster recovery insurance',
     'NRMA insurance claims',
     'Suncorp insurance claims',
     'AAMI insurance claims',
-    'direct insurance billing',
+    'insurance claims documentation',
     'insurance approved contractors',
     'water damage insurance',
     'fire damage insurance',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Insurance Claims Assistance | All Major Australian Insurers',
-    description: 'Expert help with disaster recovery insurance claims. Direct billing available. Work with all major Australian insurance companies.',
+    description: 'Expert help with disaster recovery insurance claims. Full claims documentation provided. Work with all major Australian insurance companies.',
     type: 'website',
     images: ['/images/optimised/process/3D Assessment.png'] },
   alternates: {
@@ -38,7 +38,7 @@ export default function InsurancePage() {
         gradient: 'linear-gradient(135deg, #1E3A5F 0%, #2563EB 100%)',
         icon: <Shield className="h-12 w-12" />,
         title: "Insurance Claims Assistance",
-        subtitle: "Expert insurance claims assistance for disaster recovery. Work with NRMA, Suncorp, AAMI, QBE, Allianz and all major Australian insurers. Direct billing available.",
+        subtitle: "Expert insurance claims assistance for disaster recovery. Work with NRMA, Suncorp, AAMI, QBE, Allianz and all major Australian insurers. Full claims documentation provided.",
       }}
       cta={{ text: 'Get Emergency Help', href: '/claim/start' }}
       breadcrumbs={[

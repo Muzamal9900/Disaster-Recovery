@@ -37,7 +37,7 @@ export default function AboutPage() {
         { label: 'Response Time', value: '24/7/365' },
         { label: 'Network Coverage', value: 'Australia-Wide' },
         { label: 'Contractor Standard', value: 'IICRC Certified' },
-        { label: 'Insurance Billing', value: 'Direct' },
+        { label: 'Payment Options', value: 'Flexible' },
       ]}
       sections={[
         {
@@ -51,7 +51,7 @@ export default function AboutPage() {
                 Our platform operates 24 hours a day, 7 days a week, 365 days a year. There are no phone queues, no business-hours limitations, and no geographic restrictions. Whether it&apos;s a burst pipe in a Sydney CBD high-rise at 2am or cyclone damage to a remote Queensland property on Christmas Day, our system matches the job to the nearest qualified contractor automatically.
               </p>
               <p>
-                We are not a restoration company — we are the distribution network that makes restoration happen faster, more transparently, and with direct insurance billing that eliminates out-of-pocket costs for property owners.
+                We are not a restoration company — we are the distribution network that makes restoration happen faster, more transparently, and with transparent billing, flexible payment options, and full insurance claims documentation.
               </p>
             </div>
           ),
@@ -64,7 +64,7 @@ export default function AboutPage() {
                 Property disasters don&apos;t follow business hours. Our mission is to ensure that every Australian — regardless of location, time of day, or type of disaster — can access certified restoration professionals within hours, not days.
               </p>
               <p>
-                We believe in complete transparency: no hidden fees, no unnecessary delays, and no intermediaries between the property owner and the contractor doing the work. Every contractor in our network bills insurance directly, so property owners pay only their policy excess.
+                We believe in complete transparency: no hidden fees, no unnecessary delays, and no intermediaries between the property owner and the contractor doing the work. Every contractor in our network bills you directly — so work begins immediately without insurer delays. We provide all documentation you need to claim reimbursement from your insurer.
               </p>
               <p>
                 We bill you directly; we provide the services you&apos;re entitled to — the insurance policy holders pay in accordance with your policy. We follow Australian laws, recommendations, and best practices, and all our qualified and certified business owners do too. It is a network you can trust, but we also need to be paid.
@@ -162,7 +162,7 @@ export default function AboutPage() {
                 <li><strong>Submit your claim online</strong> — Describe the damage, upload photos, and provide your location. Our system is available 24/7.</li>
                 <li><strong>Instant contractor matching</strong> — Our platform identifies IICRC-certified contractors within your area who specialise in your type of damage.</li>
                 <li><strong>Rapid response</strong> — Matched contractors respond directly. Emergency jobs receive priority dispatching.</li>
-                <li><strong>Direct insurance billing</strong> — Contractors invoice your insurer directly. You pay only your policy excess — no upfront costs.</li>
+                <li><strong>Transparent billing & payment</strong> — Your contractor provides a formal contract and invoices you directly. We supply all documentation for your insurance reimbursement claim. Payment plans available through <a href="https://www.bluefirefinance.com.au" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Blue Fire Finance</a>.</li>
                 <li><strong>Quality assurance</strong> — All work is performed to IICRC standards with full documentation for your insurance claim.</li>
               </ol>
               <p className="mt-4">

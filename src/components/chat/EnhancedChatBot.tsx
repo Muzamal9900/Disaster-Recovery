@@ -112,7 +112,7 @@ export function EnhancedChatBot() {
       response.options = ['Understand Coverage', 'Site Manager Info', 'Get Estimate Now'];
     } else if (input.includes('insurance') || input.includes('claim')) {
       response.text = "We work with all major insurers. Our contractors will explain what's covered and give you options for anything outside your policy.";
-      response.options = ['Check Coverage', 'Submit Claim', 'Direct Billing Info'];
+      response.options = ['Check Coverage', 'Submit Claim', 'Payment Options'];
     } else {
       response.text = "I'll help you connect with the right restoration professional. What type of damage are you dealing with?";
       response.options = ['Water Damage', 'Fire Damage', 'Mould', 'Other Emergency'];

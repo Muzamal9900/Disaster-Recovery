@@ -5,8 +5,8 @@ import { getInsuranceSections } from '@/lib/content-sections';
 import { getRelatedPages } from '@/lib/internal-links';
 
 export const metadata: Metadata = {
-  title: 'RAA Insurance Claims | Approved Restoration Provider | Direct Billing',
-  description: 'Preferred RAA insurance restoration provider. Direct billing, no upfront costs, claim assistance. Call Online Form Available 24/7.' };
+  title: 'RAA Insurance Claims | Approved Restoration Provider | Claims Assistance',
+  description: 'Preferred RAA insurance restoration provider. Full claims documentation, flexible payment options, and 24/7 claims assistance.' };
 
 export default function RAAInsurancePage() {
   return (
@@ -15,7 +15,7 @@ export default function RAAInsurancePage() {
         gradient: 'linear-gradient(135deg, #0F2942 0%, #1A4674 100%)',
         icon: <Shield className="h-12 w-12" />,
         title: 'RAA Insurance Claims',
-        subtitle: 'Preferred Provider • Direct Billing • No Upfront Costs',
+        subtitle: 'Preferred Provider • Flexible Payment Options • Full Claims Documentation',
       }}
       cta={{ text: 'Start Your Claim', href: '/claim' }}
       breadcrumbs={[

@@ -23,8 +23,8 @@ export function getDisasterSections({ disasterType, description }: DisasterSecti
             restoration protocols required after {disasterType.toLowerCase()} events.
           </p>
           <p>
-            We respond 24/7, work with all major Australian insurers, and direct-bill for covered
-            events — meaning you pay only your policy excess. Our teams deploy Australia-wide,
+            We respond 24/7 and bill you directly — meaning work begins immediately without waiting
+            for insurer approval. We provide full documentation to support your insurance reimbursement claim. Our teams deploy Australia-wide,
             including to regional and remote areas affected by {disasterType.toLowerCase()} events.
           </p>
         </>

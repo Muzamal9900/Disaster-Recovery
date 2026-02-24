@@ -197,7 +197,7 @@ export function generateAustralianSchema({
       worstRating: '1'
     },
     priceRange: '$$',
-    paymentAccepted: 'Insurance Direct Billing',
+    paymentAccepted: 'Invoice, Finance Plans',
     currenciesAccepted: 'AUD',
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',

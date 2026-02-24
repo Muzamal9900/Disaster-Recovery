@@ -149,7 +149,7 @@ const ENTRIES: Record<string, KnowledgeEntry> = {
         'Police-checked technicians with current Working with Children clearances',
         'Moisture mapping with thermal imaging and pin/pinless meters',
         'Daily psychrometric monitoring with documented drying logs',
-        'Direct insurance billing — no out-of-pocket for approved claims',
+        'Full claims documentation provided — everything your insurer needs for reimbursement',
         '$20M public liability insurance verified annually',
       ],
       unvetted: [
@@ -476,7 +476,7 @@ const ENTRIES: Record<string, KnowledgeEntry> = {
     vettedComparison: {
       topic: 'Insurance Claims Management',
       vetted: [
-        'Direct insurer billing — no upfront costs for approved claims',
+        'Full claims documentation provided — everything your insurer needs for reimbursement',
         'Detailed scope of loss documentation with photographic evidence',
         'Understands insurer requirements to prevent claim disputes',
         'Experience with all major Australian insurers and their processes',
@@ -484,7 +484,7 @@ const ENTRIES: Record<string, KnowledgeEntry> = {
         'Provides insurer-compliant reports and progress documentation',
       ],
       unvetted: [
-        'Cash payment required upfront — you chase reimbursement yourself',
+        'Minimal documentation — you may struggle to get insurer reimbursement',
         'Minimal documentation that may not meet insurer evidence standards',
         'Unfamiliar with insurance processes — delays and disputes common',
         'No relationship with insurers — your claim may be deprioritised',

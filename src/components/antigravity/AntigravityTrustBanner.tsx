@@ -10,7 +10,7 @@ export function AntigravityTrustBanner() {
     <div className="ag-trust-banner-wrapper">
       <div className="ag-container">
         <p className="ag-trust-label">
-          Trusted by major insurers for direct billing &amp; standardised documentation:
+          Trusted by property owners for claims documentation &amp; fast response:
         </p>
       </div>
 

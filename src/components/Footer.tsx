@@ -255,7 +255,7 @@ const Footer: React.FC = () => {
             <div className="text-center">
               <div className="inline-flex items-center bg-green-500/20 px-4 py-2 rounded-full">
                 <CheckCircle className="h-5 w-5 mr-2" />
-                <span className="font-semibold">60-Minute Response Guarantee • Insurance Direct Billing Available</span>
+                <span className="font-semibold">60-Minute Response Guarantee • Flexible Payment Options Available</span>
               </div>
             </div>
           </div>
@@ -536,15 +536,15 @@ const Footer: React.FC = () => {
               <div>
                 <h4 className="text-white font-semibold mb-4 flex items-center">
                   <CreditCard className="h-5 w-5 mr-2 text-emerald-600" />
-                  Insurance Partners & Direct Billing
+                  Insurance Claims & Payment Options
                 </h4>
                 <div className="bg-gray-700 rounded-lg p-4 mb-4">
                   <div className="flex items-center gap-2 mb-3">
                     <CheckCircle className="h-5 w-5 text-emerald-600" />
-                    <span className="font-medium">No upfront payment required</span>
+                    <span className="font-medium">Flexible payment options</span>
                   </div>
                   <p className="text-sm text-gray-300">
-                    We bill your insurance company directly for approved emergency services
+                    We bill you directly so work begins immediately. Full claims documentation provided for your insurer
                   </p>
                 </div>
                 <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">

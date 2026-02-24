@@ -1004,10 +1004,10 @@ console.log('Generating insurance company partnership pages...');
 insuranceCompanies.forEach(company => {
   const slug = company.toLowerCase().replace(/\\s+/g, '-');
   writeAgPage(path.join(__dirname, '..', 'app', 'insurance', slug), {
-    title: company + ' Insurance Claims', subtitle: 'Preferred Provider. Direct Billing. No Upfront Costs.',
+    title: company + ' Insurance Claims', subtitle: 'Preferred Provider. Claims Assistance. Flexible Payment Options.',
     icon: 'Shield', gradient: 'linear-gradient(135deg, #14532D 0%, #1E40AF 100%)',
-    metaTitle: company + ' Insurance Claims | Approved Restoration Provider | Direct Billing',
-    metaDesc: 'Preferred ' + company + ' insurance restoration provider. Direct billing, no upfront costs.',
+    metaTitle: company + ' Insurance Claims | Approved Restoration Provider | Claims Assistance',
+    metaDesc: 'Preferred ' + company + ' insurance restoration provider. Full claims documentation, flexible payment options.',
     breadcrumbs: [{ label: 'Home', href: '/' }, { label: 'Insurance', href: '/insurance' }, { label: company }],
     ctaText: 'Start Your Claim', ctaHref: '/claim/start',
   });

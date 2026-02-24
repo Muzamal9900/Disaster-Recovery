@@ -88,7 +88,7 @@ export function AntigravityHero() {
             </div>
             <div className="ag-orb-text">
               <strong>100% Insurer Approved</strong>
-              <span>Direct Billing Available</span>
+              <span>Flexible Payment Options</span>
             </div>
           </div>
 

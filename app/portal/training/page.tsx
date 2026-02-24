@@ -68,7 +68,7 @@ function TrainingHubOriginal() {
             "RestoreAssist.app basics and line items",
             "Photo documentation standards",
             "Scope writing fundamentals",
-            "Direct billing procedures"
+            "Client billing and claims documentation procedures"
           ],
           status: "in-progress",
           progress: 65

@@ -317,7 +317,7 @@ const legalDocuments = [
       'Claims Assistance Scope',
       'Documentation Support',
       'Adjuster Coordination',
-      'Direct Billing',
+      'Client Billing & Claims Documentation',
       'Claim Advocacy',
       'Fee Structure',
       'Client Obligations'

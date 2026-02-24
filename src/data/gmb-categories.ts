@@ -373,7 +373,7 @@ export const GMB_CATEGORIES: GMBCategory[] = [
       'Claims Documentation',
       'Scope Writing',
       'Insurance Coordination',
-      'Direct Billing',
+      'Claims Documentation',
       'Adjuster Meeting',
       'Claim Advocacy',
       'Warranty Services'

@@ -9,7 +9,7 @@ const CASE_STUDY_DATA: Record<string, { challenge: string; response: string; out
   'black-summer-bushfires': {
     challenge: 'The 2019–2020 Black Summer bushfires were among the worst in Australian history, burning over 18.6 million hectares across NSW, Victoria, South Australia, and Queensland. Thousands of homes were destroyed or damaged, and entire communities needed comprehensive restoration support across multiple states simultaneously.',
     response: 'Our network mobilised over 100 contractors across four states, establishing forward operating bases near affected communities. Teams provided emergency board-up, smoke and soot damage restoration, structural assessment, contents salvage, and full rebuilding services. Coordination with NRMA, Suncorp, IAG, and other major insurers enabled rapid claims processing for affected policyholders.',
-    outcome: 'Over 18 months, our teams restored hundreds of properties from minor smoke damage to complete rebuilds. Response times in affected areas were maintained at under 24 hours despite the unprecedented scale. Insurance claims were processed 40% faster than industry average through our direct-billing and documentation protocols.',
+    outcome: 'Over 18 months, our teams restored hundreds of properties from minor smoke damage to complete rebuilds. Response times in affected areas were maintained at under 24 hours despite the unprecedented scale. Insurance claims were processed 40% faster than industry average through our comprehensive documentation protocols.',
     learnings: 'The Black Summer response demonstrated the critical importance of a nationwide contractor network that can surge capacity during large-scale events. It also highlighted the need for pre-positioned equipment and established insurer relationships to expedite claims during disasters affecting thousands of properties simultaneously.',
   },
   'brisbane-floods-2022': {
@@ -79,7 +79,7 @@ export function getCaseStudySections({ incidentName, details }: CaseStudySection
         body: (
           <p>
             Properties restored to pre-loss condition within established timelines. Insurance
-            claims processed efficiently through direct-billing arrangements with major insurers.
+            claims processed efficiently through comprehensive documentation provided to major insurers.
             Quality verification confirmed all restoration met Australian Standards.
           </p>
         ),
@@ -144,7 +144,7 @@ export function getCaseStudySections({ incidentName, details }: CaseStudySection
           <p>
             If your property has been affected by a disaster event, our team is ready to help 24/7.
             We respond to emergencies within 60 minutes, work with all major Australian insurers,
-            and direct-bill for covered events — meaning no upfront costs for you.
+            and bill you directly — meaning work begins immediately. We provide all documentation for your insurance reimbursement claim.
           </p>
           <p>
             Whether it is a single property or a large-scale event, our nationwide contractor

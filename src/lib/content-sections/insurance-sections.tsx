@@ -23,9 +23,11 @@ export function getInsuranceSections({ insurerName, insurerSlug }: InsuranceSect
             faster claim approvals, fewer delays, and a better outcome for you.
           </p>
           <p>
-            Most importantly, we direct-bill {insurerName} for all approved works. You pay only
-            your policy excess — no upfront costs, no surprise invoices, no financial stress during
-            an already difficult time.
+            We bill you directly — not your insurer. This means work begins immediately without
+            waiting for insurer approval or scope-of-works sign-off. Once restoration is complete,
+            we provide full documentation to support your {insurerName} claim for reimbursement.
+            Payment plans are available through our finance partner,{' '}
+            <a href="https://www.bluefirefinance.com.au" target="_blank" rel="noopener noreferrer">Blue Fire Finance</a>.
           </p>
         </>
       ),
@@ -74,24 +76,21 @@ export function getInsuranceSections({ insurerName, insurerSlug }: InsuranceSect
       ),
     },
     {
-      heading: 'Direct Billing — No Upfront Costs',
+      heading: 'How Billing & Payment Works',
       background: 'light',
       body: (
         <>
           <p>
-            One of the biggest advantages of using an approved provider for your {insurerName}
-            claim is our direct billing arrangement. Here is how it works:
+            Understanding how billing works ensures there are no surprises. Our model is designed
+            to get work started faster and keep you in control of the process:
           </p>
           <ul>
-            <li><strong>We bill {insurerName} directly</strong> — All approved restoration costs are invoiced to {insurerName}, not to you.</li>
-            <li><strong>You pay your excess only</strong> — The only out-of-pocket cost is your policy excess, which you pay directly to {insurerName} as part of the standard claims process.</li>
-            <li><strong>No financial surprises</strong> — Because we agree the scope of works with {insurerName} before starting, the approved amount covers all necessary restoration.</li>
-            <li><strong>Contents claims included</strong> — Where applicable, we also assist with contents restoration or replacement claims through {insurerName}.</li>
+            <li><strong>We bill you directly</strong> — Our contractors invoice you (the property owner / policyholder / management group), not your insurer. This allows work to begin immediately.</li>
+            <li><strong>You claim reimbursement from {insurerName}</strong> — We provide all documentation, photos, scope of works, and reports your insurer needs to process your claim.</li>
+            <li><strong>Why this is better for you</strong> — No waiting for insurer approval before make-safe begins. No scope disputes delaying your restoration. You control the process.</li>
+            <li><strong>Payment options available</strong> — Flexible payment terms through our finance partner <a href="https://www.bluefirefinance.com.au" target="_blank" rel="noopener noreferrer">Blue Fire Finance</a> for fast loan approvals.</li>
+            <li><strong>Contract provided</strong> — After the make-safe is completed, your contractor provides a formal contract with clear terms and conditions.</li>
           </ul>
-          <p>
-            This direct billing model removes the financial burden during what is often a stressful
-            and disruptive event. You never need to pay thousands upfront and wait for reimbursement.
-          </p>
         </>
       ),
     },

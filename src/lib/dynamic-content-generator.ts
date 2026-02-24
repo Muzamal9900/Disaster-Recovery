@@ -149,7 +149,7 @@ export function generateEmergencyResponse(location: LocationData): string {
 }
 
 export function generateInsuranceSection(location: LocationData): string {
-  return `Working with ${location.city} insurance claims is our specialty. We're approved by all major insurers operating in ${location.state} and can direct bill to streamline your claim process. Our local expertise ensures compliance with regional insurance requirements.`;
+  return `Working with ${location.city} insurance claims is our specialty. We bill you directly so work begins immediately, then provide all documentation your insurer needs to process your reimbursement claim. Our local expertise ensures compliance with ${location.state} insurance requirements.`;
 }
 
 export function generatePreventionTips(location: LocationData): string {
@@ -267,7 +267,7 @@ export function generateFAQSchema(location: LocationData, service: string) {
         "name": `Do you work with insurance companies in ${location.city}?`,
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": `Yes, we're approved by all major insurers operating in ${location.state} and can direct bill to streamline your claim process.`
+          "text": `Yes, we work with clients insured by all major providers in ${location.state}. We bill you directly so work begins immediately, and provide all claims documentation for your insurer.`
         }
       },
       {

@@ -44,8 +44,8 @@ export function getLocationSections({ city, state, suburbs }: LocationSectionPar
             damage repair.
           </p>
           <p>
-            As an approved provider for all major Australian insurers, we handle the entire claims
-            process on your behalf — meaning no upfront costs for insured events. Our local {city} teams
+            As an approved provider for all major Australian insurers, we handle all claims
+            documentation on your behalf — providing everything your insurer needs to process your reimbursement. Our local {city} teams
             understand the unique challenges properties face in this area, from {risks[0]} to {risks[1]},
             and carry the specialist equipment needed for any scale of restoration.
           </p>
@@ -120,7 +120,7 @@ export function getLocationSections({ city, state, suburbs }: LocationSectionPar
           <p>
             All our {city} contractors hold current IICRC certification, WorkSafe licences, and are
             approved by major insurers including AAMI, Suncorp, Allianz, NRMA, QBE, and more. We
-            direct-bill your insurer so there are no out-of-pocket expenses for covered events.
+            bill you directly so work begins immediately, then provide full documentation to support your insurance claim.
           </p>
         </>
       ),
@@ -137,9 +137,10 @@ export function getLocationSections({ city, state, suburbs }: LocationSectionPar
           </p>
           <h3>Do you work with my insurer?</h3>
           <p>
-            Yes. We are approved providers for all major Australian insurers and direct-bill on your
-            behalf. This means no upfront costs for covered events — we handle the paperwork and
-            claims process so you can focus on getting back to normal.
+            We work with clients insured by all major Australian providers. We bill you directly — allowing
+            immediate work commencement — and provide comprehensive documentation to support your insurance
+            claim for reimbursement. Payment plans available through{' '}
+            <a href="https://www.bluefirefinance.com.au" target="_blank" rel="noopener noreferrer">Blue Fire Finance</a>.
           </p>
           <h3>What types of damage do you repair in {city}?</h3>
           <p>

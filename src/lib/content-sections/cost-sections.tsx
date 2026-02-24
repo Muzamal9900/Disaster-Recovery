@@ -76,10 +76,10 @@ export function getCostSections({ city, serviceType }: CostSectionParams): Conte
             costs in the {city} area.
           </p>
           <p>
-            As insurance-approved providers, our {city} contractors direct-bill your insurer for
-            covered events — meaning you typically pay nothing out of pocket beyond your policy
-            excess. For non-insured work, we provide free, no-obligation quotes before any work
-            begins.
+            Our {city} contractors bill you directly, allowing work to begin immediately without
+            waiting for insurer approval. For insured events, we provide full documentation to
+            support your insurance claim for reimbursement. Payment plans are available through{' '}
+            <a href="https://www.bluefirefinance.com.au" target="_blank" rel="noopener noreferrer">Blue Fire Finance</a>.
           </p>
           <p>
             All pricing includes GST, and our contractors do not charge call-out fees for emergency
@@ -130,25 +130,20 @@ export function getCostSections({ city, serviceType }: CostSectionParams): Conte
       ),
     },
     {
-      heading: 'Insurance Coverage and Direct Billing',
+      heading: 'Insurance Claims & Payment Options',
       background: 'light',
       body: (
         <>
           <p>
             Most home and commercial insurance policies in Australia cover {serviceLabel.toLowerCase()} when
-            caused by sudden, accidental events. Our {city} contractors are approved providers for
-            all major insurers, which means:
+            caused by sudden, accidental events. Here is how our billing and claims process works:
           </p>
           <ul>
-            <li><strong>No upfront payments</strong> — We bill your insurer directly for approved claims.</li>
-            <li><strong>Claims management</strong> — We handle all documentation, photos, and insurer communication.</li>
-            <li><strong>Policy excess only</strong> — You typically pay only your policy excess amount.</li>
-            <li><strong>Scope agreement</strong> — We agree the scope of works with your insurer before starting, so there are no surprise bills.</li>
+            <li><strong>We bill you directly</strong> — No waiting for insurer approval. Work begins as soon as the contract is signed.</li>
+            <li><strong>Full claims documentation</strong> — We provide all photos, reports, and scope-of-works documentation your insurer requires for reimbursement.</li>
+            <li><strong>Payment plans available</strong> — Flexible finance through <a href="https://www.bluefirefinance.com.au" target="_blank" rel="noopener noreferrer">Blue Fire Finance</a> if you need to spread the cost while awaiting reimbursement.</li>
+            <li><strong>Free assessments</strong> — We provide free, no-obligation on-site assessments and written quotes before any work begins.</li>
           </ul>
-          <p>
-            If you are unsure whether your situation is covered, our team can review your policy
-            details during the initial assessment and advise you before any commitment.
-          </p>
         </>
       ),
     },

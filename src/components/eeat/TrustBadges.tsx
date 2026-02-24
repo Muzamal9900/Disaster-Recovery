@@ -194,7 +194,7 @@ export function InsurancePartners() {
         ))}
       </div>
       <p className="text-center text-sm text-gray-700 mt-4">
-        Direct billing available • Claims processed within 24 hours
+        Full claims documentation provided • Flexible payment options
       </p>
     </div>
   );

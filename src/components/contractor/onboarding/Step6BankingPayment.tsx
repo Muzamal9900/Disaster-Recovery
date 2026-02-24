@@ -365,7 +365,7 @@ export default function Step6BankingPayment({ data, onNext, onBack }: Step6Props
                 checked={insuranceDirectBilling}
                 onCheckedChange={(checked) => setValue('insuranceDirectBilling', checked as boolean)}
               />
-              <Label htmlFor="insuranceDirectBilling">We offer direct billing to insurance companies</Label>
+              <Label htmlFor="insuranceDirectBilling">We provide claims documentation to support client insurance reimbursement</Label>
             </div>
             
             {insuranceDirectBilling && (

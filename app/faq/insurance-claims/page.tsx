@@ -4,8 +4,8 @@ import { AgFAQPageTemplate } from '@/components/antigravity';
 
 const faqs = [
   {
-    "question": "How does direct insurance billing work?",
-    "answer": "Our contractors invoice your insurance company directly. You pay nothing upfront except your excess. We assist with all documentation, photos, and reports required for your claim."
+    "question": "How does billing and payment work?",
+    "answer": "Our contractors bill you (the property owner) directly, which means work can begin immediately without waiting for insurer approval. Once work is complete, we provide all documentation — scope of works, photos, reports — that your insurer needs to process your reimbursement claim. Flexible payment plans are available through our finance partner, <a href=\"https://www.bluefirefinance.com.au\" target=\"_blank\" rel=\"noopener noreferrer\">Blue Fire Finance</a>."
   },
   {
     "question": "What if my claim is denied?",

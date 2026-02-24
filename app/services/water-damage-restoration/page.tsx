@@ -373,7 +373,7 @@ export default function WaterDamageRestorationPage() {
         <section className="py-20 bg-black/30">
           <div className="container mx-auto px-6">
             <h2 className="text-4xl font-bold text-white text-center mb-12">
-              Direct Billing with Major Insurers
+              Insurance Claims Support
             </h2>
 
             <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">

@@ -274,7 +274,7 @@ const RELATED_PAGES_MAP: Record<CategoryKey, RelatedPage[]> = {
     { title: 'Fire Damage Cost Guide', href: '/cost/sydney-fire-damage', description: 'Fire and smoke damage restoration pricing and insurance coverage.' },
     { title: 'Emergency Make-Safe Guide', href: '/insurance/emergency-make-safe-guide', description: '$2,750 emergency service, insurance reimbursement, and your rights.' },
     { title: 'Is It Covered?', href: '/is-it-covered', description: 'Check if your damage type is covered by your insurance policy.' },
-    { title: 'Lodge a Claim', href: '/claim/start', description: 'Start your insurance claim with free assessment and direct billing.' },
+    { title: 'Lodge a Claim', href: '/claim/start', description: 'Start your insurance claim with a free assessment and full claims documentation.' },
     { title: 'Water Damage Restoration', href: '/services/water-damage-restoration', description: 'Professional water damage restoration services across Australia.' },
   ],
   'how-it-works': [
