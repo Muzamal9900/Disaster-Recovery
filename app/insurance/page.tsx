@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: 'Insurance Claims Assistance | All Major Australian Insurers',
     description: 'Expert help with disaster recovery insurance claims. Full claims documentation provided. Work with all major Australian insurance companies.',
     type: 'website',
-    images: ['/images/optimised/process/3D Assessment.png'] },
+    images: ['/images/generated/disaster-recovery/hero-insurance-claims.webp'] },
   alternates: {
     canonical: 'https://disasterrecovery.com.au/insurance' }
 };
@@ -36,6 +36,7 @@ export default function InsurancePage() {
     <AgContentPageTemplate
       hero={{
         gradient: 'linear-gradient(135deg, #1E3A5F 0%, #2563EB 100%)',
+        heroImage: '/images/generated/disaster-recovery/hero-insurance-claims.webp',
         icon: <Shield className="h-12 w-12" />,
         title: "Insurance Claims Assistance",
         subtitle: "Expert insurance claims assistance for disaster recovery. Work with NRMA, Suncorp, AAMI, QBE, Allianz and all major Australian insurers. Full claims documentation provided.",

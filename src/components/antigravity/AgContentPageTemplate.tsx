@@ -18,6 +18,8 @@ export interface ContentHero {
   title: string;
   /** Subtitle / tagline shown below the heading */
   subtitle?: string;
+  /** Optional hero background image path (rendered behind the gradient overlay) */
+  heroImage?: string;
 }
 
 export interface ContentCTA {
@@ -114,8 +116,15 @@ export function AgContentPageTemplate({
       )}
 
       {/* Hero */}
-      <header className="ag-service-header">
-        <div className="ag-header-overlay" style={{ background: hero.gradient }} />
+      <header
+        className="ag-service-header"
+        style={hero.heroImage ? {
+          backgroundImage: `url(${hero.heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        } : undefined}
+      >
+        <div className="ag-header-overlay" style={{ background: hero.gradient, opacity: hero.heroImage ? 0.75 : undefined }} />
         <div className="ag-container ag-header-content" style={{ maxWidth: '900px' }}>
           {breadcrumbs && breadcrumbs.length > 0 && (
             <nav className="ag-breadcrumb" aria-label="Breadcrumb">
