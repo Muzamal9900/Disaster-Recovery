@@ -32,6 +32,39 @@ NEXTAUTH_URL=https://disasterrecovery.com.au
 3. **SEO monopoly strategy** - Lock out ALL competitors nationwide
 4. **Population-agnostic** - Target EVERY location, regardless of size
 
+### **⚠️ CRITICAL: Billing Model — Client-Direct, NOT Insurer Billing**
+
+**DR/NRPG contractors bill the CLIENT directly. They do NOT bill insurance companies.**
+
+This is a compliance-critical distinction. The correct billing flow is:
+
+1. **Contractor bills the client** (property owner / policyholder / management group) directly
+2. **Client claims reimbursement** from their insurance carrier
+3. **DR provides full documentation** (photos, scope of works, reports) to support the client's claim
+4. **After make-safe**, the NRPG Contractor provides a formal contract with terms and conditions to the client
+5. **Payment plans** are available via [Blue Fire Finance](https://www.bluefirefinance.com.au)
+
+**DR/NRPG do NOT work directly with insurance companies** — no insurer is on the Vetted Supplier List currently.
+
+#### **Messaging Rules — NEVER use these phrases:**
+- ❌ "direct-bill" / "direct billing" / "bill your insurer"
+- ❌ "no upfront costs" / "no out-of-pocket"
+- ❌ "pay only your excess" / "pay only your policy excess"
+- ❌ "invoice your insurer" / "invoices your insurance company"
+
+#### **Correct Messaging — Frame client billing as a BENEFIT:**
+- ✅ "We bill you directly" — always the client, never the insurer
+- ✅ "Work begins immediately" — no waiting for insurer approval
+- ✅ "You control the process" — no scope disputes or insurer delays
+- ✅ "Full claims documentation provided" — we give the client everything their insurer needs
+- ✅ "Payment plans available through Blue Fire Finance" — link to https://www.bluefirefinance.com.au
+- ✅ "Contractor provides a formal contract" — after make-safe, clear terms and conditions
+
+#### **Blue Fire Finance Link Format (JSX/HTML):**
+```html
+<a href="https://www.bluefirefinance.com.au" target="_blank" rel="noopener noreferrer">Blue Fire Finance</a>
+```
+
 ### **Technical Architecture**
 
 #### **Soft Launch Strategy**
